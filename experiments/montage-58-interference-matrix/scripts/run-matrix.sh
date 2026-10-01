@@ -7,7 +7,7 @@ repetitions=${REPETITIONS:-5}
 source_image=${MONTAGE_IMAGE:-ovvesley/akoflow-wf-montage@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9}
 script_directory=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 experiment_directory=$(cd "$script_directory/.." && pwd)
-image=akoflow/montage-58-interference-calibration:local
+image=${CALIBRATION_IMAGE:-akoflow/montage-58-interference-calibration:050d}
 
 case "$repetitions" in
   ''|*[!0-9]*) echo "REPETITIONS must be a positive integer" >&2; exit 2 ;;
@@ -27,10 +27,13 @@ printf 'environment\tcase\trepetition\tworkload\tstarted_ns\tfinished_ns\tdurati
   docker info
 } > "$result_directory/host.txt" 2>&1
 
-docker pull "$source_image" > "$result_directory/image-pull.log"
-docker build --pull=false --build-arg "BASE_IMAGE=$source_image" \
-  --tag "$image" --file "$experiment_directory/docker/Dockerfile" \
-  "$experiment_directory/docker" > "$result_directory/image-build.log"
+if ! docker image inspect "$image" >/dev/null 2>&1; then
+  docker pull "$source_image" > "$result_directory/image-pull.log"
+  docker build --pull=false --build-arg "BASE_IMAGE=$source_image" \
+    --platform linux/amd64 \
+    --tag "$image" --file "$experiment_directory/docker/Dockerfile" \
+    "$experiment_directory/docker" > "$result_directory/image-build.log"
+fi
 source_digest=$(docker image inspect "$source_image" --format '{{index .RepoDigests 0}}')
 calibration_id=$(docker image inspect "$image" --format '{{.Id}}')
 printf 'source=%s\ncalibration=%s\n' "$source_digest" "$calibration_id" > "$result_directory/image.txt"
@@ -77,9 +80,9 @@ run_case() {
     mkdir -p "$timing_directory"
     timing_file="$timing_directory/timing"
     wrapped="started=\$(date +%s%N); set +e; $command; status=\$?; set -e; finished=\$(date +%s%N); printf '%s %s\\n' \"\$started\" \"\$finished\" > /akoflow-results/timing; exit \"\$status\""
-    container=$(docker create --cpus=1 --memory=1536m \
+    container=$(docker create --platform linux/amd64 --cpus=1 --memory=1536m \
       --mount "type=bind,source=$timing_directory,target=/akoflow-results" \
-      --workdir /akoflow-wfa-shared "$image" sh -lc "$wrapped")
+      --workdir /akoflow-wfa-shared "$image" sh -c "$wrapped")
     containers+=("$container")
     workloads+=("$workload")
     timing_files+=("$timing_file")

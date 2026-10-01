@@ -23,6 +23,22 @@ is outside the measured window. Each measured container receives its own image
 filesystem, so the test measures CPU, memory and host I/O contention without
 allowing the two programs to overwrite one another's outputs.
 
+Prepare and verify that immutable input layer before either matrix:
+
+```sh
+./scripts/prepare-calibration-image.sh
+./scripts/validate-mdifffit-input.sh
+```
+
+The first command runs the two required `mProject` preparations during the
+image build and stores their checksums at
+`/akoflow-calibration/projected-inputs.sha256`. The second command verifies the
+stored inputs and runs only `mDiffFit`, writing its output and timing under
+`results/mdifffit-input-validation/`. The matrix reuses the same local image;
+it does not execute `mProject` as a prerequisite for each `mDiffFit` sample.
+The checked functional result and prepared-file hashes are recorded in
+[`validation/prepared-inputs.md`](validation/prepared-inputs.md).
+
 ## Matrix
 
 | Case | Processes on the same machine | Purpose |

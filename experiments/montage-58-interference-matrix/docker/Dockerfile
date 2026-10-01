@@ -12,4 +12,15 @@ RUN mProject -X \
  && mProject -X \
       poss2ukstu_blue_001_002.fits \
       pposs2ukstu_blue_001_002.fits \
-      region-oversized.hdr
+      region-oversized.hdr \
+ && test -s pposs2ukstu_blue_001_001.fits \
+ && test -s pposs2ukstu_blue_001_002.fits \
+ && mkdir -p /akoflow-calibration \
+ && sha256sum \
+      pposs2ukstu_blue_001_001.fits \
+      pposs2ukstu_blue_001_002.fits \
+      region-oversized.hdr \
+      > /akoflow-calibration/projected-inputs.sha256
+
+LABEL org.akoflow.experiment="montage-58-interference-matrix" \
+      org.akoflow.prepared-inputs="mDiffFit-blue-000001-000002"

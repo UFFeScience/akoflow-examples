@@ -5,39 +5,35 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1
   activities:
     - name: proposal
-      runtime: local
+      runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "proposal", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: approval
-      runtime: local
+      runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "approval", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - proposal
     - name: execution
-      runtime: local
+      runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "execution", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - approval
     - name: verification
-      runtime: local
+      runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "verification", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

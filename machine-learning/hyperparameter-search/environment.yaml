@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-hyperparameter-search-v1
 runtimes:
   - environmentVersionId: showcase-hyperparameter-search-v1
-    id: local
+    id: showcase-hyperparameter-search-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-hyperparameter-search-local-docker
     environmentVersionId: showcase-hyperparameter-search-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-hyperparameter-search-local-docker, runtimeId: showcase-hyperparameter-search-local, enabled: true}
 

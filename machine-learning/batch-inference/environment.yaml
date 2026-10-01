@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-batch-inference-v1
 runtimes:
   - environmentVersionId: showcase-batch-inference-v1
-    id: local
+    id: showcase-batch-inference-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-batch-inference-local-docker
     environmentVersionId: showcase-batch-inference-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-batch-inference-local-docker, runtimeId: showcase-batch-inference-local, enabled: true}
 

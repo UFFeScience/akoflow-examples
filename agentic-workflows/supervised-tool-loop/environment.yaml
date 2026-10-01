@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-supervised-tool-loop-v1
 runtimes:
   - environmentVersionId: showcase-supervised-tool-loop-v1
-    id: local
+    id: showcase-supervised-tool-loop-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-supervised-tool-loop-local-docker
     environmentVersionId: showcase-supervised-tool-loop-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-supervised-tool-loop-local-docker, runtimeId: showcase-supervised-tool-loop-local, enabled: true}
 

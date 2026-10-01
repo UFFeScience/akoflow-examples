@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-model-comparison-v1
 runtimes:
   - environmentVersionId: showcase-model-comparison-v1
-    id: local
+    id: showcase-model-comparison-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-model-comparison-local-docker
     environmentVersionId: showcase-model-comparison-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-model-comparison-local-docker, runtimeId: showcase-model-comparison-local, enabled: true}
 

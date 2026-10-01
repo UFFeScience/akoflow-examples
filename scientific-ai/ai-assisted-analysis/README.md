@@ -1,6 +1,6 @@
 # AI Assisted Analysis
 
-A reproducible AkôFlow showcase. It executes a real Docker image locally, writes deterministic artifacts, captures three browser screenshots, and validates its output contract.
+A reproducible AkôFlow showcase. It executes a real Docker image locally, writes deterministic artifacts, validates its output contract, and includes three versioned screenshots captured from a completed AkôFlow engine run.
 
 ## Run
 

@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-anomaly-detection-v1
 runtimes:
   - environmentVersionId: showcase-anomaly-detection-v1
-    id: local
+    id: showcase-anomaly-detection-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-anomaly-detection-local-docker
     environmentVersionId: showcase-anomaly-detection-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-anomaly-detection-local-docker, runtimeId: showcase-anomaly-detection-local, enabled: true}
 

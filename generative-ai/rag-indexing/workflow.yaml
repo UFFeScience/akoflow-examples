@@ -5,49 +5,44 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing:v1
   activities:
     - name: documents
-      runtime: local
+      runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "documents", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: chunk
-      runtime: local
+      runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "chunk", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - documents
     - name: embed
-      runtime: local
+      runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "embed", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - chunk
     - name: faiss
-      runtime: local
+      runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "faiss", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - embed
     - name: evaluate
-      runtime: local
+      runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

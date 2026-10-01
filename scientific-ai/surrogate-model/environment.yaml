@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-surrogate-model-v1
 runtimes:
   - environmentVersionId: showcase-surrogate-model-v1
-    id: local
+    id: showcase-surrogate-model-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-surrogate-model-local-docker
     environmentVersionId: showcase-surrogate-model-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-surrogate-model-local-docker, runtimeId: showcase-surrogate-model-local, enabled: true}
 

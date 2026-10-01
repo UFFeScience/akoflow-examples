@@ -5,49 +5,44 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection:v1
   activities:
     - name: generate-data
-      runtime: local
+      runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "generate-data", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: feature-engineering
-      runtime: local
+      runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "feature-engineering", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - generate-data
     - name: train
-      runtime: local
+      runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - feature-engineering
     - name: score
-      runtime: local
+      runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "score", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - train
     - name: threshold
-      runtime: local
+      runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "threshold", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

@@ -5,39 +5,35 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark:v1
   activities:
     - name: cpu
-      runtime: local
+      runtime: showcase-inference-benchmark-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "cpu", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: gpu
-      runtime: local
+      runtime: showcase-inference-benchmark-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "gpu", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - cpu
     - name: edge
-      runtime: local
+      runtime: showcase-inference-benchmark-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "edge", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - gpu
     - name: report
-      runtime: local
+      runtime: showcase-inference-benchmark-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "report", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

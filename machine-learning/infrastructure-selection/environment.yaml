@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-infrastructure-selection-v1
 runtimes:
   - environmentVersionId: showcase-infrastructure-selection-v1
-    id: local
+    id: showcase-infrastructure-selection-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-infrastructure-selection-local-docker
     environmentVersionId: showcase-infrastructure-selection-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-infrastructure-selection-local-docker, runtimeId: showcase-infrastructure-selection-local, enabled: true}
 

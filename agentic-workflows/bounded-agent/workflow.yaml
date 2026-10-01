@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-bounded-agent:v1
   activities:
     - name: goal
-      runtime: local
+      runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "goal", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: agent
-      runtime: local
+      runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "agent", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - goal
     - name: validator
-      runtime: local
+      runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "validator", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

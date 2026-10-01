@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1
   activities:
     - name: prepare
-      runtime: local
+      runtime: showcase-lora-fine-tuning-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "prepare", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: finetune
-      runtime: local
+      runtime: showcase-lora-fine-tuning-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "finetune", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - prepare
     - name: evaluate
-      runtime: local
+      runtime: showcase-lora-fine-tuning-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

@@ -24,3 +24,19 @@ daemon at `http://localhost:8080` and accept the usual AkôFlow environment
 variables for endpoint and token overrides.
 
 Product documentation is published at [akoflow.com](https://akoflow.com).
+
+## Continuous integration
+
+The example files live in this repository, while the reusable CI implementation
+is maintained in `UFFeScience/akoflow/.github/workflows/examples-ci.yml`. The
+small workflow in this repository passes the exact pull-request or `main`
+commit to that central workflow. Runnable showcases are discovered from their
+`docker/Dockerfile` and executable `run.sh`; adding a showcase does not require
+editing a duplicated matrix.
+
+After a push to `main`, CI publishes validated showcase images to GHCR and
+notifies the AkôFlow documentation workflow. Configure the repository secret
+`AKOFLOW_DOCS_DISPATCH_TOKEN` with access to dispatch workflows in
+`UFFeScience/akoflow`. If the secret is temporarily unavailable, the daily
+documentation reconciliation still checks out this repository and validates
+all referenced example files.

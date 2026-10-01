@@ -1,0 +1,36 @@
+name: montage-58-interference-matrix-v1
+status: planned
+executionAuthorized: false
+image: ovvesley/akoflow-wf-montage@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9
+repetitions: 5
+order:
+  - cloud
+  - local
+resources:
+  cloud:
+    provider: gcp
+    machineType: e2-medium
+    instances: 1
+    provisioner: terraform
+  local:
+    provider: local
+    instances: 1
+limitsPerProcess:
+  cpu: 1
+  memory: 1536Mi
+cases:
+  - id: mproject-a-alone
+    workloads: [mproject-a]
+  - id: mproject-b-alone
+    workloads: [mproject-b]
+  - id: mdifffit-alone
+    workloads: [mdifffit]
+  - id: mproject-with-mproject
+    workloads: [mproject-a, mproject-b]
+  - id: mproject-with-mdifffit
+    workloads: [mproject-a, mdifffit]
+measurements:
+  - processDurationSeconds
+  - exitCode
+  - slowdownAgainstIsolatedMedian
+  - hostInventory

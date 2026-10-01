@@ -13,7 +13,7 @@ permissions:
 jobs:
   checks:
     name: Central AkôFlow example CI
-    uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@codex/cross-repo-examples
+    uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@main
     with:
       examples_ref: ${{ github.event.pull_request.head.sha || github.sha }}
       publish: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}

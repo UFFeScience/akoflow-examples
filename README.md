@@ -23,6 +23,12 @@ own directory with `./run.sh`. Most API-driven examples expect an AkôFlow
 daemon at `http://localhost:8080` and accept the usual AkôFlow environment
 variables for endpoint and token overrides.
 
+Showcase workflow documents declare an OCI image and a structured command for
+each activity. They never invoke `docker run`: AkôFlow owns image delivery and
+container startup for the selected runtime. The local `run.sh` fixture executes
+the deterministic workload directly, while CI builds and validates the image as
+a separate concern.
+
 Product documentation is published at [akoflow.com](https://akoflow.com).
 
 ## Continuous integration

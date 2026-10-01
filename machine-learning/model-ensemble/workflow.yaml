@@ -1,43 +1,53 @@
 name: showcase-model-ensemble
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1
   activities:
     - name: dataset
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1 dataset
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: rf
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1 rf
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "rf", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - dataset
     - name: svm
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1 svm
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "svm", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf
     - name: xgb
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1 xgb
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "xgb", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - svm
     - name: ensemble
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1 ensemble
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "ensemble", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

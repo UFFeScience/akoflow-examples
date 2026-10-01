@@ -1,27 +1,33 @@
 name: showcase-computer-vision
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-computer-vision:v1
   activities:
     - name: augment
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-computer-vision:v1 augment
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "augment", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: train
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-computer-vision:v1 train
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - augment
     - name: evaluate
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-computer-vision:v1 evaluate
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

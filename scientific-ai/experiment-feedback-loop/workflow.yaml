@@ -1,27 +1,33 @@
 name: showcase-experiment-feedback-loop
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-experiment-feedback-loop:v1
   activities:
     - name: experiment
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-experiment-feedback-loop:v1 experiment
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "experiment", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: model
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-experiment-feedback-loop:v1 model
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "model", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - experiment
     - name: next-batch
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-experiment-feedback-loop:v1 next-batch
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "next-batch", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

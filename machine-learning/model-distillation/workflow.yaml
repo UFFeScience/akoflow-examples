@@ -1,27 +1,33 @@
 name: showcase-model-distillation
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-model-distillation:v1
   activities:
     - name: teacher
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-distillation:v1 teacher
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "teacher", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: generate-labels
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-distillation:v1 generate-labels
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "generate-labels", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - teacher
     - name: student
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-distillation:v1 student
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "student", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

@@ -1,27 +1,33 @@
 name: showcase-model-conversion
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-model-conversion:v1
   activities:
     - name: onnx
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-conversion:v1 onnx
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "onnx", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: gguf
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-conversion:v1 gguf
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "gguf", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - onnx
     - name: tensorrt
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-conversion:v1 tensorrt
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "tensorrt", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

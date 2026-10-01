@@ -1,35 +1,43 @@
 name: showcase-multi-agent-review
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-multi-agent-review:v1
   activities:
     - name: researcher
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-multi-agent-review:v1 researcher
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "researcher", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: reviewer
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-multi-agent-review:v1 reviewer
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "reviewer", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - researcher
     - name: critic
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-multi-agent-review:v1 critic
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "critic", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - reviewer
     - name: synthesis
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-multi-agent-review:v1 synthesis
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "synthesis", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

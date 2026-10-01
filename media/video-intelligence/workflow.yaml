@@ -3,10 +3,56 @@ spec:
   namespace: showcase
   image: ghcr.io/uffescience/akoflow-examples/video-intelligence:v1
   activities:
-    - {name: prepare, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", prepare, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 512Mi}
-    - {name: probe, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", probe, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
-    - {name: scenes, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", scenes, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 512Mi, dependsOn: [prepare]}
-    - {name: audio, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", audio, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
-    - {name: timeline, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", timeline, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [probe, scenes, audio]}
-    - {name: report, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", report, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [timeline]}
-
+    - name: prepare
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", prepare, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "2"
+      memoryLimit: 512Mi
+    - name: probe
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", probe, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: [prepare]
+    - name: scenes
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", scenes, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "2"
+      memoryLimit: 512Mi
+      dependsOn: [prepare]
+    - name: audio
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", audio, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: [prepare]
+    - name: timeline
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", timeline, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: [probe, scenes, audio]
+    - name: report
+      runtime: local
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", report, "--output", "."]
+        workingDirectory: /workspace
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: [timeline]

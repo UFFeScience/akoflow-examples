@@ -1,0 +1,4 @@
+id: document-intelligence-scope
+name: Document Intelligence local scope
+environmentVersionIds: [document-intelligence-v1]
+

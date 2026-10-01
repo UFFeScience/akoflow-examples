@@ -5,31 +5,45 @@ spec:
   activities:
     - name: storyboard
       runtime: local
-      command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", "storyboard", "--output", "."], workingDirectory: /workspace}
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", "storyboard", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: scenes
       runtime: local
-      command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", "scenes", "--output", "."], workingDirectory: /workspace}
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", "scenes", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "2"
       memoryLimit: 512Mi
       dependsOn: [storyboard]
     - name: narration
       runtime: local
-      command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", "narration", "--output", "."], workingDirectory: /workspace}
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", "narration", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn: [storyboard]
     - name: compose
       runtime: local
-      command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", "compose", "--output", "."], workingDirectory: /workspace}
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", "compose", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "2"
       memoryLimit: 512Mi
       dependsOn: [scenes, narration]
     - name: quality-control
       runtime: local
-      command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", "quality-control", "--output", "."], workingDirectory: /workspace}
+      command:
+        entrypoint: python
+        arguments: ["/app/scripts/pipeline.py", "--stage", "quality-control", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn: [compose]
-

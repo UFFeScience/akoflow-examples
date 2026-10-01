@@ -9,10 +9,11 @@ planning and raster generation and FFmpeg for encoding.
 
 `brief -> storyboard -> scenes -> narration -> compose -> quality-control`
 
-Run `./run.sh`. FFmpeg is required on the host; the container image installs it.
+Run `./run.sh`. FFmpeg produces the final MP4 when available and the container
+image installs it. Minimal CI workers use a standards-compliant YUV4MPEG video
+as the deterministic offline smoke artifact.
 Set `AKOFLOW_PROFILE=demo` (default: `smoke`) for more frames and a longer video.
 The versioned brief in `data/brief.json` is the complete offline dataset.
 
 The stages map directly to AkôFlow activities. Their files are written to the
 shared workspace, so provenance can show which activity generated each asset.
-

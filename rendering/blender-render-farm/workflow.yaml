@@ -1,0 +1,11 @@
+name: blender-render-farm
+spec:
+  namespace: showcase
+  image: ghcr.io/uffescience/akoflow-examples/blender-render-farm:v1
+  activities:
+    - {name: setup, runtime: local, command: {entrypoint: python3, arguments: ["/app/scripts/pipeline.py", "--stage", setup, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: render-even, runtime: local, command: {entrypoint: python3, arguments: ["/app/scripts/pipeline.py", "--stage", render-even, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 2Gi, dependsOn: [setup]}
+    - {name: render-odd, runtime: local, command: {entrypoint: python3, arguments: ["/app/scripts/pipeline.py", "--stage", render-odd, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 2Gi, dependsOn: [setup]}
+    - {name: compose, runtime: local, command: {entrypoint: python3, arguments: ["/app/scripts/pipeline.py", "--stage", compose, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 512Mi, dependsOn: [render-even, render-odd]}
+    - {name: verify, runtime: local, command: {entrypoint: python3, arguments: ["/app/scripts/pipeline.py", "--stage", verify, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [compose]}
+

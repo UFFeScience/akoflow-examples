@@ -1,0 +1,9 @@
+DOCUMENT: INVOICE
+INVOICE_ID: INV-2026-001
+SUPPLIER: Atlas Scientific Ltd
+DATE: 2026-09-14
+ITEM: Sensor array | 3 | 420.00
+ITEM: Shielded cable | 10 | 18.50
+TAX: 216.75
+TOTAL: 1661.75
+

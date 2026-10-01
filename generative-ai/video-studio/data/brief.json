@@ -1,0 +1,11 @@
+{
+  "title": "A Drop's Journey",
+  "audience": "science museum visitors",
+  "style": "minimal editorial animation",
+  "scenes": [
+    {"caption": "Clouds gather above the mountains", "color": [55, 86, 140], "tone_hz": 220},
+    {"caption": "Rain feeds rivers and reservoirs", "color": [31, 132, 164], "tone_hz": 277},
+    {"caption": "Clean water returns to our homes", "color": [30, 154, 112], "tone_hz": 330}
+  ]
+}
+

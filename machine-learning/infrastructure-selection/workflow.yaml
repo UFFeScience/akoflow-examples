@@ -5,39 +5,35 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1
   activities:
     - name: estimate-local
-      runtime: local
+      runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "estimate-local", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: estimate-cloud
-      runtime: local
+      runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "estimate-cloud", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - estimate-local
     - name: estimate-hpc
-      runtime: local
+      runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "estimate-hpc", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - estimate-cloud
     - name: decision
-      runtime: local
+      runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "decision", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop:v1
   activities:
     - name: experiment
-      runtime: local
+      runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "experiment", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: model
-      runtime: local
+      runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "model", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - experiment
     - name: next-batch
-      runtime: local
+      runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "next-batch", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

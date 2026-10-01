@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-document-extraction-v1
 runtimes:
   - environmentVersionId: showcase-document-extraction-v1
-    id: local
+    id: showcase-document-extraction-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-document-extraction-local-docker
     environmentVersionId: showcase-document-extraction-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-document-extraction-local-docker, runtimeId: showcase-document-extraction-local, enabled: true}
 

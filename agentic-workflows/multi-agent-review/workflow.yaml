@@ -5,39 +5,35 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review:v1
   activities:
     - name: researcher
-      runtime: local
+      runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "researcher", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: reviewer
-      runtime: local
+      runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "reviewer", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - researcher
     - name: critic
-      runtime: local
+      runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "critic", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - reviewer
     - name: synthesis
-      runtime: local
+      runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "synthesis", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

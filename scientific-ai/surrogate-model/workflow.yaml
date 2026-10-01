@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model:v1
   activities:
     - name: simulation
-      runtime: local
+      runtime: showcase-surrogate-model-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "simulation", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: dataset
-      runtime: local
+      runtime: showcase-surrogate-model-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - simulation
     - name: train-surrogate
-      runtime: local
+      runtime: showcase-surrogate-model-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "train-surrogate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

@@ -5,39 +5,35 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1
   activities:
     - name: pdf
-      runtime: local
+      runtime: showcase-document-extraction-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "pdf", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: ocr
-      runtime: local
+      runtime: showcase-document-extraction-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "ocr", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - pdf
     - name: extract
-      runtime: local
+      runtime: showcase-document-extraction-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "extract", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - ocr
     - name: json
-      runtime: local
+      runtime: showcase-document-extraction-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "json", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

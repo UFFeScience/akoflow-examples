@@ -5,49 +5,44 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1
   activities:
     - name: dataset
-      runtime: local
+      runtime: showcase-model-ensemble-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: rf
-      runtime: local
+      runtime: showcase-model-ensemble-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "rf", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - dataset
     - name: svm
-      runtime: local
+      runtime: showcase-model-ensemble-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "svm", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf
     - name: xgb
-      runtime: local
+      runtime: showcase-model-ensemble-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "xgb", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - svm
     - name: ensemble
-      runtime: local
+      runtime: showcase-model-ensemble-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "ensemble", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

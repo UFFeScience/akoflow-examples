@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset:v1
   activities:
     - name: generate
-      runtime: local
+      runtime: showcase-synthetic-dataset-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "generate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: deduplicate
-      runtime: local
+      runtime: showcase-synthetic-dataset-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "deduplicate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - generate
     - name: quality-check
-      runtime: local
+      runtime: showcase-synthetic-dataset-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "quality-check", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

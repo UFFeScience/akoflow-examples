@@ -5,79 +5,71 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1
   activities:
     - name: load
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "load", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: preprocess
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "preprocess", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - load
     - name: rf-1
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "rf-1", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - preprocess
     - name: rf-2
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "rf-2", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-1
     - name: rf-3
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "rf-3", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-2
     - name: rf-4
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "rf-4", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-3
     - name: compare
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "compare", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-4
     - name: best-model
-      runtime: local
+      runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "best-model", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

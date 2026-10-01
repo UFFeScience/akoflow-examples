@@ -29,16 +29,23 @@ def render(o,parity):
   for n in range(1,COUNT+1):
    if n%2==parity:software(o/'frames'/f'frame-{n:04d}.ppm',n)
 def compose(o):
- if not shutil.which('ffmpeg'):raise SystemExit('ffmpeg is required')
  ext='png' if next((o/'frames').glob('*.png'),None) else 'ppm'
- subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-framerate','8','-i',str(o/f'frames/frame-%04d.{ext}'),'-c:v','libx264','-pix_fmt','yuv420p',str(o/'animation.mp4')],check=True)
+ if shutil.which('ffmpeg'):
+  subprocess.run(['ffmpeg','-hide_banner','-loglevel','error','-y','-framerate','8','-i',str(o/f'frames/frame-%04d.{ext}'),'-c:v','libx264','-pix_fmt','yuv420p',str(o/'animation.mp4')],check=True);return
+ if ext!='ppm':raise SystemExit('ffmpeg is required to compose Blender PNG frames')
+ with (o/'animation.y4m').open('wb') as video:
+  video.write(b'YUV4MPEG2 W640 H360 F8:1 Ip A1:1 C444\n')
+  for frame in sorted((o/'frames').glob('*.ppm')):
+   payload=frame.read_bytes().split(b'\n',3)[3];yuv=[bytearray(),bytearray(),bytearray()]
+   for i in range(0,len(payload),3):
+    r,g,b=payload[i:i+3];yuv[0].append(max(0,min(255,int(.299*r+.587*g+.114*b))));yuv[1].append(max(0,min(255,int(-.169*r-.331*g+.5*b+128))));yuv[2].append(max(0,min(255,int(.5*r-.419*g-.081*b+128))))
+   video.write(b'FRAME\n'+yuv[0]+yuv[1]+yuv[2])
 def verify(o):
- frames=sorted((o/'frames').glob('frame-*'));ok=len(frames)==COUNT and (o/'animation.mp4').stat().st_size>1000
+ frames=sorted((o/'frames').glob('frame-*'));video=o/('animation.mp4' if (o/'animation.mp4').exists() else 'animation.y4m');ok=len(frames)==COUNT and video.stat().st_size>1000
  dump(o/'render-report.json',{'status':'passed' if ok else 'failed','expected_frames':COUNT,'rendered_frames':len(frames),'workers':2})
- arts=['render-plan.json','scene.blend','animation.mp4','render-report.json'];dump(o/'manifest.json',{'showcase':'blender-render-farm','status':'success' if ok else 'failed','artifacts':arts})
+ arts=['render-plan.json','scene.blend',video.name,'render-report.json'];dump(o/'manifest.json',{'showcase':'blender-render-farm','status':'success' if ok else 'failed','artifacts':arts})
 S={'setup':setup,'render-even':lambda o:render(o,0),'render-odd':lambda o:render(o,1),'compose':compose,'verify':verify}
 def main():
  p=argparse.ArgumentParser();p.add_argument('--stage',choices=[*S,'all'],default='all');p.add_argument('--output',required=True);a=p.parse_args();o=Path(a.output);o.mkdir(parents=True,exist_ok=True)
  for s in list(S) if a.stage=='all' else [a.stage]:S[s](o)
 if __name__=='__main__':main()
-

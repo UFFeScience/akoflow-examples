@@ -1,0 +1,6 @@
+[
+  {"question": "Why are environment versions useful?", "expected": "reproducible"},
+  {"question": "Which standard describes the lineage graph?", "expected": "W3C PROV"},
+  {"question": "What does a plan map to resources?", "expected": "activity"}
+]
+

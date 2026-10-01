@@ -1,0 +1,15 @@
+environment	case	repetition	workload	started_ns	finished_ns	duration_seconds	exit_code	container_id
+fixture	mproject-a-alone	1	mproject-a	0	10000000000	10.000000000	0	a1
+fixture	mproject-a-alone	2	mproject-a	0	12000000000	12.000000000	0	a2
+fixture	mproject-b-alone	1	mproject-b	0	11000000000	11.000000000	0	b1
+fixture	mproject-b-alone	2	mproject-b	0	13000000000	13.000000000	0	b2
+fixture	mdifffit-alone	1	mdifffit	0	20000000000	20.000000000	0	d1
+fixture	mdifffit-alone	2	mdifffit	0	22000000000	22.000000000	0	d2
+fixture	mproject-with-mproject	1	mproject-a	0	15000000000	15.000000000	0	p1a
+fixture	mproject-with-mproject	1	mproject-b	0	18000000000	18.000000000	0	p1b
+fixture	mproject-with-mproject	2	mproject-a	0	16000000000	16.000000000	0	p2a
+fixture	mproject-with-mproject	2	mproject-b	0	19000000000	19.000000000	0	p2b
+fixture	mproject-with-mdifffit	1	mproject-a	0	14000000000	14.000000000	0	x1p
+fixture	mproject-with-mdifffit	1	mdifffit	0	26000000000	26.000000000	0	x1d
+fixture	mproject-with-mdifffit	2	mproject-a	0	15000000000	15.000000000	0	x2p
+fixture	mproject-with-mdifffit	2	mdifffit	0	28000000000	28.000000000	0	x2d

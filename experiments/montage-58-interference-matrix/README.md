@@ -128,3 +128,42 @@ environment-specific interference observations:
 The direction matters because cross-family effects need not be symmetric. The
 calibrated values can then be registered for each of the seven environments and
 used by PRISM when planning the full Montage 58 workflow.
+
+Build one portable calibration document from the retained raw runs:
+
+```sh
+ruby scripts/build-calibration.rb results/interference-calibration.json \
+  results/cloud/runs.tsv results/local/runs.tsv
+```
+
+The document keeps the baseline medians and the three directed slowdown
+observations separately for every environment. It contains no credential,
+instance address or Terraform state.
+
+AkôFlow's execution model consumes activity IDs rather than benchmark command
+names. Materialize the selected environment against the exact workflow that
+will be planned:
+
+```sh
+ruby scripts/materialize-matrix.rb \
+  results/interference-calibration.json cloud workflow.json \
+  results/cloud.interference-matrix.json
+```
+
+The generated file is an AkôFlow `interferenceMatrix` using schema 4,
+`pairwise-slowdown` and `additive-excess`. Every directed `mProject`/`mDiffFit`
+pair is expanded to the real activity IDs. Keep the portable calibration as
+the scientific result; regenerate the expanded matrix whenever workflow IDs
+change.
+
+## Current GCP access prerequisite
+
+The AkôFlow environment used for this calibration is
+`montage-gcp-calibration` in project `sandbox-391923`, region `us-central1`.
+Before catalog discovery or provisioning, its service account must be granted
+the project permissions needed to inspect Compute Engine. At minimum, the
+current access check requires `compute.projects.get` and
+`compute.machineTypes.list`; provisioning also requires the instance, disk,
+network, firewall and service-account permissions exercised by the Terraform
+plan. A failed access check is not a calibration result and must not be
+silently retried as a measurement.

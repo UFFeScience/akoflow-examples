@@ -1,0 +1,12 @@
+name: local-rag-factory
+spec:
+  namespace: showcase
+  image: ghcr.io/uffescience/akoflow-examples/local-rag-factory:v1
+  activities:
+    - {name: ingest, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", ingest, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: chunk, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", chunk, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [ingest]}
+    - {name: index, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", index, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 512Mi, dependsOn: [chunk]}
+    - {name: retrieve, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", retrieve, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [index]}
+    - {name: answer, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", answer, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [retrieve]}
+    - {name: evaluate, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", evaluate, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [answer]}
+

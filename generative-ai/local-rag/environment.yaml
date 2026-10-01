@@ -1,0 +1,6 @@
+id: local-rag-factory-environment
+name: Local RAG Factory environment
+driver: local
+runtimes: [{id: local, type: local, containerRuntime: docker}]
+resources: [{id: workstation, runtimeId: local, cpuCores: 4, memoryBytes: 4294967296}]
+

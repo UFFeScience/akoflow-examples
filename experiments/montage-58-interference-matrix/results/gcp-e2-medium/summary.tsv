@@ -1,0 +1,8 @@
+environment	case	workload	samples	mean_seconds	baseline_case	baseline_mean_seconds	slowdown
+gcp-e2-medium	mproject-with-mdifffit	mdifffit	5	6.31133	mdifffit-alone	4.36316	1.4465
+gcp-e2-medium	mproject-a-alone	mproject-a	5	364.103	mproject-a-alone	364.103	1
+gcp-e2-medium	mdifffit-alone	mdifffit	5	4.36316	mdifffit-alone	4.36316	1
+gcp-e2-medium	mproject-with-mdifffit	mproject-a	5	369.949	mproject-a-alone	364.103	1.01606
+gcp-e2-medium	mproject-with-mproject	mproject-a	5	647.132	mproject-a-alone	364.103	1.77733
+gcp-e2-medium	mproject-with-mproject	mproject-b	5	549.819	mproject-b-alone	365.703	1.50346
+gcp-e2-medium	mproject-b-alone	mproject-b	5	365.703	mproject-b-alone	365.703	1

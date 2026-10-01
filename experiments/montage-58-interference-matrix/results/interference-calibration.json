@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1",
+  "kind": "akoflow-interference-calibration",
+  "model": "pairwise-slowdown",
+  "aggregation": "additive-excess",
+  "calibrations": [
+    {
+      "environmentId": "gcp-e2-medium",
+      "baselineMedianSeconds": {
+        "mproject-a": 360.580592128,
+        "mproject-b": 368.183314176,
+        "mdifffit": 4.40791296
+      },
+      "directedSlowdowns": [
+        {
+          "affectedWorkload": "mproject",
+          "interferingWorkload": "mproject",
+          "slowdownFactor": 1.743893154273526,
+          "samples": 10
+        },
+        {
+          "affectedWorkload": "mproject",
+          "interferingWorkload": "mdifffit",
+          "slowdownFactor": 1.0225516119767017,
+          "samples": 5
+        },
+        {
+          "affectedWorkload": "mdifffit",
+          "interferingWorkload": "mproject",
+          "slowdownFactor": 1.3848254862092377,
+          "samples": 5
+        }
+      ]
+    }
+  ]
+}

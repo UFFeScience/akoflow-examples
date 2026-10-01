@@ -1,35 +1,43 @@
 name: showcase-inference-benchmark
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-inference-benchmark:v1
   activities:
     - name: cpu
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-inference-benchmark:v1 cpu
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "cpu", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: gpu
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-inference-benchmark:v1 gpu
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "gpu", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - cpu
     - name: edge
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-inference-benchmark:v1 edge
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "edge", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - gpu
     - name: report
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-inference-benchmark:v1 report
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "report", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

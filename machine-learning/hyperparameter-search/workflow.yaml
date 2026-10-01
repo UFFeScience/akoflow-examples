@@ -1,67 +1,83 @@
 name: showcase-hyperparameter-search
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1
   activities:
     - name: load
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 load
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "load", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: preprocess
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 preprocess
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "preprocess", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - load
     - name: rf-1
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 rf-1
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "rf-1", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - preprocess
     - name: rf-2
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 rf-2
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "rf-2", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-1
     - name: rf-3
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 rf-3
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "rf-3", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-2
     - name: rf-4
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 rf-4
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "rf-4", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-3
     - name: compare
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 compare
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "compare", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - rf-4
     - name: best-model
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1 best-model
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "best-model", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

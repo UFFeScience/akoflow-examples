@@ -1,35 +1,43 @@
 name: showcase-document-extraction
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-document-extraction:v1
   activities:
     - name: pdf
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-document-extraction:v1 pdf
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "pdf", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: ocr
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-document-extraction:v1 ocr
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "ocr", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - pdf
     - name: extract
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-document-extraction:v1 extract
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "extract", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - ocr
     - name: json
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-document-extraction:v1 json
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "json", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

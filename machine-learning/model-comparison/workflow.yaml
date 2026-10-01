@@ -1,43 +1,53 @@
 name: showcase-model-comparison
 spec:
   namespace: showcase
-  # Published by .github/workflows/build-showcase.yml.
+  # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-showcase-model-comparison:v1
   activities:
     - name: dataset
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-comparison:v1 dataset
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: model-a
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-comparison:v1 model-a
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "model-a", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - dataset
     - name: model-b
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-comparison:v1 model-b
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "model-b", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - model-a
     - name: model-c
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-comparison:v1 model-c
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "model-c", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - model-b
     - name: comparison
       runtime: local
-      # The local executor launches this OCI image through Docker in run.sh.
-      run: docker run --rm ghcr.io/uffescience/akoflow-showcase-model-comparison:v1 comparison
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "comparison", "--output", "."]
+        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

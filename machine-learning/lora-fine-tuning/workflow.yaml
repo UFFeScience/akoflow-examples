@@ -2,7 +2,7 @@ name: showcase-lora-fine-tuning
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-lora-fine-tuning:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1
   activities:
     - name: prepare
       runtime: local

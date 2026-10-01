@@ -2,7 +2,7 @@ name: showcase-supervised-tool-loop
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-supervised-tool-loop:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1
   activities:
     - name: proposal
       runtime: local

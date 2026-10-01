@@ -2,7 +2,7 @@ name: showcase-infrastructure-selection
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-infrastructure-selection:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1
   activities:
     - name: estimate-local
       runtime: local

@@ -2,7 +2,7 @@ name: showcase-document-extraction
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-document-extraction:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1
   activities:
     - name: pdf
       runtime: local

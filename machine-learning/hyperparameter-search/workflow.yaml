@@ -2,7 +2,7 @@ name: showcase-hyperparameter-search
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-hyperparameter-search:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1
   activities:
     - name: load
       runtime: local

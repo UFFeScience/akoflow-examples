@@ -2,7 +2,7 @@ name: showcase-synthetic-dataset
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-synthetic-dataset:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset:v1
   activities:
     - name: generate
       runtime: local

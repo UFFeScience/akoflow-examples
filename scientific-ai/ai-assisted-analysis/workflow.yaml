@@ -2,7 +2,7 @@ name: showcase-ai-assisted-analysis
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-ai-assisted-analysis:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1
   activities:
     - name: simulation
       runtime: local

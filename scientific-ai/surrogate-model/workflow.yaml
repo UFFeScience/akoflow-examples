@@ -2,7 +2,7 @@ name: showcase-surrogate-model
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-surrogate-model:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model:v1
   activities:
     - name: simulation
       runtime: local

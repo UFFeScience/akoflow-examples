@@ -2,7 +2,7 @@ name: showcase-model-ensemble
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-model-ensemble:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1
   activities:
     - name: dataset
       runtime: local

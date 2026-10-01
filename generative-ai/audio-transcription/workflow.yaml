@@ -2,7 +2,7 @@ name: showcase-audio-transcription
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-audio-transcription:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription:v1
   activities:
     - name: audio
       runtime: local

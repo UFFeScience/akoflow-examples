@@ -2,7 +2,7 @@ name: showcase-rag-indexing
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-rag-indexing:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing:v1
   activities:
     - name: documents
       runtime: local

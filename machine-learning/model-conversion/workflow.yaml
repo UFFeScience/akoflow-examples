@@ -2,7 +2,7 @@ name: showcase-model-conversion
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-model-conversion:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-conversion:v1
   activities:
     - name: onnx
       runtime: local

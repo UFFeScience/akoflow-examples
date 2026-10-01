@@ -2,7 +2,7 @@ name: showcase-batch-inference
 spec:
   namespace: showcase
   # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-showcase-batch-inference:v1
+  image: ghcr.io/uffescience/akoflow-examples/showcase-batch-inference:v1
   activities:
     - name: load-model
       runtime: local

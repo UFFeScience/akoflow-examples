@@ -11,8 +11,8 @@ assets, and validation workflows can evolve independently from the engine.
 
 - `simulation/`, `local/`, `kind/`, `slurm/`, and `real/`: execution and
   infrastructure examples.
-- `machine-learning/`, `generative-ai/`, `agentic-workflows/`, and
-  `scientific-ai/`: complete showcase workflows.
+- `machine-learning/`, `generative-ai/`, `document-ai/`, `media/`, `rendering/`,
+  `agentic-workflows/`, and `scientific-ai/`: complete showcase workflows.
 - `connections/`, `onboarding/`, and `server-instance/`: reusable connection
   and installation templates.
 - `experiments/`: Python and Node.js tools used to launch, collect, analyze,
@@ -30,6 +30,10 @@ the deterministic workload directly, while CI builds and validates the image as
 a separate concern.
 
 Product documentation is published at [akoflow.com](https://akoflow.com).
+
+New runnable examples follow the [showcase standard](SHOWCASE_STANDARD.md):
+offline smoke execution, real computation, observable stages, stable artifact
+contracts, and optional larger profiles.
 
 ## Continuous integration
 

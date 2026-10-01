@@ -1,0 +1,158 @@
+environment:
+  id: fog-hpc-cloud-simulation
+  name: Fog HPC Cloud Simulation
+  description: Simulated heterogeneous environment with ten Fog devices, two HPC nodes, and two cloud VMs
+  status: ready
+
+version:
+  id: fog-hpc-cloud-simulation-v1
+  environmentId: fog-hpc-cloud-simulation
+  version: 1
+  status: published
+  networkModel: static-links
+  interferenceModel: shared-network
+  costModel: per-second
+  configurationHash: fog-hpc-cloud-simulation-v1
+
+runtimes:
+  - environmentVersionId: fog-hpc-cloud-simulation-v1
+    id: fog-hpc-cloud-simgrid
+    name: Fog HPC Cloud SimGrid
+    driver: simgrid
+    mode: simulation
+    role: simulation
+    capabilities:
+      simulation: true
+
+resources:
+  - &fog
+    id: fog-01
+    environmentVersionId: fog-hpc-cloud-simulation-v1
+    executionTarget: batch
+    type: fog_device
+    name: Fog 01
+    providerId: fog-01
+    tier: fog
+    cpuCores: 2
+    cpuCapacity: 2
+    memoryBytes: 2147483648
+    storageBytes: 21474836480
+    computeSpeedup: 5
+    pricePerSecond: 0.00002
+    schedulable: true
+    metadata:
+      flopsPerSecond: 5000000000
+      performanceModel: estimated-cpu-fp64
+      calibrationBaseline: wfcommons-pegasus-chameleon-intel
+      sourceFlopsPerCycleAssumption: 16
+  - <<: *fog
+    id: fog-02
+    name: Fog 02
+    providerId: fog-02
+  - <<: *fog
+    id: fog-03
+    name: Fog 03
+    providerId: fog-03
+  - <<: *fog
+    id: fog-04
+    name: Fog 04
+    providerId: fog-04
+  - <<: *fog
+    id: fog-05
+    name: Fog 05
+    providerId: fog-05
+  - <<: *fog
+    id: fog-06
+    name: Fog 06
+    providerId: fog-06
+  - <<: *fog
+    id: fog-07
+    name: Fog 07
+    providerId: fog-07
+  - <<: *fog
+    id: fog-08
+    name: Fog 08
+    providerId: fog-08
+  - <<: *fog
+    id: fog-09
+    name: Fog 09
+    providerId: fog-09
+  - <<: *fog
+    id: fog-10
+    name: Fog 10
+    providerId: fog-10
+
+  - &hpc
+    id: hpc-01
+    environmentVersionId: fog-hpc-cloud-simulation-v1
+    executionTarget: batch
+    type: hpc_machine
+    name: HPC 01
+    providerId: hpc-01
+    tier: hpc
+    architecture: amd64
+    cpuCores: 32
+    cpuCapacity: 32
+    memoryBytes: 137438953472
+    storageBytes: 1099511627776
+    computeSpeedup: 32
+    pricePerSecond: 0
+    schedulable: true
+    metadata:
+      flopsPerSecond: 32000000000
+      performanceModel: estimated-cpu-fp64
+      referenceFamily: sirocco-32-core
+      calibrationBaseline: wfcommons-pegasus-chameleon-intel
+      sourceFlopsPerCycleAssumption: 16
+  - <<: *hpc
+    id: hpc-02
+    name: HPC 02
+    providerId: hpc-02
+
+  - &cloud
+    id: cloud-01
+    environmentVersionId: fog-hpc-cloud-simulation-v1
+    executionTarget: batch
+    type: cloud_vm
+    name: Cloud 01
+    providerId: cloud-01
+    tier: cloud
+    architecture: amd64
+    cpuCores: 16
+    cpuCapacity: 16
+    memoryBytes: 34359738368
+    storageBytes: 107374182400
+    computeSpeedup: 16
+    pricePerSecond: 0.0002
+    bootOverheadSeconds: 0.5
+    containerOverheadSeconds: 0.2
+    schedulable: true
+    metadata:
+      flopsPerSecond: 16000000000
+      performanceModel: estimated-cpu-fp64
+      calibrationBaseline: wfcommons-pegasus-chameleon-intel
+      sourceFlopsPerCycleAssumption: 16
+  - <<: *cloud
+    id: cloud-02
+    name: Cloud 02
+    providerId: cloud-02
+
+storages: []
+connections: []
+activityResourceProfiles: []
+
+resourceRuntimeBindings:
+  - {resourceId: fog-01, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-02, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-03, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-04, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-05, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-06, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-07, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-08, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-09, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: fog-10, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: hpc-01, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: hpc-02, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: cloud-01, runtimeId: fog-hpc-cloud-simgrid, enabled: true}
+  - {resourceId: cloud-02, runtimeId: fog-hpc-cloud-simgrid, enabled: true}

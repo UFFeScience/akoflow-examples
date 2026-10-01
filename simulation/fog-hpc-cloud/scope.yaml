@@ -1,0 +1,4 @@
+id: fog-hpc-cloud-simulation-scope-v1
+name: Fog HPC Cloud Simulation Scope
+environmentVersionIds:
+  - fog-hpc-cloud-simulation-v1

@@ -1,0 +1,11 @@
+id: scheduler-hybrid_hetero-network-v1
+name: Montage 6448 hybrid heterogeneous network
+version: 1
+executionScopeId: scheduler-hybrid_hetero-scope-v1
+links:
+  - {id: bora-diablo, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-bora011, targetResourceId: scheduler-hybrid_hetero-diablo03, bandwidthBitsPerSecond: 750000000, latencySeconds: 0, pricePerByte: 0, bidirectional: true, sharingPolicy: shared}
+  - {id: bora-h3, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-bora011, targetResourceId: scheduler-hybrid_hetero-h3-standard-88-2, bandwidthBitsPerSecond: 500000000, latencySeconds: 0, pricePerByte: 0, bidirectional: true, sharingPolicy: shared}
+  - {id: bora-h4d, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-bora011, targetResourceId: scheduler-hybrid_hetero-h4d-standard-192-7, bandwidthBitsPerSecond: 500000000, latencySeconds: 0, pricePerByte: 0, bidirectional: true, sharingPolicy: shared}
+  - {id: diablo-h3, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-diablo03, targetResourceId: scheduler-hybrid_hetero-h3-standard-88-2, bandwidthBitsPerSecond: 500000000, latencySeconds: 0, pricePerByte: 0, bidirectional: true, sharingPolicy: shared}
+  - {id: diablo-h4d, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-diablo03, targetResourceId: scheduler-hybrid_hetero-h4d-standard-192-7, bandwidthBitsPerSecond: 500000000, latencySeconds: 0, pricePerByte: 0, bidirectional: true, sharingPolicy: shared}
+  - {id: h3-h4d, topologyId: scheduler-hybrid_hetero-network-v1, sourceResourceId: scheduler-hybrid_hetero-h3-standard-88-2, targetResourceId: scheduler-hybrid_hetero-h4d-standard-192-7, bandwidthBitsPerSecond: 750000000, latencySeconds: 0, pricePerByte: 0.00000000001, bidirectional: true, sharingPolicy: shared}

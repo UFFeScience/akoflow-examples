@@ -1,0 +1,66 @@
+id: fog-hpc-cloud-network-v1
+name: Fog HPC Cloud Network
+version: 1
+executionScopeId: fog-hpc-cloud-simulation-scope-v1
+metadata:
+  model: hierarchical-shared-network
+  latencyModel: estimated
+links:
+  - &fog_link
+    id: fog-01-hpc-01
+    sourceResourceId: fog-01
+    targetResourceId: hpc-01
+    bandwidthBitsPerSecond: 1000000000
+    latencySeconds: 0.005
+    bidirectional: true
+    sharingPolicy: shared
+    maxConcurrentTransfers: 0
+  - <<: *fog_link
+    id: fog-02-hpc-01
+    sourceResourceId: fog-02
+  - <<: *fog_link
+    id: fog-03-hpc-01
+    sourceResourceId: fog-03
+  - <<: *fog_link
+    id: fog-04-hpc-01
+    sourceResourceId: fog-04
+  - <<: *fog_link
+    id: fog-05-hpc-01
+    sourceResourceId: fog-05
+  - <<: *fog_link
+    id: fog-06-hpc-01
+    sourceResourceId: fog-06
+  - <<: *fog_link
+    id: fog-07-hpc-01
+    sourceResourceId: fog-07
+  - <<: *fog_link
+    id: fog-08-hpc-01
+    sourceResourceId: fog-08
+  - <<: *fog_link
+    id: fog-09-hpc-01
+    sourceResourceId: fog-09
+  - <<: *fog_link
+    id: fog-10-hpc-01
+    sourceResourceId: fog-10
+
+  - id: hpc-01-hpc-02
+    sourceResourceId: hpc-01
+    targetResourceId: hpc-02
+    bandwidthBitsPerSecond: 100000000000
+    latencySeconds: 0.00001
+    bidirectional: true
+    sharingPolicy: shared
+    maxConcurrentTransfers: 0
+
+  - &cloud_link
+    id: hpc-02-cloud-01
+    sourceResourceId: hpc-02
+    targetResourceId: cloud-01
+    bandwidthBitsPerSecond: 10000000000
+    latencySeconds: 0.03
+    bidirectional: true
+    sharingPolicy: shared
+    maxConcurrentTransfers: 0
+  - <<: *cloud_link
+    id: hpc-02-cloud-02
+    targetResourceId: cloud-02

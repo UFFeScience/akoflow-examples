@@ -1,0 +1,106 @@
+environment:
+  id: scheduler-hybrid_hetero
+  name: Montage 6448 hybrid heterogeneous simulation
+  description: Frozen PlaFRIM and Google Cloud model reconstructed from the original interference campaign.
+  status: ready
+
+version:
+  id: scheduler-hybrid_hetero-v1
+  environmentId: scheduler-hybrid_hetero
+  version: 1
+  status: published
+  networkModel: static-links
+  interferenceModel: pairwise-slowdown
+  costModel: per-second
+  configurationHash: scheduler-hybrid_hetero-v1
+
+runtimes:
+  - environmentVersionId: scheduler-hybrid_hetero-v1
+    id: scheduler-hybrid_hetero-simgrid
+    name: SimGrid
+    driver: simgrid
+    mode: simulation
+    role: simulation
+    capabilities: {simulation: true}
+
+resources:
+  - id: scheduler-hybrid_hetero-bora011
+    environmentVersionId: scheduler-hybrid_hetero-v1
+    executionTarget: batch
+    type: hpc_machine
+    name: PlaFRIM bora001-044
+    providerId: bora011
+    tier: cluster
+    region: PlaFRIM
+    cpuCores: 36
+    cpuCapacity: 36
+    memoryBytes: 206158430208
+    storageBytes: 0
+    computeSpeedup: 7.09
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+
+  - id: scheduler-hybrid_hetero-diablo03
+    environmentVersionId: scheduler-hybrid_hetero-v1
+    executionTarget: batch
+    type: hpc_machine
+    name: PlaFRIM diablo01-04
+    providerId: diablo03
+    tier: cluster
+    region: PlaFRIM
+    cpuCores: 64
+    cpuCapacity: 64
+    memoryBytes: 274877906944
+    storageBytes: 0
+    computeSpeedup: 5.68
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+
+  - id: scheduler-hybrid_hetero-h3-standard-88-2
+    environmentVersionId: scheduler-hybrid_hetero-v1
+    executionTarget: batch
+    type: cloud_vm
+    name: Google Cloud h3-standard-88
+    providerId: h3-standard-88-2
+    tier: cloud
+    region: cloud
+    cpuCores: 88
+    cpuCapacity: 88
+    memoryBytes: 377957122048
+    storageBytes: 0
+    computeSpeedup: 20
+    pricePerSecond: 0.0013676666666666668
+    bootOverheadSeconds: 12
+    containerOverheadSeconds: 0
+    schedulable: true
+
+  - id: scheduler-hybrid_hetero-h4d-standard-192-7
+    environmentVersionId: scheduler-hybrid_hetero-v1
+    executionTarget: batch
+    type: cloud_vm
+    name: Google Cloud h4d-standard-192
+    providerId: h4d-standard-192-7
+    tier: cloud
+    region: cloud
+    cpuCores: 192
+    cpuCapacity: 192
+    memoryBytes: 773094113280
+    storageBytes: 0
+    computeSpeedup: 39.27
+    pricePerSecond: 0.0021816
+    bootOverheadSeconds: 12
+    containerOverheadSeconds: 0
+    schedulable: true
+
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: scheduler-hybrid_hetero-bora011, runtimeId: scheduler-hybrid_hetero-simgrid, enabled: true}
+  - {resourceId: scheduler-hybrid_hetero-diablo03, runtimeId: scheduler-hybrid_hetero-simgrid, enabled: true}
+  - {resourceId: scheduler-hybrid_hetero-h3-standard-88-2, runtimeId: scheduler-hybrid_hetero-simgrid, enabled: true}
+  - {resourceId: scheduler-hybrid_hetero-h4d-standard-192-7, runtimeId: scheduler-hybrid_hetero-simgrid, enabled: true}

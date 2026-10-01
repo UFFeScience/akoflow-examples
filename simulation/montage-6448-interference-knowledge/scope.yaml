@@ -1,0 +1,4 @@
+id: scheduler-hybrid_hetero-scope-v1
+name: Montage 6448 hybrid heterogeneous scope
+environmentVersionIds:
+  - scheduler-hybrid_hetero-v1

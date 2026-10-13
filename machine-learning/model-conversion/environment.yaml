@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-model-conversion-v1
 runtimes:
   - environmentVersionId: showcase-model-conversion-v1
-    id: local
+    id: showcase-model-conversion-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-model-conversion-local-docker
     environmentVersionId: showcase-model-conversion-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-model-conversion-local-docker, runtimeId: showcase-model-conversion-local, enabled: true}
 

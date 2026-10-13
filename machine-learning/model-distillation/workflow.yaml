@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-model-distillation:v1
   activities:
     - name: teacher
-      runtime: local
+      runtime: showcase-model-distillation-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "teacher", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: generate-labels
-      runtime: local
+      runtime: showcase-model-distillation-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "generate-labels", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - teacher
     - name: student
-      runtime: local
+      runtime: showcase-model-distillation-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "student", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

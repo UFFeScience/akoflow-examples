@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-experiment-feedback-loop-v1
 runtimes:
   - environmentVersionId: showcase-experiment-feedback-loop-v1
-    id: local
+    id: showcase-experiment-feedback-loop-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-experiment-feedback-loop-local-docker
     environmentVersionId: showcase-experiment-feedback-loop-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-experiment-feedback-loop-local-docker, runtimeId: showcase-experiment-feedback-loop-local, enabled: true}
 

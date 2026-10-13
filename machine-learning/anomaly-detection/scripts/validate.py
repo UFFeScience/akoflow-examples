@@ -12,7 +12,7 @@ if actual["showcase"] != expected["showcase"] or actual["artifacts"] != expected
 missing = [name for name in expected["artifacts"] if not (root / "outputs" / name).is_file()]
 if missing:
     sys.exit("missing artifacts: " + ", ".join(missing))
-missing = [name for name in ("workflow.png", "execution.png", "outputs.png") if not (root / "screenshots" / name).is_file()]
+missing = [name for name in ("workflow.png", "execution.png", "outputs.png", "generated-files.png") if not (root / "screenshots" / name).is_file()]
 if missing:
     sys.exit("missing screenshots: " + ", ".join(missing))
 print("validated " + expected["showcase"])

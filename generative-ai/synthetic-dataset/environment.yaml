@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-synthetic-dataset-v1
 runtimes:
   - environmentVersionId: showcase-synthetic-dataset-v1
-    id: local
+    id: showcase-synthetic-dataset-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-synthetic-dataset-local-docker
     environmentVersionId: showcase-synthetic-dataset-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-synthetic-dataset-local-docker, runtimeId: showcase-synthetic-dataset-local, enabled: true}
 

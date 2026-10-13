@@ -5,29 +5,26 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1
   activities:
     - name: simulation
-      runtime: local
+      runtime: showcase-ai-assisted-analysis-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "simulation", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: analysis
-      runtime: local
+      runtime: showcase-ai-assisted-analysis-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "analysis", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - simulation
     - name: llm-interpretation
-      runtime: local
+      runtime: showcase-ai-assisted-analysis-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "llm-interpretation", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

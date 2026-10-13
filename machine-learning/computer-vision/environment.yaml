@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-computer-vision-v1
 runtimes:
   - environmentVersionId: showcase-computer-vision-v1
-    id: local
+    id: showcase-computer-vision-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-computer-vision-local-docker
     environmentVersionId: showcase-computer-vision-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-computer-vision-local-docker, runtimeId: showcase-computer-vision-local, enabled: true}
 

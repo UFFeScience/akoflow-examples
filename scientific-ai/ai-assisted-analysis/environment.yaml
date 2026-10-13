@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-ai-assisted-analysis-v1
 runtimes:
   - environmentVersionId: showcase-ai-assisted-analysis-v1
-    id: local
+    id: showcase-ai-assisted-analysis-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-ai-assisted-analysis-local-docker
     environmentVersionId: showcase-ai-assisted-analysis-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-ai-assisted-analysis-local-docker, runtimeId: showcase-ai-assisted-analysis-local, enabled: true}
 

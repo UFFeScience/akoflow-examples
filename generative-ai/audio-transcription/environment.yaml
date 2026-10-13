@@ -14,14 +14,14 @@ version:
   configurationHash: showcase-audio-transcription-v1
 runtimes:
   - environmentVersionId: showcase-audio-transcription-v1
-    id: local
+    id: showcase-audio-transcription-local
     name: Local Docker host
     driver: local
     mode: execution
     role: compute
     capabilities: {batch: true, container: true}
 resources:
-  - id: local-docker
+  - id: showcase-audio-transcription-local-docker
     environmentVersionId: showcase-audio-transcription-v1
     type: machine
     name: Local Docker host
@@ -39,5 +39,5 @@ storages: []
 connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
-  - {resourceId: local-docker, runtimeId: local, enabled: true}
+  - {resourceId: showcase-audio-transcription-local-docker, runtimeId: showcase-audio-transcription-local, enabled: true}
 

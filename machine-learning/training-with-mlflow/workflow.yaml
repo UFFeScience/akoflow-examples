@@ -5,49 +5,44 @@ spec:
   image: ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow:v1
   activities:
     - name: load-data
-      runtime: local
+      runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "load-data", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: preprocess
-      runtime: local
+      runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "preprocess", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - load-data
     - name: train
-      runtime: local
+      runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - preprocess
     - name: evaluate
-      runtime: local
+      runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:
         - train
     - name: register-model
-      runtime: local
+      runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
         arguments: ["/app/run_showcase.py", "--stage", "register-model", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
       dependsOn:

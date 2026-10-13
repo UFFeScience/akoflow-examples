@@ -1,0 +1,4 @@
+id: video-intelligence-scope
+name: Video Intelligence local scope
+environmentVersionIds: [video-intelligence-v1]
+

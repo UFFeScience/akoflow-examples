@@ -1,0 +1,6 @@
+id: blender-render-farm-environment
+name: Blender Render Farm local environment
+driver: local
+runtimes: [{id: local, type: local, containerRuntime: docker}]
+resources: [{id: workstation, runtimeId: local, cpuCores: 4, memoryBytes: 8589934592}]
+

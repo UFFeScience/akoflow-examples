@@ -1,0 +1,11 @@
+name: document-intelligence
+spec:
+  namespace: showcase
+  image: ghcr.io/uffescience/akoflow-examples/document-intelligence:v1
+  activities:
+    - {name: ingest, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", ingest, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: classify, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", classify, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [ingest]}
+    - {name: extract, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", extract, "--output", "."], workingDirectory: /workspace}, cpuLimit: "2", memoryLimit: 512Mi, dependsOn: [classify]}
+    - {name: reconcile, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", reconcile, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [extract]}
+    - {name: report, runtime: local, command: {entrypoint: python, arguments: ["/app/scripts/pipeline.py", "--stage", report, "--output", "."], workingDirectory: /workspace}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [reconcile]}
+

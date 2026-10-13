@@ -1,0 +1,62 @@
+{
+  "id": "montage-real-cluster-hetero-c4d-network-v1",
+  "name": "Montage real cluster hetero links",
+  "version": 1,
+  "executionScopeId": "montage-real-cluster-hetero-c4d-scope-v1",
+  "links": [
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-001",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "plafrim-execution-ssh-node-bora002",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-002",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-003",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo04",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-004",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora002",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-005",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora002",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo04",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cluster-hetero-c4d-network-v1-link-006",
+      "sourceResourceId": "plafrim-execution-ssh-node-diablo03",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo04",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    }
+  ]
+}

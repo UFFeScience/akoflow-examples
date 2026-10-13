@@ -1,0 +1,17 @@
+{
+  "id": "montage-real-cluster-hetero-c4d-scope-v1",
+  "name": "Montage real cluster hetero",
+  "networkTopologyId": "montage-real-cluster-hetero-c4d-network-v1",
+  "environmentVersionIds": [
+    "plafrim-execution-v1"
+  ],
+  "metadata": {
+    "scenario": "cluster_hetero",
+    "realExecution": true,
+    "sourcePlanningSessionId": "montage-58-seven-env-20261001-cluster_hetero",
+    "cloudMachineTranslation": {
+      "h4d-standard-192": "c4d-standard-192",
+      "h4d-highmem-192": "c4d-highmem-192"
+    }
+  }
+}

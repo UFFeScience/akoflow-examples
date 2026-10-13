@@ -14,7 +14,12 @@ source = YAML.load_file(File.join(ROOT, 'source-workflow.yaml'))
 abort 'source image does not match the pinned Montage release' unless source.fetch('spec').fetch('image') == 'ovvesley/akoflow-wf-montage:050d'
 original = source.fetch('spec').fetch('activities')
 runtimes = CSV.read(File.join(ROOT, 'reference-runtimes.csv'), headers: true)
-seconds = runtimes.to_h { |row| [row.fetch('activity_id'), row.fetch('duration_seconds').to_f] }
+# The source timestamps have one-second resolution. One activity completed
+# within the same timestamp second; model it as one second instead of a zero
+# duration, which is not a meaningful schedulable task.
+seconds = runtimes.to_h do |row|
+  [row.fetch('activity_id'), [row.fetch('duration_seconds').to_f, 1.0].max]
+end
 abort 'expected 58 distinct activities with reference runtimes' unless original.length == 58 && original.map { |a| a.fetch('name') }.uniq.length == 58 && (original.map { |a| a['name'] } - seconds.keys).empty?
 
 def output_files(command)
@@ -60,7 +65,14 @@ activities = original.map do |activity|
   { 'name' => activity['name'], 'runtime' => runtime, 'run' => command,
     'workspaceSeedPath' => '/akoflow-wfa-shared',
     'cpuLimit' => activity.fetch('cpuLimit'), 'memoryLimit' => activity.fetch('memoryLimit'),
-    'dependsOn' => activity.fetch('dependsOn', []) }
+    'dependsOn' => activity.fetch('dependsOn', []),
+    # Preserve the per-activity duration observed in the completed Montage
+    # reference run. Planning and SimGrid use this deterministic baseline;
+    # real execution still records its own observed duration independently.
+    'simulation' => {
+      'model' => 'deterministic',
+      'durationSeconds' => seconds.fetch(activity.fetch('name'))
+    } }
 end
 
 workflow = { 'name' => NAME, 'spec' => { 'namespace' => 'showcase', 'image' => IMAGE,

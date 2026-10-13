@@ -1,0 +1,100 @@
+{
+  "workflow": "montage-58-calibrated-real-050d",
+  "generatedAt": "2026-10-01T14:25:12Z",
+  "scenarios": [
+    {
+      "id": "cloud_hetero",
+      "scopeId": "montage-real-cloud-hetero-c4d-scope-v1",
+      "networkTopologyId": "montage-real-cloud-hetero-c4d-network-v1",
+      "planId": "montage-real-cloud-hetero-c4d-prism-time-v1",
+      "resources": [
+        "montage-real-h3-standard-88-1",
+        "montage-real-h3-standard-88-2",
+        "montage-real-c4d-standard-192-1",
+        "montage-real-c4d-highmem-192-1"
+      ]
+    },
+    {
+      "id": "cloud_homo",
+      "scopeId": "montage-real-cloud-homo-c4d-scope-v1",
+      "networkTopologyId": "montage-real-cloud-homo-c4d-network-v1",
+      "planId": "montage-real-cloud-homo-c4d-prism-time-v1",
+      "resources": [
+        "montage-real-c4d-standard-192-1",
+        "montage-real-c4d-standard-192-2",
+        "montage-real-c4d-standard-192-3",
+        "montage-real-c4d-standard-192-4"
+      ]
+    },
+    {
+      "id": "cluster_hetero",
+      "scopeId": "montage-real-cluster-hetero-c4d-scope-v1",
+      "networkTopologyId": "montage-real-cluster-hetero-c4d-network-v1",
+      "planId": "montage-real-cluster-hetero-c4d-prism-time-v1",
+      "resources": [
+        "plafrim-execution-ssh-node-bora001",
+        "plafrim-execution-ssh-node-bora002",
+        "plafrim-execution-ssh-node-diablo03",
+        "plafrim-execution-ssh-node-diablo04"
+      ]
+    },
+    {
+      "id": "cluster_homo",
+      "scopeId": "montage-real-cluster-homo-c4d-scope-v1",
+      "networkTopologyId": "montage-real-cluster-homo-c4d-network-v1",
+      "planId": "montage-real-cluster-homo-c4d-prism-time-v1",
+      "resources": [
+        "plafrim-execution-ssh-node-bora001",
+        "plafrim-execution-ssh-node-bora002",
+        "plafrim-execution-ssh-node-bora003",
+        "plafrim-execution-ssh-node-bora004"
+      ]
+    },
+    {
+      "id": "hybrid_hetero",
+      "scopeId": "montage-real-hybrid-hetero-c4d-scope-v1",
+      "networkTopologyId": "montage-real-hybrid-hetero-c4d-network-v1",
+      "planId": "montage-real-hybrid-hetero-c4d-prism-time-v1",
+      "resources": [
+        "plafrim-execution-ssh-node-bora003",
+        "plafrim-execution-ssh-node-diablo03",
+        "montage-real-h3-standard-88-2",
+        "montage-real-c4d-standard-192-1"
+      ]
+    },
+    {
+      "id": "hybrid_homo",
+      "scopeId": "montage-real-hybrid-homo-c4d-scope-v1",
+      "networkTopologyId": "montage-real-hybrid-homo-c4d-network-v1",
+      "planId": "montage-real-hybrid-homo-c4d-prism-time-v1",
+      "resources": [
+        "plafrim-execution-ssh-node-bora001",
+        "plafrim-execution-ssh-node-bora002",
+        "montage-real-c4d-standard-192-1",
+        "montage-real-c4d-standard-192-2"
+      ]
+    },
+    {
+      "id": "network_fog_hpc_cloud",
+      "scopeId": "montage-real-network-fog-hpc-cloud-c4d-scope-v1",
+      "networkTopologyId": "montage-real-network-fog-hpc-cloud-c4d-network-v1",
+      "planId": "montage-real-network-fog-hpc-cloud-c4d-prism-time-v1",
+      "resources": [
+        "montage-local-fog-01",
+        "montage-local-fog-02",
+        "montage-local-fog-03",
+        "montage-local-fog-04",
+        "montage-local-fog-05",
+        "montage-local-fog-06",
+        "montage-local-fog-07",
+        "montage-local-fog-08",
+        "montage-local-fog-09",
+        "montage-local-fog-10",
+        "plafrim-execution-ssh-node-bora001",
+        "plafrim-execution-ssh-node-diablo03",
+        "montage-real-h3-standard-88-1",
+        "montage-real-c4d-standard-192-1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,314 @@
+{
+  "environment": {
+    "id": "montage-local-fog-execution",
+    "name": "Montage local fog execution",
+    "description": "Ten logical execution slots on the AkôFlow host used by the real fog/HPC/cloud scenario.",
+    "status": "defined"
+  },
+  "version": {
+    "id": "montage-local-fog-execution-v1",
+    "environmentId": "montage-local-fog-execution",
+    "version": 1,
+    "status": "published",
+    "networkModel": "measured-links",
+    "interferenceModel": "observed-shared-host",
+    "costModel": "local-zero",
+    "configurationHash": "montage-local-fog-execution-v1"
+  },
+  "runtimes": [
+    {
+      "id": "montage-local-fog-runtime",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "name": "Local Docker fog slots",
+      "driver": "local",
+      "mode": "execution",
+      "role": "compute",
+      "configuration": {
+        "containerEngine": "docker"
+      },
+      "capabilities": {
+        "batch": true,
+        "interactive": true,
+        "container": true,
+        "sharedStorage": true,
+        "dataStaging": true,
+        "cancellation": true,
+        "logStreaming": true
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "montage-local-fog-01",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 1",
+      "providerId": "montage-local-fog-01",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-02",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 2",
+      "providerId": "montage-local-fog-02",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-03",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 3",
+      "providerId": "montage-local-fog-03",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-04",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 4",
+      "providerId": "montage-local-fog-04",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-05",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 5",
+      "providerId": "montage-local-fog-05",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-06",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 6",
+      "providerId": "montage-local-fog-06",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-07",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 7",
+      "providerId": "montage-local-fog-07",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-08",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 8",
+      "providerId": "montage-local-fog-08",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-09",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 9",
+      "providerId": "montage-local-fog-09",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    },
+    {
+      "id": "montage-local-fog-10",
+      "environmentVersionId": "montage-local-fog-execution-v1",
+      "executionTarget": "direct",
+      "type": "local_machine",
+      "name": "Montage local fog slot 10",
+      "providerId": "montage-local-fog-10",
+      "tier": "logical-fog-slot",
+      "architecture": "amd64",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 0,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true,
+      "metadata": {
+        "physicalHost": "AkôFlow daemon host",
+        "logicalSlot": true,
+        "experimentalRole": "fog"
+      }
+    }
+  ],
+  "resourceRuntimeBindings": [
+    {
+      "resourceId": "montage-local-fog-01",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-02",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-03",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-04",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-05",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-06",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-07",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-08",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-09",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    },
+    {
+      "resourceId": "montage-local-fog-10",
+      "runtimeId": "montage-local-fog-runtime",
+      "enabled": true
+    }
+  ]
+}

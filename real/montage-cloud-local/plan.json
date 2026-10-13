@@ -9,7 +9,7 @@
     "algorithmVersion": "1",
     "objective": "custom",
     "predicted": {
-      "makespanSeconds": 12577.0,
+      "makespanSeconds": 12578.0,
       "cost": 0.183961,
       "feasible": true
     },

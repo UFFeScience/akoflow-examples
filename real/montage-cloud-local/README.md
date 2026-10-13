@@ -13,9 +13,14 @@ needed to preserve these commands. The SIF is an additional representation for
 environments that use Apptainer. Docker workers use the pinned OCI image.
 
 `reference-runtimes.csv` is a historical profile measured on `c3d-standard-16`.
-Its times are **not** measurements on `e2-medium` or the local resource. The
-imported plan's predicted time and cost are illustrative metadata, not a
-calibrated forecast or an observed result.
+Each workflow activity carries its corresponding value as a deterministic
+`simulation.durationSeconds` profile, so planning and SimGrid use the measured
+duration of that specific activity rather than a stage-wide default. The source
+timestamps have one-second resolution; the single zero-second observation is
+represented as one second so that every schedulable activity has a positive
+duration. These times are **not** measurements on `e2-medium` or the local
+resource. The imported plan's predicted time and cost are illustrative metadata,
+not a calibrated forecast or an observed result.
 
 ## Requirements
 
@@ -67,8 +72,8 @@ sh "$base/submit-run.sh" montage-58-four-vm-local-050d-run-v1
 Set `AKOFLOW_SSH_CIDR` to the daemon's approved public egress address before
 creating capacity targets. The target uses the connected environment's project,
 the catalog's `e2-medium` offering, a catalog Ubuntu `amd64` image, and a
-30 GiB balanced boot disk. The scope references `gcp-environment-initial`
-and `local-environment-initial`. If the daemon's egress IP changes, update the
+30 GiB balanced boot disk. The scope references `gcp-environment-v1`
+and `local-environment-v1`. If the daemon's egress IP changes, update the
 target's SSH source range before running; the current script rejects existing
 targets with a different SSH range, machine type, project, instance limit, or
 lifecycle.

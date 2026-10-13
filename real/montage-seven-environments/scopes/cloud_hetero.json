@@ -1,0 +1,17 @@
+{
+  "id": "montage-real-cloud-hetero-c4d-scope-v1",
+  "name": "Montage real cloud hetero",
+  "networkTopologyId": "montage-real-cloud-hetero-c4d-network-v1",
+  "environmentVersionIds": [
+    "gcp-environment-v1"
+  ],
+  "metadata": {
+    "scenario": "cloud_hetero",
+    "realExecution": true,
+    "sourcePlanningSessionId": "montage-58-seven-env-20261001-cloud_hetero",
+    "cloudMachineTranslation": {
+      "h4d-standard-192": "c4d-standard-192",
+      "h4d-highmem-192": "c4d-highmem-192"
+    }
+  }
+}

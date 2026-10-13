@@ -1,0 +1,62 @@
+{
+  "id": "montage-real-cloud-homo-c4d-network-v1",
+  "name": "Montage real cloud homo links",
+  "version": 1,
+  "executionScopeId": "montage-real-cloud-homo-c4d-scope-v1",
+  "links": [
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-001",
+      "sourceResourceId": "montage-real-c4d-standard-192-1",
+      "targetResourceId": "montage-real-c4d-standard-192-2",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-002",
+      "sourceResourceId": "montage-real-c4d-standard-192-1",
+      "targetResourceId": "montage-real-c4d-standard-192-3",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-003",
+      "sourceResourceId": "montage-real-c4d-standard-192-1",
+      "targetResourceId": "montage-real-c4d-standard-192-4",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-004",
+      "sourceResourceId": "montage-real-c4d-standard-192-2",
+      "targetResourceId": "montage-real-c4d-standard-192-3",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-005",
+      "sourceResourceId": "montage-real-c4d-standard-192-2",
+      "targetResourceId": "montage-real-c4d-standard-192-4",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-cloud-homo-c4d-network-v1-link-006",
+      "sourceResourceId": "montage-real-c4d-standard-192-3",
+      "targetResourceId": "montage-real-c4d-standard-192-4",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    }
+  ]
+}

@@ -19,7 +19,7 @@ connections:
     type: ssh
     endpoint: plafrim
     username: wferreir
-    credentialRef: file:/app/storage/credentials/ssh/plafrim-engine
+    credentialRef: file:storage/credentials/ssh/plafrim-engine
     configuration:
       scheduler: slurm
       port: 22

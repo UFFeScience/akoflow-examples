@@ -1,0 +1,827 @@
+{
+  "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1",
+  "name": "Montage real network fog hpc cloud links",
+  "version": 1,
+  "executionScopeId": "montage-real-network-fog-hpc-cloud-c4d-scope-v1",
+  "links": [
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-001",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-02",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-002",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-03",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-003",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-04",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-004",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-05",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-005",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-06",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-006",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-007",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-008",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-009",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-010",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-011",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-012",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-013",
+      "sourceResourceId": "montage-local-fog-01",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-014",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-03",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-015",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-04",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-016",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-05",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-017",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-06",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-018",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-019",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-020",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-021",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-022",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-023",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-024",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-025",
+      "sourceResourceId": "montage-local-fog-02",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-026",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-04",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-027",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-05",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-028",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-06",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-029",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-030",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-031",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-032",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-033",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-034",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-035",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-036",
+      "sourceResourceId": "montage-local-fog-03",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-037",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-05",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-038",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-06",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-039",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-040",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-041",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-042",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-043",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-044",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-045",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-046",
+      "sourceResourceId": "montage-local-fog-04",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-047",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-local-fog-06",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-048",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-049",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-050",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-051",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-052",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-053",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-054",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-055",
+      "sourceResourceId": "montage-local-fog-05",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-056",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-local-fog-07",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-057",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-058",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-059",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-060",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-061",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-062",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-063",
+      "sourceResourceId": "montage-local-fog-06",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-064",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "montage-local-fog-08",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-065",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-066",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-067",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-068",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-069",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-070",
+      "sourceResourceId": "montage-local-fog-07",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-071",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "montage-local-fog-09",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-072",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-073",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-074",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-075",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-076",
+      "sourceResourceId": "montage-local-fog-08",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-077",
+      "sourceResourceId": "montage-local-fog-09",
+      "targetResourceId": "montage-local-fog-10",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-078",
+      "sourceResourceId": "montage-local-fog-09",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-079",
+      "sourceResourceId": "montage-local-fog-09",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-080",
+      "sourceResourceId": "montage-local-fog-09",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-081",
+      "sourceResourceId": "montage-local-fog-09",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-082",
+      "sourceResourceId": "montage-local-fog-10",
+      "targetResourceId": "plafrim-execution-ssh-node-bora001",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-083",
+      "sourceResourceId": "montage-local-fog-10",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.1,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-084",
+      "sourceResourceId": "montage-local-fog-10",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-085",
+      "sourceResourceId": "montage-local-fog-10",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 200000000,
+      "latencySeconds": 0.05,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-086",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "plafrim-execution-ssh-node-diablo03",
+      "bandwidthBitsPerSecond": 100000000000,
+      "latencySeconds": 0.0001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-087",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 1000000000,
+      "latencySeconds": 0.08,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-088",
+      "sourceResourceId": "plafrim-execution-ssh-node-bora001",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 1000000000,
+      "latencySeconds": 0.08,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-089",
+      "sourceResourceId": "plafrim-execution-ssh-node-diablo03",
+      "targetResourceId": "montage-real-h3-standard-88-1",
+      "bandwidthBitsPerSecond": 1000000000,
+      "latencySeconds": 0.08,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-090",
+      "sourceResourceId": "plafrim-execution-ssh-node-diablo03",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 1000000000,
+      "latencySeconds": 0.08,
+      "pricePerByte": 0,
+      "bidirectional": true
+    },
+    {
+      "id": "montage-real-network-fog-hpc-cloud-c4d-network-v1-link-091",
+      "sourceResourceId": "montage-real-h3-standard-88-1",
+      "targetResourceId": "montage-real-c4d-standard-192-1",
+      "bandwidthBitsPerSecond": 10000000000,
+      "latencySeconds": 0.001,
+      "pricePerByte": 0,
+      "bidirectional": true
+    }
+  ]
+}

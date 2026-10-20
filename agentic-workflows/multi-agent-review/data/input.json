@@ -1,6 +1,33 @@
 {
+  "artifacts": [
+    "synthesis.md",
+    "review.json"
+  ],
+  "dependencies": {
+    "code": [
+      "shared-context"
+    ],
+    "critic-review": [
+      "research",
+      "code",
+      "domain"
+    ],
+    "domain": [
+      "shared-context"
+    ],
+    "publish-evidence": [
+      "synthesize"
+    ],
+    "research": [
+      "shared-context"
+    ],
+    "shared-context": [],
+    "synthesize": [
+      "critic-review"
+    ]
+  },
+  "localProfile": "Run three independent local reviewer programs in parallel: statistical review, independent numeric recomputation, and domain-bound checks. A critic checks agreement and accepts or corrects a supplied mean before the synthesis is published. The reviewers are deterministic programs rather than hosted LLM agents.",
   "slug": "multi-agent-review",
-  "title": "Multi-Agent Review",
   "stages": [
     "shared-context",
     "research",
@@ -10,32 +37,6 @@
     "synthesize",
     "publish-evidence"
   ],
-  "artifacts": [
-    "synthesis.md",
-    "review.json"
-  ],
-  "dependencies": {
-    "shared-context": [],
-    "research": [
-      "shared-context"
-    ],
-    "code": [
-      "shared-context"
-    ],
-    "domain": [
-      "shared-context"
-    ],
-    "critic-review": [
-      "research",
-      "code",
-      "domain"
-    ],
-    "synthesize": [
-      "critic-review"
-    ],
-    "publish-evidence": [
-      "synthesize"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Multi-Agent Review",
+  "validationMode": "local-workload"
 }

@@ -1,7 +1,7 @@
 environment:
   id: showcase-anomaly-detection
-  name: Showcase anomaly-detection
-  description: Local Docker-backed reproducibility environment
+  name: showcase-anomaly-detection local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-anomaly-detection-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-anomaly-detection-local-docker, runtimeId: showcase-anomaly-detection-local, enabled: true}
-

@@ -1,6 +1,28 @@
 {
+  "artifacts": [
+    "anomalies.json",
+    "metrics.json"
+  ],
+  "dependencies": {
+    "build-features": [
+      "collect-signals"
+    ],
+    "choose-threshold": [
+      "score-validation"
+    ],
+    "collect-signals": [],
+    "publish": [
+      "choose-threshold"
+    ],
+    "score-validation": [
+      "train-detector"
+    ],
+    "train-detector": [
+      "build-features"
+    ]
+  },
+  "localProfile": "Fit a Gaussian sensor baseline, score held-out normal and anomalous signals, select a threshold by measured F1, and publish the detected anomalies and calibration metrics.",
   "slug": "anomaly-detection",
-  "title": "Anomaly Detection",
   "stages": [
     "collect-signals",
     "build-features",
@@ -9,27 +31,6 @@
     "choose-threshold",
     "publish"
   ],
-  "artifacts": [
-    "anomalies.json",
-    "metrics.json"
-  ],
-  "dependencies": {
-    "collect-signals": [],
-    "build-features": [
-      "collect-signals"
-    ],
-    "train-detector": [
-      "build-features"
-    ],
-    "score-validation": [
-      "train-detector"
-    ],
-    "choose-threshold": [
-      "score-validation"
-    ],
-    "publish": [
-      "choose-threshold"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Anomaly Detection",
+  "validationMode": "local-workload"
 }

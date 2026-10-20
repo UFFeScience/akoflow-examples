@@ -1,6 +1,33 @@
 {
+  "artifacts": [
+    "decision.json",
+    "cost-comparison.csv"
+  ],
+  "dependencies": {
+    "cloud": [
+      "profile-workload"
+    ],
+    "compare-plans": [
+      "local-gpu",
+      "hpc",
+      "cloud"
+    ],
+    "hpc": [
+      "profile-workload"
+    ],
+    "local-gpu": [
+      "profile-workload"
+    ],
+    "profile-workload": [],
+    "select-scope": [
+      "compare-plans"
+    ],
+    "train": [
+      "select-scope"
+    ]
+  },
+  "localProfile": "Measure a local CPU model fit, compare three infrastructure plans using explicitly declared speed/startup/price assumptions, select a plan, and train the final model locally. This smoke example provisions no infrastructure and reports estimates separately from measured error.",
   "slug": "infrastructure-selection",
-  "title": "Infrastructure Selection",
   "stages": [
     "profile-workload",
     "local-gpu",
@@ -10,32 +37,6 @@
     "select-scope",
     "train"
   ],
-  "artifacts": [
-    "decision.json",
-    "cost-comparison.csv"
-  ],
-  "dependencies": {
-    "profile-workload": [],
-    "local-gpu": [
-      "profile-workload"
-    ],
-    "hpc": [
-      "profile-workload"
-    ],
-    "cloud": [
-      "profile-workload"
-    ],
-    "compare-plans": [
-      "local-gpu",
-      "hpc",
-      "cloud"
-    ],
-    "select-scope": [
-      "compare-plans"
-    ],
-    "train": [
-      "select-scope"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Infrastructure Selection",
+  "validationMode": "local-workload"
 }

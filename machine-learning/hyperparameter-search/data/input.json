@@ -1,20 +1,18 @@
 {
-  "slug": "hyperparameter-search",
-  "title": "Hyperparameter Search",
-  "stages": [
-    "prepare-dataset",
-    "trial-1",
-    "trial-2",
-    "trial-n",
-    "compare-trials",
-    "register-best"
-  ],
   "artifacts": [
     "leaderboard.csv",
     "best-model.pkl"
   ],
   "dependencies": {
+    "compare-trials": [
+      "trial-1",
+      "trial-2",
+      "trial-n"
+    ],
     "prepare-dataset": [],
+    "register-best": [
+      "compare-trials"
+    ],
     "trial-1": [
       "prepare-dataset"
     ],
@@ -23,15 +21,18 @@
     ],
     "trial-n": [
       "prepare-dataset"
-    ],
-    "compare-trials": [
-      "trial-1",
-      "trial-2",
-      "trial-n"
-    ],
-    "register-best": [
-      "compare-trials"
     ]
   },
-  "validationMode": "contract-fixture"
+  "localProfile": "Train three independent gradient-descent regressors with different learning rates and epoch budgets, rank their measured held-out errors, and publish the best learned model and leaderboard.",
+  "slug": "hyperparameter-search",
+  "stages": [
+    "prepare-dataset",
+    "trial-1",
+    "trial-2",
+    "trial-n",
+    "compare-trials",
+    "register-best"
+  ],
+  "title": "Hyperparameter Search",
+  "validationMode": "local-workload"
 }

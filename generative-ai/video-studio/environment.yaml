@@ -1,13 +1,42 @@
-id: ai-video-studio-environment
-name: AI Video Studio local environment
-driver: local
+environment:
+  id: ai-video-studio
+  name: ai-video-studio local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: ai-video-studio-v1
+  environmentId: ai-video-studio
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: ai-video-studio-v1
 runtimes:
-  - id: local
-    type: local
-    containerRuntime: docker
+  - environmentVersionId: ai-video-studio-v1
+    id: ai-video-studio-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
 resources:
-  - id: workstation
-    runtimeId: local
+  - id: ai-video-studio-local-docker
+    environmentVersionId: ai-video-studio-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
     cpuCores: 4
-    memoryBytes: 4294967296
-
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: ai-video-studio-local-docker, runtimeId: ai-video-studio-local, enabled: true}

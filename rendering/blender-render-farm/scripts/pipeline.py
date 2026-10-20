@@ -14,15 +14,15 @@ def software(path,frame):
    buf.extend(c)
  path.write_bytes(f'P6\n{w} {h}\n255\n'.encode()+buf)
 def invoke(o,*args,blend=False):
- cmd=['blender','--background'];
+ cmd=['blender','--background','--threads','2','--python-exit-code','1'];
  if blend:cmd.append(str(o/'scene.blend'))
  cmd += ['--python',str(ROOT/'scripts/blender_job.py'),'--',*map(str,args)];subprocess.run(cmd,check=True)
 def setup(o):
  (o/'frames').mkdir(parents=True,exist_ok=True)
  if shutil.which('blender'):invoke(o,'setup',o,COUNT)
  elif os.getenv('AKOFLOW_REQUIRE_BLENDER')=='1':raise SystemExit('Blender is required')
- else:dump(o/'scene.blend',{'fixture':'software-render','frames':COUNT})
- dump(o/'render-plan.json',{'frames':COUNT,'shards':{'render-even':'even frames','render-odd':'odd frames'},'engine':'blender' if shutil.which('blender') else 'software-fixture'})
+ else:dump(o/'scene.json',{'engine':'portable-software-render','frames':COUNT})
+ dump(o/'render-plan.json',{'frames':COUNT,'shards':{'render-even':'even frames','render-odd':'odd frames'},'engine':'blender' if shutil.which('blender') else 'portable-software-render'})
 def render(o,parity):
  if shutil.which('blender'):invoke(o,'render',o,parity,COUNT,blend=True)
  else:
@@ -43,7 +43,7 @@ def compose(o):
 def verify(o):
  frames=sorted((o/'frames').glob('frame-*'));video=o/('animation.mp4' if (o/'animation.mp4').exists() else 'animation.y4m');ok=len(frames)==COUNT and video.stat().st_size>1000
  dump(o/'render-report.json',{'status':'passed' if ok else 'failed','expected_frames':COUNT,'rendered_frames':len(frames),'workers':2})
- arts=['render-plan.json','scene.blend',video.name,'render-report.json'];dump(o/'manifest.json',{'showcase':'blender-render-farm','status':'success' if ok else 'failed','artifacts':arts})
+ arts=['render-plan.json','scene.blend' if (o/'scene.blend').exists() else 'scene.json',video.name,'render-report.json'];dump(o/'manifest.json',{'showcase':'blender-render-farm','status':'success' if ok else 'failed','artifacts':arts})
 S={'setup':setup,'render-even':lambda o:render(o,0),'render-odd':lambda o:render(o,1),'compose':compose,'verify':verify}
 def main():
  p=argparse.ArgumentParser();p.add_argument('--stage',choices=[*S,'all'],default='all');p.add_argument('--output',required=True);a=p.parse_args();o=Path(a.output);o.mkdir(parents=True,exist_ok=True)

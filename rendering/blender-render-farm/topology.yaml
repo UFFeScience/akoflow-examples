@@ -1,3 +1,5 @@
 id: blender-render-farm-topology
-name: Blender Render Farm topology
+name: blender-render-farm local topology
+version: 1
+executionScopeId: blender-render-farm-scope
 links: []

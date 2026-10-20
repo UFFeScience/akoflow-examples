@@ -1,61 +1,102 @@
 name: showcase-audio-transcription
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription:v1
   activities:
-    - name: ingest-audio
-      runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - ingest-audio
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "ingest-audio", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: segment
+      name: ingest-audio
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - segment
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "segment", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - ingest-audio
       memoryLimit: 256Mi
-      dependsOn: ["ingest-audio"]
-    - name: segment-1
+      name: segment
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - segment-1
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "segment-1", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - segment
       memoryLimit: 256Mi
-      dependsOn: ["segment"]
-    - name: segment-n
+      name: segment-1
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - segment-n
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "segment-n", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - segment
       memoryLimit: 256Mi
-      dependsOn: ["segment"]
-    - name: merge-transcript
+      name: segment-n
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - merge-transcript
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "merge-transcript", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - segment-1
+        - segment-n
       memoryLimit: 256Mi
-      dependsOn: ["segment-1","segment-n"]
-    - name: summarize
+      name: merge-transcript
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - summarize
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "summarize", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - merge-transcript
       memoryLimit: 256Mi
-      dependsOn: ["merge-transcript"]
-    - name: publish
+      name: summarize
       runtime: showcase-audio-transcription-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - summarize
       memoryLimit: 256Mi
-      dependsOn: ["summarize"]
+      name: publish
+      runtime: showcase-audio-transcription-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription:v1
+  namespace: showcase

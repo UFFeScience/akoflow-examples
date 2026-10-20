@@ -1,3 +1,5 @@
 id: document-intelligence-topology
-name: Document Intelligence local topology
+name: document-intelligence local topology
+version: 1
+executionScopeId: document-intelligence-scope
 links: []

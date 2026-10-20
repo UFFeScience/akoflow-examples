@@ -1,6 +1,28 @@
 {
+  "artifacts": [
+    "next-batch.json",
+    "feedback-report.json"
+  ],
+  "dependencies": {
+    "observations": [],
+    "propose-experiments": [
+      "update-model"
+    ],
+    "record-observations": [
+      "run-experiments"
+    ],
+    "run-experiments": [
+      "safety-check"
+    ],
+    "safety-check": [
+      "propose-experiments"
+    ],
+    "update-model": [
+      "observations"
+    ]
+  },
+  "localProfile": "Fit a quadratic response model from local observations, propose a new experiment batch, enforce parameter limits, execute the proposed experiments, and verify that the measured optimum improves on the original observations. This is a numerical closed loop, not a hardware experiment.",
   "slug": "experiment-feedback-loop",
-  "title": "Experiment Feedback Loop",
   "stages": [
     "observations",
     "update-model",
@@ -9,27 +31,6 @@
     "run-experiments",
     "record-observations"
   ],
-  "artifacts": [
-    "next-batch.json",
-    "feedback-report.json"
-  ],
-  "dependencies": {
-    "observations": [],
-    "update-model": [
-      "observations"
-    ],
-    "propose-experiments": [
-      "update-model"
-    ],
-    "safety-check": [
-      "propose-experiments"
-    ],
-    "run-experiments": [
-      "safety-check"
-    ],
-    "record-observations": [
-      "run-experiments"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Experiment Feedback Loop",
+  "validationMode": "local-workload"
 }

@@ -1,6 +1,28 @@
 {
+  "artifacts": [
+    "vision-metrics.json",
+    "model.pkl"
+  ],
+  "dependencies": {
+    "augment": [
+      "import-labels"
+    ],
+    "collect-images": [],
+    "evaluate": [
+      "train-detector"
+    ],
+    "import-labels": [
+      "collect-images"
+    ],
+    "package-model": [
+      "evaluate"
+    ],
+    "train-detector": [
+      "augment"
+    ]
+  },
+  "localProfile": "Generate seeded noisy 8×8 geometric-pattern images from the bundled input specification, validate labels, augment only training images, learn class centroids, and evaluate classification on held-out images. This small offline dataset is not CIFAR-10.",
   "slug": "computer-vision",
-  "title": "Computer Vision",
   "stages": [
     "collect-images",
     "import-labels",
@@ -9,27 +31,6 @@
     "evaluate",
     "package-model"
   ],
-  "artifacts": [
-    "cifar10-metrics.json",
-    "model.pkl"
-  ],
-  "dependencies": {
-    "collect-images": [],
-    "import-labels": [
-      "collect-images"
-    ],
-    "augment": [
-      "import-labels"
-    ],
-    "train-detector": [
-      "augment"
-    ],
-    "evaluate": [
-      "train-detector"
-    ],
-    "package-model": [
-      "evaluate"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Computer Vision",
+  "validationMode": "local-workload"
 }

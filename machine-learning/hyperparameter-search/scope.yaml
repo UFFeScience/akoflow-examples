@@ -1,5 +1,3 @@
 id: showcase-hyperparameter-search-scope
-name: Hyperparameter Search local scope
-environmentVersionIds:
-  - showcase-hyperparameter-search-v1
-
+name: showcase-hyperparameter-search local scope
+environmentVersionIds: [showcase-hyperparameter-search-v1]

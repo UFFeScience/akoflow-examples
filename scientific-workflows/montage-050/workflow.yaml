@@ -1,0 +1,1694 @@
+name: montage-050-local
+spec:
+  activities:
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_blue_001_001.fits
+          - pposs2ukstu_blue_001_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000001
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1667
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_blue_001_002.fits
+          - pposs2ukstu_blue_001_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000002
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 414
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_blue_002_001.fits
+          - pposs2ukstu_blue_002_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000003
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 550
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_blue_002_002.fits
+          - pposs2ukstu_blue_002_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000004
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 824
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000001.000002.txt
+          - pposs2ukstu_blue_001_001.fits
+          - pposs2ukstu_blue_001_002.fits
+          - 1-diff.000001.000002.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000001
+        - mprojectid0000002
+      memoryLimit: 1Gi
+      name: mdifffitid0000005
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 30
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000001.000003.txt
+          - pposs2ukstu_blue_001_001.fits
+          - pposs2ukstu_blue_002_001.fits
+          - 1-diff.000001.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000001
+        - mprojectid0000003
+      memoryLimit: 1Gi
+      name: mdifffitid0000006
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 28
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000001.000004.txt
+          - pposs2ukstu_blue_001_001.fits
+          - pposs2ukstu_blue_002_002.fits
+          - 1-diff.000001.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000001
+        - mprojectid0000004
+      memoryLimit: 1Gi
+      name: mdifffitid0000007
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 24
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000002.000003.txt
+          - pposs2ukstu_blue_001_002.fits
+          - pposs2ukstu_blue_002_001.fits
+          - 1-diff.000002.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000002
+        - mprojectid0000003
+      memoryLimit: 1Gi
+      name: mdifffitid0000008
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000002.000004.txt
+          - pposs2ukstu_blue_001_002.fits
+          - pposs2ukstu_blue_002_002.fits
+          - 1-diff.000002.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000002
+        - mprojectid0000004
+      memoryLimit: 1Gi
+      name: mdifffitid0000009
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 11
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 1-fit.000003.000004.txt
+          - pposs2ukstu_blue_002_001.fits
+          - pposs2ukstu_blue_002_002.fits
+          - 1-diff.000003.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000003
+        - mprojectid0000004
+      memoryLimit: 1Gi
+      name: mdifffitid0000010
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 24
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - 1-stat.tbl
+          - 1-fits.tbl
+          - .
+        entrypoint: mConcatFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mdifffitid0000005
+        - mdifffitid0000006
+        - mdifffitid0000007
+        - mdifffitid0000008
+        - mdifffitid0000009
+        - mdifffitid0000010
+      memoryLimit: 1Gi
+      name: mconcatfitid0000011
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 17
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -i
+          - "100000"
+          - 1-images.tbl
+          - 1-fits.tbl
+          - 1-corrections.tbl
+        entrypoint: mBgModel
+      cpuLimit: 1000m
+      dependsOn:
+        - mconcatfitid0000011
+      memoryLimit: 1Gi
+      name: mbgmodelid0000012
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_blue_001_001.fits
+          - cposs2ukstu_blue_001_001.fits
+          - 1-projected.tbl
+          - 1-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000001
+        - mbgmodelid0000012
+      memoryLimit: 1Gi
+      name: mbackgroundid0000013
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_blue_001_002.fits
+          - cposs2ukstu_blue_001_002.fits
+          - 1-projected.tbl
+          - 1-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000002
+        - mbgmodelid0000012
+      memoryLimit: 1Gi
+      name: mbackgroundid0000014
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_blue_002_001.fits
+          - cposs2ukstu_blue_002_001.fits
+          - 1-projected.tbl
+          - 1-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000003
+        - mbgmodelid0000012
+      memoryLimit: 1Gi
+      name: mbackgroundid0000015
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_blue_002_002.fits
+          - cposs2ukstu_blue_002_002.fits
+          - 1-projected.tbl
+          - 1-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000004
+        - mbgmodelid0000012
+      memoryLimit: 1Gi
+      name: mbackgroundid0000016
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - .
+          - -t
+          - 1-corrected.tbl
+          - 1-updated-corrected.tbl
+        entrypoint: mImgtbl
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000013
+        - mbackgroundid0000014
+        - mbackgroundid0000015
+        - mbackgroundid0000016
+      memoryLimit: 1Gi
+      name: mimgtblid0000017
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 22
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -e
+          - 1-updated-corrected.tbl
+          - region.hdr
+          - 1-mosaic.fits
+        entrypoint: mAdd
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000013
+        - mbackgroundid0000014
+        - mbackgroundid0000015
+        - mbackgroundid0000016
+        - mimgtblid0000017
+      memoryLimit: 1Gi
+      name: maddid0000018
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -ct
+          - "1"
+          - -gray
+          - 1-mosaic.fits
+          - -1s
+          - max
+          - gaussian
+          - -png
+          - 1-mosaic.png
+        entrypoint: mViewer
+      cpuLimit: 1000m
+      dependsOn:
+        - maddid0000018
+      memoryLimit: 1Gi
+      name: mviewerid0000019
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 17
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_red_001_001.fits
+          - pposs2ukstu_red_001_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000020
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 528
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_red_001_002.fits
+          - pposs2ukstu_red_001_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000021
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 361
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_red_002_001.fits
+          - pposs2ukstu_red_002_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000022
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1120
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_red_002_002.fits
+          - pposs2ukstu_red_002_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000023
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1132
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000001.000002.txt
+          - pposs2ukstu_red_001_001.fits
+          - pposs2ukstu_red_001_002.fits
+          - 2-diff.000001.000002.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000020
+        - mprojectid0000021
+      memoryLimit: 1Gi
+      name: mdifffitid0000024
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 16
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000001.000003.txt
+          - pposs2ukstu_red_001_001.fits
+          - pposs2ukstu_red_002_001.fits
+          - 2-diff.000001.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000020
+        - mprojectid0000022
+      memoryLimit: 1Gi
+      name: mdifffitid0000025
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 20
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000001.000004.txt
+          - pposs2ukstu_red_001_001.fits
+          - pposs2ukstu_red_002_002.fits
+          - 2-diff.000001.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000020
+        - mprojectid0000023
+      memoryLimit: 1Gi
+      name: mdifffitid0000026
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 16
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000002.000003.txt
+          - pposs2ukstu_red_001_002.fits
+          - pposs2ukstu_red_002_001.fits
+          - 2-diff.000002.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000021
+        - mprojectid0000022
+      memoryLimit: 1Gi
+      name: mdifffitid0000027
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 15
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000002.000004.txt
+          - pposs2ukstu_red_001_002.fits
+          - pposs2ukstu_red_002_002.fits
+          - 2-diff.000002.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000021
+        - mprojectid0000023
+      memoryLimit: 1Gi
+      name: mdifffitid0000028
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 20
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 2-fit.000003.000004.txt
+          - pposs2ukstu_red_002_001.fits
+          - pposs2ukstu_red_002_002.fits
+          - 2-diff.000003.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000022
+        - mprojectid0000023
+      memoryLimit: 1Gi
+      name: mdifffitid0000029
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 13
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - 2-stat.tbl
+          - 2-fits.tbl
+          - .
+        entrypoint: mConcatFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mdifffitid0000024
+        - mdifffitid0000025
+        - mdifffitid0000026
+        - mdifffitid0000027
+        - mdifffitid0000028
+        - mdifffitid0000029
+      memoryLimit: 1Gi
+      name: mconcatfitid0000030
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -i
+          - "100000"
+          - 2-images.tbl
+          - 2-fits.tbl
+          - 2-corrections.tbl
+        entrypoint: mBgModel
+      cpuLimit: 1000m
+      dependsOn:
+        - mconcatfitid0000030
+      memoryLimit: 1Gi
+      name: mbgmodelid0000031
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 7
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_red_001_001.fits
+          - cposs2ukstu_red_001_001.fits
+          - 2-projected.tbl
+          - 2-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000020
+        - mbgmodelid0000031
+      memoryLimit: 1Gi
+      name: mbackgroundid0000032
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_red_001_002.fits
+          - cposs2ukstu_red_001_002.fits
+          - 2-projected.tbl
+          - 2-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000021
+        - mbgmodelid0000031
+      memoryLimit: 1Gi
+      name: mbackgroundid0000033
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 25
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_red_002_001.fits
+          - cposs2ukstu_red_002_001.fits
+          - 2-projected.tbl
+          - 2-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000022
+        - mbgmodelid0000031
+      memoryLimit: 1Gi
+      name: mbackgroundid0000034
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 23
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_red_002_002.fits
+          - cposs2ukstu_red_002_002.fits
+          - 2-projected.tbl
+          - 2-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000023
+        - mbgmodelid0000031
+      memoryLimit: 1Gi
+      name: mbackgroundid0000035
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - .
+          - -t
+          - 2-corrected.tbl
+          - 2-updated-corrected.tbl
+        entrypoint: mImgtbl
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000032
+        - mbackgroundid0000033
+        - mbackgroundid0000034
+        - mbackgroundid0000035
+      memoryLimit: 1Gi
+      name: mimgtblid0000036
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 25
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -e
+          - 2-updated-corrected.tbl
+          - region.hdr
+          - 2-mosaic.fits
+        entrypoint: mAdd
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000032
+        - mbackgroundid0000033
+        - mbackgroundid0000034
+        - mbackgroundid0000035
+        - mimgtblid0000036
+      memoryLimit: 1Gi
+      name: maddid0000037
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -ct
+          - "1"
+          - -gray
+          - 2-mosaic.fits
+          - -1s
+          - max
+          - gaussian
+          - -png
+          - 2-mosaic.png
+        entrypoint: mViewer
+      cpuLimit: 1000m
+      dependsOn:
+        - maddid0000037
+      memoryLimit: 1Gi
+      name: mviewerid0000038
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 8
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_ir_001_001.fits
+          - pposs2ukstu_ir_001_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000039
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1540
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_ir_001_002.fits
+          - pposs2ukstu_ir_001_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000040
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1537
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_ir_002_001.fits
+          - pposs2ukstu_ir_002_001.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000041
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 753
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -X
+          - poss2ukstu_ir_002_002.fits
+          - pposs2ukstu_ir_002_002.fits
+          - region-oversized.hdr
+        entrypoint: mProject
+      cpuLimit: 1000m
+      dependsOn: []
+      memoryLimit: 1Gi
+      name: mprojectid0000042
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1546
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000001.000002.txt
+          - pposs2ukstu_ir_001_001.fits
+          - pposs2ukstu_ir_001_002.fits
+          - 3-diff.000001.000002.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000039
+        - mprojectid0000040
+      memoryLimit: 1Gi
+      name: mdifffitid0000043
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 11
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000001.000003.txt
+          - pposs2ukstu_ir_001_001.fits
+          - pposs2ukstu_ir_002_001.fits
+          - 3-diff.000001.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000039
+        - mprojectid0000041
+      memoryLimit: 1Gi
+      name: mdifffitid0000044
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 11
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000001.000004.txt
+          - pposs2ukstu_ir_001_001.fits
+          - pposs2ukstu_ir_002_002.fits
+          - 3-diff.000001.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000039
+        - mprojectid0000042
+      memoryLimit: 1Gi
+      name: mdifffitid0000045
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 16
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000002.000003.txt
+          - pposs2ukstu_ir_001_002.fits
+          - pposs2ukstu_ir_002_001.fits
+          - 3-diff.000002.000003.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000040
+        - mprojectid0000041
+      memoryLimit: 1Gi
+      name: mdifffitid0000046
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 14
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000002.000004.txt
+          - pposs2ukstu_ir_001_002.fits
+          - pposs2ukstu_ir_002_002.fits
+          - 3-diff.000002.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000040
+        - mprojectid0000042
+      memoryLimit: 1Gi
+      name: mdifffitid0000047
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 14
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -d
+          - -s
+          - 3-fit.000003.000004.txt
+          - pposs2ukstu_ir_002_001.fits
+          - pposs2ukstu_ir_002_002.fits
+          - 3-diff.000003.000004.fits
+          - region-oversized.hdr
+        entrypoint: mDiffFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000041
+        - mprojectid0000042
+      memoryLimit: 1Gi
+      name: mdifffitid0000048
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 19
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - 3-stat.tbl
+          - 3-fits.tbl
+          - .
+        entrypoint: mConcatFit
+      cpuLimit: 1000m
+      dependsOn:
+        - mdifffitid0000043
+        - mdifffitid0000044
+        - mdifffitid0000045
+        - mdifffitid0000046
+        - mdifffitid0000047
+        - mdifffitid0000048
+      memoryLimit: 1Gi
+      name: mconcatfitid0000049
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 5
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -i
+          - "100000"
+          - 3-images.tbl
+          - 3-fits.tbl
+          - 3-corrections.tbl
+        entrypoint: mBgModel
+      cpuLimit: 1000m
+      dependsOn:
+        - mconcatfitid0000049
+      memoryLimit: 1Gi
+      name: mbgmodelid0000050
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 20
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_ir_001_001.fits
+          - cposs2ukstu_ir_001_001.fits
+          - 3-projected.tbl
+          - 3-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000039
+        - mbgmodelid0000050
+      memoryLimit: 1Gi
+      name: mbackgroundid0000051
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 16
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_ir_001_002.fits
+          - cposs2ukstu_ir_001_002.fits
+          - 3-projected.tbl
+          - 3-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000040
+        - mbgmodelid0000050
+      memoryLimit: 1Gi
+      name: mbackgroundid0000052
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_ir_002_001.fits
+          - cposs2ukstu_ir_002_001.fits
+          - 3-projected.tbl
+          - 3-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000041
+        - mbgmodelid0000050
+      memoryLimit: 1Gi
+      name: mbackgroundid0000053
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 12
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -t
+          - pposs2ukstu_ir_002_002.fits
+          - cposs2ukstu_ir_002_002.fits
+          - 3-projected.tbl
+          - 3-corrections.tbl
+        entrypoint: mBackground
+      cpuLimit: 1000m
+      dependsOn:
+        - mprojectid0000042
+        - mbgmodelid0000050
+      memoryLimit: 1Gi
+      name: mbackgroundid0000054
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 12
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - .
+          - -t
+          - 3-corrected.tbl
+          - 3-updated-corrected.tbl
+        entrypoint: mImgtbl
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000051
+        - mbackgroundid0000052
+        - mbackgroundid0000053
+        - mbackgroundid0000054
+      memoryLimit: 1Gi
+      name: mimgtblid0000055
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 9
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -e
+          - 3-updated-corrected.tbl
+          - region.hdr
+          - 3-mosaic.fits
+        entrypoint: mAdd
+      cpuLimit: 1000m
+      dependsOn:
+        - mbackgroundid0000051
+        - mbackgroundid0000052
+        - mbackgroundid0000053
+        - mbackgroundid0000054
+        - mimgtblid0000055
+      memoryLimit: 1Gi
+      name: maddid0000056
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 2
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -ct
+          - "1"
+          - -gray
+          - 3-mosaic.fits
+          - -1s
+          - max
+          - gaussian
+          - -png
+          - 3-mosaic.png
+        entrypoint: mViewer
+      cpuLimit: 1000m
+      dependsOn:
+        - maddid0000056
+      memoryLimit: 1Gi
+      name: mviewerid0000057
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 1
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+    - command:
+        arguments:
+          - -red
+          - 3-mosaic.fits
+          - -0.5s
+          - max
+          - gaussian-log
+          - -green
+          - 2-mosaic.fits
+          - -0.5s
+          - max
+          - gaussian-log
+          - -blue
+          - 1-mosaic.fits
+          - -0.5s
+          - max
+          - gaussian-log
+          - -png
+          - mosaic-color.png
+        entrypoint: mViewer
+      cpuLimit: 1000m
+      dependsOn:
+        - maddid0000018
+        - maddid0000037
+        - maddid0000056
+      memoryLimit: 1Gi
+      name: mviewerid0000058
+      runtime: montage-050-local-local
+      simulation:
+        durationSeconds: 7
+        model: deterministic
+      workspaceSeedPath: /akoflow-wfa-shared
+  dataDependencies:
+    - consumerActivity: mdifffitid0000005
+      logicalName: pposs2ukstu_blue_001_001.fits
+      producerActivity: mprojectid0000001
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000005
+      logicalName: pposs2ukstu_blue_001_002.fits
+      producerActivity: mprojectid0000002
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000006
+      logicalName: pposs2ukstu_blue_001_001.fits
+      producerActivity: mprojectid0000001
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000006
+      logicalName: pposs2ukstu_blue_002_001.fits
+      producerActivity: mprojectid0000003
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000007
+      logicalName: pposs2ukstu_blue_001_001.fits
+      producerActivity: mprojectid0000001
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000007
+      logicalName: pposs2ukstu_blue_002_002.fits
+      producerActivity: mprojectid0000004
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000008
+      logicalName: pposs2ukstu_blue_001_002.fits
+      producerActivity: mprojectid0000002
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000008
+      logicalName: pposs2ukstu_blue_002_001.fits
+      producerActivity: mprojectid0000003
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000009
+      logicalName: pposs2ukstu_blue_001_002.fits
+      producerActivity: mprojectid0000002
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000009
+      logicalName: pposs2ukstu_blue_002_002.fits
+      producerActivity: mprojectid0000004
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000010
+      logicalName: pposs2ukstu_blue_002_001.fits
+      producerActivity: mprojectid0000003
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000010
+      logicalName: pposs2ukstu_blue_002_002.fits
+      producerActivity: mprojectid0000004
+      sizeBytes: 1e+07
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000001.000002.txt
+      producerActivity: mdifffitid0000005
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000001.000003.txt
+      producerActivity: mdifffitid0000006
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000001.000004.txt
+      producerActivity: mdifffitid0000007
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000002.000003.txt
+      producerActivity: mdifffitid0000008
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000002.000004.txt
+      producerActivity: mdifffitid0000009
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000011
+      logicalName: 1-fit.000003.000004.txt
+      producerActivity: mdifffitid0000010
+      sizeBytes: 4096
+    - consumerActivity: mbgmodelid0000012
+      logicalName: 1-fits.tbl
+      producerActivity: mconcatfitid0000011
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000013
+      logicalName: pposs2ukstu_blue_001_001.fits
+      producerActivity: mprojectid0000001
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000013
+      logicalName: 1-corrections.tbl
+      producerActivity: mbgmodelid0000012
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000014
+      logicalName: pposs2ukstu_blue_001_002.fits
+      producerActivity: mprojectid0000002
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000014
+      logicalName: 1-corrections.tbl
+      producerActivity: mbgmodelid0000012
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000015
+      logicalName: pposs2ukstu_blue_002_001.fits
+      producerActivity: mprojectid0000003
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000015
+      logicalName: 1-corrections.tbl
+      producerActivity: mbgmodelid0000012
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000016
+      logicalName: pposs2ukstu_blue_002_002.fits
+      producerActivity: mprojectid0000004
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000016
+      logicalName: 1-corrections.tbl
+      producerActivity: mbgmodelid0000012
+      sizeBytes: 4096
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_001_001.fits
+      producerActivity: mbackgroundid0000013
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_001_001_area.fits
+      producerActivity: mbackgroundid0000013
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_001_002.fits
+      producerActivity: mbackgroundid0000014
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_001_002_area.fits
+      producerActivity: mbackgroundid0000014
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_002_001.fits
+      producerActivity: mbackgroundid0000015
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_002_001_area.fits
+      producerActivity: mbackgroundid0000015
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_002_002.fits
+      producerActivity: mbackgroundid0000016
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000017
+      logicalName: cposs2ukstu_blue_002_002_area.fits
+      producerActivity: mbackgroundid0000016
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_001_001.fits
+      producerActivity: mbackgroundid0000013
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_001_001_area.fits
+      producerActivity: mbackgroundid0000013
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_001_002.fits
+      producerActivity: mbackgroundid0000014
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_001_002_area.fits
+      producerActivity: mbackgroundid0000014
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_002_001.fits
+      producerActivity: mbackgroundid0000015
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_002_001_area.fits
+      producerActivity: mbackgroundid0000015
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_002_002.fits
+      producerActivity: mbackgroundid0000016
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: cposs2ukstu_blue_002_002_area.fits
+      producerActivity: mbackgroundid0000016
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000018
+      logicalName: 1-updated-corrected.tbl
+      producerActivity: mimgtblid0000017
+      sizeBytes: 4096
+    - consumerActivity: mviewerid0000019
+      logicalName: 1-mosaic.fits
+      producerActivity: maddid0000018
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000024
+      logicalName: pposs2ukstu_red_001_001.fits
+      producerActivity: mprojectid0000020
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000024
+      logicalName: pposs2ukstu_red_001_002.fits
+      producerActivity: mprojectid0000021
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000025
+      logicalName: pposs2ukstu_red_001_001.fits
+      producerActivity: mprojectid0000020
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000025
+      logicalName: pposs2ukstu_red_002_001.fits
+      producerActivity: mprojectid0000022
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000026
+      logicalName: pposs2ukstu_red_001_001.fits
+      producerActivity: mprojectid0000020
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000026
+      logicalName: pposs2ukstu_red_002_002.fits
+      producerActivity: mprojectid0000023
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000027
+      logicalName: pposs2ukstu_red_001_002.fits
+      producerActivity: mprojectid0000021
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000027
+      logicalName: pposs2ukstu_red_002_001.fits
+      producerActivity: mprojectid0000022
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000028
+      logicalName: pposs2ukstu_red_001_002.fits
+      producerActivity: mprojectid0000021
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000028
+      logicalName: pposs2ukstu_red_002_002.fits
+      producerActivity: mprojectid0000023
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000029
+      logicalName: pposs2ukstu_red_002_001.fits
+      producerActivity: mprojectid0000022
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000029
+      logicalName: pposs2ukstu_red_002_002.fits
+      producerActivity: mprojectid0000023
+      sizeBytes: 1e+07
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000001.000002.txt
+      producerActivity: mdifffitid0000024
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000001.000003.txt
+      producerActivity: mdifffitid0000025
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000001.000004.txt
+      producerActivity: mdifffitid0000026
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000002.000003.txt
+      producerActivity: mdifffitid0000027
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000002.000004.txt
+      producerActivity: mdifffitid0000028
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000030
+      logicalName: 2-fit.000003.000004.txt
+      producerActivity: mdifffitid0000029
+      sizeBytes: 4096
+    - consumerActivity: mbgmodelid0000031
+      logicalName: 2-fits.tbl
+      producerActivity: mconcatfitid0000030
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000032
+      logicalName: pposs2ukstu_red_001_001.fits
+      producerActivity: mprojectid0000020
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000032
+      logicalName: 2-corrections.tbl
+      producerActivity: mbgmodelid0000031
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000033
+      logicalName: pposs2ukstu_red_001_002.fits
+      producerActivity: mprojectid0000021
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000033
+      logicalName: 2-corrections.tbl
+      producerActivity: mbgmodelid0000031
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000034
+      logicalName: pposs2ukstu_red_002_001.fits
+      producerActivity: mprojectid0000022
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000034
+      logicalName: 2-corrections.tbl
+      producerActivity: mbgmodelid0000031
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000035
+      logicalName: pposs2ukstu_red_002_002.fits
+      producerActivity: mprojectid0000023
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000035
+      logicalName: 2-corrections.tbl
+      producerActivity: mbgmodelid0000031
+      sizeBytes: 4096
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_001_001.fits
+      producerActivity: mbackgroundid0000032
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_001_001_area.fits
+      producerActivity: mbackgroundid0000032
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_001_002.fits
+      producerActivity: mbackgroundid0000033
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_001_002_area.fits
+      producerActivity: mbackgroundid0000033
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_002_001.fits
+      producerActivity: mbackgroundid0000034
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_002_001_area.fits
+      producerActivity: mbackgroundid0000034
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_002_002.fits
+      producerActivity: mbackgroundid0000035
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000036
+      logicalName: cposs2ukstu_red_002_002_area.fits
+      producerActivity: mbackgroundid0000035
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_001_001.fits
+      producerActivity: mbackgroundid0000032
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_001_001_area.fits
+      producerActivity: mbackgroundid0000032
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_001_002.fits
+      producerActivity: mbackgroundid0000033
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_001_002_area.fits
+      producerActivity: mbackgroundid0000033
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_002_001.fits
+      producerActivity: mbackgroundid0000034
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_002_001_area.fits
+      producerActivity: mbackgroundid0000034
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_002_002.fits
+      producerActivity: mbackgroundid0000035
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: cposs2ukstu_red_002_002_area.fits
+      producerActivity: mbackgroundid0000035
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000037
+      logicalName: 2-updated-corrected.tbl
+      producerActivity: mimgtblid0000036
+      sizeBytes: 4096
+    - consumerActivity: mviewerid0000038
+      logicalName: 2-mosaic.fits
+      producerActivity: maddid0000037
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000043
+      logicalName: pposs2ukstu_ir_001_001.fits
+      producerActivity: mprojectid0000039
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000043
+      logicalName: pposs2ukstu_ir_001_002.fits
+      producerActivity: mprojectid0000040
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000044
+      logicalName: pposs2ukstu_ir_001_001.fits
+      producerActivity: mprojectid0000039
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000044
+      logicalName: pposs2ukstu_ir_002_001.fits
+      producerActivity: mprojectid0000041
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000045
+      logicalName: pposs2ukstu_ir_001_001.fits
+      producerActivity: mprojectid0000039
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000045
+      logicalName: pposs2ukstu_ir_002_002.fits
+      producerActivity: mprojectid0000042
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000046
+      logicalName: pposs2ukstu_ir_001_002.fits
+      producerActivity: mprojectid0000040
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000046
+      logicalName: pposs2ukstu_ir_002_001.fits
+      producerActivity: mprojectid0000041
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000047
+      logicalName: pposs2ukstu_ir_001_002.fits
+      producerActivity: mprojectid0000040
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000047
+      logicalName: pposs2ukstu_ir_002_002.fits
+      producerActivity: mprojectid0000042
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000048
+      logicalName: pposs2ukstu_ir_002_001.fits
+      producerActivity: mprojectid0000041
+      sizeBytes: 1e+07
+    - consumerActivity: mdifffitid0000048
+      logicalName: pposs2ukstu_ir_002_002.fits
+      producerActivity: mprojectid0000042
+      sizeBytes: 1e+07
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000001.000002.txt
+      producerActivity: mdifffitid0000043
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000001.000003.txt
+      producerActivity: mdifffitid0000044
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000001.000004.txt
+      producerActivity: mdifffitid0000045
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000002.000003.txt
+      producerActivity: mdifffitid0000046
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000002.000004.txt
+      producerActivity: mdifffitid0000047
+      sizeBytes: 4096
+    - consumerActivity: mconcatfitid0000049
+      logicalName: 3-fit.000003.000004.txt
+      producerActivity: mdifffitid0000048
+      sizeBytes: 4096
+    - consumerActivity: mbgmodelid0000050
+      logicalName: 3-fits.tbl
+      producerActivity: mconcatfitid0000049
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000051
+      logicalName: pposs2ukstu_ir_001_001.fits
+      producerActivity: mprojectid0000039
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000051
+      logicalName: 3-corrections.tbl
+      producerActivity: mbgmodelid0000050
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000052
+      logicalName: pposs2ukstu_ir_001_002.fits
+      producerActivity: mprojectid0000040
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000052
+      logicalName: 3-corrections.tbl
+      producerActivity: mbgmodelid0000050
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000053
+      logicalName: pposs2ukstu_ir_002_001.fits
+      producerActivity: mprojectid0000041
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000053
+      logicalName: 3-corrections.tbl
+      producerActivity: mbgmodelid0000050
+      sizeBytes: 4096
+    - consumerActivity: mbackgroundid0000054
+      logicalName: pposs2ukstu_ir_002_002.fits
+      producerActivity: mprojectid0000042
+      sizeBytes: 1e+07
+    - consumerActivity: mbackgroundid0000054
+      logicalName: 3-corrections.tbl
+      producerActivity: mbgmodelid0000050
+      sizeBytes: 4096
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_001_001.fits
+      producerActivity: mbackgroundid0000051
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_001_001_area.fits
+      producerActivity: mbackgroundid0000051
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_001_002.fits
+      producerActivity: mbackgroundid0000052
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_001_002_area.fits
+      producerActivity: mbackgroundid0000052
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_002_001.fits
+      producerActivity: mbackgroundid0000053
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_002_001_area.fits
+      producerActivity: mbackgroundid0000053
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_002_002.fits
+      producerActivity: mbackgroundid0000054
+      sizeBytes: 1e+07
+    - consumerActivity: mimgtblid0000055
+      logicalName: cposs2ukstu_ir_002_002_area.fits
+      producerActivity: mbackgroundid0000054
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_001_001.fits
+      producerActivity: mbackgroundid0000051
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_001_001_area.fits
+      producerActivity: mbackgroundid0000051
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_001_002.fits
+      producerActivity: mbackgroundid0000052
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_001_002_area.fits
+      producerActivity: mbackgroundid0000052
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_002_001.fits
+      producerActivity: mbackgroundid0000053
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_002_001_area.fits
+      producerActivity: mbackgroundid0000053
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_002_002.fits
+      producerActivity: mbackgroundid0000054
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: cposs2ukstu_ir_002_002_area.fits
+      producerActivity: mbackgroundid0000054
+      sizeBytes: 1e+07
+    - consumerActivity: maddid0000056
+      logicalName: 3-updated-corrected.tbl
+      producerActivity: mimgtblid0000055
+      sizeBytes: 4096
+    - consumerActivity: mviewerid0000057
+      logicalName: 3-mosaic.fits
+      producerActivity: maddid0000056
+      sizeBytes: 1e+07
+    - consumerActivity: mviewerid0000058
+      logicalName: 1-mosaic.fits
+      producerActivity: maddid0000018
+      sizeBytes: 1e+07
+    - consumerActivity: mviewerid0000058
+      logicalName: 2-mosaic.fits
+      producerActivity: maddid0000037
+      sizeBytes: 1e+07
+    - consumerActivity: mviewerid0000058
+      logicalName: 3-mosaic.fits
+      producerActivity: maddid0000056
+      sizeBytes: 1e+07
+  image: ghcr.io/uffescience/akoflow-examples/montage-050-local:v1
+  namespace: showcase

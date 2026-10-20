@@ -1,5 +1,3 @@
 id: showcase-audio-transcription-scope
-name: Audio Transcription local scope
-environmentVersionIds:
-  - showcase-audio-transcription-v1
-
+name: showcase-audio-transcription local scope
+environmentVersionIds: [showcase-audio-transcription-v1]

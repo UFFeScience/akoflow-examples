@@ -1,0 +1,15 @@
+{
+      "values": [
+        2,
+        4,
+        6,
+        8,
+        10
+      ],
+      "approval": {
+        "decision": "approve",
+        "scope": "write-summary-to-outputs",
+        "actor": "smoke-profile-reviewer",
+        "source": "pre-recorded local smoke approval fixture"
+      }
+    }

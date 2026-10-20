@@ -1,6 +1,30 @@
 {
+  "artifacts": [
+    "benchmark.csv",
+    "report.html"
+  ],
+  "dependencies": {
+    "compare-cost-and-latency": [
+      "normalize"
+    ],
+    "cpu": [
+      "freeze-inputs"
+    ],
+    "edge": [
+      "freeze-inputs"
+    ],
+    "freeze-inputs": [],
+    "gpu": [
+      "freeze-inputs"
+    ],
+    "normalize": [
+      "cpu",
+      "gpu",
+      "edge"
+    ]
+  },
+  "localProfile": "Measure actual local CPU inference with three batching profiles and verify identical predictions. The branches named CPU, GPU, and edge use CPU fallback batching in the portable profile; no GPU/edge hardware performance or cloud billing is claimed.",
   "slug": "inference-benchmark",
-  "title": "Inference Benchmark",
   "stages": [
     "freeze-inputs",
     "cpu",
@@ -9,29 +33,6 @@
     "normalize",
     "compare-cost-and-latency"
   ],
-  "artifacts": [
-    "benchmark.csv",
-    "report.html"
-  ],
-  "dependencies": {
-    "freeze-inputs": [],
-    "cpu": [
-      "freeze-inputs"
-    ],
-    "gpu": [
-      "freeze-inputs"
-    ],
-    "edge": [
-      "freeze-inputs"
-    ],
-    "normalize": [
-      "cpu",
-      "gpu",
-      "edge"
-    ],
-    "compare-cost-and-latency": [
-      "normalize"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Inference Benchmark",
+  "validationMode": "local-workload"
 }

@@ -1,0 +1,8 @@
+*
+!data/
+!data/**
+!scripts/
+!scripts/**
+!requirements.txt
+!docker/
+!docker/Dockerfile

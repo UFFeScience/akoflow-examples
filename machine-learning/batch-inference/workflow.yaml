@@ -1,61 +1,103 @@
 name: showcase-batch-inference
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-batch-inference:v1
   activities:
-    - name: load-model
-      runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - load-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "load-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: partition-input
+      name: load-model
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - partition-input
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "partition-input", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - load-model
       memoryLimit: 256Mi
-      dependsOn: ["load-model"]
-    - name: infer-shard-a
+      name: partition-input
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-a", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - partition-input
       memoryLimit: 256Mi
-      dependsOn: ["partition-input"]
-    - name: infer-shard-b
+      name: infer-shard-a
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-b
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-b", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - partition-input
       memoryLimit: 256Mi
-      dependsOn: ["partition-input"]
-    - name: infer-shard-n
+      name: infer-shard-b
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-n
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-n", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - partition-input
       memoryLimit: 256Mi
-      dependsOn: ["partition-input"]
-    - name: merge-predictions
+      name: infer-shard-n
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - merge-predictions
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "merge-predictions", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - infer-shard-a
+        - infer-shard-b
+        - infer-shard-n
       memoryLimit: 256Mi
-      dependsOn: ["infer-shard-a","infer-shard-b","infer-shard-n"]
-    - name: publish
+      name: merge-predictions
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - merge-predictions
       memoryLimit: 256Mi
-      dependsOn: ["merge-predictions"]
+      name: publish
+      runtime: showcase-batch-inference-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-batch-inference:v1
+  namespace: showcase

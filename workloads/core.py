@@ -1,0 +1,105 @@
+"""Small, offline CPU workloads. Generated copies live in each source bundle."""
+from __future__ import annotations
+import argparse
+import csv
+import hashlib
+import html
+import json
+import math
+import os
+import pickle
+import random
+import re
+import statistics
+import struct
+import time
+import wave
+from pathlib import Path
+
+ROOT = Path('/app') if Path('/app/scenario.json').exists() else Path(__file__).resolve().parents[1]
+CONFIG_PATH = Path('/app/scenario.json') if Path('/app/scenario.json').exists() else ROOT / 'data/input.json'
+CONFIG = json.loads(CONFIG_PATH.read_text())
+INPUT = json.loads((ROOT / 'data/workload.json').read_text())
+PARSER = argparse.ArgumentParser()
+PARSER.add_argument('--stage', required=True, choices=CONFIG['stages'])
+PARSER.add_argument('--output', default=str(ROOT / 'outputs'))
+ARGS = PARSER.parse_args()
+OUT = Path(ARGS.output)
+OUT.mkdir(parents=True, exist_ok=True)
+STAGE = ARGS.stage
+
+
+def read_stage(name):
+    record = json.loads((OUT / f'stage-{name}.json').read_text())
+    if record['status'] != 'success' or record['stage'] != name:
+        raise ValueError(f'invalid upstream stage: {name}')
+    return record['result']
+
+
+def previous():
+    parents = CONFIG['dependencies'][STAGE]
+    if len(parents) != 1:
+        raise ValueError(f'{STAGE} requires an explicit parent selection')
+    return read_stage(parents[0])
+
+
+def write_json(name, value):
+    (OUT / name).write_text(json.dumps(value, indent=2, allow_nan=False) + '\n')
+    return value
+
+
+def write_pickle(name, value):
+    (OUT / name).write_bytes(pickle.dumps(value, protocol=4))
+
+
+def write_csv(name, rows):
+    with (OUT / name).open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def report(name, title, value):
+    (OUT / name).write_text('<!doctype html><meta charset="utf-8"><title>' + html.escape(title) + '</title><h1>' + html.escape(title) + '</h1><pre>' + html.escape(json.dumps(value, indent=2)) + '</pre>\n')
+
+
+def regression(rows):
+    xs = [row[0] for row in rows]
+    ys = [row[1] for row in rows]
+    mean_x, mean_y = statistics.mean(xs), statistics.mean(ys)
+    denominator = sum((x - mean_x) ** 2 for x in xs)
+    if denominator <= 0:
+        raise ValueError('training inputs have zero variance')
+    weight = sum((x - mean_x) * (y - mean_y) for x, y in rows) / denominator
+    return {'weight': weight, 'bias': mean_y - weight * mean_x}
+
+
+def predict(model, x):
+    return model['weight'] * x + model['bias']
+
+
+def rmse(model, rows):
+    return math.sqrt(statistics.mean((predict(model, x) - y) ** 2 for x, y in rows))
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def run_stage():
+    started = time.time_ns()
+    parents = CONFIG['dependencies'][STAGE]
+    for parent in parents:
+        read_stage(parent)
+    result = compute()
+    require(isinstance(result, dict) and result, 'activity produced no domain result')
+    record = {
+        'showcase': CONFIG['slug'], 'stage': STAGE, 'status': 'success',
+        'validationMode': 'local-workload', 'startedAtUnixNs': started,
+        'finishedAtUnixNs': time.time_ns(),
+        'inputDigest': hashlib.sha256(json.dumps(INPUT, sort_keys=True).encode()).hexdigest(),
+        'dependencies': parents, 'result': result,
+    }
+    write_json(f'stage-{STAGE}.json', record)
+    print(json.dumps({'activity': STAGE, 'status': 'success', 'resultKeys': list(result)}))

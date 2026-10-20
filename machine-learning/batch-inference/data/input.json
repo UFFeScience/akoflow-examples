@@ -1,24 +1,9 @@
 {
-  "slug": "batch-inference",
-  "title": "Batch Inference",
-  "stages": [
-    "load-model",
-    "partition-input",
-    "infer-shard-a",
-    "infer-shard-b",
-    "infer-shard-n",
-    "merge-predictions",
-    "publish"
-  ],
   "artifacts": [
     "predictions.jsonl",
     "batch-summary.json"
   ],
   "dependencies": {
-    "load-model": [],
-    "partition-input": [
-      "load-model"
-    ],
     "infer-shard-a": [
       "partition-input"
     ],
@@ -28,14 +13,30 @@
     "infer-shard-n": [
       "partition-input"
     ],
+    "load-model": [],
     "merge-predictions": [
       "infer-shard-a",
       "infer-shard-b",
       "infer-shard-n"
     ],
+    "partition-input": [
+      "load-model"
+    ],
     "publish": [
       "merge-predictions"
     ]
   },
-  "validationMode": "contract-fixture"
+  "localProfile": "Train/load a small numeric model, split versioned input values into three disjoint shards, execute real inference in parallel, validate that the merged indices have no gaps or duplicates, and publish predictions as JSON Lines.",
+  "slug": "batch-inference",
+  "stages": [
+    "load-model",
+    "partition-input",
+    "infer-shard-a",
+    "infer-shard-b",
+    "infer-shard-n",
+    "merge-predictions",
+    "publish"
+  ],
+  "title": "Batch Inference",
+  "validationMode": "local-workload"
 }

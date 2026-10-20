@@ -1,5 +1,3 @@
 id: showcase-computer-vision-scope
-name: Computer Vision local scope
-environmentVersionIds:
-  - showcase-computer-vision-v1
-
+name: showcase-computer-vision local scope
+environmentVersionIds: [showcase-computer-vision-v1]

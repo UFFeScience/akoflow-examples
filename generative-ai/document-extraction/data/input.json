@@ -1,6 +1,32 @@
 {
+  "artifacts": [
+    "extraction.json",
+    "ocr.txt"
+  ],
+  "dependencies": {
+    "classify": [
+      "ocr",
+      "native-text"
+    ],
+    "extract-fields": [
+      "classify"
+    ],
+    "ingest-documents": [],
+    "native-text": [
+      "ingest-documents"
+    ],
+    "ocr": [
+      "ingest-documents"
+    ],
+    "publish": [
+      "validate-schema"
+    ],
+    "validate-schema": [
+      "extract-fields"
+    ]
+  },
+  "localProfile": "Rasterize bundled invoice digits to a PBM scan, recognize those pixels with a digit-template OCR algorithm, read native text in a parallel branch, classify the invoice, extract fields, and validate the result against its source. This portable OCR profile covers the bundled digit alphabet.",
   "slug": "document-extraction",
-  "title": "Document Extraction",
   "stages": [
     "ingest-documents",
     "ocr",
@@ -10,31 +36,6 @@
     "validate-schema",
     "publish"
   ],
-  "artifacts": [
-    "extraction.json",
-    "ocr.txt"
-  ],
-  "dependencies": {
-    "ingest-documents": [],
-    "ocr": [
-      "ingest-documents"
-    ],
-    "native-text": [
-      "ingest-documents"
-    ],
-    "classify": [
-      "ocr",
-      "native-text"
-    ],
-    "extract-fields": [
-      "classify"
-    ],
-    "validate-schema": [
-      "extract-fields"
-    ],
-    "publish": [
-      "validate-schema"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Document Extraction",
+  "validationMode": "local-workload"
 }

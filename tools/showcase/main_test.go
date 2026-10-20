@@ -1,10 +1,12 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
+	"time"
 )
 
 func TestRejectsContractDriftBeforeDeletingOutputs(t *testing.T) {
@@ -62,5 +64,26 @@ if a.stage=='join':
 	}
 	if !strings.Contains(string(result), `"completedActivities": 4`) {
 		t.Fatalf("incomplete execution: %s", result)
+	}
+}
+
+func TestChildDoesNotWaitForUnrelatedBranch(t *testing.T) {
+	config := scenario{Stages: []string{"fast", "slow", "child"}, Dependencies: map[string][]string{"fast": {}, "slow": {}, "child": {"fast"}}}
+	childStarted := make(chan struct{})
+	err := executeReady(config, 2, func(name string) error {
+		if name == "child" {
+			close(childStarted)
+		}
+		if name == "slow" {
+			select {
+			case <-childStarted:
+			case <-time.After(2 * time.Second):
+				return fmt.Errorf("an unrelated branch inserted an extra barrier")
+			}
+		}
+		return nil
+	})
+	if err != nil {
+		t.Fatal(err)
 	}
 }

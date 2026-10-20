@@ -1,69 +1,117 @@
 name: showcase-synthetic-dataset
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset:v1
   activities:
-    - name: define-schema
-      runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - define-schema
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "define-schema", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: batch-a
+      name: define-schema
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - batch-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "batch-a", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - define-schema
       memoryLimit: 256Mi
-      dependsOn: ["define-schema"]
-    - name: batch-b
+      name: batch-a
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - batch-b
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "batch-b", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - define-schema
       memoryLimit: 256Mi
-      dependsOn: ["define-schema"]
-    - name: batch-n
+      name: batch-b
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - batch-n
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "batch-n", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - define-schema
       memoryLimit: 256Mi
-      dependsOn: ["define-schema"]
-    - name: filter
+      name: batch-n
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - filter
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "filter", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - batch-a
+        - batch-b
+        - batch-n
       memoryLimit: 256Mi
-      dependsOn: ["batch-a","batch-b","batch-n"]
-    - name: deduplicate
+      name: filter
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - deduplicate
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "deduplicate", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - filter
       memoryLimit: 256Mi
-      dependsOn: ["filter"]
-    - name: quality-review
+      name: deduplicate
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - quality-review
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "quality-review", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - deduplicate
       memoryLimit: 256Mi
-      dependsOn: ["deduplicate"]
-    - name: publish
+      name: quality-review
       runtime: showcase-synthetic-dataset-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - quality-review
       memoryLimit: 256Mi
-      dependsOn: ["quality-review"]
+      name: publish
+      runtime: showcase-synthetic-dataset-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset:v1
+  namespace: showcase

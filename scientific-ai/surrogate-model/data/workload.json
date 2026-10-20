@@ -1,0 +1,7 @@
+{
+      "samples": 32,
+      "minimum": 0.1,
+      "maximum": 3,
+      "integrationSteps": 300,
+      "maxError": 0.001
+    }

@@ -1,7 +1,7 @@
 environment:
   id: showcase-supervised-tool-loop
-  name: Showcase supervised-tool-loop
-  description: Local Docker-backed reproducibility environment
+  name: showcase-supervised-tool-loop local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-supervised-tool-loop-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-supervised-tool-loop-local-docker, runtimeId: showcase-supervised-tool-loop-local, enabled: true}
-

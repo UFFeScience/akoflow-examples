@@ -1,7 +1,7 @@
 environment:
   id: showcase-rag-indexing
-  name: Showcase rag-indexing
-  description: Local Docker-backed reproducibility environment
+  name: showcase-rag-indexing local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-rag-indexing-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-rag-indexing-local-docker, runtimeId: showcase-rag-indexing-local, enabled: true}
-

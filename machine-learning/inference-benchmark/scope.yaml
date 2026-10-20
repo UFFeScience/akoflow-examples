@@ -1,5 +1,3 @@
 id: showcase-inference-benchmark-scope
-name: Inference Benchmark local scope
-environmentVersionIds:
-  - showcase-inference-benchmark-v1
-
+name: showcase-inference-benchmark local scope
+environmentVersionIds: [showcase-inference-benchmark-v1]

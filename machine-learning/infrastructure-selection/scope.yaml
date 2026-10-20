@@ -1,5 +1,3 @@
 id: showcase-infrastructure-selection-scope
-name: Infrastructure Selection local scope
-environmentVersionIds:
-  - showcase-infrastructure-selection-v1
-
+name: showcase-infrastructure-selection local scope
+environmentVersionIds: [showcase-infrastructure-selection-v1]

@@ -1,6 +1,32 @@
 {
+  "artifacts": [
+    "analysis.json",
+    "interpretation.md"
+  ],
+  "dependencies": {
+    "ai-interpretation": [
+      "measurements"
+    ],
+    "measurements": [
+      "simulation"
+    ],
+    "prepare-experiment": [],
+    "report": [
+      "validate"
+    ],
+    "simulation": [
+      "prepare-experiment"
+    ],
+    "statistics": [
+      "measurements"
+    ],
+    "validate": [
+      "statistics",
+      "ai-interpretation"
+    ]
+  },
+  "localProfile": "Integrate a first-order decay equation, compare numerical measurements with the analytic solution, independently infer the decay rate using log-linear regression, and validate both branches before publishing a report. The smoke profile uses a small numerical experiment and a fitted regression model; it does not call a hosted LLM.",
   "slug": "ai-assisted-analysis",
-  "title": "AI Assisted Analysis",
   "stages": [
     "prepare-experiment",
     "simulation",
@@ -10,31 +36,6 @@
     "validate",
     "report"
   ],
-  "artifacts": [
-    "analysis.json",
-    "interpretation.md"
-  ],
-  "dependencies": {
-    "prepare-experiment": [],
-    "simulation": [
-      "prepare-experiment"
-    ],
-    "measurements": [
-      "simulation"
-    ],
-    "statistics": [
-      "measurements"
-    ],
-    "ai-interpretation": [
-      "measurements"
-    ],
-    "validate": [
-      "statistics",
-      "ai-interpretation"
-    ],
-    "report": [
-      "validate"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "AI Assisted Analysis",
+  "validationMode": "local-workload"
 }

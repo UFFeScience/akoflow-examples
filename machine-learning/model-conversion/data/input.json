@@ -1,27 +1,21 @@
 {
-  "slug": "model-conversion",
-  "title": "Model Conversion",
-  "stages": [
-    "load-model",
-    "export-onnx",
-    "export-torchscript",
-    "quantize-cpu",
-    "quantize-gpu",
-    "validate-outputs",
-    "publish-variants"
-  ],
   "artifacts": [
     "model.onnx",
-    "model.gguf",
-    "model.engine"
+    "model.torchscript.pt",
+    "model-int8.json",
+    "model-fp16.bin",
+    "validation.json"
   ],
   "dependencies": {
-    "load-model": [],
     "export-onnx": [
       "load-model"
     ],
     "export-torchscript": [
       "load-model"
+    ],
+    "load-model": [],
+    "publish-variants": [
+      "validate-outputs"
     ],
     "quantize-cpu": [
       "export-onnx",
@@ -34,10 +28,19 @@
     "validate-outputs": [
       "quantize-cpu",
       "quantize-gpu"
-    ],
-    "publish-variants": [
-      "validate-outputs"
     ]
   },
-  "validationMode": "contract-fixture"
+  "localProfile": "Export a learned affine model as real ONNX and TorchScript files, generate int8 and IEEE float16 coefficient representations in parallel, reload both executable formats, and compare their numeric outputs against the original model. The float16 branch runs on CPU and does not build or claim a TensorRT engine.",
+  "slug": "model-conversion",
+  "stages": [
+    "load-model",
+    "export-onnx",
+    "export-torchscript",
+    "quantize-cpu",
+    "quantize-gpu",
+    "validate-outputs",
+    "publish-variants"
+  ],
+  "title": "Model Conversion",
+  "validationMode": "local-workload"
 }

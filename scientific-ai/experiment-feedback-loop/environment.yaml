@@ -1,7 +1,7 @@
 environment:
   id: showcase-experiment-feedback-loop
-  name: Showcase experiment-feedback-loop
-  description: Local Docker-backed reproducibility environment
+  name: showcase-experiment-feedback-loop local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-experiment-feedback-loop-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-experiment-feedback-loop-local-docker, runtimeId: showcase-experiment-feedback-loop-local, enabled: true}
-

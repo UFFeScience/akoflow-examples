@@ -1,58 +1,87 @@
 name: local-rag-factory
 spec:
-  namespace: showcase
-  image: ghcr.io/uffescience/akoflow-examples/local-rag-factory:v1
   activities:
-    - name: ingest
-      runtime: local
-      command:
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - ingest
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", ingest, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: chunk
-      runtime: local
-      command:
+      name: ingest
+      runtime: local-rag-factory-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - chunk
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", chunk, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - ingest
       memoryLimit: 256Mi
-      dependsOn: [ingest]
-    - name: index
-      runtime: local
-      command:
+      name: chunk
+      runtime: local-rag-factory-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - index
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", index, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "2"
+      dependsOn:
+        - chunk
       memoryLimit: 512Mi
-      dependsOn: [chunk]
-    - name: retrieve
-      runtime: local
-      command:
+      name: index
+      runtime: local-rag-factory-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - retrieve
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", retrieve, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - index
       memoryLimit: 256Mi
-      dependsOn: [index]
-    - name: answer
-      runtime: local
-      command:
+      name: retrieve
+      runtime: local-rag-factory-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - answer
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", answer, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - retrieve
       memoryLimit: 256Mi
-      dependsOn: [retrieve]
-    - name: evaluate
-      runtime: local
-      command:
+      name: answer
+      runtime: local-rag-factory-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - evaluate
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", evaluate, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - answer
       memoryLimit: 256Mi
-      dependsOn: [answer]
+      name: evaluate
+      runtime: local-rag-factory-local
+  image: ghcr.io/uffescience/akoflow-examples/local-rag-factory:v1
+  namespace: showcase

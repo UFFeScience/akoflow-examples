@@ -1,7 +1,7 @@
 environment:
   id: showcase-inference-benchmark
-  name: Showcase inference-benchmark
-  description: Local Docker-backed reproducibility environment
+  name: showcase-inference-benchmark local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-inference-benchmark-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-inference-benchmark-local-docker, runtimeId: showcase-inference-benchmark-local, enabled: true}
-

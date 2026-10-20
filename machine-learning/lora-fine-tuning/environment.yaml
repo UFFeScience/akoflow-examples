@@ -1,7 +1,7 @@
 environment:
   id: showcase-lora-fine-tuning
-  name: Showcase lora-fine-tuning
-  description: Local Docker-backed reproducibility environment
+  name: showcase-lora-fine-tuning local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-lora-fine-tuning-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-lora-fine-tuning-local-docker, runtimeId: showcase-lora-fine-tuning-local, enabled: true}
-

@@ -20,11 +20,12 @@ jobs:
         with:
           go-version: stable
           cache: false
-      - run: go test tools/showcase/main.go tools/showcase/main_test.go
+      - run: go run ./tools/materialize -check
+      - run: go test ./tools/...
 
   checks:
     name: Central AkôFlow example CI
-    uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@main
+    uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@efff9956e7b4bd5ea893083447fef5651c64729c
     with:
       examples_ref: ${{ github.event.pull_request.head.sha || github.sha }}
       publish: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}

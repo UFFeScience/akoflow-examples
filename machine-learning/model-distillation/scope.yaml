@@ -1,5 +1,3 @@
 id: showcase-model-distillation-scope
-name: Model Distillation local scope
-environmentVersionIds:
-  - showcase-model-distillation-v1
-
+name: showcase-model-distillation local scope
+environmentVersionIds: [showcase-model-distillation-v1]

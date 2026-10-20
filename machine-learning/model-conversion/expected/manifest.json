@@ -1,10 +1,11 @@
 {
-  "showcase": "model-conversion",
   "artifacts": [
     "model.onnx",
-    "model.gguf",
-    "model.engine"
+    "model.torchscript.pt",
+    "model-int8.json",
+    "model-fp16.bin",
+    "validation.json"
   ],
+  "showcase": "model-conversion",
   "status": "success"
 }
-

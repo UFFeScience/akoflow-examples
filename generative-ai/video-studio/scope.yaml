@@ -1,4 +1,3 @@
 id: ai-video-studio-scope
-name: AI Video Studio local scope
+name: ai-video-studio local scope
 environmentVersionIds: [ai-video-studio-v1]
-

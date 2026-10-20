@@ -1,53 +1,87 @@
 name: showcase-training-with-mlflow
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow:v1
   activities:
-    - name: ingest-data
-      runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - ingest-data
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "ingest-data", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-    - name: validate
+      memoryLimit: 1Gi
+      name: ingest-data
       runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - validate
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "validate", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn: ["ingest-data"]
-    - name: train
+      dependsOn:
+        - ingest-data
+      memoryLimit: 1Gi
+      name: validate
       runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - train
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn: ["validate"]
-    - name: evaluate
+      dependsOn:
+        - validate
+      memoryLimit: 1Gi
+      name: train
       runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn: ["train"]
-    - name: register-model
+      dependsOn:
+        - train
+      memoryLimit: 1Gi
+      name: evaluate
       runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - register-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "register-model", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn: ["evaluate"]
-    - name: log-mlflow-run
+      dependsOn:
+        - evaluate
+      memoryLimit: 1Gi
+      name: register-model
       runtime: showcase-training-with-mlflow-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - log-mlflow-run
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "log-mlflow-run", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn: ["evaluate"]
+      dependsOn:
+        - evaluate
+      memoryLimit: 1Gi
+      name: log-mlflow-run
+      runtime: showcase-training-with-mlflow-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow:v1
+  namespace: showcase

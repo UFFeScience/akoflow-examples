@@ -1,6 +1,5 @@
 id: showcase-model-conversion-topology
-name: Model Conversion local topology
+name: showcase-model-conversion local topology
 version: 1
 executionScopeId: showcase-model-conversion-scope
 links: []
-

@@ -1,21 +1,17 @@
 {
-  "slug": "audio-transcription",
-  "title": "Audio Transcription",
-  "stages": [
-    "ingest-audio",
-    "segment",
-    "segment-1",
-    "segment-n",
-    "merge-transcript",
-    "summarize",
-    "publish"
-  ],
   "artifacts": [
     "transcript.txt",
     "summary.md"
   ],
   "dependencies": {
     "ingest-audio": [],
+    "merge-transcript": [
+      "segment-1",
+      "segment-n"
+    ],
+    "publish": [
+      "summarize"
+    ],
     "segment": [
       "ingest-audio"
     ],
@@ -25,16 +21,21 @@
     "segment-n": [
       "segment"
     ],
-    "merge-transcript": [
-      "segment-1",
-      "segment-n"
-    ],
     "summarize": [
       "merge-transcript"
-    ],
-    "publish": [
-      "summarize"
     ]
   },
-  "validationMode": "contract-fixture"
+  "localProfile": "Create a real PCM WAV from a bundled synthetic tone vocabulary, split it into two audio segments, decode tone frequencies independently, merge the decoded words, and produce a frequency-based summary. This tiny offline recognizer is an audio-processing teaching profile; it does not perform natural-speech recognition.",
+  "slug": "audio-transcription",
+  "stages": [
+    "ingest-audio",
+    "segment",
+    "segment-1",
+    "segment-n",
+    "merge-transcript",
+    "summarize",
+    "publish"
+  ],
+  "title": "Audio Transcription",
+  "validationMode": "local-workload"
 }

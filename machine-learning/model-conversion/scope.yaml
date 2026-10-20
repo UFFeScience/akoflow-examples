@@ -1,5 +1,3 @@
 id: showcase-model-conversion-scope
-name: Model Conversion local scope
-environmentVersionIds:
-  - showcase-model-conversion-v1
-
+name: showcase-model-conversion local scope
+environmentVersionIds: [showcase-model-conversion-v1]

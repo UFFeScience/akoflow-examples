@@ -1,6 +1,26 @@
 {
+  "artifacts": [
+    "answer.json",
+    "validation.json",
+    "trace.json"
+  ],
+  "dependencies": {
+    "agent-loop": [
+      "prepare-objective"
+    ],
+    "prepare-objective": [],
+    "publish-result": [
+      "validate-output"
+    ],
+    "store-trace": [
+      "validate-output"
+    ],
+    "validate-output": [
+      "agent-loop"
+    ]
+  },
+  "localProfile": "Run a bounded finite-state agent over an allowlist of local numeric tools, verify the measured answer against the source observations, and independently publish the answer and complete tool trace. The smoke profile uses deterministic tool selection, not an external LLM.",
   "slug": "bounded-agent",
-  "title": "Bounded Agent",
   "stages": [
     "prepare-objective",
     "agent-loop",
@@ -8,24 +28,6 @@
     "publish-result",
     "store-trace"
   ],
-  "artifacts": [
-    "answer.json",
-    "validation.json"
-  ],
-  "dependencies": {
-    "prepare-objective": [],
-    "agent-loop": [
-      "prepare-objective"
-    ],
-    "validate-output": [
-      "agent-loop"
-    ],
-    "publish-result": [
-      "validate-output"
-    ],
-    "store-trace": [
-      "validate-output"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Bounded Agent",
+  "validationMode": "local-workload"
 }

@@ -1,69 +1,116 @@
 name: showcase-rag-indexing
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing:v1
   activities:
-    - name: collect-documents
-      runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - collect-documents
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "collect-documents", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: clean
+      name: collect-documents
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - clean
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "clean", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - collect-documents
       memoryLimit: 256Mi
-      dependsOn: ["collect-documents"]
-    - name: chunk
+      name: clean
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - chunk
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "chunk", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - clean
       memoryLimit: 256Mi
-      dependsOn: ["clean"]
-    - name: embed
+      name: chunk
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - embed
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "embed", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - chunk
       memoryLimit: 256Mi
-      dependsOn: ["chunk"]
-    - name: build-index
+      name: embed
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - build-index
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "build-index", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - embed
       memoryLimit: 256Mi
-      dependsOn: ["embed"]
-    - name: retrieval-tests
+      name: build-index
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - retrieval-tests
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "retrieval-tests", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - build-index
       memoryLimit: 256Mi
-      dependsOn: ["build-index"]
-    - name: answer-tests
+      name: retrieval-tests
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - answer-tests
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "answer-tests", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - build-index
       memoryLimit: 256Mi
-      dependsOn: ["build-index"]
-    - name: publish
+      name: answer-tests
       runtime: showcase-rag-indexing-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - retrieval-tests
+        - answer-tests
       memoryLimit: 256Mi
-      dependsOn: ["retrieval-tests","answer-tests"]
+      name: publish
+      runtime: showcase-rag-indexing-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing:v1
+  namespace: showcase

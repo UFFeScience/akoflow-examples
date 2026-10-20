@@ -1,6 +1,32 @@
 {
+  "artifacts": [
+    "model.pkl",
+    "metrics.json",
+    "report.html",
+    "registry.json",
+    "mlflow-run.json",
+    "mlflow.db"
+  ],
+  "dependencies": {
+    "evaluate": [
+      "train"
+    ],
+    "ingest-data": [],
+    "log-mlflow-run": [
+      "evaluate"
+    ],
+    "register-model": [
+      "evaluate"
+    ],
+    "train": [
+      "validate"
+    ],
+    "validate": [
+      "ingest-data"
+    ]
+  },
+  "localProfile": "Fit a linear regression on bundled measurements, evaluate held-out rows, publish a content-addressed local model registry entry, and independently log parameters, metrics, and the model artifact through the real MLflow SDK to a local SQLite tracking store. No hosted MLflow server is needed.",
   "slug": "training-with-mlflow",
-  "title": "Training with MLflow",
   "stages": [
     "ingest-data",
     "validate",
@@ -9,28 +35,6 @@
     "register-model",
     "log-mlflow-run"
   ],
-  "artifacts": [
-    "model.pkl",
-    "metrics.json",
-    "report.html"
-  ],
-  "dependencies": {
-    "ingest-data": [],
-    "validate": [
-      "ingest-data"
-    ],
-    "train": [
-      "validate"
-    ],
-    "evaluate": [
-      "train"
-    ],
-    "register-model": [
-      "evaluate"
-    ],
-    "log-mlflow-run": [
-      "evaluate"
-    ]
-  },
-  "validationMode": "contract-fixture"
+  "title": "Training with MLflow",
+  "validationMode": "local-workload"
 }

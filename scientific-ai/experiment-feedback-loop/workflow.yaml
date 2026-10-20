@@ -1,53 +1,87 @@
 name: showcase-experiment-feedback-loop
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop:v1
   activities:
-    - name: observations
-      runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - observations
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "observations", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: update-model
+      name: observations
       runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - update-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "update-model", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - observations
       memoryLimit: 256Mi
-      dependsOn: ["observations"]
-    - name: propose-experiments
+      name: update-model
       runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - propose-experiments
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "propose-experiments", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - update-model
       memoryLimit: 256Mi
-      dependsOn: ["update-model"]
-    - name: safety-check
+      name: propose-experiments
       runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - safety-check
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "safety-check", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - propose-experiments
       memoryLimit: 256Mi
-      dependsOn: ["propose-experiments"]
-    - name: run-experiments
+      name: safety-check
       runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - run-experiments
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "run-experiments", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - safety-check
       memoryLimit: 256Mi
-      dependsOn: ["safety-check"]
-    - name: record-observations
+      name: run-experiments
       runtime: showcase-experiment-feedback-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - record-observations
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "record-observations", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - run-experiments
       memoryLimit: 256Mi
-      dependsOn: ["run-experiments"]
+      name: record-observations
+      runtime: showcase-experiment-feedback-loop-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop:v1
+  namespace: showcase

@@ -1,19 +1,25 @@
 # AI Video Studio
 
-An offline, CPU-compatible video production pipeline. A short creative brief is
-expanded into a storyboard, deterministic illustrated frames, narration audio,
-and a final MP4. The fixture deliberately avoids hosted APIs: it uses Python for
-planning and raster generation and FFmpeg for encoding.
+Create a storyboard, procedural scene frames, generated narration audio, and a video from a versioned local brief. FFmpeg is used when available on the host; the supplied Docker image includes it. The portable fallback writes a valid YUV4MPEG stream rather than pretending to have produced an MP4.
 
-## Pipeline
+## Run locally
 
-`brief -> storyboard -> scenes -> narration -> compose -> quality-control`
+Requires Go and Python 3.12+. Blender Render Farm also requires Docker. Run from a fresh checkout:
 
-Run `./run.sh`. FFmpeg produces the final MP4 when available and the container
-image installs it. Minimal CI workers use a standards-compliant YUV4MPEG video
-as the deterministic offline smoke artifact.
-Set `AKOFLOW_PROFILE=demo` (default: `smoke`) for more frames and a longer video.
-The versioned brief in `data/brief.json` is the complete offline dataset.
+```sh
+git clone https://github.com/UFFeScience/akoflow-examples.git
+cd akoflow-examples/generative-ai/video-studio
+./prepare.sh && ./run.sh
+```
 
-The stages map directly to AkôFlow activities. Their files are written to the
-shared workspace, so provenance can show which activity generated each asset.
+Preparation downloads the Go YAML module. Results are in `outputs/manifest.json`, `outputs/dag-validation.json`, and `outputs/stage-<activity>.json`. Independent branches run concurrently as soon as their own dependencies and a local execution slot are available.
+
+## Inspect the same DAG in Desktop
+
+Start the local AkôFlow daemon with Docker available and configure `AKOFLOW_API_TOKEN` in your shell. From this example directory:
+
+```sh
+go run ../../tools/daemon-local -root ../.. -example generative-ai/video-studio
+```
+
+The command builds the declared image, validates Docker connectivity, registers local-only infrastructure, and executes the workflow through the daemon. Current verified screenshots are in `screenshots/current/`; their manifest identifies the exact run and image. The full daemon projection is in `evidence/daemon-run.json`.

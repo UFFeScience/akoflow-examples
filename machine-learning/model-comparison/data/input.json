@@ -1,20 +1,17 @@
 {
-  "slug": "model-comparison",
-  "title": "Model Comparison",
-  "stages": [
-    "freeze-evaluation-set",
-    "evaluate-a",
-    "evaluate-b",
-    "evaluate-c",
-    "compare-metrics",
-    "approve-candidate"
-  ],
   "artifacts": [
     "comparison.csv",
     "report.html"
   ],
   "dependencies": {
-    "freeze-evaluation-set": [],
+    "approve-candidate": [
+      "compare-metrics"
+    ],
+    "compare-metrics": [
+      "evaluate-a",
+      "evaluate-b",
+      "evaluate-c"
+    ],
     "evaluate-a": [
       "freeze-evaluation-set"
     ],
@@ -24,14 +21,18 @@
     "evaluate-c": [
       "freeze-evaluation-set"
     ],
-    "compare-metrics": [
-      "evaluate-a",
-      "evaluate-b",
-      "evaluate-c"
-    ],
-    "approve-candidate": [
-      "compare-metrics"
-    ]
+    "freeze-evaluation-set": []
   },
-  "validationMode": "contract-fixture"
+  "localProfile": "Evaluate an ordinary-least-squares model, a mean baseline, and a limited-budget gradient-descent model on the same held-out rows, rank their errors, and approve only a candidate that passes the declared accuracy threshold.",
+  "slug": "model-comparison",
+  "stages": [
+    "freeze-evaluation-set",
+    "evaluate-a",
+    "evaluate-b",
+    "evaluate-c",
+    "compare-metrics",
+    "approve-candidate"
+  ],
+  "title": "Model Comparison",
+  "validationMode": "local-workload"
 }

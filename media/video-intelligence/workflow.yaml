@@ -1,58 +1,89 @@
 name: video-intelligence
 spec:
-  namespace: showcase
-  image: ghcr.io/uffescience/akoflow-examples/video-intelligence:v1
   activities:
-    - name: prepare
-      runtime: local
-      command:
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - prepare
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", prepare, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "2"
       memoryLimit: 512Mi
-    - name: probe
-      runtime: local
-      command:
+      name: prepare
+      runtime: video-intelligence-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - probe
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", probe, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - prepare
       memoryLimit: 256Mi
-      dependsOn: [prepare]
-    - name: scenes
-      runtime: local
-      command:
+      name: probe
+      runtime: video-intelligence-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - scenes
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", scenes, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "2"
+      dependsOn:
+        - prepare
       memoryLimit: 512Mi
-      dependsOn: [prepare]
-    - name: audio
-      runtime: local
-      command:
+      name: scenes
+      runtime: video-intelligence-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - audio
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", audio, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - prepare
       memoryLimit: 256Mi
-      dependsOn: [prepare]
-    - name: timeline
-      runtime: local
-      command:
+      name: audio
+      runtime: video-intelligence-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - timeline
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", timeline, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - probe
+        - scenes
+        - audio
       memoryLimit: 256Mi
-      dependsOn: [probe, scenes, audio]
-    - name: report
-      runtime: local
-      command:
+      name: timeline
+      runtime: video-intelligence-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - report
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", report, "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - timeline
       memoryLimit: 256Mi
-      dependsOn: [timeline]
+      name: report
+      runtime: video-intelligence-local
+  image: ghcr.io/uffescience/akoflow-examples/video-intelligence:v1
+  namespace: showcase

@@ -1,53 +1,89 @@
 name: showcase-inference-benchmark
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark:v1
   activities:
-    - name: freeze-inputs
-      runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - freeze-inputs
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "freeze-inputs", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: cpu
+      name: freeze-inputs
       runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - cpu
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "cpu", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - freeze-inputs
       memoryLimit: 256Mi
-      dependsOn: ["freeze-inputs"]
-    - name: gpu
+      name: cpu
       runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - gpu
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "gpu", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - freeze-inputs
       memoryLimit: 256Mi
-      dependsOn: ["freeze-inputs"]
-    - name: edge
+      name: gpu
       runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - edge
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "edge", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - freeze-inputs
       memoryLimit: 256Mi
-      dependsOn: ["freeze-inputs"]
-    - name: normalize
+      name: edge
       runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - normalize
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "normalize", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - cpu
+        - gpu
+        - edge
       memoryLimit: 256Mi
-      dependsOn: ["cpu","gpu","edge"]
-    - name: compare-cost-and-latency
+      name: normalize
       runtime: showcase-inference-benchmark-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - compare-cost-and-latency
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "compare-cost-and-latency", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - normalize
       memoryLimit: 256Mi
-      dependsOn: ["normalize"]
+      name: compare-cost-and-latency
+      runtime: showcase-inference-benchmark-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark:v1
+  namespace: showcase

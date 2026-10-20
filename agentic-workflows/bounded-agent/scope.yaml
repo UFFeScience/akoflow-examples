@@ -1,5 +1,3 @@
 id: showcase-bounded-agent-scope
-name: Bounded Agent local scope
-environmentVersionIds:
-  - showcase-bounded-agent-v1
-
+name: showcase-bounded-agent local scope
+environmentVersionIds: [showcase-bounded-agent-v1]

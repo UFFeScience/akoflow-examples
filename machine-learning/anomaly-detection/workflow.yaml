@@ -1,53 +1,87 @@
 name: showcase-anomaly-detection
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection:v1
   activities:
-    - name: collect-signals
-      runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - collect-signals
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "collect-signals", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: build-features
+      name: collect-signals
       runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - build-features
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "build-features", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - collect-signals
       memoryLimit: 256Mi
-      dependsOn: ["collect-signals"]
-    - name: train-detector
+      name: build-features
       runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - train-detector
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "train-detector", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - build-features
       memoryLimit: 256Mi
-      dependsOn: ["build-features"]
-    - name: score-validation
+      name: train-detector
       runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - score-validation
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "score-validation", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - train-detector
       memoryLimit: 256Mi
-      dependsOn: ["train-detector"]
-    - name: choose-threshold
+      name: score-validation
       runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - choose-threshold
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "choose-threshold", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - score-validation
       memoryLimit: 256Mi
-      dependsOn: ["score-validation"]
-    - name: publish
+      name: choose-threshold
       runtime: showcase-anomaly-detection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - choose-threshold
       memoryLimit: 256Mi
-      dependsOn: ["choose-threshold"]
+      name: publish
+      runtime: showcase-anomaly-detection-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection:v1
+  namespace: showcase

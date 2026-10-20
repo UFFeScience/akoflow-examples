@@ -1,49 +1,74 @@
 name: ai-video-studio
 spec:
-  namespace: showcase
-  image: ghcr.io/uffescience/akoflow-examples/ai-video-studio:v1
   activities:
-    - name: storyboard
-      runtime: local
-      command:
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - storyboard
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", "storyboard", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: scenes
-      runtime: local
-      command:
+      name: storyboard
+      runtime: ai-video-studio-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - scenes
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", "scenes", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "2"
+      dependsOn:
+        - storyboard
       memoryLimit: 512Mi
-      dependsOn: [storyboard]
-    - name: narration
-      runtime: local
-      command:
+      name: scenes
+      runtime: ai-video-studio-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - narration
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", "narration", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - storyboard
       memoryLimit: 256Mi
-      dependsOn: [storyboard]
-    - name: compose
-      runtime: local
-      command:
+      name: narration
+      runtime: ai-video-studio-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - compose
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", "compose", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "2"
+      dependsOn:
+        - scenes
+        - narration
       memoryLimit: 512Mi
-      dependsOn: [scenes, narration]
-    - name: quality-control
-      runtime: local
-      command:
+      name: compose
+      runtime: ai-video-studio-local
+    - command:
+        arguments:
+          - /app/scripts/pipeline.py
+          - --stage
+          - quality-control
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/scripts/pipeline.py", "--stage", "quality-control", "--output", "."]
-        workingDirectory: /workspace
       cpuLimit: "1"
+      dependsOn:
+        - compose
       memoryLimit: 256Mi
-      dependsOn: [compose]
+      name: quality-control
+      runtime: ai-video-studio-local
+  image: ghcr.io/uffescience/akoflow-examples/ai-video-studio:v1
+  namespace: showcase

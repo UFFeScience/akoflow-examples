@@ -1,6 +1,18 @@
 # Computer Vision
 
-An AkôFlow orchestration contract fixture. Each declared activity writes deterministic test evidence; this fixture does not implement the model or external service described by its title. The DAG matches the documentation, including parallel branches.
+Generate seeded noisy 8×8 geometric-pattern images from the bundled input specification, validate labels, augment only training images, learn class centroids, and evaluate classification on held-out images. This small offline dataset is not CIFAR-10.
+
+## Fresh local checkout
+
+Requires Go and Python 3.12+. Run this command from the directory in which you keep your repositories:
+
+```sh
+git clone https://github.com/UFFeScience/akoflow-examples.git
+cd akoflow-examples/machine-learning/computer-vision
+./prepare.sh && ./run.sh
+```
+
+`prepare.sh` downloads the pinned Python packages (when required) and Go module once. `run.sh` then executes the local stages offline in dependency waves. Results are in `outputs/`; inspect `manifest.json`, `dag-validation.json`, and each `stage-<name>.json`. Independent branches run concurrently.
 
 ## Run
 
@@ -85,3 +97,7 @@ Historical capture names:
 - `execution.png`: observed execution lifecycle and timing decomposition;
 - `outputs.png`: data transfers between activity workspaces;
 - `generated-files.png`: files observed in the final output-producing activity.
+
+## Current execution evidence
+
+The current completed daemon run is recorded in `evidence/daemon-run.json`. One capture for every activity and the observed DAG are in `screenshots/current/`; `capture-manifest.json` identifies their exact run and image. Older captures directly under `screenshots/` are historical and do not verify this revision.

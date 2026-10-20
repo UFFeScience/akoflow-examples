@@ -1,6 +1,42 @@
-id: blender-render-farm-environment
-name: Blender Render Farm local environment
-driver: local
-runtimes: [{id: local, type: local, containerRuntime: docker}]
-resources: [{id: workstation, runtimeId: local, cpuCores: 4, memoryBytes: 8589934592}]
-
+environment:
+  id: blender-render-farm
+  name: blender-render-farm local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: blender-render-farm-v1
+  environmentId: blender-render-farm
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: blender-render-farm-v1
+runtimes:
+  - environmentVersionId: blender-render-farm-v1
+    id: blender-render-farm-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: blender-render-farm-local-docker
+    environmentVersionId: blender-render-farm-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: blender-render-farm-local-docker, runtimeId: blender-render-farm-local, enabled: true}

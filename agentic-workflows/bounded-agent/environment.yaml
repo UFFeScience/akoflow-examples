@@ -1,7 +1,7 @@
 environment:
   id: showcase-bounded-agent
-  name: Showcase bounded-agent
-  description: Local Docker-backed reproducibility environment
+  name: showcase-bounded-agent local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-bounded-agent-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-bounded-agent-local-docker, runtimeId: showcase-bounded-agent-local, enabled: true}
-

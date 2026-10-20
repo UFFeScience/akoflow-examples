@@ -1,7 +1,7 @@
 environment:
   id: showcase-training-with-mlflow
-  name: Showcase training-with-mlflow
-  description: Local Docker-backed reproducibility environment
+  name: showcase-training-with-mlflow local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-training-with-mlflow-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-training-with-mlflow-local-docker, runtimeId: showcase-training-with-mlflow-local, enabled: true}
-

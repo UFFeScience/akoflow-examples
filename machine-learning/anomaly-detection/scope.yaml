@@ -1,5 +1,3 @@
 id: showcase-anomaly-detection-scope
-name: Anomaly Detection local scope
-environmentVersionIds:
-  - showcase-anomaly-detection-v1
-
+name: showcase-anomaly-detection local scope
+environmentVersionIds: [showcase-anomaly-detection-v1]

@@ -1,10 +1,12 @@
 {
-  "showcase": "training-with-mlflow",
   "artifacts": [
     "model.pkl",
     "metrics.json",
-    "report.html"
+    "report.html",
+    "registry.json",
+    "mlflow-run.json",
+    "mlflow.db"
   ],
+  "showcase": "training-with-mlflow",
   "status": "success"
 }
-

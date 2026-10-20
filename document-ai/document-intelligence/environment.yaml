@@ -1,6 +1,42 @@
-id: document-intelligence-environment
-name: Document Intelligence local environment
-driver: local
-runtimes: [{id: local, type: local, containerRuntime: docker}]
-resources: [{id: workstation, runtimeId: local, cpuCores: 4, memoryBytes: 4294967296}]
-
+environment:
+  id: document-intelligence
+  name: document-intelligence local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: document-intelligence-v1
+  environmentId: document-intelligence
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: document-intelligence-v1
+runtimes:
+  - environmentVersionId: document-intelligence-v1
+    id: document-intelligence-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: document-intelligence-local-docker
+    environmentVersionId: document-intelligence-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: document-intelligence-local-docker, runtimeId: document-intelligence-local, enabled: true}

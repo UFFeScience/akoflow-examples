@@ -1,53 +1,89 @@
 name: showcase-hyperparameter-search
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1
   activities:
-    - name: prepare-dataset
-      runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - prepare-dataset
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "prepare-dataset", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: trial-1
+      name: prepare-dataset
       runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - trial-1
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "trial-1", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - prepare-dataset
       memoryLimit: 256Mi
-      dependsOn: ["prepare-dataset"]
-    - name: trial-2
+      name: trial-1
       runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - trial-2
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "trial-2", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - prepare-dataset
       memoryLimit: 256Mi
-      dependsOn: ["prepare-dataset"]
-    - name: trial-n
+      name: trial-2
       runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - trial-n
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "trial-n", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - prepare-dataset
       memoryLimit: 256Mi
-      dependsOn: ["prepare-dataset"]
-    - name: compare-trials
+      name: trial-n
       runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - compare-trials
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "compare-trials", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - trial-1
+        - trial-2
+        - trial-n
       memoryLimit: 256Mi
-      dependsOn: ["trial-1","trial-2","trial-n"]
-    - name: register-best
+      name: compare-trials
       runtime: showcase-hyperparameter-search-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - register-best
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "register-best", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - compare-trials
       memoryLimit: 256Mi
-      dependsOn: ["compare-trials"]
+      name: register-best
+      runtime: showcase-hyperparameter-search-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1
+  namespace: showcase

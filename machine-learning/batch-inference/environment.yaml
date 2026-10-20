@@ -1,7 +1,7 @@
 environment:
   id: showcase-batch-inference
-  name: Showcase batch-inference
-  description: Local Docker-backed reproducibility environment
+  name: showcase-batch-inference local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-batch-inference-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-batch-inference-local-docker, runtimeId: showcase-batch-inference-local, enabled: true}
-

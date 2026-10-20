@@ -191,7 +191,7 @@ func runWithOptions(root string, opts options) error {
 			}
 		}
 		for seed := range seeds {
-			cmd := exec.Command("docker", "run", "--rm", "--network", "none", "--mount", "type=bind,src="+output+",dst=/outputs", "--entrypoint", "sh", image, "-c", `cp -an "$1"/. "$2"/`, "akoflow-seed", seed, "/outputs")
+			cmd := exec.Command("docker", "run", "--rm", "--network", "none", "--user", fmt.Sprintf("%d:%d", os.Getuid(), os.Getgid()), "--env", "HOME=/tmp", "--mount", "type=bind,src="+output+",dst=/outputs", "--entrypoint", "sh", image, "-c", `cp -an "$1"/. "$2"/`, "akoflow-seed", seed, "/outputs")
 			if logs, err := cmd.CombinedOutput(); err != nil {
 				return fmt.Errorf("seed image inputs: %w: %s", err, logs)
 			}
@@ -242,6 +242,10 @@ func runWithOptions(root string, opts options) error {
 				dockerArgs = append([]string{"run", "--rm", "--network", "none", "--env", "AKOFLOW_PROFILE=" + profile, "--mount", "type=bind,src=" + output + ",dst=/outputs", "--workdir", "/outputs", "--entrypoint", entrypoint, image}, args...)
 			} else {
 				dockerArgs = append(dockerArgs, args...)
+			}
+			if os.Getuid() >= 0 {
+				owner := fmt.Sprintf("%d:%d", os.Getuid(), os.Getgid())
+				dockerArgs = append([]string{"run", "--user", owner, "--env", "HOME=/tmp", "--env", "XDG_CACHE_HOME=/tmp/akoflow-cache"}, dockerArgs[1:]...)
 			}
 			cmd = exec.Command("docker", dockerArgs...)
 		} else {

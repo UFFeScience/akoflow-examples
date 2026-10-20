@@ -1,0 +1,39 @@
+{
+  "workflowId": "video-intelligence-local-bb3cf6fa14",
+  "planId": "video-intelligence-local-bb3cf6fa14-manual-plan-20261020t182639",
+  "runId": "video-intelligence-local-bb3cf6fa14-run-20261020t182639",
+  "imageId": "sha256:9a17f6f4661eb6e751c27bda9ada09ed7ff0126fbd2e82291f25523692aa3223",
+  "activities": [
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-prepare",
+      "stage": "prepare",
+      "file": "prepare.png"
+    },
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-probe",
+      "stage": "probe",
+      "file": "probe.png"
+    },
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-scenes",
+      "stage": "scenes",
+      "file": "scenes.png"
+    },
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-audio",
+      "stage": "audio",
+      "file": "audio.png"
+    },
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-timeline",
+      "stage": "timeline",
+      "file": "timeline.png"
+    },
+    {
+      "activityId": "video-intelligence-local-bb3cf6fa14-report",
+      "stage": "report",
+      "file": "report.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

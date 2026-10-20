@@ -11,7 +11,7 @@ if action=='setup':
   bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=3,radius=.8,location=(-2+i*2,0,0));m=bpy.data.materials.new(f'm{i}');m.diffuse_color=color;bpy.context.object.data.materials.append(m)
  bpy.ops.object.light_add(type='AREA',location=(0,-2,6));bpy.context.object.data.energy=1200;bpy.context.object.data.shape='DISK';bpy.context.object.data.size=5
  bpy.ops.object.camera_add(location=(0,-9,3));cam=bpy.context.object;cam.rotation_euler=(math.radians(72),0,0);bpy.context.scene.camera=cam
- s=bpy.context.scene;s.render.engine='BLENDER_EEVEE_NEXT';s.render.resolution_x=640;s.render.resolution_y=360;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.frame_start=1;s.frame_end=int(args[2]);s.render.fps=8
+ s=bpy.context.scene;s.render.engine='CYCLES';s.cycles.device='CPU';s.cycles.samples=4;s.cycles.use_denoising=False;s.cycles.use_preview_denoising=False;s.render.resolution_x=640;s.render.resolution_y=360;s.render.resolution_percentage=100;s.render.image_settings.file_format='PNG';s.frame_start=1;s.frame_end=int(args[2]);s.render.fps=8
  bpy.ops.wm.save_as_mainfile(filepath=out+'/scene.blend')
 else:
  parity=int(args[2]);count=int(args[3]);s=bpy.context.scene

@@ -1,7 +1,7 @@
 environment:
   id: showcase-hyperparameter-search
-  name: Showcase hyperparameter-search
-  description: Local Docker-backed reproducibility environment
+  name: showcase-hyperparameter-search local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-hyperparameter-search-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-hyperparameter-search-local-docker, runtimeId: showcase-hyperparameter-search-local, enabled: true}
-

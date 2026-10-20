@@ -1,0 +1,34 @@
+{
+  "workflowId": "ai-video-studio-local-964ed917a8",
+  "planId": "ai-video-studio-local-964ed917a8-manual-plan-20261020t182540",
+  "runId": "ai-video-studio-local-964ed917a8-run-20261020t182540",
+  "imageId": "sha256:a3b0b618839f049cde4646db1af99501eb1007a096fd31dce5af9130ed99edd3",
+  "activities": [
+    {
+      "activityId": "ai-video-studio-local-964ed917a8-storyboard",
+      "stage": "storyboard",
+      "file": "storyboard.png"
+    },
+    {
+      "activityId": "ai-video-studio-local-964ed917a8-scenes",
+      "stage": "scenes",
+      "file": "scenes.png"
+    },
+    {
+      "activityId": "ai-video-studio-local-964ed917a8-narration",
+      "stage": "narration",
+      "file": "narration.png"
+    },
+    {
+      "activityId": "ai-video-studio-local-964ed917a8-compose",
+      "stage": "compose",
+      "file": "compose.png"
+    },
+    {
+      "activityId": "ai-video-studio-local-964ed917a8-quality-control",
+      "stage": "quality-control",
+      "file": "quality-control.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

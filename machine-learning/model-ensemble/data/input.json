@@ -1,15 +1,42 @@
 {
-  "slug": "model-ensemble",
-  "title": "Model Ensemble",
-  "stages": [
-    "dataset",
-    "rf",
-    "svm",
-    "xgb",
-    "ensemble"
-  ],
   "artifacts": [
     "ensemble.pkl",
     "metrics.json"
-  ]
+  ],
+  "dependencies": {
+    "combine": [
+      "predict-a",
+      "predict-b",
+      "predict-c"
+    ],
+    "evaluate": [
+      "combine"
+    ],
+    "predict-a": [
+      "prepare-input"
+    ],
+    "predict-b": [
+      "prepare-input"
+    ],
+    "predict-c": [
+      "prepare-input"
+    ],
+    "prepare-input": [],
+    "publish": [
+      "evaluate"
+    ]
+  },
+  "localProfile": "Train three regressors on different data subsets in independent activities, combine their held-out predictions with a mean ensemble, validate RMSE, and publish the learned ensemble.",
+  "slug": "model-ensemble",
+  "stages": [
+    "prepare-input",
+    "predict-a",
+    "predict-b",
+    "predict-c",
+    "combine",
+    "evaluate",
+    "publish"
+  ],
+  "title": "Model Ensemble",
+  "validationMode": "local-workload"
 }

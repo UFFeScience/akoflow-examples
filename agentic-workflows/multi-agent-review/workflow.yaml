@@ -1,41 +1,103 @@
 name: showcase-multi-agent-review
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review:v1
   activities:
-    - name: researcher
-      runtime: showcase-multi-agent-review-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - shared-context
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "researcher", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: reviewer
+      name: shared-context
       runtime: showcase-multi-agent-review-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - research
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "reviewer", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - researcher
-    - name: critic
-      runtime: showcase-multi-agent-review-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "critic", "--output", "."]
-      cpuLimit: "1"
+        - shared-context
       memoryLimit: 256Mi
-      dependsOn:
-        - reviewer
-    - name: synthesis
+      name: research
       runtime: showcase-multi-agent-review-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - code
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "synthesis", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - critic
-
+        - shared-context
+      memoryLimit: 256Mi
+      name: code
+      runtime: showcase-multi-agent-review-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - domain
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - shared-context
+      memoryLimit: 256Mi
+      name: domain
+      runtime: showcase-multi-agent-review-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - critic-review
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - research
+        - code
+        - domain
+      memoryLimit: 256Mi
+      name: critic-review
+      runtime: showcase-multi-agent-review-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - synthesize
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - critic-review
+      memoryLimit: 256Mi
+      name: synthesize
+      runtime: showcase-multi-agent-review-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish-evidence
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - synthesize
+      memoryLimit: 256Mi
+      name: publish-evidence
+      runtime: showcase-multi-agent-review-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review:v1
+  namespace: showcase

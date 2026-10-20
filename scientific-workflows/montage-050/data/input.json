@@ -1,0 +1,297 @@
+{
+  "artifacts": [
+    "1-mosaic.fits",
+    "2-mosaic.fits",
+    "3-mosaic.fits",
+    "1-mosaic.png",
+    "2-mosaic.png",
+    "3-mosaic.png",
+    "mosaic-color.png"
+  ],
+  "ciValidation": "image-and-contract",
+  "dependencies": {
+    "maddid0000018": [
+      "mbackgroundid0000013",
+      "mbackgroundid0000014",
+      "mbackgroundid0000015",
+      "mbackgroundid0000016",
+      "mimgtblid0000017"
+    ],
+    "maddid0000037": [
+      "mbackgroundid0000032",
+      "mbackgroundid0000033",
+      "mbackgroundid0000034",
+      "mbackgroundid0000035",
+      "mimgtblid0000036"
+    ],
+    "maddid0000056": [
+      "mbackgroundid0000051",
+      "mbackgroundid0000052",
+      "mbackgroundid0000053",
+      "mbackgroundid0000054",
+      "mimgtblid0000055"
+    ],
+    "mbackgroundid0000013": [
+      "mprojectid0000001",
+      "mbgmodelid0000012"
+    ],
+    "mbackgroundid0000014": [
+      "mprojectid0000002",
+      "mbgmodelid0000012"
+    ],
+    "mbackgroundid0000015": [
+      "mprojectid0000003",
+      "mbgmodelid0000012"
+    ],
+    "mbackgroundid0000016": [
+      "mprojectid0000004",
+      "mbgmodelid0000012"
+    ],
+    "mbackgroundid0000032": [
+      "mprojectid0000020",
+      "mbgmodelid0000031"
+    ],
+    "mbackgroundid0000033": [
+      "mprojectid0000021",
+      "mbgmodelid0000031"
+    ],
+    "mbackgroundid0000034": [
+      "mprojectid0000022",
+      "mbgmodelid0000031"
+    ],
+    "mbackgroundid0000035": [
+      "mprojectid0000023",
+      "mbgmodelid0000031"
+    ],
+    "mbackgroundid0000051": [
+      "mprojectid0000039",
+      "mbgmodelid0000050"
+    ],
+    "mbackgroundid0000052": [
+      "mprojectid0000040",
+      "mbgmodelid0000050"
+    ],
+    "mbackgroundid0000053": [
+      "mprojectid0000041",
+      "mbgmodelid0000050"
+    ],
+    "mbackgroundid0000054": [
+      "mprojectid0000042",
+      "mbgmodelid0000050"
+    ],
+    "mbgmodelid0000012": [
+      "mconcatfitid0000011"
+    ],
+    "mbgmodelid0000031": [
+      "mconcatfitid0000030"
+    ],
+    "mbgmodelid0000050": [
+      "mconcatfitid0000049"
+    ],
+    "mconcatfitid0000011": [
+      "mdifffitid0000005",
+      "mdifffitid0000006",
+      "mdifffitid0000007",
+      "mdifffitid0000008",
+      "mdifffitid0000009",
+      "mdifffitid0000010"
+    ],
+    "mconcatfitid0000030": [
+      "mdifffitid0000024",
+      "mdifffitid0000025",
+      "mdifffitid0000026",
+      "mdifffitid0000027",
+      "mdifffitid0000028",
+      "mdifffitid0000029"
+    ],
+    "mconcatfitid0000049": [
+      "mdifffitid0000043",
+      "mdifffitid0000044",
+      "mdifffitid0000045",
+      "mdifffitid0000046",
+      "mdifffitid0000047",
+      "mdifffitid0000048"
+    ],
+    "mdifffitid0000005": [
+      "mprojectid0000001",
+      "mprojectid0000002"
+    ],
+    "mdifffitid0000006": [
+      "mprojectid0000001",
+      "mprojectid0000003"
+    ],
+    "mdifffitid0000007": [
+      "mprojectid0000001",
+      "mprojectid0000004"
+    ],
+    "mdifffitid0000008": [
+      "mprojectid0000002",
+      "mprojectid0000003"
+    ],
+    "mdifffitid0000009": [
+      "mprojectid0000002",
+      "mprojectid0000004"
+    ],
+    "mdifffitid0000010": [
+      "mprojectid0000003",
+      "mprojectid0000004"
+    ],
+    "mdifffitid0000024": [
+      "mprojectid0000020",
+      "mprojectid0000021"
+    ],
+    "mdifffitid0000025": [
+      "mprojectid0000020",
+      "mprojectid0000022"
+    ],
+    "mdifffitid0000026": [
+      "mprojectid0000020",
+      "mprojectid0000023"
+    ],
+    "mdifffitid0000027": [
+      "mprojectid0000021",
+      "mprojectid0000022"
+    ],
+    "mdifffitid0000028": [
+      "mprojectid0000021",
+      "mprojectid0000023"
+    ],
+    "mdifffitid0000029": [
+      "mprojectid0000022",
+      "mprojectid0000023"
+    ],
+    "mdifffitid0000043": [
+      "mprojectid0000039",
+      "mprojectid0000040"
+    ],
+    "mdifffitid0000044": [
+      "mprojectid0000039",
+      "mprojectid0000041"
+    ],
+    "mdifffitid0000045": [
+      "mprojectid0000039",
+      "mprojectid0000042"
+    ],
+    "mdifffitid0000046": [
+      "mprojectid0000040",
+      "mprojectid0000041"
+    ],
+    "mdifffitid0000047": [
+      "mprojectid0000040",
+      "mprojectid0000042"
+    ],
+    "mdifffitid0000048": [
+      "mprojectid0000041",
+      "mprojectid0000042"
+    ],
+    "mimgtblid0000017": [
+      "mbackgroundid0000013",
+      "mbackgroundid0000014",
+      "mbackgroundid0000015",
+      "mbackgroundid0000016"
+    ],
+    "mimgtblid0000036": [
+      "mbackgroundid0000032",
+      "mbackgroundid0000033",
+      "mbackgroundid0000034",
+      "mbackgroundid0000035"
+    ],
+    "mimgtblid0000055": [
+      "mbackgroundid0000051",
+      "mbackgroundid0000052",
+      "mbackgroundid0000053",
+      "mbackgroundid0000054"
+    ],
+    "mprojectid0000001": [],
+    "mprojectid0000002": [],
+    "mprojectid0000003": [],
+    "mprojectid0000004": [],
+    "mprojectid0000020": [],
+    "mprojectid0000021": [],
+    "mprojectid0000022": [],
+    "mprojectid0000023": [],
+    "mprojectid0000039": [],
+    "mprojectid0000040": [],
+    "mprojectid0000041": [],
+    "mprojectid0000042": [],
+    "mviewerid0000019": [
+      "maddid0000018"
+    ],
+    "mviewerid0000038": [
+      "maddid0000037"
+    ],
+    "mviewerid0000057": [
+      "maddid0000056"
+    ],
+    "mviewerid0000058": [
+      "maddid0000018",
+      "maddid0000037",
+      "maddid0000056"
+    ]
+  },
+  "localProfile": "Run all 58 original Montage 050d activities locally, using the immutable amd64 image and its twelve bundled FITS observations. The default uses two CPU slots, preserves the 138 named file handoffs, creates three calibrated astronomical mosaics and a color preview, and provisions no cloud machines. This is a long-running scientific workload; on Apple Silicon Docker uses amd64 emulation.",
+  "slug": "montage-050-local",
+  "stages": [
+    "mprojectid0000001",
+    "mprojectid0000002",
+    "mprojectid0000003",
+    "mprojectid0000004",
+    "mdifffitid0000005",
+    "mdifffitid0000006",
+    "mdifffitid0000007",
+    "mdifffitid0000008",
+    "mdifffitid0000009",
+    "mdifffitid0000010",
+    "mconcatfitid0000011",
+    "mbgmodelid0000012",
+    "mbackgroundid0000013",
+    "mbackgroundid0000014",
+    "mbackgroundid0000015",
+    "mbackgroundid0000016",
+    "mimgtblid0000017",
+    "maddid0000018",
+    "mviewerid0000019",
+    "mprojectid0000020",
+    "mprojectid0000021",
+    "mprojectid0000022",
+    "mprojectid0000023",
+    "mdifffitid0000024",
+    "mdifffitid0000025",
+    "mdifffitid0000026",
+    "mdifffitid0000027",
+    "mdifffitid0000028",
+    "mdifffitid0000029",
+    "mconcatfitid0000030",
+    "mbgmodelid0000031",
+    "mbackgroundid0000032",
+    "mbackgroundid0000033",
+    "mbackgroundid0000034",
+    "mbackgroundid0000035",
+    "mimgtblid0000036",
+    "maddid0000037",
+    "mviewerid0000038",
+    "mprojectid0000039",
+    "mprojectid0000040",
+    "mprojectid0000041",
+    "mprojectid0000042",
+    "mdifffitid0000043",
+    "mdifffitid0000044",
+    "mdifffitid0000045",
+    "mdifffitid0000046",
+    "mdifffitid0000047",
+    "mdifffitid0000048",
+    "mconcatfitid0000049",
+    "mbgmodelid0000050",
+    "mbackgroundid0000051",
+    "mbackgroundid0000052",
+    "mbackgroundid0000053",
+    "mbackgroundid0000054",
+    "mimgtblid0000055",
+    "maddid0000056",
+    "mviewerid0000057",
+    "mviewerid0000058"
+  ],
+  "title": "Montage 050 locally",
+  "upstreamImage": "ovvesley/akoflow-wf-montage@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
+  "validationMode": "local-workload"
+}

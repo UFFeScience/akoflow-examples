@@ -1,5 +1,3 @@
 id: showcase-batch-inference-scope
-name: Batch Inference local scope
-environmentVersionIds:
-  - showcase-batch-inference-v1
-
+name: showcase-batch-inference local scope
+environmentVersionIds: [showcase-batch-inference-v1]

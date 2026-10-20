@@ -1,7 +1,7 @@
 environment:
   id: showcase-document-extraction
-  name: Showcase document-extraction
-  description: Local Docker-backed reproducibility environment
+  name: showcase-document-extraction local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-document-extraction-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-document-extraction-local-docker, runtimeId: showcase-document-extraction-local, enabled: true}
-

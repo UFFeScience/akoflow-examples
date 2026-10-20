@@ -1,68 +1,103 @@
 name: showcase-batch-inference
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-batch-inference:v1
   activities:
-    - name: load-model
-      runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - load-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "load-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: split-input
+      name: load-model
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - partition-input
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "split-input", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
         - load-model
-    - name: worker-1
-      runtime: showcase-batch-inference-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-1", "--output", "."]
-      cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - split-input
-    - name: worker-2
+      name: partition-input
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-2", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - worker-1
-    - name: worker-3
+        - partition-input
+      memoryLimit: 256Mi
+      name: infer-shard-a
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-b
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-3", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - worker-2
-    - name: worker-4
+        - partition-input
+      memoryLimit: 256Mi
+      name: infer-shard-b
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - infer-shard-n
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-4", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - worker-3
-    - name: merge
+        - partition-input
+      memoryLimit: 256Mi
+      name: infer-shard-n
       runtime: showcase-batch-inference-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - merge-predictions
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "merge", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - worker-4
-
+        - infer-shard-a
+        - infer-shard-b
+        - infer-shard-n
+      memoryLimit: 256Mi
+      name: merge-predictions
+      runtime: showcase-batch-inference-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - merge-predictions
+      memoryLimit: 256Mi
+      name: publish
+      runtime: showcase-batch-inference-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-batch-inference:v1
+  namespace: showcase

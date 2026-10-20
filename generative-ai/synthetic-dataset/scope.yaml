@@ -1,5 +1,3 @@
 id: showcase-synthetic-dataset-scope
-name: Synthetic Dataset local scope
-environmentVersionIds:
-  - showcase-synthetic-dataset-v1
-
+name: showcase-synthetic-dataset local scope
+environmentVersionIds: [showcase-synthetic-dataset-v1]

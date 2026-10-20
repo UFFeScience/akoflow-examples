@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-model-comparison-local-8c91f9619e",
+  "planId": "showcase-model-comparison-local-8c91f9619e-manual-plan-20261020t191035.549636000",
+  "runId": "showcase-model-comparison-local-8c91f9619e-run-20261020t191035.554879000",
+  "imageId": "sha256:21d35b55500c7d0db834ac5601d27a5143d1ec70af1a3b8bed6c01f778932e7e",
+  "activities": [
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-freeze-evaluation-set",
+      "stage": "freeze-evaluation-set",
+      "file": "freeze-evaluation-set.png"
+    },
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-evaluate-a",
+      "stage": "evaluate-a",
+      "file": "evaluate-a.png"
+    },
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-evaluate-b",
+      "stage": "evaluate-b",
+      "file": "evaluate-b.png"
+    },
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-evaluate-c",
+      "stage": "evaluate-c",
+      "file": "evaluate-c.png"
+    },
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-compare-metrics",
+      "stage": "compare-metrics",
+      "file": "compare-metrics.png"
+    },
+    {
+      "activityId": "showcase-model-comparison-local-8c91f9619e-approve-candidate",
+      "stage": "approve-candidate",
+      "file": "approve-candidate.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

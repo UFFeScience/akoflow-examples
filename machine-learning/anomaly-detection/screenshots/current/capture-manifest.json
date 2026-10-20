@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-anomaly-detection-local-aeca41545d",
+  "planId": "showcase-anomaly-detection-local-aeca41545d-manual-plan-20261020t190918.293541000",
+  "runId": "showcase-anomaly-detection-local-aeca41545d-run-20261020t190918.297019000",
+  "imageId": "sha256:cebc1b91654b91e15c6861b1a945181bf35158cc38331487e71612f8def9e1c3",
+  "activities": [
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-collect-signals",
+      "stage": "collect-signals",
+      "file": "collect-signals.png"
+    },
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-build-features",
+      "stage": "build-features",
+      "file": "build-features.png"
+    },
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-train-detector",
+      "stage": "train-detector",
+      "file": "train-detector.png"
+    },
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-score-validation",
+      "stage": "score-validation",
+      "file": "score-validation.png"
+    },
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-choose-threshold",
+      "stage": "choose-threshold",
+      "file": "choose-threshold.png"
+    },
+    {
+      "activityId": "showcase-anomaly-detection-local-aeca41545d-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

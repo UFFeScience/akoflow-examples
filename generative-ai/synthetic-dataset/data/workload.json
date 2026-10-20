@@ -1,0 +1,17 @@
+{
+      "rowsPerBatch": 9,
+      "topics": [
+        {
+          "name": "DAG scheduling",
+          "explanation": "Activities become ready after their declared dependencies complete."
+        },
+        {
+          "name": "artifact transfer",
+          "explanation": "Published files move from producing activities to downstream consumers."
+        },
+        {
+          "name": "model evaluation",
+          "explanation": "Held-out measurements test model predictions against unseen target values."
+        }
+      ]
+    }

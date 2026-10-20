@@ -1,15 +1,45 @@
 {
+  "artifacts": [
+    "index.json",
+    "evaluation.json"
+  ],
+  "dependencies": {
+    "answer-tests": [
+      "build-index"
+    ],
+    "build-index": [
+      "embed"
+    ],
+    "chunk": [
+      "clean"
+    ],
+    "clean": [
+      "collect-documents"
+    ],
+    "collect-documents": [],
+    "embed": [
+      "chunk"
+    ],
+    "publish": [
+      "retrieval-tests",
+      "answer-tests"
+    ],
+    "retrieval-tests": [
+      "build-index"
+    ]
+  },
+  "localProfile": "Clean and chunk a bundled document corpus, compute normalized TF-IDF vectors, build a portable JSON search index, and run retrieval and extractive-answer checks in parallel. This CPU profile uses lexical embeddings and source quotations, not a hosted embedding model or a generative LLM.",
   "slug": "rag-indexing",
-  "title": "RAG Indexing",
   "stages": [
-    "documents",
+    "collect-documents",
+    "clean",
     "chunk",
     "embed",
-    "faiss",
-    "evaluate"
+    "build-index",
+    "retrieval-tests",
+    "answer-tests",
+    "publish"
   ],
-  "artifacts": [
-    "index.faiss",
-    "evaluation.json"
-  ]
+  "title": "RAG Indexing",
+  "validationMode": "local-workload"
 }

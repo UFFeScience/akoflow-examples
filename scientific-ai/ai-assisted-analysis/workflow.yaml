@@ -1,32 +1,102 @@
 name: showcase-ai-assisted-analysis
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1
   activities:
-    - name: simulation
-      runtime: showcase-ai-assisted-analysis-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - prepare-experiment
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "simulation", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: analysis
+      name: prepare-experiment
       runtime: showcase-ai-assisted-analysis-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - simulation
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "analysis", "--output", "."]
       cpuLimit: "1"
+      dependsOn:
+        - prepare-experiment
       memoryLimit: 256Mi
+      name: simulation
+      runtime: showcase-ai-assisted-analysis-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - measurements
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
         - simulation
-    - name: llm-interpretation
-      runtime: showcase-ai-assisted-analysis-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "llm-interpretation", "--output", "."]
-      cpuLimit: "1"
       memoryLimit: 256Mi
+      name: measurements
+      runtime: showcase-ai-assisted-analysis-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - statistics
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
-        - analysis
-
+        - measurements
+      memoryLimit: 256Mi
+      name: statistics
+      runtime: showcase-ai-assisted-analysis-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - ai-interpretation
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - measurements
+      memoryLimit: 256Mi
+      name: ai-interpretation
+      runtime: showcase-ai-assisted-analysis-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - validate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - statistics
+        - ai-interpretation
+      memoryLimit: 256Mi
+      name: validate
+      runtime: showcase-ai-assisted-analysis-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - report
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - validate
+      memoryLimit: 256Mi
+      name: report
+      runtime: showcase-ai-assisted-analysis-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1
+  namespace: showcase

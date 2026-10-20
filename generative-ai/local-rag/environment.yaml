@@ -1,6 +1,42 @@
-id: local-rag-factory-environment
-name: Local RAG Factory environment
-driver: local
-runtimes: [{id: local, type: local, containerRuntime: docker}]
-resources: [{id: workstation, runtimeId: local, cpuCores: 4, memoryBytes: 4294967296}]
-
+environment:
+  id: local-rag-factory
+  name: local-rag-factory local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: local-rag-factory-v1
+  environmentId: local-rag-factory
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: local-rag-factory-v1
+runtimes:
+  - environmentVersionId: local-rag-factory-v1
+    id: local-rag-factory-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: local-rag-factory-local-docker
+    environmentVersionId: local-rag-factory-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: local-rag-factory-local-docker, runtimeId: local-rag-factory-local, enabled: true}

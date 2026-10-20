@@ -1,15 +1,36 @@
 {
-  "slug": "anomaly-detection",
-  "title": "Anomaly Detection",
-  "stages": [
-    "generate-data",
-    "feature-engineering",
-    "train",
-    "score",
-    "threshold"
-  ],
   "artifacts": [
     "anomalies.json",
     "metrics.json"
-  ]
+  ],
+  "dependencies": {
+    "build-features": [
+      "collect-signals"
+    ],
+    "choose-threshold": [
+      "score-validation"
+    ],
+    "collect-signals": [],
+    "publish": [
+      "choose-threshold"
+    ],
+    "score-validation": [
+      "train-detector"
+    ],
+    "train-detector": [
+      "build-features"
+    ]
+  },
+  "localProfile": "Fit a Gaussian sensor baseline, score held-out normal and anomalous signals, select a threshold by measured F1, and publish the detected anomalies and calibration metrics.",
+  "slug": "anomaly-detection",
+  "stages": [
+    "collect-signals",
+    "build-features",
+    "train-detector",
+    "score-validation",
+    "choose-threshold",
+    "publish"
+  ],
+  "title": "Anomaly Detection",
+  "validationMode": "local-workload"
 }

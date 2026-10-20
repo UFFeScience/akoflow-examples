@@ -1,7 +1,7 @@
 environment:
   id: showcase-computer-vision
-  name: Showcase computer-vision
-  description: Local Docker-backed reproducibility environment
+  name: showcase-computer-vision local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-computer-vision-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-computer-vision-local-docker, runtimeId: showcase-computer-vision-local, enabled: true}
-

@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-model-distillation-local-89ee6b6444",
+  "planId": "showcase-model-distillation-local-89ee6b6444-manual-plan-20261020t191140.466308000",
+  "runId": "showcase-model-distillation-local-89ee6b6444-run-20261020t191140.471480000",
+  "imageId": "sha256:6fe8b3cede6c45d63fc9c749d4e3ef5c96fd73fae46c7aacd860596c16187438",
+  "activities": [
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-load-teacher",
+      "stage": "load-teacher",
+      "file": "load-teacher.png"
+    },
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-soft-labels",
+      "stage": "soft-labels",
+      "file": "soft-labels.png"
+    },
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-train-student",
+      "stage": "train-student",
+      "file": "train-student.png"
+    },
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-latency",
+      "stage": "latency",
+      "file": "latency.png"
+    },
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-quality",
+      "stage": "quality",
+      "file": "quality.png"
+    },
+    {
+      "activityId": "showcase-model-distillation-local-89ee6b6444-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

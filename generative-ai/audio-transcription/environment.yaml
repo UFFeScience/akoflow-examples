@@ -1,7 +1,7 @@
 environment:
   id: showcase-audio-transcription
-  name: Showcase audio-transcription
-  description: Local Docker-backed reproducibility environment
+  name: showcase-audio-transcription local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-audio-transcription-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-audio-transcription-local-docker, runtimeId: showcase-audio-transcription-local, enabled: true}
-

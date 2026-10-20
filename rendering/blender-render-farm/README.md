@@ -1,13 +1,25 @@
 # Blender Render Farm
 
-A frame-parallel 3D rendering workflow. Blender procedurally creates a scene,
-two independent activities render disjoint frame shards, and FFmpeg assembles
-the frames into an MP4 before a completeness check runs.
+Build a real Blender scene, render even and odd frames in parallel using Cycles on the CPU, compose an MP4, and verify all six frames. The default command uses Docker, so the host does not need a Blender installation. No JSON file is represented as a .blend file.
 
-Run `./run.sh`. If Blender is installed it performs the real render. On small CI
-workers, the script uses a deterministic CPU software-render fixture while the
-provided container always installs and invokes Blender. Set
-`AKOFLOW_REQUIRE_BLENDER=1` to reject that fixture. Without FFmpeg, the smoke
-fixture composes a valid YUV4MPEG stream; the container produces MP4.
-`AKOFLOW_PROFILE=demo`
-renders 24 frames instead of the six-frame smoke profile.
+## Run locally
+
+Requires Go and Python 3.12+. Blender Render Farm also requires Docker. Run from a fresh checkout:
+
+```sh
+git clone https://github.com/UFFeScience/akoflow-examples.git
+cd akoflow-examples/rendering/blender-render-farm
+./prepare.sh && ./run.sh
+```
+
+Preparation downloads the Go YAML module. Results are in `outputs/manifest.json`, `outputs/dag-validation.json`, and `outputs/stage-<activity>.json`. Independent branches run concurrently as soon as their own dependencies and a local execution slot are available.
+
+## Inspect the same DAG in Desktop
+
+Start the local AkôFlow daemon with Docker available and configure `AKOFLOW_API_TOKEN` in your shell. From this example directory:
+
+```sh
+go run ../../tools/daemon-local -root ../.. -example rendering/blender-render-farm
+```
+
+The command builds the declared image, validates Docker connectivity, registers local-only infrastructure, and executes the workflow through the daemon. Current verified screenshots are in `screenshots/current/`; their manifest identifies the exact run and image. The full daemon projection is in `evidence/daemon-run.json`.

@@ -1,5 +1,3 @@
 id: showcase-multi-agent-review-scope
-name: Multi-Agent Review local scope
-environmentVersionIds:
-  - showcase-multi-agent-review-v1
-
+name: showcase-multi-agent-review local scope
+environmentVersionIds: [showcase-multi-agent-review-v1]

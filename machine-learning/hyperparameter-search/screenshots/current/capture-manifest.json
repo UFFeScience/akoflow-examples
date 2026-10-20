@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-hyperparameter-search-local-b881811497",
+  "planId": "showcase-hyperparameter-search-local-b881811497-manual-plan-20261020t190955.469894000",
+  "runId": "showcase-hyperparameter-search-local-b881811497-run-20261020t190955.472942000",
+  "imageId": "sha256:2b1f1374f335029bba22b46c1a57b0bc3c835236bc55f9cfb7721e0edb3845c9",
+  "activities": [
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-prepare-dataset",
+      "stage": "prepare-dataset",
+      "file": "prepare-dataset.png"
+    },
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-trial-2",
+      "stage": "trial-2",
+      "file": "trial-2.png"
+    },
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-trial-1",
+      "stage": "trial-1",
+      "file": "trial-1.png"
+    },
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-trial-n",
+      "stage": "trial-n",
+      "file": "trial-n.png"
+    },
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-compare-trials",
+      "stage": "compare-trials",
+      "file": "compare-trials.png"
+    },
+    {
+      "activityId": "showcase-hyperparameter-search-local-b881811497-register-best",
+      "stage": "register-best",
+      "file": "register-best.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-experiment-feedback-loop-local-4ea0522b9c",
+  "planId": "showcase-experiment-feedback-loop-local-4ea0522b9c-manual-plan-20261020t190852.238831000",
+  "runId": "showcase-experiment-feedback-loop-local-4ea0522b9c-run-20261020t190852.243916000",
+  "imageId": "sha256:7870585bb0d877eb8a1530949f774112264cf9a40015fa989c64ee81a8136cd9",
+  "activities": [
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-observations",
+      "stage": "observations",
+      "file": "observations.png"
+    },
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-update-model",
+      "stage": "update-model",
+      "file": "update-model.png"
+    },
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-propose-experiments",
+      "stage": "propose-experiments",
+      "file": "propose-experiments.png"
+    },
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-safety-check",
+      "stage": "safety-check",
+      "file": "safety-check.png"
+    },
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-run-experiments",
+      "stage": "run-experiments",
+      "file": "run-experiments.png"
+    },
+    {
+      "activityId": "showcase-experiment-feedback-loop-local-4ea0522b9c-record-observations",
+      "stage": "record-observations",
+      "file": "record-observations.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

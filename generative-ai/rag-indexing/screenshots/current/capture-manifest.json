@@ -1,0 +1,49 @@
+{
+  "workflowId": "showcase-rag-indexing-local-51e75cdbe9",
+  "planId": "showcase-rag-indexing-local-51e75cdbe9-manual-plan-20261020t191344.205131000",
+  "runId": "showcase-rag-indexing-local-51e75cdbe9-run-20261020t191344.209329000",
+  "imageId": "sha256:7d9dd7dc3e57911d4c87ff2cbcd8e70fb94f42d89593606aeafd90456c416873",
+  "activities": [
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-collect-documents",
+      "stage": "collect-documents",
+      "file": "collect-documents.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-clean",
+      "stage": "clean",
+      "file": "clean.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-chunk",
+      "stage": "chunk",
+      "file": "chunk.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-embed",
+      "stage": "embed",
+      "file": "embed.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-build-index",
+      "stage": "build-index",
+      "file": "build-index.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-retrieval-tests",
+      "stage": "retrieval-tests",
+      "file": "retrieval-tests.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-answer-tests",
+      "stage": "answer-tests",
+      "file": "answer-tests.png"
+    },
+    {
+      "activityId": "showcase-rag-indexing-local-51e75cdbe9-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

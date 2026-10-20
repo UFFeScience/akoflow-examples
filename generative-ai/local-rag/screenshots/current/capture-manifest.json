@@ -1,0 +1,39 @@
+{
+  "workflowId": "local-rag-factory-local-0df2d611a0",
+  "planId": "local-rag-factory-local-0df2d611a0-manual-plan-20261020t182115",
+  "runId": "local-rag-factory-local-0df2d611a0-run-20261020t182115",
+  "imageId": "sha256:60b37a43cbda117dc0b57d461632713f426e004d4cee4f4c2e3c5cf2efb23d2d",
+  "activities": [
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-ingest",
+      "stage": "ingest",
+      "file": "ingest.png"
+    },
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-chunk",
+      "stage": "chunk",
+      "file": "chunk.png"
+    },
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-index",
+      "stage": "index",
+      "file": "index.png"
+    },
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-retrieve",
+      "stage": "retrieve",
+      "file": "retrieve.png"
+    },
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-answer",
+      "stage": "answer",
+      "file": "answer.png"
+    },
+    {
+      "activityId": "local-rag-factory-local-0df2d611a0-evaluate",
+      "stage": "evaluate",
+      "file": "evaluate.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

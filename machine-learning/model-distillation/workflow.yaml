@@ -1,32 +1,88 @@
 name: showcase-model-distillation
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-model-distillation:v1
   activities:
-    - name: teacher
-      runtime: showcase-model-distillation-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - load-teacher
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "teacher", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: generate-labels
+      name: load-teacher
       runtime: showcase-model-distillation-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - soft-labels
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "generate-labels", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - teacher
-    - name: student
-      runtime: showcase-model-distillation-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "student", "--output", "."]
-      cpuLimit: "1"
+        - load-teacher
       memoryLimit: 256Mi
+      name: soft-labels
+      runtime: showcase-model-distillation-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - train-student
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
-        - generate-labels
-
+        - soft-labels
+      memoryLimit: 256Mi
+      name: train-student
+      runtime: showcase-model-distillation-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - quality
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - train-student
+      memoryLimit: 256Mi
+      name: quality
+      runtime: showcase-model-distillation-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - latency
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - train-student
+      memoryLimit: 256Mi
+      name: latency
+      runtime: showcase-model-distillation-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - quality
+        - latency
+      memoryLimit: 256Mi
+      name: publish
+      runtime: showcase-model-distillation-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-distillation:v1
+  namespace: showcase

@@ -1,6 +1,5 @@
 id: showcase-hyperparameter-search-topology
-name: Hyperparameter Search local topology
+name: showcase-hyperparameter-search local topology
 version: 1
 executionScopeId: showcase-hyperparameter-search-scope
 links: []
-

@@ -1,14 +1,36 @@
 {
-  "slug": "supervised-tool-loop",
-  "title": "Supervised Tool Loop",
-  "stages": [
-    "proposal",
-    "approval",
-    "execution",
-    "verification"
-  ],
   "artifacts": [
     "execution.json",
     "verification.json"
-  ]
+  ],
+  "dependencies": {
+    "build-context": [],
+    "execute-tool": [
+      "human-approval"
+    ],
+    "human-approval": [
+      "policy-check"
+    ],
+    "policy-check": [
+      "propose-action"
+    ],
+    "propose-action": [
+      "build-context"
+    ],
+    "verify": [
+      "execute-tool"
+    ]
+  },
+  "localProfile": "Propose a sandboxed summary-writing action, enforce an allowlist, replay a clearly identified approval fixture, execute the local tool, and verify its output and digest. Set AKOFLOW_APPROVAL_FILE to supply an explicit approval record; the bundled approval is only for this smoke example.",
+  "slug": "supervised-tool-loop",
+  "stages": [
+    "build-context",
+    "propose-action",
+    "policy-check",
+    "human-approval",
+    "execute-tool",
+    "verify"
+  ],
+  "title": "Supervised Tool Loop",
+  "validationMode": "local-workload"
 }

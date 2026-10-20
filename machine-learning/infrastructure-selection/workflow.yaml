@@ -1,41 +1,103 @@
 name: showcase-infrastructure-selection
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1
   activities:
-    - name: estimate-local
-      runtime: showcase-infrastructure-selection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - profile-workload
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-local", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: estimate-cloud
+      name: profile-workload
       runtime: showcase-infrastructure-selection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - local-gpu
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-cloud", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - estimate-local
-    - name: estimate-hpc
-      runtime: showcase-infrastructure-selection-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-hpc", "--output", "."]
-      cpuLimit: "1"
+        - profile-workload
       memoryLimit: 256Mi
-      dependsOn:
-        - estimate-cloud
-    - name: decision
+      name: local-gpu
       runtime: showcase-infrastructure-selection-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - hpc
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "decision", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - estimate-hpc
-
+        - profile-workload
+      memoryLimit: 256Mi
+      name: hpc
+      runtime: showcase-infrastructure-selection-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - cloud
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - profile-workload
+      memoryLimit: 256Mi
+      name: cloud
+      runtime: showcase-infrastructure-selection-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - compare-plans
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - local-gpu
+        - hpc
+        - cloud
+      memoryLimit: 256Mi
+      name: compare-plans
+      runtime: showcase-infrastructure-selection-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - select-scope
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - compare-plans
+      memoryLimit: 256Mi
+      name: select-scope
+      runtime: showcase-infrastructure-selection-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - train
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - select-scope
+      memoryLimit: 256Mi
+      name: train
+      runtime: showcase-infrastructure-selection-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1
+  namespace: showcase

@@ -1,3 +1,5 @@
 id: local-rag-factory-topology
-name: Local RAG Factory topology
+name: local-rag-factory local topology
+version: 1
+executionScopeId: local-rag-factory-scope
 links: []

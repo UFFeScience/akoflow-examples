@@ -1,0 +1,14 @@
+{
+      "measurements": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13
+      ],
+      "claimedMean": 7,
+      "tolerance": 1e-06,
+      "minimum": 0,
+      "maximum": 20
+    }

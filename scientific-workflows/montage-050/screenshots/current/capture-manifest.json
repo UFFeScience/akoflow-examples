@@ -1,0 +1,8 @@
+{
+  "workflowId": "montage-050-local-local-4f5b7d857b",
+  "planId": "montage-050-local-local-4f5b7d857b-manual-plan-20261020t193048.863696000",
+  "runId": "montage-050-local-local-4f5b7d857b-run-20261020t193048.874693000",
+  "imageId": "sha256:e93f234c8783ea13da8ec0912c8efdef8a1955787635eed6a1e969e367051d2f",
+  "workflowScreenshot": "workflow.png",
+  "activities": []
+}

@@ -1,32 +1,102 @@
 name: showcase-surrogate-model
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model:v1
   activities:
-    - name: simulation
-      runtime: showcase-surrogate-model-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - design-samples
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "simulation", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: dataset
+      name: design-samples
       runtime: showcase-surrogate-model-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - simulation-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - simulation
-    - name: train-surrogate
-      runtime: showcase-surrogate-model-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "train-surrogate", "--output", "."]
-      cpuLimit: "1"
+        - design-samples
       memoryLimit: 256Mi
+      name: simulation-a
+      runtime: showcase-surrogate-model-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - simulation-n
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
-        - dataset
-
+        - design-samples
+      memoryLimit: 256Mi
+      name: simulation-n
+      runtime: showcase-surrogate-model-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - assemble-dataset
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - simulation-a
+        - simulation-n
+      memoryLimit: 256Mi
+      name: assemble-dataset
+      runtime: showcase-surrogate-model-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - train-surrogate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - assemble-dataset
+      memoryLimit: 256Mi
+      name: train-surrogate
+      runtime: showcase-surrogate-model-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - validate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - train-surrogate
+      memoryLimit: 256Mi
+      name: validate
+      runtime: showcase-surrogate-model-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - validate
+      memoryLimit: 256Mi
+      name: publish
+      runtime: showcase-surrogate-model-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model:v1
+  namespace: showcase

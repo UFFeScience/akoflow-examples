@@ -1,14 +1,23 @@
 {
-  "showcase": "synthetic-dataset",
-  "digest": "13d945957482c45cf891ebd14cce0f613f77e6c46432763d5694e39d4b1dd5e9",
-  "stages": [
-    "generate",
-    "deduplicate",
-    "quality-check"
-  ],
-  "status": "success",
   "artifacts": [
     "synthetic-dataset.jsonl",
     "quality-report.json"
-  ]
+  ],
+  "sha256": {
+    "quality-report.json": "eb4e5928f6d0f20346e3971e3dbb45271ae069e37feca3efd279f4a3cd82b840",
+    "synthetic-dataset.jsonl": "3fbe28753e4814dfa6807cb4bb0dc735a5cde892e1382416dde57cc137eef626"
+  },
+  "showcase": "synthetic-dataset",
+  "stages": [
+    "define-schema",
+    "batch-a",
+    "batch-b",
+    "batch-n",
+    "filter",
+    "deduplicate",
+    "quality-review",
+    "publish"
+  ],
+  "status": "success",
+  "validationMode": "local-workload"
 }

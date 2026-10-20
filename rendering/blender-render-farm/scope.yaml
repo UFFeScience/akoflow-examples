@@ -1,4 +1,3 @@
 id: blender-render-farm-scope
-name: Blender Render Farm local scope
+name: blender-render-farm local scope
 environmentVersionIds: [blender-render-farm-v1]
-

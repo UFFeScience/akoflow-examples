@@ -1,13 +1,41 @@
 {
-  "slug": "surrogate-model",
-  "title": "Surrogate Model",
-  "stages": [
-    "simulation",
-    "dataset",
-    "train-surrogate"
-  ],
   "artifacts": [
     "surrogate.pkl",
     "validation.json"
-  ]
+  ],
+  "dependencies": {
+    "assemble-dataset": [
+      "simulation-a",
+      "simulation-n"
+    ],
+    "design-samples": [],
+    "publish": [
+      "validate"
+    ],
+    "simulation-a": [
+      "design-samples"
+    ],
+    "simulation-n": [
+      "design-samples"
+    ],
+    "train-surrogate": [
+      "assemble-dataset"
+    ],
+    "validate": [
+      "train-surrogate"
+    ]
+  },
+  "localProfile": "Evaluate a damped-response integral in two independent simulation shards, assemble the samples, fit a piecewise-linear surrogate, and validate it against held-out numerical evaluations. All computation runs locally on the CPU.",
+  "slug": "surrogate-model",
+  "stages": [
+    "design-samples",
+    "simulation-a",
+    "simulation-n",
+    "assemble-dataset",
+    "train-surrogate",
+    "validate",
+    "publish"
+  ],
+  "title": "Surrogate Model",
+  "validationMode": "local-workload"
 }

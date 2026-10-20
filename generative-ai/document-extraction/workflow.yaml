@@ -1,41 +1,102 @@
 name: showcase-document-extraction
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1
   activities:
-    - name: pdf
-      runtime: showcase-document-extraction-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - ingest-documents
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "pdf", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: ocr
+      name: ingest-documents
       runtime: showcase-document-extraction-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - ocr
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "ocr", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - pdf
-    - name: extract
-      runtime: showcase-document-extraction-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "extract", "--output", "."]
-      cpuLimit: "1"
+        - ingest-documents
       memoryLimit: 256Mi
+      name: ocr
+      runtime: showcase-document-extraction-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - native-text
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - ingest-documents
+      memoryLimit: 256Mi
+      name: native-text
+      runtime: showcase-document-extraction-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - classify
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
         - ocr
-    - name: json
-      runtime: showcase-document-extraction-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "json", "--output", "."]
-      cpuLimit: "1"
+        - native-text
       memoryLimit: 256Mi
+      name: classify
+      runtime: showcase-document-extraction-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - extract-fields
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
-        - extract
-
+        - classify
+      memoryLimit: 256Mi
+      name: extract-fields
+      runtime: showcase-document-extraction-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - validate-schema
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - extract-fields
+      memoryLimit: 256Mi
+      name: validate-schema
+      runtime: showcase-document-extraction-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - validate-schema
+      memoryLimit: 256Mi
+      name: publish
+      runtime: showcase-document-extraction-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1
+  namespace: showcase

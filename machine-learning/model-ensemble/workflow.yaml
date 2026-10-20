@@ -1,50 +1,103 @@
 name: showcase-model-ensemble
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1
   activities:
-    - name: dataset
-      runtime: showcase-model-ensemble-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - prepare-input
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: rf
+      name: prepare-input
       runtime: showcase-model-ensemble-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - predict-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "rf", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - dataset
-    - name: svm
-      runtime: showcase-model-ensemble-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "svm", "--output", "."]
-      cpuLimit: "1"
+        - prepare-input
       memoryLimit: 256Mi
-      dependsOn:
-        - rf
-    - name: xgb
+      name: predict-a
       runtime: showcase-model-ensemble-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - predict-b
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "xgb", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - svm
-    - name: ensemble
+        - prepare-input
+      memoryLimit: 256Mi
+      name: predict-b
       runtime: showcase-model-ensemble-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - predict-c
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "ensemble", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - xgb
-
+        - prepare-input
+      memoryLimit: 256Mi
+      name: predict-c
+      runtime: showcase-model-ensemble-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - combine
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - predict-a
+        - predict-b
+        - predict-c
+      memoryLimit: 256Mi
+      name: combine
+      runtime: showcase-model-ensemble-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - combine
+      memoryLimit: 256Mi
+      name: evaluate
+      runtime: showcase-model-ensemble-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - evaluate
+      memoryLimit: 256Mi
+      name: publish
+      runtime: showcase-model-ensemble-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1
+  namespace: showcase

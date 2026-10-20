@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-training-with-mlflow-local-48fb3dd5e7",
+  "planId": "showcase-training-with-mlflow-local-48fb3dd5e7-manual-plan-20261020t191305.433100000",
+  "runId": "showcase-training-with-mlflow-local-48fb3dd5e7-run-20261020t191305.437066000",
+  "imageId": "sha256:15903c29132e79681ae2964a94664bc1d8aec9cb3ee32d3a3d82ad62a4ef66c8",
+  "activities": [
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-ingest-data",
+      "stage": "ingest-data",
+      "file": "ingest-data.png"
+    },
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-validate",
+      "stage": "validate",
+      "file": "validate.png"
+    },
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-train",
+      "stage": "train",
+      "file": "train.png"
+    },
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-evaluate",
+      "stage": "evaluate",
+      "file": "evaluate.png"
+    },
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-log-mlflow-run",
+      "stage": "log-mlflow-run",
+      "file": "log-mlflow-run.png"
+    },
+    {
+      "activityId": "showcase-training-with-mlflow-local-48fb3dd5e7-register-model",
+      "stage": "register-model",
+      "file": "register-model.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

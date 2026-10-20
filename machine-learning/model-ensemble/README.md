@@ -1,6 +1,18 @@
 # Model Ensemble
 
-A reproducible AkôFlow showcase. It executes a real Docker image locally, writes deterministic artifacts, validates its output contract, and includes four versioned screenshots captured from a completed AkôFlow engine run.
+Train three regressors on different data subsets in independent activities, combine their held-out predictions with a mean ensemble, validate RMSE, and publish the learned ensemble.
+
+## Fresh local checkout
+
+Requires Go and Python 3.12+. Run this command from the directory in which you keep your repositories:
+
+```sh
+git clone https://github.com/UFFeScience/akoflow-examples.git
+cd akoflow-examples/machine-learning/model-ensemble
+./prepare.sh && ./run.sh
+```
+
+`prepare.sh` downloads the pinned Python packages (when required) and Go module once. `run.sh` then executes the local stages offline in dependency waves. Results are in `outputs/`; inspect `manifest.json`, `dag-validation.json`, and each `stage-<name>.json`. Independent branches run concurrently.
 
 ## Run
 
@@ -8,7 +20,7 @@ A reproducible AkôFlow showcase. It executes a real Docker image locally, write
 ./run.sh
 ```
 
-Requires Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](./workflow.yaml); the expected contract is in [expected/manifest.json](./expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](./workflow.yaml); the expected contract is in [expected/manifest.json](./expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1`.
 
@@ -17,7 +29,7 @@ Published image: `ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v
 
 ### 1. Check the prerequisites
 
-Install Python 3, Docker, and a local AkôFlow server/Desktop. Set the local API connection, then confirm every prerequisite:
+Install Go, Python 3, Docker, and a local AkôFlow server/Desktop. Set the local API connection, then confirm every prerequisite:
 
 ```sh
 export AKOFLOW_API_URL=http://127.0.0.1:8080/akoflow-api
@@ -36,7 +48,7 @@ From this showcase directory:
 ./run.sh
 ```
 
-The command recreates `outputs/`, runs the complete deterministic scenario, and validates every artifact declared in `expected/manifest.json`.
+The command recreates `outputs/`, launches one process per activity in dependency waves (siblings run concurrently), and validates every artifact declared in `expected/manifest.json`.
 
 ### 3. Build the image used by the workflow
 
@@ -77,9 +89,15 @@ Open the completed run and inspect:
 - **Data** for workspace transfers;
 - the final activity's **Generated files** table for file names, sizes, and SHA-256 checksums.
 
-The versioned evidence is stored in `screenshots/`:
+Historical captures are stored in `screenshots/`. They predate the corrected DAG and must not be used to verify this revision. New daemon execution and one capture per activity are still required before claiming Desktop verification. Current local evidence is `outputs/dag-validation.json` plus `outputs/stage-<activity>.json`.
+
+Historical capture names:
 
 - `workflow.png`: completed activity DAG;
 - `execution.png`: observed execution lifecycle and timing decomposition;
 - `outputs.png`: data transfers between activity workspaces;
 - `generated-files.png`: files observed in the final output-producing activity.
+
+## Current execution evidence
+
+The current completed daemon run is recorded in `evidence/daemon-run.json`. One capture for every activity and the observed DAG are in `screenshots/current/`; `capture-manifest.json` identifies their exact run and image. Older captures directly under `screenshots/` are historical and do not verify this revision.

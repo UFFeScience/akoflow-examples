@@ -1,4 +1,3 @@
 id: local-rag-factory-scope
-name: Local RAG Factory scope
+name: local-rag-factory local scope
 environmentVersionIds: [local-rag-factory-v1]
-

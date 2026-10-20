@@ -1,32 +1,104 @@
 name: showcase-model-conversion
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-model-conversion:v1
   activities:
-    - name: onnx
-      runtime: showcase-model-conversion-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - load-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "onnx", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
-    - name: gguf
+      memoryLimit: 1Gi
+      name: load-model
       runtime: showcase-model-conversion-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - export-onnx
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "gguf", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - onnx
-    - name: tensorrt
+        - load-model
+      memoryLimit: 1Gi
+      name: export-onnx
       runtime: showcase-model-conversion-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - export-torchscript
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "tensorrt", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - gguf
-
+        - load-model
+      memoryLimit: 1Gi
+      name: export-torchscript
+      runtime: showcase-model-conversion-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - quantize-cpu
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - export-onnx
+        - export-torchscript
+      memoryLimit: 1Gi
+      name: quantize-cpu
+      runtime: showcase-model-conversion-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - quantize-gpu
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - export-onnx
+        - export-torchscript
+      memoryLimit: 1Gi
+      name: quantize-gpu
+      runtime: showcase-model-conversion-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - validate-outputs
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - quantize-cpu
+        - quantize-gpu
+      memoryLimit: 1Gi
+      name: validate-outputs
+      runtime: showcase-model-conversion-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish-variants
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - validate-outputs
+      memoryLimit: 1Gi
+      name: publish-variants
+      runtime: showcase-model-conversion-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-conversion:v1
+  namespace: showcase

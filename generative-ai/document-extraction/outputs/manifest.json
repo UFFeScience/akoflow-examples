@@ -1,15 +1,22 @@
 {
-  "showcase": "document-extraction",
-  "digest": "ad73c48e5ef5308094fab62ec1c195401c1d63eb0784135868da1598bd84611f",
-  "stages": [
-    "pdf",
-    "ocr",
-    "extract",
-    "json"
-  ],
-  "status": "success",
   "artifacts": [
     "extraction.json",
     "ocr.txt"
-  ]
+  ],
+  "sha256": {
+    "extraction.json": "83dd90914f11fba93c7a7f46764ac44b546f9c0e1bb33262322e0c410f92f1f1",
+    "ocr.txt": "189977b6cd18fa81d3459e3eb904d99585f96db722e49c001a0808cdae75dea8"
+  },
+  "showcase": "document-extraction",
+  "stages": [
+    "ingest-documents",
+    "ocr",
+    "native-text",
+    "classify",
+    "extract-fields",
+    "validate-schema",
+    "publish"
+  ],
+  "status": "success",
+  "validationMode": "local-workload"
 }

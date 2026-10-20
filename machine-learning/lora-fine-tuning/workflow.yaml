@@ -1,32 +1,87 @@
 name: showcase-lora-fine-tuning
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1
   activities:
-    - name: prepare
-      runtime: showcase-lora-fine-tuning-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - fetch-base-model
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "prepare", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: finetune
+      name: fetch-base-model
       runtime: showcase-lora-fine-tuning-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - prepare-examples
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "finetune", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - prepare
-    - name: evaluate
-      runtime: showcase-lora-fine-tuning-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
-      cpuLimit: "1"
+        - fetch-base-model
       memoryLimit: 256Mi
+      name: prepare-examples
+      runtime: showcase-lora-fine-tuning-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - fine-tune-adapters
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
       dependsOn:
-        - finetune
-
+        - prepare-examples
+      memoryLimit: 256Mi
+      name: fine-tune-adapters
+      runtime: showcase-lora-fine-tuning-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - fine-tune-adapters
+      memoryLimit: 256Mi
+      name: evaluate
+      runtime: showcase-lora-fine-tuning-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - publish-adapter
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - evaluate
+      memoryLimit: 256Mi
+      name: publish-adapter
+      runtime: showcase-lora-fine-tuning-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - record-lineage
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - evaluate
+      memoryLimit: 256Mi
+      name: record-lineage
+      runtime: showcase-lora-fine-tuning-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1
+  namespace: showcase

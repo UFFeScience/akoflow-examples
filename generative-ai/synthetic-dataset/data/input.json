@@ -1,13 +1,46 @@
 {
-  "slug": "synthetic-dataset",
-  "title": "Synthetic Dataset",
-  "stages": [
-    "generate",
-    "deduplicate",
-    "quality-check"
-  ],
   "artifacts": [
     "synthetic-dataset.jsonl",
     "quality-report.json"
-  ]
+  ],
+  "dependencies": {
+    "batch-a": [
+      "define-schema"
+    ],
+    "batch-b": [
+      "define-schema"
+    ],
+    "batch-n": [
+      "define-schema"
+    ],
+    "deduplicate": [
+      "filter"
+    ],
+    "define-schema": [],
+    "filter": [
+      "batch-a",
+      "batch-b",
+      "batch-n"
+    ],
+    "publish": [
+      "quality-review"
+    ],
+    "quality-review": [
+      "deduplicate"
+    ]
+  },
+  "localProfile": "Generate structured question/answer examples from versioned topic templates in three parallel batches, reject invalid rows, remove overlapping questions, verify topic coverage, and publish JSON Lines plus a quality report. The portable generator is template-based and requires no LLM.",
+  "slug": "synthetic-dataset",
+  "stages": [
+    "define-schema",
+    "batch-a",
+    "batch-b",
+    "batch-n",
+    "filter",
+    "deduplicate",
+    "quality-review",
+    "publish"
+  ],
+  "title": "Synthetic Dataset",
+  "validationMode": "local-workload"
 }

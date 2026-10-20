@@ -5,3 +5,5 @@ __pycache__/
 akoflow-workspaces/
 *.log
 *.status
+
+.venv/

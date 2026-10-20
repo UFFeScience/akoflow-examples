@@ -1,13 +1,37 @@
 {
-  "slug": "lora-fine-tuning",
-  "title": "LoRA Fine Tuning",
-  "stages": [
-    "prepare",
-    "finetune",
-    "evaluate"
-  ],
   "artifacts": [
     "adapter.bin",
-    "evaluation.json"
-  ]
+    "evaluation.json",
+    "lineage.json"
+  ],
+  "dependencies": {
+    "evaluate": [
+      "fine-tune-adapters"
+    ],
+    "fetch-base-model": [],
+    "fine-tune-adapters": [
+      "prepare-examples"
+    ],
+    "prepare-examples": [
+      "fetch-base-model"
+    ],
+    "publish-adapter": [
+      "evaluate"
+    ],
+    "record-lineage": [
+      "evaluate"
+    ]
+  },
+  "localProfile": "Freeze a bundled 2×2 base matrix and learn a rank-one additive adapter with gradient descent. Validate loss reduction, publish the adapter weights, and record dataset/base lineage in a parallel branch. This CPU teaching model does not download or fine-tune an LLM.",
+  "slug": "lora-fine-tuning",
+  "stages": [
+    "fetch-base-model",
+    "prepare-examples",
+    "fine-tune-adapters",
+    "evaluate",
+    "publish-adapter",
+    "record-lineage"
+  ],
+  "title": "LoRA Fine Tuning",
+  "validationMode": "local-workload"
 }

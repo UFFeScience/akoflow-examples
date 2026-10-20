@@ -1,6 +1,5 @@
 id: showcase-lora-fine-tuning-topology
-name: LoRA Fine Tuning local topology
+name: showcase-lora-fine-tuning local topology
 version: 1
 executionScopeId: showcase-lora-fine-tuning-scope
 links: []
-

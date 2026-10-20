@@ -1,3 +1,5 @@
 id: ai-video-studio-topology
-name: AI Video Studio local topology
+name: ai-video-studio local topology
+version: 1
+executionScopeId: ai-video-studio-scope
 links: []

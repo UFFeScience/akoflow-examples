@@ -1,13 +1,37 @@
 {
-  "slug": "model-distillation",
-  "title": "Model Distillation",
-  "stages": [
-    "teacher",
-    "generate-labels",
-    "student"
-  ],
   "artifacts": [
     "student.pkl",
     "distillation-report.json"
-  ]
+  ],
+  "dependencies": {
+    "latency": [
+      "train-student"
+    ],
+    "load-teacher": [],
+    "publish": [
+      "quality",
+      "latency"
+    ],
+    "quality": [
+      "train-student"
+    ],
+    "soft-labels": [
+      "load-teacher"
+    ],
+    "train-student": [
+      "soft-labels"
+    ]
+  },
+  "localProfile": "Generate soft labels with a local sigmoid teacher, fit a cheaper affine student, evaluate it against held-out teacher predictions, and measure actual CPU prediction latency in a parallel branch.",
+  "slug": "model-distillation",
+  "stages": [
+    "load-teacher",
+    "soft-labels",
+    "train-student",
+    "quality",
+    "latency",
+    "publish"
+  ],
+  "title": "Model Distillation",
+  "validationMode": "local-workload"
 }

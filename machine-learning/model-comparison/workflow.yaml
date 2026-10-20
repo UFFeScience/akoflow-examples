@@ -1,50 +1,89 @@
 name: showcase-model-comparison
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-model-comparison:v1
   activities:
-    - name: dataset
-      runtime: showcase-model-comparison-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - freeze-evaluation-set
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: model-a
+      name: freeze-evaluation-set
       runtime: showcase-model-comparison-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate-a
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-a", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - dataset
-    - name: model-b
-      runtime: showcase-model-comparison-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-b", "--output", "."]
-      cpuLimit: "1"
+        - freeze-evaluation-set
       memoryLimit: 256Mi
-      dependsOn:
-        - model-a
-    - name: model-c
+      name: evaluate-a
       runtime: showcase-model-comparison-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate-b
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-c", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - model-b
-    - name: comparison
+        - freeze-evaluation-set
+      memoryLimit: 256Mi
+      name: evaluate-b
       runtime: showcase-model-comparison-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - evaluate-c
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "comparison", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - model-c
-
+        - freeze-evaluation-set
+      memoryLimit: 256Mi
+      name: evaluate-c
+      runtime: showcase-model-comparison-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - compare-metrics
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - evaluate-a
+        - evaluate-b
+        - evaluate-c
+      memoryLimit: 256Mi
+      name: compare-metrics
+      runtime: showcase-model-comparison-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - approve-candidate
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - compare-metrics
+      memoryLimit: 256Mi
+      name: approve-candidate
+      runtime: showcase-model-comparison-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-model-comparison:v1
+  namespace: showcase

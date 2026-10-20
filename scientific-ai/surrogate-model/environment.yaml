@@ -1,7 +1,7 @@
 environment:
   id: showcase-surrogate-model
-  name: Showcase surrogate-model
-  description: Local Docker-backed reproducibility environment
+  name: showcase-surrogate-model local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-surrogate-model-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-surrogate-model-local-docker, runtimeId: showcase-surrogate-model-local, enabled: true}
-

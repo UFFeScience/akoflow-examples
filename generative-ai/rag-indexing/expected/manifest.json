@@ -1,9 +1,8 @@
 {
-  "showcase": "rag-indexing",
   "artifacts": [
-    "index.faiss",
+    "index.json",
     "evaluation.json"
   ],
+  "showcase": "rag-indexing",
   "status": "success"
 }
-

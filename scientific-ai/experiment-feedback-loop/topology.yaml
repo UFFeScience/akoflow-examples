@@ -1,6 +1,5 @@
 id: showcase-experiment-feedback-loop-topology
-name: Experiment Feedback Loop local topology
+name: showcase-experiment-feedback-loop local topology
 version: 1
 executionScopeId: showcase-experiment-feedback-loop-scope
 links: []
-

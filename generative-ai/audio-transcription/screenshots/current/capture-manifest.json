@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-audio-transcription-local-a18bfb861c",
+  "planId": "showcase-audio-transcription-local-a18bfb861c-manual-plan-20261020t191318.732334000",
+  "runId": "showcase-audio-transcription-local-a18bfb861c-run-20261020t191318.737733000",
+  "imageId": "sha256:ee0e5997e9c4ec28f947a15dfde5d0395773cfc3bdd98020e44498b17b6f76cc",
+  "activities": [
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-ingest-audio",
+      "stage": "ingest-audio",
+      "file": "ingest-audio.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-segment",
+      "stage": "segment",
+      "file": "segment.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-segment-1",
+      "stage": "segment-1",
+      "file": "segment-1.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-segment-n",
+      "stage": "segment-n",
+      "file": "segment-n.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-merge-transcript",
+      "stage": "merge-transcript",
+      "file": "merge-transcript.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-summarize",
+      "stage": "summarize",
+      "file": "summarize.png"
+    },
+    {
+      "activityId": "showcase-audio-transcription-local-a18bfb861c-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

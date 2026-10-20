@@ -1,7 +1,7 @@
 environment:
   id: showcase-model-distillation
-  name: Showcase model-distillation
-  description: Local Docker-backed reproducibility environment
+  name: showcase-model-distillation local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-model-distillation-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-model-distillation-local-docker, runtimeId: showcase-model-distillation-local, enabled: true}
-

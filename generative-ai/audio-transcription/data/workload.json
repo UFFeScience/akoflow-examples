@@ -1,0 +1,17 @@
+{
+      "sampleRate": 8000,
+      "tokenSeconds": 0.08,
+      "tokens": [
+        "science",
+        "data",
+        "ready",
+        "data",
+        "science",
+        "ready"
+      ],
+      "codebook": {
+        "science": 500,
+        "data": 900,
+        "ready": 1300
+      }
+    }

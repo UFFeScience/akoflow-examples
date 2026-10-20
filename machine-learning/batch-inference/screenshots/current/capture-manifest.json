@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-batch-inference-local-db2bb7c2e2",
+  "planId": "showcase-batch-inference-local-db2bb7c2e2-manual-plan-20261020t190931.407428000",
+  "runId": "showcase-batch-inference-local-db2bb7c2e2-run-20261020t190931.412001000",
+  "imageId": "sha256:bf08445da17789e2ef4cff4795178131e305d8263a0af516780b18a6ec3fba24",
+  "activities": [
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-load-model",
+      "stage": "load-model",
+      "file": "load-model.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-partition-input",
+      "stage": "partition-input",
+      "file": "partition-input.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-infer-shard-n",
+      "stage": "infer-shard-n",
+      "file": "infer-shard-n.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-infer-shard-b",
+      "stage": "infer-shard-b",
+      "file": "infer-shard-b.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-infer-shard-a",
+      "stage": "infer-shard-a",
+      "file": "infer-shard-a.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-merge-predictions",
+      "stage": "merge-predictions",
+      "file": "merge-predictions.png"
+    },
+    {
+      "activityId": "showcase-batch-inference-local-db2bb7c2e2-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

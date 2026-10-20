@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-infrastructure-selection-local-a206990755",
+  "planId": "showcase-infrastructure-selection-local-a206990755-manual-plan-20261020t191013.326119000",
+  "runId": "showcase-infrastructure-selection-local-a206990755-run-20261020t191013.331438000",
+  "imageId": "sha256:e2309626ebd50488a596e89cd649a9fbab8726944c3a315d98ecf4feeb3ccdaf",
+  "activities": [
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-profile-workload",
+      "stage": "profile-workload",
+      "file": "profile-workload.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-local-gpu",
+      "stage": "local-gpu",
+      "file": "local-gpu.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-hpc",
+      "stage": "hpc",
+      "file": "hpc.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-cloud",
+      "stage": "cloud",
+      "file": "cloud.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-compare-plans",
+      "stage": "compare-plans",
+      "file": "compare-plans.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-select-scope",
+      "stage": "select-scope",
+      "file": "select-scope.png"
+    },
+    {
+      "activityId": "showcase-infrastructure-selection-local-a206990755-train",
+      "stage": "train",
+      "file": "train.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

@@ -1,7 +1,7 @@
 environment:
   id: showcase-model-conversion
-  name: Showcase model-conversion
-  description: Local Docker-backed reproducibility environment
+  name: showcase-model-conversion local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-model-conversion-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-model-conversion-local-docker, runtimeId: showcase-model-conversion-local, enabled: true}
-

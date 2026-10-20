@@ -1,5 +1,3 @@
 id: showcase-model-ensemble-scope
-name: Model Ensemble local scope
-environmentVersionIds:
-  - showcase-model-ensemble-v1
-
+name: showcase-model-ensemble local scope
+environmentVersionIds: [showcase-model-ensemble-v1]

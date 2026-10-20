@@ -1,0 +1,34 @@
+{
+  "workflowId": "document-intelligence-local-cf7251f56a",
+  "planId": "document-intelligence-local-cf7251f56a-manual-plan-20261020t182628",
+  "runId": "document-intelligence-local-cf7251f56a-run-20261020t182628",
+  "imageId": "sha256:185883e22354895a1a7be4706f4d9b0ffe382547a9a55ea0911a906698050b1f",
+  "activities": [
+    {
+      "activityId": "document-intelligence-local-cf7251f56a-ingest",
+      "stage": "ingest",
+      "file": "ingest.png"
+    },
+    {
+      "activityId": "document-intelligence-local-cf7251f56a-classify",
+      "stage": "classify",
+      "file": "classify.png"
+    },
+    {
+      "activityId": "document-intelligence-local-cf7251f56a-extract",
+      "stage": "extract",
+      "file": "extract.png"
+    },
+    {
+      "activityId": "document-intelligence-local-cf7251f56a-reconcile",
+      "stage": "reconcile",
+      "file": "reconcile.png"
+    },
+    {
+      "activityId": "document-intelligence-local-cf7251f56a-report",
+      "stage": "report",
+      "file": "report.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

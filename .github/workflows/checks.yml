@@ -11,6 +11,18 @@ permissions:
   packages: write
 
 jobs:
+  dag-contract:
+    name: Validate dependency runner
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache: false
+      - run: go run ./tools/materialize -check
+      - run: go test ./tools/...
+
   checks:
     name: Central AkôFlow example CI
     uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@main

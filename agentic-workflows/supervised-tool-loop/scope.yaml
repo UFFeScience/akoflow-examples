@@ -1,5 +1,3 @@
 id: showcase-supervised-tool-loop-scope
-name: Supervised Tool Loop local scope
-environmentVersionIds:
-  - showcase-supervised-tool-loop-v1
-
+name: showcase-supervised-tool-loop local scope
+environmentVersionIds: [showcase-supervised-tool-loop-v1]

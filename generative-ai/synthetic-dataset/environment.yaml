@@ -1,7 +1,7 @@
 environment:
   id: showcase-synthetic-dataset
-  name: Showcase synthetic-dataset
-  description: Local Docker-backed reproducibility environment
+  name: showcase-synthetic-dataset local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-synthetic-dataset-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-synthetic-dataset-local-docker, runtimeId: showcase-synthetic-dataset-local, enabled: true}
-

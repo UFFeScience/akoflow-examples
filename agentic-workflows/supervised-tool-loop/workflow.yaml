@@ -1,41 +1,87 @@
 name: showcase-supervised-tool-loop
 spec:
-  namespace: showcase
-  # AkôFlow starts this OCI image; activities only declare commands inside it.
-  image: ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1
   activities:
-    - name: proposal
-      runtime: showcase-supervised-tool-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - build-context
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "proposal", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: approval
+      name: build-context
       runtime: showcase-supervised-tool-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - propose-action
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "approval", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - proposal
-    - name: execution
-      runtime: showcase-supervised-tool-loop-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "execution", "--output", "."]
-      cpuLimit: "1"
+        - build-context
       memoryLimit: 256Mi
-      dependsOn:
-        - approval
-    - name: verification
+      name: propose-action
       runtime: showcase-supervised-tool-loop-local
-      command:
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - policy-check
+          - --output
+          - .
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "verification", "--output", "."]
       cpuLimit: "1"
-      memoryLimit: 256Mi
       dependsOn:
-        - execution
-
+        - propose-action
+      memoryLimit: 256Mi
+      name: policy-check
+      runtime: showcase-supervised-tool-loop-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - human-approval
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - policy-check
+      memoryLimit: 256Mi
+      name: human-approval
+      runtime: showcase-supervised-tool-loop-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - execute-tool
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - human-approval
+      memoryLimit: 256Mi
+      name: execute-tool
+      runtime: showcase-supervised-tool-loop-local
+    - command:
+        arguments:
+          - /app/run_showcase.py
+          - --stage
+          - verify
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - execute-tool
+      memoryLimit: 256Mi
+      name: verify
+      runtime: showcase-supervised-tool-loop-local
+  image: ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1
+  namespace: showcase

@@ -1,16 +1,40 @@
 {
-  "slug": "training-with-mlflow",
-  "title": "Training with MLflow",
-  "stages": [
-    "load-data",
-    "preprocess",
-    "train",
-    "evaluate",
-    "register-model"
-  ],
   "artifacts": [
     "model.pkl",
     "metrics.json",
-    "report.html"
-  ]
+    "report.html",
+    "registry.json",
+    "mlflow-run.json",
+    "mlflow.db"
+  ],
+  "dependencies": {
+    "evaluate": [
+      "train"
+    ],
+    "ingest-data": [],
+    "log-mlflow-run": [
+      "evaluate"
+    ],
+    "register-model": [
+      "evaluate"
+    ],
+    "train": [
+      "validate"
+    ],
+    "validate": [
+      "ingest-data"
+    ]
+  },
+  "localProfile": "Fit a linear regression on bundled measurements, evaluate held-out rows, publish a content-addressed local model registry entry, and independently log parameters, metrics, and the model artifact through the real MLflow SDK to a local SQLite tracking store. No hosted MLflow server is needed.",
+  "slug": "training-with-mlflow",
+  "stages": [
+    "ingest-data",
+    "validate",
+    "train",
+    "evaluate",
+    "register-model",
+    "log-mlflow-run"
+  ],
+  "title": "Training with MLflow",
+  "validationMode": "local-workload"
 }

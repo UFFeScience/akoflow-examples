@@ -3,5 +3,4 @@ RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg && rm -r
 WORKDIR /app
 COPY data /app/data
 COPY scripts/pipeline.py /app/scripts/pipeline.py
-ENTRYPOINT ["python", "/app/scripts/pipeline.py"]
 

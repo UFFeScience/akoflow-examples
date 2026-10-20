@@ -1,7 +1,7 @@
 environment:
   id: showcase-multi-agent-review
-  name: Showcase multi-agent-review
-  description: Local Docker-backed reproducibility environment
+  name: showcase-multi-agent-review local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
   status: ready
 version:
   id: showcase-multi-agent-review-v1
@@ -40,4 +40,3 @@ connections: []
 activityResourceProfiles: []
 resourceRuntimeBindings:
   - {resourceId: showcase-multi-agent-review-local-docker, runtimeId: showcase-multi-agent-review-local, enabled: true}
-

@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-model-ensemble-local-68ef5b0c9f",
+  "planId": "showcase-model-ensemble-local-68ef5b0c9f-manual-plan-20261020t191151.790863000",
+  "runId": "showcase-model-ensemble-local-68ef5b0c9f-run-20261020t191151.795620000",
+  "imageId": "sha256:f697a92241279de0401056d5c61e3cd8278663753f63bf2d1a15fc528e897fa8",
+  "activities": [
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-prepare-input",
+      "stage": "prepare-input",
+      "file": "prepare-input.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-predict-b",
+      "stage": "predict-b",
+      "file": "predict-b.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-predict-a",
+      "stage": "predict-a",
+      "file": "predict-a.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-predict-c",
+      "stage": "predict-c",
+      "file": "predict-c.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-combine",
+      "stage": "combine",
+      "file": "combine.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-evaluate",
+      "stage": "evaluate",
+      "file": "evaluate.png"
+    },
+    {
+      "activityId": "showcase-model-ensemble-local-68ef5b0c9f-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

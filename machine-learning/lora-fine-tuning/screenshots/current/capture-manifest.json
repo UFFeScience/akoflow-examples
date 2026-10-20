@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-lora-fine-tuning-local-2accb78860",
+  "planId": "showcase-lora-fine-tuning-local-2accb78860-manual-plan-20261020t191024.389646000",
+  "runId": "showcase-lora-fine-tuning-local-2accb78860-run-20261020t191024.394965000",
+  "imageId": "sha256:3390bedec77f6a55617da6ad689fb076e2cad9558565141c113af94b1458a245",
+  "activities": [
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-fetch-base-model",
+      "stage": "fetch-base-model",
+      "file": "fetch-base-model.png"
+    },
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-prepare-examples",
+      "stage": "prepare-examples",
+      "file": "prepare-examples.png"
+    },
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-fine-tune-adapters",
+      "stage": "fine-tune-adapters",
+      "file": "fine-tune-adapters.png"
+    },
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-evaluate",
+      "stage": "evaluate",
+      "file": "evaluate.png"
+    },
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-publish-adapter",
+      "stage": "publish-adapter",
+      "file": "publish-adapter.png"
+    },
+    {
+      "activityId": "showcase-lora-fine-tuning-local-2accb78860-record-lineage",
+      "stage": "record-lineage",
+      "file": "record-lineage.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

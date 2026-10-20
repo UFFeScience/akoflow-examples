@@ -1,13 +1,22 @@
 {
-  "showcase": "model-ensemble",
-  "digest": "7fa33800cda5058f6c729017b85616b44e214947f7f2d3acd666fc0592bf5f74",
-  "stages": [
-    "publish"
-  ],
-  "status": "success",
-  "validationMode": "contract-fixture",
   "artifacts": [
     "ensemble.pkl",
     "metrics.json"
-  ]
+  ],
+  "sha256": {
+    "ensemble.pkl": "e25c79e64ca60aab1f0335a79bd9d350e386a2bf4efffe376154544886200544",
+    "metrics.json": "2536ac93ee457d3143d3dc9b324aeec11574fcdd0fcf8bee2a3b9e527309c09a"
+  },
+  "showcase": "model-ensemble",
+  "stages": [
+    "prepare-input",
+    "predict-a",
+    "predict-b",
+    "predict-c",
+    "combine",
+    "evaluate",
+    "publish"
+  ],
+  "status": "success",
+  "validationMode": "local-workload"
 }

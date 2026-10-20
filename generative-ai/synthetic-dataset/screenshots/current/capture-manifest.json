@@ -1,0 +1,49 @@
+{
+  "workflowId": "showcase-synthetic-dataset-local-de72f7c33c",
+  "planId": "showcase-synthetic-dataset-local-de72f7c33c-manual-plan-20261020t191359.732838000",
+  "runId": "showcase-synthetic-dataset-local-de72f7c33c-run-20261020t191359.740409000",
+  "imageId": "sha256:de6e028ea20a3556be7a9651e06ce0430769e07d937078c448849645a8e7bde8",
+  "activities": [
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-define-schema",
+      "stage": "define-schema",
+      "file": "define-schema.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-batch-b",
+      "stage": "batch-b",
+      "file": "batch-b.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-batch-n",
+      "stage": "batch-n",
+      "file": "batch-n.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-batch-a",
+      "stage": "batch-a",
+      "file": "batch-a.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-filter",
+      "stage": "filter",
+      "file": "filter.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-deduplicate",
+      "stage": "deduplicate",
+      "file": "deduplicate.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-quality-review",
+      "stage": "quality-review",
+      "file": "quality-review.png"
+    },
+    {
+      "activityId": "showcase-synthetic-dataset-local-de72f7c33c-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-model-conversion-local-f22e706408",
+  "planId": "showcase-model-conversion-local-f22e706408-manual-plan-20261020t191128.221185000",
+  "runId": "showcase-model-conversion-local-f22e706408-run-20261020t191128.224915000",
+  "imageId": "sha256:723ff3698b6f79aa777b8941b8390b44f1804f71fdc6a8ca68a7ed722edf3c02",
+  "activities": [
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-load-model",
+      "stage": "load-model",
+      "file": "load-model.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-export-torchscript",
+      "stage": "export-torchscript",
+      "file": "export-torchscript.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-export-onnx",
+      "stage": "export-onnx",
+      "file": "export-onnx.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-quantize-cpu",
+      "stage": "quantize-cpu",
+      "file": "quantize-cpu.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-quantize-gpu",
+      "stage": "quantize-gpu",
+      "file": "quantize-gpu.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-validate-outputs",
+      "stage": "validate-outputs",
+      "file": "validate-outputs.png"
+    },
+    {
+      "activityId": "showcase-model-conversion-local-f22e706408-publish-variants",
+      "stage": "publish-variants",
+      "file": "publish-variants.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-inference-benchmark-local-7d8f10cfda",
+  "planId": "showcase-inference-benchmark-local-7d8f10cfda-manual-plan-20261020t191004.373444000",
+  "runId": "showcase-inference-benchmark-local-7d8f10cfda-run-20261020t191004.383307000",
+  "imageId": "sha256:3f2531ca913c4ff45b9624374084e12f7b9929ed95512aa0fb1f3ffb7acbd579",
+  "activities": [
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-freeze-inputs",
+      "stage": "freeze-inputs",
+      "file": "freeze-inputs.png"
+    },
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-cpu",
+      "stage": "cpu",
+      "file": "cpu.png"
+    },
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-gpu",
+      "stage": "gpu",
+      "file": "gpu.png"
+    },
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-edge",
+      "stage": "edge",
+      "file": "edge.png"
+    },
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-normalize",
+      "stage": "normalize",
+      "file": "normalize.png"
+    },
+    {
+      "activityId": "showcase-inference-benchmark-local-7d8f10cfda-compare-cost-and-latency",
+      "stage": "compare-cost-and-latency",
+      "file": "compare-cost-and-latency.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-surrogate-model-local-a18299f701",
+  "planId": "showcase-surrogate-model-local-a18299f701-manual-plan-20261020t190905.260770000",
+  "runId": "showcase-surrogate-model-local-a18299f701-run-20261020t190905.264745000",
+  "imageId": "sha256:53b8cdcb4231bec1ab88516be7c27637d832f6ecb7794d3884b50be5529ea9e5",
+  "activities": [
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-design-samples",
+      "stage": "design-samples",
+      "file": "design-samples.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-simulation-a",
+      "stage": "simulation-a",
+      "file": "simulation-a.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-simulation-n",
+      "stage": "simulation-n",
+      "file": "simulation-n.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-assemble-dataset",
+      "stage": "assemble-dataset",
+      "file": "assemble-dataset.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-train-surrogate",
+      "stage": "train-surrogate",
+      "file": "train-surrogate.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-validate",
+      "stage": "validate",
+      "file": "validate.png"
+    },
+    {
+      "activityId": "showcase-surrogate-model-local-a18299f701-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

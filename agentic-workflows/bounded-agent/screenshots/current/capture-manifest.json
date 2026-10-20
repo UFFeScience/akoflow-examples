@@ -1,0 +1,34 @@
+{
+  "workflowId": "showcase-bounded-agent-local-4f5eb97ca7",
+  "planId": "showcase-bounded-agent-local-4f5eb97ca7-manual-plan-20261020t191412.777507000",
+  "runId": "showcase-bounded-agent-local-4f5eb97ca7-run-20261020t191412.780353000",
+  "imageId": "sha256:ee8f8db4df791b16467a174d5aa54399597785cf2ab9d390967e00be01f62f34",
+  "activities": [
+    {
+      "activityId": "showcase-bounded-agent-local-4f5eb97ca7-prepare-objective",
+      "stage": "prepare-objective",
+      "file": "prepare-objective.png"
+    },
+    {
+      "activityId": "showcase-bounded-agent-local-4f5eb97ca7-agent-loop",
+      "stage": "agent-loop",
+      "file": "agent-loop.png"
+    },
+    {
+      "activityId": "showcase-bounded-agent-local-4f5eb97ca7-validate-output",
+      "stage": "validate-output",
+      "file": "validate-output.png"
+    },
+    {
+      "activityId": "showcase-bounded-agent-local-4f5eb97ca7-publish-result",
+      "stage": "publish-result",
+      "file": "publish-result.png"
+    },
+    {
+      "activityId": "showcase-bounded-agent-local-4f5eb97ca7-store-trace",
+      "stage": "store-trace",
+      "file": "store-trace.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

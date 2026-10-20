@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-ai-assisted-analysis-local-6ec20be3c8",
+  "planId": "showcase-ai-assisted-analysis-local-6ec20be3c8-manual-plan-20261020t190838.811067000",
+  "runId": "showcase-ai-assisted-analysis-local-6ec20be3c8-run-20261020t190838.819830000",
+  "imageId": "sha256:d074857f9399f4fdeb7344c3d7555a971b756f2d6c5bfbfec95ebf14ece233e2",
+  "activities": [
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-prepare-experiment",
+      "stage": "prepare-experiment",
+      "file": "prepare-experiment.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-simulation",
+      "stage": "simulation",
+      "file": "simulation.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-measurements",
+      "stage": "measurements",
+      "file": "measurements.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-statistics",
+      "stage": "statistics",
+      "file": "statistics.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-ai-interpretation",
+      "stage": "ai-interpretation",
+      "file": "ai-interpretation.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-validate",
+      "stage": "validate",
+      "file": "validate.png"
+    },
+    {
+      "activityId": "showcase-ai-assisted-analysis-local-6ec20be3c8-report",
+      "stage": "report",
+      "file": "report.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

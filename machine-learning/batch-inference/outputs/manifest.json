@@ -1,13 +1,22 @@
 {
-  "showcase": "batch-inference",
-  "digest": "84c42f54cee3e6be23d5208291e22dbdd5f0c8bc419373e0215f515544890a69",
-  "stages": [
-    "publish"
-  ],
-  "status": "success",
-  "validationMode": "contract-fixture",
   "artifacts": [
     "predictions.jsonl",
     "batch-summary.json"
-  ]
+  ],
+  "sha256": {
+    "batch-summary.json": "512f062bba2a7586c40861225ec3b592b68b8b2b6eedc40daf68d1f8f5960275",
+    "predictions.jsonl": "f7227670dbf8e7a126d678897bc8b7869b0b3bbd56770949b6a8f8c79b8d422a"
+  },
+  "showcase": "batch-inference",
+  "stages": [
+    "load-model",
+    "partition-input",
+    "infer-shard-a",
+    "infer-shard-b",
+    "infer-shard-n",
+    "merge-predictions",
+    "publish"
+  ],
+  "status": "success",
+  "validationMode": "local-workload"
 }

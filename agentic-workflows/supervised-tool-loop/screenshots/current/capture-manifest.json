@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-supervised-tool-loop-local-1fb7664e1c",
+  "planId": "showcase-supervised-tool-loop-local-1fb7664e1c-manual-plan-20261020t191433.215428000",
+  "runId": "showcase-supervised-tool-loop-local-1fb7664e1c-run-20261020t191433.219869000",
+  "imageId": "sha256:faa1a1363139f086370f8c8dd82ff92a2cceaae180e7979c8549e0210351ee79",
+  "activities": [
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-build-context",
+      "stage": "build-context",
+      "file": "build-context.png"
+    },
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-propose-action",
+      "stage": "propose-action",
+      "file": "propose-action.png"
+    },
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-policy-check",
+      "stage": "policy-check",
+      "file": "policy-check.png"
+    },
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-human-approval",
+      "stage": "human-approval",
+      "file": "human-approval.png"
+    },
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-execute-tool",
+      "stage": "execute-tool",
+      "file": "execute-tool.png"
+    },
+    {
+      "activityId": "showcase-supervised-tool-loop-local-1fb7664e1c-verify",
+      "stage": "verify",
+      "file": "verify.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

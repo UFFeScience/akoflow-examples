@@ -1,0 +1,34 @@
+{
+  "workflowId": "blender-render-farm-local-c7b71b395d",
+  "planId": "blender-render-farm-local-c7b71b395d-manual-plan-20261020t182650",
+  "runId": "blender-render-farm-local-c7b71b395d-run-20261020t182650",
+  "imageId": "sha256:12a47cf91b78efbb6c52ce12625179a85197517b95af5f9d32f97982594d09c0",
+  "activities": [
+    {
+      "activityId": "blender-render-farm-local-c7b71b395d-setup",
+      "stage": "setup",
+      "file": "setup.png"
+    },
+    {
+      "activityId": "blender-render-farm-local-c7b71b395d-render-even",
+      "stage": "render-even",
+      "file": "render-even.png"
+    },
+    {
+      "activityId": "blender-render-farm-local-c7b71b395d-render-odd",
+      "stage": "render-odd",
+      "file": "render-odd.png"
+    },
+    {
+      "activityId": "blender-render-farm-local-c7b71b395d-compose",
+      "stage": "compose",
+      "file": "compose.png"
+    },
+    {
+      "activityId": "blender-render-farm-local-c7b71b395d-verify",
+      "stage": "verify",
+      "file": "verify.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

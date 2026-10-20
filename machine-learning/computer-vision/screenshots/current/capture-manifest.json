@@ -1,0 +1,39 @@
+{
+  "workflowId": "showcase-computer-vision-local-6db51a739c",
+  "planId": "showcase-computer-vision-local-6db51a739c-manual-plan-20261020t190942.320293000",
+  "runId": "showcase-computer-vision-local-6db51a739c-run-20261020t190942.323554000",
+  "imageId": "sha256:5ae230ade335bec12791e0017113bb770b37c07afb887eb51952644853fb237b",
+  "activities": [
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-collect-images",
+      "stage": "collect-images",
+      "file": "collect-images.png"
+    },
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-import-labels",
+      "stage": "import-labels",
+      "file": "import-labels.png"
+    },
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-augment",
+      "stage": "augment",
+      "file": "augment.png"
+    },
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-train-detector",
+      "stage": "train-detector",
+      "file": "train-detector.png"
+    },
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-evaluate",
+      "stage": "evaluate",
+      "file": "evaluate.png"
+    },
+    {
+      "activityId": "showcase-computer-vision-local-6db51a739c-package-model",
+      "stage": "package-model",
+      "file": "package-model.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

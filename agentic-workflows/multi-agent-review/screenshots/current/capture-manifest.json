@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-multi-agent-review-local-bc9322e8eb",
+  "planId": "showcase-multi-agent-review-local-bc9322e8eb-manual-plan-20261020t191421.882509000",
+  "runId": "showcase-multi-agent-review-local-bc9322e8eb-run-20261020t191421.886742000",
+  "imageId": "sha256:1420294cfb9bb88edaa5fbe83b0416addd46f7a0fc575e67bf68cbc15cda7d52",
+  "activities": [
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-shared-context",
+      "stage": "shared-context",
+      "file": "shared-context.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-domain",
+      "stage": "domain",
+      "file": "domain.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-code",
+      "stage": "code",
+      "file": "code.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-research",
+      "stage": "research",
+      "file": "research.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-critic-review",
+      "stage": "critic-review",
+      "file": "critic-review.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-synthesize",
+      "stage": "synthesize",
+      "file": "synthesize.png"
+    },
+    {
+      "activityId": "showcase-multi-agent-review-local-bc9322e8eb-publish-evidence",
+      "stage": "publish-evidence",
+      "file": "publish-evidence.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

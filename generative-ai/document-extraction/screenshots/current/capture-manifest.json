@@ -1,0 +1,44 @@
+{
+  "workflowId": "showcase-document-extraction-local-7d5ef3028c",
+  "planId": "showcase-document-extraction-local-7d5ef3028c-manual-plan-20261020t191332.046548000",
+  "runId": "showcase-document-extraction-local-7d5ef3028c-run-20261020t191332.049535000",
+  "imageId": "sha256:b94cc98bfb12897b69b7fa3bf19ef17aea6b551b2496d792ccf39ba1a2a4d1f5",
+  "activities": [
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-ingest-documents",
+      "stage": "ingest-documents",
+      "file": "ingest-documents.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-native-text",
+      "stage": "native-text",
+      "file": "native-text.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-ocr",
+      "stage": "ocr",
+      "file": "ocr.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-classify",
+      "stage": "classify",
+      "file": "classify.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-extract-fields",
+      "stage": "extract-fields",
+      "file": "extract-fields.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-validate-schema",
+      "stage": "validate-schema",
+      "file": "validate-schema.png"
+    },
+    {
+      "activityId": "showcase-document-extraction-local-7d5ef3028c-publish",
+      "stage": "publish",
+      "file": "publish.png"
+    }
+  ],
+  "workflowScreenshot": "workflow.png"
+}

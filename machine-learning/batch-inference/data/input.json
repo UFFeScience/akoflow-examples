@@ -3,15 +3,39 @@
   "title": "Batch Inference",
   "stages": [
     "load-model",
-    "split-input",
-    "worker-1",
-    "worker-2",
-    "worker-3",
-    "worker-4",
-    "merge"
+    "partition-input",
+    "infer-shard-a",
+    "infer-shard-b",
+    "infer-shard-n",
+    "merge-predictions",
+    "publish"
   ],
   "artifacts": [
     "predictions.jsonl",
     "batch-summary.json"
-  ]
+  ],
+  "dependencies": {
+    "load-model": [],
+    "partition-input": [
+      "load-model"
+    ],
+    "infer-shard-a": [
+      "partition-input"
+    ],
+    "infer-shard-b": [
+      "partition-input"
+    ],
+    "infer-shard-n": [
+      "partition-input"
+    ],
+    "merge-predictions": [
+      "infer-shard-a",
+      "infer-shard-b",
+      "infer-shard-n"
+    ],
+    "publish": [
+      "merge-predictions"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

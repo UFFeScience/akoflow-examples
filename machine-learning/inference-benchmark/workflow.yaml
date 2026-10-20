@@ -4,6 +4,13 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark:v1
   activities:
+    - name: freeze-inputs
+      runtime: showcase-inference-benchmark-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "freeze-inputs", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
     - name: cpu
       runtime: showcase-inference-benchmark-local
       command:
@@ -11,6 +18,7 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "cpu", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
+      dependsOn: ["freeze-inputs"]
     - name: gpu
       runtime: showcase-inference-benchmark-local
       command:
@@ -18,8 +26,7 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "gpu", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - cpu
+      dependsOn: ["freeze-inputs"]
     - name: edge
       runtime: showcase-inference-benchmark-local
       command:
@@ -27,15 +34,20 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "edge", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - gpu
-    - name: report
+      dependsOn: ["freeze-inputs"]
+    - name: normalize
       runtime: showcase-inference-benchmark-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "report", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "normalize", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - edge
-
+      dependsOn: ["cpu","gpu","edge"]
+    - name: compare-cost-and-latency
+      runtime: showcase-inference-benchmark-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "compare-cost-and-latency", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["normalize"]

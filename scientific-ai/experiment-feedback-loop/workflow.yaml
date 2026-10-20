@@ -4,29 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop:v1
   activities:
-    - name: experiment
+    - name: observations
       runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "experiment", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "observations", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: model
+    - name: update-model
       runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "update-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - experiment
-    - name: next-batch
+      dependsOn: ["observations"]
+    - name: propose-experiments
       runtime: showcase-experiment-feedback-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "next-batch", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "propose-experiments", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - model
-
+      dependsOn: ["update-model"]
+    - name: safety-check
+      runtime: showcase-experiment-feedback-loop-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "safety-check", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["propose-experiments"]
+    - name: run-experiments
+      runtime: showcase-experiment-feedback-loop-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "run-experiments", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["safety-check"]
+    - name: record-observations
+      runtime: showcase-experiment-feedback-loop-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "record-observations", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["run-experiments"]

@@ -2,13 +2,39 @@
   "slug": "document-extraction",
   "title": "Document Extraction",
   "stages": [
-    "pdf",
+    "ingest-documents",
     "ocr",
-    "extract",
-    "json"
+    "native-text",
+    "classify",
+    "extract-fields",
+    "validate-schema",
+    "publish"
   ],
   "artifacts": [
     "extraction.json",
     "ocr.txt"
-  ]
+  ],
+  "dependencies": {
+    "ingest-documents": [],
+    "ocr": [
+      "ingest-documents"
+    ],
+    "native-text": [
+      "ingest-documents"
+    ],
+    "classify": [
+      "ocr",
+      "native-text"
+    ],
+    "extract-fields": [
+      "classify"
+    ],
+    "validate-schema": [
+      "extract-fields"
+    ],
+    "publish": [
+      "validate-schema"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

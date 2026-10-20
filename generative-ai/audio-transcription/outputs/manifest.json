@@ -1,13 +1,11 @@
 {
   "showcase": "audio-transcription",
-  "digest": "8496b5e8321736469ce55180232f30723d6e98de066f70010ad95643ecb86274",
+  "digest": "9783a40cdec93c2fdd3baabd363a88d1efb85703e36128c3a3d589f89853c104",
   "stages": [
-    "audio",
-    "split",
-    "transcribe",
-    "summarize"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "transcript.txt",
     "summary.md"

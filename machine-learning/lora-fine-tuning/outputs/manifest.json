@@ -1,12 +1,11 @@
 {
   "showcase": "lora-fine-tuning",
-  "digest": "f9f9dfdd83960188ed199252f04315b12c0631b38cdaa113c9cff208ea2350d6",
+  "digest": "d0bee0340572aff3c62c489546b1833ba17a2e2dd01c910719fadd2d5d9057c8",
   "stages": [
-    "prepare",
-    "finetune",
-    "evaluate"
+    "record-lineage"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "adapter.bin",
     "evaluation.json"

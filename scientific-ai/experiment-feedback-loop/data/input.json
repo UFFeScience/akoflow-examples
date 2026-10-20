@@ -2,12 +2,34 @@
   "slug": "experiment-feedback-loop",
   "title": "Experiment Feedback Loop",
   "stages": [
-    "experiment",
-    "model",
-    "next-batch"
+    "observations",
+    "update-model",
+    "propose-experiments",
+    "safety-check",
+    "run-experiments",
+    "record-observations"
   ],
   "artifacts": [
     "next-batch.json",
     "feedback-report.json"
-  ]
+  ],
+  "dependencies": {
+    "observations": [],
+    "update-model": [
+      "observations"
+    ],
+    "propose-experiments": [
+      "update-model"
+    ],
+    "safety-check": [
+      "propose-experiments"
+    ],
+    "run-experiments": [
+      "safety-check"
+    ],
+    "record-observations": [
+      "run-experiments"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

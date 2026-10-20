@@ -4,29 +4,42 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-bounded-agent:v1
   activities:
-    - name: goal
+    - name: prepare-objective
       runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "goal", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "prepare-objective", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: agent
+    - name: agent-loop
       runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "agent", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "agent-loop", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - goal
-    - name: validator
+      dependsOn: ["prepare-objective"]
+    - name: validate-output
       runtime: showcase-bounded-agent-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "validator", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "validate-output", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - agent
-
+      dependsOn: ["agent-loop"]
+    - name: publish-result
+      runtime: showcase-bounded-agent-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish-result", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["validate-output"]
+    - name: store-trace
+      runtime: showcase-bounded-agent-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "store-trace", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["validate-output"]

@@ -4,11 +4,11 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1
   activities:
-    - name: pdf
+    - name: ingest-documents
       runtime: showcase-document-extraction-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "pdf", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "ingest-documents", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
     - name: ocr
@@ -18,24 +18,44 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "ocr", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - pdf
-    - name: extract
+      dependsOn: ["ingest-documents"]
+    - name: native-text
       runtime: showcase-document-extraction-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "extract", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "native-text", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - ocr
-    - name: json
+      dependsOn: ["ingest-documents"]
+    - name: classify
       runtime: showcase-document-extraction-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "json", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "classify", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - extract
-
+      dependsOn: ["ocr","native-text"]
+    - name: extract-fields
+      runtime: showcase-document-extraction-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "extract-fields", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["classify"]
+    - name: validate-schema
+      runtime: showcase-document-extraction-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "validate-schema", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["extract-fields"]
+    - name: publish
+      runtime: showcase-document-extraction-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["validate-schema"]

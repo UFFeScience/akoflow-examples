@@ -1,14 +1,11 @@
 {
   "showcase": "rag-indexing",
-  "digest": "56792f4ed079ed980eec39643401b65f966ad056800369461a7e4908e603c9b0",
+  "digest": "57712f0c41388a8e86b39350cde078764a3b5c8a0c691e8759144b96eceaacba",
   "stages": [
-    "documents",
-    "chunk",
-    "embed",
-    "faiss",
-    "evaluate"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "index.faiss",
     "evaluation.json"

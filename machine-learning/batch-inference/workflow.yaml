@@ -11,58 +11,51 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "load-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: split-input
+    - name: partition-input
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "split-input", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "partition-input", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - load-model
-    - name: worker-1
+      dependsOn: ["load-model"]
+    - name: infer-shard-a
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-1", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-a", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - split-input
-    - name: worker-2
+      dependsOn: ["partition-input"]
+    - name: infer-shard-b
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-2", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-b", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - worker-1
-    - name: worker-3
+      dependsOn: ["partition-input"]
+    - name: infer-shard-n
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-3", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "infer-shard-n", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - worker-2
-    - name: worker-4
+      dependsOn: ["partition-input"]
+    - name: merge-predictions
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "worker-4", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "merge-predictions", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - worker-3
-    - name: merge
+      dependsOn: ["infer-shard-a","infer-shard-b","infer-shard-n"]
+    - name: publish
       runtime: showcase-batch-inference-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "merge", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - worker-4
-
+      dependsOn: ["merge-predictions"]

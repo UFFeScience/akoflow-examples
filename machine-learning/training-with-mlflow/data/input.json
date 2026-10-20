@@ -2,15 +2,35 @@
   "slug": "training-with-mlflow",
   "title": "Training with MLflow",
   "stages": [
-    "load-data",
-    "preprocess",
+    "ingest-data",
+    "validate",
     "train",
     "evaluate",
-    "register-model"
+    "register-model",
+    "log-mlflow-run"
   ],
   "artifacts": [
     "model.pkl",
     "metrics.json",
     "report.html"
-  ]
+  ],
+  "dependencies": {
+    "ingest-data": [],
+    "validate": [
+      "ingest-data"
+    ],
+    "train": [
+      "validate"
+    ],
+    "evaluate": [
+      "train"
+    ],
+    "register-model": [
+      "evaluate"
+    ],
+    "log-mlflow-run": [
+      "evaluate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

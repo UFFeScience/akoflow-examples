@@ -2,14 +2,36 @@
   "slug": "model-comparison",
   "title": "Model Comparison",
   "stages": [
-    "dataset",
-    "model-a",
-    "model-b",
-    "model-c",
-    "comparison"
+    "freeze-evaluation-set",
+    "evaluate-a",
+    "evaluate-b",
+    "evaluate-c",
+    "compare-metrics",
+    "approve-candidate"
   ],
   "artifacts": [
     "comparison.csv",
     "report.html"
-  ]
+  ],
+  "dependencies": {
+    "freeze-evaluation-set": [],
+    "evaluate-a": [
+      "freeze-evaluation-set"
+    ],
+    "evaluate-b": [
+      "freeze-evaluation-set"
+    ],
+    "evaluate-c": [
+      "freeze-evaluation-set"
+    ],
+    "compare-metrics": [
+      "evaluate-a",
+      "evaluate-b",
+      "evaluate-c"
+    ],
+    "approve-candidate": [
+      "compare-metrics"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

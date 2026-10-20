@@ -1,13 +1,11 @@
 {
   "showcase": "supervised-tool-loop",
-  "digest": "5aa8f7ad898f4efb7e43aaa685730877580594633efd4913be238411b1193062",
+  "digest": "1ba60abf7c87a575523604f02f59eab6424b01eee5fcd07e0a69fd79a9f702c0",
   "stages": [
-    "proposal",
-    "approval",
-    "execution",
-    "verification"
+    "verify"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "execution.json",
     "verification.json"

@@ -2,12 +2,44 @@
   "slug": "synthetic-dataset",
   "title": "Synthetic Dataset",
   "stages": [
-    "generate",
+    "define-schema",
+    "batch-a",
+    "batch-b",
+    "batch-n",
+    "filter",
     "deduplicate",
-    "quality-check"
+    "quality-review",
+    "publish"
   ],
   "artifacts": [
     "synthetic-dataset.jsonl",
     "quality-report.json"
-  ]
+  ],
+  "dependencies": {
+    "define-schema": [],
+    "batch-a": [
+      "define-schema"
+    ],
+    "batch-b": [
+      "define-schema"
+    ],
+    "batch-n": [
+      "define-schema"
+    ],
+    "filter": [
+      "batch-a",
+      "batch-b",
+      "batch-n"
+    ],
+    "deduplicate": [
+      "filter"
+    ],
+    "quality-review": [
+      "deduplicate"
+    ],
+    "publish": [
+      "quality-review"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

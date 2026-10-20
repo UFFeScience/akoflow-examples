@@ -2,12 +2,35 @@
   "slug": "model-distillation",
   "title": "Model Distillation",
   "stages": [
-    "teacher",
-    "generate-labels",
-    "student"
+    "load-teacher",
+    "soft-labels",
+    "train-student",
+    "quality",
+    "latency",
+    "publish"
   ],
   "artifacts": [
     "student.pkl",
     "distillation-report.json"
-  ]
+  ],
+  "dependencies": {
+    "load-teacher": [],
+    "soft-labels": [
+      "load-teacher"
+    ],
+    "train-student": [
+      "soft-labels"
+    ],
+    "quality": [
+      "train-student"
+    ],
+    "latency": [
+      "train-student"
+    ],
+    "publish": [
+      "quality",
+      "latency"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

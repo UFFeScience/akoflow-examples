@@ -2,13 +2,34 @@
   "slug": "supervised-tool-loop",
   "title": "Supervised Tool Loop",
   "stages": [
-    "proposal",
-    "approval",
-    "execution",
-    "verification"
+    "build-context",
+    "propose-action",
+    "policy-check",
+    "human-approval",
+    "execute-tool",
+    "verify"
   ],
   "artifacts": [
     "execution.json",
     "verification.json"
-  ]
+  ],
+  "dependencies": {
+    "build-context": [],
+    "propose-action": [
+      "build-context"
+    ],
+    "policy-check": [
+      "propose-action"
+    ],
+    "human-approval": [
+      "policy-check"
+    ],
+    "execute-tool": [
+      "human-approval"
+    ],
+    "verify": [
+      "execute-tool"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

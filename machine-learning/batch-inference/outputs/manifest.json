@@ -1,16 +1,11 @@
 {
   "showcase": "batch-inference",
-  "digest": "103739b0cb8fc3c65f840dd0199da95a6adc614b0a0f231c0f30c4301cecd30a",
+  "digest": "84c42f54cee3e6be23d5208291e22dbdd5f0c8bc419373e0215f515544890a69",
   "stages": [
-    "load-model",
-    "split-input",
-    "worker-1",
-    "worker-2",
-    "worker-3",
-    "worker-4",
-    "merge"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "predictions.jsonl",
     "batch-summary.json"

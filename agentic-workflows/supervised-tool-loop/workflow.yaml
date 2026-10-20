@@ -4,38 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1
   activities:
-    - name: proposal
+    - name: build-context
       runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "proposal", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "build-context", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: approval
+    - name: propose-action
       runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "approval", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "propose-action", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - proposal
-    - name: execution
+      dependsOn: ["build-context"]
+    - name: policy-check
       runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "execution", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "policy-check", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - approval
-    - name: verification
+      dependsOn: ["propose-action"]
+    - name: human-approval
       runtime: showcase-supervised-tool-loop-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "verification", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "human-approval", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - execution
-
+      dependsOn: ["policy-check"]
+    - name: execute-tool
+      runtime: showcase-supervised-tool-loop-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "execute-tool", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["human-approval"]
+    - name: verify
+      runtime: showcase-supervised-tool-loop-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "verify", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["execute-tool"]

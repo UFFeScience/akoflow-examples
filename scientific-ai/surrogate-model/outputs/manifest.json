@@ -1,12 +1,11 @@
 {
   "showcase": "surrogate-model",
-  "digest": "409a653d96b461f4ba1721308be80d77a06ef6f8b16ea2a315741820ac762453",
+  "digest": "63f269c498af3bef8ae1fbc4923d016b726be5733d8de36fdf08dabffc350041",
   "stages": [
-    "simulation",
-    "dataset",
-    "train-surrogate"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "surrogate.pkl",
     "validation.json"

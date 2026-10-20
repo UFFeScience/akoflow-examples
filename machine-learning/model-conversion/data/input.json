@@ -2,13 +2,42 @@
   "slug": "model-conversion",
   "title": "Model Conversion",
   "stages": [
-    "onnx",
-    "gguf",
-    "tensorrt"
+    "load-model",
+    "export-onnx",
+    "export-torchscript",
+    "quantize-cpu",
+    "quantize-gpu",
+    "validate-outputs",
+    "publish-variants"
   ],
   "artifacts": [
     "model.onnx",
     "model.gguf",
     "model.engine"
-  ]
+  ],
+  "dependencies": {
+    "load-model": [],
+    "export-onnx": [
+      "load-model"
+    ],
+    "export-torchscript": [
+      "load-model"
+    ],
+    "quantize-cpu": [
+      "export-onnx",
+      "export-torchscript"
+    ],
+    "quantize-gpu": [
+      "export-onnx",
+      "export-torchscript"
+    ],
+    "validate-outputs": [
+      "quantize-cpu",
+      "quantize-gpu"
+    ],
+    "publish-variants": [
+      "validate-outputs"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

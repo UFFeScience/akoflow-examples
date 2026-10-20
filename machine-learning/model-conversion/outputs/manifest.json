@@ -1,12 +1,11 @@
 {
   "showcase": "model-conversion",
-  "digest": "8706e05b6ffbdbb9c521be968b623b91477edfc75ad5adda15334865aa7e30cb",
+  "digest": "a42d914a6a8a096bd283147d03fbe5aa642e69fd0edb04ab36aab77d20612c4d",
   "stages": [
-    "onnx",
-    "gguf",
-    "tensorrt"
+    "publish-variants"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "model.onnx",
     "model.gguf",

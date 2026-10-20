@@ -4,47 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-model-comparison:v1
   activities:
-    - name: dataset
+    - name: freeze-evaluation-set
       runtime: showcase-model-comparison-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "dataset", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "freeze-evaluation-set", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: model-a
+    - name: evaluate-a
       runtime: showcase-model-comparison-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-a", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "evaluate-a", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - dataset
-    - name: model-b
+      dependsOn: ["freeze-evaluation-set"]
+    - name: evaluate-b
       runtime: showcase-model-comparison-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-b", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "evaluate-b", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - model-a
-    - name: model-c
+      dependsOn: ["freeze-evaluation-set"]
+    - name: evaluate-c
       runtime: showcase-model-comparison-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "model-c", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "evaluate-c", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - model-b
-    - name: comparison
+      dependsOn: ["freeze-evaluation-set"]
+    - name: compare-metrics
       runtime: showcase-model-comparison-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "comparison", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "compare-metrics", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - model-c
-
+      dependsOn: ["evaluate-a","evaluate-b","evaluate-c"]
+    - name: approve-candidate
+      runtime: showcase-model-comparison-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "approve-candidate", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["compare-metrics"]

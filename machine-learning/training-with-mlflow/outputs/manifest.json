@@ -1,14 +1,11 @@
 {
   "showcase": "training-with-mlflow",
-  "digest": "3699540a5449ea359f6c48f5081682de12c8f08813c63edae3a30834f4f08b4d",
+  "digest": "d61175004ab34b052f3f8a7a273ec470205334ef58e85c4aa924979f726f0d89",
   "stages": [
-    "load-data",
-    "preprocess",
-    "train",
-    "evaluate",
-    "register-model"
+    "log-mlflow-run"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "model.pkl",
     "metrics.json",

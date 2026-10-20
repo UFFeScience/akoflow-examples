@@ -4,13 +4,45 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset:v1
   activities:
-    - name: generate
+    - name: define-schema
       runtime: showcase-synthetic-dataset-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "generate", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "define-schema", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
+    - name: batch-a
+      runtime: showcase-synthetic-dataset-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "batch-a", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["define-schema"]
+    - name: batch-b
+      runtime: showcase-synthetic-dataset-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "batch-b", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["define-schema"]
+    - name: batch-n
+      runtime: showcase-synthetic-dataset-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "batch-n", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["define-schema"]
+    - name: filter
+      runtime: showcase-synthetic-dataset-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "filter", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["batch-a","batch-b","batch-n"]
     - name: deduplicate
       runtime: showcase-synthetic-dataset-local
       command:
@@ -18,15 +50,20 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "deduplicate", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - generate
-    - name: quality-check
+      dependsOn: ["filter"]
+    - name: quality-review
       runtime: showcase-synthetic-dataset-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "quality-check", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "quality-review", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - deduplicate
-
+      dependsOn: ["deduplicate"]
+    - name: publish
+      runtime: showcase-synthetic-dataset-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["quality-review"]

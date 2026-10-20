@@ -2,13 +2,36 @@
   "slug": "inference-benchmark",
   "title": "Inference Benchmark",
   "stages": [
+    "freeze-inputs",
     "cpu",
     "gpu",
     "edge",
-    "report"
+    "normalize",
+    "compare-cost-and-latency"
   ],
   "artifacts": [
     "benchmark.csv",
     "report.html"
-  ]
+  ],
+  "dependencies": {
+    "freeze-inputs": [],
+    "cpu": [
+      "freeze-inputs"
+    ],
+    "gpu": [
+      "freeze-inputs"
+    ],
+    "edge": [
+      "freeze-inputs"
+    ],
+    "normalize": [
+      "cpu",
+      "gpu",
+      "edge"
+    ],
+    "compare-cost-and-latency": [
+      "normalize"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

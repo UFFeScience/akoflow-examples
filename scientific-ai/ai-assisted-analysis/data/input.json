@@ -2,12 +2,39 @@
   "slug": "ai-assisted-analysis",
   "title": "AI Assisted Analysis",
   "stages": [
+    "prepare-experiment",
     "simulation",
-    "analysis",
-    "llm-interpretation"
+    "measurements",
+    "statistics",
+    "ai-interpretation",
+    "validate",
+    "report"
   ],
   "artifacts": [
     "analysis.json",
     "interpretation.md"
-  ]
+  ],
+  "dependencies": {
+    "prepare-experiment": [],
+    "simulation": [
+      "prepare-experiment"
+    ],
+    "measurements": [
+      "simulation"
+    ],
+    "statistics": [
+      "measurements"
+    ],
+    "ai-interpretation": [
+      "measurements"
+    ],
+    "validate": [
+      "statistics",
+      "ai-interpretation"
+    ],
+    "report": [
+      "validate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

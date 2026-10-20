@@ -1,13 +1,11 @@
 {
   "showcase": "document-extraction",
-  "digest": "ad73c48e5ef5308094fab62ec1c195401c1d63eb0784135868da1598bd84611f",
+  "digest": "a7bbc287e7889ccce9cb63d5c83007ffb32f06451abcd541cad8c57b77904068",
   "stages": [
-    "pdf",
-    "ocr",
-    "extract",
-    "json"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "extraction.json",
     "ocr.txt"

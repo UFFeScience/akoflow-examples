@@ -4,38 +4,58 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1
   activities:
-    - name: estimate-local
+    - name: profile-workload
       runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-local", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "profile-workload", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: estimate-cloud
+    - name: local-gpu
       runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-cloud", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "local-gpu", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - estimate-local
-    - name: estimate-hpc
+      dependsOn: ["profile-workload"]
+    - name: hpc
       runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "estimate-hpc", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "hpc", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - estimate-cloud
-    - name: decision
+      dependsOn: ["profile-workload"]
+    - name: cloud
       runtime: showcase-infrastructure-selection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "decision", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "cloud", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - estimate-hpc
-
+      dependsOn: ["profile-workload"]
+    - name: compare-plans
+      runtime: showcase-infrastructure-selection-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "compare-plans", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["local-gpu","hpc","cloud"]
+    - name: select-scope
+      runtime: showcase-infrastructure-selection-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "select-scope", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["compare-plans"]
+    - name: train
+      runtime: showcase-infrastructure-selection-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["select-scope"]

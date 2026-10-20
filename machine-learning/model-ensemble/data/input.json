@@ -2,14 +2,40 @@
   "slug": "model-ensemble",
   "title": "Model Ensemble",
   "stages": [
-    "dataset",
-    "rf",
-    "svm",
-    "xgb",
-    "ensemble"
+    "prepare-input",
+    "predict-a",
+    "predict-b",
+    "predict-c",
+    "combine",
+    "evaluate",
+    "publish"
   ],
   "artifacts": [
     "ensemble.pkl",
     "metrics.json"
-  ]
+  ],
+  "dependencies": {
+    "prepare-input": [],
+    "predict-a": [
+      "prepare-input"
+    ],
+    "predict-b": [
+      "prepare-input"
+    ],
+    "predict-c": [
+      "prepare-input"
+    ],
+    "combine": [
+      "predict-a",
+      "predict-b",
+      "predict-c"
+    ],
+    "evaluate": [
+      "combine"
+    ],
+    "publish": [
+      "evaluate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

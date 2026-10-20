@@ -4,47 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection:v1
   activities:
-    - name: generate-data
+    - name: collect-signals
       runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "generate-data", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "collect-signals", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: feature-engineering
+    - name: build-features
       runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "feature-engineering", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "build-features", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - generate-data
-    - name: train
+      dependsOn: ["collect-signals"]
+    - name: train-detector
       runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "train-detector", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - feature-engineering
-    - name: score
+      dependsOn: ["build-features"]
+    - name: score-validation
       runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "score", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "score-validation", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - train
-    - name: threshold
+      dependsOn: ["train-detector"]
+    - name: choose-threshold
       runtime: showcase-anomaly-detection-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "threshold", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "choose-threshold", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - score
-
+      dependsOn: ["score-validation"]
+    - name: publish
+      runtime: showcase-anomaly-detection-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["choose-threshold"]

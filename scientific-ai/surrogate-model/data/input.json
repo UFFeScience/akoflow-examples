@@ -2,12 +2,39 @@
   "slug": "surrogate-model",
   "title": "Surrogate Model",
   "stages": [
-    "simulation",
-    "dataset",
-    "train-surrogate"
+    "design-samples",
+    "simulation-a",
+    "simulation-n",
+    "assemble-dataset",
+    "train-surrogate",
+    "validate",
+    "publish"
   ],
   "artifacts": [
     "surrogate.pkl",
     "validation.json"
-  ]
+  ],
+  "dependencies": {
+    "design-samples": [],
+    "simulation-a": [
+      "design-samples"
+    ],
+    "simulation-n": [
+      "design-samples"
+    ],
+    "assemble-dataset": [
+      "simulation-a",
+      "simulation-n"
+    ],
+    "train-surrogate": [
+      "assemble-dataset"
+    ],
+    "validate": [
+      "train-surrogate"
+    ],
+    "publish": [
+      "validate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

@@ -1,14 +1,11 @@
 {
   "showcase": "anomaly-detection",
-  "digest": "e8a30b0a4a704841189a4f6aad8d75319e8e2ec1c206a642e1033f2d739351d5",
+  "digest": "72e5ff5eb92eaf12e86b2e551adcf791634b94a6908735c549ea6ea4ea8bf798",
   "stages": [
-    "generate-data",
-    "feature-engineering",
-    "train",
-    "score",
-    "threshold"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "anomalies.json",
     "metrics.json"

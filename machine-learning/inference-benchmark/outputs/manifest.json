@@ -1,13 +1,11 @@
 {
   "showcase": "inference-benchmark",
-  "digest": "1de929beff1aa0382578428f41ef443443fc8e4e92ee1a7e2695a75d1cc5aeb2",
+  "digest": "3cefea59227f2468615f7170eae78698601c5297264a679b3f6527d0b669244b",
   "stages": [
-    "cpu",
-    "gpu",
-    "edge",
-    "report"
+    "compare-cost-and-latency"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "benchmark.csv",
     "report.html"

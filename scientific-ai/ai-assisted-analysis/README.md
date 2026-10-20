@@ -1,6 +1,6 @@
 # AI Assisted Analysis
 
-A reproducible AkôFlow showcase. It executes a real Docker image locally, writes deterministic artifacts, validates its output contract, and includes four versioned screenshots captured from a completed AkôFlow engine run.
+An AkôFlow orchestration contract fixture. Each declared activity writes deterministic test evidence; this fixture does not implement the model or external service described by its title. The DAG matches the documentation, including parallel branches.
 
 ## Run
 
@@ -8,7 +8,7 @@ A reproducible AkôFlow showcase. It executes a real Docker image locally, write
 ./run.sh
 ```
 
-Requires Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](./workflow.yaml); the expected contract is in [expected/manifest.json](./expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](./workflow.yaml); the expected contract is in [expected/manifest.json](./expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1`.
 
@@ -17,7 +17,7 @@ Published image: `ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-anal
 
 ### 1. Check the prerequisites
 
-Install Python 3, Docker, and a local AkôFlow server/Desktop. Set the local API connection, then confirm every prerequisite:
+Install Go, Python 3, Docker, and a local AkôFlow server/Desktop. Set the local API connection, then confirm every prerequisite:
 
 ```sh
 export AKOFLOW_API_URL=http://127.0.0.1:8080/akoflow-api
@@ -36,7 +36,7 @@ From this showcase directory:
 ./run.sh
 ```
 
-The command recreates `outputs/`, runs the complete deterministic scenario, and validates every artifact declared in `expected/manifest.json`.
+The command recreates `outputs/`, launches one process per activity in dependency waves (siblings run concurrently), and validates every artifact declared in `expected/manifest.json`.
 
 ### 3. Build the image used by the workflow
 
@@ -77,7 +77,9 @@ Open the completed run and inspect:
 - **Data** for workspace transfers;
 - the final activity's **Generated files** table for file names, sizes, and SHA-256 checksums.
 
-The versioned evidence is stored in `screenshots/`:
+Historical captures are stored in `screenshots/`. They predate the corrected DAG and must not be used to verify this revision. New daemon execution and one capture per activity are still required before claiming Desktop verification. Current local evidence is `outputs/dag-validation.json` plus `outputs/stage-<activity>.json`.
+
+Historical capture names:
 
 - `workflow.png`: completed activity DAG;
 - `execution.png`: observed execution lifecycle and timing decomposition;

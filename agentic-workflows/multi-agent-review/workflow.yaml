@@ -4,38 +4,58 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review:v1
   activities:
-    - name: researcher
+    - name: shared-context
       runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "researcher", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "shared-context", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: reviewer
+    - name: research
       runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "reviewer", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "research", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - researcher
-    - name: critic
+      dependsOn: ["shared-context"]
+    - name: code
       runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "critic", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "code", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - reviewer
-    - name: synthesis
+      dependsOn: ["shared-context"]
+    - name: domain
       runtime: showcase-multi-agent-review-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "synthesis", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "domain", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - critic
-
+      dependsOn: ["shared-context"]
+    - name: critic-review
+      runtime: showcase-multi-agent-review-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "critic-review", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["research","code","domain"]
+    - name: synthesize
+      runtime: showcase-multi-agent-review-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "synthesize", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["critic-review"]
+    - name: publish-evidence
+      runtime: showcase-multi-agent-review-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish-evidence", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["synthesize"]

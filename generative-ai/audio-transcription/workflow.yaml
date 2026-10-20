@@ -4,31 +4,45 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription:v1
   activities:
-    - name: audio
+    - name: ingest-audio
       runtime: showcase-audio-transcription-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "audio", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "ingest-audio", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: split
+    - name: segment
       runtime: showcase-audio-transcription-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "split", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "segment", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - audio
-    - name: transcribe
+      dependsOn: ["ingest-audio"]
+    - name: segment-1
       runtime: showcase-audio-transcription-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "transcribe", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "segment-1", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - split
+      dependsOn: ["segment"]
+    - name: segment-n
+      runtime: showcase-audio-transcription-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "segment-n", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["segment"]
+    - name: merge-transcript
+      runtime: showcase-audio-transcription-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "merge-transcript", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["segment-1","segment-n"]
     - name: summarize
       runtime: showcase-audio-transcription-local
       command:
@@ -36,6 +50,12 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "summarize", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - transcribe
-
+      dependsOn: ["merge-transcript"]
+    - name: publish
+      runtime: showcase-audio-transcription-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["summarize"]

@@ -2,14 +2,34 @@
   "slug": "anomaly-detection",
   "title": "Anomaly Detection",
   "stages": [
-    "generate-data",
-    "feature-engineering",
-    "train",
-    "score",
-    "threshold"
+    "collect-signals",
+    "build-features",
+    "train-detector",
+    "score-validation",
+    "choose-threshold",
+    "publish"
   ],
   "artifacts": [
     "anomalies.json",
     "metrics.json"
-  ]
+  ],
+  "dependencies": {
+    "collect-signals": [],
+    "build-features": [
+      "collect-signals"
+    ],
+    "train-detector": [
+      "build-features"
+    ],
+    "score-validation": [
+      "train-detector"
+    ],
+    "choose-threshold": [
+      "score-validation"
+    ],
+    "publish": [
+      "choose-threshold"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

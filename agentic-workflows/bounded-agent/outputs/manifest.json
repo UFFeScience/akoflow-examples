@@ -1,12 +1,11 @@
 {
   "showcase": "bounded-agent",
-  "digest": "725f896ef6bc655658c6beacb73a3cf7392ff4b00a18c0d8e95c35b9d7b20953",
+  "digest": "aa4c808bc18a07f6a5076a5ef7091eb497537a4b218f41e3cd4fc41bdd93c13a",
   "stages": [
-    "goal",
-    "agent",
-    "validator"
+    "store-trace"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "answer.json",
     "validation.json"

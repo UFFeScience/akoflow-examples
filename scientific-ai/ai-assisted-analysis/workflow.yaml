@@ -4,6 +4,13 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis:v1
   activities:
+    - name: prepare-experiment
+      runtime: showcase-ai-assisted-analysis-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "prepare-experiment", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
     - name: simulation
       runtime: showcase-ai-assisted-analysis-local
       command:
@@ -11,22 +18,44 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "simulation", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: analysis
+      dependsOn: ["prepare-experiment"]
+    - name: measurements
       runtime: showcase-ai-assisted-analysis-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "analysis", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "measurements", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - simulation
-    - name: llm-interpretation
+      dependsOn: ["simulation"]
+    - name: statistics
       runtime: showcase-ai-assisted-analysis-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "llm-interpretation", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "statistics", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - analysis
-
+      dependsOn: ["measurements"]
+    - name: ai-interpretation
+      runtime: showcase-ai-assisted-analysis-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "ai-interpretation", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["measurements"]
+    - name: validate
+      runtime: showcase-ai-assisted-analysis-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "validate", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["statistics","ai-interpretation"]
+    - name: report
+      runtime: showcase-ai-assisted-analysis-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "report", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["validate"]

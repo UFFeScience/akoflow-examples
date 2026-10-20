@@ -4,13 +4,21 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing:v1
   activities:
-    - name: documents
+    - name: collect-documents
       runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "documents", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "collect-documents", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
+    - name: clean
+      runtime: showcase-rag-indexing-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "clean", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["collect-documents"]
     - name: chunk
       runtime: showcase-rag-indexing-local
       command:
@@ -18,8 +26,7 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "chunk", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - documents
+      dependsOn: ["clean"]
     - name: embed
       runtime: showcase-rag-indexing-local
       command:
@@ -27,24 +34,36 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "embed", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - chunk
-    - name: faiss
+      dependsOn: ["chunk"]
+    - name: build-index
       runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "faiss", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "build-index", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - embed
-    - name: evaluate
+      dependsOn: ["embed"]
+    - name: retrieval-tests
       runtime: showcase-rag-indexing-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "retrieval-tests", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - faiss
-
+      dependsOn: ["build-index"]
+    - name: answer-tests
+      runtime: showcase-rag-indexing-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "answer-tests", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["build-index"]
+    - name: publish
+      runtime: showcase-rag-indexing-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["retrieval-tests","answer-tests"]

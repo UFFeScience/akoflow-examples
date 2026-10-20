@@ -19,9 +19,13 @@ if stage is not None and stage not in config["stages"]:
     raise SystemExit(f"unknown stage: {stage}")
 out = Path(args.output)
 out.mkdir(parents=True, exist_ok=True)
+if stage is not None:
+    missing = [name for name in config["dependencies"][stage] if not (out / f"stage-{name}.json").is_file()]
+    if missing:
+        raise SystemExit("missing dependency outputs: " + ", ".join(missing))
 digest = hashlib.sha256(json.dumps(config, sort_keys=True).encode()).hexdigest()
 selected_stages = [stage] if stage is not None else config["stages"]
-record = {"showcase": config["slug"], "digest": digest, "stages": selected_stages, "status": "success"}
+record = {"showcase": config["slug"], "digest": digest, "stages": selected_stages, "status": "success", "validationMode": "contract-fixture"}
 if stage is not None:
     (out / f"stage-{stage}.json").write_text(json.dumps({**record, "stage": stage}, indent=2) + "\n")
 for name in config["artifacts"] if stage is None or stage == config["stages"][-1] else []:

@@ -4,6 +4,21 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-computer-vision:v1
   activities:
+    - name: collect-images
+      runtime: showcase-computer-vision-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "collect-images", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+    - name: import-labels
+      runtime: showcase-computer-vision-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "import-labels", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["collect-images"]
     - name: augment
       runtime: showcase-computer-vision-local
       command:
@@ -11,15 +26,15 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "augment", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: train
+      dependsOn: ["import-labels"]
+    - name: train-detector
       runtime: showcase-computer-vision-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "train-detector", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - augment
+      dependsOn: ["augment"]
     - name: evaluate
       runtime: showcase-computer-vision-local
       command:
@@ -27,6 +42,12 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - train
-
+      dependsOn: ["train-detector"]
+    - name: package-model
+      runtime: showcase-computer-vision-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "package-model", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["evaluate"]

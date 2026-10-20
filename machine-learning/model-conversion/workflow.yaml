@@ -4,29 +4,58 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-model-conversion:v1
   activities:
-    - name: onnx
+    - name: load-model
       runtime: showcase-model-conversion-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "onnx", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "load-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: gguf
+    - name: export-onnx
       runtime: showcase-model-conversion-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "gguf", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "export-onnx", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - onnx
-    - name: tensorrt
+      dependsOn: ["load-model"]
+    - name: export-torchscript
       runtime: showcase-model-conversion-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "tensorrt", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "export-torchscript", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - gguf
-
+      dependsOn: ["load-model"]
+    - name: quantize-cpu
+      runtime: showcase-model-conversion-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "quantize-cpu", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["export-onnx","export-torchscript"]
+    - name: quantize-gpu
+      runtime: showcase-model-conversion-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "quantize-gpu", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["export-onnx","export-torchscript"]
+    - name: validate-outputs
+      runtime: showcase-model-conversion-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "validate-outputs", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["quantize-cpu","quantize-gpu"]
+    - name: publish-variants
+      runtime: showcase-model-conversion-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish-variants", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["validate-outputs"]

@@ -2,13 +2,39 @@
   "slug": "audio-transcription",
   "title": "Audio Transcription",
   "stages": [
-    "audio",
-    "split",
-    "transcribe",
-    "summarize"
+    "ingest-audio",
+    "segment",
+    "segment-1",
+    "segment-n",
+    "merge-transcript",
+    "summarize",
+    "publish"
   ],
   "artifacts": [
     "transcript.txt",
     "summary.md"
-  ]
+  ],
+  "dependencies": {
+    "ingest-audio": [],
+    "segment": [
+      "ingest-audio"
+    ],
+    "segment-1": [
+      "segment"
+    ],
+    "segment-n": [
+      "segment"
+    ],
+    "merge-transcript": [
+      "segment-1",
+      "segment-n"
+    ],
+    "summarize": [
+      "merge-transcript"
+    ],
+    "publish": [
+      "summarize"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

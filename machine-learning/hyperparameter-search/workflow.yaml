@@ -4,74 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1
   activities:
-    - name: load
+    - name: prepare-dataset
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "load", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "prepare-dataset", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: preprocess
+    - name: trial-1
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "preprocess", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "trial-1", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - load
-    - name: rf-1
+      dependsOn: ["prepare-dataset"]
+    - name: trial-2
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "rf-1", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "trial-2", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - preprocess
-    - name: rf-2
+      dependsOn: ["prepare-dataset"]
+    - name: trial-n
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "rf-2", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "trial-n", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - rf-1
-    - name: rf-3
+      dependsOn: ["prepare-dataset"]
+    - name: compare-trials
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "rf-3", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "compare-trials", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - rf-2
-    - name: rf-4
+      dependsOn: ["trial-1","trial-2","trial-n"]
+    - name: register-best
       runtime: showcase-hyperparameter-search-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "rf-4", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "register-best", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - rf-3
-    - name: compare
-      runtime: showcase-hyperparameter-search-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "compare", "--output", "."]
-      cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn:
-        - rf-4
-    - name: best-model
-      runtime: showcase-hyperparameter-search-local
-      command:
-        entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "best-model", "--output", "."]
-      cpuLimit: "1"
-      memoryLimit: 256Mi
-      dependsOn:
-        - compare
-
+      dependsOn: ["compare-trials"]

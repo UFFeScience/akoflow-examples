@@ -2,12 +2,30 @@
   "slug": "bounded-agent",
   "title": "Bounded Agent",
   "stages": [
-    "goal",
-    "agent",
-    "validator"
+    "prepare-objective",
+    "agent-loop",
+    "validate-output",
+    "publish-result",
+    "store-trace"
   ],
   "artifacts": [
     "answer.json",
     "validation.json"
-  ]
+  ],
+  "dependencies": {
+    "prepare-objective": [],
+    "agent-loop": [
+      "prepare-objective"
+    ],
+    "validate-output": [
+      "agent-loop"
+    ],
+    "publish-result": [
+      "validate-output"
+    ],
+    "store-trace": [
+      "validate-output"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

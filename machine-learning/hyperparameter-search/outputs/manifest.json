@@ -1,17 +1,11 @@
 {
   "showcase": "hyperparameter-search",
-  "digest": "4824cd0263899e6cb89ce3de94436ff13afde39fc80055f756a4ab3b33786770",
+  "digest": "cee885f97aa6ed9a1a82ee0413f306a866bb410d716bf0ae33fa327349b2b070",
   "stages": [
-    "load",
-    "preprocess",
-    "rf-1",
-    "rf-2",
-    "rf-3",
-    "rf-4",
-    "compare",
-    "best-model"
+    "register-best"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "leaderboard.csv",
     "best-model.pkl"

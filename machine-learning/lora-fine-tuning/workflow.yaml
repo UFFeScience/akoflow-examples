@@ -4,22 +4,29 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1
   activities:
-    - name: prepare
+    - name: fetch-base-model
       runtime: showcase-lora-fine-tuning-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "prepare", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "fetch-base-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: finetune
+    - name: prepare-examples
       runtime: showcase-lora-fine-tuning-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "finetune", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "prepare-examples", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - prepare
+      dependsOn: ["fetch-base-model"]
+    - name: fine-tune-adapters
+      runtime: showcase-lora-fine-tuning-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "fine-tune-adapters", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["prepare-examples"]
     - name: evaluate
       runtime: showcase-lora-fine-tuning-local
       command:
@@ -27,6 +34,20 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - finetune
-
+      dependsOn: ["fine-tune-adapters"]
+    - name: publish-adapter
+      runtime: showcase-lora-fine-tuning-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish-adapter", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["evaluate"]
+    - name: record-lineage
+      runtime: showcase-lora-fine-tuning-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "record-lineage", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["evaluate"]

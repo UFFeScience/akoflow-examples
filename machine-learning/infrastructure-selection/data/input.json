@@ -2,13 +2,40 @@
   "slug": "infrastructure-selection",
   "title": "Infrastructure Selection",
   "stages": [
-    "estimate-local",
-    "estimate-cloud",
-    "estimate-hpc",
-    "decision"
+    "profile-workload",
+    "local-gpu",
+    "hpc",
+    "cloud",
+    "compare-plans",
+    "select-scope",
+    "train"
   ],
   "artifacts": [
     "decision.json",
     "cost-comparison.csv"
-  ]
+  ],
+  "dependencies": {
+    "profile-workload": [],
+    "local-gpu": [
+      "profile-workload"
+    ],
+    "hpc": [
+      "profile-workload"
+    ],
+    "cloud": [
+      "profile-workload"
+    ],
+    "compare-plans": [
+      "local-gpu",
+      "hpc",
+      "cloud"
+    ],
+    "select-scope": [
+      "compare-plans"
+    ],
+    "train": [
+      "select-scope"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

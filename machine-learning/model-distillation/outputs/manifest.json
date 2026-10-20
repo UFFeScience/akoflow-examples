@@ -1,12 +1,11 @@
 {
   "showcase": "model-distillation",
-  "digest": "5921c2e4a148fb13fea7be70c1f8d04d78bff26403dff5e5aeb569ec8072dd9c",
+  "digest": "e5e063c949ecae67c526fb67fd67b39202b7bed3c74e1573f504095795918889",
   "stages": [
-    "teacher",
-    "generate-labels",
-    "student"
+    "publish"
   ],
   "status": "success",
+  "validationMode": "contract-fixture",
   "artifacts": [
     "student.pkl",
     "distillation-report.json"

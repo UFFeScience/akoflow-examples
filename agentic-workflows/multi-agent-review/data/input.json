@@ -2,13 +2,40 @@
   "slug": "multi-agent-review",
   "title": "Multi-Agent Review",
   "stages": [
-    "researcher",
-    "reviewer",
-    "critic",
-    "synthesis"
+    "shared-context",
+    "research",
+    "code",
+    "domain",
+    "critic-review",
+    "synthesize",
+    "publish-evidence"
   ],
   "artifacts": [
     "synthesis.md",
     "review.json"
-  ]
+  ],
+  "dependencies": {
+    "shared-context": [],
+    "research": [
+      "shared-context"
+    ],
+    "code": [
+      "shared-context"
+    ],
+    "domain": [
+      "shared-context"
+    ],
+    "critic-review": [
+      "research",
+      "code",
+      "domain"
+    ],
+    "synthesize": [
+      "critic-review"
+    ],
+    "publish-evidence": [
+      "synthesize"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

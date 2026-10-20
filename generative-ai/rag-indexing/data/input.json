@@ -2,14 +2,43 @@
   "slug": "rag-indexing",
   "title": "RAG Indexing",
   "stages": [
-    "documents",
+    "collect-documents",
+    "clean",
     "chunk",
     "embed",
-    "faiss",
-    "evaluate"
+    "build-index",
+    "retrieval-tests",
+    "answer-tests",
+    "publish"
   ],
   "artifacts": [
     "index.faiss",
     "evaluation.json"
-  ]
+  ],
+  "dependencies": {
+    "collect-documents": [],
+    "clean": [
+      "collect-documents"
+    ],
+    "chunk": [
+      "clean"
+    ],
+    "embed": [
+      "chunk"
+    ],
+    "build-index": [
+      "embed"
+    ],
+    "retrieval-tests": [
+      "build-index"
+    ],
+    "answer-tests": [
+      "build-index"
+    ],
+    "publish": [
+      "retrieval-tests",
+      "answer-tests"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

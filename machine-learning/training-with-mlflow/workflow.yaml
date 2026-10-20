@@ -4,22 +4,21 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow:v1
   activities:
-    - name: load-data
+    - name: ingest-data
       runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "load-data", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "ingest-data", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: preprocess
+    - name: validate
       runtime: showcase-training-with-mlflow-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "preprocess", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "validate", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - load-data
+      dependsOn: ["ingest-data"]
     - name: train
       runtime: showcase-training-with-mlflow-local
       command:
@@ -27,8 +26,7 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "train", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - preprocess
+      dependsOn: ["validate"]
     - name: evaluate
       runtime: showcase-training-with-mlflow-local
       command:
@@ -36,8 +34,7 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "evaluate", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - train
+      dependsOn: ["train"]
     - name: register-model
       runtime: showcase-training-with-mlflow-local
       command:
@@ -45,6 +42,12 @@ spec:
         arguments: ["/app/run_showcase.py", "--stage", "register-model", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - evaluate
-
+      dependsOn: ["evaluate"]
+    - name: log-mlflow-run
+      runtime: showcase-training-with-mlflow-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "log-mlflow-run", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["evaluate"]

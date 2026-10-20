@@ -2,12 +2,34 @@
   "slug": "computer-vision",
   "title": "Computer Vision",
   "stages": [
+    "collect-images",
+    "import-labels",
     "augment",
-    "train",
-    "evaluate"
+    "train-detector",
+    "evaluate",
+    "package-model"
   ],
   "artifacts": [
     "cifar10-metrics.json",
     "model.pkl"
-  ]
+  ],
+  "dependencies": {
+    "collect-images": [],
+    "import-labels": [
+      "collect-images"
+    ],
+    "augment": [
+      "import-labels"
+    ],
+    "train-detector": [
+      "augment"
+    ],
+    "evaluate": [
+      "train-detector"
+    ],
+    "package-model": [
+      "evaluate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

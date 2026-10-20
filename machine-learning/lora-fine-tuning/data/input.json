@@ -2,12 +2,34 @@
   "slug": "lora-fine-tuning",
   "title": "LoRA Fine Tuning",
   "stages": [
-    "prepare",
-    "finetune",
-    "evaluate"
+    "fetch-base-model",
+    "prepare-examples",
+    "fine-tune-adapters",
+    "evaluate",
+    "publish-adapter",
+    "record-lineage"
   ],
   "artifacts": [
     "adapter.bin",
     "evaluation.json"
-  ]
+  ],
+  "dependencies": {
+    "fetch-base-model": [],
+    "prepare-examples": [
+      "fetch-base-model"
+    ],
+    "fine-tune-adapters": [
+      "prepare-examples"
+    ],
+    "evaluate": [
+      "fine-tune-adapters"
+    ],
+    "publish-adapter": [
+      "evaluate"
+    ],
+    "record-lineage": [
+      "evaluate"
+    ]
+  },
+  "validationMode": "contract-fixture"
 }

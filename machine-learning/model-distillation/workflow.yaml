@@ -4,29 +4,50 @@ spec:
   # AkôFlow starts this OCI image; activities only declare commands inside it.
   image: ghcr.io/uffescience/akoflow-examples/showcase-model-distillation:v1
   activities:
-    - name: teacher
+    - name: load-teacher
       runtime: showcase-model-distillation-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "teacher", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "load-teacher", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-    - name: generate-labels
+    - name: soft-labels
       runtime: showcase-model-distillation-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "generate-labels", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "soft-labels", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - teacher
-    - name: student
+      dependsOn: ["load-teacher"]
+    - name: train-student
       runtime: showcase-model-distillation-local
       command:
         entrypoint: python
-        arguments: ["/app/run_showcase.py", "--stage", "student", "--output", "."]
+        arguments: ["/app/run_showcase.py", "--stage", "train-student", "--output", "."]
       cpuLimit: "1"
       memoryLimit: 256Mi
-      dependsOn:
-        - generate-labels
-
+      dependsOn: ["soft-labels"]
+    - name: quality
+      runtime: showcase-model-distillation-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "quality", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["train-student"]
+    - name: latency
+      runtime: showcase-model-distillation-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "latency", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["train-student"]
+    - name: publish
+      runtime: showcase-model-distillation-local
+      command:
+        entrypoint: python
+        arguments: ["/app/run_showcase.py", "--stage", "publish", "--output", "."]
+      cpuLimit: "1"
+      memoryLimit: 256Mi
+      dependsOn: ["quality","latency"]

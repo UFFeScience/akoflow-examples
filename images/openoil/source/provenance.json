@@ -1,0 +1,6 @@
+{
+  "originalNotebookSHA256": "fe4ca3716c6a09d7553241ea84bcbf4d701a390dca7f103629ff69844f8cba17",
+  "publishedNotebook": "openoil_derramamento_ensemble.ipynb",
+  "outputsRemoved": true,
+  "adaptation": "OpenOil member process split into native Docker activities; explicit per-member seeds; three ensemble sizes; persisted GIF and scientific validation; actual executable scenario retained."
+}

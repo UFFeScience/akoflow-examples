@@ -83,6 +83,7 @@ func main() {
 	envFile := flag.String("env-file", "", "optional env file containing AKOFLOW_API_TOKEN (never stored in output)")
 	build := flag.Bool("build", true, "build the declared image before execution")
 	registry := flag.Bool("registry-image", false, "pull and pin the public registry image instead of building locally")
+	lanes := flag.Int("lanes", 1, "parallel execution lanes on the selected local resource")
 	namePrefix := flag.String("name-prefix", "", "prefix for isolated workflow registration")
 	wait := flag.Bool("wait", true, "wait for terminal state; false submits and leaves the daemon run active")
 	observe := flag.Bool("observe", false, "follow the already submitted run recorded in evidence; never submit another run")
@@ -125,12 +126,15 @@ func main() {
 		}
 		return
 	}
-	if err := run(c, *root, *example, *build, *wait, *registry, *namePrefix); err != nil {
+	if err := run(c, *root, *example, *build, *wait, *registry, *namePrefix, *lanes); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
-func run(c client, root, relative string, build, wait, registry bool, namePrefix string) error {
+func run(c client, root, relative string, build, wait, registry bool, namePrefix string, lanes int) error {
+	if lanes < 1 || lanes > 32 {
+		return fmt.Errorf("lanes must be between 1 and 32")
+	}
 	preflight, err := c.request("GET", "preflight", nil)
 	if err != nil {
 		return err
@@ -252,7 +256,7 @@ func run(c client, root, relative string, build, wait, registry bool, namePrefix
 		if !exists {
 			return fmt.Errorf("registered activity does not match source: %v", a["name"])
 		}
-		assignments = append(assignments, map[string]any{"id": planID + "-" + fmt.Sprint(a["id"]), "planId": planID, "activityId": a["id"], "resourceId": resourceID, "orderOnResource": index, "predictedStartAt": index, "predictedFinishAt": index + 1, "metadata": map[string]any{"runtimeId": runtimeID}})
+		assignments = append(assignments, map[string]any{"id": planID + "-" + fmt.Sprint(a["id"]), "planId": planID, "activityId": a["id"], "resourceId": resourceID, "coreId": fmt.Sprintf("local-slot-%d", index%lanes), "orderOnResource": index / lanes, "predictedStartAt": index, "predictedFinishAt": index + 1, "metadata": map[string]any{"runtimeId": runtimeID}})
 	}
 	plan := map[string]any{"id": planID, "workflowVersionId": version["id"], "executionScopeId": scope["id"], "networkTopologyId": topology["id"], "source": "imported", "algorithm": "manual", "algorithmVersion": "1", "objective": "custom", "predicted": map[string]any{"makespanSeconds": len(activities), "cost": 0, "feasible": true}, "assignments": assignments}
 	imported, err := c.request("POST", "schedule-plans/import", map[string]any{"plan": plan})

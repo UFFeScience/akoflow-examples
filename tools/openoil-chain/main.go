@@ -16,6 +16,7 @@ func main() {
 	root := flag.String("root", ".", "examples checkout")
 	env := flag.String("env-file", "", "protected daemon environment file")
 	api := flag.String("api", "http://192.168.1.13:8080/akoflow-api", "daemon origin")
+	runner := flag.String("runner", "daemon-local", "compiled daemon-local executable")
 	flag.Parse()
 	if *env == "" {
 		panic("env-file required")
@@ -45,9 +46,9 @@ func main() {
 			panic(err)
 		}
 		if record.RunID == "" {
-			run(*root, "go", "run", "./tools/daemon-local", "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-registry-image", "-wait=false", "-name-prefix", "oilv1-")
+			run(*root, *runner, "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-registry-image", "-lanes", "2", "-wait=false", "-name-prefix", "oilv1-")
 		}
-		run(*root, "go", "run", "./tools/daemon-local", "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-observe", "-wait-timeout", "4h")
+		run(*root, *runner, "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-observe", "-wait-timeout", "4h")
 		raw, err = os.ReadFile(path)
 		if err != nil {
 			panic(err)

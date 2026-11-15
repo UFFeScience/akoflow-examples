@@ -1,0 +1,10 @@
+{
+  "showcase": "orcasound",
+  "status": "success",
+  "artifacts": [
+    "orcasound-results.tar.gz",
+    "orcasound-summary.json",
+    "hydrophone-spectrograms.png",
+    "orca-confidence.svg"
+  ]
+}

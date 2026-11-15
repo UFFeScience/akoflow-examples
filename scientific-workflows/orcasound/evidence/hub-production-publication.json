@@ -1,0 +1,17 @@
+{
+  "experimentId": "aa1ea015-9f96-44f6-8bf7-97aabcaae7d8",
+  "version": {
+    "id": "2e9ee74c-2c2a-49c3-b15a-9dacc1292150",
+    "workflowId": "e309acc8-3c53-4f05-ae57-5b4275aad5c3",
+    "number": 1,
+    "message": "Measured real Orcasound: 12/12 activities, twelve complete audio objects, 120 decoded seconds, 48 trained-model windows, actual spectrograms/scores and validated public results without restricted artifacts.",
+    "hash": "6460091d591f5ddbed34f6868fb62696c74232eb00b07800b3662b0db9c00af2",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "d4d7639d-ae86-4e3e-9475-aa9107f3a014",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-orcasound",
+  "image": "hub.akoflow.com/akoflow-examples/orcasound@sha256:fdf5475451f0787c8b2c58e4ae0a1fdd798d8a00a8f2fd82d50d29edcfff1c98",
+  "runId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+  "visualCount": 2
+}

@@ -1,0 +1,17 @@
+{
+  "workflowRepository": "https://github.com/pegasus-isi/orcasound-workflow",
+  "workflowCommit": "c66d070663b02536ac730b4f32f3812fdeffa2f4",
+  "inferenceRepository": "https://github.com/orcasound/aifororcas-livesystem",
+  "inferenceCommit": "dd879cfd4140c70e1478a2d67c41a13e0ee7acf4",
+  "modelRepository": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1",
+  "modelRevision": "f8705749f36d65d870cc7b5d21e71802ae77059e",
+  "modelLicense": "OrcaHello RAIL-AMS: direct upstream acquisition and internal execution; no public redistribution of upstream source/weights",
+  "adaptations": [
+    "Preserve the audio-conversion, spectrogram, trained-model inference and prediction-merge processing chain as twelve Akoflow activities.",
+    "Use twelve complete consecutive real HLS objects as an explicitly bounded frozen observation profile rather than claiming an entire hydrophone day.",
+    "Replace the obsolete S3 bucket with its current public successor while freezing object size, MD5 and SHA256.",
+    "Use the matching official trained ResNet50 implementation/config/weights, acquired unmodified at immutable revisions. The old Pegasus VGGish checkpoint-directory lookup does not load the supplied FastAI learner file and cannot provide trained inference.",
+    "Publish reproducible wrapper/source manifests and exact dependency image; acquire restricted artifacts from upstream in the acquisition activity instead of redistributing them.",
+    "Keep scientific calculations local after acquisition; retain decoded WAVs, actual spectrograms, all model windows and observed candidate metrics."
+  ]
+}

@@ -1,0 +1,188 @@
+{
+  "status": "verified-inputs",
+  "sensor": "rpi_bush_point",
+  "sourceSessionTimestamp": 1539203407,
+  "selection": "First twelve complete consecutive public HLS transport-stream objects of this session; no synthesized or truncated samples. Exact duration is measured by decoding in the workflow.",
+  "upstreamPegasusCommit": "c66d070663b02536ac730b4f32f3812fdeffa2f4",
+  "upstreamInferenceCommit": "dd879cfd4140c70e1478a2d67c41a13e0ee7acf4",
+  "modelRevision": "f8705749f36d65d870cc7b5d21e71802ae77059e",
+  "recordings": [
+    {
+      "key": "rpi_bush_point/hls/1539203407/live000.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live000.ts",
+      "filename": "live000.ts",
+      "bytes": 186496,
+      "etag": "092aa2be1e74b91e13989a609bc83015",
+      "sha256": "17f6730afb301b54fa8342861cc6c616251cb9342081fc60dc04224cb263d92e",
+      "playlistDurationSeconds": 10.005378
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live001.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live001.ts",
+      "filename": "live001.ts",
+      "bytes": 186308,
+      "etag": "23f1e26ba8a8a59a7f98a647a63d42f0",
+      "sha256": "7e4fd4c968cf1918b0fee6e98279a1e03f1ee73616808bc94b927d4157c86059",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live002.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live002.ts",
+      "filename": "live002.ts",
+      "bytes": 186308,
+      "etag": "f659210c3bc624dd46e0cac6e1758726",
+      "sha256": "ec5179c2c248e6e9d8f495cb8c26c8b61dc3e1068eeff40c09298fcf70da6bae",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live003.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live003.ts",
+      "filename": "live003.ts",
+      "bytes": 185932,
+      "etag": "083cfeb537765681c1a80ccb4dd487b0",
+      "sha256": "b93365b6dca32b331f3bc8da9106b6d7976eb2bfcd82862462bdf1d4e427990c",
+      "playlistDurationSeconds": 9.984011
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live004.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live004.ts",
+      "filename": "live004.ts",
+      "bytes": 186308,
+      "etag": "32ecc671958a52450d04a8eb4e98eb26",
+      "sha256": "3ae1471006097903ed629dfb7c46a4443a676ea9b5bf797b7457f2ec7817d4df",
+      "playlistDurationSeconds": 10.005333
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live005.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live005.ts",
+      "filename": "live005.ts",
+      "bytes": 186308,
+      "etag": "8cfbafee83d4a9a4cb1882b8d9a9d181",
+      "sha256": "9fa32c9f604635e1c80b75dcec002df443264e198b9de55dab5a4e9181b22d61",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live006.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live006.ts",
+      "filename": "live006.ts",
+      "bytes": 186308,
+      "etag": "4ad7afb3e27b4952aa765fbf48201569",
+      "sha256": "83558ad1f1cd0c723558e5c03bba13e0b7e7028ef914529b373abb5de48a5747",
+      "playlistDurationSeconds": 10.005378
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live007.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live007.ts",
+      "filename": "live007.ts",
+      "bytes": 185932,
+      "etag": "c98ba046e361494ad32a4233bcc01467",
+      "sha256": "0edf49ffc0ea66c8745125eb41003e1c91e596ca193e921b61c7b16c9e658f24",
+      "playlistDurationSeconds": 9.984
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live008.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live008.ts",
+      "filename": "live008.ts",
+      "bytes": 186308,
+      "etag": "11e5e8315a440ce1f06b7196636aaa01",
+      "sha256": "af66d18d6a3fb940afc27f795cb223afe70b6109668625cb8c78e7f00c282db0",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live009.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live009.ts",
+      "filename": "live009.ts",
+      "bytes": 186120,
+      "etag": "4e07343c4f4a4d900fc9c7f6d4db11b8",
+      "sha256": "1253857e8b9bf1d886b2a7213cf1bcc10143aa9b2fb0f7fa55b070c7b71f6c60",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live010.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live010.ts",
+      "filename": "live010.ts",
+      "bytes": 186308,
+      "etag": "1091dbbb196a7d4dfb6dcf7d22e1daff",
+      "sha256": "dd143d2665b70dee7f7346b6595a1c9e49e64ed4a5e0264579b07090d7eabaad",
+      "playlistDurationSeconds": 10.005356
+    },
+    {
+      "key": "rpi_bush_point/hls/1539203407/live011.ts",
+      "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live011.ts",
+      "filename": "live011.ts",
+      "bytes": 185932,
+      "etag": "994b00370c01f41eb27229ec849d9dba",
+      "sha256": "fcd0061dd607e0347d7151aa9022b207a4b455a244d559ccac339c379a98b6f1",
+      "playlistDurationSeconds": 9.984033
+    }
+  ],
+  "modelFiles": [
+    {
+      "filename": "LICENSE",
+      "url": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1/resolve/f8705749f36d65d870cc7b5d21e71802ae77059e/LICENSE",
+      "bytes": 11343,
+      "sha256": "9ace019e74aecfc29ee1dd31f09a966ef29fd5531337dfff5f03118c4896f121"
+    },
+    {
+      "filename": "config.json",
+      "url": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1/resolve/f8705749f36d65d870cc7b5d21e71802ae77059e/config.json",
+      "bytes": 789,
+      "sha256": "a1e71456e6b3bab82b6c5e0a10c6e6c34c8bd990ffab732b283b7437c25954ce"
+    },
+    {
+      "filename": "config.yaml",
+      "url": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1/resolve/f8705749f36d65d870cc7b5d21e71802ae77059e/config.yaml",
+      "bytes": 1634,
+      "sha256": "7206c04a9e39ad7326abf186f378035a63dbbc33a8d12fe3e553870c1fccfeb5"
+    },
+    {
+      "filename": "README.md",
+      "url": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1/resolve/f8705749f36d65d870cc7b5d21e71802ae77059e/README.md",
+      "bytes": 8659,
+      "sha256": "938e70ad127bae32c2ac0c1cd9e179eaa029ad26f7a93ec8b2cc7b89caf6255c"
+    },
+    {
+      "filename": "model.safetensors",
+      "url": "https://huggingface.co/orcasound/orcahello-srkw-detector-v1/resolve/f8705749f36d65d870cc7b5d21e71802ae77059e/model.safetensors",
+      "bytes": 102720184,
+      "sha256": "a1e41e52989e1677f1e5ca5eef2a289efab50ba7da6b5826048f546f2160f89b"
+    }
+  ],
+  "retrievedAt": "2026-11-15T19:09:00.184871+00:00",
+  "modelLFSObjectSHA256Verified": true,
+  "modelLFSObjectSHA256": "a1e41e52989e1677f1e5ca5eef2a289efab50ba7da6b5826048f546f2160f89b",
+  "sourcePlaylist": {
+    "url": "https://audio-orcasound-net.s3.us-west-2.amazonaws.com/rpi_bush_point/hls/1539203407/live.m3u8",
+    "bytes": 11874,
+    "md5": "565ad9ddc1a4c65995cc946b73540cb8",
+    "sha256": "6674a0323721774712ec4d51773d48254b005df1c107ca89b84754620d1d0ae8"
+  },
+  "modelTensorCount": 332,
+  "runtimeFiles": [
+    {
+      "filename": "__init__.py",
+      "url": "https://raw.githubusercontent.com/orcasound/aifororcas-livesystem/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem/src/model/__init__.py",
+      "bytes": 686,
+      "sha256": "6db2aca2dab5622df701243e9305724640c40793e7c270bdf27acf495fe0edd9"
+    },
+    {
+      "filename": "inference.py",
+      "url": "https://raw.githubusercontent.com/orcasound/aifororcas-livesystem/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem/src/model/inference.py",
+      "bytes": 12712,
+      "sha256": "1e7103f2977d761bddf2cc891e5d9814d7c6fb783f3557cfe07a06b496f79ce9"
+    },
+    {
+      "filename": "audio_frontend.py",
+      "url": "https://raw.githubusercontent.com/orcasound/aifororcas-livesystem/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem/src/model/audio_frontend.py",
+      "bytes": 19103,
+      "sha256": "33e3f1bc67aa2ef1e940db5bf560defcfd6d00e4a48f54487d10f469d00aac8a"
+    },
+    {
+      "filename": "types.py",
+      "url": "https://raw.githubusercontent.com/orcasound/aifororcas-livesystem/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem/src/model/types.py",
+      "bytes": 6625,
+      "sha256": "be89013a1f2149bac56165224b7fab23058e53a5b6825b29f87833e4cac6d5dd"
+    }
+  ],
+  "distributionPolicy": "Public wrapper/image manifests contain no upstream RAIL source or weights. Each installation acquires unmodified upstream artifacts directly at the recorded revisions; public result archives exclude them."
+}

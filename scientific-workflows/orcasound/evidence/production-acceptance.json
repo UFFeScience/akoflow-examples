@@ -1,0 +1,58 @@
+{
+  "publicAssetsHashVerified": [
+    {
+      "name": "hydrophone-spectrograms.png",
+      "bytes": 730606,
+      "sha256": "9b2ba9bfbaa6a75077bdfd0dda018d1d4a379720b9d2295e3dd10f90052e541c"
+    },
+    {
+      "name": "orca-confidence.svg",
+      "bytes": 62333,
+      "sha256": "1d38027e0c86aae62e2c5558f9629f58bcfceaefef2e7d1f41ece03b1097b9d1"
+    },
+    {
+      "name": "orcasound-results.tar.gz",
+      "bytes": 17924126,
+      "sha256": "1af2490631d9c4cd643794511525e86f6176762662ca14b70fb54b82322c2676"
+    },
+    {
+      "name": "orcasound-summary.json",
+      "bytes": 21603,
+      "sha256": "37db8031b2055fc0a450c30e34cc1768bb39bd53e2a62e51395afe1bfba10fe3"
+    },
+    {
+      "name": "source.tar.gz",
+      "bytes": 25093,
+      "sha256": "e0bd27fa969c6914ec4e47e8dcf48dadee237af0d98a2f7d6f5e02015bb15057"
+    }
+  ],
+  "publicExactImageManifestVerified": true,
+  "restrictedArtifactsExcludedFromPublicSourceImageAndResults": true,
+  "imageDigest": "sha256:fdf5475451f0787c8b2c58e4ae0a1fdd798d8a00a8f2fd82d50d29edcfff1c98",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-orcasound",
+  "nativeCompletedActivities": 12,
+  "observedSeconds": 92.41712808609009,
+  "decodedSeconds": 120,
+  "inferenceWindows": 48,
+  "positiveCandidateWindows": 0,
+  "positiveCandidateFiles": 0,
+  "strictTrainedTensorCount": 332,
+  "visualCount": 2,
+  "visualBrowserGate": "passed",
+  "visualBrowserProof": "evidence/production-browser.jpg",
+  "darkThemeRenderVerified": true,
+  "visuals": [
+    {
+      "name": "hydrophone-spectrograms.png",
+      "width": 1600,
+      "height": 1050
+    },
+    {
+      "name": "orca-confidence.svg",
+      "width": 1152,
+      "height": 480
+    }
+  ],
+  "publicDockerPullVerified": true,
+  "temporaryOwnerSessionRevoked": true
+}

@@ -1,0 +1,7 @@
+/outputs/
+/outputs-daemon/
+/.private/
+/evidence/*.tar.gz
+__pycache__/
+*.safetensors
+*.pkl

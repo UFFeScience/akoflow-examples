@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-orcasound",
+  "experimentId": "9b3fad8a-4a71-49b8-83d4-94a12f6871bb",
+  "version": 2,
+  "resultCount": 1,
+  "publicationId": "d82b1f46-f186-44fe-99a1-434491afbbb2",
+  "runId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/d82b1f46-f186-44fe-99a1-434491afbbb2/versions/2",
+  "image": "ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

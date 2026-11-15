@@ -502,6 +502,22 @@
     "yamlHash": "889e01393b7246ced025c00e5878f71d9d192575ff45fb5064cbd7bb66436f5c"
   },
   {
+    "experimentId": "aa1ea015-9f96-44f6-8bf7-97aabcaae7d8",
+    "publicationId": "d4d7639d-ae86-4e3e-9475-aa9107f3a014",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-orcasound",
+    "image": "hub.akoflow.com/akoflow-examples/orcasound@sha256:fdf5475451f0787c8b2c58e4ae0a1fdd798d8a00a8f2fd82d50d29edcfff1c98",
+    "runId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+    "visualCount": 2,
+    "activityCount": 12,
+    "examplePath": "scientific-workflows/orcasound",
+    "route": "/docs/showcase/scientific-workflows/orcasound",
+    "uri": "akoflow://hub/publications/d4d7639d-ae86-4e3e-9475-aa9107f3a014/versions/1",
+    "version": 1,
+    "versionId": "2e9ee74c-2c2a-49c3-b15a-9dacc1292150",
+    "yamlHash": "6460091d591f5ddbed34f6868fb62696c74232eb00b07800b3662b0db9c00af2"
+  },
+  {
     "experimentId": "c1eaee43-8ea3-427c-b993-f86abbfef983",
     "publicationId": "a247b881-2843-43e6-9e46-19621fcb805d",
     "resultCount": 1,

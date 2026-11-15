@@ -48,14 +48,22 @@
     {
       "slug": "orcasound",
       "name": "Orcasound",
-      "status": "inputs-verified-awaiting-adaptation-and-execution",
+      "status": "published-production",
       "visualPlan": "Spectrogram and detections timeline computed from the selected real hydrophone recording.",
       "visualRequiredBeforePublication": true,
       "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/orcasound",
       "recordingObjects": 12,
       "modelRevision": "f8705749f36d65d870cc7b5d21e71802ae77059e",
       "modelSHA256": "a1e41e52989e1677f1e5ca5eef2a289efab50ba7da6b5826048f546f2160f89b",
-      "knownUpstreamIssue": "Pegasus file-path checkpoint lookup silently skips loading incompatible supplied FastAI learner; use declared official trained OrcaHello inference with strict matching weights, never random initialization."
+      "knownUpstreamIssue": "Pegasus file-path checkpoint lookup silently skips loading incompatible supplied FastAI learner; use declared official trained OrcaHello inference with strict matching weights, never random initialization.",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-orcasound",
+      "activityCount": 12,
+      "completedActivityCount": 12,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/orcasound/evidence/hub-production-publication.json",
+      "finding": "120 decoded real-audio seconds, 48 trained-model windows, 0 positive candidates at the declared thresholds",
+      "observedSeconds": 92.41712808609009,
+      "acquisitionPolicy": "Restricted unmodified model/source acquired directly from upstream at immutable revisions; not redistributed in public image/source/results"
     },
     {
       "slug": "somospie",
@@ -134,7 +142,7 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "orcasound",
+  "nextWorkflow": "somospie",
   "sourceBatchPR": {
     "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
     "status": "merged",

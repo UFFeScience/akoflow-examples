@@ -1,0 +1,3 @@
+id: variant-calling-scope
+name: variant-calling local scope
+environmentVersionIds: [variant-calling-v1]

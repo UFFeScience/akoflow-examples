@@ -1,0 +1,10 @@
+{
+  "showcase": "variant-calling",
+  "status": "success",
+  "artifacts": [
+    "variant-results.tar.gz",
+    "variant-summary.json",
+    "variant-positions.tsv",
+    "variant-summary.svg"
+  ]
+}

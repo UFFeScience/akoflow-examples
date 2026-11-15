@@ -1,0 +1,68 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-variant-calling",
+  "nativeCompletedActivities": 14,
+  "observedSeconds": 1673.4412508010864,
+  "samples": [
+    {
+      "sample": "SRR2584866",
+      "readPairs": 2768398,
+      "primaryMates": 5536796,
+      "mappedRecords": 5541930,
+      "pileupSites": 4320340,
+      "filteredVariantCount": 790,
+      "types": {
+        "SNP": 688,
+        "INDEL": 102,
+        "MNP": 0
+      }
+    },
+    {
+      "sample": "SRR2589044",
+      "readPairs": 1107090,
+      "primaryMates": 2214180,
+      "mappedRecords": 2229228,
+      "pileupSites": 4623146,
+      "filteredVariantCount": 11,
+      "types": {
+        "SNP": 7,
+        "INDEL": 4,
+        "MNP": 0
+      }
+    }
+  ],
+  "visualCount": 1,
+  "publicAssetsHashVerified": [
+    {
+      "name": "variant-results.tar.gz",
+      "bytes": 706929369,
+      "sha256": "869c7a930ebf105c46d10264e892b7161395d55626ae88bd2a6294aa981490d2"
+    },
+    {
+      "name": "variant-summary.json",
+      "bytes": 164018,
+      "sha256": "448422bc065998d480a9eadfa53161d97b0d71be0409fc1258f3a359d00a3d66"
+    },
+    {
+      "name": "variant-summary.svg",
+      "bytes": 58850,
+      "sha256": "846c3248e0ec8f95f04c5b501257b77dc9b2421c61583514ebd393d3a9340f7a"
+    },
+    {
+      "name": "variant-positions.tsv",
+      "bytes": 38230,
+      "sha256": "24ae2650539c7491af60491019129dcd4c7bbb55777793354ebc4e60c1d0ed6a"
+    }
+  ],
+  "sourceSHA256Verified": "ea89c189d43e304166e275c53883b00a679490d4b636c8caeee947324a9466ff",
+  "publicImmutableImageVerified": true,
+  "visualBrowserGate": "passed",
+  "visualBrowserProof": "evidence/production-browser.jpg",
+  "visualNaturalDimensions": [
+    1200,
+    880
+  ],
+  "visualSource": "https://hub.akoflow.com/showcase-results/scientific/variant-calling/variant-summary.svg",
+  "darkThemeRenderVerified": true,
+  "publicDockerPullVerified": true,
+  "temporaryOwnerSessionRevoked": true
+}

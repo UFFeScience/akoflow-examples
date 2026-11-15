@@ -90,7 +90,7 @@ def simulate(index):
 def validate_horizon(ds, p):
     hours = ((ds.time.values - np.datetime64(p["inicio"])) / np.timedelta64(1, "h")).astype(float)
     assert len(hours) >= 2 and hours[0] == 0 and np.allclose(np.diff(hours), 1), "Invalid hourly time axis"
-    if hours[-1] < p["horas_simuladas"] - 1:
+    if hours[-1] < p["horas_simuladas"]:
         meanings = ds.status.attrs["flag_meanings"].split()
         values = ds.status.attrs.get("flag_values", list(range(len(meanings))))
         assert "stranded" in meanings and hours[-1] >= p["horas_vazamento"], "Unexpected premature termination"

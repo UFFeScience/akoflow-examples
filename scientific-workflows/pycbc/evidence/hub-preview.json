@@ -1,0 +1,602 @@
+{
+  "id": "74f6d2eddb266153801969722ae57874a040e79bddc57951a12aee533999c08b",
+  "publication": {
+    "id": "7117fe91-1ecc-40f2-86a8-2f1c21bc2efe",
+    "title": "PyCBC / LIGO \u2014 Gravitational-Wave Matched Filtering",
+    "slug": "scientific-workflows-pycbc",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 9 completed activities.",
+    "readme": "# PyCBC / LIGO \u2014 Gravitational-Wave Matched Filtering\n\nNative Ak\u00f4Flow gravitational-wave analysis using PyCBC 2.10.0 scientific functions, with complete real 4096-second H1/L1 GWOSC observations associated with GW150914. All 33,554,432 original 4096Hz strain samples are acquired and retained; no observed strain or software injections are simulated. Theoretical IMRPhenomD waveforms are used as matched-filter templates, not added to the observations.\n\nNine activities acquire observations, construct a 66-template physical mass grid, condition each detector, filter both detectors, evaluate zero-lag/time-shift coincidences, create scientific views and retain final artifacts. The mass grid covers component masses 20..70 solar masses in steps of five, with mass1 >= mass2 and zero spins. It is sparse and non-exhaustive, without a minimal-match guarantee. This is a targeted known-event reanalysis, not a full PyCBC HTCondor survey, calibrated false-alarm claim or parameter posterior.\n\nThe original data are highpassed at 15Hz, antialias-resampled to 1024Hz for the declared 20\u2013300Hz filtering band and cropped by two seconds per edge. Median Welch PSD estimates use four-second windows/two-second stride with four-second Hann inverse-spectrum truncation. Full conditioned records are filtered; eight seconds per edge are excluded for wraparound. DATA/CBC_CAT1/CBC_CAT2 and NO_CBC_HW_INJ are required. Other original injection flags are preserved, including the L1 NO_CW_HW_INJ state; no claim that all kinds of hardware injections are absent is made.\n\nTriggers above SNR 5.5 are clustered per template at 0.1s; shared-template H1/L1 pairs use a 15ms window and are clustered across templates at 1s. Fourteen declared time shifts provide exploratory score comparisons with a catalogue +/-1s exclusion. Followup chooses the strongest coincidence in the explicit known-event +/-0.5s window, or the global maximum if absent. No chi-square reweighting, calibrated significance or blind discovery is claimed. Detector strain, noise spectra, actual matched-filter SNR and coincidence plots are derived from measured arrays.\n\nRun ./prepare.sh, ./validate.sh -definition, ./run.sh and ./validate.sh. Only acquisition needs network after preparation. Independent validation re-reads all raw observations, reproduces conditioning/PSD/selected filtering, checks the matched-filter normalization independently in the frequency domain, validates bank/trigger/coincidence invariants, verifies every derived hash and both PNGs. Upstream source/license are retained for provenance; the image uses the pinned installed PyCBC distribution and exact frozen dependency list. A contract check does not establish actual native completion.\n\nSources: https://github.com/gwastro/pycbc/tree/58f97dfcbeb9fe989fd7e42fd50b989311827ecd ; https://pycbc.org/pycbc/latest/html/gw150914.html ; https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/ .\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+  "workflowName": "pycbc-local-25b5a1fbc4",
+  "yaml": "name: pycbc-local-25b5a1fbc4\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - acquire\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: acquire\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - bank\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: bank\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - condition\n                - --output\n                - .\n                - --detector\n                - H1\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: condition-H1\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - filter\n                - --output\n                - .\n                - --detector\n                - H1\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - bank\n            - condition-H1\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: filter-H1\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - condition\n                - --output\n                - .\n                - --detector\n                - L1\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: condition-L1\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - filter\n                - --output\n                - .\n                - --detector\n                - L1\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - bank\n            - condition-L1\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: filter-L1\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - coincidence\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - filter-H1\n            - filter-L1\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: coincidence\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - figures\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n            - bank\n            - coincidence\n            - condition-H1\n            - condition-L1\n            - filter-H1\n            - filter-L1\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: figures\n          runtime: pycbc-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - package\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - figures\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: pycbc-local\n            workspaceSeedPath: \"\"\n          name: package\n          runtime: pycbc-local\n    dataDependencies:\n        - consumerActivity: condition-H1\n          logicalName: observations.tar\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: condition-L1\n          logicalName: observations.tar\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: observations.tar\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: template-bank.json\n          producerActivity: bank\n          sizeBytes: 1\n        - consumerActivity: filter-H1\n          logicalName: template-bank.json\n          producerActivity: bank\n          sizeBytes: 1\n        - consumerActivity: filter-L1\n          logicalName: template-bank.json\n          producerActivity: bank\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: coincidences.json\n          producerActivity: coincidence\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: H1-condition.tar.gz\n          producerActivity: condition-H1\n          sizeBytes: 1\n        - consumerActivity: filter-H1\n          logicalName: H1-condition.tar.gz\n          producerActivity: condition-H1\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: L1-condition.tar.gz\n          producerActivity: condition-L1\n          sizeBytes: 1\n        - consumerActivity: filter-L1\n          logicalName: L1-condition.tar.gz\n          producerActivity: condition-L1\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: coincidence-analysis.png\n          producerActivity: figures\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-results.tar.gz\n          producerActivity: figures\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-summary.json\n          producerActivity: figures\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: detector-analysis.png\n          producerActivity: figures\n          sizeBytes: 1\n        - consumerActivity: coincidence\n          logicalName: H1-triggers.json\n          producerActivity: filter-H1\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: H1-snr-envelopes.npz\n          producerActivity: filter-H1\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: H1-triggers.json\n          producerActivity: filter-H1\n          sizeBytes: 1\n        - consumerActivity: coincidence\n          logicalName: L1-triggers.json\n          producerActivity: filter-L1\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: L1-snr-envelopes.npz\n          producerActivity: filter-L1\n          sizeBytes: 1\n        - consumerActivity: figures\n          logicalName: L1-triggers.json\n          producerActivity: filter-L1\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-acquire",
+      "exitCode": 0,
+      "finishedAt": 1794783263.3670049,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\nVerified complete observed detector strain: H1 130158262\nVerified complete observed detector strain: L1 125865927\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783235.0231407,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-bank",
+      "exitCode": 0,
+      "finishedAt": 1794783247.3689764,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783235.0433571,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-coincidence",
+      "exitCode": 0,
+      "finishedAt": 1794783352.4789422,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783350.5747888,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-condition-h1",
+      "exitCode": 0,
+      "finishedAt": 1794783276.7580237,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783266.403869,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-condition-l1",
+      "exitCode": 0,
+      "finishedAt": 1794783294.242533,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783282.4674637,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-figures",
+      "exitCode": 0,
+      "finishedAt": 1794783384.1723151,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783361.8467274,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-filter-h1",
+      "exitCode": 0,
+      "finishedAt": 1794783312.9312441,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\nH1 completed physical template 0 20 20\nH1 completed physical template 1 25 20\nH1 completed physical template 2 25 25\nH1 completed physical template 3 30 20\nH1 completed physical template 4 30 25\nH1 completed physical template 5 30 30\nH1 completed physical template 6 35 20\nH1 completed physical template 7 35 25\nH1 completed physical template 8 35 30\nH1 completed physical template 9 35 35\nH1 completed physical template 10 40 20\nH1 completed physical template 11 40 25\nH1 completed physical template 12 40 30\nH1 completed physical template 13 40 35\nH1 completed physical template 14 40 40\nH1 completed physical template 15 45 20\nH1 completed physical template 16 45 25\nH1 completed physical template 17 45 30\nH1 completed physical template 18 45 35\nH1 completed physical template 19 45 40\nH1 completed physical template 20 45 45\nH1 completed physical template 21 50 20\nH1 completed physical template 22 50 25\nH1 completed physical template 23 50 30\nH1 completed physical template 24 50 35\nH1 completed physical template 25 50 40\nH1 completed physical template 26 50 45\nH1 completed physical template 27 50 50\nH1 completed physical template 28 55 20\nH1 completed physical template 29 55 25\nH1 completed physical template 30 55 30\nH1 completed physical template 31 55 35\nH1 completed physical template 32 55 40\nH1 completed physical template 33 55 45\nH1 completed physical template 34 55 50\nH1 completed physical template 35 55 55\nH1 completed physical template 36 60 20\nH1 completed physical template 37 60 25\nH1 completed physical template 38 60 30\nH1 completed physical template 39 60 35\nH1 completed physical template 40 60 40\nH1 completed physical template 41 60 45\nH1 completed physical template 42 60 50\nH1 completed physical template 43 60 55\nH1 completed physical template 44 60 60\nH1 completed physical template 45 65 20\nH1 completed physical template 46 65 25\nH1 completed physical template 47 65 30\nH1 completed physical template 48 65 35\nH1 completed physical template 49 65 40\nH1 completed physical template 50 65 45\nH1 completed physical template 51 65 50\nH1 completed physical template 52 65 55\nH1 completed physical template 53 65 60\nH1 completed physical template 54 65 65\nH1 completed physical template 55 70 20\nH1 completed physical template 56 70 25\nH1 completed physical template 57 70 30\nH1 completed physical template 58 70 35\nH1 completed physical template 59 70 40\nH1 completed physical template 60 70 45\nH1 completed physical template 61 70 50\nH1 completed physical template 62 70 55\nH1 completed physical template 63 70 60\nH1 completed physical template 64 70 65\nH1 completed physical template 65 70 70\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783282.796303,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-filter-l1",
+      "exitCode": 0,
+      "finishedAt": 1794783346.1568518,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\nL1 completed physical template 0 20 20\nL1 completed physical template 1 25 20\nL1 completed physical template 2 25 25\nL1 completed physical template 3 30 20\nL1 completed physical template 4 30 25\nL1 completed physical template 5 30 30\nL1 completed physical template 6 35 20\nL1 completed physical template 7 35 25\nL1 completed physical template 8 35 30\nL1 completed physical template 9 35 35\nL1 completed physical template 10 40 20\nL1 completed physical template 11 40 25\nL1 completed physical template 12 40 30\nL1 completed physical template 13 40 35\nL1 completed physical template 14 40 40\nL1 completed physical template 15 45 20\nL1 completed physical template 16 45 25\nL1 completed physical template 17 45 30\nL1 completed physical template 18 45 35\nL1 completed physical template 19 45 40\nL1 completed physical template 20 45 45\nL1 completed physical template 21 50 20\nL1 completed physical template 22 50 25\nL1 completed physical template 23 50 30\nL1 completed physical template 24 50 35\nL1 completed physical template 25 50 40\nL1 completed physical template 26 50 45\nL1 completed physical template 27 50 50\nL1 completed physical template 28 55 20\nL1 completed physical template 29 55 25\nL1 completed physical template 30 55 30\nL1 completed physical template 31 55 35\nL1 completed physical template 32 55 40\nL1 completed physical template 33 55 45\nL1 completed physical template 34 55 50\nL1 completed physical template 35 55 55\nL1 completed physical template 36 60 20\nL1 completed physical template 37 60 25\nL1 completed physical template 38 60 30\nL1 completed physical template 39 60 35\nL1 completed physical template 40 60 40\nL1 completed physical template 41 60 45\nL1 completed physical template 42 60 50\nL1 completed physical template 43 60 55\nL1 completed physical template 44 60 60\nL1 completed physical template 45 65 20\nL1 completed physical template 46 65 25\nL1 completed physical template 47 65 30\nL1 completed physical template 48 65 35\nL1 completed physical template 49 65 40\nL1 completed physical template 50 65 45\nL1 completed physical template 51 65 50\nL1 completed physical template 52 65 55\nL1 completed physical template 53 65 60\nL1 completed physical template 54 65 65\nL1 completed physical template 55 70 20\nL1 completed physical template 56 70 25\nL1 completed physical template 57 70 30\nL1 completed physical template 58 70 35\nL1 completed physical template 59 70 40\nL1 completed physical template 60 70 45\nL1 completed physical template 61 70 50\nL1 completed physical template 62 70 55\nL1 completed physical template 63 70 60\nL1 completed physical template 64 70 65\nL1 completed physical template 65 70 70\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783316.2197044,
+      "status": "completed"
+    },
+    {
+      "activityId": "pycbc-local-25b5a1fbc4-package",
+      "exitCode": 0,
+      "finishedAt": 1794783396.9712029,
+      "log": "PyCBC.libutils: pkg-config call failed, setting NO_PKGCONFIG=1\n[AKOFLOW INFO] Activity started on runtime pycbc-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794783395.148077,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:319229ebd4a90149ca60d221363dc231413f48736fd243575f2d3340f5135579",
+      "dataObjectId": "30d5636fca2d434d7c9d56f537114fd6",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "08909a233e9966d4ae0886f6a3d3c477",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-acquire",
+      "relativePath": "acquisition.json",
+      "sizeBytes": 1101
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c189b36dc74ecdb13f5c81e2108bf134ba7ade4e53f030bd850ab0843329719b",
+      "dataObjectId": "784aef5c70478d4e7e469fdd337f6c55",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "c4e5fa399930e29028c720dc2a5ce2ed",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-acquire",
+      "relativePath": "observations.tar",
+      "sizeBytes": 256030720
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d4e402d2a5b2fa0741af3ee2be81a6f62f1168499d1577a6a6b684a73ada9292",
+      "dataObjectId": "f2a3229db47a65c0c4ec7139396dfe78",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "9df98945e1190dec976072a9612ef91b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-acquire",
+      "relativePath": "stage-acquire.json",
+      "sizeBytes": 68
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:84d128482daa253e46621b0db4183c94e1d1208acc83516aa12d35e06252ab9b",
+      "dataObjectId": "6dc8ef5b6e3f7babea2f8d841fcf1e94",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "799e7c61d492c56b3daf93a780ffbb5f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-bank",
+      "relativePath": "stage-bank.json",
+      "sizeBytes": 65
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2e91ad3330cb1cdd33ff025b6c117fa330260c384477361472766c23fddfa42a",
+      "dataObjectId": "abd176500abc0351829029f835ccb4c6",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "7a53299e7a6496380aac545727241216",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-bank",
+      "relativePath": "template-bank.json",
+      "sizeBytes": 10768
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0d49cd8a5d24461596529f7e1a80b61457bc536d32cd28ed57b621b35e5eb69e",
+      "dataObjectId": "fe4968b176a554bbd29753d41c60d815",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "7f440d8cea42f9951591139c9b30ae6c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-coincidence",
+      "relativePath": "coincidences.json",
+      "sizeBytes": 21002
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8cd6b05a0f2da8ab5a19269e601166ebf83ad1fefabc635e957de98eeadb9f94",
+      "dataObjectId": "d9442675b4c5cc35e62e1dfd7cb4aa83",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "57f391837ff120eb053fb457a17179f8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-coincidence",
+      "relativePath": "stage-coincidence.json",
+      "sizeBytes": 72
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:64d589cf6361544605fc90bdd92020a139ec1f59fcbca4c489a7c8052040ff95",
+      "dataObjectId": "ee945f505a41fc2c778433f506e594c6",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "8a96042dcd19604d25107da4cd584d39",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-h1",
+      "relativePath": "H1-condition.json",
+      "sizeBytes": 941
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e3a31cbd87efaa83c4efa1fff36f523fa19d71a03faf20689e264084ca571218",
+      "dataObjectId": "0f7cc745df35a76292f13176cb9a8258",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "b57669a8ff9ec507725c262c65d54e19",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-h1",
+      "relativePath": "H1-condition.npz",
+      "sizeBytes": 45203414
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ac7f25ed8a521ad6fac18ebc3838cad800dfc5190aff662a264b212194088490",
+      "dataObjectId": "efeb4f70814968fc046a4957db13aefa",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "a7a35c33e28e56c54411d5244ca54eaf",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-h1",
+      "relativePath": "H1-condition.tar.gz",
+      "sizeBytes": 45217917
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ca03b7745373969deef4bc110301b40093f8b218ce004e25e6289c9cab14c6f1",
+      "dataObjectId": "f40884b86528c276b18b044f0797d3b7",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "de530e638dbb2387fc3724e2bd85646e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-h1",
+      "relativePath": "stage-condition-H1.json",
+      "sizeBytes": 70
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6869f71751962ed612dda0070195e79d24aef5c6fbf24d9352248e3b44bbe091",
+      "dataObjectId": "cda75eb3b666e3d8a63806c10f1d12a0",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "d778dc58099109710b90ab9cff7ed7eb",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-l1",
+      "relativePath": "L1-condition.json",
+      "sizeBytes": 941
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:906b684060c4942aece1db74d9a5ae224036eae72d47c858fa2f3dbfb4f8395c",
+      "dataObjectId": "0be504e1693b74c86e3a7bb61ecfb094",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "99b3c9f043bd4781c90c76861163e4f9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-l1",
+      "relativePath": "L1-condition.npz",
+      "sizeBytes": 45254161
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f5c5469c6104f64d9ffb9637d9f7c77ee3ccbc473b60c0bd4a3359f2b478f05c",
+      "dataObjectId": "4bc47c3f33baaaf6e9735ce9604cfc80",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "0a0f161e3e10a5fbe5c534b7e7efbc5f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-l1",
+      "relativePath": "L1-condition.tar.gz",
+      "sizeBytes": 45268677
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d3175349ef5fe3d6ca98b164fbe441770aeda8879f5e2b1b1892981a3c12c439",
+      "dataObjectId": "da14ff18cf083afbc0b2c0ccfc9e60b5",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "11e9c810a10190b0a705e27f1c6adc4c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-condition-l1",
+      "relativePath": "stage-condition-L1.json",
+      "sizeBytes": 70
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bc0dd9871ecb993c3e27d17678f69ddee82c55eb574612658c2bdcd868c92cf8",
+      "dataObjectId": "d8fa1c97381f49c1f79314f203ec162d",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "f2890e0bcd49d5b803db84949a0744d0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "H1-followup.npz",
+      "sizeBytes": 64408759
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fb64c07e3a30175fad764c13ec2741c9e458b02409ec8d47764470c8ff019811",
+      "dataObjectId": "0fbead46a51d6ec1fa076dedb6deb354",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "0f35233d0a13fc6e2261231130840fef",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "L1-followup.npz",
+      "sizeBytes": 64410481
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f24e1165b98f0a3a2b480858f0ab62f3523c847222213c13278e53356233ba86",
+      "dataObjectId": "9013807de186bde82ddb253b11ca17b0",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "d04612a4093d1c421142cad356dc4f8c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "coincidence-analysis.png",
+      "sizeBytes": 64306
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:dfcd7758151be8d52270112e19105fc6d9d4699eb716299eac32a86681106c00",
+      "dataObjectId": "908a9238b1cbffaacab89850ffd41c93",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "ab0cde2fb76335013b51fd8e897d8a0d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "derived-results.tar.gz",
+      "sizeBytes": 477567747
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0eefc33c419d9cb72e8e47578f34a4c1689ea6d105e69d6ad2d3567f32f0e989",
+      "dataObjectId": "f0b0e35e00392c499c37afbb90507037",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "e3a55b9118c55df71bc59d9fff4c8cfb",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "derived-summary.json",
+      "sizeBytes": 25438
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b1ead805eff33f06dfd7211cbbb5a978ed6fd246861bce64d1fdb388a22d134b",
+      "dataObjectId": "3264d3d343fcc6faaecbc23ffa0a36cf",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "2b85265211f640f5cd3f32d35d7359fa",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "detector-analysis.png",
+      "sizeBytes": 380272
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:731b54e8e039370717d8ba9770ce807f5d57a7d51c5162734a7dcbba9590e194",
+      "dataObjectId": "71bdce980b196c13bb8780e912977fb2",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "2b37736a9dde8f136bdc85892da92a77",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-figures",
+      "relativePath": "stage-figures.json",
+      "sizeBytes": 68
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:911b31a6f89b18c01ac903419095f71e2f739c5eb40c7cff89a2517c890c6f9c",
+      "dataObjectId": "7bfb85785b63d818bcd2b3640c2dbb4b",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "aca710cdca3a6d25a2cac79d5ca4d999",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-h1",
+      "relativePath": "H1-snr-envelopes.npz",
+      "sizeBytes": 905601
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:5419ee32fb6c2f319d63cf2981ac94860c3d65eb2954cd4edd659e42062e149b",
+      "dataObjectId": "80334eb3500cf08a9c7725a6cf925895",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "0a2c97ca13943562b65e70cab6bfb739",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-h1",
+      "relativePath": "H1-triggers.json",
+      "sizeBytes": 49338
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:68d70b1d35d73bbd42dd50527b4cc724d990c648bab8a3780e8b79bb6e841bbd",
+      "dataObjectId": "57f96b8b788672d52d8c50eaf678200d",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "49b17861cea1a286245b38401d0bfd3a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-h1",
+      "relativePath": "stage-filter-H1.json",
+      "sizeBytes": 67
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b389a438e8de8110a71be6560222ba8f9f809b56a66aa2de56af95d166fbdc9c",
+      "dataObjectId": "75b84f44027028b9de0db7968a1ce963",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "b6cf50637eaca8d90ae22d8ee18478b8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-l1",
+      "relativePath": "L1-snr-envelopes.npz",
+      "sizeBytes": 906227
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b025cf015a74643717189a72357b83dde880ea7a87c2ba3b68fbbbe0558c98df",
+      "dataObjectId": "f1aa42d99ce5d74a7b299ead2250040a",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "8598d6e64afc3c9dfbd132078e47e790",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-l1",
+      "relativePath": "L1-triggers.json",
+      "sizeBytes": 70589
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3a994c700d9b2cd320c6a30cc742ee44b3a87c8279d1d29714db6e05c3c0b119",
+      "dataObjectId": "37a1b5f12c0fe36d3e5efb5971d53701",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "959cd497f3343247a05558e2481239d7",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-filter-l1",
+      "relativePath": "stage-filter-L1.json",
+      "sizeBytes": 67
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f24e1165b98f0a3a2b480858f0ab62f3523c847222213c13278e53356233ba86",
+      "dataObjectId": "fafb7d1d015954ee147df96798877fde",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "a6fe0f3a1041129007018240109023b7",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-package",
+      "relativePath": "published-coincidence-analysis.png",
+      "sizeBytes": 64306
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b1ead805eff33f06dfd7211cbbb5a978ed6fd246861bce64d1fdb388a22d134b",
+      "dataObjectId": "0b3be303bcde07338d0bd200610a5155",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "2a9ca6a385391d54455d6f8061f7f60e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-package",
+      "relativePath": "published-detector-analysis.png",
+      "sizeBytes": 380272
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:dfcd7758151be8d52270112e19105fc6d9d4699eb716299eac32a86681106c00",
+      "dataObjectId": "43fe6af958c3000aef50de740a1e2503",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "7106bb92de51c123d908080bf4465ad1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-package",
+      "relativePath": "pycbc-results.tar.gz",
+      "sizeBytes": 477567747
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0eefc33c419d9cb72e8e47578f34a4c1689ea6d105e69d6ad2d3567f32f0e989",
+      "dataObjectId": "f7a405978d31f9a5c19006a097931f58",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "e1d1ebe5773d74d99d302fc99111ba86",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-package",
+      "relativePath": "pycbc-summary.json",
+      "sizeBytes": 25438
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:dcf84b69eba3e1a3a4c2acc62a047c8b1b12162c4144ac57fc71af5a41afa345",
+      "dataObjectId": "7f871e511874f269e58b4714c640c456",
+      "discovered": true,
+      "executionRunId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "id": "41ade9ab68a2950119905847c9ddf48b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "pycbc-local-25b5a1fbc4-package",
+      "relativePath": "stage-package.json",
+      "sizeBytes": 68
+    }
+  ],
+  "exportedAt": "2026-11-15T22:59:55.72205224Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "pycbc-local-25b5a1fbc4",
+      "workflowVersionId": "pycbc-local-25b5a1fbc4-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 9,
+      "redactionCount": 0,
+      "digest": "6bce7e498ebfbc9f83bcfc506039ab8211efa543beb1fbfc26d75e628af1b8f6"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,347 @@\n+name: pycbc-local-25b5a1fbc4\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - acquire\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: acquire\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - bank\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: bank\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - condition\n+                - --output\n+                - .\n+                - --detector\n+                - H1\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: condition-H1\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - filter\n+                - --output\n+                - .\n+                - --detector\n+                - H1\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - bank\n+            - condition-H1\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: filter-H1\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - condition\n+                - --output\n+                - .\n+                - --detector\n+                - L1\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: condition-L1\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - filter\n+                - --output\n+                - .\n+                - --detector\n+                - L1\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - bank\n+            - condition-L1\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: filter-L1\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - coincidence\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - filter-H1\n+            - filter-L1\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: coincidence\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - figures\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - acquire\n+            - bank\n+            - coincidence\n+            - condition-H1\n+            - condition-L1\n+            - filter-H1\n+            - filter-L1\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: figures\n+          runtime: pycbc-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - package\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - figures\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: pycbc-local\n+            workspaceSeedPath: \"\"\n+          name: package\n+          runtime: pycbc-local\n+    dataDependencies:\n+        - consumerActivity: condition-H1\n+          logicalName: observations.tar\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: condition-L1\n+          logicalName: observations.tar\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: observations.tar\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: template-bank.json\n+          producerActivity: bank\n+          sizeBytes: 1\n+        - consumerActivity: filter-H1\n+          logicalName: template-bank.json\n+          producerActivity: bank\n+          sizeBytes: 1\n+        - consumerActivity: filter-L1\n+          logicalName: template-bank.json\n+          producerActivity: bank\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: coincidences.json\n+          producerActivity: coincidence\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: H1-condition.tar.gz\n+          producerActivity: condition-H1\n+          sizeBytes: 1\n+        - consumerActivity: filter-H1\n+          logicalName: H1-condition.tar.gz\n+          producerActivity: condition-H1\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: L1-condition.tar.gz\n+          producerActivity: condition-L1\n+          sizeBytes: 1\n+        - consumerActivity: filter-L1\n+          logicalName: L1-condition.tar.gz\n+          producerActivity: condition-L1\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: coincidence-analysis.png\n+          producerActivity: figures\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-results.tar.gz\n+          producerActivity: figures\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-summary.json\n+          producerActivity: figures\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: detector-analysis.png\n+          producerActivity: figures\n+          sizeBytes: 1\n+        - consumerActivity: coincidence\n+          logicalName: H1-triggers.json\n+          producerActivity: filter-H1\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: H1-snr-envelopes.npz\n+          producerActivity: filter-H1\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: H1-triggers.json\n+          producerActivity: filter-H1\n+          sizeBytes: 1\n+        - consumerActivity: coincidence\n+          logicalName: L1-triggers.json\n+          producerActivity: filter-L1\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: L1-snr-envelopes.npz\n+          producerActivity: filter-L1\n+          sizeBytes: 1\n+        - consumerActivity: figures\n+          logicalName: L1-triggers.json\n+          producerActivity: filter-L1\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:9a1c3444cf0550283db3ea9809446dadc4ca402463744e95e1710db8b57b242a",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "pycbc-local-25b5a1fbc4-manual-plan-20261115t225353.944854098",
+            "run_id": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631"
+          },
+          "status": "completed",
+          "durationSeconds": 161.94806218147278,
+          "metrics": {
+            "activity_count": 9,
+            "completed_activity_count": 9,
+            "computeSeconds": 148.92366290092468,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 161.94806218147278,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 9,
+            "queueSeconds": 0,
+            "transferSeconds": 46.198986530303955,
+            "transferred_bytes": 3128757038
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

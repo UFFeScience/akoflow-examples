@@ -518,6 +518,22 @@
     "yamlHash": "6460091d591f5ddbed34f6868fb62696c74232eb00b07800b3662b0db9c00af2"
   },
   {
+    "experimentId": "c7f7136f-b7ee-4280-b38e-706b81ad9695",
+    "publicationId": "76c93d7b-fbf5-4760-9d94-0537a03335f5",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-pycbc",
+    "image": "hub.akoflow.com/akoflow-examples/pycbc@sha256:43c41477e1dd556ab921f1832b3f638e60f49dd3f1b25d2a214f61308027227a",
+    "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+    "visualCount": 2,
+    "activityCount": 9,
+    "examplePath": "scientific-workflows/pycbc",
+    "route": "/docs/showcase/scientific-workflows/pycbc",
+    "uri": "akoflow://hub/publications/76c93d7b-fbf5-4760-9d94-0537a03335f5/versions/1",
+    "version": 1,
+    "versionId": "e0cc7ac2-99b0-451f-8043-22fac24eef98",
+    "yamlHash": "57935df92d82b3cdd676b0c9368b9b6a64477f7a9b904aebfc3b768dcc4cf2c5"
+  },
+  {
     "experimentId": "12f39127-e1a2-4cab-90b0-59559cedd150",
     "publicationId": "a0214db2-7c0d-4061-a3e5-d6dd4a1db6cd",
     "resultCount": 1,

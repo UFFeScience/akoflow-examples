@@ -24,6 +24,7 @@ Each command below starts from the repository root and keeps your shell in that 
 | [SOMOSPIE — Soil Moisture Inference](scientific-workflows/somospie/README.md) | `(cd scientific-workflows/somospie && ./prepare.sh && ./run.sh)` |
 | [RNA-seq — Transcript Abundance and Quality Control](scientific-workflows/rnaseq/README.md) | `(cd scientific-workflows/rnaseq && ./prepare.sh && ./run.sh)` |
 | [Sarek — Regional Germline Variant Calling](scientific-workflows/sarek/README.md) | `(cd scientific-workflows/sarek && ./prepare.sh && ./run.sh)` |
+| [PyCBC / LIGO — Gravitational-Wave Matched Filtering](scientific-workflows/pycbc/README.md) | `(cd scientific-workflows/pycbc && ./prepare.sh && ./run.sh)` |
 | [Montage 050 — Astronomical Image Mosaicking](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 8 members](scientific-workflows/openoil-ensemble-08/README.md) | `(cd scientific-workflows/openoil-ensemble-08 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 16 members](scientific-workflows/openoil-ensemble-16/README.md) | `(cd scientific-workflows/openoil-ensemble-16 && ./prepare.sh && ./run.sh)` |

@@ -1,0 +1,10 @@
+{
+  "showcase": "pycbc",
+  "status": "success",
+  "artifacts": [
+    "pycbc-results.tar.gz",
+    "pycbc-summary.json",
+    "published-detector-analysis.png",
+    "published-coincidence-analysis.png"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "status": "verified-public-inputs",
+  "source": "GWOSC GWTC-1-confident GW150914 v3",
+  "catalogueURL": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/",
+  "catalogueGPS": 1126259462.4,
+  "inputDurationPerDetectorSeconds": 4096,
+  "inputSampleRateHz": 4096,
+  "rawSamplesPerDetector": 16777216,
+  "files": [
+    {
+      "filename": "H1-strain.hdf5",
+      "detector": "H1",
+      "url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/H-H1_GWOSC_4KHZ_R1-1126257415-4096.hdf5",
+      "bytes": 130158262,
+      "sha256": "8ef8b762cff53b422429c474b1e35a6d9bfa86f3ed0c0d3e855f599781390a27",
+      "durationSeconds": 4096,
+      "sampleRateHz": 4096
+    },
+    {
+      "filename": "L1-strain.hdf5",
+      "detector": "L1",
+      "url": "https://gwosc.org/eventapi/json/GWTC-1-confident/GW150914/v3/L-L1_GWOSC_4KHZ_R1-1126257415-4096.hdf5",
+      "bytes": 125865927,
+      "sha256": "bdd2dca270ad5205355b35d1a0da764c3927650917d971a10ecc6113efe4ebf4",
+      "durationSeconds": 4096,
+      "sampleRateHz": 4096
+    }
+  ],
+  "syntheticStrainOrSoftwareInjectionsAdded": false
+}

@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/gwastro/pycbc",
+  "version": "2.10.0",
+  "commit": "58f97dfcbeb9fe989fd7e42fd50b989311827ecd",
+  "license": "GPL-3.0",
+  "adaptation": "Native Akoflow scientific DAG using upstream PyCBC scientific APIs; not the full legacy HTCondor survey workflow.",
+  "sourceHashes": {
+    "pycbc/filter/matchedfilter.py": "8ba6f4d6e280bb12f7709e7c33bc0d04585195d04532111348489c3fbf829967",
+    "pycbc/filter/resample.py": "c90b6915959ff53ae59b0a2548830a930e6073d7d3b4ad77367d82c3d99e2add",
+    "pycbc/psd/estimate.py": "9afcf870f8c1daa7eb681928c74e91b3ddb0e42b53ef1eba1aec5d6861fae73c"
+  }
+}

@@ -1,0 +1,6 @@
+outputs
+outputs-daemon
+evidence
+upstream
+**/__pycache__
+**/*.pyc

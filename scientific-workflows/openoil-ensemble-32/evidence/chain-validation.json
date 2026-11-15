@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "totalCompletedActivities": 74,
+  "runs": [
+    {
+      "members": 8,
+      "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161927.919327106",
+      "completedActivities": 14,
+      "status": "completed",
+      "peakConcurrentMembers": 2,
+      "makespanSeconds": 187.34679532051086,
+      "firstActivityAt": 1794759569.2657871,
+      "lastActivityAt": 1794759756.6125824,
+      "image": "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
+    },
+    {
+      "members": 16,
+      "runId": "oilv1-openoil-ensemble-16-local-55de9dd488-run-20261115t162240.890267020",
+      "completedActivities": 22,
+      "status": "completed",
+      "peakConcurrentMembers": 2,
+      "makespanSeconds": 343.24108719825745,
+      "firstActivityAt": 1794759762.6892588,
+      "lastActivityAt": 1794760105.930346,
+      "image": "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
+    },
+    {
+      "members": 32,
+      "runId": "oilv1-openoil-ensemble-32-local-c73c83526d-run-20261115t164529.982484738",
+      "completedActivities": 38,
+      "status": "completed",
+      "peakConcurrentMembers": 4,
+      "makespanSeconds": 496.76289772987366,
+      "firstActivityAt": 1794761132.5369434,
+      "lastActivityAt": 1794761629.2998412,
+      "image": "ghcr.io/uffescience/openoil-ensemble@sha256:9939dcaa4c26b62ce5496f46f3946d26f0ad1168fbfe1c5acd13b3385fd25b6e"
+    }
+  ],
+  "serialWorkflowChainVerified": true,
+  "sharedMembers": "24 exact trajectory comparisons passed (8 vs16 and16 vs32); synthetic forcings and model seeds preserved",
+  "diagnostics": "Incomplete serial-lane test and failed strict-duration 32-member test preserved separately; neither is presented as a completed experiment."
+}

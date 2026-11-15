@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "image": "ghcr.io/uffescience/openoil-ensemble@sha256:9939dcaa4c26b62ce5496f46f3946d26f0ad1168fbfe1c5acd13b3385fd25b6e",
+  "validator": "validate.sh, using same image as native workflow",
+  "artifactHashesVerified": 80,
+  "rawTrajectoriesAndTerminalStateChecked": true,
+  "validatorProfile": "export-validator-profile.json"
+}

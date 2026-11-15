@@ -29,5 +29,5 @@ They follow this contract:
    commands, logs, or committed output.
 
 The five reference implementations are AI Video Studio, Document Intelligence,
-Local RAG Factory, Video Intelligence, and Blender Render Farm.
+RAG Pipeline, Video Intelligence, and Blender Render Farm.
 

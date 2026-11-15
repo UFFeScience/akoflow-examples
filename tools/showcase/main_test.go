@@ -87,3 +87,19 @@ func TestChildDoesNotWaitForUnrelatedBranch(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
+func TestUnknownNetworkStagePreservesPriorResults(t *testing.T) {
+	root := t.TempDir()
+	os.MkdirAll(filepath.Join(root, "data"), 0755)
+	os.MkdirAll(filepath.Join(root, "outputs"), 0755)
+	os.WriteFile(filepath.Join(root, "outputs/keep"), []byte("prior evidence"), 0644)
+	os.WriteFile(filepath.Join(root, "data/input.json"), []byte(`{"stages":["acquire"],"dependencies":{"acquire":[]}}`), 0644)
+	os.WriteFile(filepath.Join(root, "workflow.yaml"), []byte("activities:\n  - name: acquire\n"), 0644)
+	err := runWithOptions(root, options{NetworkStages: "misspelled-acquisition"})
+	if err == nil || !strings.Contains(err.Error(), "unknown network-enabled acquisition activity") {
+		t.Fatalf("expected explicit acquisition network validation, got %v", err)
+	}
+	if _, err := os.Stat(filepath.Join(root, "outputs/keep")); err != nil {
+		t.Fatal("invalid acquisition permission removed prior execution evidence")
+	}
+}

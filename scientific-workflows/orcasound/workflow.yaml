@@ -1,0 +1,314 @@
+name: orcasound
+spec:
+  activities:
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - acquire
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn: []
+      memoryLimit: 2Gi
+      name: acquire
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - convert
+          - --output
+          - .
+          - --part
+          - "0"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - acquire
+      memoryLimit: 2Gi
+      name: convert-0
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - spectrogram
+          - --output
+          - .
+          - --part
+          - "0"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - convert-0
+      memoryLimit: 2Gi
+      name: spectrogram-0
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - predict
+          - --output
+          - .
+          - --part
+          - "0"
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - convert-0
+        - acquire
+      memoryLimit: 4Gi
+      name: predict-0
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - convert
+          - --output
+          - .
+          - --part
+          - "1"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - acquire
+      memoryLimit: 2Gi
+      name: convert-1
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - spectrogram
+          - --output
+          - .
+          - --part
+          - "1"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - convert-1
+      memoryLimit: 2Gi
+      name: spectrogram-1
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - predict
+          - --output
+          - .
+          - --part
+          - "1"
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - convert-1
+        - acquire
+      memoryLimit: 4Gi
+      name: predict-1
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - convert
+          - --output
+          - .
+          - --part
+          - "2"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - acquire
+      memoryLimit: 2Gi
+      name: convert-2
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - spectrogram
+          - --output
+          - .
+          - --part
+          - "2"
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - convert-2
+      memoryLimit: 2Gi
+      name: spectrogram-2
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - predict
+          - --output
+          - .
+          - --part
+          - "2"
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - convert-2
+        - acquire
+      memoryLimit: 4Gi
+      name: predict-2
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - merge
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - predict-0
+        - predict-1
+        - predict-2
+      memoryLimit: 2Gi
+      name: merge
+      runtime: orcasound-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - summary
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - merge
+        - spectrogram-0
+        - spectrogram-1
+        - spectrogram-2
+        - convert-0
+        - convert-1
+        - convert-2
+      memoryLimit: 2Gi
+      name: summary
+      runtime: orcasound-local
+  dataDependencies:
+    - consumerActivity: convert-0
+      logicalName: recordings.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-0
+      logicalName: private-inference-inputs.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-0
+      logicalName: acquisition.json
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: spectrogram-0
+      logicalName: waveforms-0.tar.gz
+      producerActivity: convert-0
+      sizeBytes: 1
+    - consumerActivity: predict-0
+      logicalName: waveforms-0.tar.gz
+      producerActivity: convert-0
+      sizeBytes: 1
+    - consumerActivity: predict-0
+      logicalName: waveform-qc-0.json
+      producerActivity: convert-0
+      sizeBytes: 1
+    - consumerActivity: merge
+      logicalName: predictions-0.json
+      producerActivity: predict-0
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: waveforms-0.tar.gz
+      producerActivity: convert-0
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: spectrograms-0.tar.gz
+      producerActivity: spectrogram-0
+      sizeBytes: 1
+    - consumerActivity: convert-1
+      logicalName: recordings.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-1
+      logicalName: private-inference-inputs.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-1
+      logicalName: acquisition.json
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: spectrogram-1
+      logicalName: waveforms-1.tar.gz
+      producerActivity: convert-1
+      sizeBytes: 1
+    - consumerActivity: predict-1
+      logicalName: waveforms-1.tar.gz
+      producerActivity: convert-1
+      sizeBytes: 1
+    - consumerActivity: predict-1
+      logicalName: waveform-qc-1.json
+      producerActivity: convert-1
+      sizeBytes: 1
+    - consumerActivity: merge
+      logicalName: predictions-1.json
+      producerActivity: predict-1
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: waveforms-1.tar.gz
+      producerActivity: convert-1
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: spectrograms-1.tar.gz
+      producerActivity: spectrogram-1
+      sizeBytes: 1
+    - consumerActivity: convert-2
+      logicalName: recordings.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-2
+      logicalName: private-inference-inputs.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: predict-2
+      logicalName: acquisition.json
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: spectrogram-2
+      logicalName: waveforms-2.tar.gz
+      producerActivity: convert-2
+      sizeBytes: 1
+    - consumerActivity: predict-2
+      logicalName: waveforms-2.tar.gz
+      producerActivity: convert-2
+      sizeBytes: 1
+    - consumerActivity: predict-2
+      logicalName: waveform-qc-2.json
+      producerActivity: convert-2
+      sizeBytes: 1
+    - consumerActivity: merge
+      logicalName: predictions-2.json
+      producerActivity: predict-2
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: waveforms-2.tar.gz
+      producerActivity: convert-2
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: spectrograms-2.tar.gz
+      producerActivity: spectrogram-2
+      sizeBytes: 1
+    - consumerActivity: summary
+      logicalName: merged-predictions.json
+      producerActivity: merge
+      sizeBytes: 1
+  image: ghcr.io/uffescience/akoflow-examples/orcasound:v1
+  namespace: akoflow-examples

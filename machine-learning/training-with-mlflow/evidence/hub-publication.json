@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/training-with-mlflow",
+  "experimentId": "1b2e4241-7d22-49c2-864d-90635130a464",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow@sha256:c0f2b4097962a68591a235b4e8a93668d4d42043e693f6d5cc9e35e345b09830",
+  "publicationId": "6a9c187a-1e18-486f-a39f-06ef3419778f",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/training-with-mlflow",
+  "runId": "hubv1-showcase-training-with-mlflow-local-21b85bc93f-run-20261115t055108.977767273",
+  "uri": "akoflow://hub/publications/6a9c187a-1e18-486f-a39f-06ef3419778f/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-training-with-mlflow",
+  "version": 1,
+  "versionId": "27d66634-1879-4606-8b64-48361cd6f3ac",
+  "yamlHash": "e4e7e62801d281e9ea8cbbbed330176e0806fb2a33eacd3e05a6aec93fba8390"
+}

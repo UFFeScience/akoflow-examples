@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "student.pkl",
+    "distillation-report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-distillation@sha256:b6f5a9192b014661ac7e0e0de74702e3f4e2cd5bca2769b00617632d707a0911",
+  "runId": "hubv1-showcase-model-distillation-local-55ace19f7c-run-20261115t055024.589569743",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

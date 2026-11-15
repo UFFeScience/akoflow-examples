@@ -1,0 +1,9 @@
+{
+  "artifacts": [
+    "vision-metrics.json",
+    "model.pkl"
+  ],
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

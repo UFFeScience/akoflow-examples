@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/inference-benchmark",
+  "experimentId": "b8291790-e795-4d5f-be21-3f8d3324805c",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark@sha256:f9f193b68631f9098c72cc3334a0a7d577c41e195772ee9e933b17b8b9598cf2",
+  "publicationId": "a0dde05c-5f4e-425a-94b7-6c6436e3cee7",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/inference-benchmark",
+  "runId": "hubv1-showcase-inference-benchmark-local-e776bfef04-run-20261115t054830.960361831",
+  "uri": "akoflow://hub/publications/a0dde05c-5f4e-425a-94b7-6c6436e3cee7/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-inference-benchmark",
+  "version": 1,
+  "versionId": "a36d55fe-de02-49ad-a7d3-f52ff4531122",
+  "yamlHash": "761b97ab9fe7f33666591de5cae3cdb0edd2acba21c19e3b9f2b00c439e085cf"
+}

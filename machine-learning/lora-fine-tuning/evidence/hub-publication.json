@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/lora-fine-tuning",
+  "experimentId": "aa59b90a-9697-4110-82a7-ade6ec96a5ed",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning@sha256:c8f63c43550e404962e689006e22899d370c4bb91fbf7fd3a59c8da488125c9e",
+  "publicationId": "3c09eb33-fb13-4069-a278-0e82c4445ce3",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/lora-fine-tuning",
+  "runId": "hubv1-showcase-lora-fine-tuning-local-ee412d9ce8-run-20261115t054920.405105217",
+  "uri": "akoflow://hub/publications/3c09eb33-fb13-4069-a278-0e82c4445ce3/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-lora-fine-tuning",
+  "version": 1,
+  "versionId": "79df48bb-c8ef-4a58-8e10-b81680cf9157",
+  "yamlHash": "e0b92cd08c9d12cab0a522d7e0066aff9a856ffe8f6efdc739fe29535d8b76c5"
+}

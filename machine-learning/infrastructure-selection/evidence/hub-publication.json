@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "machine-learning/infrastructure-selection",
+  "experimentId": "a320884f-fe47-4f21-abf4-efe1d5b1e416",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection@sha256:19d5d67594758239e48205d517a36ae556522055aae439df4baa0fa79cf5c111",
+  "publicationId": "1fea5285-4538-4e67-a8f6-343eea1ff0cb",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/infrastructure-selection",
+  "runId": "hubv1-showcase-infrastructure-selection-local-fc06782c7d-run-20261115t054857.551255930",
+  "uri": "akoflow://hub/publications/1fea5285-4538-4e67-a8f6-343eea1ff0cb/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-infrastructure-selection",
+  "version": 1,
+  "versionId": "9ee84130-aaa2-4fd2-91ff-1f8ca9c6ee61",
+  "yamlHash": "cda63045998b130f78fd2d98f18cc1265c3149f2ebcedb413e6945aab9b8961d"
+}

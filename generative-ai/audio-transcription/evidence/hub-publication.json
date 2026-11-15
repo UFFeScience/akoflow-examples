@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "generative-ai/audio-transcription",
+  "experimentId": "101b8fc2-5b2a-48d9-bbce-c4b3911a2c7e",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription@sha256:da81939b622834418a405159e6b32ef5f5d722bdb88682f6530b75f353ccc784",
+  "publicationId": "785d8ef0-5627-4c57-94f9-2705fc73b6c3",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/audio-transcription",
+  "runId": "hubv1-showcase-audio-transcription-local-1ec282fdb2-run-20261115t055134.499133410",
+  "uri": "akoflow://hub/publications/785d8ef0-5627-4c57-94f9-2705fc73b6c3/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-audio-transcription",
+  "version": 1,
+  "versionId": "4e2e17d6-0f34-4272-985b-8cd03ec23877",
+  "yamlHash": "b382f254d59f7790d452b44ae0e207dfad6228d37b7c8b8b7d2b55d2c8295153"
+}

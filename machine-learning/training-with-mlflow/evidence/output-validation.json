@@ -1,0 +1,16 @@
+{
+  "artifacts": [
+    "model.pkl",
+    "metrics.json",
+    "report.html",
+    "registry.json",
+    "mlflow-run.json",
+    "mlflow.db"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow@sha256:c0f2b4097962a68591a235b4e8a93668d4d42043e693f6d5cc9e35e345b09830",
+  "runId": "hubv1-showcase-training-with-mlflow-local-21b85bc93f-run-20261115t055108.977767273",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

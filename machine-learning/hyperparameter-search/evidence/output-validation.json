@@ -1,0 +1,9 @@
+{
+  "artifacts": [
+    "leaderboard.csv",
+    "best-model.pkl"
+  ],
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

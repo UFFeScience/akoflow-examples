@@ -1,0 +1,9 @@
+{
+  "artifacts": [
+    "next-batch.json",
+    "feedback-report.json"
+  ],
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

@@ -267,7 +267,10 @@ func main() {
 	}
 }
 func publish(hub, api client, root, route string, c contract) (map[string]any, error) {
-	dir := filepath.Join(root, c.ExamplePath)
+	dir, err := filepath.Abs(filepath.Join(root, c.ExamplePath))
+	if err != nil {
+		return nil, err
+	}
 	raw, err := os.ReadFile(filepath.Join(dir, "evidence/daemon-run.json"))
 	if err != nil {
 		return nil, err
@@ -279,8 +282,10 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	if e.Status != "completed" || e.Completed != e.ActivityCount {
 		return nil, fmt.Errorf("fresh execution incomplete: %s", e.Status)
 	}
-	if !strings.Contains(e.Image, "@sha256:") {
-		return nil, fmt.Errorf("execution must use a digest-pinned public registry image")
+	capturedImage := e.Image
+	e.Image, err = publicImage(dir, e.Image)
+	if err != nil {
+		return nil, err
 	}
 	y, err := os.ReadFile(filepath.Join(dir, "workflow.yaml"))
 	if err != nil {
@@ -293,6 +298,9 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	definition["spec"].(map[string]any)["image"] = e.Image
 	y, err = yaml.Marshal(definition)
 	if err != nil {
+		return nil, err
+	}
+	if err = collectResults(dir, raw, c.Artifacts); err != nil {
 		return nil, err
 	}
 	bundle, run, err := packageRun(api, e, string(y))
@@ -345,6 +353,7 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	for _, a := range c.Artifacts {
 		fmt.Fprintf(&extra, "- `%s`\n", a)
 	}
+	fmt.Fprintf(&extra, "\n[Download the actual validated output files](https://github.com/UFFeScience/akoflow-examples/releases/download/showcase-hub-v1/%s-results.tar.gz).\n\n", slug)
 	extra.WriteString("\n### Illustrated walkthrough\n\nThe following reference screenshots come from the documentation walkthrough. The current measured run is recorded separately above.\n\n")
 	keys := []string{}
 	for k := range c.Screenshots {
@@ -354,7 +363,10 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	for _, k := range keys {
 		fmt.Fprintf(&extra, "#### %s\n\n![%s](https://akoflow.com%s)\n\n", k, k, c.Screenshots[k])
 	}
-	readme := base + extra.String()
+	if capturedImage != e.Image {
+		fmt.Fprintf(&extra, "\nThe captured run used local alias `%s`. Its complete filesystem layers, runtime configuration, OS and architecture were compared with the public digest above and match; the recorded capture preserves the original image reference.\n", capturedImage)
+	}
+	readme := strings.TrimRight(base+extra.String(), "\n") + "\n"
 	if err = os.WriteFile(filepath.Join(dir, "README.md"), []byte(readme), 0644); err != nil {
 		return nil, err
 	}

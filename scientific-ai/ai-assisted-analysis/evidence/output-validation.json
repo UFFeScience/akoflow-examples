@@ -1,0 +1,9 @@
+{
+  "artifacts": [
+    "analysis.json",
+    "interpretation.md"
+  ],
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

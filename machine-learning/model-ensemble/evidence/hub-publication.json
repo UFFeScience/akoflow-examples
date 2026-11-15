@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "machine-learning/model-ensemble",
+  "experimentId": "13a1d110-dc85-4668-a6dc-feb91bd74219",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble@sha256:d3fa58f0a19b3fd897a6d682700bba8c9dfe56b23442c18e41952f309186c4af",
+  "publicationId": "84d8987d-9cab-4a1e-bc4c-b6626283678c",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/model-ensemble",
+  "runId": "hubv1-showcase-model-ensemble-local-4470c012f3-run-20261115t055045.183044876",
+  "uri": "akoflow://hub/publications/84d8987d-9cab-4a1e-bc4c-b6626283678c/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-model-ensemble",
+  "version": 1,
+  "versionId": "9a2c325c-a31f-4b68-8e3a-3a64551ab226",
+  "yamlHash": "9f13149ee28353fc077a881973327c46fe3e8b1db4c4325e85642b03400f3cc2"
+}

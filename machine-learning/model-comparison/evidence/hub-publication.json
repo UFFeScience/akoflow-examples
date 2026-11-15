@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/model-comparison",
+  "experimentId": "15ec88cc-1d86-434c-9616-672ba10e146b",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-comparison@sha256:f94294f4cff76c76fbe8994c579d0f31e506ffee8ba4409db8c37263fa89b237",
+  "publicationId": "b27171db-6488-4913-813a-3d93e305e6e7",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/model-comparison",
+  "runId": "hubv1-showcase-model-comparison-local-62d5eadfe0-run-20261115t054940.504212311",
+  "uri": "akoflow://hub/publications/b27171db-6488-4913-813a-3d93e305e6e7/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-model-comparison",
+  "version": 1,
+  "versionId": "bcbb396d-a9cb-47db-8d4c-8ea5c9fac666",
+  "yamlHash": "6ea56d739f3c91f575ace8eff74b197beb5ff9aacd8eff4145cc7a665c73a999"
+}

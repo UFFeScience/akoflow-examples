@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "transcript.txt",
+    "summary.md"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription@sha256:da81939b622834418a405159e6b32ef5f5d722bdb88682f6530b75f353ccc784",
+  "runId": "hubv1-showcase-audio-transcription-local-1ec282fdb2-run-20261115t055134.499133410",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

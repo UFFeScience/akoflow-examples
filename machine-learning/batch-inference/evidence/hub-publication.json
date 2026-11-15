@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "machine-learning/batch-inference",
+  "experimentId": "d20666df-879b-44b2-b572-766e8203197d",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-batch-inference@sha256:d2ce527ee18c393280a9fb24b9620c1b51507784cb13daae180237fe9522f78e",
+  "publicationId": "9c21df75-0cfd-4074-bb78-1197857d43a7",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/batch-inference",
+  "runId": "hubv1-showcase-batch-inference-local-b24b58bf6c-run-20261115t054645.043310472",
+  "uri": "akoflow://hub/publications/9c21df75-0cfd-4074-bb78-1197857d43a7/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-batch-inference",
+  "version": 1,
+  "versionId": "72d14e41-f549-4973-95b9-0ceb1c556219",
+  "yamlHash": "6c8c2cdb03523a399248da483b0e64900648600b99a6ffdd03a89e90686b9ca9"
+}

@@ -1,0 +1,9 @@
+{
+  "artifacts": [
+    "surrogate.pkl",
+    "validation.json"
+  ],
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

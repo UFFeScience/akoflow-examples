@@ -27,10 +27,7 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 					} `json:"final"`
 				} `json:"manifest"`
 			} `json:"workspaces"`
-			Activities []struct {
-				ID       string  `json:"activityId"`
-				Finished float64 `json:"finishedAt"`
-			} `json:"activities"`
+			Activities []timingActivity `json:"activities"`
 		} `json:"projection"`
 	}
 	if err := json.Unmarshal(raw, &record); err != nil {
@@ -43,8 +40,9 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 	workspaces := record.Projection.Workspaces
 	sort.SliceStable(workspaces, func(i, j int) bool { return finished[workspaces[i].ActivityID] > finished[workspaces[j].ActivityID] })
 	var config struct {
-		Stages []string `json:"stages"`
-		Slug   string   `json:"slug"`
+		Stages   []string `json:"stages"`
+		Slug     string   `json:"slug"`
+		Upstream string   `json:"upstreamImage"`
 	}
 	input, err := os.ReadFile(filepath.Join(dir, "data/input.json"))
 	reference := os.IsNotExist(err)
@@ -62,7 +60,7 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 	if reference {
 		names = append([]string{"manifest.json"}, names...)
 	}
-	if filepath.Base(dir) != "montage-050" {
+	if config.Upstream == "" {
 		for _, s := range config.Stages {
 			names = append(names, "stage-"+s+".json")
 		}
@@ -145,7 +143,7 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 		}
 	}
 	validator := exec.Command("sh", filepath.Join(dir, "validate.sh"))
-	if filepath.Base(dir) == "montage-050" {
+	if config.Upstream != "" {
 		self, e := os.Executable()
 		if e != nil {
 			return e
@@ -156,6 +154,9 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 	validator.Stderr = os.Stderr
 	if err = validator.Run(); err != nil {
 		return fmt.Errorf("semantic output validation: %w", err)
+	}
+	if err = timingFigure(dir, record.RunID, config.Stages, record.Projection.Activities); err != nil {
+		return err
 	}
 	if err = archiveResults(dir); err != nil {
 		return err

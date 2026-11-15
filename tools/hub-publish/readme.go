@@ -11,6 +11,8 @@ import (
 var markdownLink = regexp.MustCompile(`(!?\[[^\]]*\])\(([^)\s]+)\)`)
 
 func bundleLinks(text, root, dir, ref string) string {
+	text = strings.ReplaceAll(text, "https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/", "https://github.com/UFFeScience/akoflow-examples/blob/"+ref+"/")
+	text = strings.ReplaceAll(text, "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/", "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/"+ref+"/")
 	return markdownLink.ReplaceAllStringFunc(text, func(match string) string {
 		parts := markdownLink.FindStringSubmatch(match)
 		target := parts[2]

@@ -7,8 +7,8 @@ func TestCatalogIncludesEveryDomainPipeline(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(entries) != 28 {
-		t.Fatalf("expected all 28 catalog showcases, got %d", len(entries))
+	if len(entries) != 31 {
+		t.Fatalf("expected 28 catalog showcases and 3 legacy local profiles, got %d", len(entries))
 	}
 	images := map[string]string{}
 	for _, e := range entries {

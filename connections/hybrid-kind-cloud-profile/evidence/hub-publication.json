@@ -1,0 +1,15 @@
+{
+  "activityCount": 2,
+  "examplePath": "connections/hybrid-kind-cloud-profile",
+  "experimentId": "22241e55-3d36-4f08-8ef1-4efb075af7e2",
+  "image": "busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "publicationId": "0ba91e7e-31a0-4db0-9baa-251536616238",
+  "resultCount": 1,
+  "route": "/docs/showcase/hybrid-cloud-transfer#kind-profile",
+  "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+  "uri": "akoflow://hub/publications/0ba91e7e-31a0-4db0-9baa-251536616238/versions/2",
+  "url": "https://hub.akoflow.com/o/akoflow/connections-hybrid-kind-cloud-profile",
+  "version": 2,
+  "versionId": "93b56d64-bfad-4f5d-9b65-2d4b1bbb80ae",
+  "yamlHash": "75ea17243ab67f9b7b384a497383f959a5d5dcef998b4f9247900761d913c582"
+}

@@ -6,6 +6,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 func archiveResults(dir string) error {
@@ -44,6 +45,8 @@ func archiveResults(dir string) error {
 			return err
 		}
 		header.Name = filepath.ToSlash(relative)
+		header.ModTime = time.Unix(0, 0)
+		header.Mode = 0644
 		header.Uid = 0
 		header.Gid = 0
 		header.Uname = ""

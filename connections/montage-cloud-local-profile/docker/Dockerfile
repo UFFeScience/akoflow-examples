@@ -1,0 +1,1 @@
+FROM --platform=linux/amd64 ovvesley/akoflow-wf-montage@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9

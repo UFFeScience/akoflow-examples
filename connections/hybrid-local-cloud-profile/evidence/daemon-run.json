@@ -1,0 +1,855 @@
+{
+  "workflowId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e",
+  "planId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583",
+  "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+  "image": "busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "imageId": "sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "status": "completed",
+  "activityCount": 2,
+  "completedActivityCount": 2,
+  "observedAt": "2026-11-15T06:28:46.245800+00:00",
+  "projection": {
+    "activities": [
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "planAssignmentId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "plannedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "allocatedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794723873.4481943,
+        "dataReadyAt": 0,
+        "queuedAt": 1794723873.4481943,
+        "startedAt": 1794723874.0874808,
+        "finishedAt": 1794723874.0909889,
+        "runtimeSeconds": 0.0035080909729003906,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local"
+        }
+      },
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "planAssignmentId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "plannedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "allocatedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794723874.9488318,
+        "dataReadyAt": 0,
+        "queuedAt": 1794723874.9488318,
+        "startedAt": 1794723875.4693499,
+        "finishedAt": 1794723875.4695868,
+        "runtimeSeconds": 0.00023698806762695312,
+        "queueSeconds": 0,
+        "transferSeconds": 0.17849302291870117,
+        "transferBytes": 61,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.303879976272583,
+          "preparationFinishedAt": 1794723875.16547,
+          "preparationStartedAt": 1794723874.9869769,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012380361557006836,
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "transferElapsedSeconds": 0.17849302291870117,
+          "transferWorkSeconds": 0.17849302291870117
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "planAssignmentId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "plannedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "allocatedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794723873.4481943,
+        "dataReadyAt": 0,
+        "queuedAt": 1794723873.4481943,
+        "startedAt": 1794723874.0874808,
+        "finishedAt": 1794723874.0909889,
+        "runtimeSeconds": 0.0035080909729003906,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local"
+        }
+      },
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "planAssignmentId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "plannedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "allocatedResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794723874.9488318,
+        "dataReadyAt": 0,
+        "queuedAt": 1794723874.9488318,
+        "startedAt": 1794723875.4693499,
+        "finishedAt": 1794723875.4695868,
+        "runtimeSeconds": 0.00023698806762695312,
+        "queueSeconds": 0,
+        "transferSeconds": 0.17849302291870117,
+        "transferBytes": 61,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.303879976272583,
+          "preparationFinishedAt": 1794723875.16547,
+          "preparationStartedAt": 1794723874.9869769,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012380361557006836,
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "transferElapsedSeconds": 0.17849302291870117,
+          "transferWorkSeconds": 0.17849302291870117
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume-0",
+        "planId": "transfer-workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume-0",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794723874.9869769,
+        "finishedAt": 1794723875.16547,
+        "durationSeconds": 0.17849302291870117,
+        "transferredBytes": 61,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "consumerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "sourceResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+          "targetResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+          "sourceEnvironmentId": "showcase-hybrid-local-cloud-profile-v1",
+          "targetEnvironmentId": "showcase-hybrid-local-cloud-profile-v1",
+          "filesTransferred": 2,
+          "sshChannelWaitSeconds": 9.16e-07,
+          "rsyncExecutionSeconds": 0.090641105,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 61,
+        "filesTransferred": 2
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T06:28:08.075089988Z"
+    },
+    "dataLocations": [
+      {
+        "id": "1923038368a7849c1af61c91aa19aab1",
+        "dataObjectInstanceId": "f0f307a66401d498c355c1a11b57ae03",
+        "storageResourceId": "f563596177fce5a25ba94d2e4b6457d2",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume/receipt.txt",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "f8905fe659c84eca8dcb21977cd3b80a",
+        "dataObjectInstanceId": "25f365b349ff37d3a10aaea1158db19b",
+        "storageResourceId": "f563596177fce5a25ba94d2e4b6457d2",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume/stage-consume.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "2897dccb48395baa6a87aa2042b8683b",
+        "dataObjectInstanceId": "8d0611badbb1c2da83cf38955789046b",
+        "storageResourceId": "834dae03d5b577c4b5c91b7d2ee35a73",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce/handoff.txt",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "dca2f436a0063cd27013ea109d86a8d3",
+        "dataObjectInstanceId": "ec6d2c33ede5930ad54957e8afe4793e",
+        "storageResourceId": "834dae03d5b577c4b5c91b7d2ee35a73",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce/stage-produce.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "f0f307a66401d498c355c1a11b57ae03",
+        "dataObjectId": "dac476c863eebf00c93f68eb1cefa963",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "attempt": 1,
+        "relativePath": "receipt.txt",
+        "sizeBytes": 37,
+        "checksum": "sha256:2fe73a7df6f82144d6842bc7eaed6f029e21c24a70e213d96d4b3751171b2af4",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "25f365b349ff37d3a10aaea1158db19b",
+        "dataObjectId": "7b551b02e737a6cf2b4a0b18491f6867",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "attempt": 1,
+        "relativePath": "stage-consume.json",
+        "sizeBytes": 40,
+        "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "8d0611badbb1c2da83cf38955789046b",
+        "dataObjectId": "82fbd096ccfe9f9594774c71146492fe",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "attempt": 1,
+        "relativePath": "handoff.txt",
+        "sizeBytes": 21,
+        "checksum": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "ec6d2c33ede5930ad54957e8afe4793e",
+        "dataObjectId": "79efe82e85a151faf0a7e661309adb99",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "attempt": 1,
+        "relativePath": "stage-produce.json",
+        "sizeBytes": 40,
+        "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:transfer-workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume-0",
+        "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "consumerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "sourceResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "targetResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "bytes": 61,
+        "startedAt": 1794723874.9869769,
+        "finishedAt": 1794723875.16547,
+        "durationSeconds": 0.17849302291870117,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "consumerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "sourceResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+          "targetResourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+          "sourceEnvironmentId": "showcase-hybrid-local-cloud-profile-v1",
+          "targetEnvironmentId": "showcase-hybrid-local-cloud-profile-v1",
+          "filesTransferred": 2,
+          "sshChannelWaitSeconds": 9.16e-07,
+          "rsyncExecutionSeconds": 0.090641105,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 61
+      }
+    ],
+    "events": [
+      {
+        "id": "dd61530ba7b6df15cae90890ce7f17a6",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583"
+        },
+        "occurredAt": "2026-11-15T06:24:33.375488913Z"
+      },
+      {
+        "id": "c0bf385bfb4b8e7546ee1fb04d805fd9",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T06:24:34.758336841Z"
+      },
+      {
+        "id": "1bc64c08ea72798af8b0b60675087ae4",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "runtimeSeconds": 0.0035080909729003906,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T06:24:34.936931292Z"
+      },
+      {
+        "id": "f86ff207fd63d12803bbbb1f9e0644f6",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T06:24:36.152474914Z"
+      },
+      {
+        "id": "17af883c88a7d2dca5fef42112426e6d",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+          "runtimeSeconds": 0.00023698806762695312,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T06:24:36.278963012Z"
+      },
+      {
+        "id": "39a297199d0c231d1f0460129c8c86a9",
+        "eventType": "execution.run.completed",
+        "aggregateType": "execution_run",
+        "aggregateId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "payload": {
+          "cost": 0,
+          "makespanSeconds": 1.382106065750122
+        },
+        "occurredAt": "2026-11-15T06:24:36.291452522Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "externalId": "0241de4a57b2ae3b7a4dc1b088373ea2594d00b0a8b8c045a5bf5440641fc0b6",
+        "status": "completed",
+        "startedAt": 1794723875.4693499,
+        "finishedAt": 1794723875.4695868,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime showcase-hybrid-local-cloud-profile-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "attempt": 1,
+          "runtime": "showcase-hybrid-local-cloud-profile-local",
+          "root": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "startedAt": 1794723875.4693499,
+          "finishedAt": 1794723875.4695868,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "receipt.txt",
+              "change": "created",
+              "sizeBytes": 37,
+              "checksum": "sha256:2fe73a7df6f82144d6842bc7eaed6f029e21c24a70e213d96d4b3751171b2af4",
+              "modifiedUnixNano": 1794723875468150846
+            },
+            {
+              "path": "stage-consume.json",
+              "change": "created",
+              "sizeBytes": 40,
+              "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "modifiedUnixNano": 1794723875468150846
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "handoff.txt",
+              "sizeBytes": 21,
+              "checksum": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "modifiedUnixNano": 1794723875123147610
+            },
+            {
+              "path": "stage-produce.json",
+              "sizeBytes": 40,
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794723875123147610
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "handoff.txt",
+              "sizeBytes": 21,
+              "checksum": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "modifiedUnixNano": 1794723875123147610
+            },
+            {
+              "path": "receipt.txt",
+              "sizeBytes": 37,
+              "checksum": "sha256:2fe73a7df6f82144d6842bc7eaed6f029e21c24a70e213d96d4b3751171b2af4",
+              "modifiedUnixNano": 1794723875468150846
+            },
+            {
+              "path": "stage-consume.json",
+              "sizeBytes": 40,
+              "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "modifiedUnixNano": 1794723875468150846
+            },
+            {
+              "path": "stage-produce.json",
+              "sizeBytes": 40,
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794723875123147610
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794723875.4693499,
+              "finishedAt": 1794723875.4695868,
+              "durationSeconds": 0.00023698806762695312
+            }
+          ],
+          "summary": {
+            "initialFiles": 2,
+            "finalFiles": 4,
+            "createdFiles": 2,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 77
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794723875.469358,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "submittedAt": 1794723875.4693499
+        }
+      },
+      {
+        "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "externalId": "0a3657bd33a8763cb8e54a65258dc0f983c38bf63af0e0ac9373abb7a9efe07d",
+        "status": "completed",
+        "startedAt": 1794723874.0874808,
+        "finishedAt": 1794723874.0909889,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime showcase-hybrid-local-cloud-profile-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "attempt": 1,
+          "runtime": "showcase-hybrid-local-cloud-profile-local",
+          "root": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "startedAt": 1794723874.0874808,
+          "finishedAt": 1794723874.0909889,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "handoff.txt",
+              "change": "created",
+              "sizeBytes": 21,
+              "checksum": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "modifiedUnixNano": 1794723874089137917
+            },
+            {
+              "path": "stage-produce.json",
+              "change": "created",
+              "sizeBytes": 40,
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794723874089137917
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "handoff.txt",
+              "sizeBytes": 21,
+              "checksum": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "modifiedUnixNano": 1794723874089137917
+            },
+            {
+              "path": "stage-produce.json",
+              "sizeBytes": 40,
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794723874089137917
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794723874.0874808,
+              "finishedAt": 1794723874.0909889,
+              "durationSeconds": 0.0035080909729003906
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 2,
+            "createdFiles": 2,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 61
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794723874.0874867,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "submittedAt": 1794723874.0874808
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+      "schedulePlanId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-manual-plan-20261115t062433.197395583",
+      "mode": "real",
+      "seed": 0,
+      "status": "completed",
+      "makespanSeconds": 1.382106065750122,
+      "cost": 0,
+      "activityCount": 2,
+      "completedActivityCount": 2,
+      "breakdown": {
+        "computeSeconds": 0.0037450790405273438,
+        "transferSeconds": 0.17849302291870117,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 61,
+      "kind": "workflow",
+      "title": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+      "workflowId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e",
+      "workflowVersionId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-v1",
+      "workflowName": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e",
+      "environmentNames": [
+        "showcase-hybrid-local-cloud-profile local Docker"
+      ],
+      "startedAt": "2026-11-15T06:24:33Z",
+      "finishedAt": "2026-11-15T06:24:36Z"
+    },
+    "timeline": {
+      "startedAt": 1794723873,
+      "finishedAt": 1794723876,
+      "wallSeconds": 3,
+      "computeMakespanSeconds": 1.382106065750122,
+      "coveredWallSeconds": 1.1635496616363525,
+      "unclassifiedWallSeconds": 1.8364503383636475,
+      "totals": {
+        "resourceQueueSeconds": 0.677431583404541,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 0.17849302291870117,
+        "launchSeconds": 0.303879976272583,
+        "runtimeSeconds": 0.0037450790405273438,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce:queue:0",
+          "category": "resource-queue",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794723873.4481943,
+          "finishedAt": 1794723874.0874808,
+          "durationSeconds": 0.6392865180969238
+        },
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce:runtime",
+          "category": "runtime",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794723874.0874808,
+          "finishedAt": 1794723874.0909889,
+          "durationSeconds": 0.0035080909729003906
+        },
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:queue:0",
+          "category": "resource-queue",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794723874.9488318,
+          "finishedAt": 1794723874.9869769,
+          "durationSeconds": 0.03814506530761719
+        },
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:transfer-workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume-0",
+          "category": "workspace-transfer",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "transferId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:transfer-workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794723874.9869769,
+          "finishedAt": 1794723875.16547,
+          "durationSeconds": 0.17849302291870117
+        },
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:launch",
+          "category": "launch",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794723875.16547,
+          "finishedAt": 1794723875.4693499,
+          "durationSeconds": 0.303879976272583
+        },
+        {
+          "id": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903:hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume:runtime",
+          "category": "runtime",
+          "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794723875.4693499,
+          "finishedAt": 1794723875.4695868,
+          "durationSeconds": 0.00023698806762695312
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "workspaceId": "workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "producerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "consumerActivityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "released": true,
+        "releasedAt": "2026-11-15T06:24:35.180374285Z",
+        "releaseReason": "consumer workspace materialized"
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "environmentId": "showcase-hybrid-local-cloud-profile-v1",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "executionPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "observationPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-consume",
+        "driver": "local",
+        "state": "sealed",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": true,
+        "manifest": {
+          "initial": [
+            {
+              "path": "handoff.txt",
+              "digest": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "sizeBytes": 21
+            },
+            {
+              "path": "stage-produce.json",
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "sizeBytes": 40
+            }
+          ],
+          "final": [
+            {
+              "path": "handoff.txt",
+              "digest": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "sizeBytes": 21
+            },
+            {
+              "path": "receipt.txt",
+              "digest": "sha256:2fe73a7df6f82144d6842bc7eaed6f029e21c24a70e213d96d4b3751171b2af4",
+              "sizeBytes": 37
+            },
+            {
+              "path": "stage-consume.json",
+              "digest": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "sizeBytes": 40
+            },
+            {
+              "path": "stage-produce.json",
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "sizeBytes": 40
+            }
+          ],
+          "inputs": [
+            {
+              "path": "handoff.txt",
+              "digest": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "sizeBytes": 21
+            },
+            {
+              "path": "stage-produce.json",
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "sizeBytes": 40
+            }
+          ],
+          "outputs": [
+            {
+              "path": "receipt.txt",
+              "digest": "sha256:2fe73a7df6f82144d6842bc7eaed6f029e21c24a70e213d96d4b3751171b2af4",
+              "sizeBytes": 37
+            },
+            {
+              "path": "stage-consume.json",
+              "digest": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "sizeBytes": 40
+            }
+          ]
+        },
+        "fileCount": 4,
+        "sizeBytes": 138,
+        "inputBytes": 61,
+        "outputBytes": 77,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T06:24:33.39679611Z",
+        "sealedAt": "2026-11-15T06:24:36.263843405Z"
+      },
+      {
+        "id": "workspace-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903-hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+        "activityId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "environmentId": "showcase-hybrid-local-cloud-profile-v1",
+        "resourceId": "showcase-hybrid-local-cloud-profile-local-docker",
+        "runtimeId": "showcase-hybrid-local-cloud-profile-local",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "executionPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "observationPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903/hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-produce",
+        "driver": "local",
+        "state": "sealed",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": true,
+        "manifest": {
+          "final": [
+            {
+              "path": "handoff.txt",
+              "digest": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "sizeBytes": 21
+            },
+            {
+              "path": "stage-produce.json",
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "sizeBytes": 40
+            }
+          ],
+          "outputs": [
+            {
+              "path": "handoff.txt",
+              "digest": "sha256:26f239cbc85fc275a08a443c5b0eb67114de6e9d858da7a6ed6e1048a545c719",
+              "sizeBytes": 21
+            },
+            {
+              "path": "stage-produce.json",
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "sizeBytes": 40
+            }
+          ]
+        },
+        "fileCount": 2,
+        "sizeBytes": 61,
+        "inputBytes": 0,
+        "outputBytes": 61,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T06:24:33.39679611Z",
+        "sealedAt": "2026-11-15T06:24:34.904144028Z"
+      }
+    ]
+  }
+}

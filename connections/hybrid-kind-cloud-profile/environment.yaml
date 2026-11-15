@@ -1,0 +1,42 @@
+environment:
+  id: showcase-hybrid-kind-cloud-profile
+  name: showcase-hybrid-kind-cloud-profile local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: showcase-hybrid-kind-cloud-profile-v1
+  environmentId: showcase-hybrid-kind-cloud-profile
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: showcase-hybrid-kind-cloud-profile-v1
+runtimes:
+  - environmentVersionId: showcase-hybrid-kind-cloud-profile-v1
+    id: showcase-hybrid-kind-cloud-profile-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: showcase-hybrid-kind-cloud-profile-local-docker
+    environmentVersionId: showcase-hybrid-kind-cloud-profile-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: showcase-hybrid-kind-cloud-profile-local-docker, runtimeId: showcase-hybrid-kind-cloud-profile-local, enabled: true}

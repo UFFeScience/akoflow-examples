@@ -1,0 +1,42 @@
+name: showcase-hybrid-kind-cloud-profile
+spec:
+    activities:
+        - command:
+            arguments:
+                - -c
+                - |
+                  set -eu
+                  printf 'akoflow-kind-to-gcp\n' > handoff.txt
+                  test -s handoff.txt
+
+                  printf '%s\n' '{"name":"produce","status":"completed"}' > stage-produce.json
+            entrypoint: sh
+          cpuLimit: "0.1"
+          memoryLimit: 16Mi
+          name: produce
+          runtime: showcase-hybrid-kind-cloud-profile-local
+        - command:
+            arguments:
+                - -c
+                - |
+                  set -eu
+                  test -s handoff.txt
+                  grep -qx 'akoflow-kind-to-gcp' handoff.txt
+                  printf 'cloud consumed: ' > receipt.txt
+                  cat handoff.txt >> receipt.txt
+
+                  printf '%s\n' '{"name":"consume","status":"completed"}' > stage-consume.json
+            entrypoint: sh
+          cpuLimit: "0.1"
+          dependsOn:
+            - produce
+          memoryLimit: 16Mi
+          name: consume
+          runtime: showcase-hybrid-kind-cloud-profile-local
+    dataDependencies:
+        - consumerActivity: consume
+          logicalName: handoff.txt
+          producerActivity: produce
+          sizeBytes: 20
+    image: docker.io/library/busybox:1.36
+    namespace: examples

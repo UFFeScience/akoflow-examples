@@ -1,0 +1,48 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-somospie",
+  "nativeCompletedActivities": 12,
+  "observedSeconds": 127.08417248725891,
+  "visualCount": 2,
+  "visualBrowserGate": "passed",
+  "browserImageNaturalSizes": [
+    [
+      1800,
+      1500
+    ],
+    [
+      1650,
+      750
+    ]
+  ],
+  "browserTheme": "dark",
+  "publicAssetsHashVerified": [
+    {
+      "name": "published-heldout-diagnostics.png",
+      "bytes": 89638,
+      "sha256": "e24922114637343ac6644f22a14f15b7236ade1fd0c8ec43d5299a7554a718ad"
+    },
+    {
+      "name": "published-soil-moisture-maps.png",
+      "bytes": 1136453,
+      "sha256": "b868bdd0104758755cba6b378694ffdfac4bb390042c529ef943d17b5ebf9614"
+    },
+    {
+      "name": "somospie-results.tar.gz",
+      "bytes": 3101290,
+      "sha256": "25d4386b8edc57c9fde0f84b21f09f6396a98b9c9b6e35fa51718bacd6dfb50d"
+    },
+    {
+      "name": "somospie-summary.json",
+      "bytes": 8314,
+      "sha256": "0bfa3864c2d275e1e2fd582cf682fac73a27b46925b1f607421fa4fee184ec7b"
+    },
+    {
+      "name": "source.tar.gz",
+      "bytes": 32547,
+      "sha256": "d516a0f674a2d596b988c14f11c9c3e1576a3ef0cbe0782216cf7dad25f8c92c"
+    }
+  ],
+  "publicImmutableImageVerified": true,
+  "publicDockerPullVerified": true,
+  "originalRawDataRedistributed": false
+}

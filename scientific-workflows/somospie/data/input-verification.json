@@ -1,0 +1,523 @@
+{
+  "status": "verified-inputs",
+  "upstreamSOMOSPIECommit": "55d317ea4d751d823086005dd5d8247e65dffd55",
+  "profile": "Complete January 2010 ESA CCI v07.1 observations and four full Copernicus GLO-90 source tiles for an explicitly frozen Oklahoma geographic crop.",
+  "regionEPSG": 4326,
+  "boundsWestSouthEastNorth": [
+    -99,
+    35,
+    -97,
+    37
+  ],
+  "plannedEvaluationResolutionDegrees": 0.01,
+  "soilMoistureDailyFiles": 31,
+  "surfaceElevationTiles": 4,
+  "soilMoisturePeriod": [
+    "2010-01-01",
+    "2010-01-31"
+  ],
+  "surfaceElevationRelease": 2021,
+  "terrainInterpretation": "Copernicus GLO-90 is a digital surface model including vegetation/infrastructure, not a bare-earth survey. It is used as a static covariate; the different observation dates are explicit.",
+  "files": [
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100101000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-01",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100101000000-fv07.1.nc",
+      "bytes": 1374051,
+      "sha256": "d3babc7a0b837cc31340917ab82ce1bca302fa5101b447ab73ace59924575f5f",
+      "md5": "08578634bf0dde33948d539952b7c5d3",
+      "sourceHeaders": {
+        "contentLength": "1374051",
+        "etag": "\"63e2372e-14f763\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100102000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-02",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100102000000-fv07.1.nc",
+      "bytes": 1355497,
+      "sha256": "024c6034ce760c0a422037c769a9fba930f75dc7cc3f45011a025ca8dd3dd57c",
+      "md5": "b0e57b4a7607b330f97a335aa503f23a",
+      "sourceHeaders": {
+        "contentLength": "1355497",
+        "etag": "\"63e2372e-14aee9\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100103000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-03",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100103000000-fv07.1.nc",
+      "bytes": 1343417,
+      "sha256": "a46f76f9c774498b0e7bb63308eb8ff493d0544e1e33b416d24ff92219ce5c28",
+      "md5": "cd2b24434985e3ab94030bf6f1050a13",
+      "sourceHeaders": {
+        "contentLength": "1343417",
+        "etag": "\"63e2372e-147fb9\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100104000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-04",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100104000000-fv07.1.nc",
+      "bytes": 1319878,
+      "sha256": "15072bc1f0fd577a419c00aab62abd0b527af1fb6ad6ec61a49de0dcb3c23d7f",
+      "md5": "f2fdec5fb055b14cadaf1866e2925da3",
+      "sourceHeaders": {
+        "contentLength": "1319878",
+        "etag": "\"63e2372e-1423c6\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100105000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-05",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100105000000-fv07.1.nc",
+      "bytes": 1329809,
+      "sha256": "67bde70b4b1eae9b78ec044109e7e1de4f2990f40edf6ddb5a0ab7cc3eb4fd00",
+      "md5": "dd16571eb391277972c27e4df60796a7",
+      "sourceHeaders": {
+        "contentLength": "1329809",
+        "etag": "\"63e2372e-144a91\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100106000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-06",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100106000000-fv07.1.nc",
+      "bytes": 1311479,
+      "sha256": "040e5ff970bd0ed9ee4409e6d6fae111da3dd0a1e1858a3d7712775ebc3a1653",
+      "md5": "081db8d92d7e11dd3f96885ec463d7ea",
+      "sourceHeaders": {
+        "contentLength": "1311479",
+        "etag": "\"63e2372e-1402f7\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100107000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-07",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100107000000-fv07.1.nc",
+      "bytes": 1327090,
+      "sha256": "08fa73288901a0adb600fd24c57857e6278d8c619f81ee5b4ef9f5f23b8cec39",
+      "md5": "248f3d0d14ea240c602d558b0d9c5ab7",
+      "sourceHeaders": {
+        "contentLength": "1327090",
+        "etag": "\"63e2372e-143ff2\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100108000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-08",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100108000000-fv07.1.nc",
+      "bytes": 1300542,
+      "sha256": "c7d9e1e3981fbde84f68280b772f50d68126238cbdf6ec5268b7e9885c021442",
+      "md5": "fe0069f9e7812a94fc5214595326bdf3",
+      "sourceHeaders": {
+        "contentLength": "1300542",
+        "etag": "\"63e2372e-13d83e\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100109000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-09",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100109000000-fv07.1.nc",
+      "bytes": 1310916,
+      "sha256": "8a851328bc6370cc16a0c3821eebfb99fee8f0d0710c8e2a1f1b70cee325bfe0",
+      "md5": "7f9ef1ff0f44578285e8f40494dab977",
+      "sourceHeaders": {
+        "contentLength": "1310916",
+        "etag": "\"63e2372e-1400c4\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100110000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-10",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100110000000-fv07.1.nc",
+      "bytes": 1299121,
+      "sha256": "be2860d7cdab417706a7829c99fa367a00196d448f5aa5f79152fc622af1d91b",
+      "md5": "2c70829ae97feb8847a437e971401340",
+      "sourceHeaders": {
+        "contentLength": "1299121",
+        "etag": "\"63e2372e-13d2b1\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100111000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-11",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100111000000-fv07.1.nc",
+      "bytes": 1318116,
+      "sha256": "3eed80f18cd23f34e675a3339b99a13a0ba928d74c2bd1da9d9d30a3ec4cca3b",
+      "md5": "525eb9543bfebb18faa7c507d775090b",
+      "sourceHeaders": {
+        "contentLength": "1318116",
+        "etag": "\"63e2372e-141ce4\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100112000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-12",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100112000000-fv07.1.nc",
+      "bytes": 1295497,
+      "sha256": "48cd2fac68391a0b30561eea03bda74d0372e802e3ed6c84d456e0780c9d36ac",
+      "md5": "ea2d27ed72c4a656db0639c8b42fa0c5",
+      "sourceHeaders": {
+        "contentLength": "1295497",
+        "etag": "\"63e2372e-13c489\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100113000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-13",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100113000000-fv07.1.nc",
+      "bytes": 1302393,
+      "sha256": "0fc5ec09e5ef3153c789e33985e16f48c0b9fde504331d3295640c628f9c01cd",
+      "md5": "c669c65a1e264c17f5a84523053799d1",
+      "sourceHeaders": {
+        "contentLength": "1302393",
+        "etag": "\"63e2372e-13df79\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:06 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100114000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-14",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100114000000-fv07.1.nc",
+      "bytes": 1290532,
+      "sha256": "c78cd72ef546b212a91edb867810a75f5d16da0778a30bc8a9534a738be8e9a3",
+      "md5": "b3a5174f240c2f60015071ac2aee2f6a",
+      "sourceHeaders": {
+        "contentLength": "1290532",
+        "etag": "\"63e2372f-13b124\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100115000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-15",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100115000000-fv07.1.nc",
+      "bytes": 1366283,
+      "sha256": "388cad5945b0a851d1aef5f82c7deafbf25798c75a5c3f00881e1a4819257a12",
+      "md5": "ef2ae84b05e63b08e00b0ab95bd20e6d",
+      "sourceHeaders": {
+        "contentLength": "1366283",
+        "etag": "\"63e2372f-14d90b\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100116000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-16",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100116000000-fv07.1.nc",
+      "bytes": 1372905,
+      "sha256": "686e5c59624396418ecce32076624967309be4f2f171b75237801a0fbb501ecd",
+      "md5": "4c707bf4b0e774b3e667f0e43c91e629",
+      "sourceHeaders": {
+        "contentLength": "1372905",
+        "etag": "\"63e2372f-14f2e9\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100117000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-17",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100117000000-fv07.1.nc",
+      "bytes": 1374433,
+      "sha256": "322e343533ad6d3793fee57a3ce75bb7bc7df5b6e207e538dc78f53d4d8004c3",
+      "md5": "5160c7a30a8ab9f4d0117553288dbb21",
+      "sourceHeaders": {
+        "contentLength": "1374433",
+        "etag": "\"63e2372f-14f8e1\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100118000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-18",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100118000000-fv07.1.nc",
+      "bytes": 1379552,
+      "sha256": "e6b8b1da2862468a0409e282a22742714fe33759eb92ca78439be8ccc01b9979",
+      "md5": "dddc357bb577b7eca8997462054e9ac0",
+      "sourceHeaders": {
+        "contentLength": "1379552",
+        "etag": "\"63e2372f-150ce0\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100119000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-19",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100119000000-fv07.1.nc",
+      "bytes": 1377849,
+      "sha256": "935904c6d941f0bb12e76940eb3254e345a2442d66dae51d9c23d0f5921d629b",
+      "md5": "0612819e75eb7e14a00989cb55aa2252",
+      "sourceHeaders": {
+        "contentLength": "1377849",
+        "etag": "\"63e2372f-150639\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100120000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-20",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100120000000-fv07.1.nc",
+      "bytes": 1338158,
+      "sha256": "b53acb302955b88c11ed76800f96ae801cd1f0ac4c3a2c2f6b50d8c3f58f1586",
+      "md5": "a71fc46aa096c65ab19de918c6acb44a",
+      "sourceHeaders": {
+        "contentLength": "1338158",
+        "etag": "\"63e2372f-146b2e\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100121000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-21",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100121000000-fv07.1.nc",
+      "bytes": 1339166,
+      "sha256": "5cfe5a11a6dc888d5fd51661c29930575bc80fe6bd4c844a49aa4ef5bba9c896",
+      "md5": "2b8e3324fc3dfff26d7f533e97782413",
+      "sourceHeaders": {
+        "contentLength": "1339166",
+        "etag": "\"63e2372f-146f1e\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100122000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-22",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100122000000-fv07.1.nc",
+      "bytes": 1333986,
+      "sha256": "bd813f5a90ba8d9eef0c9f444c89856e49f69e6f8f16118eafd9e4bf79b24639",
+      "md5": "23a6151f1e359012c85bdb62ca527a36",
+      "sourceHeaders": {
+        "contentLength": "1333986",
+        "etag": "\"63e2372f-145ae2\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100123000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-23",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100123000000-fv07.1.nc",
+      "bytes": 1331681,
+      "sha256": "27a6e87bc8ab4b79218db40ecd34645fa836811028a7ce11ec54ecd062f27908",
+      "md5": "ebb59eaed929653514b981a1e313e376",
+      "sourceHeaders": {
+        "contentLength": "1331681",
+        "etag": "\"63e2372f-1451e1\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100124000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-24",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100124000000-fv07.1.nc",
+      "bytes": 1315476,
+      "sha256": "9586937780b590d848c098c31d7b4ca5c4c52717de901cdee5e252f08bfafb03",
+      "md5": "bee7dc8699f39f13ae5fc718af86e7a1",
+      "sourceHeaders": {
+        "contentLength": "1315476",
+        "etag": "\"63e2372f-141294\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100125000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-25",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100125000000-fv07.1.nc",
+      "bytes": 1342770,
+      "sha256": "35cc6c4989506d0c7c4c17debbca667b47b2595dd0441a61491e3f9d040597a2",
+      "md5": "64efb29bd810d3b5eb5251a7d0dc5bb8",
+      "sourceHeaders": {
+        "contentLength": "1342770",
+        "etag": "\"63e2372f-147d32\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:07 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100126000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-26",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100126000000-fv07.1.nc",
+      "bytes": 1331398,
+      "sha256": "ffb61cef446788b7a3290ecbd842531a73d33183baf7adf9777f1f4ed472c28e",
+      "md5": "0000a989f445e53994ab8885c5782ff8",
+      "sourceHeaders": {
+        "contentLength": "1331398",
+        "etag": "\"63e23730-1450c6\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100127000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-27",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100127000000-fv07.1.nc",
+      "bytes": 1322807,
+      "sha256": "a6f74a400cd99eb8bcf8a7bd302cc5b40f87fa9b09d86fc66a9c44a8e44a38c5",
+      "md5": "819149f0ba8380f8859e62532f7f1906",
+      "sourceHeaders": {
+        "contentLength": "1322807",
+        "etag": "\"63e23730-142f37\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100128000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-28",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100128000000-fv07.1.nc",
+      "bytes": 1296090,
+      "sha256": "0956072c7871a7d9a702deb23b0256c0ece51e27b5be95246c89aad3ec9df18a",
+      "md5": "3a77a5be861bf64146e543326e41eb6b",
+      "sourceHeaders": {
+        "contentLength": "1296090",
+        "etag": "\"63e23730-13c6da\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100129000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-29",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100129000000-fv07.1.nc",
+      "bytes": 1327903,
+      "sha256": "bc75c139c54e4f997629f6bb64fd805968cb71afcae224f1c3cc3499fe416ba7",
+      "md5": "0f1ef9386d85d684c5370e99d395492a",
+      "sourceHeaders": {
+        "contentLength": "1327903",
+        "etag": "\"63e23730-14431f\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100130000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-30",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100130000000-fv07.1.nc",
+      "bytes": 1296250,
+      "sha256": "0fa320d4c0174bda065b8b6f4e2918bda3aa04d00ced1d6253dec2c99bc24d09",
+      "md5": "8bba85fe8ec07c4f2e7347709aaa35cf",
+      "sourceHeaders": {
+        "contentLength": "1296250",
+        "etag": "\"63e23730-13c77a\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100131000000-fv07.1.nc",
+      "family": "ESA CCI Soil Moisture COMBINED v07.1",
+      "date": "2010-01-31",
+      "url": "https://dap.ceda.ac.uk/neodc/esacci/soil_moisture/data/daily_files/COMBINED/v07.1/2010/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100131000000-fv07.1.nc",
+      "bytes": 1293060,
+      "sha256": "a7a353f4a5b578d81d334600f3405f2327a6a019bcbf8f928ba48fa0a87cd344",
+      "md5": "7599dd9286da10f630b62e892f66197e",
+      "sourceHeaders": {
+        "contentLength": "1293060",
+        "etag": "\"63e23730-13bb04\"",
+        "lastModified": "Tue, 07 Feb 2023 11:34:08 GMT"
+      }
+    },
+    {
+      "filename": "surface-elevation/Copernicus_DSM_COG_30_N35_00_W099_00_DEM.tif",
+      "family": "Copernicus GLO-90 2021 digital surface model",
+      "url": "https://copernicus-dem-90m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W099_00_DEM/Copernicus_DSM_COG_30_N35_00_W099_00_DEM.tif",
+      "expectedBytes": 4931343,
+      "sourceMD5": "8514065b1dd3a011f94c1d0e5da0f782",
+      "bytes": 4931343,
+      "sha256": "a920186d7fcc4d4bbbe73a4269a991577ef013eb9799966dd3a90a5f45e9a4a1",
+      "md5": "8514065b1dd3a011f94c1d0e5da0f782",
+      "sourceHeaders": {
+        "contentLength": "4931343",
+        "etag": "\"8514065b1dd3a011f94c1d0e5da0f782\"",
+        "lastModified": "Mon, 09 May 2022 12:57:07 GMT"
+      }
+    },
+    {
+      "filename": "surface-elevation/Copernicus_DSM_COG_30_N35_00_W098_00_DEM.tif",
+      "family": "Copernicus GLO-90 2021 digital surface model",
+      "url": "https://copernicus-dem-90m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_30_N35_00_W098_00_DEM/Copernicus_DSM_COG_30_N35_00_W098_00_DEM.tif",
+      "expectedBytes": 4945456,
+      "sourceMD5": "9b66dee833df26a02a7eb6c093b0ebad",
+      "bytes": 4945456,
+      "sha256": "ece7039b78f8eadd13336a410304eeec98cb3818945b259dcd7629cac113ac35",
+      "md5": "9b66dee833df26a02a7eb6c093b0ebad",
+      "sourceHeaders": {
+        "contentLength": "4945456",
+        "etag": "\"9b66dee833df26a02a7eb6c093b0ebad\"",
+        "lastModified": "Mon, 09 May 2022 12:57:07 GMT"
+      }
+    },
+    {
+      "filename": "surface-elevation/Copernicus_DSM_COG_30_N36_00_W099_00_DEM.tif",
+      "family": "Copernicus GLO-90 2021 digital surface model",
+      "url": "https://copernicus-dem-90m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_30_N36_00_W099_00_DEM/Copernicus_DSM_COG_30_N36_00_W099_00_DEM.tif",
+      "expectedBytes": 4757514,
+      "sourceMD5": "3f50c7a82dbae496a9a2197900011c0e",
+      "bytes": 4757514,
+      "sha256": "84d7dd74c93af6e42a59372bb3f5ccbd110578fc24745f864a804808885a65bc",
+      "md5": "3f50c7a82dbae496a9a2197900011c0e",
+      "sourceHeaders": {
+        "contentLength": "4757514",
+        "etag": "\"3f50c7a82dbae496a9a2197900011c0e\"",
+        "lastModified": "Mon, 09 May 2022 12:57:36 GMT"
+      }
+    },
+    {
+      "filename": "surface-elevation/Copernicus_DSM_COG_30_N36_00_W098_00_DEM.tif",
+      "family": "Copernicus GLO-90 2021 digital surface model",
+      "url": "https://copernicus-dem-90m.s3.eu-central-1.amazonaws.com/Copernicus_DSM_COG_30_N36_00_W098_00_DEM/Copernicus_DSM_COG_30_N36_00_W098_00_DEM.tif",
+      "expectedBytes": 4754554,
+      "sourceMD5": "c7461d5edbc67a11571729e20e829de3",
+      "bytes": 4754554,
+      "sha256": "187cdbf03de375dd8eacf54e291cb0ec78ea07da6769d996af6f8f2546cf84cd",
+      "md5": "c7461d5edbc67a11571729e20e829de3",
+      "sourceHeaders": {
+        "contentLength": "4754554",
+        "etag": "\"c7461d5edbc67a11571729e20e829de3\"",
+        "lastModified": "Mon, 09 May 2022 12:57:36 GMT"
+      }
+    }
+  ],
+  "totalBytes": 60606972,
+  "verifiedAt": "2026-11-15T20:25:54.841237+00:00",
+  "unavailableOriginalPreparedData": {
+    "url": "https://drive.google.com/drive/folders/1g5VQaOHAsoTkfMo7EWPNWBinrIguMG5i",
+    "observed": "Drive metadata 404 and the upstream gdown folder reader could not retrieve public contents. Regenerate from the original public satellite product rather than substituting synthetic data."
+  }
+}

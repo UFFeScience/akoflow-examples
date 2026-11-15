@@ -21,6 +21,7 @@ Each command below starts from the repository root and keeps your shell in that 
 | [SRA Search — crAssphage Screening](scientific-workflows/sra-search/README.md) | `(cd scientific-workflows/sra-search && ./prepare.sh && ./run.sh)` |
 | [Variant Calling — E. coli Genome Comparison](scientific-workflows/variant-calling/README.md) | `(cd scientific-workflows/variant-calling && ./prepare.sh && ./run.sh)` |
 | [Orcasound — Hydrophone Audio and Orca Call Candidates](scientific-workflows/orcasound/README.md) | `(cd scientific-workflows/orcasound && ./prepare.sh && ./run.sh)` |
+| [SOMOSPIE — Soil Moisture Inference](scientific-workflows/somospie/README.md) | `(cd scientific-workflows/somospie && ./prepare.sh && ./run.sh)` |
 | [Montage 050 — Astronomical Image Mosaicking](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 8 members](scientific-workflows/openoil-ensemble-08/README.md) | `(cd scientific-workflows/openoil-ensemble-08 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 16 members](scientific-workflows/openoil-ensemble-16/README.md) | `(cd scientific-workflows/openoil-ensemble-16 && ./prepare.sh && ./run.sh)` |

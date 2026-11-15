@@ -1,0 +1,16 @@
+{
+  "artifacts": [
+    "ingested.json",
+    "classified.json",
+    "extracted.json",
+    "reconciliation.json",
+    "invoice-summary.csv",
+    "report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/document-intelligence@sha256:6740ce1e600d1961a24cf8558cc68ca6bd064b69537fcd486ffabd76f7dc4950",
+  "runId": "hubv1-document-intelligence-local-65cf94270e-run-20261115t055504.134836957",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

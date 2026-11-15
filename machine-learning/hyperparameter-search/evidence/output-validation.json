@@ -3,6 +3,9 @@
     "leaderboard.csv",
     "best-model.pkl"
   ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search@sha256:638cc469c08fcb393648551ecc6454edc44f4506565636bd2c017989d2334f41",
+  "runId": "hubv1-showcase-hyperparameter-search-local-14e6b92f12-run-20261115t054313.323670620",
   "source": "actual daemon workspaces",
   "status": "passed",
   "validator": "validate.sh"

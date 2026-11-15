@@ -1,0 +1,15 @@
+{
+  "activityCount": 5,
+  "examplePath": "document-ai/document-intelligence",
+  "experimentId": "d6baf159-cb93-4380-8ad4-8bd2761d959f",
+  "image": "ghcr.io/uffescience/akoflow-examples/document-intelligence@sha256:6740ce1e600d1961a24cf8558cc68ca6bd064b69537fcd486ffabd76f7dc4950",
+  "publicationId": "85d4152f-da21-4d6b-84d0-6cc937d8b96e",
+  "resultCount": 1,
+  "route": "/docs/showcase/document-ai/document-intelligence",
+  "runId": "hubv1-document-intelligence-local-65cf94270e-run-20261115t055504.134836957",
+  "uri": "akoflow://hub/publications/85d4152f-da21-4d6b-84d0-6cc937d8b96e/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/document-ai-document-intelligence",
+  "version": 1,
+  "versionId": "721dffce-55cc-43c3-9884-c3dc6d982dea",
+  "yamlHash": "91df35a93167ba43118898aa715b22f77904fd362521548c82c150035d8244a0"
+}

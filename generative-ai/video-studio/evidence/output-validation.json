@@ -1,0 +1,15 @@
+{
+  "artifacts": [
+    "storyboard.json",
+    "frames.json",
+    "narration.wav",
+    "final.mp4",
+    "quality-report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/ai-video-studio@sha256:60c638432c92bb6a50029dbcafdc6c5f510bcd8de3966bd9eb1a2762943c8ea6",
+  "runId": "hubv1-ai-video-studio-local-ba0f251672-run-20261115t055329.440550088",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

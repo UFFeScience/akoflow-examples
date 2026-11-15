@@ -3,6 +3,9 @@
     "surrogate.pkl",
     "validation.json"
   ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model@sha256:a387d6dc38671586661960c747ae877a18cc80d9757b6f58e9fd4c8bc22f753e",
+  "runId": "hubv1-showcase-surrogate-model-local-6bb42a24e0-run-20261115t054542.887071802",
   "source": "actual daemon workspaces",
   "status": "passed",
   "validator": "validate.sh"

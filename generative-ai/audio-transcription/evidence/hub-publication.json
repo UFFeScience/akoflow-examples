@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "generative-ai/audio-transcription",
-  "experimentId": "101b8fc2-5b2a-48d9-bbce-c4b3911a2c7e",
+  "experimentId": "f92ca2bb-6eba-4312-8cdd-d9f92a85d2f8",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription@sha256:da81939b622834418a405159e6b32ef5f5d722bdb88682f6530b75f353ccc784",
   "publicationId": "785d8ef0-5627-4c57-94f9-2705fc73b6c3",
   "resultCount": 1,

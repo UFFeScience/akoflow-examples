@@ -47,13 +47,21 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 		Slug   string   `json:"slug"`
 	}
 	input, err := os.ReadFile(filepath.Join(dir, "data/input.json"))
-	if err != nil {
+	reference := os.IsNotExist(err)
+	if err != nil && !reference {
 		return err
 	}
-	if err = json.Unmarshal(input, &config); err != nil {
-		return err
+	if !reference {
+		if err = json.Unmarshal(input, &config); err != nil {
+			return err
+		}
+	} else {
+		config.Slug = filepath.Base(dir)
 	}
 	names := append([]string{}, artifacts...)
+	if reference {
+		names = append([]string{"manifest.json"}, names...)
+	}
 	if filepath.Base(dir) != "montage-050" {
 		for _, s := range config.Stages {
 			names = append(names, "stage-"+s+".json")
@@ -63,7 +71,8 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 	if err = os.MkdirAll(output, 0755); err != nil {
 		return err
 	}
-	for _, name := range names {
+	for index := 0; index < len(names); index++ {
+		name := names[index]
 		if filepath.IsAbs(name) || strings.Contains(name, "..") {
 			return fmt.Errorf("unsafe output name")
 		}
@@ -105,9 +114,35 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 		if !copied {
 			return fmt.Errorf("actual output unavailable: %s", name)
 		}
+		if reference && name == "manifest.json" {
+			data, e := os.ReadFile(filepath.Join(output, name))
+			if e != nil {
+				return e
+			}
+			var m struct {
+				Artifacts []string `json:"artifacts"`
+			}
+			if e = json.Unmarshal(data, &m); e != nil {
+				return e
+			}
+			for _, a := range m.Artifacts {
+				found := false
+				for _, n := range names {
+					if n == a {
+						found = true
+						break
+					}
+				}
+				if !found {
+					names = append(names, a)
+				}
+			}
+		}
 	}
-	if err = write(filepath.Join(output, "manifest.json"), map[string]any{"showcase": config.Slug, "status": "success", "artifacts": artifacts, "stages": config.Stages, "runId": record.RunID, "image": record.Image}); err != nil {
-		return err
+	if !reference {
+		if err = write(filepath.Join(output, "manifest.json"), map[string]any{"showcase": config.Slug, "status": "success", "artifacts": artifacts, "stages": config.Stages, "runId": record.RunID, "image": record.Image}); err != nil {
+			return err
+		}
 	}
 	validator := exec.Command("sh", filepath.Join(dir, "validate.sh"))
 	if filepath.Base(dir) == "montage-050" {

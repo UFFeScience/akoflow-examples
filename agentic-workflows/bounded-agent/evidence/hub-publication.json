@@ -1,0 +1,15 @@
+{
+  "activityCount": 5,
+  "examplePath": "agentic-workflows/bounded-agent",
+  "experimentId": "9543ef83-a530-4f6d-a42e-09b48c1a2fae",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-bounded-agent@sha256:3fb4e81fce9bfb734d0ae01c3d71dc85c7ff75410e612301ed5dc49550b0b25d",
+  "publicationId": "cee011a5-4dc0-4186-8db8-16863e515c2a",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/agentic-workflows/bounded-agent",
+  "runId": "hubv1-showcase-bounded-agent-local-25236e7c77-run-20261115t055359.154899433",
+  "uri": "akoflow://hub/publications/cee011a5-4dc0-4186-8db8-16863e515c2a/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/agentic-workflows-bounded-agent",
+  "version": 1,
+  "versionId": "d9d8e850-ed7f-465e-a36f-9e68099cef28",
+  "yamlHash": "64c4acf7abc67a8e45a403369e75fb9aa0bcb35b6d2271413657b8f64119f36f"
+}

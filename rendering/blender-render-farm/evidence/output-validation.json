@@ -1,0 +1,14 @@
+{
+  "artifacts": [
+    "render-plan.json",
+    "scene.blend",
+    "animation.mp4",
+    "render-report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/blender-render-farm@sha256:065a3b2b7f449b31ee4b6403c3580720cf4c1e87ede9c04c7ca3510ab570aaae",
+  "runId": "hubv1-blender-render-farm-local-37884b15c5-run-20261115t055538.830501945",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

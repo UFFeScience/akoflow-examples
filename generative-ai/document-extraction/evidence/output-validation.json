@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "extraction.json",
+    "ocr.txt"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-document-extraction@sha256:4624471159914d713f15799c64a4b4fbab4a01c2f5172ebafca7e17dfe1d9a09",
+  "runId": "hubv1-showcase-document-extraction-local-ae532a9b63-run-20261115t055158.524756085",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

@@ -1,0 +1,15 @@
+{
+  "activityCount": 5,
+  "examplePath": "rendering/blender-render-farm",
+  "experimentId": "3d0854b8-d664-4da7-b5cc-0e981b6a3a3e",
+  "image": "ghcr.io/uffescience/akoflow-examples/blender-render-farm@sha256:065a3b2b7f449b31ee4b6403c3580720cf4c1e87ede9c04c7ca3510ab570aaae",
+  "publicationId": "f0608ece-22cb-45d9-ba33-aaf5d1c42231",
+  "resultCount": 1,
+  "route": "/docs/showcase/rendering/blender-render-farm",
+  "runId": "hubv1-blender-render-farm-local-37884b15c5-run-20261115t055538.830501945",
+  "uri": "akoflow://hub/publications/f0608ece-22cb-45d9-ba33-aaf5d1c42231/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/rendering-blender-render-farm",
+  "version": 1,
+  "versionId": "cd703315-9599-4531-94d3-e9b02dc21a01",
+  "yamlHash": "aa3930e8293ab83d92fff65f3fe8bf7488f12c12d77e696b36bd15b6ce016c4e"
+}

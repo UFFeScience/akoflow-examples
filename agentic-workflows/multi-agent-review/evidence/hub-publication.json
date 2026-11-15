@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "agentic-workflows/multi-agent-review",
+  "experimentId": "d06d0ac9-f0d0-46f2-ba14-e4da20d0ef71",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review@sha256:f0ead4436917c972c907260066abfe47d17311dfc4dbef5e716861390dedbfb6",
+  "publicationId": "1bed32d8-cf60-487b-b4d3-663aed054202",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/agentic-workflows/multi-agent-review",
+  "runId": "hubv1-showcase-multi-agent-review-local-42e085614f-run-20261115t055417.277695740",
+  "uri": "akoflow://hub/publications/1bed32d8-cf60-487b-b4d3-663aed054202/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/agentic-workflows-multi-agent-review",
+  "version": 1,
+  "versionId": "870ef0c6-ddce-4624-8e8b-4567bcbcfefa",
+  "yamlHash": "908fed821c67d39f5b99a6863c8d3cf44dbd508cbb6c20476899e75a1fed28d1"
+}

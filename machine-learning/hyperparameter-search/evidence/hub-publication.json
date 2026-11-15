@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "machine-learning/hyperparameter-search",
-  "experimentId": "49f08af3-3252-406f-aa2a-a2dc2ab9b3c5",
+  "experimentId": "c48bda89-006a-4c58-84f8-8a42cc18243d",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search@sha256:638cc469c08fcb393648551ecc6454edc44f4506565636bd2c017989d2334f41",
   "publicationId": "12f30a7f-d58d-43e5-9a90-eba31de75a9e",
   "resultCount": 1,

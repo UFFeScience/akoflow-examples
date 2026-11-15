@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "machine-learning/model-distillation",
-  "experimentId": "ae6cff01-9a8a-4ecb-8afc-fee2195e73c2",
+  "experimentId": "77daa826-b82a-4eb8-bd60-e81f2f6f2cea",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-distillation@sha256:b6f5a9192b014661ac7e0e0de74702e3f4e2cd5bca2769b00617632d707a0911",
   "publicationId": "a153be08-6e72-468e-8e14-7702c81aa640",
   "resultCount": 1,

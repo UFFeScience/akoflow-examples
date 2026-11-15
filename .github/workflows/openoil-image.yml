@@ -38,6 +38,7 @@ jobs:
       - name: Validate real offline OpenOil computation
         run: |
           docker run --rm --network none --memory 5g ghcr.io/uffescience/openoil-ensemble:sha-${GITHUB_SHA}-${{ matrix.architecture }} sh -ec '
+            python -m unittest discover -s /opt/openoil -p "test_*.py"
             for stage in prepare member-000 member-001 aggregate map summary animate validate; do
               python /opt/openoil/workflow.py --stage "$stage" --members 2 --particles 32 --hours 2
             done'

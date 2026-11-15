@@ -83,11 +83,27 @@ def simulate(index):
     with xr.open_dataset(p["saida"] + ".nc") as ds:
         assert ds.sizes["trajectory"] == p["particulas"]
         assert np.isfinite(ds.lon.values).any()
-        assert float((ds.time[-1] - ds.time[0]) / np.timedelta64(1, "h")) >= p["horas_simuladas"] - 1
+        validate_horizon(ds, p)
+
+
+
+def validate_horizon(ds, p):
+    hours = ((ds.time.values - np.datetime64(p["inicio"])) / np.timedelta64(1, "h")).astype(float)
+    assert len(hours) >= 2 and hours[0] == 0 and np.allclose(np.diff(hours), 1), "Invalid hourly time axis"
+    if hours[-1] < p["horas_simuladas"] - 1:
+        meanings = ds.status.attrs["flag_meanings"].split()
+        values = ds.status.attrs.get("flag_values", list(range(len(meanings))))
+        assert "stranded" in meanings and hours[-1] >= p["horas_vazamento"], "Unexpected premature termination"
+        stranded = values[meanings.index("stranded")]
+        assert np.all(fill(ds.status.transpose("trajectory", "time").values)[:, -1] == stranded), "Early termination with active or missing particles"
+    assert hours[-1] <= p["horas_simuladas"], "Time axis exceeds requested horizon"
+    return hours
 
 
 def member_data(p):
     with xr.open_dataset(p["saida"] + ".nc") as ds:
+        validate_horizon(ds, p)
+        assert ds.sizes["trajectory"] == p["particulas"]
         a = {k: ds[k].transpose("trajectory", "time").values.copy()
              for k in ["lon", "lat", "status", "mass_oil", "mass_evaporated", "mass_dispersed"]}
         meanings = ds.status.attrs["flag_meanings"].split()
@@ -104,16 +120,19 @@ def member_data(p):
         assert np.max(np.abs(total[hours >= p["horas_vazamento"]] - total[-1])) / total[-1] < .01, "Mass conservation outside 1% tolerance"
         arrival = float(hours[coast.any(axis=0)].min()) if coast.any() else None
         return a, coast, hours, series, dict(membro=p["membro"], regime=p["regime"], t_costa_h=arrival,
-                                            frac_costa=float(coast[:, -1].mean()), final_mass_kg=float(total[-1]))
+                                            frac_costa=float(coast[:, -1].mean()), final_mass_kg=float(total[-1]),
+                                            simulation_hours=float(hours[-1]), terminal_state_carried_forward=bool(hours[-1] < p["horas_simuladas"]))
 
 
 def aggregate():
     members = load("parameters.json")
-    arrays = []; rows = []; balances = []; hours = None
+    arrays = []; rows = []; balances = []
+    hours = np.arange(load("scenario.json")["horas_simuladas"] + 1, dtype=float)
     for p in members:
         a, coast, h, mass, row = member_data(p)
-        assert hours is None or np.array_equal(h, hours), "Mismatched time axes"
-        hours = h; rows.append(row); balances.append(mass)
+        assert np.array_equal(h, hours[:len(h)]), "Mismatched time axes"
+        rows.append(row)
+        balances.append({key: np.interp(hours, h, value) for key, value in mass.items()})
         arrays.append((a["lon"], a["lat"]))
     finite_lon = np.concatenate([lo[np.isfinite(lo)] for lo, _ in arrays])
     finite_lat = np.concatenate([la[np.isfinite(la)] for _, la in arrays])
@@ -141,7 +160,7 @@ def aggregate():
                               selected_member=selected["membro"], selected_regime=selected["regime"],
                               maximum_coastal_fraction=selected["frac_costa"], grid_resolution_degrees=resolution,
                               bounds=[float(bx[0]), float(bx[-1]), float(by[0]), float(by[-1])], scenario=load("scenario.json"),
-                              arrivals=rows, warning="Synthetic constant wind/current forcings; not an operational spill forecast."))
+                              arrivals=rows, terminal_state_policy="Raw trajectories retain actual model duration; after all particles strand, terminal mass pools are held constant to the common analysis horizon without additional model integration.", warning="Synthetic constant wind/current forcings; not an operational spill forecast."))
     profiles = [load(f"profile-member-{p['membro']:03d}.json") for p in members]
     write_profiles(profiles)
 
@@ -230,7 +249,9 @@ def validate():
             if name.endswith("gif"):assert image.n_frames>=2
             image.verify()
     names=["scenario.json","parameters.json","probability.nc","arrival.csv","mass_balance.csv","summary.json","perfil_tarefas.csv","selected-member.nc","mapa_probabilidade.png","resumo_workflow.png","animacao.gif"]
-    for p in load("parameters.json"):names.extend([p["saida"]+".nc",f"profile-member-{p['membro']:03d}.json"])
+    for p in load("parameters.json"):
+        member_data(p)
+        names.extend([p["saida"]+".nc",f"profile-member-{p['membro']:03d}.json"])
     names.extend(["profile-prepare.json","profile-aggregate.json","profile-map.json","profile-summary.json","profile-animate.json"])
     digests={name:hashlib.sha256(Path(name).read_bytes()).hexdigest() for name in names}
     dump("manifest.json",dict(showcase=f"openoil-ensemble-{scenario['members']:02d}",status="success",artifacts=names,sha256=digests,

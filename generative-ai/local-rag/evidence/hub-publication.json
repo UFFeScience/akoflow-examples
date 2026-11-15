@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "generative-ai/local-rag",
+  "experimentId": "85df4271-a8e8-4d68-80a8-289fd747971b",
+  "image": "ghcr.io/uffescience/akoflow-examples/local-rag-factory@sha256:e5d745eb64d392f7d8af85ea1b625cfdf5837975a2671afa84281dd0fd23c02e",
+  "publicationId": "f00526cb-8aa2-4bcf-b28d-8d76c47588fb",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/local-rag-factory",
+  "runId": "hubv1-local-rag-factory-local-13e8a67e07-run-20261115t055221.758545823",
+  "uri": "akoflow://hub/publications/f00526cb-8aa2-4bcf-b28d-8d76c47588fb/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-local-rag",
+  "version": 1,
+  "versionId": "b60d8938-a85d-4bed-be69-5e0b5046d873",
+  "yamlHash": "3f0a0ceeb1d6df561804fdbb9c9662c9a4e81aa32acb5ef0785c1fa18221ced8"
+}

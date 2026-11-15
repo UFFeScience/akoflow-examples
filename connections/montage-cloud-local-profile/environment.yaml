@@ -1,0 +1,42 @@
+environment:
+  id: montage-050-local
+  name: montage-050-local local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: montage-050-local-v1
+  environmentId: montage-050-local
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: montage-050-local-v1
+runtimes:
+  - environmentVersionId: montage-050-local-v1
+    id: montage-050-local-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: montage-050-local-local-docker
+    environmentVersionId: montage-050-local-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 2
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: montage-050-local-local-docker, runtimeId: montage-050-local-local, enabled: true}

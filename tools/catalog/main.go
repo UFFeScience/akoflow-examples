@@ -46,7 +46,7 @@ func main() {
 }
 func discover(root string) ([]entry, error) {
 	entries := []entry{}
-	for _, category := range []string{"scientific-workflows", "scientific-ai", "machine-learning", "generative-ai", "agentic-workflows", "document-ai", "media", "rendering"} {
+	for _, category := range []string{"scientific-workflows", "scientific-ai", "machine-learning", "generative-ai", "agentic-workflows", "document-ai", "media", "rendering", "connections"} {
 		directories, err := os.ReadDir(filepath.Join(root, category))
 		if err != nil {
 			return nil, err

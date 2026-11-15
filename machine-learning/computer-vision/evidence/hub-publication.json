@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/computer-vision",
+  "experimentId": "8a58f533-6eff-4d0d-a8c2-6de683cba8c2",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-computer-vision@sha256:99eaa319fd1bf27cc989de0a211565bb8bad0d03e20e243467e4d0be1d84e250",
+  "publicationId": "9c8d59e8-8d6d-4b67-8264-6b6951da921d",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/computer-vision",
+  "runId": "hubv1-showcase-computer-vision-local-9cab6f182c-run-20261115t054733.884301512",
+  "uri": "akoflow://hub/publications/9c8d59e8-8d6d-4b67-8264-6b6951da921d/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-computer-vision",
+  "version": 1,
+  "versionId": "d410a1f9-ccd3-4cc4-9efb-89bf65ef562e",
+  "yamlHash": "91da27ff052d307aca1eb804f7c6368132e40a1a6e0b3885b03ba7a3ce8b3900"
+}

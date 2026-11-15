@@ -1,0 +1,13 @@
+{
+  "artifacts": [
+    "1-mosaic.fits",
+    "2-mosaic.fits",
+    "3-mosaic.fits",
+    "1-mosaic.png",
+    "2-mosaic.png",
+    "3-mosaic.png",
+    "mosaic-color.png"
+  ],
+  "showcase": "montage-050-local",
+  "status": "success"
+}

@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "synthesis.md",
+    "review.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review@sha256:f0ead4436917c972c907260066abfe47d17311dfc4dbef5e716861390dedbfb6",
+  "runId": "hubv1-showcase-multi-agent-review-local-42e085614f-run-20261115t055417.277695740",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "next-batch.json",
+    "feedback-report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop@sha256:67ec219c19ec5066c9fb2406e3fe9283a64d4f4ceb12033c9c4ab4895660c797",
+  "runId": "hubv1-showcase-experiment-feedback-loop-local-63977675c7-run-20261115t054521.592602750",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

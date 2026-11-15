@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "machine-learning/model-conversion",
+  "experimentId": "3c2b7f41-6d76-4b7a-8b05-7c579ae0b5b3",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-conversion@sha256:e6790b9d51ea0a10d6bddbf43211c49dec1b19f436fbbcbaf7ad66f04598e720",
+  "publicationId": "0b26ad29-87a9-457e-bc7c-d81ae79d451f",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/model-conversion",
+  "runId": "hubv1-showcase-model-conversion-local-6f2c213241-run-20261115t055000.623474610",
+  "uri": "akoflow://hub/publications/0b26ad29-87a9-457e-bc7c-d81ae79d451f/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-model-conversion",
+  "version": 1,
+  "versionId": "6251eb6f-1a32-4a54-a56c-d5582c400ecf",
+  "yamlHash": "8aeae316a21c3bf0bebb16dd538d8252c7c4483fde98efb9feed323f72d4814f"
+}

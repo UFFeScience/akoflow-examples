@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "handoff.txt",
+    "receipt.txt"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "runId": "hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

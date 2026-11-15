@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "index.json",
+    "evaluation.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing@sha256:49a134578549b85b96f1a0840d858245228a4eb9c9c3862429e1d9ad813f44e6",
+  "runId": "hubv1-showcase-rag-indexing-local-9faa0c0acc-run-20261115t055238.934077042",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

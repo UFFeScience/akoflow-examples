@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "predictions.jsonl",
+    "batch-summary.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-batch-inference@sha256:d2ce527ee18c393280a9fb24b9620c1b51507784cb13daae180237fe9522f78e",
+  "runId": "hubv1-showcase-batch-inference-local-b24b58bf6c-run-20261115t054645.043310472",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

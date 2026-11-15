@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "scientific-ai/surrogate-model",
+  "experimentId": "26add5eb-6acc-46b5-bcc2-b9f20aac34d1",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model@sha256:a387d6dc38671586661960c747ae877a18cc80d9757b6f58e9fd4c8bc22f753e",
+  "publicationId": "26270b1f-e656-4b2c-8ae6-231e52dc2d3f",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/scientific-ai/surrogate-model",
+  "runId": "hubv1-showcase-surrogate-model-local-6bb42a24e0-run-20261115t054542.887071802",
+  "uri": "akoflow://hub/publications/26270b1f-e656-4b2c-8ae6-231e52dc2d3f/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-ai-surrogate-model",
+  "version": 1,
+  "versionId": "221790e7-d4cf-4f7d-a4f0-3cfd76183d42",
+  "yamlHash": "2b975806a961462cd7d91cd9b60fdff5187097286cdbf7e2d5fd502c977ec472"
+}

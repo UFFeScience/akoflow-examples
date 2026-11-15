@@ -82,7 +82,11 @@ func main() {
 	base := flag.String("api-url", "http://127.0.0.1:8080/akoflow-api", "local AkôFlow API")
 	envFile := flag.String("env-file", "", "optional env file containing AKOFLOW_API_TOKEN (never stored in output)")
 	build := flag.Bool("build", true, "build the declared image before execution")
+	registry := flag.Bool("registry-image", false, "pull and pin the public registry image instead of building locally")
+	namePrefix := flag.String("name-prefix", "", "prefix for isolated workflow registration")
 	wait := flag.Bool("wait", true, "wait for terminal state; false submits and leaves the daemon run active")
+	observe := flag.Bool("observe", false, "follow the already submitted run recorded in evidence; never submit another run")
+	waitTimeout := flag.Duration("wait-timeout", 20*time.Minute, "observation timeout; does not cancel an active run")
 	flag.Parse()
 	token := os.Getenv("AKOFLOW_API_TOKEN")
 	if token == "" && *envFile != "" {
@@ -101,12 +105,32 @@ func main() {
 		os.Exit(1)
 	}
 	c := client{strings.TrimSuffix(*base, "/"), token, &http.Client{Timeout: 45 * time.Second}}
-	if err := run(c, *root, *example, *build, *wait); err != nil {
+	if *observe {
+		path := filepath.Join(*root, *example, "evidence/daemon-run.json")
+		raw, err := os.ReadFile(path)
+		if err != nil {
+			panic(err)
+		}
+		record := map[string]any{}
+		if err = json.Unmarshal(raw, &record); err != nil {
+			panic(err)
+		}
+		id, ok := record["runId"].(string)
+		if !ok || id == "" {
+			panic("run identity missing")
+		}
+		if err = waitForRun(c, id, record, path, *waitTimeout); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+		return
+	}
+	if err := run(c, *root, *example, *build, *wait, *registry, *namePrefix); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
-func run(c client, root, relative string, build, wait bool) error {
+func run(c client, root, relative string, build, wait, registry bool, namePrefix string) error {
 	preflight, err := c.request("GET", "preflight", nil)
 	if err != nil {
 		return err
@@ -125,7 +149,20 @@ func run(c client, root, relative string, build, wait bool) error {
 	}
 	spec := definition["spec"].(map[string]any)
 	image := spec["image"].(string)
-	if build {
+	if registry {
+		command := exec.Command("docker", "pull", image)
+		command.Stdout, command.Stderr = os.Stdout, os.Stderr
+		if err := command.Run(); err != nil {
+			return fmt.Errorf("pull public image: %w", err)
+		}
+		digest, err := exec.Command("docker", "image", "inspect", "--format", "{{index .RepoDigests 0}}", image).Output()
+		if err != nil || !strings.Contains(string(digest), "@sha256:") {
+			return fmt.Errorf("public image digest unavailable")
+		}
+		image = strings.TrimSpace(string(digest))
+		spec["image"] = image
+	}
+	if build && !registry {
 		command := exec.Command("docker", "build", "-f", filepath.Join(bundle, "docker/Dockerfile"), "-t", image, bundle)
 		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr
@@ -154,7 +191,7 @@ func run(c client, root, relative string, build, wait bool) error {
 	// Revision-specific workflow names preserve older registered definitions and run evidence.
 	hash := sha256.Sum256(append([]byte(fmt.Sprint(definition)), imageID...))
 	suffix := hex.EncodeToString(hash[:])[:10]
-	definition["name"] = definition["name"].(string) + "-local-" + suffix
+	definition["name"] = namePrefix + definition["name"].(string) + "-local-" + suffix
 	environment, err := readYAML(filepath.Join(bundle, "environment.yaml"))
 	if err != nil {
 		return err
@@ -241,7 +278,14 @@ func run(c client, root, relative string, build, wait bool) error {
 	if !wait {
 		return nil
 	}
-	deadline := time.Now().Add(20 * time.Minute)
+	return waitForRun(c, runID, evidence, path, 20*time.Minute)
+}
+func waitForRun(c client, runID string, evidence map[string]any, path string, timeout time.Duration) error {
+	count, ok := evidence["activityCount"].(int)
+	if !ok {
+		count = int(evidence["activityCount"].(float64))
+	}
+	deadline := time.Now().Add(timeout)
 	for time.Now().Before(deadline) {
 		projection, err := c.request("GET", "execution-runs/"+runID, nil)
 		if err != nil {
@@ -264,12 +308,12 @@ func run(c client, root, relative string, build, wait bool) error {
 				return err
 			}
 			if status != "completed" {
-				return fmt.Errorf("%s daemon run ended %s; inspect %s", relative, status, path)
+				return fmt.Errorf("%s daemon run ended %s; inspect %s", runID, status, path)
 			}
-			if observed["completedActivityCount"] != float64(len(activities)) {
+			if observed["completedActivityCount"] != float64(count) {
 				return fmt.Errorf("run completed with an unexpected activity count")
 			}
-			fmt.Printf("Verified %s: %s, %d/%d activities\n", relative, status, len(activities), len(activities))
+			fmt.Printf("Verified %s: %s, %d/%d activities\n", runID, status, count, count)
 			return nil
 		}
 		time.Sleep(time.Second)

@@ -1,0 +1,19 @@
+{
+  "originalImage": "ghcr.io/uffescience/akoflow-examples/montage-050-local:local-5781d026f51ba438",
+  "imageId": "sha256:5781d026f51ba438c000336867956eb1b59587f9f11e02d27a93a4a2ebac875f",
+  "publicImage": "ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
+  "publicImageId": "sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
+  "identical": false,
+  "identicalRootFilesystem": true,
+  "identicalRuntimeConfiguration": true,
+  "rootFilesystem": {
+    "Type": "layers",
+    "Layers": [
+      "sha256:f797df612640e6fe3fe5b84f15dd632da84f38bd57fcaa8c35ec34ef377088f0",
+      "sha256:6fdf555da5967021350f38ce5d27bcbd5a58e613bf0f257ccd5cb20f27d192e0",
+      "sha256:05c54b7ac31287334b50de56a2ff7138852af39faa13ff32a4050ef921712084",
+      "sha256:2a24bb75890fb5bd77a53fb15b9580cd05fb9562faa6fad93172d634c9529199",
+      "sha256:d150530b1cea1c97b4111c67433b19b521f870963b6e352805ab0fff1eacc966"
+    ]
+  }
+}

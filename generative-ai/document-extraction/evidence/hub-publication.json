@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "generative-ai/document-extraction",
+  "experimentId": "5a453086-98d8-4ff5-9e41-a51fdbaed620",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-document-extraction@sha256:4624471159914d713f15799c64a4b4fbab4a01c2f5172ebafca7e17dfe1d9a09",
+  "publicationId": "9fe4e4c2-61a6-4caf-9240-c82402272052",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/document-extraction",
+  "runId": "hubv1-showcase-document-extraction-local-ae532a9b63-run-20261115t055158.524756085",
+  "uri": "akoflow://hub/publications/9fe4e4c2-61a6-4caf-9240-c82402272052/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-document-extraction",
+  "version": 1,
+  "versionId": "3fbeeac5-b399-46a7-bae5-ad8c191d39ce",
+  "yamlHash": "a8b1429464bbbe650ccbc94888ad88c44178aa08ed13d578b9d7d66933aeaab5"
+}

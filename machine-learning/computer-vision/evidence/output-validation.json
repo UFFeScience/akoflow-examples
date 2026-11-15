@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "vision-metrics.json",
+    "model.pkl"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-computer-vision@sha256:99eaa319fd1bf27cc989de0a211565bb8bad0d03e20e243467e4d0be1d84e250",
+  "runId": "hubv1-showcase-computer-vision-local-9cab6f182c-run-20261115t054733.884301512",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

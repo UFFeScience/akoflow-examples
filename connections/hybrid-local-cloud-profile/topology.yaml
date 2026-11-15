@@ -1,0 +1,5 @@
+id: showcase-hybrid-local-cloud-profile-topology
+name: showcase-hybrid-local-cloud-profile local topology
+version: 1
+executionScopeId: showcase-hybrid-local-cloud-profile-scope
+links: []

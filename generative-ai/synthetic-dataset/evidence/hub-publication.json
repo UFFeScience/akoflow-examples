@@ -1,0 +1,15 @@
+{
+  "activityCount": 8,
+  "examplePath": "generative-ai/synthetic-dataset",
+  "experimentId": "028f94f9-2791-410b-be9e-6f7fb062d22f",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset@sha256:d14781a369dd9749584690f0df7c448340f3afcc85dd37ed715c5f6ef01250af",
+  "publicationId": "90b09529-b012-48b0-8aec-f73fd4349358",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/synthetic-dataset",
+  "runId": "hubv1-showcase-synthetic-dataset-local-97b84523e6-run-20261115t055303.511663285",
+  "uri": "akoflow://hub/publications/90b09529-b012-48b0-8aec-f73fd4349358/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-synthetic-dataset",
+  "version": 1,
+  "versionId": "ae669bc4-fb07-4955-bd66-7427b2b1c5a1",
+  "yamlHash": "087b1a2129c92f744c4598b5263f15e09b9787d0f56de7791e58171c3ca0985c"
+}

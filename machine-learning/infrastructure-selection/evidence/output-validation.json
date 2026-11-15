@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "decision.json",
+    "cost-comparison.csv"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection@sha256:19d5d67594758239e48205d517a36ae556522055aae439df4baa0fa79cf5c111",
+  "runId": "hubv1-showcase-infrastructure-selection-local-fc06782c7d-run-20261115t054857.551255930",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

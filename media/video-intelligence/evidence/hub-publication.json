@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "media/video-intelligence",
+  "experimentId": "1d7aebef-8fc7-4581-81a4-4f9e21cbbc4b",
+  "image": "ghcr.io/uffescience/akoflow-examples/video-intelligence@sha256:502e653f00897660fdf741c2ae02756df6dfbc6236bcc90fbff177ff7f8da57a",
+  "publicationId": "fffb92b7-1b16-4eb8-a7ab-ef0f9f7a65d4",
+  "resultCount": 1,
+  "route": "/docs/showcase/media/video-intelligence",
+  "runId": "hubv1-video-intelligence-local-6211509c5b-run-20261115t055520.614527462",
+  "uri": "akoflow://hub/publications/fffb92b7-1b16-4eb8-a7ab-ef0f9f7a65d4/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/media-video-intelligence",
+  "version": 1,
+  "versionId": "56dd63b1-26f1-4307-81cb-eb640b754ccc",
+  "yamlHash": "7265e6ef6d8c1c3ca098c4c4aed327a116d04c30a09baa2f57471c1801b5b781"
+}

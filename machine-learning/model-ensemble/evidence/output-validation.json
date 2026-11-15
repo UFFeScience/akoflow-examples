@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "ensemble.pkl",
+    "metrics.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble@sha256:d3fa58f0a19b3fd897a6d682700bba8c9dfe56b23442c18e41952f309186c4af",
+  "runId": "hubv1-showcase-model-ensemble-local-4470c012f3-run-20261115t055045.183044876",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

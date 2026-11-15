@@ -1,0 +1,5 @@
+id: showcase-hybrid-kind-cloud-profile-topology
+name: showcase-hybrid-kind-cloud-profile local topology
+version: 1
+executionScopeId: showcase-hybrid-kind-cloud-profile-scope
+links: []

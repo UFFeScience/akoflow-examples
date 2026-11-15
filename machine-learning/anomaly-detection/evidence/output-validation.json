@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "anomalies.json",
+    "metrics.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection@sha256:6c9dfc6a8e05d88be4a577ac9ade615730ed346d81e4beef7c02360c5983a67c",
+  "runId": "hubv1-showcase-anomaly-detection-local-4a61620a98-run-20261115t054614.525762445",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

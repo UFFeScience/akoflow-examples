@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "scientific-ai/experiment-feedback-loop",
+  "experimentId": "2bffa6d8-682c-4851-856c-8bfd8a961770",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop@sha256:67ec219c19ec5066c9fb2406e3fe9283a64d4f4ceb12033c9c4ab4895660c797",
+  "publicationId": "92f82e89-4067-4c95-8c8d-8b8b3e55c1fd",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/scientific-ai/experiment-feedback-loop",
+  "runId": "hubv1-showcase-experiment-feedback-loop-local-63977675c7-run-20261115t054521.592602750",
+  "uri": "akoflow://hub/publications/92f82e89-4067-4c95-8c8d-8b8b3e55c1fd/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-ai-experiment-feedback-loop",
+  "version": 1,
+  "versionId": "3faf02fc-8fc4-4578-b835-9e62fc62748c",
+  "yamlHash": "7f624aab3eb45becba8facbba002f2dc40dae74fdcf010c4ddd73d134613de15"
+}

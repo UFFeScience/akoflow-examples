@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "benchmark.csv",
+    "report.html"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark@sha256:f9f193b68631f9098c72cc3334a0a7d577c41e195772ee9e933b17b8b9598cf2",
+  "runId": "hubv1-showcase-inference-benchmark-local-e776bfef04-run-20261115t054830.960361831",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "analysis.json",
+    "interpretation.md"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis@sha256:f41cada9966a030be2bc0f33380ed8221dd3d9f73427b047bcbacf29895caa59",
+  "runId": "hubv1-showcase-ai-assisted-analysis-local-c2829c1da9-run-20261115t054456.566978688",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

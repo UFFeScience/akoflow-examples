@@ -1,0 +1,15 @@
+{
+  "activityCount": 8,
+  "examplePath": "generative-ai/rag-indexing",
+  "experimentId": "6f196f3a-189a-43a5-a18a-2f9355ae4b91",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing@sha256:49a134578549b85b96f1a0840d858245228a4eb9c9c3862429e1d9ad813f44e6",
+  "publicationId": "f04b2396-b1d7-4c6d-981d-5c9405992b42",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/rag-indexing",
+  "runId": "hubv1-showcase-rag-indexing-local-9faa0c0acc-run-20261115t055238.934077042",
+  "uri": "akoflow://hub/publications/f04b2396-b1d7-4c6d-981d-5c9405992b42/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-rag-indexing",
+  "version": 1,
+  "versionId": "55ff5228-ab0f-4df2-b56b-1b8c68662bd4",
+  "yamlHash": "f01b897fdbf05b5333d654ecdb437a7ab857804d6f0be53a3caefd255c24db85"
+}

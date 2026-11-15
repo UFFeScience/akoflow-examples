@@ -1,0 +1,15 @@
+{
+  "activityCount": 7,
+  "examplePath": "scientific-ai/ai-assisted-analysis",
+  "experimentId": "1bfbe8b2-b364-4e52-8095-8aab33139d0c",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-ai-assisted-analysis@sha256:f41cada9966a030be2bc0f33380ed8221dd3d9f73427b047bcbacf29895caa59",
+  "publicationId": "68f71fca-edbd-478a-9df6-62e8e3708120",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/scientific-ai/ai-assisted-analysis",
+  "runId": "hubv1-showcase-ai-assisted-analysis-local-c2829c1da9-run-20261115t054456.566978688",
+  "uri": "akoflow://hub/publications/68f71fca-edbd-478a-9df6-62e8e3708120/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-ai-ai-assisted-analysis",
+  "version": 1,
+  "versionId": "4311c7a8-14a8-4210-85b5-3a7e52b61500",
+  "yamlHash": "072b4be8b9f1cfeb21c81f51e026dff42ef9960f68f1d091254eb9c8054172bc"
+}

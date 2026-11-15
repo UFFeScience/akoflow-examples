@@ -1,0 +1,17 @@
+{
+  "artifacts": [
+    "1-mosaic.fits",
+    "2-mosaic.fits",
+    "3-mosaic.fits",
+    "1-mosaic.png",
+    "2-mosaic.png",
+    "3-mosaic.png",
+    "mosaic-color.png"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/montage-050-local:local-5781d026f51ba438",
+  "runId": "montage-050-local-local-79df14ee2e-run-20261115t052715.750879194",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

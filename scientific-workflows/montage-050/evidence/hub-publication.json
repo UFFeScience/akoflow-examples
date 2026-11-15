@@ -1,0 +1,15 @@
+{
+  "activityCount": 58,
+  "examplePath": "scientific-workflows/montage-050",
+  "experimentId": "4932099c-030e-47c5-acff-0ac0a32611e1",
+  "image": "ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
+  "publicationId": "4a1b3c21-a122-4c19-bd2d-c305d400b41f",
+  "resultCount": 1,
+  "route": "/docs/showcase/scientific-workflows/montage-050",
+  "runId": "montage-050-local-local-79df14ee2e-run-20261115t052715.750879194",
+  "uri": "akoflow://hub/publications/4a1b3c21-a122-4c19-bd2d-c305d400b41f/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-montage-050",
+  "version": 1,
+  "versionId": "0791e4a7-d5ea-4ebb-a1cb-e3545427950c",
+  "yamlHash": "ae50d66baf895d4a079774b57a577ac301a45633f94add4bb80bfee74980c06b"
+}

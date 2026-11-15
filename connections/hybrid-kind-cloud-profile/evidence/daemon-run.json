@@ -1,0 +1,835 @@
+{
+  "activityCount": 2,
+  "completedActivityCount": 2,
+  "image": "busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "imageId": "sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e566b11662",
+  "observedAt": "2026-11-15T06:28:31Z",
+  "planId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904",
+  "projection": {
+    "activities": [
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "allocatedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "finishedAt": 1794724108.683231,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "plannedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794724108.4074047,
+        "readyAt": 1794724108.4074047,
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794724108.6919596,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "allocatedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "finishedAt": 1794724109.9642763,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2578120231628418,
+          "preparationFinishedAt": 1794724109.712574,
+          "preparationStartedAt": 1794724109.525067,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011346578598022461,
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "transferElapsedSeconds": 0.18750691413879395,
+          "transferWorkSeconds": 0.18750691413879395
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "plannedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794724109.4907103,
+        "readyAt": 1794724109.4907103,
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794724109.970386,
+        "status": "completed",
+        "transferBytes": 60,
+        "transferSeconds": 0.18750691413879395
+      }
+    ],
+    "activityAttempts": [
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "allocatedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "finishedAt": 1794724108.683231,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "plannedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794724108.4074047,
+        "readyAt": 1794724108.4074047,
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794724108.6919596,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "allocatedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "finishedAt": 1794724109.9642763,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2578120231628418,
+          "preparationFinishedAt": 1794724109.712574,
+          "preparationStartedAt": 1794724109.525067,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011346578598022461,
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "transferElapsedSeconds": 0.18750691413879395,
+          "transferWorkSeconds": 0.18750691413879395
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "plannedResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794724109.4907103,
+        "readyAt": 1794724109.4907103,
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794724109.970386,
+        "status": "completed",
+        "transferBytes": 60,
+        "transferSeconds": 0.18750691413879395
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "durationSeconds": 0.18750691413879395,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "filesTransferred": 2,
+        "finishedAt": 1794724109.712574,
+        "id": "transfer-workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume-0",
+        "logicalBytes": 60,
+        "planId": "transfer-workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume-0",
+        "route": {
+          "consumerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "filesTransferred": 2,
+          "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.093860577,
+          "sourceEnvironmentId": "showcase-hybrid-kind-cloud-profile-v1",
+          "sourceResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+          "sshChannelWaitSeconds": 8.349999999999999e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "showcase-hybrid-kind-cloud-profile-v1",
+          "targetResourceId": "showcase-hybrid-kind-cloud-profile-local-docker"
+        },
+        "startedAt": 1794724109.525067,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 60
+      }
+    ],
+    "cloudBilling": {
+      "asOf": "2026-11-15T06:28:31.334942942Z",
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "estimatedCost": 0,
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "instances": [],
+      "knownCost": 0,
+      "status": "estimated"
+    },
+    "dataLocations": [
+      {
+        "dataObjectInstanceId": "f211c51e8b884ed896e203951341f1d0",
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "35a98ba2d16f03e5430fc4da3993ccf9",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d37332414a1604409c1e1e941007456c",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume/receipt.txt"
+      },
+      {
+        "dataObjectInstanceId": "19eda69eb93b61111589c6290ebb7d9c",
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "93fbd1f7e6c3f74b9a0e9ed904d1c4e8",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d37332414a1604409c1e1e941007456c",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume/stage-consume.json"
+      },
+      {
+        "dataObjectInstanceId": "650865883b22cc718878fe7bc2c0476a",
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "8a6f729dee0d36a8c0147686927bb74c",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "383d9e4550c5aa2a4ebe086b1df6415a",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce/handoff.txt"
+      },
+      {
+        "dataObjectInstanceId": "8afce64544cf0e867d5eb0510a6e19b5",
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "4bd5adca43f97cb82da1b2582df3740a",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "383d9e4550c5aa2a4ebe086b1df6415a",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce/stage-produce.json"
+      }
+    ],
+    "dataObjects": [
+      {
+        "attempt": 1,
+        "checksum": "sha256:84a882655e23278f1415c8a070b56baca44dfd07581d684989959190de697b3f",
+        "dataObjectId": "5a440e2d83c753d4238d0f64728d826f",
+        "discovered": true,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "f211c51e8b884ed896e203951341f1d0",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "relativePath": "receipt.txt",
+        "sizeBytes": 36
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+        "dataObjectId": "bdd4f0c7997c5632f215c6e92df3f2f5",
+        "discovered": true,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "19eda69eb93b61111589c6290ebb7d9c",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "relativePath": "stage-consume.json",
+        "sizeBytes": 40
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+        "dataObjectId": "eab6df6aa564d70bf0c04b0c94ee5b1d",
+        "discovered": true,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "650865883b22cc718878fe7bc2c0476a",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "relativePath": "handoff.txt",
+        "sizeBytes": 20
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+        "dataObjectId": "ff33d95866fbf1efcb2bbe25a09fa756",
+        "discovered": true,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "id": "8afce64544cf0e867d5eb0510a6e19b5",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "relativePath": "stage-produce.json",
+        "sizeBytes": 40
+      }
+    ],
+    "dataTransfers": [
+      {
+        "bytes": 60,
+        "consumerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "cost": 0,
+        "durationSeconds": 0.18750691413879395,
+        "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "finishedAt": 1794724109.712574,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume:transfer-workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume-0",
+        "logicalBytes": 60,
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "route": {
+          "consumerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "filesTransferred": 2,
+          "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.093860577,
+          "sourceEnvironmentId": "showcase-hybrid-kind-cloud-profile-v1",
+          "sourceResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+          "sshChannelWaitSeconds": 8.349999999999999e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "showcase-hybrid-kind-cloud-profile-v1",
+          "targetResourceId": "showcase-hybrid-kind-cloud-profile-local-docker"
+        },
+        "sourceResourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "startedAt": 1794724109.525067,
+        "strategy": "gateway",
+        "targetResourceId": "showcase-hybrid-kind-cloud-profile-local-docker"
+      }
+    ],
+    "events": [
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.started",
+        "id": "a4d391ea0d1b44c817a75a9fb0c93cf6",
+        "occurredAt": "2026-11-15T06:28:28.359384044Z",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904"
+        }
+      },
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "18a1d695bd5dd162507b1011a027a1f5",
+        "occurredAt": "2026-11-15T06:28:29.328033349Z",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "481f06edeee316e74daaace9ecdc3a2d",
+        "occurredAt": "2026-11-15T06:28:29.47914416Z",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "5619fe5d0460e8a56664baa9225588b6",
+        "occurredAt": "2026-11-15T06:28:30.614949044Z",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "ad6eae0ffb2d4bd73a0e3438f09d602c",
+        "occurredAt": "2026-11-15T06:28:30.739080429Z",
+        "payload": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "attempt": 1,
+          "executionRunId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "failureReason": "",
+          "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+          "runtimeSeconds": 0,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.completed",
+        "id": "5d7b0068da58a1dc2017ac0bde7bcbb1",
+        "occurredAt": "2026-11-15T06:28:30.751510437Z",
+        "payload": {
+          "cost": 0,
+          "makespanSeconds": 1.2723166942596436
+        }
+      }
+    ],
+    "handles": [
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "artifacts": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:84a882655e23278f1415c8a070b56baca44dfd07581d684989959190de697b3f",
+              "modifiedUnixNano": 1794724109962539300,
+              "path": "receipt.txt",
+              "sizeBytes": 36
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "modifiedUnixNano": 1794724109962539300,
+              "path": "stage-consume.json",
+              "sizeBytes": 40
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "modifiedUnixNano": 1794724109669536000,
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "checksum": "sha256:84a882655e23278f1415c8a070b56baca44dfd07581d684989959190de697b3f",
+              "modifiedUnixNano": 1794724109962539300,
+              "path": "receipt.txt",
+              "sizeBytes": 36
+            },
+            {
+              "checksum": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "modifiedUnixNano": 1794724109962539300,
+              "path": "stage-consume.json",
+              "sizeBytes": 40
+            },
+            {
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794724109669536000,
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "finishedAt": 1794724109.9642763,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "modifiedUnixNano": 1794724109669536000,
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794724109669536000,
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 0,
+              "finishedAt": 1794724109.9642763,
+              "phase": "execution",
+              "startedAt": 1794724109.970386,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "runtime": "showcase-hybrid-kind-cloud-profile-local",
+          "schemaVersion": 1,
+          "startedAt": 1794724109.970386,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 4,
+            "initialFiles": 2,
+            "modifiedFiles": 0,
+            "outputBytes": 76
+          }
+        },
+        "exitCode": 0,
+        "externalId": "051426efb7e3fd86758148aa4eff37ca73a70b3e2eee17e86e3c2f349a3453a7",
+        "finishedAt": 1794724109.9642763,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "log": "[AKOFLOW INFO] Activity started on runtime showcase-hybrid-kind-cloud-profile-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794724109.9703932,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "submittedAt": 1794724109.970386
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "startedAt": 1794724109.970386,
+        "status": "completed"
+      },
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "artifacts": {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "modifiedUnixNano": 1794724108681525500,
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794724108681525500,
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "modifiedUnixNano": 1794724108681525500,
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "checksum": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "modifiedUnixNano": 1794724108681525500,
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "finishedAt": 1794724108.683231,
+          "phases": [
+            {
+              "durationSeconds": 0,
+              "finishedAt": 1794724108.683231,
+              "phase": "execution",
+              "startedAt": 1794724108.6919596,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+          "runtime": "showcase-hybrid-kind-cloud-profile-local",
+          "schemaVersion": 1,
+          "startedAt": 1794724108.6919596,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 2,
+            "initialFiles": 0,
+            "modifiedFiles": 0,
+            "outputBytes": 60
+          }
+        },
+        "exitCode": 0,
+        "externalId": "87cb6f422409319fdbf2f6d78d7de491f87bac49d166df30a7a72068cec18404",
+        "finishedAt": 1794724108.683231,
+        "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "log": "[AKOFLOW INFO] Activity started on runtime showcase-hybrid-kind-cloud-profile-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794724108.6919663,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "submittedAt": 1794724108.6919596
+        },
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "startedAt": 1794724108.6919596,
+        "status": "completed"
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "activityCount": 2,
+      "breakdown": {
+        "computeSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "queueSeconds": 0,
+        "transferSeconds": 0.18750691413879395
+      },
+      "completedActivityCount": 2,
+      "cost": 0,
+      "environmentNames": [
+        "showcase-hybrid-kind-cloud-profile local Docker"
+      ],
+      "finishedAt": "2026-11-15T06:28:30Z",
+      "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+      "kind": "workflow",
+      "makespanSeconds": 1.2723166942596436,
+      "mode": "real",
+      "schedulePlanId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-manual-plan-20261115t062828.084490904",
+      "seed": 0,
+      "startedAt": "2026-11-15T06:28:28Z",
+      "status": "completed",
+      "title": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+      "transferredBytes": 60,
+      "workflowId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f",
+      "workflowName": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f",
+      "workflowVersionId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-v1"
+    },
+    "timeline": {
+      "computeMakespanSeconds": 1.2723166942596436,
+      "coveredWallSeconds": 0.7642307281494141,
+      "finishedAt": 1794724110,
+      "phases": [
+        {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+          "category": "resource-queue",
+          "durationSeconds": 0.28455495834350586,
+          "finishedAt": 1794724108.6919596,
+          "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794724108.4074047,
+          "status": "completed"
+        },
+        {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "category": "resource-queue",
+          "durationSeconds": 0.03435683250427246,
+          "finishedAt": 1794724109.525067,
+          "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794724109.4907103,
+          "status": "completed"
+        },
+        {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "category": "workspace-transfer",
+          "durationSeconds": 0.18750691413879395,
+          "finishedAt": 1794724109.712574,
+          "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume:transfer-workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume-0",
+          "source": "transfer-observation",
+          "startedAt": 1794724109.525067,
+          "status": "completed",
+          "transferId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume:transfer-workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume-0"
+        },
+        {
+          "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+          "category": "launch",
+          "durationSeconds": 0.2578120231628418,
+          "finishedAt": 1794724109.970386,
+          "id": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837:hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume:launch",
+          "source": "task-metadata",
+          "startedAt": 1794724109.712574,
+          "status": "completed"
+        }
+      ],
+      "startedAt": 1794724108,
+      "totals": {
+        "destroySeconds": 0,
+        "executablePreparationSeconds": 0,
+        "launchSeconds": 0.2578120231628418,
+        "provisionSeconds": 0,
+        "resourceQueueSeconds": 0.3189117908477783,
+        "runtimeSeconds": 0,
+        "startSeconds": 0,
+        "stopSeconds": 0,
+        "validationSeconds": 0,
+        "workspaceTransferSeconds": 0.18750691413879395
+      },
+      "unclassifiedWallSeconds": 1.235769271850586,
+      "wallSeconds": 2
+    },
+    "workspaceLeases": [
+      {
+        "consumerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "id": "workspace-lease-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "producerActivityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T06:28:29.725557628Z",
+        "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "workspaceId": "workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce"
+      }
+    ],
+    "workspaces": [
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "createdAt": "2026-11-15T06:28:28.372085182Z",
+        "driver": "local",
+        "environmentId": "showcase-hybrid-kind-cloud-profile-v1",
+        "executionPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "fileCount": 4,
+        "id": "workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "inputBytes": 60,
+        "isFinal": true,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "digest": "sha256:84a882655e23278f1415c8a070b56baca44dfd07581d684989959190de697b3f",
+              "path": "receipt.txt",
+              "sizeBytes": 36
+            },
+            {
+              "digest": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "path": "stage-consume.json",
+              "sizeBytes": 40
+            },
+            {
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:84a882655e23278f1415c8a070b56baca44dfd07581d684989959190de697b3f",
+              "path": "receipt.txt",
+              "sizeBytes": 36
+            },
+            {
+              "digest": "sha256:b5d47829874af71f1fb03672d6b2d8baf9342c9db41ea4a75dbc8c2da885f204",
+              "path": "stage-consume.json",
+              "sizeBytes": 40
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume",
+        "outputBytes": 76,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "retention": "final",
+        "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "sealedAt": "2026-11-15T06:28:30.724547513Z",
+        "sizeBytes": 136,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-consume"
+      },
+      {
+        "activityId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "createdAt": "2026-11-15T06:28:28.372085182Z",
+        "driver": "local",
+        "environmentId": "showcase-hybrid-kind-cloud-profile-v1",
+        "executionPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "fileCount": 2,
+        "id": "workspace-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837-hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:c1e2d1ebdc9cacfb191a9365456ef9bde7aa4c5d05a5cfce77afce657e31e2ec",
+              "path": "handoff.txt",
+              "sizeBytes": 20
+            },
+            {
+              "digest": "sha256:f741710b171d92b6de1daa075eaf2251ac91cf2e907e38d65cadfbaabc2ec359",
+              "path": "stage-produce.json",
+              "sizeBytes": 40
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce",
+        "outputBytes": 60,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "showcase-hybrid-kind-cloud-profile-local-docker",
+        "retention": "intermediate",
+        "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+        "runtimeId": "showcase-hybrid-kind-cloud-profile-local",
+        "sealedAt": "2026-11-15T06:28:29.466545026Z",
+        "sizeBytes": 60,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837/hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-produce"
+      }
+    ]
+  },
+  "runId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837",
+  "status": "completed",
+  "workflowId": "hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f"
+}

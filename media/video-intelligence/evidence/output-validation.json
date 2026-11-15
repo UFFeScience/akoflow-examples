@@ -1,0 +1,15 @@
+{
+  "artifacts": [
+    "source.mp4",
+    "probe.json",
+    "scenes.json",
+    "audio.json",
+    "timeline.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/video-intelligence@sha256:502e653f00897660fdf741c2ae02756df6dfbc6236bcc90fbff177ff7f8da57a",
+  "runId": "hubv1-video-intelligence-local-6211509c5b-run-20261115t055520.614527462",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

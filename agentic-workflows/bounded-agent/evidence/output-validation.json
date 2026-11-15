@@ -1,0 +1,13 @@
+{
+  "artifacts": [
+    "answer.json",
+    "validation.json",
+    "trace.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-bounded-agent@sha256:3fb4e81fce9bfb734d0ae01c3d71dc85c7ff75410e612301ed5dc49550b0b25d",
+  "runId": "hubv1-showcase-bounded-agent-local-25236e7c77-run-20261115t055359.154899433",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

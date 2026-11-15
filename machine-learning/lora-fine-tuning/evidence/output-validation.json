@@ -1,0 +1,13 @@
+{
+  "artifacts": [
+    "adapter.bin",
+    "evaluation.json",
+    "lineage.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning@sha256:c8f63c43550e404962e689006e22899d370c4bb91fbf7fd3a59c8da488125c9e",
+  "runId": "hubv1-showcase-lora-fine-tuning-local-ee412d9ce8-run-20261115t054920.405105217",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

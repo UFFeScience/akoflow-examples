@@ -1,0 +1,15 @@
+{
+  "artifacts": [
+    "model.onnx",
+    "model.torchscript.pt",
+    "model-int8.json",
+    "model-fp16.bin",
+    "validation.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-conversion@sha256:e6790b9d51ea0a10d6bddbf43211c49dec1b19f436fbbcbaf7ad66f04598e720",
+  "runId": "hubv1-showcase-model-conversion-local-6f2c213241-run-20261115t055000.623474610",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

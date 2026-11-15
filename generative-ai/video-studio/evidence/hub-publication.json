@@ -1,0 +1,15 @@
+{
+  "activityCount": 5,
+  "examplePath": "generative-ai/video-studio",
+  "experimentId": "f3a2b651-8383-4f22-87d5-d02b7313d8ec",
+  "image": "ghcr.io/uffescience/akoflow-examples/ai-video-studio@sha256:60c638432c92bb6a50029dbcafdc6c5f510bcd8de3966bd9eb1a2762943c8ea6",
+  "publicationId": "7a454cd3-5867-4c73-a96e-32d590370c54",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/generative-ai/ai-video-studio",
+  "runId": "hubv1-ai-video-studio-local-ba0f251672-run-20261115t055329.440550088",
+  "uri": "akoflow://hub/publications/7a454cd3-5867-4c73-a96e-32d590370c54/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/generative-ai-video-studio",
+  "version": 1,
+  "versionId": "a8d9ae18-9329-4271-91a5-c00dd699d332",
+  "yamlHash": "04c97e910bd61d3e49651272191623d80b925c70273acc77f550620aa86071d6"
+}

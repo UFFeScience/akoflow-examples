@@ -7,3 +7,5 @@ akoflow-workspaces/
 *.status
 
 .venv/
+
+/connections/*-profile/outputs/

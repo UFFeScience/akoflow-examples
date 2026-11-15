@@ -1,0 +1,15 @@
+{
+  "activityCount": 6,
+  "examplePath": "machine-learning/anomaly-detection",
+  "experimentId": "4dab2881-ab32-4cf3-a0b4-e84658cb0d70",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection@sha256:6c9dfc6a8e05d88be4a577ac9ade615730ed346d81e4beef7c02360c5983a67c",
+  "publicationId": "43abd581-bea8-4067-97d6-b7db99b34374",
+  "resultCount": 1,
+  "route": "/docs/showcase/ai/machine-learning/anomaly-detection",
+  "runId": "hubv1-showcase-anomaly-detection-local-4a61620a98-run-20261115t054614.525762445",
+  "uri": "akoflow://hub/publications/43abd581-bea8-4067-97d6-b7db99b34374/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/machine-learning-anomaly-detection",
+  "version": 1,
+  "versionId": "5bbcc7bb-5470-4260-990e-fb0ebd93bbb6",
+  "yamlHash": "28d31aba3997617950c2f5bddaf740b9865f65eb5e210da3e33b21dc80f28d1f"
+}

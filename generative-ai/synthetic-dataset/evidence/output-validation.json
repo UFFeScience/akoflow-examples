@@ -1,0 +1,12 @@
+{
+  "artifacts": [
+    "synthetic-dataset.jsonl",
+    "quality-report.json"
+  ],
+  "checksumVerification": "all copied outputs match sealed workspace manifests",
+  "image": "ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset@sha256:d14781a369dd9749584690f0df7c448340f3afcc85dd37ed715c5f6ef01250af",
+  "runId": "hubv1-showcase-synthetic-dataset-local-97b84523e6-run-20261115t055303.511663285",
+  "source": "actual daemon workspaces",
+  "status": "passed",
+  "validator": "validate.sh"
+}

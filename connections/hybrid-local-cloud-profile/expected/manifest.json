@@ -1,0 +1,8 @@
+{
+  "artifacts": [
+    "handoff.txt",
+    "receipt.txt"
+  ],
+  "showcase": "hybrid-local-cloud-profile",
+  "status": "success"
+}

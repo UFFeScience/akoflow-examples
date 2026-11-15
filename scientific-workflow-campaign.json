@@ -103,9 +103,23 @@
     {
       "slug": "rnaseq",
       "name": "RNA-seq",
-      "status": "queued",
-      "visualPlan": "Sample QC, measured alignment metrics and gene-expression summary.",
-      "visualRequiredBeforePublication": true
+      "status": "published-production",
+      "visualPlan": "Actual transcript abundances and full-library trimming/mapping counts; single-library QC, no differential-expression claim",
+      "visualRequiredBeforePublication": true,
+      "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "activityCount": 4,
+      "originalPipelineVersion": "3.27.0",
+      "originalPipelineCommit": "a1fcdddd3b826fe46eb46f0479f2ff8a7815af05",
+      "fullLibraryReads": 1039872,
+      "profile": "rapid_quant",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-rnaseq",
+      "completedActivityCount": 4,
+      "innerCompletedNextflowTasks": 16,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/rnaseq/evidence/hub-production-publication.json",
+      "observedSeconds": 229.33325839042664,
+      "finding": "Full 1,039,872-read yeast RNA-seq library quantified with the unmodified nf-core/rnaseq rapid_quant pipeline; actual transcript abundances and full QC retained",
+      "differentialExpressionClaimed": false
     },
     {
       "slug": "sarek",
@@ -170,7 +184,7 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "rnaseq",
+  "nextWorkflow": "sarek",
   "sourceBatchPR": {
     "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
     "status": "merged",

@@ -1,0 +1,37 @@
+{
+  "profile": "Complete real SRR10143877 yeast RNA-seq library, no read subsampling; full Ensembl release 110 S288c R64-1-1 reference genome, transcriptome and gene annotations. A single-library quantification/QC profile, not a differential-expression experiment.",
+  "runAccession": "SRR10143877",
+  "reads": 1039872,
+  "bases": 53033472,
+  "referenceRelease": 110,
+  "files": [
+    {
+      "filename": "SRR10143877.fastq.gz",
+      "url": "https://ftp.sra.ebi.ac.uk/vol1/fastq/SRR101/077/SRR10143877/SRR10143877.fastq.gz",
+      "bytes": 44364874,
+      "sha256": "abe0796a4aa053675c34bc97228c82ae27469fc01d0309740d002c520b65e333",
+      "md5": "93c8a61c3503083943ea83573e874da1"
+    },
+    {
+      "filename": "genome.fa.gz",
+      "url": "https://ftp.ensembl.org/pub/release-110/fasta/saccharomyces_cerevisiae/dna/Saccharomyces_cerevisiae.R64-1-1.dna.toplevel.fa.gz",
+      "bytes": 3784201,
+      "sha256": "a9953096d6a041a01a4cb5352b0232ee9373bf4c050fb23cb7ae673b2e1bb528",
+      "md5": "5ae49d2d22cd977abdd6b054b94c544d"
+    },
+    {
+      "filename": "transcripts.fa.gz",
+      "url": "https://ftp.ensembl.org/pub/release-110/fasta/saccharomyces_cerevisiae/cdna/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa.gz",
+      "bytes": 3806426,
+      "sha256": "3cc5b6bb7ff166cffac5c45317dad7052d06431f43f709ed14b33779702dc6a4",
+      "md5": "dbc98c513a73dbe8bf83c7f92648ce57"
+    },
+    {
+      "filename": "genes.gtf.gz",
+      "url": "https://ftp.ensembl.org/pub/release-110/gtf/saccharomyces_cerevisiae/Saccharomyces_cerevisiae.R64-1-1.110.gtf.gz",
+      "bytes": 595453,
+      "sha256": "2fddfd18d7863fd60a1bc40ab067333ba458d6af551b058d0bd7f30ca8979fab",
+      "md5": "1714d5ae8172888ae4191c703a9084fc"
+    }
+  ]
+}

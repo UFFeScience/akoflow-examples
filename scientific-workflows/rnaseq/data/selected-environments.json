@@ -1,0 +1,98 @@
+[
+  {
+    "module": "cat/fastq",
+    "process": "CAT_FASTQ",
+    "environmentSHA256": "744c448dd17c4da5cfd257c470309e2de7e6d1adcbbb74c9f7fbc0ae4db6a452",
+    "prefix": "/opt/nf-envs/cat-fastq"
+  },
+  {
+    "module": "fq/lint",
+    "process": "FQ_LINT",
+    "environmentSHA256": "6369814dc299593e54d704cbcab65820e1f155bb2786533910b1612ef13090fa",
+    "prefix": "/opt/nf-envs/fq-lint"
+  },
+  {
+    "module": "fq/subsample",
+    "process": "FQ_SUBSAMPLE",
+    "environmentSHA256": "6369814dc299593e54d704cbcab65820e1f155bb2786533910b1612ef13090fa",
+    "prefix": "/opt/nf-envs/fq-subsample"
+  },
+  {
+    "module": "fastqc",
+    "process": "FASTQC",
+    "environmentSHA256": "97b011d57e671a1ed2fbf71f3ffe686197f145bced8cbf7954c97bc510492aad",
+    "prefix": "/opt/nf-envs/fastqc"
+  },
+  {
+    "module": "fastp",
+    "process": "FASTP",
+    "environmentSHA256": "458955cf98aa77377c9533d3fb76d978741f8b185c0d1884593f6ecadcf6ba54",
+    "prefix": "/opt/nf-envs/fastp"
+  },
+  {
+    "module": "trimgalore",
+    "process": "TRIMGALORE",
+    "environmentSHA256": "1878192a84a7b69ad32261f3f6239223cac83c81ddbef28f72ff976afd4b87b0",
+    "prefix": "/opt/nf-envs/trimgalore"
+  },
+  {
+    "module": "gunzip",
+    "process": "GUNZIP",
+    "environmentSHA256": "744c448dd17c4da5cfd257c470309e2de7e6d1adcbbb74c9f7fbc0ae4db6a452",
+    "prefix": "/opt/nf-envs/gunzip"
+  },
+  {
+    "module": "gffread",
+    "process": "GFFREAD",
+    "environmentSHA256": "2f1b89accc998b6086af1c2052d335bc30169582b9369ab13cd2dd0d4a8dbd0b",
+    "prefix": "/opt/nf-envs/gffread"
+  },
+  {
+    "module": "custom/gtffilter",
+    "process": "CUSTOM_GTFFILTER",
+    "environmentSHA256": "1b4be9fee16ab5ca6a372b23f51886b46e08342fa78f736f88ea8f7b9356a738",
+    "prefix": "/opt/nf-envs/custom-gtffilter"
+  },
+  {
+    "module": "custom/tx2gene",
+    "process": "CUSTOM_TX2GENE",
+    "environmentSHA256": "62cdf0b40ef0fa5e4ebd570b15d75dafc2a5ec300a19aa5791cc7a141b7a7c81",
+    "prefix": "/opt/nf-envs/custom-tx2gene"
+  },
+  {
+    "module": "salmon/index",
+    "process": "SALMON_INDEX",
+    "environmentSHA256": "1a11b03744593f141f9ee3635862d26a9ab319566bd1a28a81923df18becbf81",
+    "prefix": "/opt/nf-envs/salmon-index"
+  },
+  {
+    "module": "salmon/quant",
+    "process": "SALMON_QUANT",
+    "environmentSHA256": "1a11b03744593f141f9ee3635862d26a9ab319566bd1a28a81923df18becbf81",
+    "prefix": "/opt/nf-envs/salmon-quant"
+  },
+  {
+    "module": "tximeta/tximport",
+    "process": "TXIMETA_TXIMPORT",
+    "environmentSHA256": "e0b5d5b1f94ee5b7a736fa243ce6bdf0453a74af20e2d363b6ea02120cb93d2c",
+    "prefix": "/opt/nf-envs/tximeta-tximport"
+  },
+  {
+    "module": "multiqc",
+    "process": "MULTIQC",
+    "environmentSHA256": "d177f136e201eec8ac5f17fd56be42d6967875d55519b8f4ddd412491e39cccc",
+    "prefix": "/opt/nf-envs/multiqc"
+  },
+  {
+    "module": "samtools/faidx",
+    "process": "SAMTOOLS_FAIDX",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "prefix": "/opt/nf-envs/samtools-faidx"
+  },
+  {
+    "module": "ea-utils/gtf2bed",
+    "process": "EAUTILS_GTF2BED",
+    "environmentSHA256": "d1e711d5895af834bd1203bb1f5fc787caa63f22b6e9616bbb6b047074483063",
+    "prefix": "/opt/nf-envs/ea-utils-gtf2bed"
+  }
+]

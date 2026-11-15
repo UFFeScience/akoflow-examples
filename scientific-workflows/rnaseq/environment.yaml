@@ -1,0 +1,42 @@
+environment:
+  id: rnaseq
+  name: rnaseq local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: rnaseq-v1
+  environmentId: rnaseq
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: rnaseq-v1
+runtimes:
+  - environmentVersionId: rnaseq-v1
+    id: rnaseq-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: rnaseq-local-docker
+    environmentVersionId: rnaseq-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 12884901888
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: rnaseq-local-docker, runtimeId: rnaseq-local, enabled: true}

@@ -1,0 +1,55 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-rnaseq",
+  "nativeCompletedActivities": 4,
+  "innerCompletedNextflowTasks": 16,
+  "observedSeconds": 229.33325839042664,
+  "fullLibraryReads": 1039872,
+  "afterTrimmingReads": 1011876,
+  "salmonMapped": 507332,
+  "quantifiedTranscripts": 6571,
+  "visualCount": 2,
+  "visualBrowserGate": "passed",
+  "browserImageNaturalSizes": [
+    [
+      2100,
+      1200
+    ],
+    [
+      1500,
+      900
+    ]
+  ],
+  "browserTheme": "dark",
+  "publicAssetsHashVerified": [
+    {
+      "name": "rnaseq-results.tar.gz",
+      "bytes": 322975673,
+      "sha256": "4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8"
+    },
+    {
+      "name": "rnaseq-summary.json",
+      "bytes": 38956,
+      "sha256": "c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504"
+    },
+    {
+      "name": "published-transcript-abundance.png",
+      "bytes": 144179,
+      "sha256": "b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9"
+    },
+    {
+      "name": "published-library-qc.png",
+      "bytes": 47638,
+      "sha256": "358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7"
+    },
+    {
+      "name": "source.tar.gz",
+      "bytes": 42479316,
+      "sha256": "f3c75fb128ff1e5de0e669f0a6e0c636d561680c07a0410173585bef08aa4671"
+    }
+  ],
+  "publicImmutableImageVerified": true,
+  "publicDockerPullVerified": true,
+  "scientificDependenciesPreinstalled": true,
+  "differentialExpressionClaimed": false,
+  "temporaryOwnerSessionRevoked": true
+}

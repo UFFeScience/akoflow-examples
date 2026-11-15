@@ -518,6 +518,22 @@
     "yamlHash": "6460091d591f5ddbed34f6868fb62696c74232eb00b07800b3662b0db9c00af2"
   },
   {
+    "experimentId": "12f39127-e1a2-4cab-90b0-59559cedd150",
+    "publicationId": "a0214db2-7c0d-4061-a3e5-d6dd4a1db6cd",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-rnaseq",
+    "image": "hub.akoflow.com/akoflow-examples/rnaseq@sha256:edb949835c96cf793c9ef21009d583bb7b93cb845df784ac0e5221d1b9b23acb",
+    "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+    "visualCount": 2,
+    "activityCount": 4,
+    "examplePath": "scientific-workflows/rnaseq",
+    "route": "/docs/showcase/scientific-workflows/rnaseq",
+    "uri": "akoflow://hub/publications/a0214db2-7c0d-4061-a3e5-d6dd4a1db6cd/versions/1",
+    "version": 1,
+    "versionId": "3e4bcc54-88da-4632-8742-e5def5389d6c",
+    "yamlHash": "4ee2a36a5c7bd51ed1f2df0cba174247bd19fe87f8d45d9418b4fae2235cf147"
+  },
+  {
     "experimentId": "70de187d-9c6d-42b8-a757-b1c92707cc60",
     "publicationId": "d2d3acea-6426-4506-807b-3154949ab0f2",
     "resultCount": 1,

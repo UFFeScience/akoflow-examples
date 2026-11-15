@@ -1,0 +1,42 @@
+environment:
+  id: variant-calling
+  name: variant-calling local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: variant-calling-v1
+  environmentId: variant-calling
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: variant-calling-v1
+runtimes:
+  - environmentVersionId: variant-calling-v1
+    id: variant-calling-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: variant-calling-local-docker
+    environmentVersionId: variant-calling-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 6
+    cpuCapacity: 6
+    memoryBytes: 17179869184
+    storageBytes: 42949672960
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: variant-calling-local-docker, runtimeId: variant-calling-local, enabled: true}

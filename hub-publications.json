@@ -420,6 +420,22 @@
     "yamlHash": "2b975806a961462cd7d91cd9b60fdff5187097286cdbf7e2d5fd502c977ec472"
   },
   {
+    "experimentId": "611c0c93-b536-4967-aa8f-93702d60ae3c",
+    "publicationId": "ca0b7a6e-ddcf-4f75-b597-16c11bec3908",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-earthquake",
+    "image": "hub.akoflow.com/akoflow-examples/earthquake@sha256:f0fa40c0f1fce87927a1b82e36968990bd2884ba21b12d2b9f717fdbb941f171",
+    "runId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+    "visualCount": 4,
+    "activityCount": 11,
+    "examplePath": "scientific-workflows/earthquake",
+    "route": "/docs/showcase/scientific-workflows/earthquake",
+    "uri": "akoflow://hub/publications/ca0b7a6e-ddcf-4f75-b597-16c11bec3908/versions/1",
+    "version": 1,
+    "versionId": "10da55b0-2263-4682-be34-3c465b32af05",
+    "yamlHash": "31948cc05c3d20575ff2a8d5a3bbf198a1a8cf50766be94b1fd730b13d8f7adf"
+  },
+  {
     "activityCount": 58,
     "examplePath": "scientific-workflows/montage-050",
     "experimentId": "4932099c-030e-47c5-acff-0ac0a32611e1",
@@ -484,5 +500,37 @@
     "version": 1,
     "versionId": "f6ff5a90-a1d8-4c28-b702-37838bfa5fa4",
     "yamlHash": "889e01393b7246ced025c00e5878f71d9d192575ff45fb5064cbd7bb66436f5c"
+  },
+  {
+    "experimentId": "c1eaee43-8ea3-427c-b993-f86abbfef983",
+    "publicationId": "a247b881-2843-43e6-9e46-19621fcb805d",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sra-search",
+    "image": "hub.akoflow.com/akoflow-examples/sra-search@sha256:97cf0b996c5745f39b4c733e84dde417463351d107a81dea93673cd49b7cb35c",
+    "runId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+    "visualCount": 1,
+    "activityCount": 5,
+    "examplePath": "scientific-workflows/sra-search",
+    "route": "/docs/showcase/scientific-workflows/sra-search",
+    "uri": "akoflow://hub/publications/a247b881-2843-43e6-9e46-19621fcb805d/versions/1",
+    "version": 1,
+    "versionId": "53ba8b59-0097-46cc-8532-710cfbca0f2c",
+    "yamlHash": "d7f3b948e9c1553fae85cd02ff67c7b5e33bdf8ebffc20767368d19df9d82166"
+  },
+  {
+    "experimentId": "449e73f3-79c3-4d1c-9afe-ee8468773c8f",
+    "publicationId": "42eaaf11-456e-4e1e-aae2-2b38a14f6d4c",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-variant-calling",
+    "image": "hub.akoflow.com/akoflow-examples/variant-calling@sha256:4733fd62b59887b9c0cf4445f69b9ebe792a1c8c88d5ca91607446aa83513001",
+    "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+    "visualCount": 1,
+    "activityCount": 14,
+    "examplePath": "scientific-workflows/variant-calling",
+    "route": "/docs/showcase/scientific-workflows/variant-calling",
+    "uri": "akoflow://hub/publications/42eaaf11-456e-4e1e-aae2-2b38a14f6d4c/versions/1",
+    "version": 1,
+    "versionId": "b34e801c-dbf3-4d6c-a625-db12e8f573e1",
+    "yamlHash": "a986da9f180588edaa3f4f4ee98311123f202d4bce4bf0397178d40ec3c08199"
   }
 ]

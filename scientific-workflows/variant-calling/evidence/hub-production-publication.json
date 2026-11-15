@@ -1,0 +1,17 @@
+{
+  "experimentId": "449e73f3-79c3-4d1c-9afe-ee8468773c8f",
+  "version": {
+    "id": "b34e801c-dbf3-4d6c-a625-db12e8f573e1",
+    "workflowId": "e6d92980-e238-40f5-a8c7-e6b045e0fc53",
+    "number": 1,
+    "message": "Measured full two-sample E. coli processing: 14/14 activities, validated BAM/BAI and VCFs, actual variant counts and genomic-position visualization.",
+    "hash": "a986da9f180588edaa3f4f4ee98311123f202d4bce4bf0397178d40ec3c08199",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "42eaaf11-456e-4e1e-aae2-2b38a14f6d4c",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-variant-calling",
+  "image": "hub.akoflow.com/akoflow-examples/variant-calling@sha256:4733fd62b59887b9c0cf4445f69b9ebe792a1c8c88d5ca91607446aa83513001",
+  "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+  "visualCount": 1
+}

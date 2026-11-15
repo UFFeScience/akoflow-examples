@@ -1,0 +1,5 @@
+id: variant-calling-topology
+name: variant-calling local topology
+version: 1
+executionScopeId: variant-calling-scope
+links: []

@@ -1,0 +1,8 @@
+{
+  "completeSourceArchives": [
+    "earthquake",
+    "sra-search"
+  ],
+  "sharedRunnerCompilesFromExtractedArchive": true,
+  "dotenvFilesAbsent": true
+}

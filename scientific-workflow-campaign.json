@@ -1,5 +1,5 @@
 {
-  "objective": "Run and publish Earthquake and the 12 requested scientific workflows sequentially through the Ak\u00f4Flow daemon and configured Hub connection.",
+  "objective": "Execute Earthquake and all twelve named scientific workflows sequentially and publish each to production Hub with native measured evidence, immutable exact execution images, reproducible inputs/source, validated downloadable results and meaningful scientific visuals.",
   "hub": "https://hub.akoflow.com",
   "hubScope": "Production Hub; exact measured images distributed by immutable aliases at its read-only OCI registry.",
   "workflows": [
@@ -29,16 +29,33 @@
     {
       "slug": "variant-calling",
       "name": "Variant Calling",
-      "status": "queued",
+      "status": "published-production",
       "visualPlan": "Variant counts by type and genomic position, generated from actual VCF output.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/variant-calling",
+      "inputFiles": 4,
+      "compressedInputBytes": 897543749,
+      "upstreamCommit": "d8fdae78e564ee8eed98515ba86886d0c944e029",
+      "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "activityCount": 14,
+      "evidence": "scientific-workflows/variant-calling/evidence/hub-production-publication.json",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-variant-calling",
+      "completedActivityCount": 14,
+      "visualCount": 1,
+      "finding": "790 and 11 filtered E. coli variants from 3,875,488 full read pairs",
+      "observedSeconds": 1673.4412508010864
     },
     {
       "slug": "orcasound",
       "name": "Orcasound",
-      "status": "queued",
+      "status": "inputs-verified-awaiting-adaptation-and-execution",
       "visualPlan": "Spectrogram and detections timeline computed from the selected real hydrophone recording.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/orcasound",
+      "recordingObjects": 12,
+      "modelRevision": "f8705749f36d65d870cc7b5d21e71802ae77059e",
+      "modelSHA256": "a1e41e52989e1677f1e5ca5eef2a289efab50ba7da6b5826048f546f2160f89b",
+      "knownUpstreamIssue": "Pegasus file-path checkpoint lookup silently skips loading incompatible supplied FastAI learner; use declared official trained OrcaHello inference with strict matching weights, never random initialization."
     },
     {
       "slug": "somospie",
@@ -117,5 +134,11 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "variant-calling"
+  "nextWorkflow": "orcasound",
+  "sourceBatchPR": {
+    "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
+    "status": "merged",
+    "ciRun": 43747163688,
+    "successfulChecks": 39
+  }
 }

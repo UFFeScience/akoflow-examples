@@ -1,0 +1,894 @@
+{
+  "id": "7f978ae5c6c3db691ad095bfe955c13d5863f75418ae37e7f1d40fbfa3c819bc",
+  "publication": {
+    "id": "840afc82-c144-4178-a8ce-abf38ca35145",
+    "title": "Variant Calling - E. coli Genome Comparison",
+    "slug": "scientific-workflows-variant-calling",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 14 completed activities.",
+    "readme": "# Variant Calling - E. coli Genome Comparison\n\nAdapt the complete scientific chain from the [Pegasus Variant Calling workflow](https://github.com/pegasus-isi/variant-calling-pegasus-workflow) to fourteen real Akoflow activities: reference indexing, six processing activities for each of the two original `tests/2` samples, and a final result/visualization activity.\n\n## Inputs and scientific processing\n\nThe complete public observations are **SRR2584866** and **SRR2589044** against the original **E. coli REL606** reference. Four frozen ENA FASTQ gzip files contain 897,543,749 compressed bytes. Preparation verifies the recorded byte counts and MD5 digests; it does not subsample or synthesize reads. Reference SHA-256 and the exact upstream revision are included in `data/input-verification.json` and `data/upstream.json`.\n\nThe image is based on the original upstream container pinned by digest and preserves **BWA 0.7.17-r1188, samtools 1.15.1, bcftools 1.15.1 and HTSlib 1.15.1**. The original BWA `mem -t 6`, BAM conversion/sort/index, `bcftools mpileup`, haploid multiallelic variant calls and `vcfutils.pl varFilter` computations are retained. Acquisition uses complete ENA mirrors instead of online fasterq-dump. Local file handoffs replace Pegasus/HTCondor/OSN staging. Reference faidx indexing is prepared upfront; text VCF outputs use the explicit `.vcf` suffix.\n\n## Run\n\nWith Go, Python 3 and an amd64 Docker-capable Linux host, run from this directory:\n\n```sh\n./prepare.sh\n./run.sh\n```\n\nAllow 16 GiB RAM and 40 GiB free disk as an initial capacity recommendation rather than a measured minimum. Two concurrent jobs are used. The original six-thread BWA setting can oversubscribe an eight-logical-CPU host; execution measurements therefore describe this declared shared-host profile, not a dedicated benchmark. Preparation requires network access to fetch the frozen observations and image; scientific activities execute offline. No upstream telemetry or email notifications are enabled.\n\nAfter preparation, the same fourteen-activity DAG can be submitted through the daemon:\n\n```sh\ngo run ../../tools/daemon-local -root ../.. -example scientific-workflows/variant-calling -lanes 2 -wait=false\n```\n\nUse the existing daemon URL and protected env file as documented by your deployment. Inspect the actual run in Desktop before publishing. Manual-plan predictions are placeholders, not measured timing estimates.\n\n## Validation and visual result\n\nThe final activity generates `variant-summary.svg`, showing the actual per-sample filtered-variant counts and genomic positions/QUAL values. It also owns `variant-results.tar.gz`, `variant-summary.json` and `variant-positions.tsv`, preserving final bytes after intermediate cleanup. The archive includes both real sorted BAM/BAI files, VCFs and QC reports.\n\nThe validator checks complete paired-read accounting, nonzero mapped coverage, BAM integrity and BAI access, real VCF record counts, every VCF REF allele against the frozen reference, archive SHA-256 digests and XML validity of the scientific SVG. Zero variants is permitted as a biological result when input processing and coverage are valid; no positive calls are fabricated. CI validates the exact image/toolchain and full DAG contract; native execution evidence must separately demonstrate the full real computation before publication.\n\n## Provenance\n\nOriginal source revision `d8fdae78e564ee8eed98515ba86886d0c944e029`, with its Apache-2.0 license and original generator/wrappers in `scripts/upstream/`. The upstream generator is retained for comparison, not executed with its unrelated telemetry hooks. Input manifests and explicit adaptation details are bundled. This profile has not been declared complete until real execution and validation evidence are recorded.\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+  "workflowName": "variant-calling-local-45b3727a54",
+  "yaml": "name: variant-calling-local-45b3727a54\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - index\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: index\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - extract\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: extract-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - align\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"3\"\n          dependsOn:\n            - extract-srr2584866\n            - index\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: align-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - bam\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - align-srr2584866\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: bam-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - pileup\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - bam-srr2584866\n            - index\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: pileup-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - call\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - pileup-srr2584866\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: call-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - filter\n                - --output\n                - .\n                - --sample\n                - SRR2584866\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - call-srr2584866\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: filter-srr2584866\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - extract\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: extract-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - align\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"3\"\n          dependsOn:\n            - extract-srr2589044\n            - index\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: align-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - bam\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - align-srr2589044\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: bam-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - pileup\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - bam-srr2589044\n            - index\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: pileup-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - call\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - pileup-srr2589044\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: call-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - filter\n                - --output\n                - .\n                - --sample\n                - SRR2589044\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - call-srr2589044\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: filter-srr2589044\n          runtime: variant-calling-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - summary\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - bam-srr2584866\n            - bam-srr2589044\n            - call-srr2584866\n            - call-srr2589044\n            - extract-srr2584866\n            - extract-srr2589044\n            - filter-srr2584866\n            - filter-srr2589044\n            - index\n            - pileup-srr2584866\n            - pileup-srr2589044\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: variant-calling-local\n            workspaceSeedPath: \"\"\n          name: summary\n          runtime: variant-calling-local\n    dataDependencies:\n        - consumerActivity: bam-srr2584866\n          logicalName: SRR2584866.aligned.sam\n          producerActivity: align-srr2584866\n          sizeBytes: 1\n        - consumerActivity: bam-srr2584866\n          logicalName: SRR2584866.read-counts.json\n          producerActivity: align-srr2584866\n          sizeBytes: 1\n        - consumerActivity: bam-srr2589044\n          logicalName: SRR2589044.aligned.sam\n          producerActivity: align-srr2589044\n          sizeBytes: 1\n        - consumerActivity: bam-srr2589044\n          logicalName: SRR2589044.read-counts.json\n          producerActivity: align-srr2589044\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2584866\n          logicalName: SRR2584866.aligned.sorted.bam\n          producerActivity: bam-srr2584866\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2584866\n          logicalName: SRR2584866.aligned.sorted.bam.bai\n          producerActivity: bam-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.aligned.sorted.bam\n          producerActivity: bam-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.aligned.sorted.bam.bai\n          producerActivity: bam-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.flagstat.json\n          producerActivity: bam-srr2584866\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2589044\n          logicalName: SRR2589044.aligned.sorted.bam\n          producerActivity: bam-srr2589044\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2589044\n          logicalName: SRR2589044.aligned.sorted.bam.bai\n          producerActivity: bam-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.aligned.sorted.bam\n          producerActivity: bam-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.aligned.sorted.bam.bai\n          producerActivity: bam-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.flagstat.json\n          producerActivity: bam-srr2589044\n          sizeBytes: 1\n        - consumerActivity: filter-srr2584866\n          logicalName: SRR2584866.variants.vcf\n          producerActivity: call-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.variants.vcf\n          producerActivity: call-srr2584866\n          sizeBytes: 1\n        - consumerActivity: filter-srr2589044\n          logicalName: SRR2589044.variants.vcf\n          producerActivity: call-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.variants.vcf\n          producerActivity: call-srr2589044\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: SRR2584866.read-counts.json\n          producerActivity: extract-srr2584866\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: SRR2584866_1.fastq\n          producerActivity: extract-srr2584866\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: SRR2584866_2.fastq\n          producerActivity: extract-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.read-counts.json\n          producerActivity: extract-srr2584866\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: SRR2589044.read-counts.json\n          producerActivity: extract-srr2589044\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: SRR2589044_1.fastq\n          producerActivity: extract-srr2589044\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: SRR2589044_2.fastq\n          producerActivity: extract-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.read-counts.json\n          producerActivity: extract-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.filtered-stats.txt\n          producerActivity: filter-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.final.vcf\n          producerActivity: filter-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.filtered-stats.txt\n          producerActivity: filter-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.final.vcf\n          producerActivity: filter-srr2589044\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.amb\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.ann\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.bwt\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.fai\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.pac\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2584866\n          logicalName: reference.fasta.sa\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.amb\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.ann\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.bwt\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.fai\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.pac\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align-srr2589044\n          logicalName: reference.fasta.sa\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2584866\n          logicalName: reference.fasta\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2584866\n          logicalName: reference.fasta.fai\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2589044\n          logicalName: reference.fasta\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: pileup-srr2589044\n          logicalName: reference.fasta.fai\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: reference.fasta\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: call-srr2584866\n          logicalName: SRR2584866.raw.bcf\n          producerActivity: pileup-srr2584866\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2584866.coverage.json\n          producerActivity: pileup-srr2584866\n          sizeBytes: 1\n        - consumerActivity: call-srr2589044\n          logicalName: SRR2589044.raw.bcf\n          producerActivity: pileup-srr2589044\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: SRR2589044.coverage.json\n          producerActivity: pileup-srr2589044\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "variant-calling-local-45b3727a54-align-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769164.1662712,
+      "log": "[M::bwa_idx_load_from_disk] read 0 ALT contigs\n[M::process] read 400000 sequences (60000000 bp)...\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (183, 188572, 61, 212)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (321, 623, 1607)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4179)\n[M::mem_pestat] mean and std.dev: (870.44, 864.65)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5465)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (136, 273, 524)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1300)\n[M::mem_pestat] mean and std.dev: (346.25, 252.88)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1688)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1176, 2217, 2422)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4914)\n[M::mem_pestat] mean and std.dev: (1798.45, 948.34)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6160)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (340, 600, 1587)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4081)\n[M::mem_pestat] mean and std.dev: (953.18, 1004.51)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5328)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 22.186 CPU sec, 3.702 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (169, 188495, 62, 198)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (348, 721, 1640)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4224)\n[M::mem_pestat] mean and std.dev: (951.52, 856.71)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5516)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (136, 270, 520)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1288)\n[M::mem_pestat] mean and std.dev: (344.29, 251.41)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1672)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (497, 2238, 2457)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6377)\n[M::mem_pestat] mean and std.dev: (1760.23, 1100.31)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 8337)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (311, 600, 1476)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3806)\n[M::mem_pestat] mean and std.dev: (866.69, 810.96)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4971)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 22.175 CPU sec, 3.687 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (195, 188457, 52, 200)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (382, 662, 1660)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4216)\n[M::mem_pestat] mean and std.dev: (896.46, 841.81)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5494)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (136, 268, 517)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1279)\n[M::mem_pestat] mean and std.dev: (343.45, 251.40)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1660)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1099, 2183, 2451)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5155)\n[M::mem_pestat] mean and std.dev: (1771.02, 880.77)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6507)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (312, 541, 1517)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3927)\n[M::mem_pestat] mean and std.dev: (863.58, 866.47)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5132)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 23.254 CPU sec, 3.865 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (169, 187893, 59, 238)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (318, 778, 1840)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4884)\n[M::mem_pestat] mean and std.dev: (1070.88, 1072.46)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6406)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (139, 282, 545)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1357)\n[M::mem_pestat] mean and std.dev: (357.92, 261.95)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1763)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1610, 2285, 2577)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4511)\n[M::mem_pestat] mean and std.dev: (1893.32, 893.55)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5478)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (280, 553, 1223)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3109)\n[M::mem_pestat] mean and std.dev: (701.19, 662.54)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4052)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 24.136 CPU sec, 3.998 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (184, 187974, 67, 193)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (332, 620, 1847)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4877)\n[M::mem_pestat] mean and std.dev: (969.07, 1061.98)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6392)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (140, 285, 547)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1361)\n[M::mem_pestat] mean and std.dev: (360.41, 262.80)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1768)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1136, 2204, 2460)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5108)\n[M::mem_pestat] mean and std.dev: (1755.85, 956.58)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6432)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (266, 545, 1458)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3842)\n[M::mem_pestat] mean and std.dev: (885.91, 893.38)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5034)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 28.138 CPU sec, 4.732 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (197, 188188, 68, 236)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (379, 679, 1563)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3931)\n[M::mem_pestat] mean and std.dev: (855.40, 775.91)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5115)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (145, 302, 577)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1441)\n[M::mem_pestat] mean and std.dev: (376.41, 271.72)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 1873)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (804, 2200, 2408)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5616)\n[M::mem_pestat] mean and std.dev: (1708.02, 923.94)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7220)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (276, 544, 1245)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3183)\n[M::mem_pestat] mean and std.dev: (718.84, 666.75)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4152)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 24.420 CPU sec, 4.114 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (235, 188910, 63, 271)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (433, 706, 1627)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4015)\n[M::mem_pestat] mean and std.dev: (925.69, 816.91)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5209)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (170, 394, 675)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1685)\n[M::mem_pestat] mean and std.dev: (439.90, 298.70)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2190)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1905, 2157, 2361)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (993, 3273)\n[M::mem_pestat] mean and std.dev: (2178.57, 302.83)\n[M::mem_pestat] low and high boundaries for proper pairs: (537, 3729)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (380, 742, 1718)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4394)\n[M::mem_pestat] mean and std.dev: (1011.03, 966.92)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5732)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 23.339 CPU sec, 3.897 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (244, 188765, 78, 256)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (332, 698, 2042)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5462)\n[M::mem_pestat] mean and std.dev: (1173.03, 1221.23)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7172)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (164, 374, 658)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1646)\n[M::mem_pestat] mean and std.dev: (427.20, 293.24)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2140)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1065, 2106, 2400)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5070)\n[M::mem_pestat] mean and std.dev: (1747.61, 940.15)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6405)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (327, 631, 1651)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4299)\n[M::mem_pestat] mean and std.dev: (953.96, 906.79)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5623)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 27.661 CPU sec, 4.720 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (222, 188584, 97, 269)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (393, 756, 1822)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4680)\n[M::mem_pestat] mean and std.dev: (1009.23, 945.18)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6109)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (170, 393, 677)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1691)\n[M::mem_pestat] mean and std.dev: (441.22, 299.90)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2198)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1704, 2162, 2429)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (254, 3879)\n[M::mem_pestat] mean and std.dev: (1970.13, 624.81)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4604)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (382, 635, 1489)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3703)\n[M::mem_pestat] mean and std.dev: (871.32, 789.73)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4810)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 24.605 CPU sec, 4.101 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (258, 188516, 59, 277)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (393, 684, 1340)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3234)\n[M::mem_pestat] mean and std.dev: (775.41, 636.54)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 4181)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (168, 388, 673)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1683)\n[M::mem_pestat] mean and std.dev: (438.13, 299.43)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2188)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1264, 2135, 2533)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5071)\n[M::mem_pestat] mean and std.dev: (1751.96, 865.80)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6340)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (284, 616, 1471)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3845)\n[M::mem_pestat] mean and std.dev: (839.30, 862.46)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5032)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 25.831 CPU sec, 4.294 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (217, 188470, 81, 272)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (407, 747, 1777)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4517)\n[M::mem_pestat] mean and std.dev: (1071.96, 987.17)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5887)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (174, 409, 694)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1734)\n[M::mem_pestat] mean and std.dev: (453.91, 308.46)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2254)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1845, 2161, 2371)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (793, 3423)\n[M::mem_pestat] mean and std.dev: (2187.81, 412.75)\n[M::mem_pestat] low and high boundaries for proper pairs: (267, 3949)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (391, 729, 1891)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4891)\n[M::mem_pestat] mean and std.dev: (1151.10, 1157.81)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6391)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 27.501 CPU sec, 4.575 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (227, 188227, 80, 289)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (341, 704, 2008)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5342)\n[M::mem_pestat] mean and std.dev: (1221.83, 1327.05)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7009)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (168, 390, 677)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1695)\n[M::mem_pestat] mean and std.dev: (440.74, 301.98)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2204)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1170, 1998, 2238)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4374)\n[M::mem_pestat] mean and std.dev: (1824.65, 837.97)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5442)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (359, 640, 1682)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4328)\n[M::mem_pestat] mean and std.dev: (904.80, 899.86)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5651)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 28.456 CPU sec, 4.809 real sec\n[M::process] read 336796 sequences (50519400 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (263, 188569, 86, 252)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (395, 774, 2057)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5381)\n[M::mem_pestat] mean and std.dev: (1280.88, 1277.94)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7043)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (175, 413, 696)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1738)\n[M::mem_pestat] mean and std.dev: (455.50, 308.36)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2259)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1432, 2167, 2423)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4405)\n[M::mem_pestat] mean and std.dev: (1858.80, 832.38)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5396)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (442, 714, 1717)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4267)\n[M::mem_pestat] mean and std.dev: (1041.70, 948.90)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5542)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 28.074 CPU sec, 4.647 real sec\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (202, 157941, 46, 238)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (365, 708, 1621)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4133)\n[M::mem_pestat] mean and std.dev: (916.99, 796.00)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5389)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (167, 385, 671)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1679)\n[M::mem_pestat] mean and std.dev: (436.46, 299.41)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2183)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (1698, 2117, 2264)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (566, 3396)\n[M::mem_pestat] mean and std.dev: (2093.69, 427.96)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 3962)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (379, 741, 2015)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5287)\n[M::mem_pestat] mean and std.dev: (1112.76, 1092.08)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6923)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 336796 reads in 24.008 CPU sec, 4.099 real sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 6 reference.fasta SRR2584866_1.fastq SRR2584866_2.fastq\n[main] Real time: 62.205 sec; CPU: 354.224 sec\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769101.8998482,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-align-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794769899.6161911,
+      "log": "[M::bwa_idx_load_from_disk] read 0 ALT contigs\n[M::process] read 400000 sequences (60000000 bp)...\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1535, 181895, 47, 1503)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (391, 771, 1904)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 4930)\n[M::mem_pestat] mean and std.dev: (1125.87, 1116.81)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6443)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (201, 455, 709)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1725)\n[M::mem_pestat] mean and std.dev: (472.66, 295.55)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2233)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (218, 794, 2207)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6185)\n[M::mem_pestat] mean and std.dev: (1403.19, 1491.45)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 8174)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (389, 775, 2006)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5240)\n[M::mem_pestat] mean and std.dev: (1170.82, 1181.03)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6857)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 24.197 CPU sec, 4.036 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1712, 182064, 45, 1716)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (450, 812, 2017)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5151)\n[M::mem_pestat] mean and std.dev: (1182.46, 1126.93)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6718)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (235, 539, 775)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1855)\n[M::mem_pestat] mean and std.dev: (528.02, 314.01)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2395)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (197, 615, 2630)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 7496)\n[M::mem_pestat] mean and std.dev: (1262.63, 1354.58)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 9929)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (440, 796, 2152)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5576)\n[M::mem_pestat] mean and std.dev: (1288.00, 1276.57)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7288)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 25.358 CPU sec, 4.292 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1841, 182739, 47, 1846)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (461, 877, 2295)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5963)\n[M::mem_pestat] mean and std.dev: (1344.92, 1333.66)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7797)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (255, 582, 804)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1902)\n[M::mem_pestat] mean and std.dev: (553.55, 320.09)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2451)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (253, 742, 1467)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 3895)\n[M::mem_pestat] mean and std.dev: (953.84, 939.48)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 5109)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (470, 883, 2215)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5705)\n[M::mem_pestat] mean and std.dev: (1310.74, 1268.28)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7450)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 26.330 CPU sec, 4.414 real sec\n[M::process] read 400000 sequences (60000000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1867, 182002, 57, 1958)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (472, 853, 2080)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5296)\n[M::mem_pestat] mean and std.dev: (1267.20, 1199.52)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6904)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (272, 604, 824)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1928)\n[M::mem_pestat] mean and std.dev: (572.19, 326.25)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2480)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (333, 1173, 3773)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 10653)\n[M::mem_pestat] mean and std.dev: (2239.44, 2441.65)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 14093)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (468, 841, 2154)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5526)\n[M::mem_pestat] mean and std.dev: (1254.26, 1213.99)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7212)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 26.688 CPU sec, 4.431 real sec\n[M::process] read 214180 sequences (32127000 bp)...\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1925, 181698, 57, 1927)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (459, 876, 2081)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5325)\n[M::mem_pestat] mean and std.dev: (1261.54, 1194.93)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6947)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (275, 610, 829)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1937)\n[M::mem_pestat] mean and std.dev: (576.34, 327.18)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2491)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (453, 1538, 3222)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 8760)\n[M::mem_pestat] mean and std.dev: (2063.59, 2001.29)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 11529)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (480, 926, 2328)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6024)\n[M::mem_pestat] mean and std.dev: (1351.32, 1299.95)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7872)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 400000 reads in 29.494 CPU sec, 4.945 real sec\n[M::mem_pestat] # candidate unique pairs for (FF, FR, RF, RR): (1009, 96558, 27, 1003)\n[M::mem_pestat] analyzing insert size distribution for orientation FF...\n[M::mem_pestat] (25, 50, 75) percentile: (451, 861, 2113)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5437)\n[M::mem_pestat] mean and std.dev: (1285.18, 1254.43)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 7099)\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (262, 595, 817)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 1927)\n[M::mem_pestat] mean and std.dev: (564.60, 324.72)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 2482)\n[M::mem_pestat] analyzing insert size distribution for orientation RF...\n[M::mem_pestat] (25, 50, 75) percentile: (491, 1231, 2039)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 5135)\n[M::mem_pestat] mean and std.dev: (1267.08, 1109.57)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 6683)\n[M::mem_pestat] analyzing insert size distribution for orientation RR...\n[M::mem_pestat] (25, 50, 75) percentile: (453, 845, 2383)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (1, 6243)\n[M::mem_pestat] mean and std.dev: (1428.56, 1438.57)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 8173)\n[M::mem_pestat] skip orientation FF\n[M::mem_pestat] skip orientation RF\n[M::mem_pestat] skip orientation RR\n[M::mem_process_seqs] Processed 214180 reads in 15.595 CPU sec, 2.600 real sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 6 reference.fasta SRR2589044_1.fastq SRR2589044_2.fastq\n[main] Real time: 27.994 sec; CPU: 148.112 sec\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769871.5495768,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769427.0329404,
+      "log": "\n[bam_sort_core] merging from 2 files and 1 in-memory blocks...\n\n{\n \"QC-passed reads\": { \n  \"total\": 5559461, \n  \"primary\": 5536796, \n  \"secondary\": 0, \n  \"supplementary\": 22665, \n  \"duplicates\": 0, \n  \"primary duplicates\": 0, \n  \"mapped\": 5541930, \n  \"mapped %\": 99.68, \n  \"primary mapped\": 5519265, \n  \"primary mapped %\": 99.68, \n  \"paired in sequencing\": 5536796, \n  \"read1\": 2768398, \n  \"read2\": 2768398, \n  \"properly paired\": 5453484, \n  \"properly paired %\": 98.50, \n  \"with itself and mate mapped\": 5502198, \n  \"singletons\": 17067, \n  \"singletons %\": 0.31, \n  \"with mate mapped to a different chr\": 0, \n  \"with mate mapped to a different chr (mapQ >= 5)\": 0 \n },\n \"QC-failed reads\": { \n  \"total\": 0, \n  \"primary\": 0, \n  \"secondary\": 0, \n  \"supplementary\": 0, \n  \"duplicates\": 0, \n  \"primary duplicates\": 0, \n  \"mapped\": 0, \n  \"mapped %\": null, \n  \"primary mapped\": 0, \n  \"primary mapped %\": null, \n  \"paired in sequencing\": 0, \n  \"read1\": 0, \n  \"read2\": 0, \n  \"properly paired\": 0, \n  \"properly paired %\": null, \n  \"with itself and mate mapped\": 0, \n  \"singletons\": 0, \n  \"singletons %\": null, \n  \"with mate mapped to a different chr\": 0, \n  \"with mate mapped to a different chr (mapQ >= 5)\": 0 \n }\n}\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769223.66241,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794770007.257495,
+      "log": "\n[bam_sort_core] merging from 1 files and 1 in-memory blocks...\n\n{\n \"QC-passed reads\": { \n  \"total\": 2241568, \n  \"primary\": 2214180, \n  \"secondary\": 0, \n  \"supplementary\": 27388, \n  \"duplicates\": 0, \n  \"primary duplicates\": 0, \n  \"mapped\": 2229228, \n  \"mapped %\": 99.45, \n  \"primary mapped\": 2201840, \n  \"primary mapped %\": 99.44, \n  \"paired in sequencing\": 2214180, \n  \"read1\": 1107090, \n  \"read2\": 1107090, \n  \"properly paired\": 2110970, \n  \"properly paired %\": 95.34, \n  \"with itself and mate mapped\": 2189818, \n  \"singletons\": 12022, \n  \"singletons %\": 0.54, \n  \"with mate mapped to a different chr\": 0, \n  \"with mate mapped to a different chr (mapQ >= 5)\": 0 \n },\n \"QC-failed reads\": { \n  \"total\": 0, \n  \"primary\": 0, \n  \"secondary\": 0, \n  \"supplementary\": 0, \n  \"duplicates\": 0, \n  \"primary duplicates\": 0, \n  \"mapped\": 0, \n  \"mapped %\": null, \n  \"primary mapped\": 0, \n  \"primary mapped %\": null, \n  \"paired in sequencing\": 0, \n  \"read1\": 0, \n  \"read2\": 0, \n  \"properly paired\": 0, \n  \"properly paired %\": null, \n  \"with itself and mate mapped\": 0, \n  \"singletons\": 0, \n  \"singletons %\": null, \n  \"with mate mapped to a different chr\": 0, \n  \"with mate mapped to a different chr (mapQ >= 5)\": 0 \n }\n}\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769923.5652347,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-call-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769748.3182447,
+      "log": "[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769745.3519998,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-call-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794770131.0241108,
+      "log": "[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794770128.1607413,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-extract-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769080.3337374,
+      "log": "11073592 SRR2584866_1.fastq\n\n11073592 SRR2584866_2.fastq\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769070.861737,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-extract-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794769770.402554,
+      "log": "4428360 SRR2589044_1.fastq\n\n4428360 SRR2589044_2.fastq\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769753.4455936,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-filter-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769853.7795482,
+      "log": "\n# This file was produced by bcftools stats (1.15.1+htslib-1.15.1) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  SRR2584866.final.vcf\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\tSRR2584866.final.vcf\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t790\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t688\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t102\nSN\t0\tnumber of others:\t0\nSN\t0\tnumber of multiallelic sites:\t0\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t632\t56\t11.29\t632\t56\t11.29\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t688\t632\t56\t102\t0\t0\t102\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t688\t632\t56\t102\t0\t0\t102\n# QUAL, Stats by quality\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t4.3\t1\t1\t0\t0\nQUAL\t0\t6.0\t1\t1\t0\t0\nQUAL\t0\t7.8\t0\t0\t0\t1\nQUAL\t0\t29.4\t1\t1\t0\t0\nQUAL\t0\t35.4\t1\t1\t0\t0\nQUAL\t0\t49.3\t1\t1\t0\t0\nQUAL\t0\t55.4\t1\t1\t0\t0\nQUAL\t0\t71.4\t0\t0\t0\t1\nQUAL\t0\t87.4\t1\t1\t0\t0\nQUAL\t0\t90.4\t1\t1\t0\t0\nQUAL\t0\t95.4\t0\t0\t0\t1\nQUAL\t0\t122.0\t1\t1\t0\t0\nQUAL\t0\t128.9\t1\t0\t1\t0\nQUAL\t0\t131.0\t1\t1\t0\t0\nQUAL\t0\t132.1\t1\t0\t1\t0\nQUAL\t0\t134.3\t1\t0\t1\t0\nQUAL\t0\t136.4\t1\t0\t1\t0\nQUAL\t0\t155.4\t1\t1\t0\t0\nQUAL\t0\t157.4\t0\t0\t0\t1\nQUAL\t0\t162.0\t1\t1\t0\t0\nQUAL\t0\t162.4\t1\t1\t0\t0\nQUAL\t0\t164.3\t1\t0\t1\t0\nQUAL\t0\t168.2\t1\t1\t0\t0\nQUAL\t0\t178.3\t1\t1\t0\t0\nQUAL\t0\t183.4\t0\t0\t0\t1\nQUAL\t0\t185.4\t1\t1\t0\t0\nQUAL\t0\t193.2\t0\t0\t0\t1\nQUAL\t0\t197.4\t1\t1\t0\t0\nQUAL\t0\t202.1\t0\t0\t0\t1\nQUAL\t0\t224.1\t0\t0\t0\t1\nQUAL\t0\t225.4\t472\t440\t32\t12\nQUAL\t0\t227.9\t1\t0\t1\t0\nQUAL\t0\t228.0\t1\t0\t1\t0\nQUAL\t0\t228.1\t1\t1\t0\t1\nQUAL\t0\t228.2\t5\t3\t2\t1\nQUAL\t0\t228.3\t20\t19\t1\t25\nQUAL\t0\t228.4\t166\t152\t14\t55\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]number of sites\t[5]number of genotypes\t[6]mean VAF\nIDD\t0\t-6\t1\t0\t.\nIDD\t0\t-3\t2\t0\t.\nIDD\t0\t-2\t4\t0\t.\nIDD\t0\t-1\t35\t0\t.\nIDD\t0\t1\t51\t0\t.\nIDD\t0\t2\t6\t0\t.\nIDD\t0\t3\t3\t0\t.\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t7\nST\t0\tA>G\t141\nST\t0\tA>T\t4\nST\t0\tC>A\t11\nST\t0\tC>G\t6\nST\t0\tC>T\t180\nST\t0\tG>A\t192\nST\t0\tG>C\t6\nST\t0\tG>T\t13\nST\t0\tT>A\t5\nST\t0\tT>C\t119\nST\t0\tT>G\t4\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t2\t0\t0.000000\t1\t0.126582\nDP\t0\t3\t0\t0.000000\t1\t0.126582\nDP\t0\t5\t0\t0.000000\t1\t0.126582\nDP\t0\t6\t0\t0.000000\t2\t0.253165\nDP\t0\t12\t0\t0.000000\t2\t0.253165\nDP\t0\t17\t0\t0.000000\t1\t0.126582\nDP\t0\t18\t0\t0.000000\t1\t0.126582\nDP\t0\t31\t0\t0.000000\t1\t0.126582\nDP\t0\t33\t0\t0.000000\t1\t0.126582\nDP\t0\t36\t0\t0.000000\t1\t0.126582\nDP\t0\t37\t0\t0.000000\t1\t0.126582\nDP\t0\t39\t0\t0.000000\t1\t0.126582\nDP\t0\t42\t0\t0.000000\t1\t0.126582\nDP\t0\t44\t0\t0.000000\t2\t0.253165\nDP\t0\t45\t0\t0.000000\t2\t0.253165\nDP\t0\t49\t0\t0.000000\t1\t0.126582\nDP\t0\t52\t0\t0.000000\t2\t0.253165\nDP\t0\t55\t0\t0.000000\t1\t0.126582\nDP\t0\t57\t0\t0.000000\t1\t0.126582\nDP\t0\t58\t0\t0.000000\t1\t0.126582\nDP\t0\t59\t0\t0.000000\t1\t0.126582\nDP\t0\t68\t0\t0.000000\t1\t0.126582\nDP\t0\t69\t0\t0.000000\t1\t0.126582\nDP\t0\t74\t0\t0.000000\t1\t0.126582\nDP\t0\t75\t0\t0.000000\t2\t0.253165\nDP\t0\t77\t0\t0.000000\t1\t0.126582\nDP\t0\t78\t0\t0.000000\t1\t0.126582\nDP\t0\t80\t0\t0.000000\t1\t0.126582\nDP\t0\t81\t0\t0.000000\t1\t0.126582\nDP\t0\t82\t0\t0.000000\t1\t0.126582\nDP\t0\t83\t0\t0.000000\t1\t0.126582\nDP\t0\t85\t0\t0.000000\t2\t0.253165\nDP\t0\t87\t0\t0.000000\t1\t0.126582\nDP\t0\t88\t0\t0.000000\t2\t0.253165\nDP\t0\t89\t0\t0.000000\t1\t0.126582\nDP\t0\t91\t0\t0.000000\t2\t0.253165\nDP\t0\t93\t0\t0.000000\t1\t0.126582\nDP\t0\t94\t0\t0.000000\t2\t0.253165\nDP\t0\t95\t0\t0.000000\t1\t0.126582\nDP\t0\t96\t0\t0.000000\t1\t0.126582\nDP\t0\t97\t0\t0.000000\t5\t0.632911\nDP\t0\t98\t0\t0.000000\t1\t0.126582\nDP\t0\t100\t0\t0.000000\t2\t0.253165\nDP\t0\t101\t0\t0.000000\t3\t0.379747\nDP\t0\t102\t0\t0.000000\t1\t0.126582\nDP\t0\t104\t0\t0.000000\t1\t0.126582\nDP\t0\t105\t0\t0.000000\t2\t0.253165\nDP\t0\t106\t0\t0.000000\t1\t0.126582\nDP\t0\t107\t0\t0.000000\t3\t0.379747\nDP\t0\t109\t0\t0.000000\t2\t0.253165\nDP\t0\t110\t0\t0.000000\t2\t0.253165\nDP\t0\t111\t0\t0.000000\t1\t0.126582\nDP\t0\t112\t0\t0.000000\t1\t0.126582\nDP\t0\t113\t0\t0.000000\t3\t0.379747\nDP\t0\t114\t0\t0.000000\t1\t0.126582\nDP\t0\t115\t0\t0.000000\t7\t0.886076\nDP\t0\t116\t0\t0.000000\t2\t0.253165\nDP\t0\t117\t0\t0.000000\t5\t0.632911\nDP\t0\t118\t0\t0.000000\t5\t0.632911\nDP\t0\t119\t0\t0.000000\t1\t0.126582\nDP\t0\t120\t0\t0.000000\t7\t0.886076\nDP\t0\t121\t0\t0.000000\t6\t0.759494\nDP\t0\t122\t0\t0.000000\t5\t0.632911\nDP\t0\t123\t0\t0.000000\t3\t0.379747\nDP\t0\t124\t0\t0.000000\t5\t0.632911\nDP\t0\t125\t0\t0.000000\t3\t0.379747\nDP\t0\t126\t0\t0.000000\t6\t0.759494\nDP\t0\t127\t0\t0.000000\t10\t1.265823\nDP\t0\t128\t0\t0.000000\t5\t0.632911\nDP\t0\t129\t0\t0.000000\t4\t0.506329\nDP\t0\t130\t0\t0.000000\t6\t0.759494\nDP\t0\t131\t0\t0.000000\t6\t0.759494\nDP\t0\t132\t0\t0.000000\t3\t0.379747\nDP\t0\t133\t0\t0.000000\t3\t0.379747\nDP\t0\t134\t0\t0.000000\t6\t0.759494\nDP\t0\t135\t0\t0.000000\t11\t1.392405\nDP\t0\t136\t0\t0.000000\t6\t0.759494\nDP\t0\t137\t0\t0.000000\t12\t1.518987\nDP\t0\t138\t0\t0.000000\t7\t0.886076\nDP\t0\t139\t0\t0.000000\t4\t0.506329\nDP\t0\t140\t0\t0.000000\t10\t1.265823\nDP\t0\t141\t0\t0.000000\t8\t1.012658\nDP\t0\t142\t0\t0.000000\t7\t0.886076\nDP\t0\t143\t0\t0.000000\t6\t0.759494\nDP\t0\t144\t0\t0.000000\t5\t0.632911\nDP\t0\t145\t0\t0.000000\t12\t1.518987\nDP\t0\t146\t0\t0.000000\t8\t1.012658\nDP\t0\t147\t0\t0.000000\t7\t0.886076\nDP\t0\t148\t0\t0.000000\t7\t0.886076\nDP\t0\t149\t0\t0.000000\t11\t1.392405\nDP\t0\t150\t0\t0.000000\t11\t1.392405\nDP\t0\t151\t0\t0.000000\t16\t2.025316\nDP\t0\t152\t0\t0.000000\t5\t0.632911\nDP\t0\t153\t0\t0.000000\t14\t1.772152\nDP\t0\t154\t0\t0.000000\t10\t1.265823\nDP\t0\t155\t0\t0.000000\t7\t0.886076\nDP\t0\t156\t0\t0.000000\t13\t1.645570\nDP\t0\t157\t0\t0.000000\t14\t1.772152\nDP\t0\t158\t0\t0.000000\t10\t1.265823\nDP\t0\t159\t0\t0.000000\t7\t0.886076\nDP\t0\t160\t0\t0.000000\t12\t1.518987\nDP\t0\t161\t0\t0.000000\t10\t1.265823\nDP\t0\t162\t0\t0.000000\t6\t0.759494\nDP\t0\t163\t0\t0.000000\t7\t0.886076\nDP\t0\t164\t0\t0.000000\t11\t1.392405\nDP\t0\t165\t0\t0.000000\t5\t0.632911\nDP\t0\t166\t0\t0.000000\t6\t0.759494\nDP\t0\t167\t0\t0.000000\t7\t0.886076\nDP\t0\t168\t0\t0.000000\t10\t1.265823\nDP\t0\t169\t0\t0.000000\t17\t2.151899\nDP\t0\t170\t0\t0.000000\t3\t0.379747\nDP\t0\t171\t0\t0.000000\t12\t1.518987\nDP\t0\t172\t0\t0.000000\t11\t1.392405\nDP\t0\t173\t0\t0.000000\t3\t0.379747\nDP\t0\t174\t0\t0.000000\t8\t1.012658\nDP\t0\t175\t0\t0.000000\t12\t1.518987\nDP\t0\t176\t0\t0.000000\t6\t0.759494\nDP\t0\t177\t0\t0.000000\t10\t1.265823\nDP\t0\t178\t0\t0.000000\t5\t0.632911\nDP\t0\t179\t0\t0.000000\t7\t0.886076\nDP\t0\t180\t0\t0.000000\t7\t0.886076\nDP\t0\t181\t0\t0.000000\t9\t1.139241\nDP\t0\t182\t0\t0.000000\t6\t0.759494\nDP\t0\t183\t0\t0.000000\t10\t1.265823\nDP\t0\t184\t0\t0.000000\t5\t0.632911\nDP\t0\t185\t0\t0.000000\t4\t0.506329\nDP\t0\t186\t0\t0.000000\t7\t0.886076\nDP\t0\t187\t0\t0.000000\t8\t1.012658\nDP\t0\t188\t0\t0.000000\t6\t0.759494\nDP\t0\t189\t0\t0.000000\t9\t1.139241\nDP\t0\t190\t0\t0.000000\t7\t0.886076\nDP\t0\t191\t0\t0.000000\t5\t0.632911\nDP\t0\t192\t0\t0.000000\t2\t0.253165\nDP\t0\t193\t0\t0.000000\t7\t0.886076\nDP\t0\t194\t0\t0.000000\t7\t0.886076\nDP\t0\t195\t0\t0.000000\t5\t0.632911\nDP\t0\t196\t0\t0.000000\t2\t0.253165\nDP\t0\t197\t0\t0.000000\t4\t0.506329\nDP\t0\t198\t0\t0.000000\t5\t0.632911\nDP\t0\t199\t0\t0.000000\t2\t0.253165\nDP\t0\t200\t0\t0.000000\t2\t0.253165\nDP\t0\t201\t0\t0.000000\t6\t0.759494\nDP\t0\t202\t0\t0.000000\t5\t0.632911\nDP\t0\t203\t0\t0.000000\t5\t0.632911\nDP\t0\t204\t0\t0.000000\t3\t0.379747\nDP\t0\t205\t0\t0.000000\t2\t0.253165\nDP\t0\t206\t0\t0.000000\t2\t0.253165\nDP\t0\t207\t0\t0.000000\t3\t0.379747\nDP\t0\t208\t0\t0.000000\t3\t0.379747\nDP\t0\t209\t0\t0.000000\t1\t0.126582\nDP\t0\t210\t0\t0.000000\t2\t0.253165\nDP\t0\t211\t0\t0.000000\t7\t0.886076\nDP\t0\t212\t0\t0.000000\t1\t0.126582\nDP\t0\t213\t0\t0.000000\t1\t0.126582\nDP\t0\t214\t0\t0.000000\t3\t0.379747\nDP\t0\t216\t0\t0.000000\t4\t0.506329\nDP\t0\t217\t0\t0.000000\t4\t0.506329\nDP\t0\t218\t0\t0.000000\t2\t0.253165\nDP\t0\t219\t0\t0.000000\t1\t0.126582\nDP\t0\t220\t0\t0.000000\t3\t0.379747\nDP\t0\t221\t0\t0.000000\t1\t0.126582\nDP\t0\t222\t0\t0.000000\t2\t0.253165\nDP\t0\t223\t0\t0.000000\t3\t0.379747\nDP\t0\t224\t0\t0.000000\t1\t0.126582\nDP\t0\t226\t0\t0.000000\t5\t0.632911\nDP\t0\t228\t0\t0.000000\t1\t0.126582\nDP\t0\t229\t0\t0.000000\t1\t0.126582\nDP\t0\t231\t0\t0.000000\t2\t0.253165\nDP\t0\t232\t0\t0.000000\t1\t0.126582\nDP\t0\t233\t0\t0.000000\t1\t0.126582\nDP\t0\t234\t0\t0.000000\t1\t0.126582\nDP\t0\t236\t0\t0.000000\t1\t0.126582\nDP\t0\t237\t0\t0.000000\t3\t0.379747\nDP\t0\t238\t0\t0.000000\t3\t0.379747\nDP\t0\t241\t0\t0.000000\t1\t0.126582\nDP\t0\t242\t0\t0.000000\t1\t0.126582\nDP\t0\t243\t0\t0.000000\t1\t0.126582\nDP\t0\t244\t0\t0.000000\t1\t0.126582\nDP\t0\t245\t0\t0.000000\t5\t0.632911\nDP\t0\t246\t0\t0.000000\t1\t0.126582\nDP\t0\t249\t0\t0.000000\t3\t0.379747\nDP\t0\t250\t0\t0.000000\t1\t0.126582\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769853.6963732,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-filter-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794770164.557799,
+      "log": "\n# This file was produced by bcftools stats (1.15.1+htslib-1.15.1) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  SRR2589044.final.vcf\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\tSRR2589044.final.vcf\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t11\nSN\t0\tnumber of no-ALTs:\t0\nSN\t0\tnumber of SNPs:\t7\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t4\nSN\t0\tnumber of others:\t0\nSN\t0\tnumber of multiallelic sites:\t0\nSN\t0\tnumber of multiallelic SNP sites:\t0\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t4\t3\t1.33\t4\t3\t1.33\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t7\t4\t3\t4\t0\t0\t4\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t7\t4\t3\t4\t0\t0\t4\n# QUAL, Stats by quality\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t38.4\t1\t0\t1\t0\nQUAL\t0\t135.4\t0\t0\t0\t1\nQUAL\t0\t202.2\t0\t0\t0\t1\nQUAL\t0\t225.4\t6\t4\t2\t1\nQUAL\t0\t228.3\t0\t0\t0\t1\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]number of sites\t[5]number of genotypes\t[6]mean VAF\nIDD\t0\t-2\t1\t0\t.\nIDD\t0\t1\t2\t0\t.\nIDD\t0\t4\t1\t0\t.\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t0\nST\t0\tA>G\t2\nST\t0\tA>T\t0\nST\t0\tC>A\t1\nST\t0\tC>G\t0\nST\t0\tC>T\t1\nST\t0\tG>A\t1\nST\t0\tG>C\t0\nST\t0\tG>T\t1\nST\t0\tT>A\t0\nST\t0\tT>C\t0\nST\t0\tT>G\t1\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t2\t0\t0.000000\t1\t9.090909\nDP\t0\t8\t0\t0.000000\t1\t9.090909\nDP\t0\t42\t0\t0.000000\t1\t9.090909\nDP\t0\t46\t0\t0.000000\t1\t9.090909\nDP\t0\t54\t0\t0.000000\t1\t9.090909\nDP\t0\t55\t0\t0.000000\t1\t9.090909\nDP\t0\t61\t0\t0.000000\t1\t9.090909\nDP\t0\t66\t0\t0.000000\t2\t18.181818\nDP\t0\t75\t0\t0.000000\t1\t9.090909\nDP\t0\t78\t0\t0.000000\t1\t9.090909\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794770164.5062196,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-index",
+      "exitCode": 0,
+      "finishedAt": 1794769072.2994833,
+      "log": "[bwa_index] Pack FASTA... 0.02 sec\n[bwa_index] Construct BWT for the packed sequence...\n[bwa_index] 0.91 seconds elapse.\n[bwa_index] Update BWT... 0.03 sec\n[bwa_index] Pack forward-only FASTA... 0.01 sec\n[bwa_index] Construct SA from BWT and Occ... 0.30 sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa index reference.fasta\n[main] Real time: 1.349 sec; CPU: 1.284 sec\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769070.8812404,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-pileup-srr2584866",
+      "exitCode": 0,
+      "finishedAt": 1794769666.016787,
+      "log": "[mpileup] 1 samples in 1 input files\n[mpileup] maximum number of reads per input file set to -d 250\n\n# This file was produced by bcftools stats (1.15.1+htslib-1.15.1) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  SRR2584866.raw.bcf\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\tSRR2584866.raw.bcf\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t4320340\nSN\t0\tnumber of no-ALTs:\t3060833\nSN\t0\tnumber of SNPs:\t1259369\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t138\nSN\t0\tnumber of others:\t0\nSN\t0\tnumber of multiallelic sites:\t1259406\nSN\t0\tnumber of multiallelic SNP sites:\t1259369\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t451591\t998191\t0.45\t390833\t868536\t0.45\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t1449782\t451591\t998191\t181\t0\t0\t181\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t1449782\t451591\t998191\t181\t0\t0\t181\n# QUAL, Stats by quality\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t0.0\t1259369\t390833\t868536\t138\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]number of sites\t[5]number of genotypes\t[6]mean VAF\nIDD\t0\t-6\t1\t0\t.\nIDD\t0\t-3\t2\t0\t.\nIDD\t0\t-2\t12\t0\t.\nIDD\t0\t-1\t44\t0\t.\nIDD\t0\t1\t82\t0\t.\nIDD\t0\t2\t29\t0\t.\nIDD\t0\t3\t7\t0\t.\nIDD\t0\t4\t4\t0\t.\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t164108\nST\t0\tA>G\t129109\nST\t0\tA>T\t82571\nST\t0\tC>A\t136464\nST\t0\tC>G\t116608\nST\t0\tC>T\t96802\nST\t0\tG>A\t97080\nST\t0\tG>C\t117884\nST\t0\tG>T\t134851\nST\t0\tT>A\t82588\nST\t0\tT>C\t128600\nST\t0\tT>G\t163117\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t0\t0\t0.000000\t1\t0.000023\nDP\t0\t1\t0\t0.000000\t7294\t0.168829\nDP\t0\t2\t0\t0.000000\t1859\t0.043029\nDP\t0\t3\t0\t0.000000\t263\t0.006087\nDP\t0\t4\t0\t0.000000\t490\t0.011342\nDP\t0\t5\t0\t0.000000\t178\t0.004120\nDP\t0\t6\t0\t0.000000\t404\t0.009351\nDP\t0\t7\t0\t0.000000\t100\t0.002315\nDP\t0\t8\t0\t0.000000\t114\t0.002639\nDP\t0\t9\t0\t0.000000\t116\t0.002685\nDP\t0\t10\t0\t0.000000\t148\t0.003426\nDP\t0\t11\t0\t0.000000\t85\t0.001967\nDP\t0\t12\t0\t0.000000\t158\t0.003657\nDP\t0\t13\t0\t0.000000\t128\t0.002963\nDP\t0\t14\t0\t0.000000\t134\t0.003102\nDP\t0\t15\t0\t0.000000\t69\t0.001597\nDP\t0\t16\t0\t0.000000\t62\t0.001435\nDP\t0\t17\t0\t0.000000\t78\t0.001805\nDP\t0\t18\t0\t0.000000\t64\t0.001481\nDP\t0\t19\t0\t0.000000\t69\t0.001597\nDP\t0\t20\t0\t0.000000\t63\t0.001458\nDP\t0\t21\t0\t0.000000\t90\t0.002083\nDP\t0\t22\t0\t0.000000\t75\t0.001736\nDP\t0\t23\t0\t0.000000\t56\t0.001296\nDP\t0\t24\t0\t0.000000\t91\t0.002106\nDP\t0\t25\t0\t0.000000\t137\t0.003171\nDP\t0\t26\t0\t0.000000\t73\t0.001690\nDP\t0\t27\t0\t0.000000\t64\t0.001481\nDP\t0\t28\t0\t0.000000\t77\t0.001782\nDP\t0\t29\t0\t0.000000\t107\t0.002477\nDP\t0\t30\t0\t0.000000\t127\t0.002940\nDP\t0\t31\t0\t0.000000\t133\t0.003078\nDP\t0\t32\t0\t0.000000\t154\t0.003565\nDP\t0\t33\t0\t0.000000\t159\t0.003680\nDP\t0\t34\t0\t0.000000\t176\t0.004074\nDP\t0\t35\t0\t0.000000\t204\t0.004722\nDP\t0\t36\t0\t0.000000\t201\t0.004652\nDP\t0\t37\t0\t0.000000\t222\t0.005138\nDP\t0\t38\t0\t0.000000\t239\t0.005532\nDP\t0\t39\t0\t0.000000\t263\t0.006087\nDP\t0\t40\t0\t0.000000\t249\t0.005763\nDP\t0\t41\t0\t0.000000\t221\t0.005115\nDP\t0\t42\t0\t0.000000\t270\t0.006250\nDP\t0\t43\t0\t0.000000\t328\t0.007592\nDP\t0\t44\t0\t0.000000\t312\t0.007222\nDP\t0\t45\t0\t0.000000\t332\t0.007685\nDP\t0\t46\t0\t0.000000\t380\t0.008796\nDP\t0\t47\t0\t0.000000\t353\t0.008171\nDP\t0\t48\t0\t0.000000\t443\t0.010254\nDP\t0\t49\t0\t0.000000\t407\t0.009421\nDP\t0\t50\t0\t0.000000\t387\t0.008958\nDP\t0\t51\t0\t0.000000\t357\t0.008263\nDP\t0\t52\t0\t0.000000\t435\t0.010069\nDP\t0\t53\t0\t0.000000\t479\t0.011087\nDP\t0\t54\t0\t0.000000\t433\t0.010022\nDP\t0\t55\t0\t0.000000\t471\t0.010902\nDP\t0\t56\t0\t0.000000\t598\t0.013842\nDP\t0\t57\t0\t0.000000\t614\t0.014212\nDP\t0\t58\t0\t0.000000\t665\t0.015392\nDP\t0\t59\t0\t0.000000\t605\t0.014004\nDP\t0\t60\t0\t0.000000\t749\t0.017337\nDP\t0\t61\t0\t0.000000\t746\t0.017267\nDP\t0\t62\t0\t0.000000\t873\t0.020207\nDP\t0\t63\t0\t0.000000\t901\t0.020855\nDP\t0\t64\t0\t0.000000\t910\t0.021063\nDP\t0\t65\t0\t0.000000\t1011\t0.023401\nDP\t0\t66\t0\t0.000000\t1018\t0.023563\nDP\t0\t67\t0\t0.000000\t1180\t0.027313\nDP\t0\t68\t0\t0.000000\t1114\t0.025785\nDP\t0\t69\t0\t0.000000\t1330\t0.030785\nDP\t0\t70\t0\t0.000000\t1157\t0.026780\nDP\t0\t71\t0\t0.000000\t1361\t0.031502\nDP\t0\t72\t0\t0.000000\t1302\t0.030137\nDP\t0\t73\t0\t0.000000\t1314\t0.030414\nDP\t0\t74\t0\t0.000000\t1533\t0.035483\nDP\t0\t75\t0\t0.000000\t1824\t0.042219\nDP\t0\t76\t0\t0.000000\t1900\t0.043978\nDP\t0\t77\t0\t0.000000\t1896\t0.043885\nDP\t0\t78\t0\t0.000000\t1989\t0.046038\nDP\t0\t79\t0\t0.000000\t2158\t0.049950\nDP\t0\t80\t0\t0.000000\t2111\t0.048862\nDP\t0\t81\t0\t0.000000\t2416\t0.055922\nDP\t0\t82\t0\t0.000000\t2559\t0.059231\nDP\t0\t83\t0\t0.000000\t2727\t0.063120\nDP\t0\t84\t0\t0.000000\t2865\t0.066314\nDP\t0\t85\t0\t0.000000\t2899\t0.067101\nDP\t0\t86\t0\t0.000000\t3159\t0.073119\nDP\t0\t87\t0\t0.000000\t3332\t0.077124\nDP\t0\t88\t0\t0.000000\t3674\t0.085040\nDP\t0\t89\t0\t0.000000\t3826\t0.088558\nDP\t0\t90\t0\t0.000000\t4189\t0.096960\nDP\t0\t91\t0\t0.000000\t4168\t0.096474\nDP\t0\t92\t0\t0.000000\t4337\t0.100386\nDP\t0\t93\t0\t0.000000\t4582\t0.106056\nDP\t0\t94\t0\t0.000000\t5019\t0.116171\nDP\t0\t95\t0\t0.000000\t5445\t0.126032\nDP\t0\t96\t0\t0.000000\t5557\t0.128624\nDP\t0\t97\t0\t0.000000\t5896\t0.136471\nDP\t0\t98\t0\t0.000000\t6024\t0.139433\nDP\t0\t99\t0\t0.000000\t6285\t0.145475\nDP\t0\t100\t0\t0.000000\t6682\t0.154664\nDP\t0\t101\t0\t0.000000\t7117\t0.164732\nDP\t0\t102\t0\t0.000000\t7766\t0.179754\nDP\t0\t103\t0\t0.000000\t8138\t0.188365\nDP\t0\t104\t0\t0.000000\t8472\t0.196096\nDP\t0\t105\t0\t0.000000\t8874\t0.205401\nDP\t0\t106\t0\t0.000000\t9307\t0.215423\nDP\t0\t107\t0\t0.000000\t9904\t0.229241\nDP\t0\t108\t0\t0.000000\t10253\t0.237319\nDP\t0\t109\t0\t0.000000\t10820\t0.250443\nDP\t0\t110\t0\t0.000000\t11537\t0.267039\nDP\t0\t111\t0\t0.000000\t11614\t0.268821\nDP\t0\t112\t0\t0.000000\t12610\t0.291875\nDP\t0\t113\t0\t0.000000\t13590\t0.314559\nDP\t0\t114\t0\t0.000000\t14160\t0.327752\nDP\t0\t115\t0\t0.000000\t14362\t0.332428\nDP\t0\t116\t0\t0.000000\t15655\t0.362356\nDP\t0\t117\t0\t0.000000\t16327\t0.377910\nDP\t0\t118\t0\t0.000000\t17699\t0.409667\nDP\t0\t119\t0\t0.000000\t18496\t0.428114\nDP\t0\t120\t0\t0.000000\t19349\t0.447858\nDP\t0\t121\t0\t0.000000\t20583\t0.476421\nDP\t0\t122\t0\t0.000000\t21140\t0.489313\nDP\t0\t123\t0\t0.000000\t22134\t0.512321\nDP\t0\t124\t0\t0.000000\t23393\t0.541462\nDP\t0\t125\t0\t0.000000\t24261\t0.561553\nDP\t0\t126\t0\t0.000000\t25346\t0.586667\nDP\t0\t127\t0\t0.000000\t26070\t0.603425\nDP\t0\t128\t0\t0.000000\t27001\t0.624974\nDP\t0\t129\t0\t0.000000\t28412\t0.657633\nDP\t0\t130\t0\t0.000000\t29659\t0.686497\nDP\t0\t131\t0\t0.000000\t30565\t0.707467\nDP\t0\t132\t0\t0.000000\t31363\t0.725938\nDP\t0\t133\t0\t0.000000\t32461\t0.751353\nDP\t0\t134\t0\t0.000000\t33529\t0.776073\nDP\t0\t135\t0\t0.000000\t34612\t0.801141\nDP\t0\t136\t0\t0.000000\t36152\t0.836786\nDP\t0\t137\t0\t0.000000\t37861\t0.876343\nDP\t0\t138\t0\t0.000000\t38218\t0.884606\nDP\t0\t139\t0\t0.000000\t39458\t0.913308\nDP\t0\t140\t0\t0.000000\t40356\t0.934093\nDP\t0\t141\t0\t0.000000\t41746\t0.966267\nDP\t0\t142\t0\t0.000000\t42351\t0.980270\nDP\t0\t143\t0\t0.000000\t43395\t1.004435\nDP\t0\t144\t0\t0.000000\t44087\t1.020452\nDP\t0\t145\t0\t0.000000\t45672\t1.057139\nDP\t0\t146\t0\t0.000000\t46109\t1.067254\nDP\t0\t147\t0\t0.000000\t47147\t1.091280\nDP\t0\t148\t0\t0.000000\t47896\t1.108616\nDP\t0\t149\t0\t0.000000\t48700\t1.127226\nDP\t0\t150\t0\t0.000000\t49969\t1.156599\nDP\t0\t151\t0\t0.000000\t50640\t1.172130\nDP\t0\t152\t0\t0.000000\t51374\t1.189119\nDP\t0\t153\t0\t0.000000\t51698\t1.196619\nDP\t0\t154\t0\t0.000000\t52105\t1.206039\nDP\t0\t155\t0\t0.000000\t52169\t1.207521\nDP\t0\t156\t0\t0.000000\t52865\t1.223631\nDP\t0\t157\t0\t0.000000\t52949\t1.225575\nDP\t0\t158\t0\t0.000000\t53762\t1.244393\nDP\t0\t159\t0\t0.000000\t53024\t1.227311\nDP\t0\t160\t0\t0.000000\t53359\t1.235065\nDP\t0\t161\t0\t0.000000\t53440\t1.236940\nDP\t0\t162\t0\t0.000000\t53452\t1.237217\nDP\t0\t163\t0\t0.000000\t53816\t1.245643\nDP\t0\t164\t0\t0.000000\t53704\t1.243050\nDP\t0\t165\t0\t0.000000\t53718\t1.243374\nDP\t0\t166\t0\t0.000000\t53149\t1.230204\nDP\t0\t167\t0\t0.000000\t52592\t1.217312\nDP\t0\t168\t0\t0.000000\t52225\t1.208817\nDP\t0\t169\t0\t0.000000\t52164\t1.207405\nDP\t0\t170\t0\t0.000000\t51682\t1.196248\nDP\t0\t171\t0\t0.000000\t51442\t1.190693\nDP\t0\t172\t0\t0.000000\t50352\t1.165464\nDP\t0\t173\t0\t0.000000\t50110\t1.159862\nDP\t0\t174\t0\t0.000000\t49379\t1.142942\nDP\t0\t175\t0\t0.000000\t48650\t1.126069\nDP\t0\t176\t0\t0.000000\t48181\t1.115213\nDP\t0\t177\t0\t0.000000\t47173\t1.091882\nDP\t0\t178\t0\t0.000000\t46452\t1.075193\nDP\t0\t179\t0\t0.000000\t45600\t1.055472\nDP\t0\t180\t0\t0.000000\t44486\t1.029687\nDP\t0\t181\t0\t0.000000\t43823\t1.014341\nDP\t0\t182\t0\t0.000000\t42712\t0.988626\nDP\t0\t183\t0\t0.000000\t41794\t0.967378\nDP\t0\t184\t0\t0.000000\t40211\t0.930737\nDP\t0\t185\t0\t0.000000\t39224\t0.907892\nDP\t0\t186\t0\t0.000000\t38904\t0.900485\nDP\t0\t187\t0\t0.000000\t37174\t0.860442\nDP\t0\t188\t0\t0.000000\t36497\t0.844771\nDP\t0\t189\t0\t0.000000\t34961\t0.809219\nDP\t0\t190\t0\t0.000000\t34487\t0.798247\nDP\t0\t191\t0\t0.000000\t33794\t0.782207\nDP\t0\t192\t0\t0.000000\t32995\t0.763713\nDP\t0\t193\t0\t0.000000\t31545\t0.730151\nDP\t0\t194\t0\t0.000000\t30339\t0.702236\nDP\t0\t195\t0\t0.000000\t29248\t0.676984\nDP\t0\t196\t0\t0.000000\t28617\t0.662378\nDP\t0\t197\t0\t0.000000\t27739\t0.642056\nDP\t0\t198\t0\t0.000000\t26848\t0.621433\nDP\t0\t199\t0\t0.000000\t25966\t0.601018\nDP\t0\t200\t0\t0.000000\t25312\t0.585880\nDP\t0\t201\t0\t0.000000\t24607\t0.569562\nDP\t0\t202\t0\t0.000000\t23773\t0.550258\nDP\t0\t203\t0\t0.000000\t22781\t0.527296\nDP\t0\t204\t0\t0.000000\t21475\t0.497067\nDP\t0\t205\t0\t0.000000\t20859\t0.482809\nDP\t0\t206\t0\t0.000000\t20298\t0.469824\nDP\t0\t207\t0\t0.000000\t19564\t0.452835\nDP\t0\t208\t0\t0.000000\t18827\t0.435776\nDP\t0\t209\t0\t0.000000\t18402\t0.425939\nDP\t0\t210\t0\t0.000000\t17412\t0.403024\nDP\t0\t211\t0\t0.000000\t16994\t0.393349\nDP\t0\t212\t0\t0.000000\t16490\t0.381683\nDP\t0\t213\t0\t0.000000\t15767\t0.364948\nDP\t0\t214\t0\t0.000000\t14820\t0.343029\nDP\t0\t215\t0\t0.000000\t14656\t0.339233\nDP\t0\t216\t0\t0.000000\t14180\t0.328215\nDP\t0\t217\t0\t0.000000\t13373\t0.309536\nDP\t0\t218\t0\t0.000000\t13123\t0.303749\nDP\t0\t219\t0\t0.000000\t12584\t0.291273\nDP\t0\t220\t0\t0.000000\t12522\t0.289838\nDP\t0\t221\t0\t0.000000\t11914\t0.275765\nDP\t0\t222\t0\t0.000000\t11621\t0.268983\nDP\t0\t223\t0\t0.000000\t11155\t0.258197\nDP\t0\t224\t0\t0.000000\t10635\t0.246161\nDP\t0\t225\t0\t0.000000\t10242\t0.237065\nDP\t0\t226\t0\t0.000000\t10298\t0.238361\nDP\t0\t227\t0\t0.000000\t9941\t0.230098\nDP\t0\t228\t0\t0.000000\t9729\t0.225191\nDP\t0\t229\t0\t0.000000\t9273\t0.214636\nDP\t0\t230\t0\t0.000000\t9281\t0.214821\nDP\t0\t231\t0\t0.000000\t9197\t0.212877\nDP\t0\t232\t0\t0.000000\t8978\t0.207808\nDP\t0\t233\t0\t0.000000\t8932\t0.206743\nDP\t0\t234\t0\t0.000000\t8931\t0.206720\nDP\t0\t235\t0\t0.000000\t8858\t0.205030\nDP\t0\t236\t0\t0.000000\t8813\t0.203989\nDP\t0\t237\t0\t0.000000\t8627\t0.199683\nDP\t0\t238\t0\t0.000000\t8662\t0.200493\nDP\t0\t239\t0\t0.000000\t8620\t0.199521\nDP\t0\t240\t0\t0.000000\t8397\t0.194360\nDP\t0\t241\t0\t0.000000\t8404\t0.194522\nDP\t0\t242\t0\t0.000000\t8535\t0.197554\nDP\t0\t243\t0\t0.000000\t8701\t0.201396\nDP\t0\t244\t0\t0.000000\t9019\t0.208757\nDP\t0\t245\t0\t0.000000\t9111\t0.210886\nDP\t0\t246\t0\t0.000000\t9489\t0.219635\nDP\t0\t247\t0\t0.000000\t10367\t0.239958\nDP\t0\t248\t0\t0.000000\t11691\t0.270604\nDP\t0\t249\t0\t0.000000\t14052\t0.325252\nDP\t0\t250\t0\t0.000000\t16332\t0.378026\nDP\t0\t251\t0\t0.000000\t5939\t0.137466\nDP\t0\t252\t0\t0.000000\t2201\t0.050945\nDP\t0\t253\t0\t0.000000\t800\t0.018517\nDP\t0\t254\t0\t0.000000\t301\t0.006967\nDP\t0\t255\t0\t0.000000\t137\t0.003171\nDP\t0\t256\t0\t0.000000\t56\t0.001296\nDP\t0\t257\t0\t0.000000\t36\t0.000833\nDP\t0\t258\t0\t0.000000\t23\t0.000532\nDP\t0\t259\t0\t0.000000\t15\t0.000347\nDP\t0\t260\t0\t0.000000\t4\t0.000093\nDP\t0\t261\t0\t0.000000\t5\t0.000116\nDP\t0\t262\t0\t0.000000\t6\t0.000139\nDP\t0\t263\t0\t0.000000\t3\t0.000069\nDP\t0\t264\t0\t0.000000\t3\t0.000069\nDP\t0\t265\t0\t0.000000\t3\t0.000069\nDP\t0\t266\t0\t0.000000\t2\t0.000046\nDP\t0\t267\t0\t0.000000\t1\t0.000023\nDP\t0\t268\t0\t0.000000\t2\t0.000046\nDP\t0\t269\t0\t0.000000\t1\t0.000023\nDP\t0\t270\t0\t0.000000\t1\t0.000023\nDP\t0\t271\t0\t0.000000\t2\t0.000046\nDP\t0\t272\t0\t0.000000\t1\t0.000023\nDP\t0\t273\t0\t0.000000\t2\t0.000046\nDP\t0\t274\t0\t0.000000\t2\t0.000046\nDP\t0\t275\t0\t0.000000\t2\t0.000046\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794769518.957622,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-pileup-srr2589044",
+      "exitCode": 0,
+      "finishedAt": 1794770091.5107813,
+      "log": "[mpileup] 1 samples in 1 input files\n[mpileup] maximum number of reads per input file set to -d 250\n\n# This file was produced by bcftools stats (1.15.1+htslib-1.15.1) and can be plotted using plot-vcfstats.\n# The command line was:\tbcftools stats  SRR2589044.raw.bcf\n#\n# Definition of sets:\n# ID\t[2]id\t[3]tab-separated file names\nID\t0\tSRR2589044.raw.bcf\n# SN, Summary numbers:\n#   number of records   .. number of data rows in the VCF\n#   number of no-ALTs   .. reference-only sites, ALT is either \".\" or identical to REF\n#   number of SNPs      .. number of rows with a SNP\n#   number of MNPs      .. number of rows with a MNP, such as CC>TT\n#   number of indels    .. number of rows with an indel\n#   number of others    .. number of rows with other type, for example a symbolic allele or\n#                          a complex substitution, such as ACT>TCGA\n#   number of multiallelic sites     .. number of rows with multiple alternate alleles\n#   number of multiallelic SNP sites .. number of rows with multiple alternate alleles, all SNPs\n# \n#   Note that rows containing multiple types will be counted multiple times, in each\n#   counter. For example, a row with a SNP and an indel increments both the SNP and\n#   the indel counter.\n# \n# SN\t[2]id\t[3]key\t[4]value\nSN\t0\tnumber of samples:\t1\nSN\t0\tnumber of records:\t4623146\nSN\t0\tnumber of no-ALTs:\t3719620\nSN\t0\tnumber of SNPs:\t903493\nSN\t0\tnumber of MNPs:\t0\nSN\t0\tnumber of indels:\t33\nSN\t0\tnumber of others:\t0\nSN\t0\tnumber of multiallelic sites:\t903493\nSN\t0\tnumber of multiallelic SNP sites:\t903493\n# TSTV, transitions/transversions:\n# TSTV\t[2]id\t[3]ts\t[4]tv\t[5]ts/tv\t[6]ts (1st ALT)\t[7]tv (1st ALT)\t[8]ts/tv (1st ALT)\nTSTV\t0\t296034\t690125\t0.43\t269185\t634308\t0.42\n# SiS, Singleton stats:\n# SiS\t[2]id\t[3]allele count\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nSiS\t0\t1\t986159\t296034\t690125\t33\t0\t0\t33\n# AF, Stats by non-reference allele frequency:\n# AF\t[2]id\t[3]allele frequency\t[4]number of SNPs\t[5]number of transitions\t[6]number of transversions\t[7]number of indels\t[8]repeat-consistent\t[9]repeat-inconsistent\t[10]not applicable\nAF\t0\t0.000000\t986159\t296034\t690125\t33\t0\t0\t33\n# QUAL, Stats by quality\n# QUAL\t[2]id\t[3]Quality\t[4]number of SNPs\t[5]number of transitions (1st ALT)\t[6]number of transversions (1st ALT)\t[7]number of indels\nQUAL\t0\t0.0\t903493\t269185\t634308\t33\n# IDD, InDel distribution:\n# IDD\t[2]id\t[3]length (deletions negative)\t[4]number of sites\t[5]number of genotypes\t[6]mean VAF\nIDD\t0\t-2\t1\t0\t.\nIDD\t0\t-1\t14\t0\t.\nIDD\t0\t1\t16\t0\t.\nIDD\t0\t4\t1\t0\t.\nIDD\t0\t6\t1\t0\t.\n# ST, Substitution types:\n# ST\t[2]id\t[3]type\t[4]count\nST\t0\tA>C\t119509\nST\t0\tA>G\t85380\nST\t0\tA>T\t54126\nST\t0\tC>A\t91750\nST\t0\tC>G\t79666\nST\t0\tC>T\t62435\nST\t0\tG>A\t62953\nST\t0\tG>C\t79901\nST\t0\tG>T\t91586\nST\t0\tT>A\t54339\nST\t0\tT>C\t85266\nST\t0\tT>G\t119248\n# DP, Depth distribution\n# DP\t[2]id\t[3]bin\t[4]number of genotypes\t[5]fraction of genotypes (%)\t[6]number of sites\t[7]fraction of sites (%)\nDP\t0\t1\t0\t0.000000\t279\t0.006035\nDP\t0\t2\t0\t0.000000\t27\t0.000584\nDP\t0\t3\t0\t0.000000\t6\t0.000130\nDP\t0\t4\t0\t0.000000\t19\t0.000411\nDP\t0\t5\t0\t0.000000\t35\t0.000757\nDP\t0\t6\t0\t0.000000\t12\t0.000260\nDP\t0\t7\t0\t0.000000\t25\t0.000541\nDP\t0\t8\t0\t0.000000\t26\t0.000562\nDP\t0\t9\t0\t0.000000\t28\t0.000606\nDP\t0\t10\t0\t0.000000\t20\t0.000433\nDP\t0\t11\t0\t0.000000\t11\t0.000238\nDP\t0\t12\t0\t0.000000\t21\t0.000454\nDP\t0\t13\t0\t0.000000\t15\t0.000324\nDP\t0\t14\t0\t0.000000\t65\t0.001406\nDP\t0\t15\t0\t0.000000\t66\t0.001428\nDP\t0\t16\t0\t0.000000\t108\t0.002336\nDP\t0\t17\t0\t0.000000\t208\t0.004499\nDP\t0\t18\t0\t0.000000\t297\t0.006424\nDP\t0\t19\t0\t0.000000\t337\t0.007289\nDP\t0\t20\t0\t0.000000\t529\t0.011442\nDP\t0\t21\t0\t0.000000\t717\t0.015509\nDP\t0\t22\t0\t0.000000\t813\t0.017585\nDP\t0\t23\t0\t0.000000\t1028\t0.022236\nDP\t0\t24\t0\t0.000000\t1497\t0.032381\nDP\t0\t25\t0\t0.000000\t1645\t0.035582\nDP\t0\t26\t0\t0.000000\t2326\t0.050312\nDP\t0\t27\t0\t0.000000\t3028\t0.065497\nDP\t0\t28\t0\t0.000000\t3668\t0.079340\nDP\t0\t29\t0\t0.000000\t4462\t0.096514\nDP\t0\t30\t0\t0.000000\t5556\t0.120178\nDP\t0\t31\t0\t0.000000\t6945\t0.150222\nDP\t0\t32\t0\t0.000000\t8377\t0.181197\nDP\t0\t33\t0\t0.000000\t9924\t0.214659\nDP\t0\t34\t0\t0.000000\t12383\t0.267848\nDP\t0\t35\t0\t0.000000\t14309\t0.309508\nDP\t0\t36\t0\t0.000000\t16537\t0.357700\nDP\t0\t37\t0\t0.000000\t19538\t0.422613\nDP\t0\t38\t0\t0.000000\t22800\t0.493171\nDP\t0\t39\t0\t0.000000\t26607\t0.575517\nDP\t0\t40\t0\t0.000000\t30629\t0.662514\nDP\t0\t41\t0\t0.000000\t35633\t0.770752\nDP\t0\t42\t0\t0.000000\t40324\t0.872220\nDP\t0\t43\t0\t0.000000\t46729\t1.010762\nDP\t0\t44\t0\t0.000000\t52238\t1.129923\nDP\t0\t45\t0\t0.000000\t58244\t1.259835\nDP\t0\t46\t0\t0.000000\t63363\t1.370560\nDP\t0\t47\t0\t0.000000\t69875\t1.511417\nDP\t0\t48\t0\t0.000000\t76406\t1.652684\nDP\t0\t49\t0\t0.000000\t83188\t1.799381\nDP\t0\t50\t0\t0.000000\t89725\t1.940778\nDP\t0\t51\t0\t0.000000\t96200\t2.080834\nDP\t0\t52\t0\t0.000000\t102659\t2.220544\nDP\t0\t53\t0\t0.000000\t108454\t2.345892\nDP\t0\t54\t0\t0.000000\t113055\t2.445413\nDP\t0\t55\t0\t0.000000\t118597\t2.565288\nDP\t0\t56\t0\t0.000000\t122524\t2.650230\nDP\t0\t57\t0\t0.000000\t127030\t2.747696\nDP\t0\t58\t0\t0.000000\t128941\t2.789032\nDP\t0\t59\t0\t0.000000\t132090\t2.857145\nDP\t0\t60\t0\t0.000000\t133328\t2.883924\nDP\t0\t61\t0\t0.000000\t134384\t2.906765\nDP\t0\t62\t0\t0.000000\t135142\t2.923161\nDP\t0\t63\t0\t0.000000\t134742\t2.914509\nDP\t0\t64\t0\t0.000000\t133864\t2.895517\nDP\t0\t65\t0\t0.000000\t131969\t2.854528\nDP\t0\t66\t0\t0.000000\t128440\t2.778195\nDP\t0\t67\t0\t0.000000\t124908\t2.701797\nDP\t0\t68\t0\t0.000000\t120130\t2.598447\nDP\t0\t69\t0\t0.000000\t116527\t2.520513\nDP\t0\t70\t0\t0.000000\t110021\t2.379786\nDP\t0\t71\t0\t0.000000\t105628\t2.284765\nDP\t0\t72\t0\t0.000000\t101896\t2.204040\nDP\t0\t73\t0\t0.000000\t95210\t2.059420\nDP\t0\t74\t0\t0.000000\t89956\t1.945775\nDP\t0\t75\t0\t0.000000\t84172\t1.820665\nDP\t0\t76\t0\t0.000000\t78870\t1.705981\nDP\t0\t77\t0\t0.000000\t73259\t1.584614\nDP\t0\t78\t0\t0.000000\t67583\t1.461840\nDP\t0\t79\t0\t0.000000\t62242\t1.346313\nDP\t0\t80\t0\t0.000000\t57960\t1.253692\nDP\t0\t81\t0\t0.000000\t53564\t1.158605\nDP\t0\t82\t0\t0.000000\t49345\t1.067347\nDP\t0\t83\t0\t0.000000\t45582\t0.985952\nDP\t0\t84\t0\t0.000000\t41177\t0.890671\nDP\t0\t85\t0\t0.000000\t37208\t0.804820\nDP\t0\t86\t0\t0.000000\t33345\t0.721262\nDP\t0\t87\t0\t0.000000\t30350\t0.656479\nDP\t0\t88\t0\t0.000000\t27243\t0.589274\nDP\t0\t89\t0\t0.000000\t24377\t0.527282\nDP\t0\t90\t0\t0.000000\t21618\t0.467604\nDP\t0\t91\t0\t0.000000\t19145\t0.414112\nDP\t0\t92\t0\t0.000000\t17420\t0.376800\nDP\t0\t93\t0\t0.000000\t15671\t0.338968\nDP\t0\t94\t0\t0.000000\t14110\t0.305203\nDP\t0\t95\t0\t0.000000\t12190\t0.263673\nDP\t0\t96\t0\t0.000000\t10630\t0.229930\nDP\t0\t97\t0\t0.000000\t9438\t0.204147\nDP\t0\t98\t0\t0.000000\t8397\t0.181630\nDP\t0\t99\t0\t0.000000\t7733\t0.167267\nDP\t0\t100\t0\t0.000000\t6467\t0.139883\nDP\t0\t101\t0\t0.000000\t5812\t0.125715\nDP\t0\t102\t0\t0.000000\t5054\t0.109319\nDP\t0\t103\t0\t0.000000\t4386\t0.094870\nDP\t0\t104\t0\t0.000000\t3901\t0.084380\nDP\t0\t105\t0\t0.000000\t3382\t0.073154\nDP\t0\t106\t0\t0.000000\t3287\t0.071099\nDP\t0\t107\t0\t0.000000\t2966\t0.064155\nDP\t0\t108\t0\t0.000000\t2633\t0.056953\nDP\t0\t109\t0\t0.000000\t2165\t0.046830\nDP\t0\t110\t0\t0.000000\t1954\t0.042266\nDP\t0\t111\t0\t0.000000\t1669\t0.036101\nDP\t0\t112\t0\t0.000000\t1535\t0.033202\nDP\t0\t113\t0\t0.000000\t1334\t0.028855\nDP\t0\t114\t0\t0.000000\t1207\t0.026108\nDP\t0\t115\t0\t0.000000\t1124\t0.024312\nDP\t0\t116\t0\t0.000000\t992\t0.021457\nDP\t0\t117\t0\t0.000000\t892\t0.019294\nDP\t0\t118\t0\t0.000000\t874\t0.018905\nDP\t0\t119\t0\t0.000000\t748\t0.016179\nDP\t0\t120\t0\t0.000000\t691\t0.014947\nDP\t0\t121\t0\t0.000000\t630\t0.013627\nDP\t0\t122\t0\t0.000000\t570\t0.012329\nDP\t0\t123\t0\t0.000000\t468\t0.010123\nDP\t0\t124\t0\t0.000000\t486\t0.010512\nDP\t0\t125\t0\t0.000000\t446\t0.009647\nDP\t0\t126\t0\t0.000000\t387\t0.008371\nDP\t0\t127\t0\t0.000000\t396\t0.008566\nDP\t0\t128\t0\t0.000000\t381\t0.008241\nDP\t0\t129\t0\t0.000000\t353\t0.007635\nDP\t0\t130\t0\t0.000000\t306\t0.006619\nDP\t0\t131\t0\t0.000000\t286\t0.006186\nDP\t0\t132\t0\t0.000000\t273\t0.005905\nDP\t0\t133\t0\t0.000000\t230\t0.004975\nDP\t0\t134\t0\t0.000000\t261\t0.005646\nDP\t0\t135\t0\t0.000000\t234\t0.005061\nDP\t0\t136\t0\t0.000000\t223\t0.004824\nDP\t0\t137\t0\t0.000000\t209\t0.004521\nDP\t0\t138\t0\t0.000000\t219\t0.004737\nDP\t0\t139\t0\t0.000000\t200\t0.004326\nDP\t0\t140\t0\t0.000000\t198\t0.004283\nDP\t0\t141\t0\t0.000000\t198\t0.004283\nDP\t0\t142\t0\t0.000000\t174\t0.003764\nDP\t0\t143\t0\t0.000000\t205\t0.004434\nDP\t0\t144\t0\t0.000000\t207\t0.004477\nDP\t0\t145\t0\t0.000000\t161\t0.003482\nDP\t0\t146\t0\t0.000000\t170\t0.003677\nDP\t0\t147\t0\t0.000000\t157\t0.003396\nDP\t0\t148\t0\t0.000000\t157\t0.003396\nDP\t0\t149\t0\t0.000000\t132\t0.002855\nDP\t0\t150\t0\t0.000000\t111\t0.002401\nDP\t0\t151\t0\t0.000000\t115\t0.002487\nDP\t0\t152\t0\t0.000000\t93\t0.002012\nDP\t0\t153\t0\t0.000000\t76\t0.001644\nDP\t0\t154\t0\t0.000000\t70\t0.001514\nDP\t0\t155\t0\t0.000000\t103\t0.002228\nDP\t0\t156\t0\t0.000000\t86\t0.001860\nDP\t0\t157\t0\t0.000000\t112\t0.002423\nDP\t0\t158\t0\t0.000000\t93\t0.002012\nDP\t0\t159\t0\t0.000000\t75\t0.001622\nDP\t0\t160\t0\t0.000000\t76\t0.001644\nDP\t0\t161\t0\t0.000000\t62\t0.001341\nDP\t0\t162\t0\t0.000000\t70\t0.001514\nDP\t0\t163\t0\t0.000000\t47\t0.001017\nDP\t0\t164\t0\t0.000000\t53\t0.001146\nDP\t0\t165\t0\t0.000000\t58\t0.001255\nDP\t0\t166\t0\t0.000000\t69\t0.001492\nDP\t0\t167\t0\t0.000000\t48\t0.001038\nDP\t0\t168\t0\t0.000000\t41\t0.000887\nDP\t0\t169\t0\t0.000000\t49\t0.001060\nDP\t0\t170\t0\t0.000000\t39\t0.000844\nDP\t0\t171\t0\t0.000000\t37\t0.000800\nDP\t0\t172\t0\t0.000000\t37\t0.000800\nDP\t0\t173\t0\t0.000000\t26\t0.000562\nDP\t0\t174\t0\t0.000000\t24\t0.000519\nDP\t0\t175\t0\t0.000000\t19\t0.000411\nDP\t0\t176\t0\t0.000000\t22\t0.000476\nDP\t0\t177\t0\t0.000000\t18\t0.000389\nDP\t0\t178\t0\t0.000000\t18\t0.000389\nDP\t0\t179\t0\t0.000000\t13\t0.000281\nDP\t0\t180\t0\t0.000000\t10\t0.000216\nDP\t0\t181\t0\t0.000000\t6\t0.000130\nDP\t0\t182\t0\t0.000000\t10\t0.000216\nDP\t0\t183\t0\t0.000000\t20\t0.000433\nDP\t0\t184\t0\t0.000000\t18\t0.000389\nDP\t0\t185\t0\t0.000000\t16\t0.000346\nDP\t0\t186\t0\t0.000000\t14\t0.000303\nDP\t0\t187\t0\t0.000000\t18\t0.000389\nDP\t0\t188\t0\t0.000000\t12\t0.000260\nDP\t0\t189\t0\t0.000000\t9\t0.000195\nDP\t0\t190\t0\t0.000000\t11\t0.000238\nDP\t0\t191\t0\t0.000000\t5\t0.000108\nDP\t0\t192\t0\t0.000000\t5\t0.000108\nDP\t0\t193\t0\t0.000000\t18\t0.000389\nDP\t0\t194\t0\t0.000000\t12\t0.000260\nDP\t0\t195\t0\t0.000000\t11\t0.000238\nDP\t0\t196\t0\t0.000000\t8\t0.000173\nDP\t0\t197\t0\t0.000000\t17\t0.000368\nDP\t0\t198\t0\t0.000000\t22\t0.000476\nDP\t0\t199\t0\t0.000000\t16\t0.000346\nDP\t0\t200\t0\t0.000000\t28\t0.000606\nDP\t0\t201\t0\t0.000000\t28\t0.000606\nDP\t0\t202\t0\t0.000000\t22\t0.000476\nDP\t0\t203\t0\t0.000000\t13\t0.000281\nDP\t0\t204\t0\t0.000000\t8\t0.000173\nDP\t0\t205\t0\t0.000000\t19\t0.000411\nDP\t0\t206\t0\t0.000000\t14\t0.000303\nDP\t0\t207\t0\t0.000000\t8\t0.000173\nDP\t0\t208\t0\t0.000000\t4\t0.000087\nDP\t0\t209\t0\t0.000000\t3\t0.000065\nDP\t0\t210\t0\t0.000000\t2\t0.000043\nDP\t0\t211\t0\t0.000000\t4\t0.000087\nDP\t0\t212\t0\t0.000000\t4\t0.000087\nDP\t0\t214\t0\t0.000000\t6\t0.000130\nDP\t0\t215\t0\t0.000000\t11\t0.000238\nDP\t0\t216\t0\t0.000000\t6\t0.000130\nDP\t0\t217\t0\t0.000000\t5\t0.000108\nDP\t0\t218\t0\t0.000000\t4\t0.000087\nDP\t0\t219\t0\t0.000000\t2\t0.000043\nDP\t0\t220\t0\t0.000000\t3\t0.000065\nDP\t0\t221\t0\t0.000000\t4\t0.000087\nDP\t0\t222\t0\t0.000000\t4\t0.000087\nDP\t0\t223\t0\t0.000000\t4\t0.000087\nDP\t0\t224\t0\t0.000000\t9\t0.000195\nDP\t0\t225\t0\t0.000000\t9\t0.000195\nDP\t0\t226\t0\t0.000000\t10\t0.000216\nDP\t0\t227\t0\t0.000000\t16\t0.000346\nDP\t0\t228\t0\t0.000000\t21\t0.000454\nDP\t0\t229\t0\t0.000000\t23\t0.000497\nDP\t0\t230\t0\t0.000000\t27\t0.000584\nDP\t0\t231\t0\t0.000000\t19\t0.000411\nDP\t0\t232\t0\t0.000000\t31\t0.000671\nDP\t0\t233\t0\t0.000000\t20\t0.000433\nDP\t0\t234\t0\t0.000000\t17\t0.000368\nDP\t0\t235\t0\t0.000000\t12\t0.000260\nDP\t0\t236\t0\t0.000000\t30\t0.000649\nDP\t0\t237\t0\t0.000000\t11\t0.000238\nDP\t0\t238\t0\t0.000000\t13\t0.000281\nDP\t0\t239\t0\t0.000000\t11\t0.000238\nDP\t0\t240\t0\t0.000000\t23\t0.000497\nDP\t0\t241\t0\t0.000000\t20\t0.000433\nDP\t0\t242\t0\t0.000000\t17\t0.000368\nDP\t0\t243\t0\t0.000000\t7\t0.000151\nDP\t0\t244\t0\t0.000000\t12\t0.000260\nDP\t0\t245\t0\t0.000000\t22\t0.000476\nDP\t0\t246\t0\t0.000000\t20\t0.000433\nDP\t0\t247\t0\t0.000000\t9\t0.000195\nDP\t0\t248\t0\t0.000000\t39\t0.000844\nDP\t0\t249\t0\t0.000000\t26\t0.000562\nDP\t0\t250\t0\t0.000000\t40\t0.000865\nDP\t0\t251\t0\t0.000000\t26\t0.000562\nDP\t0\t252\t0\t0.000000\t15\t0.000324\nDP\t0\t253\t0\t0.000000\t2\t0.000043\nDP\t0\t254\t0\t0.000000\t2\t0.000043\nDP\t0\t255\t0\t0.000000\t1\t0.000022\n[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794770035.1801465,
+      "status": "completed"
+    },
+    {
+      "activityId": "variant-calling-local-45b3727a54-summary",
+      "exitCode": 0,
+      "finishedAt": 1794770744.3029878,
+      "log": "[AKOFLOW INFO] Activity started on runtime variant-calling-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794770725.382927,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:cdba1a851154225c862ae355d4917bb3053b1c2077351cefd3a4ccfb1e34d37b",
+      "dataObjectId": "471611ef2b3c3d35ad36851c62d052f1",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "c0d070b9fbc11e2e49bc100686023b10",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-align-srr2584866",
+      "relativePath": "SRR2584866.aligned.sam",
+      "sizeBytes": 2285045688
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:5384ddbb72986c31e26363386b762e04ed4969b60395a4a8814e50ca9f897a15",
+      "dataObjectId": "197fd41fc6f2f6c2da1fbeb0ade86324",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "0fee0ae5046fc021834463ef636b6b43",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-align-srr2584866",
+      "relativePath": "stage-align-srr2584866.json",
+      "sizeBytes": 114
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:878cf6bba28e38c97b394be168301a2706e38faf71ecbd3d5276b1e2f1be4dc8",
+      "dataObjectId": "f17ce39a318fc899e3aa0cf7ed7cadd3",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "f4390c29e50da62eade03cb37125c91a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-align-srr2589044",
+      "relativePath": "SRR2589044.aligned.sam",
+      "sizeBytes": 916454082
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6d64bc1500415eab7bea121966682e97545b4d4d9096506063eac5bc7d75c818",
+      "dataObjectId": "8961813bebcb0ebaac072d14db644870",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "8cc62a159f5eac50b04ca4c6f32fd110",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-align-srr2589044",
+      "relativePath": "stage-align-srr2589044.json",
+      "sizeBytes": 114
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:544e35972621f658de66fb9c6adf90d74845d4619421168c2374ba62fbd7bdd1",
+      "dataObjectId": "4cfb82a3e32999cf0f44a282d2d19dba",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "b00b1db589d024ad970f192f357e2a6f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "relativePath": "SRR2584866.aligned.bam",
+      "sizeBytes": 720272869
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d2367db6c33381d627e6b611064e6328e145ee9b601a2b7249a3dda47ca82f06",
+      "dataObjectId": "02c01e5d0fe5dab96ad8c2c3d52d88c2",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "b9e14a891ccd0cae97b99882f0d92059",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "relativePath": "SRR2584866.aligned.sorted.bam",
+      "sizeBytes": 495073947
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0af657830dff612a18fcbcbe9d3b9e1a03d2e2c8a162c1d5b803a874b4b17d40",
+      "dataObjectId": "0bd25c372ca71c882150b0dd7c6a9c84",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "b64a2659e3322866a6b9041005c6041f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "relativePath": "SRR2584866.aligned.sorted.bam.bai",
+      "sizeBytes": 16280
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7c9f76dbc9be4aa2c2800295d2baa9f3c18b205e0123976a1158607034c5f854",
+      "dataObjectId": "ddcde5f2377fc5db465f5c6e79f62d13",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "cba193513178fa94f3d56989b40bec76",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "relativePath": "SRR2584866.flagstat.json",
+      "sizeBytes": 1183
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:cede5b06b718383ee054e8b328413e2d9017404cd7bd3065b80d93ccfdc33b98",
+      "dataObjectId": "16bc02ed59aaf3e8a29f3067f8e6cfc3",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "20facb1b08f58cdc7115054ee17f7e74",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2584866",
+      "relativePath": "stage-bam-srr2584866.json",
+      "sizeBytes": 112
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8b3584a2c8793d1a662e7d45c725341ae55bfa6c994e6c9a5470d74548302a6e",
+      "dataObjectId": "d5a3349775315f983e21ec43324153b4",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "10cc9a9279667ac38e423b1b6c0119d7",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "relativePath": "SRR2589044.aligned.bam",
+      "sizeBytes": 300962476
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:267d424ad7bfbeb8992bedcf7c3e62e9332f7f683517d50d875158ac0fe58b8d",
+      "dataObjectId": "08dddf5a2ac4bc9f6089165e4418985f",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "2de413e1f90baa7f709cc144ea24dd5b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "relativePath": "SRR2589044.aligned.sorted.bam",
+      "sizeBytes": 211548391
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:186d575f5eed37e37d6ec767766c3c8c97bbb7e02d29a2bc865eb4dd85af5003",
+      "dataObjectId": "643310b77218cc6a34b7e61d5eb80f68",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "689889ef6ddcdacb6b17c34bf63c4712",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "relativePath": "SRR2589044.aligned.sorted.bam.bai",
+      "sizeBytes": 14704
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c8935b48eecf3e38e2d2b591efff295e0891da6eaf7371deb58d31d40cd94df3",
+      "dataObjectId": "298f6259d2eb913f597a009746b424a1",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "897a2160206ff20a2006a4305f7109ed",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "relativePath": "SRR2589044.flagstat.json",
+      "sizeBytes": 1184
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:173238f7b66522597d3205cf55a138cce245a143fa6321405012695cc1db3d9b",
+      "dataObjectId": "97686bcea471ef6ebbef0d9f30101221",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "5cc8d674c32b76c43fed884f9f528b81",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-bam-srr2589044",
+      "relativePath": "stage-bam-srr2589044.json",
+      "sizeBytes": 112
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7b24369d71c9236cde17800174d3a14c490516744ac7f3d4f1bb975e86205248",
+      "dataObjectId": "650f3925693192f2372f1b6eb6582159",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "9d4d9dc2e42e9789e167aeceffc410fa",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-call-srr2584866",
+      "relativePath": "SRR2584866.variants.vcf",
+      "sizeBytes": 129853
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:37b188131dc17321aa844db41a234412d17558f8d56256fc972956731f8bb455",
+      "dataObjectId": "4b5ecf5ce687b44b312b02746d838e8e",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "b857fa8bb1c194b0544770647d2abff5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-call-srr2584866",
+      "relativePath": "stage-call-srr2584866.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3fd7b2e4b771a138657472bfafb891f1da6b985b2a774bd977972cc593bf6e8b",
+      "dataObjectId": "44c2185d129d5bdfce2394b0b1bf905a",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "ff42661176740de1ba257faa2e4e21d2",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-call-srr2589044",
+      "relativePath": "SRR2589044.variants.vcf",
+      "sizeBytes": 4531
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ab3b0edd7835042961a17a6443ef00473c9fc08930e700cbcf5e29db883840ba",
+      "dataObjectId": "bbe59b909e87b599e814c2bb9cfa30b0",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "560d436e618687024a16b72f2012d5f5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-call-srr2589044",
+      "relativePath": "stage-call-srr2589044.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6b6c0cce933d3f5140e2ea948518483cb18ee9f40af7f820cc4d12ae836e622e",
+      "dataObjectId": "42bc6cb7520d781e2170ebdfef5c5fde",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d0ecc0c7c54df16f04aea6ac96aebc3a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2584866",
+      "relativePath": "SRR2584866.read-counts.json",
+      "sizeBytes": 73
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b7dcdaac77f7e453e87aeece1f102b5ffc8cd1248fe0824e2d72a12d61805b81",
+      "dataObjectId": "d8280d67f8a242c5ba96f4969d5315fa",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "daf5ee7c7cf0601ea98f579d37355d1f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2584866",
+      "relativePath": "SRR2584866_1.fastq",
+      "sizeBytes": 1019019801
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8c7f2fedc6e556b5bdc2fd9d840909c7e5bf401dc2e2a83843a6e63e19392a3c",
+      "dataObjectId": "e6360f6bc083e56d263ea3a06a7b08bb",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d3f65c05a039d47d8866d7cb2be0b6d2",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2584866",
+      "relativePath": "SRR2584866_2.fastq",
+      "sizeBytes": 1019019801
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bcc69e6da72b2c51c38647632dedc93b78f9048aff482b8f78954a6a306afa4e",
+      "dataObjectId": "c57c7ae852067fca3d2f5da3a02ba6db",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "ab20fda7d5f04783e0339c3238c479ec",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2584866",
+      "relativePath": "stage-extract-srr2584866.json",
+      "sizeBytes": 116
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:314a00e71b59acc3a9bf69cb1f18ee858184fd16101929121374ddd317a7fe1b",
+      "dataObjectId": "e90c3c90e2442fc7fdb2496b3ccf4b07",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d177a94a4518252d016c1e2d95487ea1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2589044",
+      "relativePath": "SRR2589044.read-counts.json",
+      "sizeBytes": 73
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e4c0f7aea4e86e22222b21a7e131282a464c9f61e4f8f865862c9211b4259b89",
+      "dataObjectId": "ab9d07ef0b26878e140aee1060138cb7",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "a306804f80f502716f5147ed766f5404",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2589044",
+      "relativePath": "SRR2589044_1.fastq",
+      "sizeBytes": 406842737
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:47946062b1b980a78f7ca8ebae8bb956426439af8a3ec51e9de658b9ea74bab7",
+      "dataObjectId": "f2befcbc1540a46ff84ab78ae2ec639e",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "4cd68077bfb8836682979557d76c8b03",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2589044",
+      "relativePath": "SRR2589044_2.fastq",
+      "sizeBytes": 406842737
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f187a942d3809e28dae028727ade9a70c2e0199910bbb51e72026abe459932a4",
+      "dataObjectId": "cc520c35c22b0d98af3637b500f6ac8d",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "c569d06bdaa50e04d4df8886c1ee4aad",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-extract-srr2589044",
+      "relativePath": "stage-extract-srr2589044.json",
+      "sizeBytes": 116
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:93d40d7208c4e1f8f800d6e53e000f013e71c021838bb3c030800593a32ca2f4",
+      "dataObjectId": "6f8b841d70c7baacb3ffd1b11355b08b",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "f2c50c666918c613b56907a8ba5b9bc8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2584866",
+      "relativePath": "SRR2584866.filtered-stats.txt",
+      "sizeBytes": 9204
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:9b39a9acbef15ce623d4c3648ca74af78b7d9ad23fa5886355d33be99508ca3e",
+      "dataObjectId": "683cc9d14d02b1cd12125a485f77fe55",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "1d5ba3d5f78261b22d3d6b99ff1e741e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2584866",
+      "relativePath": "SRR2584866.final.vcf",
+      "sizeBytes": 126922
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:edc169084c92b04736c96bded0fea172d38097f56b91d66a70a2bb085988fea8",
+      "dataObjectId": "621aa5d589eee8a9276d295eb2747233",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "bdb1a309da7840961f03e969ce509e68",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2584866",
+      "relativePath": "stage-filter-srr2584866.json",
+      "sizeBytes": 115
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:08af28fd7052e02e21c3748822ebc472ede5641b9dd438daedc4733bab842b03",
+      "dataObjectId": "8792b635c7f13efaf3670fee7f4a1d9f",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "7de8680bd3ee01b5eafd70907293eae6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2589044",
+      "relativePath": "SRR2589044.filtered-stats.txt",
+      "sizeBytes": 3108
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1081904d2df1f5ff567fc54105e247db6238e1e5103c8b965050ef4ff668c021",
+      "dataObjectId": "f1a870453fee887b49be1bd62fa25267",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d5f9f9c342bc6a6e5d9bda88193f3844",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2589044",
+      "relativePath": "SRR2589044.final.vcf",
+      "sizeBytes": 4317
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c949311aff4897683d035137ca2406af6b9825f0a62e6461d804b7f33067a248",
+      "dataObjectId": "e1dd4e5dc4f93a26ce407937aae7a1e4",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "a6033cdce7671d791c92aad8c171b5d0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-filter-srr2589044",
+      "relativePath": "stage-filter-srr2589044.json",
+      "sizeBytes": 115
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ef4a59af680335c374124786c9652bb18ff38586ddabd18e492b19a0b1114413",
+      "dataObjectId": "165514e190c30b18b849937404f9f680",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "6bd377069c520e4b19b837cd4d95caa6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta",
+      "sizeBytes": 4687745
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:065307b8735f0bfd94ddd7b1028c80a7c17f312c0eeb0c2a59ea57c96f9c150c",
+      "dataObjectId": "f8be8de96dbe2110003cc3cfd152259b",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "a2009cec94c6ac06e68058f6d1f4c976",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.amb",
+      "sizeBytes": 12
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fe603155639cd6867d77145d0b499ace4160fa182d09985c1cbe124f437b2b2b",
+      "dataObjectId": "2ccbae8e89718e15037938a43c5dae82",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "63271b42e652eeca4fe19368daeeba88",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.ann",
+      "sizeBytes": 86
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:aef9661541ecaccfc4485dd81813035a59e26c97fedfcfa6999533371b64fe16",
+      "dataObjectId": "80ba9cbb964ae5b126650c5c7fef186a",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "9d097cd7dcc34727865003c19904dd50",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.bwt",
+      "sizeBytes": 4629892
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1cea4e45afa874b7129eadb9c2de4a814b73672758f1a3fda6ff207a47b951a8",
+      "dataObjectId": "e806a72f03e2e884ca8c80a78bb03bbb",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "43a38b55b3fbf6ca37e01b354c0eb389",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.fai",
+      "sizeBytes": 28
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:77f2a9e92f7a1483129a20ed8acbf2f6ca00a7cf96866be7ca50b018738c8edf",
+      "dataObjectId": "56343a624de89362a1e1b95a73c632ef",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d36f4da230197ec780a52f56ebe3b459",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.pac",
+      "sizeBytes": 1157455
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:60ed93ca48323633d14f45acdb8ba07e2d6c983593e87977b329f9be4c02a529",
+      "dataObjectId": "eaa5949375d632ed0790ce965eef7f9a",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "40a14e87b0dfc0c3a64beff700f3ad23",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "reference.fasta.sa",
+      "sizeBytes": 2314960
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3039bf31c27ff4d2a8b53c2977398b369d6ddbb4900f65a7e17c2720b23c1595",
+      "dataObjectId": "6974b0d15df2631c9cde7f23380b91dd",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "3234a5057b8ef16f6f96ac0470ddb64d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-index",
+      "relativePath": "stage-index.json",
+      "sizeBytes": 106
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ef41d07503ed3ca90fcd4e7eefcd820aa05e730276132f262587e562852a949a",
+      "dataObjectId": "3404a77902d64e436fe345020ac21897",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "3af49455d9fd0166fdd1f7e8bed64d36",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2584866",
+      "relativePath": "SRR2584866.coverage.json",
+      "sizeBytes": 55
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6df1c3a3e21b20808a0a2929846898523aeea0a69329def7aee75abb61e4425f",
+      "dataObjectId": "2c9e67de1151794d60ce7877897416ba",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "027f5d94bf6c29e36b50e67cfffddc4d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2584866",
+      "relativePath": "SRR2584866.raw.bcf",
+      "sizeBytes": 159589810
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:526e8b4ad11863361d40b45f9bd3552e10e17bbffaea0ec5e25ad989550b0b7b",
+      "dataObjectId": "1db193353168bd5287f917385d87f41f",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "a8173ac0401c4c626d9f1054ff6d2974",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2584866",
+      "relativePath": "stage-pileup-srr2584866.json",
+      "sizeBytes": 115
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c8e0cb24bb2b40099a90171354c5405b17f16e36b7945f60ccf984e576ef681d",
+      "dataObjectId": "992ee2c319cc016564ec1e9028160b82",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "c2d969327be54a12b033d71843273a29",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2589044",
+      "relativePath": "SRR2589044.coverage.json",
+      "sizeBytes": 55
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b98fb73104d9aa0516c41563263a22a39ba1cb53a7276032530200996cf9d647",
+      "dataObjectId": "3ed189db04b343bd99500ebeee91eee6",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "dbce486a7d24a79d278f61d1589f8c43",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2589044",
+      "relativePath": "SRR2589044.raw.bcf",
+      "sizeBytes": 143883462
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:784e1c7ba6c628e5bbad42ad37af7897e191a9fa05e29ea0a76094e497d8bc8c",
+      "dataObjectId": "847cf5914b348c446b09d25a1ac58614",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "79abb449daca6f73c77feb0cb26b33a0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-pileup-srr2589044",
+      "relativePath": "stage-pileup-srr2589044.json",
+      "sizeBytes": 115
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ac47a6d67e53b13ef7db2d67f9195c8cd6cafee359b5322d3ba40a940ddb24cc",
+      "dataObjectId": "8a9f268a008e1192d9432ae1037417fe",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "e9823b7591d4e55508bdc3bf5d6465c0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-summary",
+      "relativePath": "stage-summary.json",
+      "sizeBytes": 108
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:24ae2650539c7491af60491019129dcd4c7bbb55777793354ebc4e60c1d0ed6a",
+      "dataObjectId": "7f01c7817aec3ec0d820e4a49d85ddb7",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "de413959b41f1a86646c25fdfcfc2d6b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-summary",
+      "relativePath": "variant-positions.tsv",
+      "sizeBytes": 38230
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:869c7a930ebf105c46d10264e892b7161395d55626ae88bd2a6294aa981490d2",
+      "dataObjectId": "0d79814ea8a53c2eed55ed1ff16c947a",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "d70442e1a6a31d66ca1fa0ea3b781a36",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-summary",
+      "relativePath": "variant-results.tar.gz",
+      "sizeBytes": 706929369
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:448422bc065998d480a9eadfa53161d97b0d71be0409fc1258f3a359d00a3d66",
+      "dataObjectId": "d2cd9764b5399032523fc9d859a07cd3",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "3b719d9859f7498b21545bcbc311044c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-summary",
+      "relativePath": "variant-summary.json",
+      "sizeBytes": 164018
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:846c3248e0ec8f95f04c5b501257b77dc9b2421c61583514ebd393d3a9340f7a",
+      "dataObjectId": "fda69ae5fb3fa495ecda974c1f38f3b4",
+      "discovered": true,
+      "executionRunId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "id": "9c2c222dc1cfbc6559835ca4f6be893b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "variant-calling-local-45b3727a54-summary",
+      "relativePath": "variant-summary.svg",
+      "sizeBytes": 58850
+    }
+  ],
+  "exportedAt": "2026-11-15T19:27:09.304899694Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "variant-calling-local-45b3727a54",
+      "workflowVersionId": "variant-calling-local-45b3727a54-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 14,
+      "redactionCount": 0,
+      "digest": "f8ddb0d0c9c2c8c3cb579de3de153e9da6a7e59bdbfe2b38c221c21f8012e678"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,629 @@\n+name: variant-calling-local-45b3727a54\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - index\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: index\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - extract\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: extract-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - align\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"3\"\n+          dependsOn:\n+            - extract-srr2584866\n+            - index\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: align-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - bam\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - align-srr2584866\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: bam-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - pileup\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - bam-srr2584866\n+            - index\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: pileup-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - call\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - pileup-srr2584866\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: call-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - filter\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2584866\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - call-srr2584866\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: filter-srr2584866\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - extract\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: extract-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - align\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"3\"\n+          dependsOn:\n+            - extract-srr2589044\n+            - index\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: align-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - bam\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - align-srr2589044\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: bam-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - pileup\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - bam-srr2589044\n+            - index\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: pileup-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - call\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - pileup-srr2589044\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: call-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - filter\n+                - --output\n+                - .\n+                - --sample\n+                - SRR2589044\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - call-srr2589044\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: filter-srr2589044\n+          runtime: variant-calling-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - summary\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - bam-srr2584866\n+            - bam-srr2589044\n+            - call-srr2584866\n+            - call-srr2589044\n+            - extract-srr2584866\n+            - extract-srr2589044\n+            - filter-srr2584866\n+            - filter-srr2589044\n+            - index\n+            - pileup-srr2584866\n+            - pileup-srr2589044\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: variant-calling-local\n+            workspaceSeedPath: \"\"\n+          name: summary\n+          runtime: variant-calling-local\n+    dataDependencies:\n+        - consumerActivity: bam-srr2584866\n+          logicalName: SRR2584866.aligned.sam\n+          producerActivity: align-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: bam-srr2584866\n+          logicalName: SRR2584866.read-counts.json\n+          producerActivity: align-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: bam-srr2589044\n+          logicalName: SRR2589044.aligned.sam\n+          producerActivity: align-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: bam-srr2589044\n+          logicalName: SRR2589044.read-counts.json\n+          producerActivity: align-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2584866\n+          logicalName: SRR2584866.aligned.sorted.bam\n+          producerActivity: bam-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2584866\n+          logicalName: SRR2584866.aligned.sorted.bam.bai\n+          producerActivity: bam-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.aligned.sorted.bam\n+          producerActivity: bam-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.aligned.sorted.bam.bai\n+          producerActivity: bam-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.flagstat.json\n+          producerActivity: bam-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2589044\n+          logicalName: SRR2589044.aligned.sorted.bam\n+          producerActivity: bam-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2589044\n+          logicalName: SRR2589044.aligned.sorted.bam.bai\n+          producerActivity: bam-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.aligned.sorted.bam\n+          producerActivity: bam-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.aligned.sorted.bam.bai\n+          producerActivity: bam-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.flagstat.json\n+          producerActivity: bam-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: filter-srr2584866\n+          logicalName: SRR2584866.variants.vcf\n+          producerActivity: call-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.variants.vcf\n+          producerActivity: call-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: filter-srr2589044\n+          logicalName: SRR2589044.variants.vcf\n+          producerActivity: call-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.variants.vcf\n+          producerActivity: call-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: SRR2584866.read-counts.json\n+          producerActivity: extract-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: SRR2584866_1.fastq\n+          producerActivity: extract-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: SRR2584866_2.fastq\n+          producerActivity: extract-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.read-counts.json\n+          producerActivity: extract-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: SRR2589044.read-counts.json\n+          producerActivity: extract-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: SRR2589044_1.fastq\n+          producerActivity: extract-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: SRR2589044_2.fastq\n+          producerActivity: extract-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.read-counts.json\n+          producerActivity: extract-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.filtered-stats.txt\n+          producerActivity: filter-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.final.vcf\n+          producerActivity: filter-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.filtered-stats.txt\n+          producerActivity: filter-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.final.vcf\n+          producerActivity: filter-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.amb\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.ann\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.bwt\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.fai\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.pac\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2584866\n+          logicalName: reference.fasta.sa\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.amb\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.ann\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.bwt\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.fai\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.pac\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align-srr2589044\n+          logicalName: reference.fasta.sa\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2584866\n+          logicalName: reference.fasta\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2584866\n+          logicalName: reference.fasta.fai\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2589044\n+          logicalName: reference.fasta\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: pileup-srr2589044\n+          logicalName: reference.fasta.fai\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: reference.fasta\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: call-srr2584866\n+          logicalName: SRR2584866.raw.bcf\n+          producerActivity: pileup-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2584866.coverage.json\n+          producerActivity: pileup-srr2584866\n+          sizeBytes: 1\n+        - consumerActivity: call-srr2589044\n+          logicalName: SRR2589044.raw.bcf\n+          producerActivity: pileup-srr2589044\n+          sizeBytes: 1\n+        - consumerActivity: summary\n+          logicalName: SRR2589044.coverage.json\n+          producerActivity: pileup-srr2589044\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:dddefd6170bfcacc9010a548eed69521c368b38ea5f8de1799317d21a3860676",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "variant-calling-local-45b3727a54-manual-plan-20261115t185749.757994785",
+            "run_id": "variant-calling-local-45b3727a54-run-20261115t185749.814980328"
+          },
+          "status": "completed",
+          "durationSeconds": 1673.4412508010864,
+          "metrics": {
+            "activity_count": 14,
+            "completed_activity_count": 14,
+            "computeSeconds": 633.5172612667084,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 1673.4412508010864,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 14,
+            "queueSeconds": 0,
+            "transferSeconds": 5773.676438093185,
+            "transferred_bytes": 41080944707
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

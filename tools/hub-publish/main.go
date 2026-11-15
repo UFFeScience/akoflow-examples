@@ -432,7 +432,9 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 			fmt.Fprintf(&extra, "![%s](https://akoflow.com%s)\n\n", k, c.ResultImages[k])
 		}
 	}
-	extra.WriteString("\n### Illustrated walkthrough\n\nThe following reference screenshots come from the documentation walkthrough. The current measured run is recorded separately above.\n\n")
+	if len(c.Screenshots) > 0 {
+		extra.WriteString("\n### Illustrated walkthrough\n\nThe following reference screenshots come from the documentation walkthrough. The current measured run is recorded separately above.\n\n")
+	}
 	keys := []string{}
 	for k := range c.Screenshots {
 		keys = append(keys, k)
@@ -452,5 +454,9 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 		return nil, err
 	}
 	result := map[string]any{"route": route, "examplePath": c.ExamplePath, "publicationId": pub.ID, "versionId": receipt.Version.ID, "version": receipt.Version.Number, "yamlHash": receipt.Version.Hash, "uri": uri, "url": page, "experimentId": receipt.ExperimentID, "runId": e.RunID, "image": e.Image, "activityCount": e.Completed, "resultCount": receipt.ResultCount}
+	if c.ReleaseTag != "" {
+		result["releaseTag"] = c.ReleaseTag
+		result["sourceRef"] = strings.TrimSpace(string(ref))
+	}
 	return result, write(filepath.Join(dir, "evidence/hub-publication.json"), result)
 }

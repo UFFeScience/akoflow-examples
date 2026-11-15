@@ -18,9 +18,9 @@ A real OpenDrift OpenOil oil-spill ensemble offshore of Maricá/Niterói, Brazil
 | Integration / output | 900 s / 1 h |
 | Water temperature | 30 °C |
 | Parameter seed / member seed | 42 / 42 + member index |
-| Native execution lanes | 2 local Docker lanes |
+| Native execution lanes | 4 local Docker lanes |
 
-The notebook introduction mentions 300 m³ and 72 h, but its executable configuration contains the values above. All three variants use nested parameter sampling: their shared member indices receive the same forcings and seeds. Complete production experiments run **serially on the homeserver: 8 → 16 → 32**, with validation before advancing. Two explicit plan lanes provide member concurrency inside each workflow.
+The notebook introduction mentions 300 m³ and 72 h, but its executable configuration contains the values above. All three variants use nested parameter sampling: their shared member indices receive the same forcings and seeds. Complete production experiments run **serially on the homeserver: 8 → 16 → 32**, with validation before advancing. The 8- and 16-member runs use two explicit execution lanes; the 32-member run uses four lanes (four CPUs and 16 GiB of declared capacity). These different resource profiles must be considered when comparing observed durations.
 
 ## Run with Docker
 
@@ -34,14 +34,14 @@ Published image: `ghcr.io/uffescience/openoil-ensemble:v1` for **linux/amd64 and
 ./validate.sh
 ```
 
-Preparation pulls the image. `run.sh` is a simple sequential standalone reproduction using the same stages with networking disabled; use the native AkôFlow workflow for the measured two-lane ensemble schedule. Keep enough memory for the OpenDrift coastline mask (roughly 2–3 GiB per member process) and disk for the complete NetCDF outputs. No cloud account, external API, live weather service, GPU or network connection is required during execution.
+Preparation pulls the image. `run.sh` is a simple sequential standalone reproduction using the same stages with networking disabled; use the native AkôFlow workflow for the measured four-lane ensemble schedule. Keep enough memory for the OpenDrift coastline mask (roughly 2–3 GiB per member process) and disk for the complete NetCDF outputs. No cloud account, external API, live weather service, GPU or network connection is required during execution.
 
 ## Run through AkôFlow
 
 From the repository root, configure `AKOFLOW_API_TOKEN` in your shell and set the daemon URL:
 
 ```sh
-go run ./tools/daemon-local -root . -example scientific-workflows/openoil-ensemble-32 -api-url http://127.0.0.1:8080/akoflow-api -registry-image -lanes 2
+go run ./tools/daemon-local -root . -example scientific-workflows/openoil-ensemble-32 -api-url http://127.0.0.1:8080/akoflow-api -registry-image -lanes 4
 ```
 
 Companion definitions: [workflow.yaml](workflow.yaml), [environment.yaml](environment.yaml), [scope.yaml](scope.yaml), and [topology.yaml](topology.yaml). Transfer edges explicitly name all required files. Imported execution plan predictions are placeholders and are not timing measurements. The profile CSV and native execution capture contain observed durations.
@@ -65,3 +65,7 @@ The terminal validator checks particle/time dimensions, finite nonnegative mass,
 ## Provenance
 
 Adapted from the user-supplied `openoil_derramamento_ensemble.ipynb`; [provenance metadata](../../images/openoil/source/provenance.json) records its checksum. See [OpenDrift](https://github.com/OpenDrift/opendrift) for upstream code and licensing, [installation documentation](https://opendrift.github.io/install.html), and the dependency lock for scientific package versions. No real forcing-file integration is claimed as validated by these synthetic-forcing runs.
+
+## Natural model termination
+
+OpenDrift stops a member early when every particle has stranded. Raw NetCDF trajectories retain that actual end time. The shared ensemble accounting grid extends to 172 hours by carrying the terminal oil mass pools forward, without claiming further model integration. Shortened trajectories are accepted only after release has finished and every particle is verified stranded; active, missing or unreleased particles fail validation. The selected-member GIF retains the original model time range.

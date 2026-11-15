@@ -13,11 +13,11 @@ resources:
     - bootOverheadSeconds: 0
       computeSpeedup: 1
       containerOverheadSeconds: 0
-      cpuCapacity: 2
-      cpuCores: 2
+      cpuCapacity: 4
+      cpuCores: 4
       environmentVersionId: openoil-ensemble-32-v1
       id: openoil-ensemble-32-docker
-      memoryBytes: 12884901888
+      memoryBytes: 17179869184
       name: Local Docker host
       pricePerSecond: 0
       providerId: local-docker

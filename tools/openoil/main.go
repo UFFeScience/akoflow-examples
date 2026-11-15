@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 )
 
-const image = "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
+const baselineImage = "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
 
 func main() {
 	root := flag.String("root", ".", "examples checkout")
@@ -23,6 +23,12 @@ func main() {
 	}
 }
 func generate(root string, count int, check bool) error {
+	image := baselineImage
+	cores, memory := 2, int64(12884901888)
+	if count == 32 {
+		cores, memory = 4, 17179869184
+		image = "ghcr.io/uffescience/openoil-ensemble@sha256:9939dcaa4c26b62ce5496f46f3946d26f0ad1168fbfe1c5acd13b3385fd25b6e"
+	}
 	slug := fmt.Sprintf("openoil-ensemble-%02d", count)
 	dir := filepath.Join(root, "scientific-workflows", slug)
 	if err := os.MkdirAll(filepath.Join(dir, "docker"), 0755); err != nil {
@@ -71,7 +77,7 @@ func generate(root string, count int, check bool) error {
 	edge("summary", "validate", "resumo_workflow.png", "profile-summary.json")
 	edge("animate", "validate", "animacao.gif", "profile-animate.json")
 	workflow := map[string]any{"name": slug, "spec": map[string]any{"namespace": "oil", "image": image, "activities": activities, "dataDependencies": deps}}
-	env := map[string]any{"environment": map[string]any{"id": slug, "name": fmt.Sprintf("OpenOil %d members · homeserver Docker", count), "description": "Real CPU OpenOil ensemble with synthetic constant forcings; no cloud resources", "status": "ready"}, "version": map[string]any{"id": slug + "-v1", "environmentId": slug, "version": 1, "status": "published", "networkModel": "local", "interferenceModel": "none", "costModel": "free", "configurationHash": slug + "-v1"}, "runtimes": []any{map[string]any{"environmentVersionId": slug + "-v1", "id": runtime, "name": "Local Docker host", "driver": "local", "mode": "execution", "role": "compute", "capabilities": map[string]bool{"batch": true, "container": true}}}, "resources": []any{map[string]any{"id": slug + "-docker", "environmentVersionId": slug + "-v1", "type": "machine", "name": "Local Docker host", "providerId": "local-docker", "cpuCores": 2, "cpuCapacity": 2, "memoryBytes": 12884901888, "storageBytes": 42949672960, "computeSpeedup": 1, "pricePerSecond": 0, "bootOverheadSeconds": 0, "containerOverheadSeconds": 0, "schedulable": true}}, "storages": []any{}, "connections": []any{}, "activityResourceProfiles": []any{}, "resourceRuntimeBindings": []any{map[string]any{"resourceId": slug + "-docker", "runtimeId": runtime, "enabled": true}}}
+	env := map[string]any{"environment": map[string]any{"id": slug, "name": fmt.Sprintf("OpenOil %d members · homeserver Docker", count), "description": "Real CPU OpenOil ensemble with synthetic constant forcings; no cloud resources", "status": "ready"}, "version": map[string]any{"id": slug + "-v1", "environmentId": slug, "version": 1, "status": "published", "networkModel": "local", "interferenceModel": "none", "costModel": "free", "configurationHash": slug + "-v1"}, "runtimes": []any{map[string]any{"environmentVersionId": slug + "-v1", "id": runtime, "name": "Local Docker host", "driver": "local", "mode": "execution", "role": "compute", "capabilities": map[string]bool{"batch": true, "container": true}}}, "resources": []any{map[string]any{"id": slug + "-docker", "environmentVersionId": slug + "-v1", "type": "machine", "name": "Local Docker host", "providerId": "local-docker", "cpuCores": cores, "cpuCapacity": cores, "memoryBytes": memory, "storageBytes": 42949672960, "computeSpeedup": 1, "pricePerSecond": 0, "bootOverheadSeconds": 0, "containerOverheadSeconds": 0, "schedulable": true}}, "storages": []any{}, "connections": []any{}, "activityResourceProfiles": []any{}, "resourceRuntimeBindings": []any{map[string]any{"resourceId": slug + "-docker", "runtimeId": runtime, "enabled": true}}}
 	scope := map[string]any{"id": slug + "-scope", "name": slug + " local scope", "environmentVersionIds": []string{slug + "-v1"}}
 	topology := map[string]any{"id": slug + "-topology", "name": slug + " local topology", "version": 1, "executionScopeId": slug + "-scope", "links": []any{}}
 	for name, value := range map[string]any{"workflow.yaml": workflow, "environment.yaml": env, "scope.yaml": scope, "topology.yaml": topology} {

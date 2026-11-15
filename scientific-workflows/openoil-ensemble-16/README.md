@@ -20,7 +20,7 @@ A real OpenDrift OpenOil oil-spill ensemble offshore of Maricá/Niterói, Brazil
 | Parameter seed / member seed | 42 / 42 + member index |
 | Native execution lanes | 2 local Docker lanes |
 
-The notebook introduction mentions 300 m³ and 72 h, but its executable configuration contains the values above. All three variants use nested parameter sampling: their shared member indices receive the same forcings and seeds. Complete production experiments run **serially on the homeserver: 8 → 16 → 32**, with validation before advancing. Two explicit plan lanes provide member concurrency inside each workflow.
+The notebook introduction mentions 300 m³ and 72 h, but its executable configuration contains the values above. All three variants use nested parameter sampling: their shared member indices receive the same forcings and seeds. Complete production experiments run **serially on the homeserver: 8 → 16 → 32**, with validation before advancing. The 8- and 16-member runs use two explicit execution lanes; the 32-member run uses four lanes (four CPUs and 16 GiB of declared capacity). These different resource profiles must be considered when comparing observed durations.
 
 ## Run with Docker
 

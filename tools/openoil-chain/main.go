@@ -45,8 +45,12 @@ func main() {
 		} else if !os.IsNotExist(err) {
 			panic(err)
 		}
+		lanes := 2
+		if n == 32 {
+			lanes = 4
+		}
 		if record.RunID == "" {
-			run(*root, *runner, "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-registry-image", "-lanes", "2", "-wait=false", "-name-prefix", "oilv1-")
+			run(*root, *runner, "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-registry-image", "-lanes", fmt.Sprint(lanes), "-wait=false", "-name-prefix", "oilv1-")
 		}
 		run(*root, *runner, "-root", *root, "-example", relative, "-api-url", *api, "-env-file", *env, "-observe", "-wait-timeout", "4h")
 		raw, err = os.ReadFile(path)

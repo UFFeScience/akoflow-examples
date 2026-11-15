@@ -8,6 +8,7 @@ import (
 	"gopkg.in/yaml.v3"
 	"os"
 	"path/filepath"
+	"regexp"
 )
 
 const baselineImage = "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
@@ -98,6 +99,26 @@ func generate(root string, count int, check bool) error {
 	config, _ := json.MarshalIndent(map[string]any{"slug": slug, "members": count, "ciValidation": "image-and-contract", "stages": []string{}, "syntheticForcings": true}, "", "  ")
 	if !check {
 		os.WriteFile(filepath.Join(dir, "data/input.json"), append(config, '\n'), 0644)
+	}
+	for _, name := range []string{"prepare.sh", "run.sh", "validate.sh", "docker/Dockerfile"} {
+		path := filepath.Join(dir, name)
+		source, err := os.ReadFile(path)
+		if err != nil {
+			return err
+		}
+		pattern := regexp.MustCompile(`ghcr.io/uffescience/openoil-ensemble@sha256:[a-f0-9]{64}`)
+		if !pattern.Match(source) {
+			return fmt.Errorf("missing pinned image in %s", path)
+		}
+		expected := pattern.ReplaceAllString(string(source), image)
+		if check && expected != string(source) {
+			return fmt.Errorf("stale companion image in %s", path)
+		}
+		if !check {
+			if err := os.WriteFile(path, []byte(expected), 0755); err != nil {
+				return err
+			}
+		}
 	}
 	return nil
 }

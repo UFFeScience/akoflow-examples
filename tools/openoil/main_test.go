@@ -10,6 +10,20 @@ import (
 func TestEnsembleDAGs(t *testing.T) {
 	root := t.TempDir()
 	for _, n := range []int{8, 16, 32} {
+		bundle := filepath.Join("scientific-workflows", fmtSlug(n))
+		for _, name := range []string{"prepare.sh", "run.sh", "validate.sh", "docker/Dockerfile"} {
+			data, err := os.ReadFile(filepath.Join("../..", bundle, name))
+			if err != nil {
+				t.Fatal(err)
+			}
+			target := filepath.Join(root, bundle, name)
+			if err = os.MkdirAll(filepath.Dir(target), 0755); err != nil {
+				t.Fatal(err)
+			}
+			if err = os.WriteFile(target, data, 0755); err != nil {
+				t.Fatal(err)
+			}
+		}
 		if err := generate(root, n, false); err != nil {
 			t.Fatal(err)
 		}

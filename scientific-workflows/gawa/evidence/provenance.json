@@ -1,6 +1,6 @@
 {
   "sourceRepository": "https://github.com/UFFeScience/gawa",
-  "sourceCommit": "1055838",
+  "sourceCommit": "10558388f23583e115523d23c1c44df8de5c870b",
   "baseImage": "ovvesley/akoflow-wf-gawa@sha256:655a9665f3a3c96e645f74c1243e6553c7640d529955b87e9f21e25d315f5519",
   "dataset": "MOCK_DES reference catalog bundled in the original image",
   "threadsPerTile": 1,

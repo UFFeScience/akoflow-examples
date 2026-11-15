@@ -40,6 +40,11 @@ Build the image from this public source bundle; this path needs no GHCR login:
 ./prepare.sh
 ```
 
+This builds both `gawa:homeserver-tiles-v1` for the source YAML and
+`gawa:local-f68f0939d5255163`, the alias retained in the captured Hub definition.
+The source revision and base image are pinned; a rebuild may have a different
+image ID because build metadata/layer timestamps differ.
+
 Import `workflow.yaml` together with `environment.yaml`, `scope.yaml`, and
 `topology.yaml` in Akoflow. Create a plan using four separate resource slots on
 the local Docker host, then execute. The daemon must mount its shared workspace
@@ -74,3 +79,17 @@ A preflight attempt exposed a segmentation fault in legacy `mr_filter` with long
 workspace filenames. The published source passes short filenames using an explicit
 working directory and the same filter parameters. The successful run and reference
 comparison above use this correction. The failed attempt is not presented as a result.
+
+## Import into AkôFlow Desktop
+
+Create workflow → Import from Hub → paste:
+
+```text
+akoflow://hub/publications/57ec61de-48b3-4de0-9789-803fbbf30d77/versions/1
+```
+
+Build the source image and register the companion environment, scope and topology before execution.
+
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/57ec61de-48b3-4de0-9789-803fbbf30d77/experiments/024535d7-e520-4b62-9d23-352158ec3008). The Hub Results tab exposes the same observed plan, activities, metrics and logs.
+
+The daemon reports an execution makespan of 414.37 seconds; the end-to-end run timestamps span 428 seconds, including lifecycle overhead. Neither value is the 16-second placeholder plan prediction.

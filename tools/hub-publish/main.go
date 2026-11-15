@@ -271,7 +271,9 @@ func main() {
 		if e = json.Unmarshal(data, &item); e != nil {
 			panic(e)
 		}
-		manifest = append(manifest, item)
+		if canonicalReceipt(item, catalog) {
+			manifest = append(manifest, item)
+		}
 	}
 	if err := write(filepath.Join(*root, "hub-publications.json"), manifest); err != nil {
 		panic(err)
@@ -458,4 +460,17 @@ func publicationDescription(c contract) string {
 		return c.Description
 	}
 	return c.LocalProfile
+}
+
+func canonicalReceipt(item map[string]any, catalog map[string]contract) bool {
+	path, ok := item["examplePath"].(string)
+	if !ok || path == "" {
+		return false
+	}
+	for _, c := range catalog {
+		if c.ExamplePath == path {
+			return true
+		}
+	}
+	return false
 }

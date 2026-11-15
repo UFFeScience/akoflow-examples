@@ -1,7 +1,7 @@
 {
   "activityCount": 8,
   "examplePath": "generative-ai/synthetic-dataset",
-  "experimentId": "9f48579f-7744-4a99-8daf-e2765cad8259",
+  "experimentId": "028f94f9-2791-410b-be9e-6f7fb062d22f",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-synthetic-dataset@sha256:d14781a369dd9749584690f0df7c448340f3afcc85dd37ed715c5f6ef01250af",
   "publicationId": "90b09529-b012-48b0-8aec-f73fd4349358",
   "resultCount": 1,

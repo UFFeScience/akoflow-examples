@@ -1,7 +1,7 @@
 {
   "activityCount": 58,
   "examplePath": "connections/montage-cloud-local-profile",
-  "experimentId": "66215df7-d664-4f04-943f-fa71148137de",
+  "experimentId": "bbf224a9-b259-48a8-9638-f13ff1fec3b4",
   "image": "ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
   "publicationId": "bae34aba-fbc6-423f-8921-6e4dc5ea5d4a",
   "resultCount": 1,

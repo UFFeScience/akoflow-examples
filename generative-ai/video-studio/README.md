@@ -44,9 +44,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/ai-video-studio@sha256:60c638432c92
 
 ### Actual homeserver results
 
-Run `hubv1-ai-video-studio-local-ba0f251672-run-20261115t055329.440550088` completed **5/5** activities in **24.097910165786743 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-ai-video-studio-local-ba0f251672-run-20261115t055329.440550088` completed **5/5** activities in **24.097910165786743 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/generative-ai/video-studio/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/7a454cd3-5867-4c73-a96e-32d590370c54/experiments/f3a2b651-8383-4f22-87d5-d02b7313d8ec). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

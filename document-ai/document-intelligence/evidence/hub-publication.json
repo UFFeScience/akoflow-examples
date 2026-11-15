@@ -1,7 +1,7 @@
 {
   "activityCount": 5,
   "examplePath": "document-ai/document-intelligence",
-  "experimentId": "d6baf159-cb93-4380-8ad4-8bd2761d959f",
+  "experimentId": "54ec1072-9abf-410b-8f11-553a16f32340",
   "image": "ghcr.io/uffescience/akoflow-examples/document-intelligence@sha256:6740ce1e600d1961a24cf8558cc68ca6bd064b69537fcd486ffabd76f7dc4950",
   "publicationId": "85d4152f-da21-4d6b-84d0-6cc937d8b96e",
   "resultCount": 1,

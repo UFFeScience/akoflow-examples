@@ -32,9 +32,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b
 
 ### Actual homeserver results
 
-Run `montage-050-local-local-79df14ee2e-run-20261115t052715.750879194` completed **58/58** activities in **3196.8059842586517 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `montage-050-local-local-79df14ee2e-run-20261115t052715.750879194` completed **58/58** activities in **3196.8059842586517 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/bae34aba-fbc6-423f-8921-6e4dc5ea5d4a/experiments/66215df7-d664-4f04-943f-fa71148137de). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/bae34aba-fbc6-423f-8921-6e4dc5ea5d4a/experiments/bbf224a9-b259-48a8-9638-f13ff1fec3b4). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

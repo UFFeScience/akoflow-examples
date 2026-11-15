@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "machine-learning/inference-benchmark",
-  "experimentId": "33d26e0b-4739-41e4-b3ad-319651c13d7a",
+  "experimentId": "46692b46-a9b1-4fbb-832f-bf161120a9e6",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark@sha256:f9f193b68631f9098c72cc3334a0a7d577c41e195772ee9e933b17b8b9598cf2",
   "publicationId": "a0dde05c-5f4e-425a-94b7-6c6436e3cee7",
   "resultCount": 1,

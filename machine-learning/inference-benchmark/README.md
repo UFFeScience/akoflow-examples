@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/inference-benchmark
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/inference-benchmark/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/inference-benchmark/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/inference-benchmark/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/inference-benchmark/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-inference-benchmark@sha256
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-inference-benchmark-local-e776bfef04-run-20261115t054830.960361831` completed **6/6** activities in **14.700184345245361 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-inference-benchmark-local-e776bfef04-run-20261115t054830.960361831` completed **6/6** activities in **14.700184345245361 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/inference-benchmark/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/a0dde05c-5f4e-425a-94b7-6c6436e3cee7/experiments/46692b46-a9b1-4fbb-832f-bf161120a9e6). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

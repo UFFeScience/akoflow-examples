@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/infrastructure-selection
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/infrastructure-selection/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/infrastructure-selection/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/infrastructure-selection/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/infrastructure-selection/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection@s
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-infrastructure-selection-local-fc06782c7d-run-20261115t054857.551255930` completed **7/7** activities in **14.703474044799805 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-infrastructure-selection-local-fc06782c7d-run-20261115t054857.551255930` completed **7/7** activities in **14.703474044799805 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/infrastructure-selection/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/1fea5285-4538-4e67-a8f6-343eea1ff0cb/experiments/b658abf3-16b5-4394-9b2e-c08236a65439). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

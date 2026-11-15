@@ -20,7 +20,7 @@ cd akoflow-examples/agentic-workflows/multi-agent-review
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/agentic-workflows/multi-agent-review/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/agentic-workflows/multi-agent-review/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/agentic-workflows/multi-agent-review/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/agentic-workflows/multi-agent-review/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review@sha256:
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-multi-agent-review-local-42e085614f-run-20261115t055417.277695740` completed **7/7** activities in **15.758075714111328 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-multi-agent-review-local-42e085614f-run-20261115t055417.277695740` completed **7/7** activities in **15.758075714111328 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/agentic-workflows/multi-agent-review/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/1bed32d8-cf60-487b-b4d3-663aed054202/experiments/d3c0c08d-a36d-481d-a8e2-a3fe67f6e1df). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

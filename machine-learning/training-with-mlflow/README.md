@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/training-with-mlflow
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/training-with-mlflow/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/training-with-mlflow/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/training-with-mlflow/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/training-with-mlflow/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-training-with-mlflow@sha25
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-training-with-mlflow-local-21b85bc93f-run-20261115t055108.977767273` completed **6/6** activities in **18.512933015823364 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-training-with-mlflow-local-21b85bc93f-run-20261115t055108.977767273` completed **6/6** activities in **18.512933015823364 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/training-with-mlflow/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/6a9c187a-1e18-486f-a39f-06ef3419778f/experiments/c94392f7-ff4c-4d15-9399-69e66c5567f6). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

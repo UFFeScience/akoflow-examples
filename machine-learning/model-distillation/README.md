@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/model-distillation
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-distillation/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-distillation/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-distillation/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-distillation/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-model-distillation:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-model-distillation@sha256:
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-model-distillation-local-55ace19f7c-run-20261115t055024.589569743` completed **6/6** activities in **12.243208646774292 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-model-distillation-local-55ace19f7c-run-20261115t055024.589569743` completed **6/6** activities in **12.243208646774292 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/model-distillation/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/a153be08-6e72-468e-8e14-7702c81aa640/experiments/17a001bc-b7d6-4e25-a4a0-693b38c9dd3d). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

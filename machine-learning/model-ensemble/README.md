@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/model-ensemble
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-ensemble/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-ensemble/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-ensemble/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-ensemble/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-model-ensemble@sha256:d3fa
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-model-ensemble-local-4470c012f3-run-20261115t055045.183044876` completed **7/7** activities in **14.700788974761963 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-model-ensemble-local-4470c012f3-run-20261115t055045.183044876` completed **7/7** activities in **14.700788974761963 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/model-ensemble/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/84d8987d-9cab-4a1e-bc4c-b6626283678c/experiments/9ebee583-aa06-4391-aa8a-5f9b6ca14d05). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

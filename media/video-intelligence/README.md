@@ -44,9 +44,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/video-intelligence@sha256:502e653f0
 
 ### Actual homeserver results
 
-Run `hubv1-video-intelligence-local-6211509c5b-run-20261115t055520.614527462` completed **6/6** activities in **12.558997631072998 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-video-intelligence-local-6211509c5b-run-20261115t055520.614527462` completed **6/6** activities in **12.558997631072998 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/media/video-intelligence/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/fffb92b7-1b16-4eb8-a7ab-ef0f9f7a65d4/experiments/1d7aebef-8fc7-4581-81a4-4f9e21cbbc4b). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

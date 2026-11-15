@@ -1,7 +1,7 @@
 {
   "activityCount": 8,
   "examplePath": "generative-ai/rag-indexing",
-  "experimentId": "52e206ee-578a-4c8e-9dd4-4576ed949270",
+  "experimentId": "6f196f3a-189a-43a5-a18a-2f9355ae4b91",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-rag-indexing@sha256:49a134578549b85b96f1a0840d858245228a4eb9c9c3862429e1d9ad813f44e6",
   "publicationId": "f04b2396-b1d7-4c6d-981d-5c9405992b42",
   "resultCount": 1,

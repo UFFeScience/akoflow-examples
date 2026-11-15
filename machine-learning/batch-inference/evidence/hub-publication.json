@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "machine-learning/batch-inference",
-  "experimentId": "3fb2b9a9-79cf-47e8-97d4-8cd1116cbe2e",
+  "experimentId": "a368fa89-76b1-4b22-bee1-e5f35f109dd5",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-batch-inference@sha256:d2ce527ee18c393280a9fb24b9620c1b51507784cb13daae180237fe9522f78e",
   "publicationId": "9c21df75-0cfd-4074-bb78-1197857d43a7",
   "resultCount": 1,

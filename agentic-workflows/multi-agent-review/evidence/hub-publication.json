@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "agentic-workflows/multi-agent-review",
-  "experimentId": "d06d0ac9-f0d0-46f2-ba14-e4da20d0ef71",
+  "experimentId": "d3c0c08d-a36d-481d-a8e2-a3fe67f6e1df",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-multi-agent-review@sha256:f0ead4436917c972c907260066abfe47d17311dfc4dbef5e716861390dedbfb6",
   "publicationId": "1bed32d8-cf60-487b-b4d3-663aed054202",
   "resultCount": 1,

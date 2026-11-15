@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/model-conversion
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-conversion/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/model-conversion/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-conversion/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/model-conversion/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-model-conversion:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-model-conversion@sha256:e6
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-model-conversion-local-6f2c213241-run-20261115t055000.623474610` completed **7/7** activities in **15.081406354904175 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-model-conversion-local-6f2c213241-run-20261115t055000.623474610` completed **7/7** activities in **15.081406354904175 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/model-conversion/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/0b26ad29-87a9-457e-bc7c-d81ae79d451f/experiments/3c2b7f41-6d76-4b7a-8b05-7c579ae0b5b3). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

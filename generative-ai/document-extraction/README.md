@@ -20,7 +20,7 @@ cd akoflow-examples/generative-ai/document-extraction
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/generative-ai/document-extraction/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/generative-ai/document-extraction/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/generative-ai/document-extraction/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/generative-ai/document-extraction/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-document-extraction:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-document-extraction@sha256
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-document-extraction-local-ae532a9b63-run-20261115t055158.524756085` completed **7/7** activities in **15.999170303344727 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-document-extraction-local-ae532a9b63-run-20261115t055158.524756085` completed **7/7** activities in **15.999170303344727 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/generative-ai/document-extraction/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/9fe4e4c2-61a6-4caf-9240-c82402272052/experiments/5a453086-98d8-4ff5-9e41-a51fdbaed620). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

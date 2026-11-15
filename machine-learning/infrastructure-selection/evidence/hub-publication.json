@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "machine-learning/infrastructure-selection",
-  "experimentId": "3543c7a5-6664-47d9-bcfa-cc0698aa9553",
+  "experimentId": "b658abf3-16b5-4394-9b2e-c08236a65439",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-infrastructure-selection@sha256:19d5d67594758239e48205d517a36ae556522055aae439df4baa0fa79cf5c111",
   "publicationId": "1fea5285-4538-4e67-a8f6-343eea1ff0cb",
   "resultCount": 1,

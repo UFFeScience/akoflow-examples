@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "machine-learning/model-conversion",
-  "experimentId": "c9200131-abc8-4fe8-b81d-776a4c36328c",
+  "experimentId": "3c2b7f41-6d76-4b7a-8b05-7c579ae0b5b3",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-model-conversion@sha256:e6790b9d51ea0a10d6bddbf43211c49dec1b19f436fbbcbaf7ad66f04598e720",
   "publicationId": "0b26ad29-87a9-457e-bc7c-d81ae79d451f",
   "resultCount": 1,

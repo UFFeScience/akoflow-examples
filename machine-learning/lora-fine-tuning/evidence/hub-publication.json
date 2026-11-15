@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "machine-learning/lora-fine-tuning",
-  "experimentId": "854053c1-ddc7-4867-8635-6894732c800d",
+  "experimentId": "b9c32126-c80b-4df3-86cd-b75c66d734d9",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning@sha256:c8f63c43550e404962e689006e22899d370c4bb91fbf7fd3a59c8da488125c9e",
   "publicationId": "3c09eb33-fb13-4069-a278-0e82c4445ce3",
   "resultCount": 1,

@@ -20,7 +20,7 @@ cd akoflow-examples/scientific-ai/surrogate-model
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/scientific-ai/surrogate-model/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/scientific-ai/surrogate-model/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/scientific-ai/surrogate-model/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/scientific-ai/surrogate-model/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-surrogate-model@sha256:a38
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-surrogate-model-local-6bb42a24e0-run-20261115t054542.887071802` completed **7/7** activities in **22.352145433425903 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-surrogate-model-local-6bb42a24e0-run-20261115t054542.887071802` completed **7/7** activities in **22.352145433425903 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/scientific-ai/surrogate-model/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/26270b1f-e656-4b2c-8ae6-231e52dc2d3f/experiments/26add5eb-6acc-46b5-bcc2-b9f20aac34d1). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

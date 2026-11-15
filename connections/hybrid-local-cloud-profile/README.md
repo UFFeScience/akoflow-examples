@@ -42,9 +42,9 @@ Image: `busybox@sha256:73aaf090f3d85aa34ee199857f03fa3a95c8ede2ffd4cc2cdb5b94e56
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903` completed **2/2** activities in **1.382106065750122 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-hybrid-local-cloud-profile-local-20e3b38d5e-run-20261115t062433.257379903` completed **2/2** activities in **1.382106065750122 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/experiments/8772d78e-a302-4e3c-b2c5-b999bc35c673). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/experiments/055c3452-566e-4134-a274-3067e15a4e8e). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

@@ -1,7 +1,7 @@
 {
   "activityCount": 58,
   "examplePath": "scientific-workflows/montage-050",
-  "experimentId": "aa9d69c0-a043-4709-91e5-eff8fed29216",
+  "experimentId": "4932099c-030e-47c5-acff-0ac0a32611e1",
   "image": "ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b990557ea86ab40503cc8f17ab6016b5973e7e6f9201100a96440c9",
   "publicationId": "4a1b3c21-a122-4c19-bd2d-c305d400b41f",
   "resultCount": 1,

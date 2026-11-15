@@ -1,7 +1,7 @@
 {
   "activityCount": 5,
   "examplePath": "rendering/blender-render-farm",
-  "experimentId": "3d0854b8-d664-4da7-b5cc-0e981b6a3a3e",
+  "experimentId": "ed05df28-7bb7-4f5d-af58-2d91ab1b6aec",
   "image": "ghcr.io/uffescience/akoflow-examples/blender-render-farm@sha256:065a3b2b7f449b31ee4b6403c3580720cf4c1e87ede9c04c7ca3510ab570aaae",
   "publicationId": "f0608ece-22cb-45d9-ba33-aaf5d1c42231",
   "resultCount": 1,

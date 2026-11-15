@@ -44,9 +44,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/local-rag-factory@sha256:e5d745eb64
 
 ### Actual homeserver results
 
-Run `hubv1-local-rag-factory-local-13e8a67e07-run-20261115t055221.758545823` completed **6/6** activities in **11.831740617752075 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-local-rag-factory-local-13e8a67e07-run-20261115t055221.758545823` completed **6/6** activities in **11.831740617752075 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/generative-ai/local-rag/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/f00526cb-8aa2-4bcf-b28d-8d76c47588fb/experiments/85df4271-a8e8-4d68-80a8-289fd747971b). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

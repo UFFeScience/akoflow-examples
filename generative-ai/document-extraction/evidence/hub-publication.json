@@ -1,7 +1,7 @@
 {
   "activityCount": 7,
   "examplePath": "generative-ai/document-extraction",
-  "experimentId": "0f6b06b3-0e0a-4ec8-a48c-68bc839f2fc8",
+  "experimentId": "5a453086-98d8-4ff5-9e41-a51fdbaed620",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-document-extraction@sha256:4624471159914d713f15799c64a4b4fbab4a01c2f5172ebafca7e17dfe1d9a09",
   "publicationId": "9fe4e4c2-61a6-4caf-9240-c82402272052",
   "resultCount": 1,

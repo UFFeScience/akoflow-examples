@@ -1,7 +1,7 @@
 {
   "activityCount": 5,
   "examplePath": "generative-ai/video-studio",
-  "experimentId": "1e62ddc1-0133-4d67-af44-214df4f8d0aa",
+  "experimentId": "f3a2b651-8383-4f22-87d5-d02b7313d8ec",
   "image": "ghcr.io/uffescience/akoflow-examples/ai-video-studio@sha256:60c638432c92bb6a50029dbcafdc6c5f510bcd8de3966bd9eb1a2762943c8ea6",
   "publicationId": "7a454cd3-5867-4c73-a96e-32d590370c54",
   "resultCount": 1,

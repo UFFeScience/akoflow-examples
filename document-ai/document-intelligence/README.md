@@ -44,9 +44,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/document-intelligence@sha256:6740ce
 
 ### Actual homeserver results
 
-Run `hubv1-document-intelligence-local-65cf94270e-run-20261115t055504.134836957` completed **5/5** activities in **10.75977373123169 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-document-intelligence-local-65cf94270e-run-20261115t055504.134836957` completed **5/5** activities in **10.75977373123169 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/document-ai/document-intelligence/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/85d4152f-da21-4d6b-84d0-6cc937d8b96e/experiments/54ec1072-9abf-410b-8f11-553a16f32340). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

@@ -54,9 +54,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/montage-050-local@sha256:26b060b83b
 
 ### Actual homeserver results
 
-Run `montage-050-local-local-79df14ee2e-run-20261115t052715.750879194` completed **58/58** activities in **3196.8059842586517 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `montage-050-local-local-79df14ee2e-run-20261115t052715.750879194` completed **58/58** activities in **3196.8059842586517 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/4a1b3c21-a122-4c19-bd2d-c305d400b41f/experiments/aa9d69c0-a043-4709-91e5-eff8fed29216). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/4a1b3c21-a122-4c19-bd2d-c305d400b41f/experiments/4932099c-030e-47c5-acff-0ac0a32611e1). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 
@@ -71,6 +71,17 @@ Input fixtures and their generation code are in this bundle's `data/` and `scrip
 - `mosaic-color.png`
 
 [Download the actual validated output files](https://github.com/UFFeScience/akoflow-examples/releases/download/showcase-hub-v1/scientific-workflows-montage-050-results.tar.gz).
+
+
+### Images from this validated execution
+
+![1-mosaic.png](https://akoflow.com/showcase/results/montage-050/1-mosaic.png)
+
+![2-mosaic.png](https://akoflow.com/showcase/results/montage-050/2-mosaic.png)
+
+![3-mosaic.png](https://akoflow.com/showcase/results/montage-050/3-mosaic.png)
+
+![mosaic-color.png](https://akoflow.com/showcase/results/montage-050/mosaic-color.png)
 
 
 ### Illustrated walkthrough

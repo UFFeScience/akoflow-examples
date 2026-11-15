@@ -20,7 +20,7 @@ cd akoflow-examples/scientific-ai/experiment-feedback-loop
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/scientific-ai/experiment-feedback-loop/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/scientific-ai/experiment-feedback-loop/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/scientific-ai/experiment-feedback-loop/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/scientific-ai/experiment-feedback-loop/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-experiment-feedback-loop@s
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-experiment-feedback-loop-local-63977675c7-run-20261115t054521.592602750` completed **6/6** activities in **13.614186525344849 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-experiment-feedback-loop-local-63977675c7-run-20261115t054521.592602750` completed **6/6** activities in **13.614186525344849 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/scientific-ai/experiment-feedback-loop/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/92f82e89-4067-4c95-8c8d-8b8b3e55c1fd/experiments/2bffa6d8-682c-4851-856c-8bfd8a961770). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

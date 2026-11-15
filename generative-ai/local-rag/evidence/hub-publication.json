@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "generative-ai/local-rag",
-  "experimentId": "453568d2-eedc-4b3d-9487-54f2fdd496d4",
+  "experimentId": "85df4271-a8e8-4d68-80a8-289fd747971b",
   "image": "ghcr.io/uffescience/akoflow-examples/local-rag-factory@sha256:e5d745eb64d392f7d8af85ea1b625cfdf5837975a2671afa84281dd0fd23c02e",
   "publicationId": "f00526cb-8aa2-4bcf-b28d-8d76c47588fb",
   "resultCount": 1,

@@ -20,7 +20,7 @@ cd akoflow-examples/generative-ai/audio-transcription
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/generative-ai/audio-transcription/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/generative-ai/audio-transcription/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/generative-ai/audio-transcription/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/generative-ai/audio-transcription/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-audio-transcription@sha256
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-audio-transcription-local-1ec282fdb2-run-20261115t055134.499133410` completed **7/7** activities in **14.69908356666565 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-audio-transcription-local-1ec282fdb2-run-20261115t055134.499133410` completed **7/7** activities in **14.69908356666565 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/generative-ai/audio-transcription/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/785d8ef0-5627-4c57-94f9-2705fc73b6c3/experiments/57057f63-3b14-4501-8565-85ed4e5f0d2f). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

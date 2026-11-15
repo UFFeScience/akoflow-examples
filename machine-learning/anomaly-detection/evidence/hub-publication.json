@@ -1,7 +1,7 @@
 {
   "activityCount": 6,
   "examplePath": "machine-learning/anomaly-detection",
-  "experimentId": "56855d10-3173-4bf0-996d-921a4ff5f985",
+  "experimentId": "4dab2881-ab32-4cf3-a0b4-e84658cb0d70",
   "image": "ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection@sha256:6c9dfc6a8e05d88be4a577ac9ade615730ed346d81e4beef7c02360c5983a67c",
   "publicationId": "43abd581-bea8-4067-97d6-b7db99b34374",
   "resultCount": 1,

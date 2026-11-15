@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/hyperparameter-search
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/hyperparameter-search/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/hyperparameter-search/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/hyperparameter-search/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/hyperparameter-search/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search@sha2
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-hyperparameter-search-local-14e6b92f12-run-20261115t054313.323670620` completed **6/6** activities in **14.628875017166138 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-hyperparameter-search-local-14e6b92f12-run-20261115t054313.323670620` completed **6/6** activities in **14.628875017166138 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/12f30a7f-d58d-43e5-9a90-eba31de75a9e/experiments/c48bda89-006a-4c58-84f8-8a42cc18243d). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/12f30a7f-d58d-43e5-9a90-eba31de75a9e/experiments/32c09b84-3e61-4c96-99fc-b8ff61bb45c6). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

@@ -20,7 +20,7 @@ cd akoflow-examples/agentic-workflows/supervised-tool-loop
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/agentic-workflows/supervised-tool-loop/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/agentic-workflows/supervised-tool-loop/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/agentic-workflows/supervised-tool-loop/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/agentic-workflows/supervised-tool-loop/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-supervised-tool-loop@sha25
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-supervised-tool-loop-local-bc136cabb8-run-20261115t055440.594731473` completed **6/6** activities in **12.719865083694458 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-supervised-tool-loop-local-bc136cabb8-run-20261115t055440.594731473` completed **6/6** activities in **12.719865083694458 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/agentic-workflows/supervised-tool-loop/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/59517e35-7fec-49a4-ad24-cafe373d27f5/experiments/09e885e8-c6e8-492a-9543-6c4a031e4dbe). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/lora-fine-tuning
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/lora-fine-tuning/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/lora-fine-tuning/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/lora-fine-tuning/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/lora-fine-tuning/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-lora-fine-tuning@sha256:c8
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-lora-fine-tuning-local-ee412d9ce8-run-20261115t054920.405105217` completed **6/6** activities in **12.851792812347412 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-lora-fine-tuning-local-ee412d9ce8-run-20261115t054920.405105217` completed **6/6** activities in **12.851792812347412 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/lora-fine-tuning/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/3c09eb33-fb13-4069-a278-0e82c4445ce3/experiments/b9c32126-c80b-4df3-86cd-b75c66d734d9). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

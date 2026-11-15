@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/anomaly-detection
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/anomaly-detection/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/anomaly-detection/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/anomaly-detection/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/anomaly-detection/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-anomaly-detection@sha256:6
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-anomaly-detection-local-4a61620a98-run-20261115t054614.525762445` completed **6/6** activities in **19.708672523498535 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-anomaly-detection-local-4a61620a98-run-20261115t054614.525762445` completed **6/6** activities in **19.708672523498535 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/anomaly-detection/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/43abd581-bea8-4067-97d6-b7db99b34374/experiments/4dab2881-ab32-4cf3-a0b4-e84658cb0d70). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

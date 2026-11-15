@@ -44,9 +44,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/blender-render-farm@sha256:065a3b2b
 
 ### Actual homeserver results
 
-Run `hubv1-blender-render-farm-local-37884b15c5-run-20261115t055538.830501945` completed **5/5** activities in **18.980467796325684 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-blender-render-farm-local-37884b15c5-run-20261115t055538.830501945` completed **5/5** activities in **18.980467796325684 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/rendering/blender-render-farm/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/f0608ece-22cb-45d9-ba33-aaf5d1c42231/experiments/ed05df28-7bb7-4f5d-af58-2d91ab1b6aec). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

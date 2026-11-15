@@ -20,7 +20,7 @@ cd akoflow-examples/machine-learning/computer-vision
 ./run.sh
 ```
 
-Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/computer-vision/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/AKO-238/machine-learning/computer-vision/expected/manifest.json).
+Requires Go and Python 3 for the standalone smoke test and Docker for execution through AkôFlow. The workflow graph is in [workflow.yaml](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/computer-vision/workflow.yaml); the expected contract is in [expected/manifest.json](https://github.com/UFFeScience/akoflow-examples/blob/726301d112f7728d178da21695b2c12f2bc258f2/machine-learning/computer-vision/expected/manifest.json).
 
 Published image: `ghcr.io/uffescience/akoflow-examples/showcase-computer-vision:v1`.
 
@@ -117,9 +117,9 @@ Image: `ghcr.io/uffescience/akoflow-examples/showcase-computer-vision@sha256:99e
 
 ### Actual homeserver results
 
-Run `hubv1-showcase-computer-vision-local-9cab6f182c-run-20261115t054733.884301512` completed **6/6** activities in **41.27992582321167 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+Run `hubv1-showcase-computer-vision-local-9cab6f182c-run-20261115t054733.884301512` completed **6/6** activities in **41.27992582321167 seconds**. These are measured Docker-backed computations, not simulated timing. The captured manual plan uses placeholder predicted timings; those predictions are not benchmark measurements. Use the observed execution metrics for performance analysis. Cost is the configured local compute cost and excludes electricity and hardware.
 
-[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/computer-vision/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+[Download the native experiment capture](https://hub.akoflow.com/api/v1/publications/9c8d59e8-8d6d-4b67-8264-6b6951da921d/experiments/8a58f533-6eff-4d0d-a8c2-6de683cba8c2). The Hub Results tab includes the same plan, attempts, metrics and logs.
 
 ### Inputs and outputs
 

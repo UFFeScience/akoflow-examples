@@ -1,0 +1,10 @@
+{
+  "showcase": "sarek",
+  "status": "success",
+  "artifacts": [
+    "sarek-results.tar.gz",
+    "sarek-summary.json",
+    "published-regional-variants.png",
+    "published-genotype-observations.png"
+  ]
+}

@@ -124,9 +124,20 @@
     {
       "slug": "sarek",
       "name": "Sarek",
-      "status": "queued",
+      "status": "published-production",
       "visualPlan": "Measured variant summary and genomic distribution from real sequencing inputs.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sarek",
+      "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "activityCount": 4,
+      "completedActivityCount": 4,
+      "innerCompletedNextflowTasks": 14,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/sarek/evidence/hub-production-publication.json",
+      "observedSeconds": 265.81150364875793,
+      "finding": "280,468 real HG002 regional alignment records; 1,757 raw VCF records, 1,437 SNP/354 INDEL/1 MNV alternate alleles; all reference alleles verified",
+      "rawUnfilteredCalls": true,
+      "wholeGenomeClaimed": false
     },
     {
       "slug": "viralrecon",
@@ -184,7 +195,7 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "sarek",
+  "nextWorkflow": "viralrecon",
   "sourceBatchPR": {
     "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
     "status": "merged",

@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-sarek",
+  "experimentId": "b918cfe5-df64-42c3-82be-15394fee0686",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "824941b3-f2f7-489c-bd2d-cf3047e12a3f",
+  "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/824941b3-f2f7-489c-bd2d-cf3047e12a3f/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

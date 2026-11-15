@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/nf-core/sarek",
+  "version": "3.12.0",
+  "commit": "786a11bb4f989751d1c4bb87908ffc6096635ff3",
+  "license": "MIT",
+  "nextflowConfigSHA256": "5995f81495c76eb9e91057c9f15fb5abc569c7d4d44d9612b7cddd69fc671e58",
+  "baseImage": "hub.akoflow.com/akoflow-examples/rnaseq@sha256:edb949835c96cf793c9ef21009d583bb7b93cb845df784ac0e5221d1b9b23acb",
+  "plugins": [
+    "nf-core-utils@0.4.0",
+    "nf-fgbio@1.0.0",
+    "nf-prov@1.7.0",
+    "nf-schema@2.7.2"
+  ]
+}

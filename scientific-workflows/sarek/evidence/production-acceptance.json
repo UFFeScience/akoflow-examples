@@ -1,0 +1,61 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sarek",
+  "nativeCompletedActivities": 4,
+  "innerCompletedNextflowTasks": 14,
+  "observedSeconds": 265.81150364875793,
+  "selectedAlignments": 280468,
+  "variantRecords": 1757,
+  "alternateAlleleClasses": {
+    "SNP": 1437,
+    "INDEL": 354,
+    "MNV": 1
+  },
+  "visualCount": 2,
+  "visualBrowserGate": "passed",
+  "browserImageNaturalSizes": [
+    [
+      1800,
+      1350
+    ],
+    [
+      1500,
+      750
+    ]
+  ],
+  "browserTheme": "dark",
+  "publicAssetsHashVerified": [
+    {
+      "name": "sarek-results.tar.gz",
+      "bytes": 51278632,
+      "sha256": "24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d"
+    },
+    {
+      "name": "sarek-summary.json",
+      "bytes": 20791,
+      "sha256": "21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2"
+    },
+    {
+      "name": "published-regional-variants.png",
+      "bytes": 116892,
+      "sha256": "3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2"
+    },
+    {
+      "name": "published-genotype-observations.png",
+      "bytes": 32198,
+      "sha256": "5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009"
+    },
+    {
+      "name": "source.tar.gz",
+      "bytes": 15319255,
+      "sha256": "221677aff68fe61db98990f9c88f91f4c62f7a3200dd2ecaf06697e78b7799a6"
+    }
+  ],
+  "publicImmutableImageVerified": true,
+  "publicDockerPullVerified": true,
+  "scientificDependenciesPreinstalled": true,
+  "rawUnfilteredCalls": true,
+  "wholeGenomeClaimed": false,
+  "allVCFReferenceAllelesVerified": true,
+  "frozenPublicInputsVerifiedByNativeAcquisition": 4,
+  "temporaryOwnerSessionRevoked": true
+}

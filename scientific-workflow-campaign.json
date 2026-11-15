@@ -1,0 +1,121 @@
+{
+  "objective": "Run and publish Earthquake and the 12 requested scientific workflows sequentially through the Ak\u00f4Flow daemon and configured Hub connection.",
+  "hub": "https://hub.akoflow.com",
+  "hubScope": "Production Hub; exact measured images distributed by immutable aliases at its read-only OCI registry.",
+  "workflows": [
+    {
+      "slug": "earthquake",
+      "name": "Earthquake",
+      "status": "published-production",
+      "evidence": "scientific-workflows/earthquake/evidence/hub-production-publication.json",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-earthquake",
+      "visualCount": 4,
+      "visualPlan": "Observed seismic distribution plus aftershock, hazard and gap maps from the completed daemon execution.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "sra-search",
+      "name": "SRA Search",
+      "status": "published-production",
+      "visualPlan": "Measured processed, mapped and unmapped read counts, explicitly preserving zero-hit findings.",
+      "visualRequiredBeforePublication": true,
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sra-search",
+      "activityCount": 5,
+      "completedActivityCount": 5,
+      "visualCount": 1,
+      "evidence": "scientific-workflows/sra-search/evidence/hub-production-publication.json",
+      "finding": "0 reference matches from 2,044,828 processed mates; all full real observations retained in BAM"
+    },
+    {
+      "slug": "variant-calling",
+      "name": "Variant Calling",
+      "status": "queued",
+      "visualPlan": "Variant counts by type and genomic position, generated from actual VCF output.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "orcasound",
+      "name": "Orcasound",
+      "status": "queued",
+      "visualPlan": "Spectrogram and detections timeline computed from the selected real hydrophone recording.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "somospie",
+      "name": "SOMOSPIE",
+      "status": "queued",
+      "visualPlan": "Observed/predicted soil-moisture map and held-out prediction diagnostics.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "rnaseq",
+      "name": "RNA-seq",
+      "status": "queued",
+      "visualPlan": "Sample QC, measured alignment metrics and gene-expression summary.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "sarek",
+      "name": "Sarek",
+      "status": "queued",
+      "visualPlan": "Measured variant summary and genomic distribution from real sequencing inputs.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "viralrecon",
+      "name": "Viralrecon",
+      "status": "queued",
+      "visualPlan": "Genome coverage and variant positions from reconstructed viral reads.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "mag",
+      "name": "MAG",
+      "status": "queued",
+      "visualPlan": "Actual assembly/bin metrics, contig-length distribution and taxonomic summaries where produced.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "ampliseq",
+      "name": "Ampliseq",
+      "status": "queued",
+      "visualPlan": "Read-retention summary and observed taxonomic/community composition.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "fmriprep",
+      "name": "fMRIPrep",
+      "status": "queued",
+      "visualPlan": "Anatomical/functional registration and preprocessing quality-control views from actual BIDS outputs.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "1000genomes",
+      "name": "1000Genomes",
+      "status": "queued",
+      "visualPlan": "Observed allele-frequency/variant-overlap distributions for the frozen public cohort subset.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "pycbc",
+      "name": "PyCBC / LIGO",
+      "status": "queued",
+      "visualPlan": "Strain/spectrogram and detection statistic versus time for public GWOSC data.",
+      "visualRequiredBeforePublication": true
+    }
+  ],
+  "visualRequirement": "Every published workflow must include at least one visual derived from its real computation, with provenance and accessible download.",
+  "visualBrowserGate": "passed: Earthquake (four original PNGs) and SRA Search (actual-count SVG) rendered in production after AKO-250 deployment 43746068697",
+  "productionAssetRegistry": {
+    "compose": "/opt/projects/akoflow-scientific-registry/compose.yml",
+    "publicImagePrefix": "hub.akoflow.com/akoflow-examples/",
+    "publicAssetsPrefix": "https://hub.akoflow.com/showcase-results/scientific/",
+    "writeAccess": "localhost:15000 via SSH only; public routes allow only GET/HEAD"
+  },
+  "existingMontageVisuals": {
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-montage-050",
+    "verified": true,
+    "content": "Three band mosaics and a color mosaic from the validated reference execution."
+  },
+  "nextWorkflow": "variant-calling"
+}

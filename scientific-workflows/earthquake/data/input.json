@@ -1,0 +1,66 @@
+{
+  "slug": "earthquake-local",
+  "validationMode": "local-workload",
+  "stages": [
+    "fetch",
+    "patterns",
+    "map",
+    "anomalies",
+    "zones",
+    "aftershocks",
+    "aftershock-map",
+    "hazard",
+    "gaps",
+    "hazard-map",
+    "gap-map"
+  ],
+  "dependencies": {
+    "fetch": [],
+    "patterns": [
+      "fetch"
+    ],
+    "map": [
+      "fetch"
+    ],
+    "anomalies": [
+      "fetch"
+    ],
+    "zones": [
+      "fetch"
+    ],
+    "aftershocks": [
+      "fetch"
+    ],
+    "aftershock-map": [
+      "fetch",
+      "aftershocks"
+    ],
+    "hazard": [
+      "fetch"
+    ],
+    "gaps": [
+      "fetch"
+    ],
+    "hazard-map": [
+      "fetch",
+      "hazard"
+    ],
+    "gap-map": [
+      "fetch",
+      "gaps"
+    ]
+  },
+  "artifacts": [
+    "catalog.csv",
+    "patterns.json",
+    "earthquakes.png",
+    "anomalies.json",
+    "zones.json",
+    "aftershocks.json",
+    "aftershocks.png",
+    "hazard.json",
+    "gaps.json",
+    "hazard.png",
+    "gaps.png"
+  ]
+}

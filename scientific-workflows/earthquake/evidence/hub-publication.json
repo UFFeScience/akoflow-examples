@@ -1,0 +1,11 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-earthquake",
+  "experimentId": "57851538-d2a8-4f32-927b-cf87935a31f5",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "a15b1900-af13-471b-a425-340983d127ae",
+  "runId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "registryImagePublic": false,
+  "uri": "akoflow://hub/publications/a15b1900-af13-471b-a425-340983d127ae/versions/1"
+}

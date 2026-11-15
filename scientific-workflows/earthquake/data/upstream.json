@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/pegasus-isi/earthquake-workflow",
+  "commit": "a31920b7b0bb0cfb30241ffd2566d935847e34a1",
+  "changes": "Scripts copied unchanged. Offline fetch adapter stages the frozen USGS catalog. Hazard grid resolution is 2 degrees.",
+  "scriptSha256": {
+    "fetch_earthquake_data.py": "94b3ce37aefbafd0c3f09970e1bd5902193fb26df6b5f105ee1a4a7e6e0bdc78",
+    "detect_seismic_anomalies.py": "ee2f5945032e77818cf65ed52061372cd5129e9761c891bea517f497fb5ce88a",
+    "analyze_seismic_gaps.py": "fce3c7bb1aaa83529d0797eb8227f3c62d6f1f66e986ac4ed376188397a6cd6f",
+    "visualize_seismic_gaps.py": "aaa3b0320cf08594eaf3a36c45666ebb2936abf503662eada20fa9471316ac31",
+    "predict_aftershocks.py": "f3b8cafea5d4332d244b1873d0c2cd92204cbc3ac43072bcb44a6c515b8b0541",
+    "visualize_aftershock_predictions.py": "d8640ee9570588631757aaff98d99475592757d08b0f61613540f280b9475dfd",
+    "analyze_seismic_patterns.py": "5ca6409688adeeebd7df4df46abd5c92bf6ac459fc3e304400f118e32d958ecf",
+    "cluster_seismic_zones.py": "19780701cc87b7b4904692c9efa6b04437da85aa4d234f7bc5c30ad9d70c73bf",
+    "visualize_seismic_hazard.py": "b19c691990ec062ecec75b4edfbb0898a682ada816b580e13e8443ee348b2a03",
+    "assess_seismic_hazard.py": "c8363e37d1036e53e95819cc110c0c978d1c5c01e4407ea9dedfba89e6c6b89c",
+    "visualize_earthquakes.py": "df80cbd1e2df0ae513beb9b22b35555c93f38bbb099c3239b3517cdc40a186cc"
+  }
+}

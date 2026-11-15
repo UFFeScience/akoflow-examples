@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/pegasus-isi/sra-search-pegasus-workflow",
+  "commit": "1a5c0fd4f50db8373a722c08f9269753261b3c46",
+  "accession": "SRR3403832",
+  "reference": "examples/1/crassphage.fna",
+  "adaptations": [
+    "Read acquisition uses the complete ENA FASTQ mirrors of the same public SRA accession; no read subsampling.",
+    "All original graph stages are preserved: index, read acquisition, alignment, packaging.",
+    "Acquisition downloads and verifies gzip data during preparation; extract-reads decompresses the frozen observations offline.",
+    "BAM and BAI remain at the workspace root after packaging; samtools flagstat and idxstats provide semantic validation."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "slug": "sra-search-local",
+  "title": "SRA Search with real NCBI reads",
+  "validationMode": "local-workload",
+  "stages": [
+    "index",
+    "extract-reads",
+    "align",
+    "package",
+    "visualize"
+  ],
+  "dependencies": {
+    "index": [],
+    "extract-reads": [],
+    "align": [
+      "index",
+      "extract-reads"
+    ],
+    "package": [
+      "align"
+    ],
+    "visualize": [
+      "package"
+    ]
+  },
+  "artifacts": [
+    "published-results.tar.gz",
+    "published-validation.json",
+    "mapping-summary.svg"
+  ]
+}

@@ -1,0 +1,42 @@
+environment:
+  id: sra-search-local
+  name: sra-search-local local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: sra-search-local-v1
+  environmentId: sra-search-local
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: sra-search-local-v1
+runtimes:
+  - environmentVersionId: sra-search-local-v1
+    id: sra-search-local-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: sra-search-local-local-docker
+    environmentVersionId: sra-search-local-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: sra-search-local-local-docker, runtimeId: sra-search-local-local, enabled: true}

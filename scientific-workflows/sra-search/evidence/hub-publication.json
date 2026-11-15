@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-sra-search",
+  "experimentId": "18f13324-ae08-4ee9-9c83-36738faec356",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "d26cef12-8c41-409c-9ae4-c4cc8d672fed",
+  "runId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/d26cef12-8c41-409c-9ae4-c4cc8d672fed/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

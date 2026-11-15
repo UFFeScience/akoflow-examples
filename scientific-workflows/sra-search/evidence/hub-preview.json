@@ -1,0 +1,444 @@
+{
+  "id": "35775f6fddd6c7e369f7d5de3b43ca6e5d83e73d45e58669c625787ff792856a",
+  "publication": {
+    "id": "d26cef12-8c41-409c-9ae4-c4cc8d672fed",
+    "title": "SRA Search with real NCBI reads",
+    "slug": "scientific-workflows-sra-search",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 5 completed activities.",
+    "readme": "# SRA Search: real sequencing reads\n\nAdapt the [Pegasus SRA Search workflow](https://github.com/pegasus-isi/sra-search-pegasus-workflow) to five dependent/independent Ak\u00f4Flow activities: build the reference index, acquire reads, align reads, package validated BAM results and render the measured alignment summary. The source revision and adaptations are recorded in `data/upstream.json`; upstream wrappers and their license are preserved in `scripts/upstream/`.\n\n## Data and computation\n\nThe reference is the upstream crAssphage FASTA and the public accession is **SRR3403832**. Preparation fetches the complete paired FASTQ mirrors from ENA, verifies their published byte counts and MD5 digests, and records the ENA response in `data/read-provenance.json`. Reads are not subsampled. Acquisition uses ENA's FASTQ mirror of the same SRA accession rather than running the upstream `fasterq-dump` downloader.\n\nThe offline DAG decompresses both observations, builds the Bowtie2 reference index, aligns paired reads with Bowtie2, sorts and indexes the BAM with samtools, calculates flagstat/idxstats and packages BAM/BAI/reports. Bowtie2 is pinned to Debian's 2.5.0 build and samtools to 1.16.1; these differ from the current upstream container, so results are attributed to this declared toolchain.\n\n## Prepare and run\n\nDocker, Go and Python 3 are required. Allow at least 5 GiB free disk and 8 GiB RAM for the local profile; these are initial capacity recommendations rather than measured minimum requirements.\n\n```sh\n./prepare.sh\n./run.sh\n```\n\nPreparation needs network access for the 224 MB compressed observations, Docker base and Debian tools. All five execution activities run in Docker without network access. `run.sh` validates complete real read processing and measured alignment counts, including legitimate zero-hit searches, BAM integrity, BAI access and every archived file hash. Outputs are `outputs/published-results.tar.gz`, `outputs/published-validation.json`, per-activity observations and the runner's manifest.\n\nTo submit the same DAG to your local Ak\u00f4Flow daemon after preparation:\n\n```sh\ngo run ../../tools/daemon-local -root ../.. -example scientific-workflows/sra-search -wait=false\n```\n\nAdd `-api-url http://<daemon-host>:8080/akoflow-api` for a daemon bound to a LAN address. Configure `AKOFLOW_API_TOKEN` in the shell or pass the existing installation env file with `-env-file`.\n\n## Validation status\n\nThis bundle is being prepared. A successful scientific execution and Hub receipt must be recorded before claiming validation or publication. No successful execution is inferred from the upstream documentation.\n\n## Scientific result interpretation\n\nThis full human-gut sample can yield zero matches to the specific upstream crAssphage reference. Zero reference matches is a measured search outcome, not a failure of the alignment computation and not evidence about all organisms. Unmapped mates are retained in the sorted BAM so the report accounts for every processed observation. The final visualization is generated from the actual flagstat counts; it does not fabricate positive matches.\n\nThe final visualization activity also materializes `published-results.tar.gz` and `published-validation.json` as its own final outputs, preserving the BAM archive and validation report after intermediate workspace cleanup.\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+  "workflowName": "sra-search-local-local-637b388236",
+  "yaml": "name: sra-search-local-local-637b388236\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - index\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sra-search-local-local\n            workspaceSeedPath: \"\"\n          name: index\n          runtime: sra-search-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - extract-reads\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sra-search-local-local\n            workspaceSeedPath: \"\"\n          name: extract-reads\n          runtime: sra-search-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - align\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - extract-reads\n            - index\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sra-search-local-local\n            workspaceSeedPath: \"\"\n          name: align\n          runtime: sra-search-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - package\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - align\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sra-search-local-local\n            workspaceSeedPath: \"\"\n          name: package\n          runtime: sra-search-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - visualize\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - package\n          memoryLimit: \"1073741824\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sra-search-local-local\n            workspaceSeedPath: \"\"\n          name: visualize\n          runtime: sra-search-local-local\n    dataDependencies:\n        - consumerActivity: package\n          logicalName: SRR3403832.bam\n          producerActivity: align\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: SRR3403832.bam.bai\n          producerActivity: align\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: alignment-summary.json\n          producerActivity: align\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: flagstat.json\n          producerActivity: align\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: idxstats.tsv\n          producerActivity: align\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: SRR3403832_1.fastq\n          producerActivity: extract-reads\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: SRR3403832_2.fastq\n          producerActivity: extract-reads\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.1.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.2.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.3.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.4.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.rev.1.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: align\n          logicalName: reference.rev.2.bt2\n          producerActivity: index\n          sizeBytes: 1\n        - consumerActivity: visualize\n          logicalName: validation.json\n          producerActivity: package\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "sra-search-local-local-637b388236-align",
+      "exitCode": 0,
+      "finishedAt": 1794766519.9658308,
+      "log": "1022414 reads; of these:\n  1022414 (100.00%) were paired; of these:\n    1022414 (100.00%) aligned concordantly 0 times\n    0 (0.00%) aligned concordantly exactly 1 time\n    0 (0.00%) aligned concordantly >1 times\n    ----\n    1022414 pairs aligned concordantly 0 times; of these:\n      0 (0.00%) aligned discordantly 1 time\n    ----\n    1022414 pairs aligned 0 times concordantly or discordantly; of these:\n      2044828 mates make up the pairs; of these:\n        2044828 (100.00%) aligned 0 times\n        0 (0.00%) aligned exactly 1 time\n        0 (0.00%) aligned >1 times\n0.00% overall alignment rate\n[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794766481.0034938,
+      "status": "completed"
+    },
+    {
+      "activityId": "sra-search-local-local-637b388236-extract-reads",
+      "exitCode": 0,
+      "finishedAt": 1794766470.883539,
+      "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794766467.7597332,
+      "status": "completed"
+    },
+    {
+      "activityId": "sra-search-local-local-637b388236-index",
+      "exitCode": 0,
+      "finishedAt": 1794766466.1107357,
+      "log": "Settings:\n  Output files: \"reference.*.bt2\"\n  Line rate: 6 (line is 64 bytes)\n  Lines per side: 1 (side is 64 bytes)\n  Offset rate: 4 (one in 16)\n  FTable chars: 10\n  Strings: unpacked\n  Max bucket size: default\n  Max bucket size, sqrt multiplier: default\n  Max bucket size, len divisor: 4\n  Difference-cover sample period: 1024\n  Endianness: little\n  Actual local endianness: little\n  Sanity checking: disabled\n  Assertions: disabled\n  Random seed: 0\n  Sizeofs: void*:8, int:4, long:8, size_t:8\nInput files DNA, FASTA:\n  reference.fna\nReading reference sizes\n  Time reading reference sizes: 00:00:00\nCalculating joined length\nWriting header\nReserving space for joined string\nJoining reference sequences\n  Time to join reference sequences: 00:00:00\nbmax according to bmaxDivN setting: 24273\nUsing parameters --bmax 18205 --dcv 1024\n  Doing ahead-of-time memory usage test\n  Passed!  Constructing with these parameters: --bmax 18205 --dcv 1024\nConstructing suffix-array element generator\nBuilding DifferenceCoverSample\n  Building sPrime\n  Building sPrimeOrder\n  V-Sorting samples\n  V-Sorting samples time: 00:00:00\n  Allocating rank array\n  Ranking v-sort output\n  Ranking v-sort output time: 00:00:00\n  Invoking Larsson-Sadakane on ranks\n  Invoking Larsson-Sadakane on ranks time: 00:00:00\n  Sanity-checking and returning\nBuilding samples\nReserving space for 12 sample suffixes\nGenerating random suffixes\nQSorting 12 sample offsets, eliminating duplicates\nQSorting sample offsets, eliminating duplicates time: 00:00:00\nMultikey QSorting 12 samples\n  (Using difference cover)\n  Multikey QSorting samples time: 00:00:00\nCalculating bucket sizes\nSplitting and merging\n  Splitting and merging time: 00:00:00\nSplit 1, merged 6; iterating...\nSplitting and merging\n  Splitting and merging time: 00:00:00\nAvg bucket size: 12135.6 (target: 18204)\nConverting suffix-array elements to index image\nAllocating ftab, absorbFtab\nEntering Ebwt loop\nGetting block 1 of 8\n  Reserving size (18205) for bucket 1\n  Calculating Z arrays for bucket 1\n  Entering block accumulator loop for bucket 1:\n  bucket 1: 10%\n  bucket 1: 20%\n  bucket 1: 30%\n  bucket 1: 40%\n  bucket 1: 50%\n  bucket 1: 60%\n  bucket 1: 70%\n  bucket 1: 80%\n  bucket 1: 90%\n  bucket 1: 100%\n  Sorting block of length 13660 for bucket 1\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 13661 for bucket 1\nGetting block 2 of 8\n  Reserving size (18205) for bucket 2\n  Calculating Z arrays for bucket 2\n  Entering block accumulator loop for bucket 2:\n  bucket 2: 10%\n  bucket 2: 20%\n  bucket 2: 30%\n  bucket 2: 40%\n  bucket 2: 50%\n  bucket 2: 60%\n  bucket 2: 70%\n  bucket 2: 80%\n  bucket 2: 90%\n  bucket 2: 100%\n  Sorting block of length 12564 for bucket 2\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 12565 for bucket 2\nGetting block 3 of 8\n  Reserving size (18205) for bucket 3\n  Calculating Z arrays for bucket 3\n  Entering block accumulator loop for bucket 3:\n  bucket 3: 10%\n  bucket 3: 20%\n  bucket 3: 30%\n  bucket 3: 40%\n  bucket 3: 50%\n  bucket 3: 60%\n  bucket 3: 70%\n  bucket 3: 80%\n  bucket 3: 90%\n  bucket 3: 100%\n  Sorting block of length 15398 for bucket 3\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15399 for bucket 3\nGetting block 4 of 8\n  Reserving size (18205) for bucket 4\n  Calculating Z arrays for bucket 4\n  Entering block accumulator loop for bucket 4:\n  bucket 4: 10%\n  bucket 4: 20%\n  bucket 4: 30%\n  bucket 4: 40%\n  bucket 4: 50%\n  bucket 4: 60%\n  bucket 4: 70%\n  bucket 4: 80%\n  bucket 4: 90%\n  bucket 4: 100%\n  Sorting block of length 14725 for bucket 4\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14726 for bucket 4\nGetting block 5 of 8\n  Reserving size (18205) for bucket 5\n  Calculating Z arrays for bucket 5\n  Entering block accumulator loop for bucket 5:\n  bucket 5: 10%\n  bucket 5: 20%\n  bucket 5: 30%\n  bucket 5: 40%\n  bucket 5: 50%\n  bucket 5: 60%\n  bucket 5: 70%\n  bucket 5: 80%\n  bucket 5: 90%\n  bucket 5: 100%\n  Sorting block of length 10013 for bucket 5\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 10014 for bucket 5\nGetting block 6 of 8\n  Reserving size (18205) for bucket 6\n  Calculating Z arrays for bucket 6\n  Entering block accumulator loop for bucket 6:\n  bucket 6: 10%\n  bucket 6: 20%\n  bucket 6: 30%\n  bucket 6: 40%\n  bucket 6: 50%\n  bucket 6: 60%\n  bucket 6: 70%\n  bucket 6: 80%\n  bucket 6: 90%\n  bucket 6: 100%\n  Sorting block of length 10449 for bucket 6\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 10450 for bucket 6\nGetting block 7 of 8\n  Reserving size (18205) for bucket 7\n  Calculating Z arrays for bucket 7\n  Entering block accumulator loop for bucket 7:\n  bucket 7: 10%\n  bucket 7: 20%\n  bucket 7: 30%\n  bucket 7: 40%\n  bucket 7: 50%\n  bucket 7: 60%\n  bucket 7: 70%\n  bucket 7: 80%\n  bucket 7: 90%\n  bucket 7: 100%\n  Sorting block of length 15906 for bucket 7\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15907 for bucket 7\nGetting block 8 of 8\n  Reserving size (18205) for bucket 8\n  Calculating Z arrays for bucket 8\n  Entering block accumulator loop for bucket 8:\n  bucket 8: 10%\n  bucket 8: 20%\n  bucket 8: 30%\n  bucket 8: 40%\n  bucket 8: 50%\n  bucket 8: 60%\n  bucket 8: 70%\n  bucket 8: 80%\n  bucket 8: 90%\n  bucket 8: 100%\n  Sorting block of length 4370 for bucket 8\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 4371 for bucket 8\nExited Ebwt loop\nfchr[A]: 0\nfchr[C]: 34027\nfchr[G]: 49282\nfchr[T]: 62449\nfchr[$]: 97092\nExiting Ebwt::buildToDisk()\nReturning from initFromVector\nWrote 4226858 bytes to primary EBWT file: reference.1.bt2.tmp\nWrote 24280 bytes to secondary EBWT file: reference.2.bt2.tmp\nRe-opening _in1 and _in2 as input streams\nReturning from Ebwt constructor\nHeaders:\n    len: 97092\n    bwtLen: 97093\n    sz: 24273\n    bwtSz: 24274\n    lineRate: 6\n    offRate: 4\n    offMask: 0xfffffff0\n    ftabChars: 10\n    eftabLen: 20\n    eftabSz: 80\n    ftabLen: 1048577\n    ftabSz: 4194308\n    offsLen: 6069\n    offsSz: 24276\n    lineSz: 64\n    sideSz: 64\n    sideBwtSz: 48\n    sideBwtLen: 192\n    numSides: 506\n    numLines: 506\n    ebwtTotLen: 32384\n    ebwtTotSz: 32384\n    color: 0\n    reverse: 0\nTotal time for call to driver() for forward index: 00:00:01\nReading reference sizes\n  Time reading reference sizes: 00:00:00\nCalculating joined length\nWriting header\nReserving space for joined string\nJoining reference sequences\n  Time to join reference sequences: 00:00:00\n  Time to reverse reference sequence: 00:00:00\nbmax according to bmaxDivN setting: 24273\nUsing parameters --bmax 18205 --dcv 1024\n  Doing ahead-of-time memory usage test\n  Passed!  Constructing with these parameters: --bmax 18205 --dcv 1024\nConstructing suffix-array element generator\nBuilding DifferenceCoverSample\n  Building sPrime\n  Building sPrimeOrder\n  V-Sorting samples\n  V-Sorting samples time: 00:00:00\n  Allocating rank array\n  Ranking v-sort output\n  Ranking v-sort output time: 00:00:00\n  Invoking Larsson-Sadakane on ranks\n  Invoking Larsson-Sadakane on ranks time: 00:00:00\n  Sanity-checking and returning\nBuilding samples\nReserving space for 12 sample suffixes\nGenerating random suffixes\nQSorting 12 sample offsets, eliminating duplicates\nQSorting sample offsets, eliminating duplicates time: 00:00:00\nMultikey QSorting 12 samples\n  (Using difference cover)\n  Multikey QSorting samples time: 00:00:00\nCalculating bucket sizes\nSplitting and merging\n  Splitting and merging time: 00:00:00\nSplit 2, merged 7; iterating...\nSplitting and merging\n  Splitting and merging time: 00:00:00\nAvg bucket size: 12135.6 (target: 18204)\nConverting suffix-array elements to index image\nAllocating ftab, absorbFtab\nEntering Ebwt loop\nGetting block 1 of 8\n  Reserving size (18205) for bucket 1\n  Calculating Z arrays for bucket 1\n  Entering block accumulator loop for bucket 1:\n  bucket 1: 10%\n  bucket 1: 20%\n  bucket 1: 30%\n  bucket 1: 40%\n  bucket 1: 50%\n  bucket 1: 60%\n  bucket 1: 70%\n  bucket 1: 80%\n  bucket 1: 90%\n  bucket 1: 100%\n  Sorting block of length 14483 for bucket 1\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14484 for bucket 1\nGetting block 2 of 8\n  Reserving size (18205) for bucket 2\n  Calculating Z arrays for bucket 2\n  Entering block accumulator loop for bucket 2:\n  bucket 2: 10%\n  bucket 2: 20%\n  bucket 2: 30%\n  bucket 2: 40%\n  bucket 2: 50%\n  bucket 2: 60%\n  bucket 2: 70%\n  bucket 2: 80%\n  bucket 2: 90%\n  bucket 2: 100%\n  Sorting block of length 7054 for bucket 2\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 7055 for bucket 2\nGetting block 3 of 8\n  Reserving size (18205) for bucket 3\n  Calculating Z arrays for bucket 3\n  Entering block accumulator loop for bucket 3:\n  bucket 3: 10%\n  bucket 3: 20%\n  bucket 3: 30%\n  bucket 3: 40%\n  bucket 3: 50%\n  bucket 3: 60%\n  bucket 3: 70%\n  bucket 3: 80%\n  bucket 3: 90%\n  bucket 3: 100%\n  Sorting block of length 15602 for bucket 3\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15603 for bucket 3\nGetting block 4 of 8\n  Reserving size (18205) for bucket 4\n  Calculating Z arrays for bucket 4\n  Entering block accumulator loop for bucket 4:\n  bucket 4: 10%\n  bucket 4: 20%\n  bucket 4: 30%\n  bucket 4: 40%\n  bucket 4: 50%\n  bucket 4: 60%\n  bucket 4: 70%\n  bucket 4: 80%\n  bucket 4: 90%\n  bucket 4: 100%\n  Sorting block of length 9181 for bucket 4\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 9182 for bucket 4\nGetting block 5 of 8\n  Reserving size (18205) for bucket 5\n  Calculating Z arrays for bucket 5\n  Entering block accumulator loop for bucket 5:\n  bucket 5: 10%\n  bucket 5: 20%\n  bucket 5: 30%\n  bucket 5: 40%\n  bucket 5: 50%\n  bucket 5: 60%\n  bucket 5: 70%\n  bucket 5: 80%\n  bucket 5: 90%\n  bucket 5: 100%\n  Sorting block of length 16283 for bucket 5\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 16284 for bucket 5\nGetting block 6 of 8\n  Reserving size (18205) for bucket 6\n  Calculating Z arrays for bucket 6\n  Entering block accumulator loop for bucket 6:\n  bucket 6: 10%\n  bucket 6: 20%\n  bucket 6: 30%\n  bucket 6: 40%\n  bucket 6: 50%\n  bucket 6: 60%\n  bucket 6: 70%\n  bucket 6: 80%\n  bucket 6: 90%\n  bucket 6: 100%\n  Sorting block of length 2136 for bucket 6\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 2137 for bucket 6\nGetting block 7 of 8\n  Reserving size (18205) for bucket 7\n  Calculating Z arrays for bucket 7\n  Entering block accumulator loop for bucket 7:\n  bucket 7: 10%\n  bucket 7: 20%\n  bucket 7: 30%\n  bucket 7: 40%\n  bucket 7: 50%\n  bucket 7: 60%\n  bucket 7: 70%\n  bucket 7: 80%\n  bucket 7: 90%\n  bucket 7: 100%\n  Sorting block of length 18193 for bucket 7\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 18194 for bucket 7\nGetting block 8 of 8\n  Reserving size (18205) for bucket 8\n  Calculating Z arrays for bucket 8\n  Entering block accumulator loop for bucket 8:\n  bucket 8: 10%\n  bucket 8: 20%\n  bucket 8: 30%\n  bucket 8: 40%\n  bucket 8: 50%\n  bucket 8: 60%\n  bucket 8: 70%\n  bucket 8: 80%\n  bucket 8: 90%\n  bucket 8: 100%\n  Sorting block of length 14153 for bucket 8\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14154 for bucket 8\nExited Ebwt loop\nfchr[A]: 0\nfchr[C]: 34027\nfchr[G]: 49282\nfchr[T]: 62449\nfchr[$]: 97092\nExiting Ebwt::buildToDisk()\nReturning from initFromVector\nWrote 4226858 bytes to primary EBWT file: reference.rev.1.bt2.tmp\nWrote 24280 bytes to secondary EBWT file: reference.rev.2.bt2.tmp\nRe-opening _in1 and _in2 as input streams\nReturning from Ebwt constructor\nHeaders:\n    len: 97092\n    bwtLen: 97093\n    sz: 24273\n    bwtSz: 24274\n    lineRate: 6\n    offRate: 4\n    offMask: 0xfffffff0\n    ftabChars: 10\n    eftabLen: 20\n    eftabSz: 80\n    ftabLen: 1048577\n    ftabSz: 4194308\n    offsLen: 6069\n    offsSz: 24276\n    lineSz: 64\n    sideSz: 64\n    sideBwtSz: 48\n    sideBwtLen: 192\n    numSides: 506\n    numLines: 506\n    ebwtTotLen: 32384\n    ebwtTotSz: 32384\n    color: 0\n    reverse: 1\nTotal time for backward call to driver() for mirror index: 00:00:00\n\nBuilding a SMALL index\nRenaming reference.3.bt2.tmp to reference.3.bt2\nRenaming reference.4.bt2.tmp to reference.4.bt2\nRenaming reference.1.bt2.tmp to reference.1.bt2\nRenaming reference.2.bt2.tmp to reference.2.bt2\nRenaming reference.rev.1.bt2.tmp to reference.rev.1.bt2\nRenaming reference.rev.2.bt2.tmp to reference.rev.2.bt2\n[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794766465.8153994,
+      "status": "completed"
+    },
+    {
+      "activityId": "sra-search-local-local-637b388236-package",
+      "exitCode": 0,
+      "finishedAt": 1794766536.063584,
+      "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794766531.003087,
+      "status": "completed"
+    },
+    {
+      "activityId": "sra-search-local-local-637b388236-visualize",
+      "exitCode": 0,
+      "finishedAt": 1794766549.8734274,
+      "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794766549.6533442,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+      "dataObjectId": "6918135821ec0b9922faac645c8e59f1",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "57a3c4873a941c886ae6ac6e413f75b8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "SRR3403832.bam",
+      "sizeBytes": 240573032
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+      "dataObjectId": "94f2ac7f6d2311318dea9a72d2b29066",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "218deeb5ef59ae9445007210bb8a19d1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "SRR3403832.bam.bai",
+      "sizeBytes": 24
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+      "dataObjectId": "22df69efcf63a94652675ccdf08ac198",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "abc6ce6ab618453b51dd68375582a73a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "alignment-summary.json",
+      "sizeBytes": 78
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+      "dataObjectId": "7e19a58c381d26971c7da18045c489c5",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "ffda1118cba1c85a6b016e457e48f12e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "flagstat.json",
+      "sizeBytes": 1107
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+      "dataObjectId": "3d93322a89b237d9a2a57f68ad69452c",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "89b48dae88f00e17e98d61c031eb3c0c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "idxstats.tsv",
+      "sizeBytes": 33
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d30d36ea2670638d9a6eaf6be650dffaa6af3030667ab79c02b2ab7509bd5eaa",
+      "dataObjectId": "74e1bd3ea2746d323786be5347905553",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "de002fa518248fee104330de79449ad3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-align",
+      "relativePath": "stage-align.json",
+      "sizeBytes": 90
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+      "dataObjectId": "c17304aa13ff8379b51382538948efb5",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "86f290085449fc3e6b14761a4e5a4825",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-extract-reads",
+      "relativePath": "SRR3403832_1.fastq",
+      "sizeBytes": 513191800
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+      "dataObjectId": "b30c20eac4fbad4198d48b247a7a9235",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "1976f1c0addcafc96bb452d2613a1554",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-extract-reads",
+      "relativePath": "SRR3403832_2.fastq",
+      "sizeBytes": 513265530
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:a3c131665fe9725e4840cf7565a377034449ac0a422379fec1cd123667936340",
+      "dataObjectId": "5e4e7ae00dde1ec2004576b3d21056d7",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "703eb20190b2c368614cde8f187b1ff4",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-extract-reads",
+      "relativePath": "stage-extract-reads.json",
+      "sizeBytes": 98
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+      "dataObjectId": "ea0db898434abc1688ca8098a58c0c40",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "581420c766df077546870ad2c0942ea7",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.1.bt2",
+      "sizeBytes": 4226858
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+      "dataObjectId": "45b4515788538ede4aca2f2bf9acbe3c",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "837359133f45882b58b21782bcaee1ef",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.2.bt2",
+      "sizeBytes": 24280
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+      "dataObjectId": "bf8863c4f75282869e6bca577ca37745",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "807ba3b56f60ef3ac2f606de0b45c342",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.3.bt2",
+      "sizeBytes": 17
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+      "dataObjectId": "dc3bd62a006db05309366666e4150a8e",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "dba8965fd65e34f68f98aeb6abbf74c3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.4.bt2",
+      "sizeBytes": 24273
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+      "dataObjectId": "b24c6f5d0fd8ffd979442af8df0e18d1",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "54a7d7a0008db7f5742affa0e212bde0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.fna",
+      "sizeBytes": 98721
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+      "dataObjectId": "99bb0b1c2ba5995909d6057e1d69d391",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "d9001024fe9de82d68b176711ffb5dc3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.rev.1.bt2",
+      "sizeBytes": 4226858
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+      "dataObjectId": "6f9480f0a838df8a1ba15b8f68721b5a",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "cd05306609ec6dbdc77c18d3aa05ad9f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "reference.rev.2.bt2",
+      "sizeBytes": 24280
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7d70eaefbda6309b4a8a9151cd14f80f3db9fafc2f3ec73fb533b8004764554f",
+      "dataObjectId": "d5c7f2e36a1a0b8e6c1e27fed6adae26",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "b7031fe4b6be74b9a99b8f56ada7dc1b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-index",
+      "relativePath": "stage-index.json",
+      "sizeBytes": 90
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3ee6c303b1aa5a646a40d8d26958f26b2d60ee9a00c5b4a8b607c28cfaf1f11a",
+      "dataObjectId": "0f1e7e9cdfa7b4dcd4f3758ad9c81ab7",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "c9f39f0ead3bccab2bc418b42bd7cec2",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-package",
+      "relativePath": "results.tar.gz",
+      "sizeBytes": 240403865
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c9100b8afebe072abb9eb76ab87921c9f33e9cae119437ce65bd9440982537e8",
+      "dataObjectId": "ce44659e42449e6fe7dee041923fd698",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "570196c2015b3f8076b9c806c2a285c9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-package",
+      "relativePath": "stage-package.json",
+      "sizeBytes": 92
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+      "dataObjectId": "b0c5f6530d5c445c785f589844647cc5",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "19ddf9b56feaf7d8f97e666f0efac170",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-package",
+      "relativePath": "validation.json",
+      "sizeBytes": 1233
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+      "dataObjectId": "786968de10c58d524adea6b8409ca8ce",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "db1cf54b3a776fe0cd2546ab4548aa09",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-visualize",
+      "relativePath": "mapping-summary.svg",
+      "sizeBytes": 1533
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3ee6c303b1aa5a646a40d8d26958f26b2d60ee9a00c5b4a8b607c28cfaf1f11a",
+      "dataObjectId": "6a584ab9448eb6934d9078803615317c",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "fabf69d8ea792bb283404f97c7c4b599",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-visualize",
+      "relativePath": "published-results.tar.gz",
+      "sizeBytes": 240403865
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+      "dataObjectId": "ed720f51d96faa11ca6a5dafee9e3b5c",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "191e3c141138b993951e9136e78b3b47",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-visualize",
+      "relativePath": "published-validation.json",
+      "sizeBytes": 1233
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0c434d63ec9995aaa2e10653a7bc8a053835157f876cccb8e901eb382c6c5e8b",
+      "dataObjectId": "68c614af46f05fa493ca13a103270d9c",
+      "discovered": true,
+      "executionRunId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+      "id": "9576d9e080fa032cc07c8a42cafbd98e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sra-search-local-local-637b388236-visualize",
+      "relativePath": "stage-visualize.json",
+      "sizeBytes": 94
+    }
+  ],
+  "exportedAt": "2026-11-15T18:16:36.730504719Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "sra-search-local-local-637b388236",
+      "workflowVersionId": "sra-search-local-local-637b388236-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 5,
+      "redactionCount": 0,
+      "digest": "6d462028d1e3ba0a393a099c9201fb54490e826ae15c8eda3e5a9efbcd8b0069"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,195 @@\n+name: sra-search-local-local-637b388236\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - index\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sra-search-local-local\n+            workspaceSeedPath: \"\"\n+          name: index\n+          runtime: sra-search-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - extract-reads\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sra-search-local-local\n+            workspaceSeedPath: \"\"\n+          name: extract-reads\n+          runtime: sra-search-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - align\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - extract-reads\n+            - index\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sra-search-local-local\n+            workspaceSeedPath: \"\"\n+          name: align\n+          runtime: sra-search-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - package\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - align\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sra-search-local-local\n+            workspaceSeedPath: \"\"\n+          name: package\n+          runtime: sra-search-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - visualize\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sra-search-local:local-97cf0b996c5745f3\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - package\n+          memoryLimit: \"1073741824\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sra-search-local-local\n+            workspaceSeedPath: \"\"\n+          name: visualize\n+          runtime: sra-search-local-local\n+    dataDependencies:\n+        - consumerActivity: package\n+          logicalName: SRR3403832.bam\n+          producerActivity: align\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: SRR3403832.bam.bai\n+          producerActivity: align\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: alignment-summary.json\n+          producerActivity: align\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: flagstat.json\n+          producerActivity: align\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: idxstats.tsv\n+          producerActivity: align\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: SRR3403832_1.fastq\n+          producerActivity: extract-reads\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: SRR3403832_2.fastq\n+          producerActivity: extract-reads\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.1.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.2.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.3.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.4.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.rev.1.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: align\n+          logicalName: reference.rev.2.bt2\n+          producerActivity: index\n+          sizeBytes: 1\n+        - consumerActivity: visualize\n+          logicalName: validation.json\n+          producerActivity: package\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:64be277b2578556ab82fafa90dcc1afccc120c4de8f08f5185e6959a9da3aeff",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "sra-search-local-local-637b388236-manual-plan-20261115t181424.304408794",
+            "run_id": "sra-search-local-local-637b388236-run-20261115t181424.364230297"
+          },
+          "status": "completed",
+          "durationSeconds": 84.05802798271179,
+          "metrics": {
+            "activity_count": 5,
+            "completed_activity_count": 5,
+            "computeSeconds": 47.66205930709839,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 84.05802798271179,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 5,
+            "queueSeconds": 0,
+            "transferSeconds": 11.972856283187866,
+            "transferred_bytes": 3826802333
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

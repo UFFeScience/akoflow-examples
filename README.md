@@ -2,11 +2,11 @@
 
 Local runnable examples for [AkôFlow](https://github.com/UFFeScience/akoflow), with the same activity DAGs used in Desktop and in the project documentation.
 
-The catalog contains 27 small CPU workloads and the full 58-activity Montage 050d scientific workflow. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
+The catalog contains 27 small CPU workloads, the full 58-activity Montage 050d scientific workflow, and an eleven-activity Earthquake workflow using actual USGS observations. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
 
 ## Clone once and run a local example
 
-Install Go and Python 3.12+. Blender and Montage also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
+Install Go and Python 3.12+. Blender, Earthquake and Montage also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
 
 ```sh
 git clone https://github.com/UFFeScience/akoflow-examples.git
@@ -17,6 +17,7 @@ Each command below starts from the repository root and keeps your shell in that 
 
 | Example | Local command (from the repository root) |
 | --- | --- |
+| [USGS Earthquake](scientific-workflows/earthquake/README.md) | `(cd scientific-workflows/earthquake && ./prepare.sh && ./run.sh)` |
 | [Montage 050 locally](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
 | [AI Assisted Analysis](scientific-ai/ai-assisted-analysis/README.md) | `(cd scientific-ai/ai-assisted-analysis && ./prepare.sh && ./run.sh)` |
 | [Experiment Feedback Loop](scientific-ai/experiment-feedback-loop/README.md) | `(cd scientific-ai/experiment-feedback-loop && ./prepare.sh && ./run.sh)` |

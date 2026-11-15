@@ -1,0 +1,464 @@
+{
+  "id": "1500f644e5a8be9aa822162244f580b752e626d3bd86dc32020dc382cccd1b7d",
+  "publication": {
+    "id": "824941b3-f2f7-489c-bd2d-cf3047e12a3f",
+    "title": "Sarek \u2014 Regional Germline Variant Calling",
+    "slug": "scientific-workflows-sarek",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 4 completed activities.",
+    "readme": "# Sarek \u2014 Regional Germline Variant Calling\n\nRun the unmodified nf-core/sarek 3.12.0 pipeline (786a11bb4f989751d1c4bb87908ffc6096635ff3, MIT) through Ak\u00f4Flow. Four outer native activities acquire real frozen inputs, execute the original Nextflow variant-calling pipeline, calculate scientific views and retain owned final artifacts. Internal Nextflow task counts/timings are kept separately; four outer activities are not a claim that Sarek has only four tasks.\n\n## Real regional execution profile\n\nThe profile calls diploid germline variants on GRCh38 chr20:10000001-11000000, starting from 280,468 genuine HG002 Illumina 2x250 alignment records. All alignments overlapping a 1000bp-flanked interval are retained without downsampling. This is a bounded 1Mb call profile, not whole-genome calling or raw-read mapping. The full compatible 3,263,683,042-byte IGSR GRCh38 reference includes all 2,580 alignment contigs with matching lengths (3,366 total reference contigs). Full reference SHA256, original BAM/index URI, ETag/size/date, exact extraction bounds and frozen file hashes are recorded.\n\nThe original published alignment has no read groups. Input freezing adds one explicitly documented combined HG002/ILLUMINA read group and coordinate-sorts the region. A canonical digest of every first-eleven-field SAM record verifies that reads, sequences, qualities, alignment coordinates and CIGARs remain unchanged. No lane-level provenance or new recalibration is inferred. The frozen regional BAM and complete compressed reference are public hash-pinned snapshots of the original unrestricted GIAB/IGSR data; input preparation is not included in native variant-calling timing.\n\nThe original pipeline runs with --step variant_calling --tools haplotypecaller and the real BED interval. It retains original reference preparation, GATK HaplotypeCaller and QC/reporting. Optional CNN tranche filtering is explicitly disabled with --skip_tools haplotypecaller_filter: this bounded profile supplies no appropriate external known-site calibration set. Outputs are raw unfiltered research calls. No BQSR, whole-genome processing, trained-filter calibration, clinical interpretation or measured accuracy against a truth set is claimed.\n\n## Execution and result views\n\nUse ./prepare.sh, ./validate.sh -definition, ./run.sh and ./validate.sh. The immutable Docker base already supplies Nextflow 25.10.4, nf-schema 2.7.2, nf-core-utils 0.4.0, nf-fgbio 1.0.0, nf-prov 1.7.0, Python plotting and existing tools; original Sarek dependency recipes are added without modifying upstream source. Twenty-four selected original module recipes use eleven pinned preinstalled environment prefixes. Only acquisition needs network after image preparation. The original pipeline uses Nextflow's local executor inside the activity, with no nested Docker privilege. It permits two inner tasks with two CPUs/4GiB each, within the four-CPU/12GiB native allocation.\n\nScientific figures show observed allele classes/positions/QUAL/read fractions and actual genotype counts. Counts are derived from the original VCF, with independently checked reference alleles, BAM record integrity and completed task trace. All original reports, trace/timeline, package locks, regional BAM, reference crop and result hashes are retained. Disposable Nextflow symlink work/cache directories are removed only after all original outputs are archived, before regular-artifact handoff. A definition check alone is not scientific completion; completed execution evidence is published only after an actual native run and independent validation.\n\nSources: https://github.com/nf-core/sarek/tree/786a11bb4f989751d1c4bb87908ffc6096635ff3 ; https://registry.opendata.aws/giab/ ; https://github.com/igsr/1000Genomes_data_indexes/blob/master/README_using_1000genomes_cram.md .\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+  "workflowName": "sarek-local-c963b87180",
+  "yaml": "name: sarek-local-c963b87180\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - acquire\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sarek-local\n            workspaceSeedPath: \"\"\n          name: acquire\n          runtime: sarek-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - pipeline\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n                    type: oci\n          cpuLimit: \"4\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"12884901888\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sarek-local\n            workspaceSeedPath: \"\"\n          name: pipeline\n          runtime: sarek-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - visuals\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - pipeline\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sarek-local\n            workspaceSeedPath: \"\"\n          name: visuals\n          runtime: sarek-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - package\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - visuals\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: sarek-local\n            workspaceSeedPath: \"\"\n          name: package\n          runtime: sarek-local\n    dataDependencies:\n        - consumerActivity: pipeline\n          logicalName: observations.tar\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: visuals\n          logicalName: pipeline-results.tar.gz\n          producerActivity: pipeline\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-results.tar.gz\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-summary.json\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: genotype-observations.png\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: regional-variants.png\n          producerActivity: visuals\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "sarek-local-c963b87180-acquire",
+      "exitCode": 0,
+      "finishedAt": 1794780155.6979203,
+      "log": "Verified full frozen real input: HG002.chr20-10-11Mb.bam 40541058\nVerified full frozen real input: HG002.chr20-10-11Mb.bam.bai 28672\nVerified full frozen real input: reference.fa.gz 905452288\nVerified full frozen real input: intervals.bed 24\n[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794780045.3204045,
+      "status": "completed"
+    },
+    {
+      "activityId": "sarek-local-c963b87180-package",
+      "exitCode": 0,
+      "finishedAt": 1794780311.1319082,
+      "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794780310.8771927,
+      "status": "completed"
+    },
+    {
+      "activityId": "sarek-local-c963b87180-pipeline",
+      "exitCode": 0,
+      "finishedAt": 1794780287.0115688,
+      "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794780167.0491567,
+      "status": "completed"
+    },
+    {
+      "activityId": "sarek-local-c963b87180-visuals",
+      "exitCode": 0,
+      "finishedAt": 1794780300.1074286,
+      "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794780296.161062,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+      "dataObjectId": "9a5b2655619811b9585ed50b791f9cb7",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "e2779fba9ec0b3ddd184faa12bd4ca55",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-acquire",
+      "relativePath": "acquisition.json",
+      "sizeBytes": 3315
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+      "dataObjectId": "a83fe0a17a86cf6bd8a52d620496e3ad",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "627dad0c7770a175a7ab1f401a20516e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-acquire",
+      "relativePath": "observations.tar",
+      "sizeBytes": 946032640
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+      "dataObjectId": "1a88b3666788a7a7023cad4ea63931f3",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "712899a0a375797593a4158300451b8b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-acquire",
+      "relativePath": "stage-acquire.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+      "dataObjectId": "51fc3b5e882da7c53831274ae4de949d",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "81b9694ea7e3784d4de11cef6251e816",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-package",
+      "relativePath": "published-genotype-observations.png",
+      "sizeBytes": 32198
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+      "dataObjectId": "02e713c13e713e8829e00551ba25ec43",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "20004b4eb4e9d9446aa1bff827fb1e81",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-package",
+      "relativePath": "published-regional-variants.png",
+      "sizeBytes": 116892
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+      "dataObjectId": "b2e714cf074ea255ee42036fad20a09d",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "e27cd78f3b8c25f78d5a601021988d43",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-package",
+      "relativePath": "sarek-results.tar.gz",
+      "sizeBytes": 51278632
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+      "dataObjectId": "659caa95260194da04a4e32d79a31214",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "18856f572461eb812b61690d4587c9bf",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-package",
+      "relativePath": "sarek-summary.json",
+      "sizeBytes": 20791
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+      "dataObjectId": "b8f2eabca7a79491612985ad1516358e",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "7eb2c81ed743970df0a1da10e8e4fcdc",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-package",
+      "relativePath": "stage-package.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+      "dataObjectId": "e4a6be067c0ed556bbacaaea7bdfb11b",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "15f4e5ed2ac473a5eb02573edfce5e23",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": ".nextflow.log",
+      "sizeBytes": 160245
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+      "dataObjectId": "ee7ffedf4b519b37451c51c986af8531",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "f7a567364db90c899d4ae0c8a5f17e61",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "nextflow-console.log",
+      "sizeBytes": 5136
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+      "dataObjectId": "bbb3d31b1c98363ccd7c8246b80c27e5",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "82445c344cf8151a8b129f7bc9f3815d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "nextflow-report.html",
+      "sizeBytes": 3008314
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+      "dataObjectId": "c7095a31e1d1debe2b5023d427048d3c",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "e190cad435f98ff1ea384634e2345631",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "nextflow-timeline.html",
+      "sizeBytes": 255941
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+      "dataObjectId": "bf6192e2ca0b6be5394ea431b590db9a",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "ca52a83489fa29ba32e3b6b4d6a3e7b6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "nextflow-trace.tsv",
+      "sizeBytes": 2507
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+      "dataObjectId": "857d3268defab32792744b9e09843119",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "823e3f354690f48d19d59191e15362be",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "params.json",
+      "sizeBytes": 752
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+      "dataObjectId": "87d21646be2cb1bdf87010ec194e1bd6",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "2e75d9df2cc81816dbc9825695ed1af4",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "pipeline-results.tar.gz",
+      "sizeBytes": 51127683
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+      "dataObjectId": "dd28ce978d6cb6cd87561f64af859759",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "d7971ca1fd0f83e4bd6134ca7bb0aea3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "pipeline-run.json",
+      "sizeBytes": 1731
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+      "dataObjectId": "3a02f9a4a05a1c4aee39f28dec4d3c39",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "80d79332e9e5ceac8302a57b456d220a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "reference-region.fa",
+      "sizeBytes": 1016339
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+      "dataObjectId": "3b4bf2b2342d9f74dd6212231b2e3d14",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "777ca5b3b0850e49a5f092ad7854be22",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "reference-validation.json",
+      "sizeBytes": 391
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+      "dataObjectId": "176c5bbb7c58e777ee7fbeffe26c5d00",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "e0de2c643d3260cb61ff123f251d9cc8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "samplesheet.csv",
+      "sizeBytes": 331
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+      "dataObjectId": "45e1b0840ac5ef9df3d7babfb15fdc50",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "b9196e481a55c5283bf66f42825c0464",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-pipeline",
+      "relativePath": "stage-pipeline.json",
+      "sizeBytes": 49
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+      "dataObjectId": "0ca4c395047052695e23a464322cc5dc",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "060627d3488ce2a3b809342ef1312723",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "derived-results.tar.gz",
+      "sizeBytes": 51278632
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+      "dataObjectId": "efa39aa97a306c85bd96d546eefd1a23",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "b1c4c45d43486a718a23443b97dbfd15",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "derived-summary.json",
+      "sizeBytes": 20791
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+      "dataObjectId": "b7e7691293e2b7cce99d0a535e8a3033",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "57d896217a0590e6a2619448cc12cff2",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "genotype-observations.png",
+      "sizeBytes": 32198
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+      "dataObjectId": "fbb2335815b758b78e2082d4d5d9b95f",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "9285d8bee61c27ead2e91025e76b38e2",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "regional-variants.png",
+      "sizeBytes": 116892
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+      "dataObjectId": "4f9f29ca34c85e545162b7747645c0ea",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "82c2c0839c7b412ffaf64ecdae1023fb",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "stage-visuals.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+      "dataObjectId": "6d81c6f79946a1a168dbeb0aa47c0239",
+      "discovered": true,
+      "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "id": "c46f65c66abd69ed494c54943f75ff03",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "sarek-local-c963b87180-visuals",
+      "relativePath": "variant-observations.tsv",
+      "sizeBytes": 74024
+    }
+  ],
+  "exportedAt": "2026-11-15T22:06:17.172882267Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "sarek-local-c963b87180",
+      "workflowVersionId": "sarek-local-c963b87180-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 4,
+      "redactionCount": 0,
+      "digest": "d069d57fa06e26556527030f6ebbaf79bf9627f51c8450c661689a7f8796d3e5"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,137 @@\n+name: sarek-local-c963b87180\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - acquire\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sarek-local\n+            workspaceSeedPath: \"\"\n+          name: acquire\n+          runtime: sarek-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - pipeline\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n+                    type: oci\n+          cpuLimit: \"4\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"12884901888\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sarek-local\n+            workspaceSeedPath: \"\"\n+          name: pipeline\n+          runtime: sarek-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - visuals\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - pipeline\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sarek-local\n+            workspaceSeedPath: \"\"\n+          name: visuals\n+          runtime: sarek-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - package\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - visuals\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: sarek-local\n+            workspaceSeedPath: \"\"\n+          name: package\n+          runtime: sarek-local\n+    dataDependencies:\n+        - consumerActivity: pipeline\n+          logicalName: observations.tar\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: visuals\n+          logicalName: pipeline-results.tar.gz\n+          producerActivity: pipeline\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-results.tar.gz\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-summary.json\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: genotype-observations.png\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: regional-variants.png\n+          producerActivity: visuals\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:1c0512e61ae60c7a5418fdbb1b54e980889ec3291a59d5e8b3644d05ac93dedb",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736",
+            "run_id": "sarek-local-c963b87180-run-20261115t220044.437311757"
+          },
+          "status": "completed",
+          "durationSeconds": 265.81150364875793,
+          "metrics": {
+            "activity_count": 4,
+            "completed_activity_count": 4,
+            "computeSeconds": 234.5410099029541,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 265.81150364875793,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 4,
+            "queueSeconds": 0,
+            "transferSeconds": 8.235610008239746,
+            "transferred_bytes": 3000789432
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "status": "verified-real-inputs",
+  "profile": "HG002 germline calling on chr20:10000001-11000000, with all real overlapping alignments from a 1000bp-flanked region, no downsampling. This is a bounded regional call profile, not whole-genome calling or raw-read mapping.",
+  "sample": "HG002",
+  "regionBED0Based": [
+    "chr20",
+    10000000,
+    11000000
+  ],
+  "alignmentExtractionSAM1Based": "chr20:9999001-11001000",
+  "selectedAlignments": 280468,
+  "sourceAlignment": {
+    "url": "https://giab.s3.amazonaws.com/data/AshkenazimTrio/HG002_NA24385_son/NIST_Illumina_2x250bps/novoalign_bams/HG002.GRCh38.2x250.bam",
+    "bytes": 130770531934,
+    "etag": "\"41ed5069d8bc67cd70bb5aae1acb10ff-975\"",
+    "lastModified": "Tue, 20 Oct 2026 13:50:22 GMT"
+  },
+  "sourceAlignmentIndex": {
+    "url": "https://giab.s3.amazonaws.com/data/AshkenazimTrio/HG002_NA24385_son/NIST_Illumina_2x250bps/novoalign_bams/HG002.GRCh38.2x250.bam.bai",
+    "bytes": 9451360,
+    "etag": "\"a3c2b449df6509ca83fbd3fea22b9aee\"",
+    "lastModified": "Tue, 20 Oct 2026 13:33:02 GMT"
+  },
+  "sourceReference": {
+    "url": "https://1000genomes.s3.amazonaws.com/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa",
+    "bytes": 3263683042,
+    "etag": "\"bf746464afc4d1a6e9d5f8dc5f4773a3-4\"",
+    "lastModified": "Tue, 10 Mar 2015 14:37:14 GMT",
+    "sha256": "3b103f4742abfd54938fb0333e19ad067635c8eb86f1dbf0ce44b165c4292b50"
+  },
+  "referenceContigs": 3366,
+  "sourceAlignmentContigs": 2580,
+  "allAlignmentContigLengthsMatchReference": true,
+  "readGroupAdaptation": "Original published BAM has no read groups. One explicitly documented combined-library HG002/ILLUMINA group was added; all first eleven SAM fields, alignment records, sequences and qualities were independently verified unchanged after sorting. This does not claim lane provenance or recalibration.",
+  "alignmentCoreFieldsSHA256": "4220e74b1df7b7827e4abe1ed883b8363c338192b2f590e40a954cb5101676b7",
+  "files": [
+    {
+      "filename": "HG002.chr20-10-11Mb.bam",
+      "bytes": 40541058,
+      "sha256": "1f2fbf7267f7f2b4dbc7208ceedb2c0cb33e832c89d172207d80509a424da3b7",
+      "url": "https://hub.akoflow.com/showcase-results/scientific/sarek/inputs/HG002.chr20-10-11Mb.bam"
+    },
+    {
+      "filename": "HG002.chr20-10-11Mb.bam.bai",
+      "bytes": 28672,
+      "sha256": "ad9e8f881da1ad8fff85d0a4a7cdff00fed5476fd40f4e190e13cad4de435bd3",
+      "url": "https://hub.akoflow.com/showcase-results/scientific/sarek/inputs/HG002.chr20-10-11Mb.bam.bai"
+    },
+    {
+      "filename": "reference.fa.gz",
+      "bytes": 905452288,
+      "sha256": "75bb9329cace9a71c0d53a981307f94d6c0eb46fc93e1febade0228d8c076a1c",
+      "url": "https://hub.akoflow.com/showcase-results/scientific/sarek/inputs/reference.fa.gz"
+    },
+    {
+      "filename": "intervals.bed",
+      "bytes": 24,
+      "sha256": "9df4ad3d4d3bced4f6abca8189198dddc85322bea31716f1ce1c74d4fa15cc34",
+      "url": "https://hub.akoflow.com/showcase-results/scientific/sarek/inputs/intervals.bed"
+    }
+  ],
+  "frozenInputHosting": "Public hash-pinned snapshot of real selected GIAB alignments and the complete primary IGSR reference. Primary origins, extraction bounds and the read-group adaptation are preserved; input freezing is not measured native variant calling."
+}

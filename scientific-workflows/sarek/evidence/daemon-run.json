@@ -1,0 +1,3525 @@
+{
+  "activityCount": 4,
+  "image": "ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345",
+  "imageId": "sha256:a64d040a30f543454d1d2d51ce5c77bdb3022b9d4cf0a6e1b474fac07803bb20",
+  "observedAt": "2026-11-15T22:05:26.925421+00:00",
+  "planId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736",
+  "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+  "status": "completed",
+  "workflowId": "sarek-local-c963b87180",
+  "completedActivityCount": 4,
+  "projection": {
+    "activities": [
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-acquire",
+        "activityId": "sarek-local-c963b87180-acquire",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780044.9556096,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780044.9556096,
+        "startedAt": 1794780045.3204045,
+        "finishedAt": 1794780155.6979203,
+        "runtimeSeconds": 110.37751579284668,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sarek-local"
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-pipeline",
+        "activityId": "sarek-local-c963b87180-pipeline",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780159.1491776,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780159.1491776,
+        "startedAt": 1794780167.0491567,
+        "finishedAt": 1794780287.0115688,
+        "runtimeSeconds": 119.96241211891174,
+        "queueSeconds": 0,
+        "transferSeconds": 2.570673704147339,
+        "transferBytes": 946036003,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 5.293910980224609,
+          "preparationFinishedAt": 1794780161.7552457,
+          "preparationStartedAt": 1794780159.184572,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.01158595085144043,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.570673704147339,
+          "transferWorkSeconds": 2.570673704147339
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-visuals",
+        "activityId": "sarek-local-c963b87180-visuals",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780289.483424,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780289.483424,
+        "startedAt": 1794780296.161062,
+        "finishedAt": 1794780300.1074286,
+        "runtimeSeconds": 3.946366548538208,
+        "queueSeconds": 0,
+        "transferSeconds": 2.8142952919006348,
+        "transferBytes": 1001615422,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 3.829134464263916,
+          "preparationFinishedAt": 1794780292.3319275,
+          "preparationStartedAt": 1794780289.5176322,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012186765670776367,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.8142952919006348,
+          "transferWorkSeconds": 2.8142952919006348
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-package",
+        "activityId": "sarek-local-c963b87180-package",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780301.7755146,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780301.7755146,
+        "startedAt": 1794780310.8771927,
+        "finishedAt": 1794780311.1319082,
+        "runtimeSeconds": 0.2547154426574707,
+        "queueSeconds": 0,
+        "transferSeconds": 2.8506410121917725,
+        "transferBytes": 1053138007,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 6.216108560562134,
+          "preparationFinishedAt": 1794780304.6610842,
+          "preparationStartedAt": 1794780301.8104432,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011159181594848633,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.8506410121917725,
+          "transferWorkSeconds": 2.8506410121917725
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-acquire",
+        "activityId": "sarek-local-c963b87180-acquire",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780044.9556096,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780044.9556096,
+        "startedAt": 1794780045.3204045,
+        "finishedAt": 1794780155.6979203,
+        "runtimeSeconds": 110.37751579284668,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sarek-local"
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-pipeline",
+        "activityId": "sarek-local-c963b87180-pipeline",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780159.1491776,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780159.1491776,
+        "startedAt": 1794780167.0491567,
+        "finishedAt": 1794780287.0115688,
+        "runtimeSeconds": 119.96241211891174,
+        "queueSeconds": 0,
+        "transferSeconds": 2.570673704147339,
+        "transferBytes": 946036003,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 5.293910980224609,
+          "preparationFinishedAt": 1794780161.7552457,
+          "preparationStartedAt": 1794780159.184572,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.01158595085144043,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.570673704147339,
+          "transferWorkSeconds": 2.570673704147339
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-visuals",
+        "activityId": "sarek-local-c963b87180-visuals",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780289.483424,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780289.483424,
+        "startedAt": 1794780296.161062,
+        "finishedAt": 1794780300.1074286,
+        "runtimeSeconds": 3.946366548538208,
+        "queueSeconds": 0,
+        "transferSeconds": 2.8142952919006348,
+        "transferBytes": 1001615422,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 3.829134464263916,
+          "preparationFinishedAt": 1794780292.3319275,
+          "preparationStartedAt": 1794780289.5176322,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012186765670776367,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.8142952919006348,
+          "transferWorkSeconds": 2.8142952919006348
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "planAssignmentId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736-sarek-local-c963b87180-package",
+        "activityId": "sarek-local-c963b87180-package",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794780301.7755146,
+        "dataReadyAt": 0,
+        "queuedAt": 1794780301.7755146,
+        "startedAt": 1794780310.8771927,
+        "finishedAt": 1794780311.1319082,
+        "runtimeSeconds": 0.2547154426574707,
+        "queueSeconds": 0,
+        "transferSeconds": 2.8506410121917725,
+        "transferBytes": 1053138007,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 6.216108560562134,
+          "preparationFinishedAt": 1794780304.6610842,
+          "preparationStartedAt": 1794780301.8104432,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011159181594848633,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.8506410121917725,
+          "transferWorkSeconds": 2.8506410121917725
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package-0",
+        "planId": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-package",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794780301.8104432,
+        "finishedAt": 1794780304.6610842,
+        "durationSeconds": 2.8506410121917725,
+        "transferredBytes": 1053138007,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-visuals",
+          "consumerActivityId": "sarek-local-c963b87180-package",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 21,
+          "sshChannelWaitSeconds": 1.4306e-05,
+          "rsyncExecutionSeconds": 1.733637731,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1053138007,
+        "filesTransferred": 21
+      },
+      {
+        "id": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-0",
+        "planId": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-pipeline",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794780159.184572,
+        "finishedAt": 1794780161.7552457,
+        "durationSeconds": 2.570673704147339,
+        "transferredBytes": 946036003,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-acquire",
+          "consumerActivityId": "sarek-local-c963b87180-pipeline",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 6.59e-07,
+          "rsyncExecutionSeconds": 1.587111886,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 946036003,
+        "filesTransferred": 3
+      },
+      {
+        "id": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-0",
+        "planId": "transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-visuals",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794780289.5176322,
+        "finishedAt": 1794780292.3319275,
+        "durationSeconds": 2.8142952919006348,
+        "transferredBytes": 1001615422,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-pipeline",
+          "consumerActivityId": "sarek-local-c963b87180-visuals",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 15,
+          "sshChannelWaitSeconds": 8.07e-07,
+          "rsyncExecutionSeconds": 1.6981700709999998,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1001615422,
+        "filesTransferred": 15
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T22:05:26.899884189Z"
+    },
+    "dataLocations": [
+      {
+        "id": "e243dba7be9bee3b86f29e94b1d7a696",
+        "dataObjectInstanceId": "e2779fba9ec0b3ddd184faa12bd4ca55",
+        "storageResourceId": "a18c07e5533612e233c9d2f711911187",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire/acquisition.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "72777f37083282fafd83d89f7998fb61",
+        "dataObjectInstanceId": "627dad0c7770a175a7ab1f401a20516e",
+        "storageResourceId": "a18c07e5533612e233c9d2f711911187",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire/observations.tar",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "269283fbf3faaf839cf62743cfb661fc",
+        "dataObjectInstanceId": "712899a0a375797593a4158300451b8b",
+        "storageResourceId": "a18c07e5533612e233c9d2f711911187",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire/stage-acquire.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "c2ee6471340bd5418e7ef24361a4c90b",
+        "dataObjectInstanceId": "81b9694ea7e3784d4de11cef6251e816",
+        "storageResourceId": "2f9b6e79431d46575364e04a35b7a1f2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package/published-genotype-observations.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "19cc24fea553fef8fc8d3e8e228926f5",
+        "dataObjectInstanceId": "20004b4eb4e9d9446aa1bff827fb1e81",
+        "storageResourceId": "2f9b6e79431d46575364e04a35b7a1f2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package/published-regional-variants.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "7fe7b573e1a2f6291cb15853bf716615",
+        "dataObjectInstanceId": "e27cd78f3b8c25f78d5a601021988d43",
+        "storageResourceId": "2f9b6e79431d46575364e04a35b7a1f2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package/sarek-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ceb725f88adfec05405462a48e4e9714",
+        "dataObjectInstanceId": "18856f572461eb812b61690d4587c9bf",
+        "storageResourceId": "2f9b6e79431d46575364e04a35b7a1f2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package/sarek-summary.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b6f76a04c30f80ff8903e75765f958d7",
+        "dataObjectInstanceId": "7eb2c81ed743970df0a1da10e8e4fcdc",
+        "storageResourceId": "2f9b6e79431d46575364e04a35b7a1f2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package/stage-package.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "f7c2b30fc88a27cb87420de4ceba6e00",
+        "dataObjectInstanceId": "15f4e5ed2ac473a5eb02573edfce5e23",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/.nextflow.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "094e331ad3d9674f235a24a54abfc0fe",
+        "dataObjectInstanceId": "f7a567364db90c899d4ae0c8a5f17e61",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/nextflow-console.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "90f3ff012121183b90e48d7433122e78",
+        "dataObjectInstanceId": "82445c344cf8151a8b129f7bc9f3815d",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/nextflow-report.html",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "29f3bb22d70a661274ae0c6bac2ee7e5",
+        "dataObjectInstanceId": "e190cad435f98ff1ea384634e2345631",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/nextflow-timeline.html",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b9ddf9df8714a9fd59e76fb664a9ee47",
+        "dataObjectInstanceId": "ca52a83489fa29ba32e3b6b4d6a3e7b6",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/nextflow-trace.tsv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "5efacb6731b2cb931d7301e44585036e",
+        "dataObjectInstanceId": "823e3f354690f48d19d59191e15362be",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/params.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "4a738fbd963177c2cc507d8a76280ac1",
+        "dataObjectInstanceId": "2e75d9df2cc81816dbc9825695ed1af4",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/pipeline-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "361fcc05d303246b994b000589deabdd",
+        "dataObjectInstanceId": "d7971ca1fd0f83e4bd6134ca7bb0aea3",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/pipeline-run.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "3039005fcab4980872caf9cec5de3cba",
+        "dataObjectInstanceId": "80d79332e9e5ceac8302a57b456d220a",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/reference-region.fa",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "0db88f4b5b38c9e856377bc6ea19250a",
+        "dataObjectInstanceId": "777ca5b3b0850e49a5f092ad7854be22",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/reference-validation.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "c90f68c3cf26fdbac50ff1e91da7653b",
+        "dataObjectInstanceId": "e0de2c643d3260cb61ff123f251d9cc8",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/samplesheet.csv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "80af7b7ec2c5b2b00ca11dbf5a669d98",
+        "dataObjectInstanceId": "b9196e481a55c5283bf66f42825c0464",
+        "storageResourceId": "78c75b17c2d279789e4f52199ee4746e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline/stage-pipeline.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "33f7986ab9e3112b5a8bd44df207e7bb",
+        "dataObjectInstanceId": "060627d3488ce2a3b809342ef1312723",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/derived-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "430835b80b56d45ecda4eebdc2b5b45c",
+        "dataObjectInstanceId": "b1c4c45d43486a718a23443b97dbfd15",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/derived-summary.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "df73c1787787eef16c93710547d38926",
+        "dataObjectInstanceId": "57d896217a0590e6a2619448cc12cff2",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/genotype-observations.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b4b72b1b24df78a8b45751e47d43732b",
+        "dataObjectInstanceId": "9285d8bee61c27ead2e91025e76b38e2",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/regional-variants.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "e9c22a4e83be2cbe14ffb7c02a927df8",
+        "dataObjectInstanceId": "82c2c0839c7b412ffaf64ecdae1023fb",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/stage-visuals.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "fc13c79694c214062a043ba37ef07648",
+        "dataObjectInstanceId": "c46f65c66abd69ed494c54943f75ff03",
+        "storageResourceId": "5f4486d59f0fab1182c938167edb6e39",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals/variant-observations.tsv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "e2779fba9ec0b3ddd184faa12bd4ca55",
+        "dataObjectId": "9a5b2655619811b9585ed50b791f9cb7",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-acquire",
+        "attempt": 1,
+        "relativePath": "acquisition.json",
+        "sizeBytes": 3315,
+        "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "627dad0c7770a175a7ab1f401a20516e",
+        "dataObjectId": "a83fe0a17a86cf6bd8a52d620496e3ad",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-acquire",
+        "attempt": 1,
+        "relativePath": "observations.tar",
+        "sizeBytes": 946032640,
+        "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "712899a0a375797593a4158300451b8b",
+        "dataObjectId": "1a88b3666788a7a7023cad4ea63931f3",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-acquire",
+        "attempt": 1,
+        "relativePath": "stage-acquire.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "81b9694ea7e3784d4de11cef6251e816",
+        "dataObjectId": "51fc3b5e882da7c53831274ae4de949d",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-package",
+        "attempt": 1,
+        "relativePath": "published-genotype-observations.png",
+        "sizeBytes": 32198,
+        "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "20004b4eb4e9d9446aa1bff827fb1e81",
+        "dataObjectId": "02e713c13e713e8829e00551ba25ec43",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-package",
+        "attempt": 1,
+        "relativePath": "published-regional-variants.png",
+        "sizeBytes": 116892,
+        "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "e27cd78f3b8c25f78d5a601021988d43",
+        "dataObjectId": "b2e714cf074ea255ee42036fad20a09d",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-package",
+        "attempt": 1,
+        "relativePath": "sarek-results.tar.gz",
+        "sizeBytes": 51278632,
+        "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "18856f572461eb812b61690d4587c9bf",
+        "dataObjectId": "659caa95260194da04a4e32d79a31214",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-package",
+        "attempt": 1,
+        "relativePath": "sarek-summary.json",
+        "sizeBytes": 20791,
+        "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "7eb2c81ed743970df0a1da10e8e4fcdc",
+        "dataObjectId": "b8f2eabca7a79491612985ad1516358e",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-package",
+        "attempt": 1,
+        "relativePath": "stage-package.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "15f4e5ed2ac473a5eb02573edfce5e23",
+        "dataObjectId": "e4a6be067c0ed556bbacaaea7bdfb11b",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": ".nextflow.log",
+        "sizeBytes": 160245,
+        "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f7a567364db90c899d4ae0c8a5f17e61",
+        "dataObjectId": "ee7ffedf4b519b37451c51c986af8531",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-console.log",
+        "sizeBytes": 5136,
+        "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "82445c344cf8151a8b129f7bc9f3815d",
+        "dataObjectId": "bbb3d31b1c98363ccd7c8246b80c27e5",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-report.html",
+        "sizeBytes": 3008314,
+        "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "e190cad435f98ff1ea384634e2345631",
+        "dataObjectId": "c7095a31e1d1debe2b5023d427048d3c",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-timeline.html",
+        "sizeBytes": 255941,
+        "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "ca52a83489fa29ba32e3b6b4d6a3e7b6",
+        "dataObjectId": "bf6192e2ca0b6be5394ea431b590db9a",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-trace.tsv",
+        "sizeBytes": 2507,
+        "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "823e3f354690f48d19d59191e15362be",
+        "dataObjectId": "857d3268defab32792744b9e09843119",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "params.json",
+        "sizeBytes": 752,
+        "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "2e75d9df2cc81816dbc9825695ed1af4",
+        "dataObjectId": "87d21646be2cb1bdf87010ec194e1bd6",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "pipeline-results.tar.gz",
+        "sizeBytes": 51127683,
+        "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "d7971ca1fd0f83e4bd6134ca7bb0aea3",
+        "dataObjectId": "dd28ce978d6cb6cd87561f64af859759",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "pipeline-run.json",
+        "sizeBytes": 1731,
+        "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "80d79332e9e5ceac8302a57b456d220a",
+        "dataObjectId": "3a02f9a4a05a1c4aee39f28dec4d3c39",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "reference-region.fa",
+        "sizeBytes": 1016339,
+        "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "777ca5b3b0850e49a5f092ad7854be22",
+        "dataObjectId": "3b4bf2b2342d9f74dd6212231b2e3d14",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "reference-validation.json",
+        "sizeBytes": 391,
+        "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "e0de2c643d3260cb61ff123f251d9cc8",
+        "dataObjectId": "176c5bbb7c58e777ee7fbeffe26c5d00",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "samplesheet.csv",
+        "sizeBytes": 331,
+        "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "b9196e481a55c5283bf66f42825c0464",
+        "dataObjectId": "45e1b0840ac5ef9df3d7babfb15fdc50",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "attempt": 1,
+        "relativePath": "stage-pipeline.json",
+        "sizeBytes": 49,
+        "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "060627d3488ce2a3b809342ef1312723",
+        "dataObjectId": "0ca4c395047052695e23a464322cc5dc",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "derived-results.tar.gz",
+        "sizeBytes": 51278632,
+        "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "b1c4c45d43486a718a23443b97dbfd15",
+        "dataObjectId": "efa39aa97a306c85bd96d546eefd1a23",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "derived-summary.json",
+        "sizeBytes": 20791,
+        "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "57d896217a0590e6a2619448cc12cff2",
+        "dataObjectId": "b7e7691293e2b7cce99d0a535e8a3033",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "genotype-observations.png",
+        "sizeBytes": 32198,
+        "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "9285d8bee61c27ead2e91025e76b38e2",
+        "dataObjectId": "fbb2335815b758b78e2082d4d5d9b95f",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "regional-variants.png",
+        "sizeBytes": 116892,
+        "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "82c2c0839c7b412ffaf64ecdae1023fb",
+        "dataObjectId": "4f9f29ca34c85e545162b7747645c0ea",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "stage-visuals.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "c46f65c66abd69ed494c54943f75ff03",
+        "dataObjectId": "6d81c6f79946a1a168dbeb0aa47c0239",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "attempt": 1,
+        "relativePath": "variant-observations.tsv",
+        "sizeBytes": 74024,
+        "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-acquire",
+        "consumerActivityId": "sarek-local-c963b87180-pipeline",
+        "sourceResourceId": "sarek-local-docker",
+        "targetResourceId": "sarek-local-docker",
+        "bytes": 946036003,
+        "startedAt": 1794780159.184572,
+        "finishedAt": 1794780161.7552457,
+        "durationSeconds": 2.570673704147339,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-acquire",
+          "consumerActivityId": "sarek-local-c963b87180-pipeline",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 6.59e-07,
+          "rsyncExecutionSeconds": 1.587111886,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 946036003
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "consumerActivityId": "sarek-local-c963b87180-visuals",
+        "sourceResourceId": "sarek-local-docker",
+        "targetResourceId": "sarek-local-docker",
+        "bytes": 1001615422,
+        "startedAt": 1794780289.5176322,
+        "finishedAt": 1794780292.3319275,
+        "durationSeconds": 2.8142952919006348,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-pipeline",
+          "consumerActivityId": "sarek-local-c963b87180-visuals",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 15,
+          "sshChannelWaitSeconds": 8.07e-07,
+          "rsyncExecutionSeconds": 1.6981700709999998,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1001615422
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package-0",
+        "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "consumerActivityId": "sarek-local-c963b87180-package",
+        "sourceResourceId": "sarek-local-docker",
+        "targetResourceId": "sarek-local-docker",
+        "bytes": 1053138007,
+        "startedAt": 1794780301.8104432,
+        "finishedAt": 1794780304.6610842,
+        "durationSeconds": 2.8506410121917725,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-c963b87180-visuals",
+          "consumerActivityId": "sarek-local-c963b87180-package",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 21,
+          "sshChannelWaitSeconds": 1.4306e-05,
+          "rsyncExecutionSeconds": 1.733637731,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1053138007
+      }
+    ],
+    "events": [
+      {
+        "id": "aed17867ac489253a01b6967e5e92704",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736"
+        },
+        "occurredAt": "2026-11-15T22:00:44.858190724Z"
+      },
+      {
+        "id": "08b4b008c196ed7f8bfb65c9746af8a0",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-acquire",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T22:00:46.861661352Z"
+      },
+      {
+        "id": "1a1f31ca045c718538f067346fe30d23",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-acquire",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 110.37751579284668,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T22:02:39.136955482Z"
+      },
+      {
+        "id": "06519e3003089b125980b46826d2cf67",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T22:02:48.58684759Z"
+      },
+      {
+        "id": "2540c2b809d9b1daf0d9a2bc6c1b2175",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 119.96241211891174,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T22:04:49.471474837Z"
+      },
+      {
+        "id": "56449449efb726d10203e76d123babc3",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-visuals",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T22:04:57.708181846Z"
+      },
+      {
+        "id": "e32d917887da0a2da24898c72922bb2e",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-visuals",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 3.946366548538208,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T22:05:01.763957304Z"
+      },
+      {
+        "id": "053a85d2cbc4f4e770b46f831f44ca1d",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-package",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T22:05:12.430155477Z"
+      },
+      {
+        "id": "63ae14abe2a5c405f38a8a7e7f05c0ee",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package",
+        "payload": {
+          "activityId": "sarek-local-c963b87180-package",
+          "attempt": 1,
+          "executionRunId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0.2547154426574707,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T22:05:14.047527864Z"
+      },
+      {
+        "id": "f39868aede661b749e223b5162db7e61",
+        "eventType": "execution.run.completed",
+        "aggregateType": "execution_run",
+        "aggregateId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "payload": {
+          "cost": 0,
+          "makespanSeconds": 265.81150364875793
+        },
+        "occurredAt": "2026-11-15T22:05:14.06006993Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-acquire",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "1bae5376ea7fd33b63400f4a35ff55f558bd3ebb7e977e2930b98a8ac52039d6",
+        "status": "completed",
+        "startedAt": 1794780045.3204045,
+        "finishedAt": 1794780155.6979203,
+        "exitCode": 0,
+        "log": "Verified full frozen real input: HG002.chr20-10-11Mb.bam 40541058\nVerified full frozen real input: HG002.chr20-10-11Mb.bam.bai 28672\nVerified full frozen real input: reference.fa.gz 905452288\nVerified full frozen real input: intervals.bed 24\n[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "activityId": "sarek-local-c963b87180-acquire",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire",
+          "startedAt": 1794780045.3204045,
+          "finishedAt": 1794780155.6979203,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "acquisition.json",
+              "change": "created",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780155656630866
+            },
+            {
+              "path": "observations.tar",
+              "change": "created",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780155552629562
+            },
+            {
+              "path": "stage-acquire.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780155656630866
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780155656630866
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780155552629562
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780155656630866
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794780045.3204045,
+              "finishedAt": 1794780155.6979203,
+              "durationSeconds": 110.37751579284668
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 3,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 946036003
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire",
+          "dockerMetricCPUSeconds": 6.520797537398338,
+          "dockerMetricObservedAt": 1794780154.0339415,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-acquire",
+          "submittedAt": 1794780045.3204045
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-package",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "5f073189a91defdccf77ee550847325002040949a721900a883faa3e5e6b52a1",
+        "status": "completed",
+        "startedAt": 1794780310.8771927,
+        "finishedAt": 1794780311.1319082,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "activityId": "sarek-local-c963b87180-package",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package",
+          "startedAt": 1794780310.8771927,
+          "finishedAt": 1794780311.1319082,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "published-genotype-observations.png",
+              "change": "created",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "published-regional-variants.png",
+              "change": "created",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "sarek-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "sarek-summary.json",
+              "change": "created",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780311075608900
+            },
+            {
+              "path": "stage-package.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "modifiedUnixNano": 1794780311093609133
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780304004517764
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780304004517764
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "genotype-observations.png",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780304588525287
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780304588525287
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780304617525661
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780304617525661
+            },
+            {
+              "path": "reference-region.fa",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "reference-validation.json",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "regional-variants.png",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "variant-observations.tsv",
+              "sizeBytes": 74024,
+              "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "modifiedUnixNano": 1794780304618525674
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780304004517764
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780304004517764
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "genotype-observations.png",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780304037518189
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780304039518215
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780304588525287
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780304588525287
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780304617525661
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780304617525661
+            },
+            {
+              "path": "published-genotype-observations.png",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "published-regional-variants.png",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "reference-region.fa",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "reference-validation.json",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "regional-variants.png",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "sarek-results.tar.gz",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "sarek-summary.json",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780311075608900
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "stage-package.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "modifiedUnixNano": 1794780311093609133
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794780304618525674
+            },
+            {
+              "path": "variant-observations.tsv",
+              "sizeBytes": 74024,
+              "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "modifiedUnixNano": 1794780304618525674
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794780310.8771927,
+              "finishedAt": 1794780311.1319082,
+              "durationSeconds": 0.2547154426574707
+            }
+          ],
+          "summary": {
+            "initialFiles": 21,
+            "finalFiles": 26,
+            "createdFiles": 5,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 51448561
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794780310.8771982,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package",
+          "submittedAt": 1794780310.8771927
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-pipeline",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "59d2a4bd502b9bd84dda9d12faf501f6b6c20562b7ef095c29546a6e5ef0482d",
+        "status": "completed",
+        "startedAt": 1794780167.0491567,
+        "finishedAt": 1794780287.0115688,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline",
+          "startedAt": 1794780167.0491567,
+          "finishedAt": 1794780287.0115688,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": ".nextflow.log",
+              "change": "created",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780277474176720
+            },
+            {
+              "path": "nextflow-console.log",
+              "change": "created",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780276682166561
+            },
+            {
+              "path": "nextflow-report.html",
+              "change": "created",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780277308174591
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "change": "created",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780277350175130
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "change": "created",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780276321161931
+            },
+            {
+              "path": "params.json",
+              "change": "created",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780186494018824
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780286657294606
+            },
+            {
+              "path": "pipeline-run.json",
+              "change": "created",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780284238263535
+            },
+            {
+              "path": "reference-region.fa",
+              "change": "created",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780284232263458
+            },
+            {
+              "path": "reference-validation.json",
+              "change": "created",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780284229263420
+            },
+            {
+              "path": "samplesheet.csv",
+              "change": "created",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780186494018824
+            },
+            {
+              "path": "stage-pipeline.json",
+              "change": "created",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780286971298640
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780161120699429
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780161712706862
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780161712706862
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780277474176720
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780161120699429
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780276682166561
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780277308174591
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780277350175130
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780276321161931
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780161712706862
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780186494018824
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780286657294606
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780284238263535
+            },
+            {
+              "path": "reference-region.fa",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780284232263458
+            },
+            {
+              "path": "reference-validation.json",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780284229263420
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780186494018824
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780161712706862
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780286971298640
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794780167.0491567,
+              "finishedAt": 1794780287.0115688,
+              "durationSeconds": 119.96241211891174
+            }
+          ],
+          "summary": {
+            "initialFiles": 3,
+            "finalFiles": 15,
+            "createdFiles": 12,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 55579419
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline",
+          "dockerMetricCPUSeconds": 241.6774355014563,
+          "dockerMetricObservedAt": 1794780285.7798803,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline",
+          "submittedAt": 1794780167.0491567
+        }
+      },
+      {
+        "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-visuals",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "1edf89cf3108fa1fdaae052ca868b2485cef45b9d13e3e5c61bed4d30d789b7f",
+        "status": "completed",
+        "startedAt": 1794780296.161062,
+        "finishedAt": 1794780300.1074286,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+          "activityId": "sarek-local-c963b87180-visuals",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals",
+          "startedAt": 1794780296.161062,
+          "finishedAt": 1794780300.1074286,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "derived-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780300002466227
+            },
+            {
+              "path": "derived-summary.json",
+              "change": "created",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780297469433624
+            },
+            {
+              "path": "genotype-observations.png",
+              "change": "created",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780297405432800
+            },
+            {
+              "path": "regional-variants.png",
+              "change": "created",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780297343432003
+            },
+            {
+              "path": "stage-visuals.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794780300013466368
+            },
+            {
+              "path": "variant-observations.tsv",
+              "change": "created",
+              "sizeBytes": 74024,
+              "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "modifiedUnixNano": 1794780297007427679
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780292255366554
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780292255366554
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780292288366978
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780292288366978
+            },
+            {
+              "path": "reference-region.fa",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "reference-validation.json",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780292289366991
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 160245,
+              "checksum": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 51278632,
+              "checksum": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "modifiedUnixNano": 1794780300002466227
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 20791,
+              "checksum": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "modifiedUnixNano": 1794780297469433624
+            },
+            {
+              "path": "genotype-observations.png",
+              "sizeBytes": 32198,
+              "checksum": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "modifiedUnixNano": 1794780297405432800
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 5136,
+              "checksum": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "modifiedUnixNano": 1794780291659358891
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3008314,
+              "checksum": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 255941,
+              "checksum": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 2507,
+              "checksum": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "modifiedUnixNano": 1794780291661358917
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "modifiedUnixNano": 1794780292255366554
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "modifiedUnixNano": 1794780292255366554
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 51127683,
+              "checksum": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "modifiedUnixNano": 1794780292288366978
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1731,
+              "checksum": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "modifiedUnixNano": 1794780292288366978
+            },
+            {
+              "path": "reference-region.fa",
+              "sizeBytes": 1016339,
+              "checksum": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "reference-validation.json",
+              "sizeBytes": 391,
+              "checksum": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "regional-variants.png",
+              "sizeBytes": 116892,
+              "checksum": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "modifiedUnixNano": 1794780297343432003
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794780292289366991
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794780300013466368
+            },
+            {
+              "path": "variant-observations.tsv",
+              "sizeBytes": 74024,
+              "checksum": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "modifiedUnixNano": 1794780297007427679
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794780296.161062,
+              "finishedAt": 1794780300.1074286,
+              "durationSeconds": 3.946366548538208
+            }
+          ],
+          "summary": {
+            "initialFiles": 15,
+            "finalFiles": 21,
+            "createdFiles": 6,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 51522585
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794780296.1610675,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals",
+          "submittedAt": 1794780296.161062
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "schedulePlanId": "sarek-local-c963b87180-manual-plan-20261115t220044.393490736",
+      "mode": "real",
+      "seed": 0,
+      "status": "completed",
+      "makespanSeconds": 265.81150364875793,
+      "cost": 0,
+      "activityCount": 4,
+      "completedActivityCount": 4,
+      "breakdown": {
+        "computeSeconds": 234.5410099029541,
+        "transferSeconds": 8.235610008239746,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 3000789432,
+      "kind": "workflow",
+      "title": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "workflowId": "sarek-local-c963b87180",
+      "workflowVersionId": "sarek-local-c963b87180-v1",
+      "workflowName": "sarek-local-c963b87180",
+      "environmentNames": [
+        "sarek local Docker"
+      ],
+      "startedAt": "2026-11-15T22:00:44Z",
+      "finishedAt": "2026-11-15T22:05:14Z"
+    },
+    "timeline": {
+      "startedAt": 1794780044,
+      "finishedAt": 1794780314,
+      "wallSeconds": 270,
+      "computeMakespanSeconds": 265.81150364875793,
+      "coveredWallSeconds": 258.5851001739502,
+      "unclassifiedWallSeconds": 11.414899826049805,
+      "totals": {
+        "resourceQueueSeconds": 0.4693262577056885,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 8.235610008239746,
+        "launchSeconds": 15.33915400505066,
+        "runtimeSeconds": 234.5410099029541,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-c963b87180-acquire",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794780044.9556096,
+          "finishedAt": 1794780045.3204045,
+          "durationSeconds": 0.3647949695587158
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-acquire:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-c963b87180-acquire",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794780045.3204045,
+          "finishedAt": 1794780155.6979203,
+          "durationSeconds": 110.37751579284668
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794780159.1491776,
+          "finishedAt": 1794780159.184572,
+          "durationSeconds": 0.03539443016052246
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-0",
+          "category": "workspace-transfer",
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "transferId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794780159.184572,
+          "finishedAt": 1794780161.7552457,
+          "durationSeconds": 2.570673704147339
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:launch",
+          "category": "launch",
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794780161.7552457,
+          "finishedAt": 1794780167.0491567,
+          "durationSeconds": 5.293910980224609
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-pipeline:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-c963b87180-pipeline",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794780167.0491567,
+          "finishedAt": 1794780287.0115688,
+          "durationSeconds": 119.96241211891174
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-c963b87180-visuals",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794780289.483424,
+          "finishedAt": 1794780289.5176322,
+          "durationSeconds": 0.03420829772949219
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-0",
+          "category": "workspace-transfer",
+          "activityId": "sarek-local-c963b87180-visuals",
+          "transferId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794780289.5176322,
+          "finishedAt": 1794780292.3319275,
+          "durationSeconds": 2.8142952919006348
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:launch",
+          "category": "launch",
+          "activityId": "sarek-local-c963b87180-visuals",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794780292.3319275,
+          "finishedAt": 1794780296.161062,
+          "durationSeconds": 3.829134464263916
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-visuals:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-c963b87180-visuals",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794780296.161062,
+          "finishedAt": 1794780300.1074286,
+          "durationSeconds": 3.946366548538208
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-c963b87180-package",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794780301.7755146,
+          "finishedAt": 1794780301.8104432,
+          "durationSeconds": 0.03492856025695801
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package-0",
+          "category": "workspace-transfer",
+          "activityId": "sarek-local-c963b87180-package",
+          "transferId": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:transfer-workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794780301.8104432,
+          "finishedAt": 1794780304.6610842,
+          "durationSeconds": 2.8506410121917725
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:launch",
+          "category": "launch",
+          "activityId": "sarek-local-c963b87180-package",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794780304.6610842,
+          "finishedAt": 1794780310.8771927,
+          "durationSeconds": 6.216108560562134
+        },
+        {
+          "id": "sarek-local-c963b87180-run-20261115t220044.437311757:sarek-local-c963b87180-package:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-c963b87180-package",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794780310.8771927,
+          "finishedAt": 1794780311.1319082,
+          "durationSeconds": 0.2547154426574707
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-acquire-sarek-local-c963b87180-pipeline",
+        "workspaceId": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-acquire",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-acquire",
+        "consumerActivityId": "sarek-local-c963b87180-pipeline",
+        "released": true,
+        "releasedAt": "2026-11-15T22:02:41.867049945Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline-sarek-local-c963b87180-visuals",
+        "workspaceId": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-pipeline",
+        "consumerActivityId": "sarek-local-c963b87180-visuals",
+        "released": true,
+        "releasedAt": "2026-11-15T22:04:52.487846854Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals-sarek-local-c963b87180-package",
+        "workspaceId": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "producerActivityId": "sarek-local-c963b87180-visuals",
+        "consumerActivityId": "sarek-local-c963b87180-package",
+        "released": true,
+        "releasedAt": "2026-11-15T22:05:05.317282886Z",
+        "releaseReason": "consumer workspace materialized"
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-acquire",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-acquire",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-acquire",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 3,
+        "sizeBytes": 946036003,
+        "inputBytes": 0,
+        "outputBytes": 946036003,
+        "reclaimedBytes": 946036003,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T22:00:44.870447947Z",
+        "sealedAt": "2026-11-15T22:02:39.122435923Z",
+        "releasedAt": "2026-11-15T22:02:41.999746872Z"
+      },
+      {
+        "id": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-package",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-package",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-package",
+        "driver": "local",
+        "state": "sealed",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "variant-observations.tsv",
+              "digest": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "sizeBytes": 74024
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "published-genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "published-regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "sarek-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "sarek-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "variant-observations.tsv",
+              "digest": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "sizeBytes": 74024
+            }
+          ],
+          "inputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "variant-observations.tsv",
+              "digest": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "sizeBytes": 74024
+            }
+          ],
+          "outputs": [
+            {
+              "path": "published-genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "published-regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "sarek-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "sarek-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 5,
+        "sizeBytes": 51448561,
+        "inputBytes": 1053138007,
+        "outputBytes": 51448561,
+        "reclaimedBytes": 1053138007,
+        "releaseReason": "inherited inputs pruned",
+        "createdAt": "2026-11-15T22:00:44.870447947Z",
+        "sealedAt": "2026-11-15T22:05:13.259844088Z"
+      },
+      {
+        "id": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-pipeline",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-pipeline",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-pipeline",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "inputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ]
+        },
+        "fileCount": 15,
+        "sizeBytes": 1001615422,
+        "inputBytes": 946036003,
+        "outputBytes": 55579419,
+        "reclaimedBytes": 1001615422,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T22:00:44.870447947Z",
+        "sealedAt": "2026-11-15T22:04:49.457164172Z",
+        "releasedAt": "2026-11-15T22:04:52.646804848Z"
+      },
+      {
+        "id": "workspace-sarek-local-c963b87180-run-20261115t220044.437311757-sarek-local-c963b87180-visuals",
+        "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+        "activityId": "sarek-local-c963b87180-visuals",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-c963b87180-run-20261115t220044.437311757/sarek-local-c963b87180-visuals",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "variant-observations.tsv",
+              "digest": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "sizeBytes": 74024
+            }
+          ],
+          "inputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:802a962044f9fe9c99827adaccd4a2fe986258115e2d89c2aba99e38265e758b",
+              "sizeBytes": 160245
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:018f15a338bbdd7bb3ff972587159b08d2ac8060521cf525733e9f2de9dc2e52",
+              "sizeBytes": 5136
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:b520e590c3fc090970d6e399174f87c5d06d9552f88a177657c921030a4c76a6",
+              "sizeBytes": 3008314
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:028b48d52498e11bfd8b717a2115e1215e5e02149c1fa97c05b56b98146d9b1f",
+              "sizeBytes": 255941
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:22439d6ab4daa566515e5722a273efb6ad942ec48aa941e2345dfef1dba977e4",
+              "sizeBytes": 2507
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:c3626a830226c94c2f4ff75f3436bb6e2392b300cf0f0becc9f67bd2706865a9",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:30735feacf2324f3a43a53ecd810036ec1a0cc4a6b8521c9cd5064e40f5b5c78",
+              "sizeBytes": 752
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:57beb7a103e32a6d64e09238c0b068608790e5ebd4d7ed60d134b1cca6a5086a",
+              "sizeBytes": 51127683
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:2011e4bc65bcda7dbe9117fc3fdafb7296c7fe5855d6ed34a6fd9dfb2d378dc1",
+              "sizeBytes": 1731
+            },
+            {
+              "path": "reference-region.fa",
+              "digest": "sha256:b3648d6e6deaf3f3ad17900994ab0e305b074f63db4864a2e344f29783283c06",
+              "sizeBytes": 1016339
+            },
+            {
+              "path": "reference-validation.json",
+              "digest": "sha256:98f865af303345df221d8916cf6b76c9596872018f355f3b1ee035c78a9e6d7e",
+              "sizeBytes": 391
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:8017762c04474ef27b7498cf8d607fe392da79d56936706d35e474c93295dc32",
+              "sizeBytes": 331
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "outputs": [
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+              "sizeBytes": 51278632
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+              "sizeBytes": 20791
+            },
+            {
+              "path": "genotype-observations.png",
+              "digest": "sha256:5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009",
+              "sizeBytes": 32198
+            },
+            {
+              "path": "regional-variants.png",
+              "digest": "sha256:3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+              "sizeBytes": 116892
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "variant-observations.tsv",
+              "digest": "sha256:6154498adb274c5ec0269d11e942bbc1034f44e81ac9d727854ad75b0ce93184",
+              "sizeBytes": 74024
+            }
+          ]
+        },
+        "fileCount": 21,
+        "sizeBytes": 1053138007,
+        "inputBytes": 1001615422,
+        "outputBytes": 51522585,
+        "reclaimedBytes": 1053138007,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T22:00:44.870447947Z",
+        "sealedAt": "2026-11-15T22:05:01.746127769Z",
+        "releasedAt": "2026-11-15T22:05:05.870759726Z"
+      }
+    ]
+  }
+}

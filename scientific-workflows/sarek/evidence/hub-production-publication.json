@@ -1,0 +1,17 @@
+{
+  "experimentId": "89e3da07-46fa-4b93-ac0b-18ea043c7837",
+  "version": {
+    "id": "d06f45e0-016c-4cb4-8033-cdafa91f7ca9",
+    "workflowId": "302192ab-5d22-400c-9a3f-293d1a48e624",
+    "number": 1,
+    "message": "Measured original nf-core/Sarek on the complete frozen HG002 regional alignment subset: four completed outer native activities, completed internal Nextflow tasks, original raw germline VCF/QC and actual genomic figures. No whole-genome or clinical accuracy claim.",
+    "hash": "d1ad8409f8e9fc9797caa4bde29283c19a62ade8730648b70bd117d818aba451",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "308e88f4-3786-41fa-9ea3-5fefb4acefdc",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sarek",
+  "image": "hub.akoflow.com/akoflow-examples/sarek@sha256:a64d040a30f543454d1d2d51ce5c77bdb3022b9d4cf0a6e1b474fac07803bb20",
+  "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+  "visualCount": 2
+}

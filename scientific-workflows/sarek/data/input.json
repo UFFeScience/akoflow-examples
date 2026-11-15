@@ -1,0 +1,30 @@
+{
+  "slug": "sarek",
+  "title": "Sarek \u2014 Regional Germline Variant Calling",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "acquire",
+    "pipeline",
+    "visuals",
+    "package"
+  ],
+  "dependencies": {
+    "acquire": [],
+    "pipeline": [
+      "acquire"
+    ],
+    "visuals": [
+      "pipeline"
+    ],
+    "package": [
+      "visuals"
+    ]
+  },
+  "artifacts": [
+    "sarek-results.tar.gz",
+    "sarek-summary.json",
+    "published-regional-variants.png",
+    "published-genotype-observations.png"
+  ]
+}

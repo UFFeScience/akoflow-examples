@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "observedAt": "2026-11-15T22:05:46.882470+00:00",
+  "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+  "image": "ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345",
+  "imageId": "sha256:a64d040a30f543454d1d2d51ce5c77bdb3022b9d4cf0a6e1b474fac07803bb20",
+  "validatorCommand": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,src=/home/ovvesley/Workspace/AKOFLOW/akoflow-examples/scientific-workflows/sarek/outputs-daemon,dst=/outputs,readonly",
+    "ghcr.io/uffescience/akoflow-examples/sarek:local-a64d040a30f54345",
+    "python3",
+    "/app/scripts/validate.py"
+  ],
+  "validatorExitCode": 0,
+  "validatorOutput": "{\"status\": \"success\", \"realRegionAlignments\": 280468, \"variantRecords\": 1757, \"innerCompletedTasks\": 14, \"allVCFReferenceAllelesVerified\": true, \"realFigures\": 2, \"rawUnfilteredCalls\": true, \"wholeGenomeClaimed\": false}",
+  "validatorSHA256": "36abfb5df44269180af99e6bfa9726fc668e1079ef4fa453c32073df39c95dad",
+  "nativeOutputDigests": {
+    "sarek-results.tar.gz": "24cf1e0b0dc14009e9332cf0f5cdfc9e73464922b1bc05ebf9040bfb4215166d",
+    "sarek-summary.json": "21fa8b9574777e2e29cd50439a18a3bd186cfc95594a63b0ef0aa5c5f6739df2",
+    "published-regional-variants.png": "3c057091c71840c940f4432e9cc1391b0b9c8df86351174c2d96b2e1aed50df2",
+    "published-genotype-observations.png": "5ffae13c67eac106147a6d1181e3ecd5958a3e5325f447a7c159206abace1009"
+  },
+  "outerCompletedActivities": 4,
+  "innerCompletedNextflowTasks": 14,
+  "selectedAlignments": 280468,
+  "variantRecords": 1757,
+  "alternateAlleleClasses": {
+    "SNP": 1437,
+    "INDEL": 354,
+    "MNV": 1
+  },
+  "visualCount": 2,
+  "rawUnfilteredCalls": true,
+  "wholeGenomeClaimed": false
+}

@@ -42,3 +42,23 @@ func TestClientRejectsFailedPublication(t *testing.T) {
 		t.Fatal("failed publication was accepted")
 	}
 }
+
+func TestCanonicalReceiptExcludesHistoricalProfilePublications(t *testing.T) {
+	catalog := map[string]contract{
+		"transfer": {ExamplePath: "connections/hybrid-local-cloud-profile"},
+		"montage":  {ExamplePath: "scientific-workflows/montage-050"},
+	}
+	for _, path := range []string{"connections/hybrid-local-cloud-profile", "scientific-workflows/montage-050"} {
+		if !canonicalReceipt(map[string]any{"examplePath": path}, catalog) {
+			t.Fatalf("canonical receipt excluded: %s", path)
+		}
+	}
+	for _, path := range []string{"connections/hybrid-kind-cloud-profile", "connections/montage-cloud-local-profile", ""} {
+		if canonicalReceipt(map[string]any{"examplePath": path}, catalog) {
+			t.Fatalf("historical receipt reintroduced: %s", path)
+		}
+	}
+	if canonicalReceipt(map[string]any{}, catalog) {
+		t.Fatal("malformed receipt included")
+	}
+}

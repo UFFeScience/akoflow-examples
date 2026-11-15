@@ -3,13 +3,16 @@ package main
 import (
 	"archive/tar"
 	"compress/gzip"
+	"fmt"
 	"io"
 	"os"
 	"path/filepath"
+	"sort"
+	"strings"
 	"time"
 )
 
-func archiveResults(dir string) error {
+func archiveResults(dir string, names []string) error {
 	folder := filepath.Clean(filepath.Join(dir, "../../..", "artifacts"))
 	if err := os.MkdirAll(folder, 0755); err != nil {
 		return err
@@ -21,54 +24,59 @@ func archiveResults(dir string) error {
 	}
 	zipped := gzip.NewWriter(file)
 	archive := tar.NewWriter(zipped)
-	root := filepath.Join(dir, "outputs")
-	walkErr := filepath.WalkDir(root, func(path string, entry os.DirEntry, err error) error {
-		if err != nil {
-			return err
+	seen := map[string]bool{}
+	allowed := append([]string{}, names...)
+	sort.Strings(allowed)
+	exportErr := func() error {
+		for _, name := range allowed {
+			if filepath.IsAbs(name) || strings.Contains(name, "..") {
+				return fmt.Errorf("unsafe output archive path")
+			}
+			if seen[name] {
+				continue
+			}
+			seen[name] = true
+			path := filepath.Join(dir, "outputs", name)
+			info, e := os.Lstat(path)
+			if e != nil {
+				return e
+			}
+			if !info.Mode().IsRegular() {
+				continue
+			}
+			header, e := tar.FileInfoHeader(info, "")
+			if e != nil {
+				return e
+			}
+			header.Name = filepath.ToSlash(name)
+			header.ModTime = time.Unix(0, 0)
+			header.Mode = 0644
+			header.Uid = 0
+			header.Gid = 0
+			header.Uname = ""
+			header.Gname = ""
+			if e = archive.WriteHeader(header); e != nil {
+				return e
+			}
+			source, e := os.Open(path)
+			if e != nil {
+				return e
+			}
+			_, e = io.Copy(archive, source)
+			closeErr := source.Close()
+			if e != nil {
+				return e
+			}
+			if closeErr != nil {
+				return closeErr
+			}
 		}
-		if entry.IsDir() {
-			return nil
-		}
-		info, err := entry.Info()
-		if err != nil {
-			return err
-		}
-		if !info.Mode().IsRegular() {
-			return nil
-		}
-		relative, err := filepath.Rel(root, path)
-		if err != nil {
-			return err
-		}
-		header, err := tar.FileInfoHeader(info, "")
-		if err != nil {
-			return err
-		}
-		header.Name = filepath.ToSlash(relative)
-		header.ModTime = time.Unix(0, 0)
-		header.Mode = 0644
-		header.Uid = 0
-		header.Gid = 0
-		header.Uname = ""
-		header.Gname = ""
-		if err = archive.WriteHeader(header); err != nil {
-			return err
-		}
-		source, err := os.Open(path)
-		if err != nil {
-			return err
-		}
-		_, err = io.Copy(archive, source)
-		closeErr := source.Close()
-		if err != nil {
-			return err
-		}
-		return closeErr
-	})
+		return nil
+	}()
 	tarErr := archive.Close()
 	gzipErr := zipped.Close()
 	fileErr := file.Close()
-	for _, e := range []error{walkErr, tarErr, gzipErr, fileErr} {
+	for _, e := range []error{exportErr, tarErr, gzipErr, fileErr} {
 		if e != nil {
 			return e
 		}

@@ -22,6 +22,9 @@ func TestOutputArchiveIsDeterministicAndExcludesSymlinks(t *testing.T) {
 	if err := os.WriteFile(data, []byte(`{"value":42}`), 0644); err != nil {
 		t.Fatal(err)
 	}
+	if err := os.WriteFile(filepath.Join(outputs, "old-validation.json"), []byte("unverified previous run"), 0644); err != nil {
+		t.Fatal(err)
+	}
 	private := filepath.Join(root, "private.txt")
 	if err := os.WriteFile(private, []byte("never export"), 0600); err != nil {
 		t.Fatal(err)
@@ -29,7 +32,7 @@ func TestOutputArchiveIsDeterministicAndExcludesSymlinks(t *testing.T) {
 	if err := os.Symlink(private, filepath.Join(outputs, "private-link")); err != nil {
 		t.Fatal(err)
 	}
-	if err := archiveResults(dir); err != nil {
+	if err := archiveResults(dir, []string{"result.json", "private-link"}); err != nil {
 		t.Fatal(err)
 	}
 	path := filepath.Join(root, "artifacts", "category-case-results.tar.gz")
@@ -40,7 +43,7 @@ func TestOutputArchiveIsDeterministicAndExcludesSymlinks(t *testing.T) {
 	if err = os.Chtimes(data, time.Unix(1000, 0), time.Unix(1000, 0)); err != nil {
 		t.Fatal(err)
 	}
-	if err = archiveResults(dir); err != nil {
+	if err = archiveResults(dir, []string{"result.json", "private-link"}); err != nil {
 		t.Fatal(err)
 	}
 	second, err := os.ReadFile(path)

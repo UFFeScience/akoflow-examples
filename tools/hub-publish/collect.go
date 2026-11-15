@@ -158,7 +158,7 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 	if err = timingFigure(dir, record.RunID, config.Stages, record.Projection.Activities); err != nil {
 		return err
 	}
-	if err = archiveResults(dir); err != nil {
+	if err = archiveResults(dir, append(names, "manifest.json")); err != nil {
 		return err
 	}
 	return write(filepath.Join(dir, "evidence/output-validation.json"), map[string]any{"status": "passed", "artifacts": artifacts, "source": "actual daemon workspaces", "validator": "validate.sh", "runId": record.RunID, "image": record.Image, "checksumVerification": "all copied outputs match sealed workspace manifests"})

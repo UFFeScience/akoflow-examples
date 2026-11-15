@@ -1,0 +1,10 @@
+{
+  "showcase": "rnaseq",
+  "status": "success",
+  "artifacts": [
+    "rnaseq-results.tar.gz",
+    "rnaseq-summary.json",
+    "published-transcript-abundance.png",
+    "published-library-qc.png"
+  ]
+}

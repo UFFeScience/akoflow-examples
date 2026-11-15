@@ -1,0 +1,1078 @@
+{
+  "activityCount": 4,
+  "image": "ghcr.io/uffescience/akoflow-examples/rnaseq:local-dccbb06af28387e8",
+  "imageId": "sha256:dccbb06af28387e820724dda4a32382a387ab5f5bd7d6b2c7ab9097b68f29a4d",
+  "observedAt": "2026-11-15T21:15:46.768424+00:00",
+  "planId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205",
+  "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+  "status": "failed",
+  "workflowId": "rnaseq-local-c40b648a6e",
+  "completedActivityCount": 1,
+  "projection": {
+    "activities": [
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "planAssignmentId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205-rnaseq-local-c40b648a6e-acquire",
+        "activityId": "rnaseq-local-c40b648a6e-acquire",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777300.444978,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777300.444978,
+        "startedAt": 1794777300.6924493,
+        "finishedAt": 1794777337.279547,
+        "runtimeSeconds": 36.58709764480591,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "rnaseq-local"
+        }
+      },
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "planAssignmentId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205-rnaseq-local-c40b648a6e-pipeline",
+        "activityId": "rnaseq-local-c40b648a6e-pipeline",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "failed",
+        "readyAt": 1794777338.721722,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777338.721722,
+        "startedAt": 1794777339.9971511,
+        "finishedAt": 1794777343.3010595,
+        "runtimeSeconds": 3.303908348083496,
+        "queueSeconds": 0,
+        "transferSeconds": 0.3149697780609131,
+        "transferBytes": 52439328,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "failureReason": "local Docker container exited with code 1",
+        "metadata": {
+          "launchWaitSeconds": 0.9271657466888428,
+          "preparationFinishedAt": 1794777339.0699854,
+          "preparationStartedAt": 1794777338.7550156,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011549949645996094,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 0.3149697780609131,
+          "transferWorkSeconds": 0.3149697780609131
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "planAssignmentId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205-rnaseq-local-c40b648a6e-acquire",
+        "activityId": "rnaseq-local-c40b648a6e-acquire",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777300.444978,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777300.444978,
+        "startedAt": 1794777300.6924493,
+        "finishedAt": 1794777337.279547,
+        "runtimeSeconds": 36.58709764480591,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "rnaseq-local"
+        }
+      },
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "planAssignmentId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205-rnaseq-local-c40b648a6e-pipeline",
+        "activityId": "rnaseq-local-c40b648a6e-pipeline",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "failed",
+        "readyAt": 1794777338.721722,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777338.721722,
+        "startedAt": 1794777339.9971511,
+        "finishedAt": 1794777343.3010595,
+        "runtimeSeconds": 3.303908348083496,
+        "queueSeconds": 0,
+        "transferSeconds": 0.3149697780609131,
+        "transferBytes": 52439328,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "failureReason": "local Docker container exited with code 1",
+        "metadata": {
+          "launchWaitSeconds": 0.9271657466888428,
+          "preparationFinishedAt": 1794777339.0699854,
+          "preparationStartedAt": 1794777338.7550156,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011549949645996094,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 0.3149697780609131,
+          "transferWorkSeconds": 0.3149697780609131
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline-0",
+        "planId": "transfer-workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline-0",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-pipeline",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794777338.7550156,
+        "finishedAt": 1794777339.0699854,
+        "durationSeconds": 0.3149697780609131,
+        "transferredBytes": 52439328,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-c40b648a6e-acquire",
+          "consumerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 8.469999999999999e-07,
+          "rsyncExecutionSeconds": 0.17037276,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 52439328,
+        "filesTransferred": 3
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T21:15:46.744257196Z"
+    },
+    "dataLocations": [
+      {
+        "id": "4d4ddf14d2a6b95f115bcfc1f9136e77",
+        "dataObjectInstanceId": "5a9a61ce51cfc70ee8743f993855706d",
+        "storageResourceId": "ae885c8c45c9385b17c32accf051d0a3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire/acquisition.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "449e4fab5fe26b95e6668397a6954364",
+        "dataObjectInstanceId": "fd86bec5deba269e340591059950c90d",
+        "storageResourceId": "ae885c8c45c9385b17c32accf051d0a3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire/observations.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "a7c2ac4b1d3259f265dcb28f36854cb8",
+        "dataObjectInstanceId": "3c5ed3e2bfc241036d2daffd516c1eee",
+        "storageResourceId": "ae885c8c45c9385b17c32accf051d0a3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire/stage-acquire.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "e29ebc05dae2b174334c87921be141ae",
+        "dataObjectInstanceId": "dfa77c71a39224f7d31a912f768aacd9",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/nextflow-console.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "fc0dd8dceb643d3307348fbd52a42437",
+        "dataObjectInstanceId": "bc635d3f2d2bb5d8f896ee466d47e654",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/observations/SRR10143877.fastq.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "36e3182b8168b1cea8142d6aba435f7d",
+        "dataObjectInstanceId": "caac06b0a3ea99b43eb6e961bbb45a5f",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/observations/genes.gtf.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "38bae24e8b7c9de829fa33d41a040f05",
+        "dataObjectInstanceId": "0387e5a3d3e978b046514a367c2284c6",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/observations/genome.fa.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "63e8d268dba5a624f2bba34b50112daf",
+        "dataObjectInstanceId": "8d701c93302e46c7c4496bf1c507a5ab",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/observations/transcripts.fa.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ec3a81346f6fd22cf07349796884befb",
+        "dataObjectInstanceId": "820c5404678ac37787e732b132b4345d",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/params.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "f64ea4c82924b896f814abcec9580504",
+        "dataObjectInstanceId": "23ffefd5a3fbe3e897fff93a2c1bc614",
+        "storageResourceId": "b03bb29953c9f9b7dcab8a5024d82449",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline/samplesheet.csv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "5a9a61ce51cfc70ee8743f993855706d",
+        "dataObjectId": "97a1b7ffd724037d72dd20fcd859ed94",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-acquire",
+        "attempt": 1,
+        "relativePath": "acquisition.json",
+        "sizeBytes": 1720,
+        "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "fd86bec5deba269e340591059950c90d",
+        "dataObjectId": "ab12dc32c902707a98e666e275806553",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-acquire",
+        "attempt": 1,
+        "relativePath": "observations.tar.gz",
+        "sizeBytes": 52437560,
+        "checksum": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "3c5ed3e2bfc241036d2daffd516c1eee",
+        "dataObjectId": "a3ec724ae32835442c51ce76ee9749ba",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-acquire",
+        "attempt": 1,
+        "relativePath": "stage-acquire.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "dfa77c71a39224f7d31a912f768aacd9",
+        "dataObjectId": "ea84e1a1bd9d801e1818b8860a450f5f",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-console.log",
+        "sizeBytes": 92,
+        "checksum": "sha256:6926e6f8d4f9e97bcaaff03e22786577b3b68df0a4829304344f3d20b5b4841f",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "bc635d3f2d2bb5d8f896ee466d47e654",
+        "dataObjectId": "1516398418855cf18a636c30408995e4",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/SRR10143877.fastq.gz",
+        "sizeBytes": 44364874,
+        "checksum": "sha256:abe0796a4aa053675c34bc97228c82ae27469fc01d0309740d002c520b65e333",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "caac06b0a3ea99b43eb6e961bbb45a5f",
+        "dataObjectId": "c5384abbc703bf885d8c9fa4eaff5242",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/genes.gtf.gz",
+        "sizeBytes": 595453,
+        "checksum": "sha256:2fddfd18d7863fd60a1bc40ab067333ba458d6af551b058d0bd7f30ca8979fab",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "0387e5a3d3e978b046514a367c2284c6",
+        "dataObjectId": "6f3dcb1e0c0f80da9adcdb6cd8f710ad",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/genome.fa.gz",
+        "sizeBytes": 3784201,
+        "checksum": "sha256:a9953096d6a041a01a4cb5352b0232ee9373bf4c050fb23cb7ae673b2e1bb528",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "8d701c93302e46c7c4496bf1c507a5ab",
+        "dataObjectId": "b651ecad0120d95eb70493f1a6cc5299",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/transcripts.fa.gz",
+        "sizeBytes": 3806426,
+        "checksum": "sha256:3cc5b6bb7ff166cffac5c45317dad7052d06431f43f709ed14b33779702dc6a4",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "820c5404678ac37787e732b132b4345d",
+        "dataObjectId": "2039e737646702a7eaa5019da8593cb2",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "params.json",
+        "sizeBytes": 878,
+        "checksum": "sha256:349b9fc298bd815a95be461843c9c3c7a4043771a3d469f5e9a3e008d21ca8a3",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "23ffefd5a3fbe3e897fff93a2c1bc614",
+        "dataObjectId": "2713f72cfebaed0af5f8e17797cff745",
+        "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "attempt": 1,
+        "relativePath": "samplesheet.csv",
+        "sizeBytes": 205,
+        "checksum": "sha256:249cde65f624603a8a9b2e508600e546796724cd999e8dda814a5146e3d7b338",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [],
+    "events": [
+      {
+        "id": "76f1d02998a12034fdee5d0ef57db75e",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205"
+        },
+        "occurredAt": "2026-11-15T21:15:00.357232223Z"
+      },
+      {
+        "id": "cc7db126a3e5099fc2475d767e479543",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire",
+        "payload": {
+          "activityId": "rnaseq-local-c40b648a6e-acquire",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:15:02.236527158Z"
+      },
+      {
+        "id": "acc52a1fe3e0abf1f29f7016e9e506bf",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire",
+        "payload": {
+          "activityId": "rnaseq-local-c40b648a6e-acquire",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 36.58709764480591,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:15:38.710151588Z"
+      },
+      {
+        "id": "904bea00050c12089431199c58b710c5",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline",
+        "payload": {
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:15:41.668515189Z"
+      },
+      {
+        "id": "7b605146474113e3711c5c7800ac8bb2",
+        "eventType": "activity.failed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline",
+        "payload": {
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "failureReason": "local Docker container exited with code 1",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 3.303908348083496,
+          "status": "failed"
+        },
+        "occurredAt": "2026-11-15T21:15:44.339464373Z"
+      },
+      {
+        "id": "6fd300b7de8b097ccb26168032d13e22",
+        "eventType": "execution.run.failed",
+        "aggregateType": "execution_run",
+        "aggregateId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "payload": {
+          "reason": "activity \"rnaseq-local-c40b648a6e-pipeline\" failed: local Docker container exited with code 1"
+        },
+        "occurredAt": "2026-11-15T21:15:44.378082191Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-acquire",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "b28eb8f6128bbbffe7903cfc920208f76606678898ba2f47cdaa9c6d703fc69d",
+        "status": "completed",
+        "startedAt": 1794777300.6924493,
+        "finishedAt": 1794777337.279547,
+        "exitCode": 0,
+        "log": "Verified full scientific input: SRR10143877.fastq.gz\nVerified full scientific input: genome.fa.gz\nVerified full scientific input: transcripts.fa.gz\nVerified full scientific input: genes.gtf.gz\n[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "activityId": "rnaseq-local-c40b648a6e-acquire",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire",
+          "startedAt": 1794777300.6924493,
+          "finishedAt": 1794777337.279547,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "acquisition.json",
+              "change": "created",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777337240152054
+            },
+            {
+              "path": "observations.tar.gz",
+              "change": "created",
+              "sizeBytes": 52437560,
+              "checksum": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "modifiedUnixNano": 1794777337234151916
+            },
+            {
+              "path": "stage-acquire.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777337240152054
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777337240152054
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437560,
+              "checksum": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "modifiedUnixNano": 1794777337234151916
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777337240152054
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794777300.6924493,
+              "finishedAt": 1794777337.279547,
+              "durationSeconds": 36.58709764480591
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 3,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 52439328
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire",
+          "dockerMetricCPUSeconds": 0.8650061357498169,
+          "dockerMetricObservedAt": 1794777332.4628627,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-acquire",
+          "submittedAt": 1794777300.6924493
+        }
+      },
+      {
+        "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-pipeline",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "70539eb568674089d86902f8a1fa222d9d1af38e99cbd415a48ae741363943b1",
+        "status": "failed",
+        "startedAt": 1794777339.9971511,
+        "finishedAt": 1794777343.3010595,
+        "exitCode": 1,
+        "failure": "local Docker container exited with code 1",
+        "log": "Unknown option: -offline -- Check the available commands and options and syntax with 'help'\n[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW ERROR] local Docker container exited with code 1\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline",
+          "startedAt": 1794777339.9971511,
+          "finishedAt": 1794777343.3010595,
+          "exitCode": 1,
+          "files": [
+            {
+              "path": "nextflow-console.log",
+              "change": "created",
+              "sizeBytes": 92,
+              "checksum": "sha256:6926e6f8d4f9e97bcaaff03e22786577b3b68df0a4829304344f3d20b5b4841f",
+              "modifiedUnixNano": 1794777343244290148
+            },
+            {
+              "path": "observations/SRR10143877.fastq.gz",
+              "change": "created",
+              "sizeBytes": 44364874,
+              "checksum": "sha256:abe0796a4aa053675c34bc97228c82ae27469fc01d0309740d002c520b65e333",
+              "modifiedUnixNano": 1794777340500227027
+            },
+            {
+              "path": "observations/genes.gtf.gz",
+              "change": "created",
+              "sizeBytes": 595453,
+              "checksum": "sha256:2fddfd18d7863fd60a1bc40ab067333ba458d6af551b058d0bd7f30ca8979fab",
+              "modifiedUnixNano": 1794777340511227280
+            },
+            {
+              "path": "observations/genome.fa.gz",
+              "change": "created",
+              "sizeBytes": 3784201,
+              "checksum": "sha256:a9953096d6a041a01a4cb5352b0232ee9373bf4c050fb23cb7ae673b2e1bb528",
+              "modifiedUnixNano": 1794777340504227119
+            },
+            {
+              "path": "observations/transcripts.fa.gz",
+              "change": "created",
+              "sizeBytes": 3806426,
+              "checksum": "sha256:3cc5b6bb7ff166cffac5c45317dad7052d06431f43f709ed14b33779702dc6a4",
+              "modifiedUnixNano": 1794777340508227211
+            },
+            {
+              "path": "params.json",
+              "change": "created",
+              "sizeBytes": 878,
+              "checksum": "sha256:349b9fc298bd815a95be461843c9c3c7a4043771a3d469f5e9a3e008d21ca8a3",
+              "modifiedUnixNano": 1794777342270267741
+            },
+            {
+              "path": "samplesheet.csv",
+              "change": "created",
+              "sizeBytes": 205,
+              "checksum": "sha256:249cde65f624603a8a9b2e508600e546796724cd999e8dda814a5146e3d7b338",
+              "modifiedUnixNano": 1794777342270267741
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777338997192459
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437560,
+              "checksum": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "modifiedUnixNano": 1794777339027193148
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777339028193172
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777338997192459
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 92,
+              "checksum": "sha256:6926e6f8d4f9e97bcaaff03e22786577b3b68df0a4829304344f3d20b5b4841f",
+              "modifiedUnixNano": 1794777343244290148
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437560,
+              "checksum": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "modifiedUnixNano": 1794777339027193148
+            },
+            {
+              "path": "observations/SRR10143877.fastq.gz",
+              "sizeBytes": 44364874,
+              "checksum": "sha256:abe0796a4aa053675c34bc97228c82ae27469fc01d0309740d002c520b65e333",
+              "modifiedUnixNano": 1794777340500227027
+            },
+            {
+              "path": "observations/genes.gtf.gz",
+              "sizeBytes": 595453,
+              "checksum": "sha256:2fddfd18d7863fd60a1bc40ab067333ba458d6af551b058d0bd7f30ca8979fab",
+              "modifiedUnixNano": 1794777340511227280
+            },
+            {
+              "path": "observations/genome.fa.gz",
+              "sizeBytes": 3784201,
+              "checksum": "sha256:a9953096d6a041a01a4cb5352b0232ee9373bf4c050fb23cb7ae673b2e1bb528",
+              "modifiedUnixNano": 1794777340504227119
+            },
+            {
+              "path": "observations/transcripts.fa.gz",
+              "sizeBytes": 3806426,
+              "checksum": "sha256:3cc5b6bb7ff166cffac5c45317dad7052d06431f43f709ed14b33779702dc6a4",
+              "modifiedUnixNano": 1794777340508227211
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:349b9fc298bd815a95be461843c9c3c7a4043771a3d469f5e9a3e008d21ca8a3",
+              "modifiedUnixNano": 1794777342270267741
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:249cde65f624603a8a9b2e508600e546796724cd999e8dda814a5146e3d7b338",
+              "modifiedUnixNano": 1794777342270267741
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777339028193172
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "failed",
+              "startedAt": 1794777339.9971511,
+              "finishedAt": 1794777343.3010595,
+              "durationSeconds": 3.303908348083496
+            }
+          ],
+          "summary": {
+            "initialFiles": 3,
+            "finalFiles": 10,
+            "createdFiles": 7,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 52552129
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794777339.9971592,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline",
+          "submittedAt": 1794777339.9971511
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+      "schedulePlanId": "rnaseq-local-c40b648a6e-manual-plan-20261115t211500.210346205",
+      "mode": "real",
+      "seed": 0,
+      "status": "failed",
+      "makespanSeconds": 0,
+      "cost": 0,
+      "failureReason": "activity \"rnaseq-local-c40b648a6e-pipeline\" failed: local Docker container exited with code 1",
+      "activityCount": 2,
+      "completedActivityCount": 1,
+      "breakdown": {
+        "computeSeconds": 39.891005992889404,
+        "transferSeconds": 0,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 0,
+      "kind": "workflow",
+      "title": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+      "workflowId": "rnaseq-local-c40b648a6e",
+      "workflowVersionId": "rnaseq-local-c40b648a6e-v1",
+      "workflowName": "rnaseq-local-c40b648a6e",
+      "environmentNames": [
+        "rnaseq local Docker"
+      ],
+      "startedAt": "2026-11-15T21:15:00Z",
+      "finishedAt": "2026-11-15T21:15:44Z"
+    },
+    "timeline": {
+      "startedAt": 1794777300,
+      "finishedAt": 1794777344,
+      "wallSeconds": 44,
+      "computeMakespanSeconds": 0,
+      "coveredWallSeconds": 41.41390657424927,
+      "unclassifiedWallSeconds": 2.5860934257507324,
+      "totals": {
+        "resourceQueueSeconds": 0.5957348346710205,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 0,
+        "launchSeconds": 0.9271657466888428,
+        "runtimeSeconds": 39.891005992889404,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-c40b648a6e-acquire",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777300.444978,
+          "finishedAt": 1794777300.6924493,
+          "durationSeconds": 0.24747133255004883
+        },
+        {
+          "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-acquire:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-c40b648a6e-acquire",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794777300.6924493,
+          "finishedAt": 1794777337.279547,
+          "durationSeconds": 36.58709764480591
+        },
+        {
+          "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777338.721722,
+          "finishedAt": 1794777339.0699854,
+          "durationSeconds": 0.3482635021209717
+        },
+        {
+          "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline:launch",
+          "category": "launch",
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794777339.0699854,
+          "finishedAt": 1794777339.9971511,
+          "durationSeconds": 0.9271657466888428
+        },
+        {
+          "id": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152:rnaseq-local-c40b648a6e-pipeline:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-c40b648a6e-pipeline",
+          "status": "failed",
+          "source": "activity-handle",
+          "startedAt": 1794777339.9971511,
+          "finishedAt": 1794777343.3010595,
+          "durationSeconds": 3.303908348083496
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-acquire-rnaseq-local-c40b648a6e-pipeline",
+        "workspaceId": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-acquire",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-acquire",
+        "consumerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "released": true,
+        "releasedAt": "2026-11-15T21:15:39.089800812Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline-rnaseq-local-c40b648a6e-visuals",
+        "workspaceId": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-pipeline",
+        "consumerActivityId": "rnaseq-local-c40b648a6e-visuals",
+        "released": false
+      },
+      {
+        "id": "workspace-lease-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-visuals-rnaseq-local-c40b648a6e-package",
+        "workspaceId": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-visuals",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "producerActivityId": "rnaseq-local-c40b648a6e-visuals",
+        "consumerActivityId": "rnaseq-local-c40b648a6e-package",
+        "released": false
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-acquire",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-acquire",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-acquire",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "sizeBytes": 52437560
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:1a218be979c275c2f41f06b9b881bdf98fca9e70a6d0eea8ed5d78faac9358a3",
+              "sizeBytes": 52437560
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 3,
+        "sizeBytes": 52439328,
+        "inputBytes": 0,
+        "outputBytes": 52439328,
+        "reclaimedBytes": 52439328,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T21:15:00.368374025Z",
+        "sealedAt": "2026-11-15T21:15:38.696469935Z",
+        "releasedAt": "2026-11-15T21:15:39.128693306Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-package",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-package",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-package",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-package",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-package",
+        "driver": "local",
+        "state": "planned",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:15:00.368374025Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-pipeline",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-pipeline",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-pipeline",
+        "driver": "local",
+        "state": "active",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:15:00.368374025Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-c40b648a6e-run-20261115t211500.254617152-rnaseq-local-c40b648a6e-visuals",
+        "runId": "rnaseq-local-c40b648a6e-run-20261115t211500.254617152",
+        "activityId": "rnaseq-local-c40b648a6e-visuals",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-visuals",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-visuals",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-c40b648a6e-run-20261115t211500.254617152/rnaseq-local-c40b648a6e-visuals",
+        "driver": "local",
+        "state": "planned",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:15:00.368374025Z"
+      }
+    ]
+  }
+}

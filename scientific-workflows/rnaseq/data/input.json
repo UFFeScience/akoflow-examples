@@ -1,0 +1,30 @@
+{
+  "slug": "rnaseq",
+  "title": "RNA-seq \u2014 Transcript Abundance and Quality Control",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "acquire",
+    "pipeline",
+    "visuals",
+    "package"
+  ],
+  "dependencies": {
+    "acquire": [],
+    "pipeline": [
+      "acquire"
+    ],
+    "visuals": [
+      "pipeline"
+    ],
+    "package": [
+      "visuals"
+    ]
+  },
+  "artifacts": [
+    "rnaseq-results.tar.gz",
+    "rnaseq-summary.json",
+    "published-transcript-abundance.png",
+    "published-library-qc.png"
+  ]
+}

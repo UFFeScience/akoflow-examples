@@ -1,0 +1,121 @@
+{
+  "name": "rnaseq",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "ghcr.io/uffescience/akoflow-examples/rnaseq:v1",
+    "activities": [
+      {
+        "name": "acquire",
+        "runtime": "rnaseq-local",
+        "dependsOn": [],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "acquire",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "pipeline",
+        "runtime": "rnaseq-local",
+        "dependsOn": [
+          "acquire"
+        ],
+        "cpuLimit": "4",
+        "memoryLimit": "12Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "pipeline",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "visuals",
+        "runtime": "rnaseq-local",
+        "dependsOn": [
+          "pipeline"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "visuals",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "package",
+        "runtime": "rnaseq-local",
+        "dependsOn": [
+          "visuals"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "package",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "pipeline",
+        "logicalName": "observations.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "pipeline",
+        "consumerActivity": "visuals",
+        "logicalName": "pipeline-results.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "visuals",
+        "consumerActivity": "package",
+        "logicalName": "derived-summary.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "visuals",
+        "consumerActivity": "package",
+        "logicalName": "derived-results.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "visuals",
+        "consumerActivity": "package",
+        "logicalName": "transcript-abundance.png",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "visuals",
+        "consumerActivity": "package",
+        "logicalName": "library-qc.png",
+        "sizeBytes": 1
+      }
+    ]
+  }
+}

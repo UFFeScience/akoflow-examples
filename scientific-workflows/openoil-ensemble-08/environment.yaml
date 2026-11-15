@@ -1,0 +1,46 @@
+activityResourceProfiles: []
+connections: []
+environment:
+    description: Real CPU OpenOil ensemble with synthetic constant forcings; no cloud resources
+    id: openoil-ensemble-08
+    name: OpenOil 8 members · homeserver Docker
+    status: ready
+resourceRuntimeBindings:
+    - enabled: true
+      resourceId: openoil-ensemble-08-docker
+      runtimeId: openoil-ensemble-08-local
+resources:
+    - bootOverheadSeconds: 0
+      computeSpeedup: 1
+      containerOverheadSeconds: 0
+      cpuCapacity: 2
+      cpuCores: 2
+      environmentVersionId: openoil-ensemble-08-v1
+      id: openoil-ensemble-08-docker
+      memoryBytes: 12884901888
+      name: Local Docker host
+      pricePerSecond: 0
+      providerId: local-docker
+      schedulable: true
+      storageBytes: 42949672960
+      type: machine
+runtimes:
+    - capabilities:
+        batch: true
+        container: true
+      driver: local
+      environmentVersionId: openoil-ensemble-08-v1
+      id: openoil-ensemble-08-local
+      mode: execution
+      name: Local Docker host
+      role: compute
+storages: []
+version:
+    configurationHash: openoil-ensemble-08-v1
+    costModel: free
+    environmentId: openoil-ensemble-08
+    id: openoil-ensemble-08-v1
+    interferenceModel: none
+    networkModel: local
+    status: published
+    version: 1

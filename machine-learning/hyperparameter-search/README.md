@@ -101,3 +101,67 @@ Historical capture names:
 ## Current execution evidence
 
 The current completed daemon run is recorded in `evidence/daemon-run.json`. One capture for every activity and the observed DAG are in `screenshots/current/`; `capture-manifest.json` identifies their exact run and image. Older captures directly under `screenshots/` are historical and do not verify this revision.
+
+<!-- hub-publication -->
+
+## Public Hub version and measured execution
+
+[Open this workflow and its results](https://hub.akoflow.com/o/akoflow/machine-learning-hyperparameter-search) · [Documentation](https://akoflow.com/docs/showcase/ai/machine-learning/hyperparameter-search)
+
+### Import into AkôFlow Desktop
+
+Create workflow → Import from Hub → paste this immutable URI:
+
+```text
+akoflow://hub/publications/12f30a7f-d58d-43e5-9a90-eba31de75a9e/versions/1
+```
+
+The URI imports the workflow definition. Build or pull the public image and register the companion `environment.yaml`, `scope.yaml`, and `topology.yaml` from this source bundle before planning a local execution. No hosted account, GPU or cloud capacity is required for this CPU profile.
+
+Image: `ghcr.io/uffescience/akoflow-examples/showcase-hyperparameter-search@sha256:638cc469c08fcb393648551ecc6454edc44f4506565636bd2c017989d2334f41`.
+
+### Actual homeserver results
+
+Run `showcase-hyperparameter-search-local-14e6b92f12-run-20261115t053132.291109559` completed **6/6** activities in **15.873935461044312 seconds**. These are measured Docker-backed computations, not simulated timing. Cost is the configured local compute cost and excludes electricity and hardware.
+
+[Download the native experiment capture](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/AKO-238/machine-learning/hyperparameter-search/evidence/experiment.json). The Hub Results tab includes the same plan, attempts, metrics and logs.
+
+### Inputs and outputs
+
+Input fixtures and their generation code are in this bundle's `data/` and `scripts/` directories; inspect them together with `data/input.json` for profile assumptions. Source code and fixtures follow the repository license unless a bundle states an upstream data license. Outputs expected from this workflow:
+
+- `leaderboard.csv`
+- `best-model.pkl`
+
+### Illustrated walkthrough
+
+The following reference screenshots come from the documentation walkthrough. The current measured run is recorded separately above.
+
+#### compare-trials
+
+![compare-trials](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/compare-trials.png)
+
+#### prepare-dataset
+
+![prepare-dataset](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/prepare-dataset.png)
+
+#### register-best
+
+![register-best](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/register-best.png)
+
+#### trial-1
+
+![trial-1](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/trial-1.png)
+
+#### trial-2
+
+![trial-2](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/trial-2.png)
+
+#### trial-n
+
+![trial-n](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/trial-n.png)
+
+#### workflow
+
+![workflow](https://akoflow.com/showcase/evidence/machine-learning/hyperparameter-search/workflow.png)
+

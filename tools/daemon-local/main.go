@@ -82,6 +82,7 @@ func main() {
 	base := flag.String("api-url", "http://127.0.0.1:8080/akoflow-api", "local AkôFlow API")
 	envFile := flag.String("env-file", "", "optional env file containing AKOFLOW_API_TOKEN (never stored in output)")
 	build := flag.Bool("build", true, "build the declared image before execution")
+	registry := flag.Bool("registry-image", false, "pull and pin the public registry image instead of building locally")
 	wait := flag.Bool("wait", true, "wait for terminal state; false submits and leaves the daemon run active")
 	flag.Parse()
 	token := os.Getenv("AKOFLOW_API_TOKEN")
@@ -101,12 +102,12 @@ func main() {
 		os.Exit(1)
 	}
 	c := client{strings.TrimSuffix(*base, "/"), token, &http.Client{Timeout: 45 * time.Second}}
-	if err := run(c, *root, *example, *build, *wait); err != nil {
+	if err := run(c, *root, *example, *build, *wait, *registry); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
-func run(c client, root, relative string, build, wait bool) error {
+func run(c client, root, relative string, build, wait, registry bool) error {
 	preflight, err := c.request("GET", "preflight", nil)
 	if err != nil {
 		return err
@@ -125,7 +126,20 @@ func run(c client, root, relative string, build, wait bool) error {
 	}
 	spec := definition["spec"].(map[string]any)
 	image := spec["image"].(string)
-	if build {
+	if registry {
+		command := exec.Command("docker", "pull", image)
+		command.Stdout, command.Stderr = os.Stdout, os.Stderr
+		if err := command.Run(); err != nil {
+			return fmt.Errorf("pull public image: %w", err)
+		}
+		digest, err := exec.Command("docker", "image", "inspect", "--format", "{{index .RepoDigests 0}}", image).Output()
+		if err != nil || !strings.Contains(string(digest), "@sha256:") {
+			return fmt.Errorf("public image digest unavailable")
+		}
+		image = strings.TrimSpace(string(digest))
+		spec["image"] = image
+	}
+	if build && !registry {
 		command := exec.Command("docker", "build", "-f", filepath.Join(bundle, "docker/Dockerfile"), "-t", image, bundle)
 		command.Stdout = os.Stdout
 		command.Stderr = os.Stderr

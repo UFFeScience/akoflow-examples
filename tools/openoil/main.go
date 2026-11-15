@@ -10,7 +10,7 @@ import (
 	"path/filepath"
 )
 
-const image = "ghcr.io/uffescience/openoil-ensemble:v1"
+const image = "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a"
 
 func main() {
 	root := flag.String("root", ".", "examples checkout")

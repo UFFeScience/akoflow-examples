@@ -10,7 +10,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py prepare --count 14 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py prepare --count 14 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -24,7 +24,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 0 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 0 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -40,7 +40,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 1 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 1 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -56,7 +56,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 2 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 2 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -72,7 +72,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 3 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 3 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -88,7 +88,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 4 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 4 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -104,7 +104,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 5 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 5 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -120,7 +120,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 6 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 6 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -136,7 +136,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 7 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 7 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -152,7 +152,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 8 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 8 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -168,7 +168,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 9 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 9 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -184,7 +184,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 10 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 10 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -200,7 +200,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 11 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 11 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -216,7 +216,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 12 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 12 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -232,7 +232,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 13 --workspace \"$shared\""
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 13 --workspace \"$shared\""
           ]
         },
         "runtime": "gawa-four-local",
@@ -248,7 +248,7 @@
           "entrypoint": "sh",
           "arguments": [
             "-c",
-            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py merge --workspace \"$shared\"\nconda run --no-capture-output -n gawa python /data/gawa_validate.py \"$shared/results\"\ncp -a \"$shared/results\" ./results"
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nif [ \"$PWD\" = /outputs ]; then shared=/outputs/gawa-shared; fi\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py merge --workspace \"$shared\"\nconda run --no-capture-output -n gawa python /data/gawa_validate.py \"$shared/results\"\ncp -a \"$shared/results\" ./results"
           ]
         },
         "runtime": "gawa-four-local",

@@ -1,0 +1,91 @@
+{
+  "slug": "gawa",
+  "title": "GAWA \u2014 Stellar Cluster Detection",
+  "ciValidation": "image-and-contract",
+  "validationMode": "local-workload",
+  "stages": [
+    "prepare",
+    "tile-000",
+    "tile-001",
+    "tile-002",
+    "tile-003",
+    "tile-004",
+    "tile-005",
+    "tile-006",
+    "tile-007",
+    "tile-008",
+    "tile-009",
+    "tile-010",
+    "tile-011",
+    "tile-012",
+    "tile-013",
+    "merge"
+  ],
+  "dependencies": {
+    "prepare": [],
+    "tile-000": [
+      "prepare"
+    ],
+    "tile-001": [
+      "prepare"
+    ],
+    "tile-002": [
+      "prepare"
+    ],
+    "tile-003": [
+      "prepare"
+    ],
+    "tile-004": [
+      "tile-000"
+    ],
+    "tile-005": [
+      "tile-001"
+    ],
+    "tile-006": [
+      "tile-002"
+    ],
+    "tile-007": [
+      "tile-003"
+    ],
+    "tile-008": [
+      "tile-004"
+    ],
+    "tile-009": [
+      "tile-005"
+    ],
+    "tile-010": [
+      "tile-006"
+    ],
+    "tile-011": [
+      "tile-007"
+    ],
+    "tile-012": [
+      "tile-008"
+    ],
+    "tile-013": [
+      "tile-009"
+    ],
+    "merge": [
+      "tile-000",
+      "tile-001",
+      "tile-002",
+      "tile-003",
+      "tile-004",
+      "tile-005",
+      "tile-006",
+      "tile-007",
+      "tile-008",
+      "tile-009",
+      "tile-010",
+      "tile-011",
+      "tile-012",
+      "tile-013"
+    ]
+  },
+  "artifacts": [
+    "results/clusters.fits",
+    "results/clusters.csv",
+    "results/validation.json",
+    "results/catalog-preview.png"
+  ]
+}

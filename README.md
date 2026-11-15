@@ -2,11 +2,11 @@
 
 Local runnable examples for [AkôFlow](https://github.com/UFFeScience/akoflow), with the same activity DAGs used in Desktop and in the project documentation.
 
-The catalog contains 27 small CPU workloads, the full 58-activity Montage 050d scientific workflow, and three OpenOil ensembles with 8, 16 and 32 members. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
+The catalog contains 27 small CPU workloads, the full 58-activity Montage 050d scientific workflow, three OpenOil ensembles with 8, 16 and 32 members, an eleven-activity USGS Earthquake workflow, and a five-activity SRA Search workflow processing complete real observations. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
 
 ## Clone once and run a local example
 
-Install Go and Python 3.12+. Blender, Montage and OpenOil also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
+Install Go and Python 3.12+. Blender, Earthquake, SRA Search, Montage and OpenOil also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
 
 ```sh
 git clone https://github.com/UFFeScience/akoflow-examples.git
@@ -17,6 +17,8 @@ Each command below starts from the repository root and keeps your shell in that 
 
 | Example | Local command (from the repository root) |
 | --- | --- |
+| [USGS Earthquake](scientific-workflows/earthquake/README.md) | `(cd scientific-workflows/earthquake && ./prepare.sh && ./run.sh)` |
+| [SRA Search — crAssphage Screening](scientific-workflows/sra-search/README.md) | `(cd scientific-workflows/sra-search && ./prepare.sh && ./run.sh)` |
 | [Montage 050 — Astronomical Image Mosaicking](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 8 members](scientific-workflows/openoil-ensemble-08/README.md) | `(cd scientific-workflows/openoil-ensemble-08 && ./prepare.sh && ./run.sh)` |
 | [OpenOil ensemble — 16 members](scientific-workflows/openoil-ensemble-16/README.md) | `(cd scientific-workflows/openoil-ensemble-16 && ./prepare.sh && ./run.sh)` |

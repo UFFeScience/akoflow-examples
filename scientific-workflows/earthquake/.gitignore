@@ -1,0 +1,5 @@
+/outputs/
+/outputs-daemon/
+/evidence/*.tar.gz
+/evidence/retained-daemon-outputs/
+__pycache__/

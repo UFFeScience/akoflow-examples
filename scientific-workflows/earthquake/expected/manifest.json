@@ -1,0 +1,17 @@
+{
+  "showcase": "earthquake-local",
+  "status": "success",
+  "artifacts": [
+    "catalog.csv",
+    "patterns.json",
+    "earthquakes.png",
+    "anomalies.json",
+    "zones.json",
+    "aftershocks.json",
+    "aftershocks.png",
+    "hazard.json",
+    "gaps.json",
+    "hazard.png",
+    "gaps.png"
+  ]
+}

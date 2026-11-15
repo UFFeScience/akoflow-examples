@@ -1,0 +1,129 @@
+{
+  "status": "success",
+  "executionMode": "local-container",
+  "networkMode": "none",
+  "imageId": "sha256:2b7575e9f165e2c6121a9dfd43972ef33050aa9af5f9f4f7e80a1c00634cdc99",
+  "startedAt": "2026-11-15T17:21:39.285215+00:00",
+  "finishedAt": "2026-11-15T17:29:34.724723+00:00",
+  "wallSeconds": 475.439508,
+  "completedActivities": 11,
+  "catalog": {
+    "source": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "parameters": [
+      "--region",
+      "california",
+      "--start-date",
+      "2000-01-01",
+      "--end-date",
+      "2025-12-31",
+      "--min-magnitude",
+      "3.0"
+    ],
+    "retrievedAt": "2026-11-15T17:19:34.200287+00:00",
+    "events": 12160,
+    "sha256": "86cbb0d325486e5a83c1338f98b6eac72aabbbec39fe62a78f90e40ab15b76f7"
+  },
+  "activities": [
+    {
+      "name": "fetch",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:39.285215798Z",
+      "finishedAt": "2026-11-15T17:21:40.081144925Z",
+      "wallSeconds": 0.795929
+    },
+    {
+      "name": "map",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:40.081458194Z",
+      "finishedAt": "2026-11-15T17:21:47.725676685Z",
+      "wallSeconds": 7.644218
+    },
+    {
+      "name": "patterns",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:40.081647037Z",
+      "finishedAt": "2026-11-15T17:21:42.506045894Z",
+      "wallSeconds": 2.424398
+    },
+    {
+      "name": "anomalies",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:42.506282022Z",
+      "finishedAt": "2026-11-15T17:21:58.301543611Z",
+      "wallSeconds": 15.795261
+    },
+    {
+      "name": "zones",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:47.725881242Z",
+      "finishedAt": "2026-11-15T17:21:51.130045641Z",
+      "wallSeconds": 3.404164
+    },
+    {
+      "name": "aftershocks",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:51.130737379Z",
+      "finishedAt": "2026-11-15T17:21:56.067887744Z",
+      "wallSeconds": 4.93715
+    },
+    {
+      "name": "aftershock-map",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:56.068469507Z",
+      "finishedAt": "2026-11-15T17:22:07.500086391Z",
+      "wallSeconds": 11.431617
+    },
+    {
+      "name": "hazard",
+      "status": "success",
+      "startedAt": "2026-11-15T17:21:58.301825905Z",
+      "finishedAt": "2026-11-15T17:29:32.793581337Z",
+      "wallSeconds": 454.491756
+    },
+    {
+      "name": "gaps",
+      "status": "success",
+      "startedAt": "2026-11-15T17:22:07.500607493Z",
+      "finishedAt": "2026-11-15T17:22:11.079998231Z",
+      "wallSeconds": 3.579391
+    },
+    {
+      "name": "gap-map",
+      "status": "success",
+      "startedAt": "2026-11-15T17:22:11.080693885Z",
+      "finishedAt": "2026-11-15T17:22:14.765021046Z",
+      "wallSeconds": 3.684328
+    },
+    {
+      "name": "hazard-map",
+      "status": "success",
+      "startedAt": "2026-11-15T17:29:32.7937727Z",
+      "finishedAt": "2026-11-15T17:29:34.72472349Z",
+      "wallSeconds": 1.930951
+    }
+  ],
+  "artifactSha256": {
+    "aftershocks.json": "fca83b96932e0793f22261fc2e1a138ce1700201abf8cd2dfda96e6e5280affc",
+    "aftershocks.png": "eb7a6cef1f6c13132b84bc295ae42d9268782cb32e590563303f716e2542adfb",
+    "anomalies.json": "a301bcbf4e766d1252801c38611fe78bd175a24d58457f5cc97cbe19b1c3908d",
+    "catalog.csv": "86cbb0d325486e5a83c1338f98b6eac72aabbbec39fe62a78f90e40ab15b76f7",
+    "earthquakes.png": "f6aaec13a128aee29731301a57ced0d3a5c338b97e0f1a8554d1562fb1bfb94d",
+    "gaps.json": "aea6937e0852670da7fe15ebc479a400036071558bf27937804551fd59e55ecd",
+    "gaps.png": "8a4c06ef270cd3a5c84d990319ecc85f0a5d80ef2b5931c1c9d7f8a184df857f",
+    "hazard.json": "8e2885a642d3367a31895cc794647d22b90814027d38312e0b87fae6e7b61a3e",
+    "hazard.png": "ac31f42fe02107e8b9d88976999ae590145577645bba1fefde24d5662a985c19",
+    "patterns.json": "ad501f7dfbc0f3a587d4628233b8f2608d26b8b8f20997f36460ba21d072193d",
+    "zones.json": "96c2118a2a31add98740020e215bfed0897d4a41f6bb1df75cac85b0dde1c80f"
+  },
+  "validation": [
+    "All 11 activities completed",
+    "All 11 output artifact SHA-256 digests match",
+    "Four PNG files decode successfully",
+    "Scientific JSON reports contain no top-level errors",
+    "Catalog has 12160 unique event IDs",
+    "Corrupted catalog snapshot rejected",
+    "go run ./tools/materialize -check passed",
+    "go test ./tools/... passed"
+  ],
+  "scope": "Local showcase executor runs the authoritative Ak\u00f4Flow DAG with Docker; daemon/Desktop path is documented but has not been executed in this validation."
+}

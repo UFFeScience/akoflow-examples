@@ -1,0 +1,9 @@
+{
+  "showcase": "sra-search-local",
+  "status": "success",
+  "artifacts": [
+    "published-results.tar.gz",
+    "published-validation.json",
+    "mapping-summary.svg"
+  ]
+}

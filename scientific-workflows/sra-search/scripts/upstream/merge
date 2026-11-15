@@ -1,0 +1,22 @@
+#!/bin/bash
+
+set -e
+
+mkdir results
+
+# target file is the first one in the arguments
+TARGET=$1
+shift
+
+# everything else is an input (could be mix of tar and bams)
+for FILE in "$@"; do
+    if [[ "$FILE" == *.tar.gz ]]; then
+        tar xzf "$FILE"
+    else
+        mv $FILE results/
+    fi
+done
+
+tar czf $TARGET results
+
+

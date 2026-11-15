@@ -1,0 +1,310 @@
+{
+  "id": "a555b3c0aec885c7560bc04b659ef249bc14f6471b0cdce65eda6b4aa67c096e",
+  "publication": {
+    "id": "a15b1900-af13-471b-a425-340983d127ae",
+    "title": "Earthquake \u2014 real USGS observations",
+    "slug": "scientific-workflows-earthquake",
+    "description": "Eleven scientific activities with 12,160 real USGS events; measured local Docker execution through the Ak\u00f4Flow daemon.",
+    "readme": "# Earthquake: real USGS observations\n\nRun the eleven activities of the [Pegasus Earthquake workflow](https://github.com/pegasus-isi/earthquake-workflow) on CPU through the Ak\u00f4Flow local executor. The original scientific scripts are preserved at commit `a31920b7b0bb0cfb30241ffd2566d935847e34a1`, with their MIT license in `scripts/upstream/`.\n\n## Run\n\nInstall Docker and Go, then run from this directory:\n\n```sh\n./prepare.sh\n./run.sh\n```\n\nThe bundle includes a snapshot of 12,160 actual California seismic events of magnitude \u22653 from 2000-01-01 through 2025-12-31. Preparation requires internet for the container and Python packages, builds the Python environment and verifies the bundled catalog hash. The query, event count, retrieval time and SHA-256 are recorded in `data/catalog-provenance.json`. If no snapshot exists, preparation downloads it and rejects empty or potentially truncated results. Subsequent preparations reuse that exact snapshot. To deliberately refresh it, remove both `data/catalog.csv` and `data/catalog-provenance.json` before preparation. USGS may revise historical observations; preserve these two files together when sharing an experiment.\n\nAll execution activities run in Docker with networking disabled. The `fetch` activity verifies and stages the catalog downloaded during preparation; it does not make a new network request. The remaining ten activities run the unchanged upstream scientific programs. No tasks use simulated durations or fabricated observations. The runner uses two simultaneous containers; allow 4 CPU cores, 8 GiB RAM and 5 GiB free disk as a starting local capacity, rather than a measured minimum.\n\nThe DAG fans out from the catalog into pattern analysis, mapping, anomaly detection, DBSCAN clustering, statistical aftershock estimation, hazard assessment and gap analysis. Three dependent visualization activities consume the derived reports and the catalog. All file handoffs are declared in `workflow.yaml`.\n\nThe hazard grid uses 2-degree spacing to keep the local example manageable. This is coarser than the upstream 1-degree default and changes the spatial resolution of the calculation. Aftershock estimation uses the upstream default statistical mode; this bundle does not claim to train an ML model. The upstream hazard and aftershock models are illustrative scientific computations, not validated operational forecasts.\n\nOutputs in `outputs/` include the catalog, six JSON reports, four PNG visualizations, a SHA-256 manifest and per-activity start/end times and logs. `./validate.sh` verifies artifact hashes, report errors, PNG decoding, event count and duplicate IDs.\n\n## Daemon and Desktop\n\nIf the daemon binds to a LAN address, add `-api-url http://<daemon-host>:8080/akoflow-api` to the command below.\n\nAfter preparation, with a local Docker-enabled Ak\u00f4Flow daemon and `AKOFLOW_API_TOKEN` configured:\n\n```sh\ngo run ../../tools/daemon-local -root ../.. -example scientific-workflows/earthquake -wait=false\n```\n\nThis registers the local environment, scope, topology and the same eleven-activity DAG. It submits a real run and prints its ID for inspection in Desktop. Pegasus and HTCondor are not required by this adaptation.\n\n## Provenance\n\n- Upstream source and adaptation: `data/upstream.json`.\n- Scientific code and license: `scripts/upstream/`.\n- USGS service: <https://earthquake.usgs.gov/fdsnws/event/1/>.\n- Frozen observations and retrieval record: `data/catalog.csv`, `data/catalog-provenance.json` (bundled observation snapshot).\n- Other workflow candidates: [research notes](RESEARCH.md).\n\n## Measured local execution\n\nValidated on 2026-11-15: **11/11 activities**, **12,160 actual USGS events**, four decoded PNGs and six parsed scientific reports. Total observed activity span: **475.44 seconds** with two concurrent Docker slots. Hazard assessment alone took **454.49 seconds**. These are wall-clock measurements on the shared execution host, not isolated performance benchmarks. See `evidence/local-run.json` for activity times, image ID, query provenance and artifact hashes. The standalone executor was tested; A real daemon execution was subsequently submitted; see `evidence/daemon-run.json` for its current recorded status and identifiers.\n\n## Captured daemon execution\n\nThe measured daemon execution completed all 11 activities in 407.72 seconds. This publication preserves its native plan, observations, attempt logs and recorded file digests. The daemon reclaimed intermediate workspaces after consumption; final PNGs and terminal JSON reports remain on the execution host. The captured image is a local build alias; it has not been uploaded to a public registry. Reproduction on another host requires building the Dockerfile from the source bundle and assigning the captured image tag.\n\nSource bundle: https://github.com/UFFeScience/akoflow-examples/tree/AKO-31/scientific-workflows/earthquake\n\nThis publication uses the Hub configured in this installation (the LAN instance), rather than claiming a publication on hub.akoflow.com.\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+  "workflowName": "earthquake-local-local-5aca190e53",
+  "yaml": "name: earthquake-local-local-5aca190e53\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - fetch\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: fetch\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - patterns\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: patterns\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - map\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: map\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - anomalies\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: anomalies\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - zones\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: zones\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - aftershocks\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: aftershocks\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - aftershock-map\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - aftershocks\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: aftershock-map\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - hazard\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: hazard\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - gaps\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: gaps\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - hazard-map\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n            - hazard\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: hazard-map\n          runtime: earthquake-local-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - gap-map\n                - --output\n                - .\n            entrypoint: python\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - fetch\n            - gaps\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: earthquake-local-local\n            workspaceSeedPath: \"\"\n          name: gap-map\n          runtime: earthquake-local-local\n    dataDependencies:\n        - consumerActivity: aftershock-map\n          logicalName: aftershocks.json\n          producerActivity: aftershocks\n          sizeBytes: 1e+06\n        - consumerActivity: aftershock-map\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: aftershocks\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: anomalies\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: gap-map\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: gaps\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: hazard\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: hazard-map\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: map\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: patterns\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: zones\n          logicalName: catalog.csv\n          producerActivity: fetch\n          sizeBytes: 1e+06\n        - consumerActivity: gap-map\n          logicalName: gaps.json\n          producerActivity: gaps\n          sizeBytes: 1e+06\n        - consumerActivity: hazard-map\n          logicalName: hazard.json\n          producerActivity: hazard\n          sizeBytes: 1e+06\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "earthquake-local-local-5aca190e53-aftershock-map",
+      "exitCode": 0,
+      "finishedAt": 1794764022.4301794,
+      "log": "2026-11-15 17:33:37,578 - __main__ - INFO - Loading predictions from aftershocks.json\n2026-11-15 17:33:37,580 - __main__ - INFO - Loading catalog from catalog.csv\n2026-11-15 17:33:37,608 - __main__ - INFO - Creating comprehensive aftershock visualization...\n2026-11-15 17:33:37,649 - __main__ - INFO - Creating mainshock map...\n2026-11-15 17:33:37,828 - __main__ - INFO - Creating risk summary...\n2026-11-15 17:33:37,833 - __main__ - INFO - Creating expected counts heatmap...\n2026-11-15 17:33:37,898 - __main__ - INFO - Creating probability chart...\n2026-11-15 17:33:38,013 - __main__ - INFO - Creating Omori decay plot...\n2026-11-15 17:33:38,078 - __main__ - INFO - Creating Bath's Law plot...\n2026-11-15 17:33:42,276 - __main__ - INFO - Visualization saved to aftershocks.png\n2026-11-15 17:33:42,277 - __main__ - INFO - Aftershock visualization completed successfully\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764016.685586,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-aftershocks",
+      "exitCode": 0,
+      "finishedAt": 1794764015.5019588,
+      "log": "2026-11-15 17:33:34,105 - __main__ - INFO - Starting aftershock prediction inference...\n2026-11-15 17:33:34,163 - __main__ - INFO - Loaded 12160 events from catalog.csv\n2026-11-15 17:33:34,163 - __main__ - INFO - Identifying mainshocks (M >= 5.0)...\n2026-11-15 17:33:34,286 - __main__ - INFO - Identified 80 mainshocks\n2026-11-15 17:33:35,408 - __main__ - INFO - Predictions saved to aftershocks.json\n2026-11-15 17:33:35,408 - __main__ - INFO - Aftershock prediction completed successfully\n\n======================================================================\nAFTERSHOCK PREDICTION SUMMARY\n======================================================================\nTotal Events Analyzed: 12160\nMainshocks Identified: 80\n\nRisk Assessment:\n  High Risk (P >= 0.7): 72\n  Moderate Risk (0.3 <= P < 0.7): 5\n  Low Risk (P < 0.3): 3\n  Average M5+ Probability: 91.1%\n\nPredictions saved to: aftershocks.json\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764013.187313,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-anomalies",
+      "exitCode": 0,
+      "finishedAt": 1794764009.5798693,
+      "log": "2026-11-15 17:33:22,171 - __main__ - INFO - Loading earthquake data from catalog.csv\n2026-11-15 17:33:22,199 - __main__ - INFO - Loaded 12160 earthquake events\n2026-11-15 17:33:22,199 - __main__ - INFO - Generating seismic anomaly report for 12160 events...\n2026-11-15 17:33:22,199 - __main__ - INFO - Detecting earthquake swarms...\n2026-11-15 17:33:28,988 - __main__ - INFO - Detected 107 earthquake swarms\n2026-11-15 17:33:28,988 - __main__ - INFO - Detecting mainshock-aftershock sequences...\n2026-11-15 17:33:29,126 - __main__ - INFO - Detected 69 mainshock-aftershock sequences\n2026-11-15 17:33:29,126 - __main__ - INFO - Detecting magnitude anomalies...\n2026-11-15 17:33:29,161 - __main__ - INFO - Detected 360 magnitude anomalies\n2026-11-15 17:33:29,162 - __main__ - INFO - Detecting seismic rate changes...\n/app/scripts/upstream/detect_seismic_anomalies.py:292: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.\n  df['hour'] = df['time'].dt.floor('H')\n2026-11-15 17:33:29,444 - __main__ - INFO - Detected 299 rate change anomalies\n2026-11-15 17:33:29,444 - __main__ - INFO - Detecting depth anomalies...\n2026-11-15 17:33:29,471 - __main__ - INFO - Detected 254 depth anomalies\n2026-11-15 17:33:29,487 - __main__ - INFO - Anomaly report saved to anomalies.json\n2026-11-15 17:33:29,487 - __main__ - INFO - Seismic anomaly detection completed successfully\n\n======================================================================\nSEISMIC ANOMALY DETECTION SUMMARY\n======================================================================\nTotal Events Analyzed: 12160\n\nDetected Anomalies:\n  Earthquake Swarms: 107\n  Mainshock-Aftershock Sequences: 69\n  Magnitude Anomalies: 360\n  Rate Change Events: 299\n  Depth Anomalies: 254\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764001.2966356,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-fetch",
+      "exitCode": 0,
+      "finishedAt": 1794763992.5825832,
+      "log": "[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794763992.4527767,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-gap-map",
+      "exitCode": 0,
+      "finishedAt": 1794764400.1700146,
+      "log": "2026-11-15 17:39:59,451 - __main__ - INFO - Loading gap data from gaps.json\n2026-11-15 17:39:59,452 - __main__ - INFO - Loading catalog from catalog.csv\n2026-11-15 17:39:59,482 - __main__ - INFO - Creating gap visualization...\n2026-11-15 17:39:59,525 - __main__ - INFO - Creating gap map...\n2026-11-15 17:39:59,535 - __main__ - INFO - Creating rate ratio heatmap...\n2026-11-15 17:39:59,543 - __main__ - INFO - Creating risk score chart...\n2026-11-15 17:39:59,550 - __main__ - INFO - Creating temporal comparison...\n2026-11-15 17:39:59,563 - __main__ - INFO - Creating potential magnitude chart...\n2026-11-15 17:39:59,576 - __main__ - INFO - Creating summary statistics...\n2026-11-15 17:40:00,058 - __main__ - INFO - Visualization saved to gaps.png\n\n============================================================\nSEISMIC GAP VISUALIZATION SUMMARY\n============================================================\nTotal gaps identified: 16\nHigh/Critical risk gaps: 7\nTotal gap area: 56,931 sq km\nMax potential magnitude: M6.8\n\nTop 3 Gaps by Risk Score:\n  - Gap #2: score=0.85, level=high, potential=M6.8, loc=(32.25, -115.25)\n  - Gap #15: score=0.83, level=high, potential=M5.7, loc=(41.25, -114.75)\n  - Gap #5: score=0.81, level=high, potential=M6.1, loc=(35.75, -121.00)\n============================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764398.5288177,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-gaps",
+      "exitCode": 0,
+      "finishedAt": 1794764393.0656772,
+      "log": "2026-11-15 17:39:52,319 - __main__ - INFO - Loading earthquake catalog from catalog.csv\n2026-11-15 17:39:52,349 - __main__ - INFO - Loaded 12160 events\n2026-11-15 17:39:52,350 - __main__ - INFO - Starting seismic gap analysis...\n2026-11-15 17:39:52,351 - __main__ - INFO - Using 12160 events with M >= 3.0\n2026-11-15 17:39:52,367 - __main__ - INFO - Data spans 26.0 years (2000-01-01 to 2025-12-29)\n2026-11-15 17:39:52,369 - __main__ - INFO - Historical period: 9902 events over 20.0 years\n2026-11-15 17:39:52,369 - __main__ - INFO - Recent period: 1837 events over 5.0 years\n2026-11-15 17:39:52,371 - __main__ - INFO - Created analysis grid: 23 x 25 = 575 cells\n2026-11-15 17:39:52,468 - __main__ - INFO - Analyzing cell 100/575\n2026-11-15 17:39:52,583 - __main__ - INFO - Analyzing cell 200/575\n2026-11-15 17:39:52,690 - __main__ - INFO - Analyzing cell 300/575\n2026-11-15 17:39:52,796 - __main__ - INFO - Analyzing cell 400/575\n2026-11-15 17:39:52,899 - __main__ - INFO - Analyzing cell 500/575\n2026-11-15 17:39:52,953 - __main__ - INFO - Identified 23 gap cells out of 165 analyzed\n2026-11-15 17:39:52,953 - __main__ - INFO - Merged into 16 gap regions\n2026-11-15 17:39:52,958 - __main__ - INFO - Gap analysis saved to gaps.json\n\n======================================================================\nSEISMIC GAP ANALYSIS SUMMARY\n======================================================================\n\nAnalysis Parameters:\n  - Events analyzed: 12160\n  - Historical period: 20.0 years (9902 events)\n  - Recent period: 4.999315537303217 years (1837 events)\n  - Grid resolution: 0.5\u00b0\n  - Rate threshold: 0.3\n  - Min significance: 0.9\n\nGap Detection Results:\n  - Total cells analyzed: 165\n  - Gap cells identified: 23\n  - Merged gap regions: 16\n  - High/Critical risk gaps: 7\n  - Total gap area: 56930.7 sq km\n  - Max potential magnitude: M6.8\n  - Overall rate change: 0.74x\n\nIdentified Seismic Gaps (sorted by risk):\n\n  Gap #2 [HIGH]\n    Location: (32.25\u00b0, -115.25\u00b0)\n    Area: 7815 sq km (3 cells)\n    Rate ratio: 0.18 (hist: 1424, recent: 65)\n    Significance: 1.00\n    Historical max: M7.2\n    Days since M5+: 1995\n    Potential magnitude: M6.8\n    Risk score: 0.85\n\n  Gap #15 [HIGH]\n    Location: (41.25\u00b0, -114.75\u00b0)\n    Area: 2316 sq km (1 cells)\n    Rate ratio: 0.06 (hist: 139, recent: 2)\n    Significance: 1.00\n    Historical max: M5.9\n    Days since M5+: 6842\n    Potential magnitude: M5.7\n    Risk score: 0.83\n\n  Gap #5 [HIGH]\n    Location: (35.75\u00b0, -121.00\u00b0)\n    Area: 5000 sq km (2 cells)\n    Rate ratio: 0.18 (hist: 386, recent: 17)\n    Significance: 1.00\n    Historical max: M6.5\n    Days since M5+: 8082\n    Potential magnitude: M6.1\n    Risk score: 0.81\n\n  Gap #4 [HIGH]\n    Location: (34.75\u00b0, -116.25\u00b0)\n    Area: 2531 sq km (1 cells)\n    Rate ratio: 0.05 (hist: 82, recent: 1)\n    Significance: 1.00\n    Historical max: M5.1\n    Days since M5+: 6553\n    Potential magnitude: M4.9\n    Risk score: 0.76\n\n  Gap #12 [HIGH]\n    Location: (39.75\u00b0, -120.75\u00b0)\n    Area: 2368 sq km (1 cells)\n    Rate ratio: 0.21 (hist: 19, recent: 1)\n    Significance: 0.95\n    Historical max: M5.2\n    Days since M5+: 9227\n    Potential magnitude: M4.8\n    Risk score: 0.74\n\n  Gap #14 [HIGH]\n    Location: (40.25\u00b0, -122.75\u00b0)\n    Area: 2351 sq km (1 cells)\n    Rate ratio: 0.00 (hist: 10, recent: 0)\n    Significance: 0.92\n    Historical max: M4.7\n    Days since M5+: 6350\n    Potential magnitude: M4.7\n    Risk score: 0.73\n\n  Gap #7 [HIGH]\n    Location: (35.92\u00b0, -117.58\u00b0)\n    Area: 7484 sq km (3 cells)\n    Rate ratio: 0.19 (hist: 1492, recent: 71)\n    Significance: 1.00\n    Historical max: M7.1\n    Days since M5+: 2334\n    Potential magnitude: M6.7\n    Risk score: 0.72\n\n  Gap #10 [MODERATE]\n    Location: (38.00\u00b0, -118.50\u00b0)\n    Area: 4854 sq km (2 cells)\n    Rate ratio: 0.18 (hist: 223, recent: 10)\n    Significance: 0.99\n    Historical max: M5.6\n    Days since M5+: 1580\n    Potential magnitude: M5.6\n    Risk score: 0.65\n\n  Gap #13 [MODERATE]\n    Location: (39.75\u00b0, -117.25\u00b0)\n    Area: 2368 sq km (1 cells)\n    Rate ratio: 0.00 (hist: 10, recent: 0)\n    Significance: 0.92\n    Historical max: M4.1\n    Days since M5+: 2749\n    Potential magnitude: M6.0\n    Risk score: 0.64\n\n  Gap #9 [MODERATE]\n    Location: (37.25\u00b0, -114.25\u00b0)\n    Area: 2452 sq km (1 cells)\n    Rate ratio: 0.00 (hist: 19, recent: 0)\n    Significance: 0.99\n    Historical max: M4.3\n    Days since M5+: 3438\n    Potential magnitude: M4.3\n    Risk score: 0.63\n\n  ... and 6 more gaps\n\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764391.4522367,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-hazard",
+      "exitCode": 0,
+      "finishedAt": 1794764389.3860452,
+      "log": "2026-11-15 17:33:44,005 - __main__ - INFO - Loading earthquake catalog from catalog.csv\n2026-11-15 17:33:44,035 - __main__ - INFO - Loaded 12160 events\n2026-11-15 17:33:44,035 - __main__ - INFO - Starting seismic hazard assessment...\n2026-11-15 17:33:44,036 - __main__ - INFO - Using 1198 events with M >= 4.0\n2026-11-15 17:33:44,038 - __main__ - INFO - Analysis time window: 26.0 years\n2026-11-15 17:33:44,039 - __main__ - INFO - Created analysis grid: 7 x 7 = 49 points\n2026-11-15 17:39:49,289 - __main__ - INFO - Hazard assessment saved to hazard.json\n\n======================================================================\nSEISMIC HAZARD ASSESSMENT SUMMARY\n======================================================================\n\nAnalysis Parameters:\n  - Events analyzed: 1198\n  - Time window: 26.0 years\n  - Grid resolution: 2.0\u00b0\n  - Grid points: 49\n  - GMPE model: simplified\n  - Site Vs30: 760.0 m/s\n\nHazard Summary:\n  - Maximum PGA observed: 0.008 g\n  - Mean PGA: 0.0047 g\n  - High hazard area: 0.0%\n  - Dominant magnitude range: M4-5\n\nRisk Distribution:\n  - low: 2 points (4.1%)\n  - very_low: 47 points (95.9%)\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764023.1762254,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-hazard-map",
+      "exitCode": 0,
+      "finishedAt": 1794764396.6651747,
+      "log": "2026-11-15 17:39:55,901 - __main__ - INFO - Loading hazard data from hazard.json\n2026-11-15 17:39:55,901 - __main__ - INFO - Loading catalog from catalog.csv\n2026-11-15 17:39:55,931 - __main__ - INFO - Creating hazard visualization...\n2026-11-15 17:39:55,975 - __main__ - INFO - Creating hazard map...\n2026-11-15 17:39:55,988 - __main__ - INFO - Creating risk distribution map...\n2026-11-15 17:39:55,991 - __main__ - INFO - Creating hazard curves...\n2026-11-15 17:39:55,996 - __main__ - INFO - Creating exceedance summary...\n/app/scripts/upstream/visualize_seismic_hazard.py:264: UserWarning: Attempting to set identical low and high ylims makes transformation singular; automatically expanding.\n  ax.set_ylim(0, max(exceed_pcts) * 1.2 if exceed_pcts else 100)\n2026-11-15 17:39:55,999 - __main__ - INFO - Creating PGA histogram...\n2026-11-15 17:39:56,007 - __main__ - INFO - Creating regional statistics...\n2026-11-15 17:39:56,563 - __main__ - INFO - Visualization saved to hazard.png\n\n============================================================\nSEISMIC HAZARD VISUALIZATION SUMMARY\n============================================================\nEvents analyzed: 1198\nGrid points: 49\nMax PGA: 0.008 g\nHigh hazard area: 0.0%\n============================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764394.9663196,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-map",
+      "exitCode": 0,
+      "finishedAt": 1794764000.060894,
+      "log": "2026-11-15 17:33:17,875 - __main__ - INFO - Loading earthquake data from catalog.csv\n2026-11-15 17:33:17,902 - __main__ - INFO - Loaded 12160 earthquake events\n2026-11-15 17:33:17,902 - __main__ - INFO - Creating comprehensive visualization for 12160 events...\n2026-11-15 17:33:17,942 - __main__ - INFO - Creating geographic map...\n2026-11-15 17:33:17,953 - __main__ - INFO - Creating magnitude histogram...\n2026-11-15 17:33:17,958 - __main__ - INFO - Creating depth histogram...\n2026-11-15 17:33:17,962 - __main__ - INFO - Creating time series plot...\n2026-11-15 17:33:18,036 - __main__ - INFO - Creating magnitude-depth plot...\n2026-11-15 17:33:18,041 - __main__ - INFO - Creating cumulative magnitude plot...\n2026-11-15 17:33:19,960 - __main__ - INFO - Visualization saved to earthquakes.png\n2026-11-15 17:33:19,960 - __main__ - INFO - Earthquake visualization completed successfully\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794763997.0123124,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-patterns",
+      "exitCode": 0,
+      "finishedAt": 1794763995.6561556,
+      "log": "2026-11-15 17:33:15,493 - __main__ - INFO - Loading earthquake data from catalog.csv\n2026-11-15 17:33:15,522 - __main__ - INFO - Loaded 12160 earthquake events\n2026-11-15 17:33:15,522 - __main__ - INFO - Generating seismic pattern analysis for 12160 events...\n2026-11-15 17:33:15,522 - __main__ - INFO - Analyzing magnitude distribution...\n2026-11-15 17:33:15,528 - __main__ - INFO - Gutenberg-Richter b-value: 1.005 (R\u00b2=0.995)\n2026-11-15 17:33:15,529 - __main__ - INFO - Analyzing depth profile...\n2026-11-15 17:33:15,532 - __main__ - INFO - Analyzing temporal patterns...\n2026-11-15 17:33:15,561 - __main__ - INFO - Analyzing spatial distribution...\n2026-11-15 17:33:15,563 - __main__ - INFO - Analyzing event types...\n2026-11-15 17:33:15,564 - __main__ - INFO - Analysis saved to patterns.json\n2026-11-15 17:33:15,564 - __main__ - INFO - Seismic pattern analysis completed successfully\n\n======================================================================\nSEISMIC PATTERN ANALYSIS SUMMARY\n======================================================================\n\nMagnitude Distribution:\n  Range: 3.0 - 7.2\n  Mean: 3.43 \u00b1 0.42\n  Gutenberg-Richter b-value: 1.005 (Natural seismicity)\n\nDepth Profile:\n  Range: -2.4 - 44.6 km\n  Mean: 7.7 \u00b1 5.5 km\n  Shallow (<70 km): 11902 events\n\nTemporal Patterns:\n  Duration: 9493.9 days\n  Daily rate: 2.4 events/day\n  Trend: increasing (1.32 events/day)\n\nSpatial Distribution:\n  Latitude: 32.00\u00b0 to 42.00\u00b0\n  Longitude: -125.00\u00b0 to -114.00\u00b0\n  Area: ~1353983 km\u00b2\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794763994.648224,
+      "status": "completed"
+    },
+    {
+      "activityId": "earthquake-local-local-5aca190e53-zones",
+      "exitCode": 0,
+      "finishedAt": 1794764012.3369174,
+      "log": "2026-11-15 17:33:31,740 - __main__ - INFO - Loading earthquake data from catalog.csv\n2026-11-15 17:33:31,781 - __main__ - INFO - Loaded 12160 earthquake events\n2026-11-15 17:33:31,783 - __main__ - INFO - After removing missing coordinates: 12160 events\n2026-11-15 17:33:31,955 - __main__ - INFO - Running DBSCAN clustering (eps=50.0km, min_samples=10)\n2026-11-15 17:33:32,189 - __main__ - INFO - DBSCAN found 4 clusters, 13 noise points\n2026-11-15 17:33:32,189 - __main__ - INFO - Generating seismic zone report...\n2026-11-15 17:33:32,218 - __main__ - INFO - Zone report saved to zones.json\n2026-11-15 17:33:32,218 - __main__ - INFO - Seismic zone clustering completed successfully\n\n======================================================================\nSEISMIC ZONE CLUSTERING SUMMARY\n======================================================================\nClustering Method: DBSCAN\nTotal Events: 12160\nZones Identified: 4\nNoise Events: 13\n\nZone Statistics:\n  Zone 0: 11803 events (M3.0-7.2) [shallow]\n  Zone 2: 318 events (M3.0-4.7) [shallow]\n  Zone 1: 16 events (M3.0-3.8) [shallow]\n  Zone 3: 10 events (M3.0-4.1) [shallow]\n======================================================================\n[AKOFLOW INFO] Activity started on runtime earthquake-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794764010.9495988,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:c9afe5fa25d01952c2cfb237c31d0ac0da11a5005b39e029c57252dad50916a5",
+      "dataObjectId": "672f8845fd8c3d8a84f02a46e6479c64",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "a5f00e2f218da29a6d37508a0aea4733",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-aftershock-map",
+      "relativePath": "aftershocks.png",
+      "sizeBytes": 2826409
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2218c5f3ce8b89990f047a657245ec9fd1eb370f0fe445e7bcc7375866b67834",
+      "dataObjectId": "39a24267b7d63e945b4921af707ccf77",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "77ef32d3d9a7b91ca21d6102db176415",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-aftershocks",
+      "relativePath": "aftershocks.json",
+      "sizeBytes": 155006
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4a0213d987281a9fd7ecd6f5eb5607e2e7789da992126743377655d8e56cf6e4",
+      "dataObjectId": "11447c3ea5cacd4f0fcd73e7190b106b",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "6c172f41689f09493518c917f9fea33a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-anomalies",
+      "relativePath": "anomalies.json",
+      "sizeBytes": 556966
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:86cbb0d325486e5a83c1338f98b6eac72aabbbec39fe62a78f90e40ab15b76f7",
+      "dataObjectId": "3ba9d71345b5814ed07eff753a299f3d",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "554249e33627b3937130890d3b3818b9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-fetch",
+      "relativePath": "catalog.csv",
+      "sizeBytes": 2703379
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8a4c06ef270cd3a5c84d990319ecc85f0a5d80ef2b5931c1c9d7f8a184df857f",
+      "dataObjectId": "deea4302dcb9838324395ef7fe7d1872",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "c85f39fc9fd861d3ab0a526694e73b45",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-gap-map",
+      "relativePath": "gaps.png",
+      "sizeBytes": 472085
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d7720d5dbcbdd400443dfd7febc76855bfb86f68126db6401f23ae740dec700a",
+      "dataObjectId": "a427da7579d4dc7243eccbc80664c58b",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "b3914322fecda5051a310ea506899f30",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-gaps",
+      "relativePath": "gaps.json",
+      "sizeBytes": 143447
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6933dee943a2544f49c9ab45d67ef253d3855c1b20d50962d77c34d7e5ec597b",
+      "dataObjectId": "994e2c5bd89eaa2207adc3da5bee5cbc",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "6d7a7a26b65895d684a9132537fdbb62",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-hazard",
+      "relativePath": "hazard.json",
+      "sizeBytes": 66317
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ac31f42fe02107e8b9d88976999ae590145577645bba1fefde24d5662a985c19",
+      "dataObjectId": "5886fa750734be52891dcc3693c1bada",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "23a3660849760d7d133fbbff2e79a2c5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-hazard-map",
+      "relativePath": "hazard.png",
+      "sizeBytes": 395525
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b2d3b55212f205f7cfd51669cb5f714f38357d3102a3f83a318a88a3b9cc8d53",
+      "dataObjectId": "c94191a1aeed94e42f4267f8d11b3613",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "faf57a3cfd8bb2138008e63b2dad2ba0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-map",
+      "relativePath": "earthquakes.png",
+      "sizeBytes": 3137297
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8022c5dfb9cfdbe0622ade1ba7d54a9525bf216ebabaa08cb5af544c606161ea",
+      "dataObjectId": "9393e64590dd27b995a07f0316cee0c9",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "cbb86c77c266ca65ca82c3a8790abaae",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-patterns",
+      "relativePath": "patterns.json",
+      "sizeBytes": 4400
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f07d231acd4456bf48de73ace3e63c51cd0a1e29a175524b23373ec923f29547",
+      "dataObjectId": "ec044cea663767ef99f07e4e027368a6",
+      "discovered": true,
+      "executionRunId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+      "id": "1be54efc121a468f3f6cca6497d90bc5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "earthquake-local-local-5aca190e53-zones",
+      "relativePath": "zones.json",
+      "sizeBytes": 10983
+    }
+  ],
+  "exportedAt": "2026-11-15T17:48:28.425929962Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "earthquake-local-local-5aca190e53",
+      "workflowVersionId": "earthquake-local-local-5aca190e53-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 11,
+      "redactionCount": 0,
+      "digest": "879b9b35e9aac2b84d4b913776b97e1ec5e9b7ee0bb7eea1740f67362671e618"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,357 @@\n+name: earthquake-local-local-5aca190e53\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - fetch\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: fetch\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - patterns\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: patterns\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - map\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: map\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - anomalies\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: anomalies\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - zones\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: zones\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - aftershocks\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: aftershocks\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - aftershock-map\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - aftershocks\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: aftershock-map\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - hazard\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: hazard\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - gaps\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: gaps\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - hazard-map\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+            - hazard\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: hazard-map\n+          runtime: earthquake-local-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - gap-map\n+                - --output\n+                - .\n+            entrypoint: python\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/earthquake-local:local-f0fa40c0f1fce879\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - fetch\n+            - gaps\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: earthquake-local-local\n+            workspaceSeedPath: \"\"\n+          name: gap-map\n+          runtime: earthquake-local-local\n+    dataDependencies:\n+        - consumerActivity: aftershock-map\n+          logicalName: aftershocks.json\n+          producerActivity: aftershocks\n+          sizeBytes: 1e+06\n+        - consumerActivity: aftershock-map\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: aftershocks\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: anomalies\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: gap-map\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: gaps\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: hazard\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: hazard-map\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: map\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: patterns\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: zones\n+          logicalName: catalog.csv\n+          producerActivity: fetch\n+          sizeBytes: 1e+06\n+        - consumerActivity: gap-map\n+          logicalName: gaps.json\n+          producerActivity: gaps\n+          sizeBytes: 1e+06\n+        - consumerActivity: hazard-map\n+          logicalName: hazard.json\n+          producerActivity: hazard\n+          sizeBytes: 1e+06\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:37b237755a08826338dca4ec59c2faf58e30bb87d5017a2b734fe0c11e36f096",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "earthquake-local-local-5aca190e53-manual-plan-20261115t173311.771391900",
+            "run_id": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865"
+          },
+          "status": "completed",
+          "durationSeconds": 407.71723794937134,
+          "metrics": {
+            "activity_count": 11,
+            "completed_activity_count": 11,
+            "computeSeconds": 393.0794234275818,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 407.71723794937134,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 11,
+            "queueSeconds": 0,
+            "transferSeconds": 3.226588249206543,
+            "transferred_bytes": 27398560
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

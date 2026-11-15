@@ -1,4 +1,4 @@
-# Local RAG Factory
+# RAG Pipeline
 
 Build a local lexical retrieval index over the bundled text corpus, answer questions by retrieving source evidence, and check the answers against versioned known-answer tests. No hosted embedding or LLM service is required.
 

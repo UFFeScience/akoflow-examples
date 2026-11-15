@@ -1,8 +1,29 @@
-# Hybrid local to GCP: portable local profile
+# Producer–Consumer Data Transfer
 
 Execute the original producer/consumer file-content checks in two Docker activities on one local host. The local profile verifies actual file handoff and receipt content. It does not measure GCP provisioning, Kubernetes placement, or cross-cloud networking.
 
 The original [cloud placement definition](https://github.com/UFFeScience/akoflow-examples/blob/bf4539082b4c8bcf97197046c251c6174d314e24/real/hybrid-cloud-transfer/local-cloud-workflow.yaml) remains available as a separate historical version in Hub. It requires the GCP/Kind setup from the documentation. The words `cloud consumed` in the receipt are an inherited fixture label, not evidence that a cloud VM was used.
+
+## Execution profiles
+
+This is one producer–consumer workflow, with separate fixture and infrastructure profiles. Both measured captures execute the same two-activity contract on local Docker; the fixture label differs. Neither capture measures Kubernetes or GCP execution.
+
+| Profile | Definition | What actually ran |
+| --- | --- | --- |
+| Local-origin fixture | [Workflow v2](https://hub.akoflow.com/api/v1/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/versions/2/yaml) | Local Docker, **2/2 activities completed**, 1.382106 s |
+| Cluster-origin fixture | [Workflow v3](https://hub.akoflow.com/api/v1/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/versions/3/yaml) | Local Docker, **2/2 activities completed**, 1.272317 s; not Kind/GCP |
+| Local → GCP placement | [Original reference](https://github.com/UFFeScience/akoflow-examples/blob/bf4539082b4c8bcf97197046c251c6174d314e24/real/hybrid-cloud-transfer/local-cloud-workflow.yaml) | Configuration only; not executed in this validation |
+| Kind → GCP placement | [Original reference](https://github.com/UFFeScience/akoflow-examples/blob/bf4539082b4c8bcf97197046c251c6174d314e24/real/hybrid-cloud-transfer/kind-cloud-workflow.yaml) | Configuration only; not executed in this validation |
+
+### Cluster-origin fixture: measured local Docker run
+
+Run `hubv1-showcase-hybrid-kind-cloud-profile-local-f6b6e2337f-run-20261115t062828.129149837` completed **2/2 activities**. The fixture is `akoflow-kind-to-gcp`; the inherited receipt text `cloud consumed` does not imply cloud execution.
+
+[Native experiment capture](https://hub.akoflow.com/api/v1/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/experiments/087d9e8b-08cf-4454-83d8-94e46243d3d1) · [Validated output files](https://github.com/UFFeScience/akoflow-examples/releases/download/showcase-hub-v1/connections-hybrid-kind-cloud-profile-results.tar.gz) · [Companion environment and source](https://github.com/UFFeScience/akoflow-examples/tree/main/connections/hybrid-kind-cloud-profile)
+
+Import this measured fixture into Desktop with `akoflow://hub/publications/a057adf4-35da-4f7f-95c1-2a28651c66cd/versions/3`. Use v2 for the local-origin fixture. The publication's Results section retains both independent runs and their original identifiers.
+
+![Cluster-origin fixture measured activity runtimes](https://akoflow.com/showcase/results/hybrid-kind-cloud-profile/timing.svg)
 
 ## Activities and data
 

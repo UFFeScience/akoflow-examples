@@ -1,4 +1,6 @@
-# Hybrid kind to GCP: portable local profile
+# Producer–Consumer Data Transfer — Cluster-Origin Fixture
+
+This is a fixture/deployment profile of the [single data-transfer workflow](https://hub.akoflow.com/o/akoflow/connections-hybrid-local-cloud-profile), not a separate workflow publication. Its measured capture ran on local Docker, not Kind or GCP.
 
 Execute the original producer/consumer file-content checks in two Docker activities on one local host. The local profile verifies actual file handoff and receipt content. It does not measure GCP provisioning, Kubernetes placement, or cross-cloud networking.
 

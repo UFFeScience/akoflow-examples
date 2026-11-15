@@ -1,0 +1,3 @@
+#!/bin/sh
+set -eu
+docker pull ghcr.io/uffescience/openoil-ensemble@sha256:9939dcaa4c26b62ce5496f46f3946d26f0ad1168fbfe1c5acd13b3385fd25b6e

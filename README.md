@@ -2,11 +2,11 @@
 
 Local runnable examples for [AkôFlow](https://github.com/UFFeScience/akoflow), with the same activity DAGs used in Desktop and in the project documentation.
 
-The catalog contains 27 small CPU workloads, the full 58-activity Montage 050d scientific workflow, and an eleven-activity Earthquake workflow using actual USGS observations. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
+The catalog contains 27 small CPU workloads, the full 58-activity Montage 050d scientific workflow, three OpenOil ensembles with 8, 16 and 32 members, an eleven-activity USGS Earthquake workflow, and a five-activity SRA Search workflow processing complete real observations. Each example includes its input data (or a pinned image carrying that data), a preparation command, a local runner, a validator, and local daemon infrastructure. Current Desktop captures are in each bundle's `screenshots/current/`, with their exact run and image identified in its manifest.
 
 ## Clone once and run a local example
 
-Install Go and Python 3.12+. Blender, Earthquake and Montage also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
+Install Go and Python 3.12+. Blender, Earthquake, SRA Search, Montage and OpenOil also require Docker; Montage requires linux/amd64 support. Preparation downloads the Go YAML module and the pinned packages required by that example. Workloads then run on local input data. The small examples perform real computation; their teaching profiles do not require cloud credentials, hosted LLMs, or GPU hardware.
 
 ```sh
 git clone https://github.com/UFFeScience/akoflow-examples.git
@@ -18,7 +18,11 @@ Each command below starts from the repository root and keeps your shell in that 
 | Example | Local command (from the repository root) |
 | --- | --- |
 | [USGS Earthquake](scientific-workflows/earthquake/README.md) | `(cd scientific-workflows/earthquake && ./prepare.sh && ./run.sh)` |
-| [Montage 050 locally](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
+| [SRA Search — crAssphage Screening](scientific-workflows/sra-search/README.md) | `(cd scientific-workflows/sra-search && ./prepare.sh && ./run.sh)` |
+| [Montage 050 — Astronomical Image Mosaicking](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
+| [OpenOil ensemble — 8 members](scientific-workflows/openoil-ensemble-08/README.md) | `(cd scientific-workflows/openoil-ensemble-08 && ./prepare.sh && ./run.sh)` |
+| [OpenOil ensemble — 16 members](scientific-workflows/openoil-ensemble-16/README.md) | `(cd scientific-workflows/openoil-ensemble-16 && ./prepare.sh && ./run.sh)` |
+| [OpenOil ensemble — 32 members](scientific-workflows/openoil-ensemble-32/README.md) | `(cd scientific-workflows/openoil-ensemble-32 && ./prepare.sh && ./run.sh)` |
 | [AI Assisted Analysis](scientific-ai/ai-assisted-analysis/README.md) | `(cd scientific-ai/ai-assisted-analysis && ./prepare.sh && ./run.sh)` |
 | [Experiment Feedback Loop](scientific-ai/experiment-feedback-loop/README.md) | `(cd scientific-ai/experiment-feedback-loop && ./prepare.sh && ./run.sh)` |
 | [Surrogate Model](scientific-ai/surrogate-model/README.md) | `(cd scientific-ai/surrogate-model && ./prepare.sh && ./run.sh)` |
@@ -36,7 +40,7 @@ Each command below starts from the repository root and keeps your shell in that 
 | [Training with MLflow](machine-learning/training-with-mlflow/README.md) | `(cd machine-learning/training-with-mlflow && ./prepare.sh && ./run.sh)` |
 | [Audio Transcription](generative-ai/audio-transcription/README.md) | `(cd generative-ai/audio-transcription && ./prepare.sh && ./run.sh)` |
 | [Document Extraction](generative-ai/document-extraction/README.md) | `(cd generative-ai/document-extraction && ./prepare.sh && ./run.sh)` |
-| [Local RAG Factory](generative-ai/local-rag/README.md) | `(cd generative-ai/local-rag && ./prepare.sh && ./run.sh)` |
+| [RAG Pipeline](generative-ai/local-rag/README.md) | `(cd generative-ai/local-rag && ./prepare.sh && ./run.sh)` |
 | [RAG Indexing](generative-ai/rag-indexing/README.md) | `(cd generative-ai/rag-indexing && ./prepare.sh && ./run.sh)` |
 | [Synthetic Dataset](generative-ai/synthetic-dataset/README.md) | `(cd generative-ai/synthetic-dataset && ./prepare.sh && ./run.sh)` |
 | [AI Video Studio](generative-ai/video-studio/README.md) | `(cd generative-ai/video-studio && ./prepare.sh && ./run.sh)` |
@@ -73,7 +77,7 @@ Montage preserves all 58 original native commands and 138 named file handoffs fr
 
 ## Repository layout
 
-- `scientific-workflows/` and `scientific-ai/`: astronomical mosaics, numerical experiments, and learned scientific surrogates.
+- `scientific-workflows/` and `scientific-ai/`: astronomical mosaics, oil-spill ensembles, numerical experiments, and learned scientific surrogates.
 - `machine-learning/`, `generative-ai/`, `document-ai/`, `media/`, `rendering/`, and `agentic-workflows/`: local domain examples.
 - `workloads/`: canonical implementations for the 22 small pattern workloads; `go run ./tools/materialize` generates their standalone source bundles.
 - `tools/`: Go runners, catalog discovery, infrastructure generation, documentation export, and validators.

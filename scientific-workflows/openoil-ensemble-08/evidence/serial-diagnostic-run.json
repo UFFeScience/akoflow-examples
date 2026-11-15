@@ -1,0 +1,3234 @@
+{
+  "activityCount": 14,
+  "completedActivityCount": 6,
+  "image": "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a",
+  "imageId": "sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a",
+  "observedAt": "2026-11-15T16:19:21Z",
+  "planId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134",
+  "projection": {
+    "activities": [
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759386.0416958,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "openoil-ensemble-08-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759379.5065608,
+        "readyAt": 1794759379.5065608,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 0.400768518447876,
+        "startedAt": 1794759385.6409273,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759420.29359,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.25374650955200195,
+          "preparationFinishedAt": 1794759387.5339324,
+          "preparationStartedAt": 1794759387.354111,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012601613998413086,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.17982149124145508,
+          "transferWorkSeconds": 0.17982149124145508
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759387.318875,
+        "readyAt": 1794759387.318875,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.505911111831665,
+        "startedAt": 1794759387.787679,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.17982149124145508
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759454.677339,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.22831106185913086,
+          "preparationFinishedAt": 1794759422.6788025,
+          "preparationStartedAt": 1794759422.489073,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011631011962890625,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.1897294521331787,
+          "transferWorkSeconds": 0.1897294521331787
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759422.4553106,
+        "readyAt": 1794759422.4553106,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 31.770225524902344,
+        "startedAt": 1794759422.9071136,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.1897294521331787
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759487.140653,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2346653938293457,
+          "preparationFinishedAt": 1794759457.1781006,
+          "preparationStartedAt": 1794759456.9915824,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.010772705078125,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18651819229125977,
+          "transferWorkSeconds": 0.18651819229125977
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759456.9580958,
+        "readyAt": 1794759456.9580958,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 29.72788691520691,
+        "startedAt": 1794759457.412766,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18651819229125977
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759520.7223482,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2542121410369873,
+          "preparationFinishedAt": 1794759487.6416576,
+          "preparationStartedAt": 1794759487.458451,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011342763900756836,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18320655822753906,
+          "transferWorkSeconds": 0.18320655822753906
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759487.4242406,
+        "readyAt": 1794759487.4242406,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.826478481292725,
+        "startedAt": 1794759487.8958697,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18320655822753906
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759554.1740215,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.3041417598724365,
+          "preparationFinishedAt": 1794759521.2183673,
+          "preparationStartedAt": 1794759521.03351,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.010740280151367188,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18485736846923828,
+          "transferWorkSeconds": 0.18485736846923828
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759521.0001419,
+        "readyAt": 1794759521.0001419,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.65151238441467,
+        "startedAt": 1794759521.522509,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18485736846923828
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "failureReason": "Interrupted by user before changing the machine lifecycle",
+        "finishedAt": 1794759561.8230877,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2565302848815918,
+          "preparationFinishedAt": 1794759554.835874,
+          "preparationStartedAt": 1794759554.6517031,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012299299240112305,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18417096138000488,
+          "transferWorkSeconds": 0.18417096138000488
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0.47511744499206543,
+        "queuedAt": 1794759554.617287,
+        "readyAt": 1794759554.617287,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794759555.0924044,
+        "status": "cancelled",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18417096138000488
+      }
+    ],
+    "activityAttempts": [
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759386.0416958,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "openoil-ensemble-08-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759379.5065608,
+        "readyAt": 1794759379.5065608,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 0.400768518447876,
+        "startedAt": 1794759385.6409273,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759420.29359,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.25374650955200195,
+          "preparationFinishedAt": 1794759387.5339324,
+          "preparationStartedAt": 1794759387.354111,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012601613998413086,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.17982149124145508,
+          "transferWorkSeconds": 0.17982149124145508
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759387.318875,
+        "readyAt": 1794759387.318875,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.505911111831665,
+        "startedAt": 1794759387.787679,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.17982149124145508
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759454.677339,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.22831106185913086,
+          "preparationFinishedAt": 1794759422.6788025,
+          "preparationStartedAt": 1794759422.489073,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011631011962890625,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.1897294521331787,
+          "transferWorkSeconds": 0.1897294521331787
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759422.4553106,
+        "readyAt": 1794759422.4553106,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 31.770225524902344,
+        "startedAt": 1794759422.9071136,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.1897294521331787
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759487.140653,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2346653938293457,
+          "preparationFinishedAt": 1794759457.1781006,
+          "preparationStartedAt": 1794759456.9915824,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.010772705078125,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18651819229125977,
+          "transferWorkSeconds": 0.18651819229125977
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759456.9580958,
+        "readyAt": 1794759456.9580958,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 29.72788691520691,
+        "startedAt": 1794759457.412766,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18651819229125977
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759520.7223482,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2542121410369873,
+          "preparationFinishedAt": 1794759487.6416576,
+          "preparationStartedAt": 1794759487.458451,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011342763900756836,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18320655822753906,
+          "transferWorkSeconds": 0.18320655822753906
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759487.4242406,
+        "readyAt": 1794759487.4242406,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.826478481292725,
+        "startedAt": 1794759487.8958697,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18320655822753906
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "finishedAt": 1794759554.1740215,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.3041417598724365,
+          "preparationFinishedAt": 1794759521.2183673,
+          "preparationStartedAt": 1794759521.03351,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.010740280151367188,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18485736846923828,
+          "transferWorkSeconds": 0.18485736846923828
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794759521.0001419,
+        "readyAt": 1794759521.0001419,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 32.65151238441467,
+        "startedAt": 1794759521.522509,
+        "status": "completed",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18485736846923828
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "allocatedResourceId": "openoil-ensemble-08-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "failureReason": "Interrupted by user before changing the machine lifecycle",
+        "finishedAt": 1794759561.8230877,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.2565302848815918,
+          "preparationFinishedAt": 1794759554.835874,
+          "preparationStartedAt": 1794759554.6517031,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012299299240112305,
+          "runtimeId": "openoil-ensemble-08-local",
+          "transferElapsedSeconds": 0.18417096138000488,
+          "transferWorkSeconds": 0.18417096138000488
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "plannedResourceId": "openoil-ensemble-08-docker",
+        "queueSeconds": 0.47511744499206543,
+        "queuedAt": 1794759554.617287,
+        "readyAt": 1794759554.617287,
+        "runtimeId": "openoil-ensemble-08-local",
+        "runtimeSeconds": 0,
+        "startedAt": 1794759555.0924044,
+        "status": "cancelled",
+        "transferBytes": 5933,
+        "transferSeconds": 0.18417096138000488
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "durationSeconds": 0.17982149124145508,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759387.5339324,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.090012229,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 7.27e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759387.354111,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "durationSeconds": 0.1897294521331787,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759422.6788025,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.093815474,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 0.0000013490000000000001,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759422.489073,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "durationSeconds": 0.18651819229125977,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759457.1781006,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.08789765299999999,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 6.24e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759456.9915824,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "durationSeconds": 0.18320655822753906,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759487.6416576,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.089654275,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 8.17e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759487.458451,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "durationSeconds": 0.18485736846923828,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759521.2183673,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.08809335800000001,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 6.669999999999999e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759521.03351,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "durationSeconds": 0.18417096138000488,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "filesTransferred": 3,
+        "finishedAt": 1794759554.835874,
+        "id": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005-0",
+        "logicalBytes": 5933,
+        "planId": "transfer-workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005-0",
+        "route": {
+          "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "filesTransferred": 3,
+          "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.088279672,
+          "sourceEnvironmentId": "openoil-ensemble-08-v1",
+          "sourceResourceId": "openoil-ensemble-08-docker",
+          "sshChannelWaitSeconds": 6.01e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "openoil-ensemble-08-v1",
+          "targetResourceId": "openoil-ensemble-08-docker"
+        },
+        "startedAt": 1794759554.6517031,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 5933
+      }
+    ],
+    "cloudBilling": {
+      "asOf": "2026-11-15T16:19:21.918999783Z",
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "estimatedCost": 0,
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "instances": [],
+      "knownCost": 0,
+      "status": "estimated"
+    },
+    "dataLocations": [
+      {
+        "dataObjectInstanceId": "12fde5f9a563e42474719376f7e4d1e3",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "5dbf5963524f31e209de35bae208de94",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "8a309830fb9d625d2617af111673e67b",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000/membro_000.nc"
+      },
+      {
+        "dataObjectInstanceId": "2e7ee6e9a6cad1199670c54a3d523cda",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "e459078011aa7329a5ff5ceade29093f",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "8a309830fb9d625d2617af111673e67b",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000/profile-member-000.json"
+      },
+      {
+        "dataObjectInstanceId": "5faaf0fee3c8a185fe81e79a7359aeef",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "01ec33e67d88595bb37d2399dab55f02",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d251639337939a33557f07ffa7180aeb",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001/membro_001.nc"
+      },
+      {
+        "dataObjectInstanceId": "058d29b09d857d7d99f23d73d4606de4",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "a3b89f71f5d18d4af71afd670dab316f",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d251639337939a33557f07ffa7180aeb",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001/profile-member-001.json"
+      },
+      {
+        "dataObjectInstanceId": "6e11d6366a435df8d74cde6c779f7fd2",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "79299f50597900746ff32ae54e850111",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d98d0824e58a7e2e8f4fbec00e87f485",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002/membro_002.nc"
+      },
+      {
+        "dataObjectInstanceId": "6cab001f2225b385e771aef947b2ec81",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "42be247fef533fdf4cff36257e277141",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "d98d0824e58a7e2e8f4fbec00e87f485",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002/profile-member-002.json"
+      },
+      {
+        "dataObjectInstanceId": "a033ecbc4604f89e6837e32693f402c4",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "2fce133ba31e0bb04946da2e80e0b179",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "4ff851738942626395ab99d310423a4c",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003/membro_003.nc"
+      },
+      {
+        "dataObjectInstanceId": "15a2af716045125e5cffec9e9785573f",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "7358cb3e743611bd2553b4c2113453cf",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "4ff851738942626395ab99d310423a4c",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003/profile-member-003.json"
+      },
+      {
+        "dataObjectInstanceId": "ecbc655dc5e956abe74fb5fb89c7c879",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "7140634f32fe6461126328c5e23731cd",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "db4d6a7cb5900445de49225bfdd521f6",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004/membro_004.nc"
+      },
+      {
+        "dataObjectInstanceId": "eb7c4d5980c9b4f2e06baad4d0835d7c",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "f486a5463318af68f738f7d467d447f9",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "db4d6a7cb5900445de49225bfdd521f6",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004/profile-member-004.json"
+      },
+      {
+        "dataObjectInstanceId": "70ae17f372bebb79ef3dcc08db3b00a9",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "855b3164c24dc670ec85d3b64d90cb89",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "f0d8d86262b7ab921564451522f609d6",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare/parameters.json"
+      },
+      {
+        "dataObjectInstanceId": "2beee0b9d6fa808fce4c2252134ae2ab",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "841a84a53ab0caf58f038dbbef2ff947",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "f0d8d86262b7ab921564451522f609d6",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare/profile-prepare.json"
+      },
+      {
+        "dataObjectInstanceId": "7a47b2cc2da2344c95d36bbc7851f8ce",
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "3c13c9cb9b68a398c16e26bc9f7225b4",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "status": "ephemeral",
+        "storageResourceId": "f0d8d86262b7ab921564451522f609d6",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare/scenario.json"
+      }
+    ],
+    "dataObjects": [
+      {
+        "attempt": 1,
+        "checksum": "sha256:6b855254af2e490c08ec4d896581f895abeea5393b096e0b888706c80d6fd1bc",
+        "dataObjectId": "e50dc6a0715065cd9910504f8dd5c145",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "12fde5f9a563e42474719376f7e4d1e3",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "relativePath": "membro_000.nc",
+        "sizeBytes": 1708023
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:45fcc90016c844d5eead6e164173b8ac36c38dfc99e452702094c7ca95ccca66",
+        "dataObjectId": "4f1767dc031bda44a6f9982b332b339c",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "2e7ee6e9a6cad1199670c54a3d523cda",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "relativePath": "profile-member-000.json",
+        "sizeBytes": 226
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:7f61bc308676e39d084836a9d62eb5273427f3c1ecf5e9ef551f6fddaddb84e4",
+        "dataObjectId": "e3274dc60f8a165bb1b5a036e9afac0b",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "5faaf0fee3c8a185fe81e79a7359aeef",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "relativePath": "membro_001.nc",
+        "sizeBytes": 1714749
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:62ce8b316a9b51ba5ed32b07c0273f3e5dc012d78a1fc7188c9226aa455c95c8",
+        "dataObjectId": "5b6376fd94ee9be9f5083e2680390968",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "058d29b09d857d7d99f23d73d4606de4",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "relativePath": "profile-member-001.json",
+        "sizeBytes": 224
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:a36c2a679d90b608a3b62351eb6f1c0f3884e0cd1e15dbdde32593f382a12c07",
+        "dataObjectId": "3e10d6524b187bf9f6b54eb53c994090",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "6e11d6366a435df8d74cde6c779f7fd2",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "relativePath": "membro_002.nc",
+        "sizeBytes": 908106
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:67b546826971d28a5a627f195565b53d17fd213c926afdc905bbbad9d2b56c8b",
+        "dataObjectId": "cf45e4a92532d132613dc161405282e1",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "6cab001f2225b385e771aef947b2ec81",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "relativePath": "profile-member-002.json",
+        "sizeBytes": 229
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:15715dc8fa6ea7a463c97ed71e6fbbdf363e9c5e58b1007801aae1a2ef851e2a",
+        "dataObjectId": "a3759c08cf0bdc99af9e0b8d29f1967b",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "a033ecbc4604f89e6837e32693f402c4",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "relativePath": "membro_003.nc",
+        "sizeBytes": 1713494
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:ba29bf82fa5679237921d33a44e108559b6a676ca215455b1bc69f7dcd840ec3",
+        "dataObjectId": "7ed6df7b14dd9013a05438248c0d3191",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "15a2af716045125e5cffec9e9785573f",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "relativePath": "profile-member-003.json",
+        "sizeBytes": 232
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:a46e170c3d9a2bf4b063512d8b37ee7b85926053ba90a74bea10acd731621078",
+        "dataObjectId": "caa9d9afcba861c711d07ede5ec6fe8f",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "ecbc655dc5e956abe74fb5fb89c7c879",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "relativePath": "membro_004.nc",
+        "sizeBytes": 1655028
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:f45110d564d472a2c2c7f16b283afa02e55866b2522bc300be9117793a5f0bef",
+        "dataObjectId": "b272b7e9c75fdf76b7b8a6ce5318a9bf",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "eb7c4d5980c9b4f2e06baad4d0835d7c",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "relativePath": "profile-member-004.json",
+        "sizeBytes": 224
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+        "dataObjectId": "29905704a0ac1209c2bc0e45e64f3fe5",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "70ae17f372bebb79ef3dcc08db3b00a9",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "relativePath": "parameters.json",
+        "sizeBytes": 5253
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+        "dataObjectId": "4d45e8bf4e95f84796aa175a46b5b950",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "2beee0b9d6fa808fce4c2252134ae2ab",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "relativePath": "profile-prepare.json",
+        "sizeBytes": 231
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+        "dataObjectId": "72f42503ee3825dfccf21cdf401a63a5",
+        "discovered": true,
+        "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "id": "7a47b2cc2da2344c95d36bbc7851f8ce",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "relativePath": "scenario.json",
+        "sizeBytes": 449
+      }
+    ],
+    "dataTransfers": [],
+    "events": [
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.started",
+        "id": "a0f0e94df5743bfc10bef2dac6a49091",
+        "occurredAt": "2026-11-15T16:16:18.859594026Z",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "4fb270b070e283a8975b924b0e77c274",
+        "occurredAt": "2026-11-15T16:16:27.189950939Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "da7d3d3fd615628379f726a996aadc95",
+        "occurredAt": "2026-11-15T16:16:27.306784183Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0.400768518447876,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "5d6ddf5d26a2a91cbb67eb08857a87ee",
+        "occurredAt": "2026-11-15T16:16:29.327894355Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "04833e3945f04457d05124287ddb90e9",
+        "occurredAt": "2026-11-15T16:17:02.443614376Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 32.505911111831665,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "d84c7b4311db351a7eefb9331e0a0430",
+        "occurredAt": "2026-11-15T16:17:04.456252057Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "67ede197cb419e0eda272a11166b4980",
+        "occurredAt": "2026-11-15T16:17:36.946361418Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 31.770225524902344,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "878bd0065b97dcdb09f0f1df3a80c192",
+        "occurredAt": "2026-11-15T16:17:38.95578882Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "9ddf5a1f06d2edbeb00d63263a3fa0f6",
+        "occurredAt": "2026-11-15T16:18:07.408844822Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 29.72788691520691,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "83a632eb992b75fcac1c5499be4116e4",
+        "occurredAt": "2026-11-15T16:18:09.458106081Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "f56358d807325ddbce8bef0923b28933",
+        "occurredAt": "2026-11-15T16:18:40.988837105Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 32.826478481292725,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "71c936b74c367fc042383d4bcf7dfee1",
+        "occurredAt": "2026-11-15T16:18:43.06667293Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "83e39e40e04f7ca99aa7e142c8856f30",
+        "occurredAt": "2026-11-15T16:19:14.605381329Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 32.65151238441467,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "3d980f36e46465315f114f00036b14e1",
+        "occurredAt": "2026-11-15T16:19:16.641060586Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.failed",
+        "id": "b4b2ea2cd70965972a6b70aaa596d335",
+        "occurredAt": "2026-11-15T16:19:21.823366204Z",
+        "payload": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "attempt": 1,
+          "executionRunId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "failureReason": "Interrupted by user before changing the machine lifecycle",
+          "runtimeId": "openoil-ensemble-08-local",
+          "runtimeSeconds": 0,
+          "status": "cancelled"
+        }
+      },
+      {
+        "aggregateId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.cancelled",
+        "id": "99127ecf959f3f181916fda8171f44aa",
+        "occurredAt": "2026-11-15T16:19:21.835017693Z",
+        "payload": {
+          "reason": "Cancelled by user"
+        }
+      }
+    ],
+    "handles": [
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:6b855254af2e490c08ec4d896581f895abeea5393b096e0b888706c80d6fd1bc",
+              "modifiedUnixNano": 1794759419687366000,
+              "path": "membro_000.nc",
+              "sizeBytes": 1708023
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:45fcc90016c844d5eead6e164173b8ac36c38dfc99e452702094c7ca95ccca66",
+              "modifiedUnixNano": 1794759419718366500,
+              "path": "profile-member-000.json",
+              "sizeBytes": 226
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:6b855254af2e490c08ec4d896581f895abeea5393b096e0b888706c80d6fd1bc",
+              "modifiedUnixNano": 1794759419687366000,
+              "path": "membro_000.nc",
+              "sizeBytes": 1708023
+            },
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:45fcc90016c844d5eead6e164173b8ac36c38dfc99e452702094c7ca95ccca66",
+              "modifiedUnixNano": 1794759419718366500,
+              "path": "profile-member-000.json",
+              "sizeBytes": 226
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759420.29359,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759387491822300,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 32.505911111831665,
+              "finishedAt": 1794759420.29359,
+              "phase": "execution",
+              "startedAt": 1794759387.787679,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759387.787679,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 5,
+            "initialFiles": 3,
+            "modifiedFiles": 0,
+            "outputBytes": 1708249
+          }
+        },
+        "exitCode": 0,
+        "externalId": "ceeae53995a14ffb7038e341862a69c496ef0c9eec6ab16efe210df86d743691",
+        "finishedAt": 1794759420.29359,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "log": "{\"stage\": \"member-000\", \"status\": \"completed\", \"duration_s\": 31.596821308135986}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "dockerMetricCPUSeconds": 21.200939186358454,
+          "dockerMetricObservedAt": 1794759419.6926026,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "submittedAt": 1794759387.787679
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759387.787679,
+        "status": "completed"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:7f61bc308676e39d084836a9d62eb5273427f3c1ecf5e9ef551f6fddaddb84e4",
+              "modifiedUnixNano": 1794759454116948000,
+              "path": "membro_001.nc",
+              "sizeBytes": 1714749
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:62ce8b316a9b51ba5ed32b07c0273f3e5dc012d78a1fc7188c9226aa455c95c8",
+              "modifiedUnixNano": 1794759454141948400,
+              "path": "profile-member-001.json",
+              "sizeBytes": 224
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:7f61bc308676e39d084836a9d62eb5273427f3c1ecf5e9ef551f6fddaddb84e4",
+              "modifiedUnixNano": 1794759454116948000,
+              "path": "membro_001.nc",
+              "sizeBytes": 1714749
+            },
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:62ce8b316a9b51ba5ed32b07c0273f3e5dc012d78a1fc7188c9226aa455c95c8",
+              "modifiedUnixNano": 1794759454141948400,
+              "path": "profile-member-001.json",
+              "sizeBytes": 224
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759454.677339,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759422636415700,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 31.770225524902344,
+              "finishedAt": 1794759454.677339,
+              "phase": "execution",
+              "startedAt": 1794759422.9071136,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759422.9071136,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 5,
+            "initialFiles": 3,
+            "modifiedFiles": 0,
+            "outputBytes": 1714973
+          }
+        },
+        "exitCode": 0,
+        "externalId": "2452a1f493b35cbf9c0e1621265c1ad11ae3ad33b13ff076adcd6dd7fac051b1",
+        "finishedAt": 1794759454.677339,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "log": "{\"stage\": \"member-001\", \"status\": \"completed\", \"duration_s\": 30.91472029685974}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "dockerMetricCPUSeconds": 20.57181532959938,
+          "dockerMetricObservedAt": 1794759454.2553673,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "submittedAt": 1794759422.9071136
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759422.9071136,
+        "status": "completed"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:a36c2a679d90b608a3b62351eb6f1c0f3884e0cd1e15dbdde32593f382a12c07",
+              "modifiedUnixNano": 1794759486555497500,
+              "path": "membro_002.nc",
+              "sizeBytes": 908106
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:67b546826971d28a5a627f195565b53d17fd213c926afdc905bbbad9d2b56c8b",
+              "modifiedUnixNano": 1794759486578497800,
+              "path": "profile-member-002.json",
+              "sizeBytes": 229
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:a36c2a679d90b608a3b62351eb6f1c0f3884e0cd1e15dbdde32593f382a12c07",
+              "modifiedUnixNano": 1794759486555497500,
+              "path": "membro_002.nc",
+              "sizeBytes": 908106
+            },
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:67b546826971d28a5a627f195565b53d17fd213c926afdc905bbbad9d2b56c8b",
+              "modifiedUnixNano": 1794759486578497800,
+              "path": "profile-member-002.json",
+              "sizeBytes": 229
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759487.140653,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759457135999200,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 29.72788691520691,
+              "finishedAt": 1794759487.140653,
+              "phase": "execution",
+              "startedAt": 1794759457.412766,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759457.412766,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 5,
+            "initialFiles": 3,
+            "modifiedFiles": 0,
+            "outputBytes": 908335
+          }
+        },
+        "exitCode": 0,
+        "externalId": "613c163bbfadea4984229ae19c03b313587984c33bc2c217777b1a1e100c4fd7",
+        "finishedAt": 1794759487.140653,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "log": "{\"stage\": \"member-002\", \"status\": \"completed\", \"duration_s\": 28.844372034072876}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "dockerMetricCPUSeconds": 21.24408022055626,
+          "dockerMetricObservedAt": 1794759478.4046545,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "submittedAt": 1794759457.412766
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759457.412766,
+        "status": "completed"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:15715dc8fa6ea7a463c97ed71e6fbbdf363e9c5e58b1007801aae1a2ef851e2a",
+              "modifiedUnixNano": 1794759520162067200,
+              "path": "membro_003.nc",
+              "sizeBytes": 1713494
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:ba29bf82fa5679237921d33a44e108559b6a676ca215455b1bc69f7dcd840ec3",
+              "modifiedUnixNano": 1794759520187067600,
+              "path": "profile-member-003.json",
+              "sizeBytes": 232
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:15715dc8fa6ea7a463c97ed71e6fbbdf363e9c5e58b1007801aae1a2ef851e2a",
+              "modifiedUnixNano": 1794759520162067200,
+              "path": "membro_003.nc",
+              "sizeBytes": 1713494
+            },
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759487598515000,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:ba29bf82fa5679237921d33a44e108559b6a676ca215455b1bc69f7dcd840ec3",
+              "modifiedUnixNano": 1794759520187067600,
+              "path": "profile-member-003.json",
+              "sizeBytes": 232
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759487599515100,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759487599515100,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759520.7223482,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759487598515000,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759487599515100,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759487599515100,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 32.826478481292725,
+              "finishedAt": 1794759520.7223482,
+              "phase": "execution",
+              "startedAt": 1794759487.8958697,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759487.8958697,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 5,
+            "initialFiles": 3,
+            "modifiedFiles": 0,
+            "outputBytes": 1713726
+          }
+        },
+        "exitCode": 0,
+        "externalId": "db6b30f19552e7d0c26837a64fdb1937062e246878b376cb896bccb780bc40b1",
+        "finishedAt": 1794759520.7223482,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "log": "{\"stage\": \"member-003\", \"status\": \"completed\", \"duration_s\": 31.91751527786255}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "dockerMetricCPUSeconds": 22.176140601897238,
+          "dockerMetricObservedAt": 1794759509.8728535,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "submittedAt": 1794759487.8958697
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759487.8958697,
+        "status": "completed"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:a46e170c3d9a2bf4b063512d8b37ee7b85926053ba90a74bea10acd731621078",
+              "modifiedUnixNano": 1794759553601635000,
+              "path": "membro_004.nc",
+              "sizeBytes": 1655028
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:f45110d564d472a2c2c7f16b283afa02e55866b2522bc300be9117793a5f0bef",
+              "modifiedUnixNano": 1794759553628635400,
+              "path": "profile-member-004.json",
+              "sizeBytes": 224
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:a46e170c3d9a2bf4b063512d8b37ee7b85926053ba90a74bea10acd731621078",
+              "modifiedUnixNano": 1794759553601635000,
+              "path": "membro_004.nc",
+              "sizeBytes": 1655028
+            },
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:f45110d564d472a2c2c7f16b283afa02e55866b2522bc300be9117793a5f0bef",
+              "modifiedUnixNano": 1794759553628635400,
+              "path": "profile-member-004.json",
+              "sizeBytes": 224
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759554.1740215,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759521177084400,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 32.65151238441467,
+              "finishedAt": 1794759554.1740215,
+              "phase": "execution",
+              "startedAt": 1794759521.522509,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759521.522509,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 5,
+            "initialFiles": 3,
+            "modifiedFiles": 0,
+            "outputBytes": 1655252
+          }
+        },
+        "exitCode": 0,
+        "externalId": "b38b143140de6393505ce5c67858072dc8f32356863b38245c04d2870b9cd705",
+        "finishedAt": 1794759554.1740215,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "log": "{\"stage\": \"member-004\", \"status\": \"completed\", \"duration_s\": 31.785680770874023}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "dockerMetricCPUSeconds": 22.10975157880783,
+          "dockerMetricObservedAt": 1794759543.4894059,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "submittedAt": 1794759521.522509
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759521.522509,
+        "status": "completed"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "externalId": "ecfa8a038d43faae1998b3390a1ffd6efe02bbcb3bc2d530c268b305f5fd2193",
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "log": "[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794759555.0924122,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "submittedAt": 1794759555.0924044
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759555.0924044,
+        "status": "stopped"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "artifacts": {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759385978796800,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759385979796700,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759385979796700,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "modifiedUnixNano": 1794759385978796800,
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "checksum": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "modifiedUnixNano": 1794759385979796700,
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "modifiedUnixNano": 1794759385979796700,
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "finishedAt": 1794759386.0416958,
+          "phases": [
+            {
+              "durationSeconds": 0.400768518447876,
+              "finishedAt": 1794759386.0416958,
+              "phase": "execution",
+              "startedAt": 1794759385.6409273,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+          "runtime": "openoil-ensemble-08-local",
+          "schemaVersion": 1,
+          "startedAt": 1794759385.6409273,
+          "summary": {
+            "createdFiles": 3,
+            "deletedFiles": 0,
+            "finalFiles": 3,
+            "initialFiles": 0,
+            "modifiedFiles": 0,
+            "outputBytes": 5933
+          }
+        },
+        "exitCode": 0,
+        "externalId": "2918a83bf4d3abe2df406bf53893f73f0d26c2a23d7852b56da80c4070566541",
+        "finishedAt": 1794759386.0416958,
+        "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "log": "{\"stage\": \"prepare\", \"status\": \"completed\", \"duration_s\": 0.0006227493286132812}\n[AKOFLOW INFO] Activity started on runtime openoil-ensemble-08-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794759385.6409335,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "submittedAt": 1794759385.6409273
+        },
+        "resourceId": "openoil-ensemble-08-docker",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "startedAt": 1794759385.6409273,
+        "status": "completed"
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "activityCount": 7,
+      "breakdown": {
+        "computeSeconds": 159.8827829360962,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "queueSeconds": 0.47511744499206543,
+        "transferSeconds": 0
+      },
+      "completedActivityCount": 6,
+      "cost": 0,
+      "environmentNames": [
+        "OpenOil 8 members · homeserver Docker"
+      ],
+      "failureReason": "Cancelled by user",
+      "finishedAt": "2026-11-15T16:19:21Z",
+      "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+      "kind": "workflow",
+      "makespanSeconds": 0,
+      "mode": "real",
+      "schedulePlanId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-manual-plan-20261115t161618.596044134",
+      "seed": 0,
+      "startedAt": "2026-11-15T16:16:18Z",
+      "status": "cancelled",
+      "title": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+      "transferredBytes": 0,
+      "workflowId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a",
+      "workflowName": "oilv1-openoil-ensemble-08-local-6f5ac4d22a",
+      "workflowVersionId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-v1"
+    },
+    "timeline": {
+      "computeMakespanSeconds": 0,
+      "coveredWallSeconds": 174.76913595199585,
+      "finishedAt": 1794759561,
+      "phases": [
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "category": "resource-queue",
+          "durationSeconds": 6.134366512298584,
+          "finishedAt": 1794759385.6409273,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759379.5065608,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+          "category": "runtime",
+          "durationSeconds": 0.400768518447876,
+          "finishedAt": 1794759386.0416958,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759385.6409273,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "category": "resource-queue",
+          "durationSeconds": 0.215057373046875,
+          "finishedAt": 1794759387.5339324,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759387.318875,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "category": "launch",
+          "durationSeconds": 0.25374650955200195,
+          "finishedAt": 1794759387.787679,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759387.5339324,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+          "category": "runtime",
+          "durationSeconds": 32.505911111831665,
+          "finishedAt": 1794759420.29359,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759387.787679,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "category": "resource-queue",
+          "durationSeconds": 0.22349190711975098,
+          "finishedAt": 1794759422.6788025,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759422.4553106,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "category": "launch",
+          "durationSeconds": 0.22831106185913086,
+          "finishedAt": 1794759422.9071136,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759422.6788025,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+          "category": "runtime",
+          "durationSeconds": 31.770225524902344,
+          "finishedAt": 1794759454.677339,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759422.9071136,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "category": "resource-queue",
+          "durationSeconds": 0.22000479698181152,
+          "finishedAt": 1794759457.1781006,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759456.9580958,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "category": "launch",
+          "durationSeconds": 0.2346653938293457,
+          "finishedAt": 1794759457.412766,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759457.1781006,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+          "category": "runtime",
+          "durationSeconds": 29.72788691520691,
+          "finishedAt": 1794759487.140653,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759457.412766,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "category": "resource-queue",
+          "durationSeconds": 0.21741700172424316,
+          "finishedAt": 1794759487.6416576,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759487.4242406,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "category": "launch",
+          "durationSeconds": 0.2542121410369873,
+          "finishedAt": 1794759487.8958697,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759487.6416576,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+          "category": "runtime",
+          "durationSeconds": 32.826478481292725,
+          "finishedAt": 1794759520.7223482,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759487.8958697,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "category": "resource-queue",
+          "durationSeconds": 0.21822547912597656,
+          "finishedAt": 1794759521.2183673,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759521.0001419,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "category": "launch",
+          "durationSeconds": 0.3041417598724365,
+          "finishedAt": 1794759521.522509,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759521.2183673,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+          "category": "runtime",
+          "durationSeconds": 32.65151238441467,
+          "finishedAt": 1794759554.1740215,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759521.522509,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "category": "resource-queue",
+          "durationSeconds": 0.21858716011047363,
+          "finishedAt": 1794759554.835874,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794759554.617287,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "category": "launch",
+          "durationSeconds": 0.2565302848815918,
+          "finishedAt": 1794759555.0924044,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005:launch",
+          "source": "task-metadata",
+          "startedAt": 1794759554.835874,
+          "status": "completed"
+        },
+        {
+          "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+          "category": "runtime",
+          "durationSeconds": 6.730683326721191,
+          "finishedAt": 1794759561.8230877,
+          "id": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146:oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794759555.0924044,
+          "status": "cancelled"
+        }
+      ],
+      "startedAt": 1794759378,
+      "totals": {
+        "destroySeconds": 0,
+        "executablePreparationSeconds": 0,
+        "launchSeconds": 1.5316071510314941,
+        "provisionSeconds": 0,
+        "resourceQueueSeconds": 7.447150230407715,
+        "runtimeSeconds": 166.61346626281738,
+        "startSeconds": 0,
+        "stopSeconds": 0,
+        "validationSeconds": 0,
+        "workspaceTransferSeconds": 0
+      },
+      "unclassifiedWallSeconds": 8.23086404800415,
+      "wallSeconds": 183
+    },
+    "workspaceLeases": [
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate-oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate-oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate-oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-map-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-map"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:16:27.55050863Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:17:02.695657651Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:17:37.198268251Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:18:07.655839835Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:18:41.238966323Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-15T16:19:14.848436315Z",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "consumerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "id": "workspace-lease-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "producerActivityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "released": false,
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "workspaceId": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary"
+      }
+    ],
+    "workspaces": [
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-aggregate"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-animate"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-map",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-map"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "fileCount": 5,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "inputBytes": 5933,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:6b855254af2e490c08ec4d896581f895abeea5393b096e0b888706c80d6fd1bc",
+              "path": "membro_000.nc",
+              "sizeBytes": 1708023
+            },
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:45fcc90016c844d5eead6e164173b8ac36c38dfc99e452702094c7ca95ccca66",
+              "path": "profile-member-000.json",
+              "sizeBytes": 226
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:6b855254af2e490c08ec4d896581f895abeea5393b096e0b888706c80d6fd1bc",
+              "path": "membro_000.nc",
+              "sizeBytes": 1708023
+            },
+            {
+              "digest": "sha256:45fcc90016c844d5eead6e164173b8ac36c38dfc99e452702094c7ca95ccca66",
+              "path": "profile-member-000.json",
+              "sizeBytes": 226
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000",
+        "outputBytes": 1708249,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:17:02.419763757Z",
+        "sizeBytes": 1714182,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-000"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "fileCount": 5,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "inputBytes": 5933,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:7f61bc308676e39d084836a9d62eb5273427f3c1ecf5e9ef551f6fddaddb84e4",
+              "path": "membro_001.nc",
+              "sizeBytes": 1714749
+            },
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:62ce8b316a9b51ba5ed32b07c0273f3e5dc012d78a1fc7188c9226aa455c95c8",
+              "path": "profile-member-001.json",
+              "sizeBytes": 224
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:7f61bc308676e39d084836a9d62eb5273427f3c1ecf5e9ef551f6fddaddb84e4",
+              "path": "membro_001.nc",
+              "sizeBytes": 1714749
+            },
+            {
+              "digest": "sha256:62ce8b316a9b51ba5ed32b07c0273f3e5dc012d78a1fc7188c9226aa455c95c8",
+              "path": "profile-member-001.json",
+              "sizeBytes": 224
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001",
+        "outputBytes": 1714973,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:17:36.932596584Z",
+        "sizeBytes": 1720906,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-001"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "fileCount": 5,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "inputBytes": 5933,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:a36c2a679d90b608a3b62351eb6f1c0f3884e0cd1e15dbdde32593f382a12c07",
+              "path": "membro_002.nc",
+              "sizeBytes": 908106
+            },
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:67b546826971d28a5a627f195565b53d17fd213c926afdc905bbbad9d2b56c8b",
+              "path": "profile-member-002.json",
+              "sizeBytes": 229
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:a36c2a679d90b608a3b62351eb6f1c0f3884e0cd1e15dbdde32593f382a12c07",
+              "path": "membro_002.nc",
+              "sizeBytes": 908106
+            },
+            {
+              "digest": "sha256:67b546826971d28a5a627f195565b53d17fd213c926afdc905bbbad9d2b56c8b",
+              "path": "profile-member-002.json",
+              "sizeBytes": 229
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002",
+        "outputBytes": 908335,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:18:07.394509445Z",
+        "sizeBytes": 914268,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-002"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "fileCount": 5,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "inputBytes": 5933,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:15715dc8fa6ea7a463c97ed71e6fbbdf363e9c5e58b1007801aae1a2ef851e2a",
+              "path": "membro_003.nc",
+              "sizeBytes": 1713494
+            },
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:ba29bf82fa5679237921d33a44e108559b6a676ca215455b1bc69f7dcd840ec3",
+              "path": "profile-member-003.json",
+              "sizeBytes": 232
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:15715dc8fa6ea7a463c97ed71e6fbbdf363e9c5e58b1007801aae1a2ef851e2a",
+              "path": "membro_003.nc",
+              "sizeBytes": 1713494
+            },
+            {
+              "digest": "sha256:ba29bf82fa5679237921d33a44e108559b6a676ca215455b1bc69f7dcd840ec3",
+              "path": "profile-member-003.json",
+              "sizeBytes": 232
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003",
+        "outputBytes": 1713726,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:18:40.974487832Z",
+        "sizeBytes": 1719659,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-003"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "fileCount": 5,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "inputBytes": 5933,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:a46e170c3d9a2bf4b063512d8b37ee7b85926053ba90a74bea10acd731621078",
+              "path": "membro_004.nc",
+              "sizeBytes": 1655028
+            },
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:f45110d564d472a2c2c7f16b283afa02e55866b2522bc300be9117793a5f0bef",
+              "path": "profile-member-004.json",
+              "sizeBytes": 224
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "initial": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "inputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:a46e170c3d9a2bf4b063512d8b37ee7b85926053ba90a74bea10acd731621078",
+              "path": "membro_004.nc",
+              "sizeBytes": 1655028
+            },
+            {
+              "digest": "sha256:f45110d564d472a2c2c7f16b283afa02e55866b2522bc300be9117793a5f0bef",
+              "path": "profile-member-004.json",
+              "sizeBytes": 224
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004",
+        "outputBytes": 1655252,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:19:14.591333299Z",
+        "sizeBytes": 1661185,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-004"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "active",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-005"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-006"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-member-007"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "fileCount": 3,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:813e1becaf248f3570c72135fa872d4aeddd13d9cad1b828ce582515d90c3c8f",
+              "path": "parameters.json",
+              "sizeBytes": 5253
+            },
+            {
+              "digest": "sha256:e0e18c1c8b0dd0dd9967f1b3733556b84a5a2c7d84567649d6fc76a2af4a9ddf",
+              "path": "profile-prepare.json",
+              "sizeBytes": 231
+            },
+            {
+              "digest": "sha256:8af0f40246f7f5dcf23646abd250dcff9688415fc779efdf3e65c9fe695dfc9e",
+              "path": "scenario.json",
+              "sizeBytes": 449
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare",
+        "outputBytes": 5933,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sealedAt": "2026-11-15T16:16:27.29269225Z",
+        "sizeBytes": 5933,
+        "state": "sealed",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-prepare"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "intermediate",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-summary"
+      },
+      {
+        "activityId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "createdAt": "2026-11-15T16:16:18.870818817Z",
+        "driver": "local",
+        "environmentId": "openoil-ensemble-08-v1",
+        "executionPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "fileCount": 0,
+        "id": "workspace-oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146-oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "inputBytes": 0,
+        "isFinal": true,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate",
+        "outputBytes": 0,
+        "pinned": true,
+        "reclaimedBytes": 0,
+        "resourceId": "openoil-ensemble-08-docker",
+        "retention": "final",
+        "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+        "runtimeId": "openoil-ensemble-08-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146/oilv1-openoil-ensemble-08-local-6f5ac4d22a-validate"
+      }
+    ]
+  },
+  "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161618.640955146",
+  "status": "cancelled",
+  "workflowId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a"
+}

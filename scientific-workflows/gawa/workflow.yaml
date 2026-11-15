@@ -1,0 +1,276 @@
+{
+  "name": "gawa-tile-detection",
+  "spec": {
+    "namespace": "showcase",
+    "image": "gawa:homeserver-tiles-v1",
+    "activities": [
+      {
+        "name": "prepare",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py prepare --count 14 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": []
+      },
+      {
+        "name": "tile-000",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 0 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "tile-001",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 1 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "tile-002",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 2 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "tile-003",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 3 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "tile-004",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 4 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-000"
+        ]
+      },
+      {
+        "name": "tile-005",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 5 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-001"
+        ]
+      },
+      {
+        "name": "tile-006",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 6 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-002"
+        ]
+      },
+      {
+        "name": "tile-007",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 7 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-003"
+        ]
+      },
+      {
+        "name": "tile-008",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 8 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-004"
+        ]
+      },
+      {
+        "name": "tile-009",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 9 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-005"
+        ]
+      },
+      {
+        "name": "tile-010",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 10 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-006"
+        ]
+      },
+      {
+        "name": "tile-011",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 11 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-007"
+        ]
+      },
+      {
+        "name": "tile-012",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 12 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-008"
+        ]
+      },
+      {
+        "name": "tile-013",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py tile --id 13 --workspace \"$shared\""
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-009"
+        ]
+      },
+      {
+        "name": "merge",
+        "command": {
+          "entrypoint": "sh",
+          "arguments": [
+            "-c",
+            "set -eu\nexport PYTHONPATH=/data OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1\nshared=\"$(dirname \"$PWD\")/gawa-shared\"\nconda run --no-capture-output -n gawa python /data/gawa_tasks.py merge --workspace \"$shared\"\nconda run --no-capture-output -n gawa python /data/gawa_validate.py \"$shared/results\"\ncp -a \"$shared/results\" ./results"
+          ]
+        },
+        "runtime": "gawa-four-local",
+        "cpuLimit": "1000m",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "tile-000",
+          "tile-001",
+          "tile-002",
+          "tile-003",
+          "tile-004",
+          "tile-005",
+          "tile-006",
+          "tile-007",
+          "tile-008",
+          "tile-009",
+          "tile-010",
+          "tile-011",
+          "tile-012",
+          "tile-013"
+        ]
+      }
+    ]
+  }
+}

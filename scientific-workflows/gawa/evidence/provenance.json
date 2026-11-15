@@ -1,0 +1,20 @@
+{
+  "sourceRepository": "https://github.com/UFFeScience/gawa",
+  "sourceCommit": "1055838",
+  "baseImage": "ovvesley/akoflow-wf-gawa@sha256:655a9665f3a3c96e645f74c1243e6553c7640d529955b87e9f21e25d315f5519",
+  "dataset": "MOCK_DES reference catalog bundled in the original image",
+  "threadsPerTile": 1,
+  "maximumParallelTiles": 4,
+  "validation": "All numeric columns match the bundled 67-row reference catalog within rtol=1e-8 and atol=1e-10.",
+  "sourceFiles": {
+    "docker/gawa_validate.py": "91368119a3bf5dc75ec08bd2eb03fcff19188c47e950d400e7f09b9cbcd2f772",
+    "docker/gawa_tasks.py": "2c03cf8593d4af9d948ee1145f5e2abda6d1812dc53f008bdc20fcaced7e1884",
+    "docker/lib/gawa.py": "7ea73ce134b143c6ee7be5b36bd764e8a1197d6dff1e1dd905c352213ea284b4",
+    "docker/lib/utils.py": "3b433767d6a453133cec9ca5091fc6ea2d8dfac8b06b11b24773aed5182da228",
+    "docker/lib/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docker/lib/tile_tasks.py": "05d9214beca48f36538f4465497ce9c4fb1c6f15d553f6367f5b1cbc087ae0a5",
+    "docker/lib/parsl_config.py": "aad498d7071784b51f1e90497b2f0959cd3b42e6bffbc4b4541b369ed8c1ede8",
+    "docker/lib/multithread.py": "4531b043748d320f1d9758e458d3b38b4f30d9e0fb256c4aafc463fdb6c7e1c4",
+    "docker/lib/apps.py": "79034de3b0932309d6f6a52a922e96b4fd75720639742d8e26dca12ad263fe49"
+  }
+}

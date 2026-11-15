@@ -1,0 +1,44 @@
+{
+  "validation": "passed",
+  "tilesExpected": 14,
+  "tilesCompleted": 14,
+  "candidateCount": 67,
+  "catalogColumns": [
+    "peak_id",
+    "ra",
+    "dec",
+    "iobj",
+    "jobj",
+    "dist_init_kpc",
+    "dist_err_kpc",
+    "dist_min_kpc",
+    "dist_max_kpc",
+    "coverfrac",
+    "coverfrac_bkg",
+    "wradius_arcmin",
+    "snr",
+    "Naper",
+    "Naper_tot",
+    "NWaper_tot",
+    "Naper_bkg",
+    "icyl",
+    "tile",
+    "slice",
+    "id_in_tile",
+    "id"
+  ],
+  "snrRange": [
+    3.2314990076443872,
+    38.30148528777722
+  ],
+  "raRange": [
+    46.40731549765004,
+    53.43985818652616
+  ],
+  "decRange": [
+    -29.502396622065593,
+    -21.382886410357425
+  ],
+  "catalogSha256": "cb386c16dbada85179df1ed42208d0cc547d5d91fdefa3df852207b77412219f",
+  "note": "Structural and numeric checks only; candidates are not confirmed astronomical objects. Completeness and purity were not measured."
+}

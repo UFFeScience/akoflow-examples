@@ -1,0 +1,7 @@
+{
+  "id": "gawa-four-topology",
+  "name": "GAWA single-host topology",
+  "version": 1,
+  "executionScopeId": "gawa-four-scope",
+  "links": []
+}

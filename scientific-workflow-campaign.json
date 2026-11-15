@@ -68,9 +68,37 @@
     {
       "slug": "somospie",
       "name": "SOMOSPIE",
-      "status": "queued",
+      "status": "published-production",
       "visualPlan": "Observed/predicted soil-moisture map and held-out prediction diagnostics.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/somospie",
+      "upstreamCommit": "55d317ea4d751d823086005dd5d8247e65dffd55",
+      "inputFiles": 35,
+      "inputBytes": 60606972,
+      "soilMoisturePeriod": [
+        "2010-01-01",
+        "2010-01-31"
+      ],
+      "regionEPSG": 4326,
+      "boundsWestSouthEastNorth": [
+        -99,
+        35,
+        -97,
+        37
+      ],
+      "inputSources": [
+        "ESA CCI Soil Moisture COMBINED v07.1",
+        "Copernicus GLO-90 2021 DSM"
+      ],
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-somospie",
+      "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "activityCount": 12,
+      "completedActivityCount": 12,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/somospie/evidence/hub-production-publication.json",
+      "observedSeconds": 127.08417248725891,
+      "finding": "31 real daily products, 64 monthly cells with 722 valid daily observations, full original 50/10-candidate searches and 40,000 predictions per model",
+      "originalRawDataRedistributed": false
     },
     {
       "slug": "rnaseq",
@@ -142,7 +170,7 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "somospie",
+  "nextWorkflow": "rnaseq",
   "sourceBatchPR": {
     "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
     "status": "merged",

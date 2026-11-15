@@ -518,6 +518,22 @@
     "yamlHash": "6460091d591f5ddbed34f6868fb62696c74232eb00b07800b3662b0db9c00af2"
   },
   {
+    "experimentId": "70de187d-9c6d-42b8-a757-b1c92707cc60",
+    "publicationId": "d2d3acea-6426-4506-807b-3154949ab0f2",
+    "resultCount": 1,
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-somospie",
+    "image": "hub.akoflow.com/akoflow-examples/somospie@sha256:6b6efc494e7bfe24d2f83e0731b31e37e5a3141ef521acc38ad1f1bd1a430f31",
+    "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+    "visualCount": 2,
+    "activityCount": 12,
+    "examplePath": "scientific-workflows/somospie",
+    "route": "/docs/showcase/scientific-workflows/somospie",
+    "uri": "akoflow://hub/publications/d2d3acea-6426-4506-807b-3154949ab0f2/versions/1",
+    "version": 1,
+    "versionId": "50538683-c55c-426e-810e-7a8ee3facb01",
+    "yamlHash": "14505d769b72166f2f01959d658facaf90d3c380fc49dc3545d411b9b2558d69"
+  },
+  {
     "experimentId": "c1eaee43-8ea3-427c-b993-f86abbfef983",
     "publicationId": "a247b881-2843-43e6-9e46-19621fcb805d",
     "resultCount": 1,

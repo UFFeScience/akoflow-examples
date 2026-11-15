@@ -1,0 +1,495 @@
+{
+  "name": "somospie",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "ghcr.io/uffescience/akoflow-examples/somospie:v1",
+    "activities": [
+      {
+        "name": "acquire",
+        "runtime": "somospie-local",
+        "dependsOn": [],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "acquire",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "moisture",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "acquire"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "moisture",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mosaic",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "acquire"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mosaic",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "terrain",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "mosaic"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "terrain",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-table",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "moisture",
+          "terrain"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train-table",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "eval-table",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "terrain"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "eval-table",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-knn",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "train-table"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train",
+            "--output",
+            ".",
+            "--model",
+            "knn"
+          ]
+        }
+      },
+      {
+        "name": "predict-knn",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "train-knn",
+          "eval-table"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "predict",
+            "--output",
+            ".",
+            "--model",
+            "knn"
+          ]
+        }
+      },
+      {
+        "name": "train-rf",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "train-table"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train",
+            "--output",
+            ".",
+            "--model",
+            "rf"
+          ]
+        }
+      },
+      {
+        "name": "predict-rf",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "train-rf",
+          "eval-table"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "predict",
+            "--output",
+            ".",
+            "--model",
+            "rf"
+          ]
+        }
+      },
+      {
+        "name": "diagnostics",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "train-knn",
+          "predict-knn",
+          "train-rf",
+          "predict-rf",
+          "moisture",
+          "terrain",
+          "train-table",
+          "eval-table"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "diagnostics",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "package",
+        "runtime": "somospie-local",
+        "dependsOn": [
+          "diagnostics"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "package",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "moisture",
+        "logicalName": "raw-observations.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "mosaic",
+        "logicalName": "raw-observations.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "mosaic",
+        "consumerActivity": "terrain",
+        "logicalName": "metric-surface.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "moisture",
+        "consumerActivity": "train-table",
+        "logicalName": "monthly-moisture.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "terrain",
+        "consumerActivity": "train-table",
+        "logicalName": "terrain-features.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "terrain",
+        "consumerActivity": "eval-table",
+        "logicalName": "terrain-features.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-table",
+        "consumerActivity": "train-knn",
+        "logicalName": "train.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "predict-knn",
+        "logicalName": "knn-model.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "predict-knn",
+        "logicalName": "knn-scaler.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "eval-table",
+        "consumerActivity": "predict-knn",
+        "logicalName": "eval.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-model.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-scaler.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-training.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-cv.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-heldout.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "predict-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-predictions.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "predict-knn",
+        "consumerActivity": "diagnostics",
+        "logicalName": "knn-predictions.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-table",
+        "consumerActivity": "train-rf",
+        "logicalName": "train.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "predict-rf",
+        "logicalName": "rf-model.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "predict-rf",
+        "logicalName": "rf-scaler.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "eval-table",
+        "consumerActivity": "predict-rf",
+        "logicalName": "eval.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-model.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-scaler.pkl",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-training.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-cv.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-heldout.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "predict-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-predictions.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "predict-rf",
+        "consumerActivity": "diagnostics",
+        "logicalName": "rf-predictions.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "moisture",
+        "consumerActivity": "diagnostics",
+        "logicalName": "monthly-moisture.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "moisture",
+        "consumerActivity": "diagnostics",
+        "logicalName": "valid-days.tif",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "moisture",
+        "consumerActivity": "diagnostics",
+        "logicalName": "monthly-qc.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "terrain",
+        "consumerActivity": "diagnostics",
+        "logicalName": "terrain-qc.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-table",
+        "consumerActivity": "diagnostics",
+        "logicalName": "train.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "train-table",
+        "consumerActivity": "diagnostics",
+        "logicalName": "train-table-qc.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "eval-table",
+        "consumerActivity": "diagnostics",
+        "logicalName": "eval.csv",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "eval-table",
+        "consumerActivity": "diagnostics",
+        "logicalName": "eval-table-qc.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "diagnostics",
+        "consumerActivity": "package",
+        "logicalName": "derived-summary.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "diagnostics",
+        "consumerActivity": "package",
+        "logicalName": "derived-results.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "diagnostics",
+        "consumerActivity": "package",
+        "logicalName": "soil-moisture-maps.png",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "diagnostics",
+        "consumerActivity": "package",
+        "logicalName": "heldout-diagnostics.png",
+        "sizeBytes": 1
+      }
+    ]
+  }
+}

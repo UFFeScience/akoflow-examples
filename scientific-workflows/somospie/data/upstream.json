@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/TauferLab/SOMOSPIE",
+  "commit": "55d317ea4d751d823086005dd5d8247e65dffd55",
+  "license": "BSD-3-Clause",
+  "sha256": {
+    "knn.py": "dcf87bf00d9f79e3a4eb99dc172fc7ec7b585f16d356394c054e442acf1bacf0",
+    "rf.py": "e3f9b6d98226c16046ed809738ffd1710c5a6a973d9f99862b75db75036d11b2"
+  }
+}

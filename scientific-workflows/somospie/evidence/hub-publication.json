@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-somospie",
+  "experimentId": "05464faa-e03b-4331-94cd-27d250bec659",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "2dbd491f-d1b0-49b2-8b95-74cd8a3a2d11",
+  "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/2dbd491f-d1b0-49b2-8b95-74cd8a3a2d11/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

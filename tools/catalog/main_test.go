@@ -7,14 +7,14 @@ func TestCatalogIncludesEveryDomainPipeline(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	if len(entries) != 38 {
-		t.Fatalf("expected 35 catalog showcases and 3 legacy local profiles, got %d", len(entries))
+	if len(entries) != 39 {
+		t.Fatalf("expected 36 catalog showcases and 3 legacy local profiles, got %d", len(entries))
 	}
 	images := map[string]string{}
 	for _, e := range entries {
 		images[e.Showcase] = e.Image
 	}
-	for _, name := range []string{"document-intelligence", "video-intelligence", "blender-render-farm", "openoil-ensemble-08", "openoil-ensemble-16", "openoil-ensemble-32", "earthquake", "sra-search", "variant-calling", "orcasound"} {
+	for _, name := range []string{"document-intelligence", "video-intelligence", "blender-render-farm", "openoil-ensemble-08", "openoil-ensemble-16", "openoil-ensemble-32", "earthquake", "sra-search", "variant-calling", "orcasound", "somospie"} {
 		if images[name] == "" {
 			t.Fatalf("missing domain pipeline: %s", name)
 		}

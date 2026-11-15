@@ -1,0 +1,351 @@
+name: somospie
+spec:
+  activities:
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - acquire
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn: []
+      memoryLimit: 2Gi
+      name: acquire
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - moisture
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - acquire
+      memoryLimit: 2Gi
+      name: moisture
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - mosaic
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - acquire
+      memoryLimit: 2Gi
+      name: mosaic
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - terrain
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - mosaic
+      memoryLimit: 2Gi
+      name: terrain
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - train-table
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - moisture
+        - terrain
+      memoryLimit: 2Gi
+      name: train-table
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - eval-table
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - terrain
+      memoryLimit: 2Gi
+      name: eval-table
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - train
+          - --output
+          - .
+          - --model
+          - knn
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - train-table
+      memoryLimit: 4Gi
+      name: train-knn
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - predict
+          - --output
+          - .
+          - --model
+          - knn
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - train-knn
+        - eval-table
+      memoryLimit: 4Gi
+      name: predict-knn
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - train
+          - --output
+          - .
+          - --model
+          - rf
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - train-table
+      memoryLimit: 4Gi
+      name: train-rf
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - predict
+          - --output
+          - .
+          - --model
+          - rf
+        entrypoint: python3
+      cpuLimit: "2"
+      dependsOn:
+        - train-rf
+        - eval-table
+      memoryLimit: 4Gi
+      name: predict-rf
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - diagnostics
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - train-knn
+        - predict-knn
+        - train-rf
+        - predict-rf
+        - moisture
+        - terrain
+        - train-table
+        - eval-table
+      memoryLimit: 2Gi
+      name: diagnostics
+      runtime: somospie-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - package
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - diagnostics
+      memoryLimit: 2Gi
+      name: package
+      runtime: somospie-local
+  dataDependencies:
+    - consumerActivity: moisture
+      logicalName: raw-observations.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: mosaic
+      logicalName: raw-observations.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: terrain
+      logicalName: metric-surface.tif
+      producerActivity: mosaic
+      sizeBytes: 1
+    - consumerActivity: train-table
+      logicalName: monthly-moisture.tif
+      producerActivity: moisture
+      sizeBytes: 1
+    - consumerActivity: train-table
+      logicalName: terrain-features.tar.gz
+      producerActivity: terrain
+      sizeBytes: 1
+    - consumerActivity: eval-table
+      logicalName: terrain-features.tar.gz
+      producerActivity: terrain
+      sizeBytes: 1
+    - consumerActivity: train-knn
+      logicalName: train.csv
+      producerActivity: train-table
+      sizeBytes: 1
+    - consumerActivity: predict-knn
+      logicalName: knn-model.pkl
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: predict-knn
+      logicalName: knn-scaler.pkl
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: predict-knn
+      logicalName: eval.csv
+      producerActivity: eval-table
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-model.pkl
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-scaler.pkl
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-training.json
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-cv.csv
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-heldout.csv
+      producerActivity: train-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-predictions.csv
+      producerActivity: predict-knn
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: knn-predictions.tif
+      producerActivity: predict-knn
+      sizeBytes: 1
+    - consumerActivity: train-rf
+      logicalName: train.csv
+      producerActivity: train-table
+      sizeBytes: 1
+    - consumerActivity: predict-rf
+      logicalName: rf-model.pkl
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: predict-rf
+      logicalName: rf-scaler.pkl
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: predict-rf
+      logicalName: eval.csv
+      producerActivity: eval-table
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-model.pkl
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-scaler.pkl
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-training.json
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-cv.csv
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-heldout.csv
+      producerActivity: train-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-predictions.csv
+      producerActivity: predict-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: rf-predictions.tif
+      producerActivity: predict-rf
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: monthly-moisture.tif
+      producerActivity: moisture
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: valid-days.tif
+      producerActivity: moisture
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: monthly-qc.json
+      producerActivity: moisture
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: terrain-qc.json
+      producerActivity: terrain
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: train.csv
+      producerActivity: train-table
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: train-table-qc.json
+      producerActivity: train-table
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: eval.csv
+      producerActivity: eval-table
+      sizeBytes: 1
+    - consumerActivity: diagnostics
+      logicalName: eval-table-qc.json
+      producerActivity: eval-table
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-summary.json
+      producerActivity: diagnostics
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-results.tar.gz
+      producerActivity: diagnostics
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: soil-moisture-maps.png
+      producerActivity: diagnostics
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: heldout-diagnostics.png
+      producerActivity: diagnostics
+      sizeBytes: 1
+  image: ghcr.io/uffescience/akoflow-examples/somospie:v1
+  namespace: akoflow-examples

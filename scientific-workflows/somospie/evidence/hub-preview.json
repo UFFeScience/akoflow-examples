@@ -1,0 +1,808 @@
+{
+  "id": "36bded1b2fce7b446e67b37dd959e99ec560e533a37e619f82464e5dfd5929aa",
+  "publication": {
+    "id": "2dbd491f-d1b0-49b2-8b95-74cd8a3a2d11",
+    "title": "SOMOSPIE \u2014 Soil Moisture Inference",
+    "slug": "scientific-workflows-somospie",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 12 completed activities.",
+    "readme": "# SOMOSPIE soil-moisture inference\n\nScientific workflow adapted from TauferLab SOMOSPIE commit `55d317ea4d751d823086005dd5d8247e65dffd55`. The original BSD-3-Clause KNN/RF modeling functions and license are preserved unchanged in scripts/upstream. This publication describes the scientific workflow; execution environments are separate profiles.\n\n## Real observation profile\n\nA frozen Oklahoma crop [-99,35,-97,37], EPSG:4326, uses all 31 complete January 2010 ESA CCI COMBINED v07.1 daily global products and four complete Copernicus GLO-90 2021 surface tiles. The acquisition manifest records URLs, bytes and SHA256 for 35 objects (60,606,972 bytes). Acquisition downloads official sources directly; original source rasters are excluded from the public image, source package and derived results.\n\nThe workflow computes missing-aware monthly soil moisture on the native 0.25-degree grid, projects the surface to UTM14N at 90m for Horn slope/aspect and hillshade, and area-averages covariates onto observation/evaluation grids. The GLO-90 DSM includes vegetation and buildings, not bare-earth terrain. Its 2021 date differs explicitly from the 2010 moisture observations.\n\nUnmodified upstream modeling routines perform a 10% holdout and full ten-fold searches: 50 KNN candidates (neighbors 2..19, original Gaussian/uniform/distance weights) and 10 random-forest candidates (original 300..2000 tree search). The adapter fixes split and RF estimator seeds to 3 and records actual CV results, scalers, indices and fitted models. Evaluation covers all 40,000 cells of a 0.01-degree grid. This geographic spacing is nominally about 1km and is not uniform metric resolution. Fine predictions are statistical inferences, not new independent observations. Seven held-out coarse cells cannot establish spatial or temporal generalization. Negative R2, if measured, is retained.\n\n## Execution and visual results\n\nRun `./prepare.sh`, `./validate.sh -definition`, then `./run.sh` and `./validate.sh`. Only acquisition requires outbound network. Twelve native activities produce georeferenced observed/predicted moisture maps and an actual held-out prediction diagnostic, plus derived tables, GeoTIFFs, trained models, full CV records and provenance. Publication of measured completion follows actual native execution and independent validation; a definition check alone does not demonstrate scientific completion.\n\n## Sources and terms\n\n- SOMOSPIE: https://github.com/TauferLab/SOMOSPIE\n- ESA CCI v07.1 record: https://catalogue.ceda.ac.uk/uuid/c7e974411cfe4cf99cb077f7cb4d75d4/\n- ESA scientific-use terms (no onward redistribution of original data): https://climate.esa.int/en/projects/soil-moisture/data/terms-and-conditions/\n- ESA merging methodology: https://doi.org/10.5194/essd-11-717-2019\n- Copernicus GLO-90, 2021 release: https://registry.opendata.aws/copernicus-dem/\n\nDerived terrain products contain modified Copernicus DEM 2021 information. Original satellite products remain at their official providers. Public artifacts contain derived scientific results only. The obsolete original prepared-table Google Drive was unavailable; these tables are regenerated from real frozen observations, not synthetic data.\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+  "workflowName": "somospie-local-8d06129260",
+  "yaml": "name: somospie-local-8d06129260\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - acquire\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: acquire\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - moisture\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: moisture\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - mosaic\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: mosaic\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - terrain\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - mosaic\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: terrain\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - train-table\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - moisture\n            - terrain\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: train-table\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - eval-table\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - terrain\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: eval-table\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - train\n                - --output\n                - .\n                - --model\n                - knn\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - train-table\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: train-knn\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - predict\n                - --output\n                - .\n                - --model\n                - knn\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - eval-table\n            - train-knn\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: predict-knn\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - train\n                - --output\n                - .\n                - --model\n                - rf\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - train-table\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: train-rf\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - predict\n                - --output\n                - .\n                - --model\n                - rf\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - eval-table\n            - train-rf\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: predict-rf\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - diagnostics\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - eval-table\n            - moisture\n            - predict-knn\n            - predict-rf\n            - terrain\n            - train-knn\n            - train-rf\n            - train-table\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: diagnostics\n          runtime: somospie-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - package\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - diagnostics\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: somospie-local\n            workspaceSeedPath: \"\"\n          name: package\n          runtime: somospie-local\n    dataDependencies:\n        - consumerActivity: moisture\n          logicalName: raw-observations.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: mosaic\n          logicalName: raw-observations.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-results.tar.gz\n          producerActivity: diagnostics\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-summary.json\n          producerActivity: diagnostics\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: heldout-diagnostics.png\n          producerActivity: diagnostics\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: soil-moisture-maps.png\n          producerActivity: diagnostics\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: eval-table-qc.json\n          producerActivity: eval-table\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: eval.csv\n          producerActivity: eval-table\n          sizeBytes: 1\n        - consumerActivity: predict-knn\n          logicalName: eval.csv\n          producerActivity: eval-table\n          sizeBytes: 1\n        - consumerActivity: predict-rf\n          logicalName: eval.csv\n          producerActivity: eval-table\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: monthly-moisture.tif\n          producerActivity: moisture\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: monthly-qc.json\n          producerActivity: moisture\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: valid-days.tif\n          producerActivity: moisture\n          sizeBytes: 1\n        - consumerActivity: train-table\n          logicalName: monthly-moisture.tif\n          producerActivity: moisture\n          sizeBytes: 1\n        - consumerActivity: terrain\n          logicalName: metric-surface.tif\n          producerActivity: mosaic\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-predictions.csv\n          producerActivity: predict-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-predictions.tif\n          producerActivity: predict-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-predictions.csv\n          producerActivity: predict-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-predictions.tif\n          producerActivity: predict-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: terrain-qc.json\n          producerActivity: terrain\n          sizeBytes: 1\n        - consumerActivity: eval-table\n          logicalName: terrain-features.tar.gz\n          producerActivity: terrain\n          sizeBytes: 1\n        - consumerActivity: train-table\n          logicalName: terrain-features.tar.gz\n          producerActivity: terrain\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-cv.csv\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-heldout.csv\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-model.pkl\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-scaler.pkl\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: knn-training.json\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: predict-knn\n          logicalName: knn-model.pkl\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: predict-knn\n          logicalName: knn-scaler.pkl\n          producerActivity: train-knn\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-cv.csv\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-heldout.csv\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-model.pkl\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-scaler.pkl\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: rf-training.json\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: predict-rf\n          logicalName: rf-model.pkl\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: predict-rf\n          logicalName: rf-scaler.pkl\n          producerActivity: train-rf\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: train-table-qc.json\n          producerActivity: train-table\n          sizeBytes: 1\n        - consumerActivity: diagnostics\n          logicalName: train.csv\n          producerActivity: train-table\n          sizeBytes: 1\n        - consumerActivity: train-knn\n          logicalName: train.csv\n          producerActivity: train-table\n          sizeBytes: 1\n        - consumerActivity: train-rf\n          logicalName: train.csv\n          producerActivity: train-table\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "somospie-local-8d06129260-acquire",
+      "exitCode": 0,
+      "finishedAt": 1794776040.4867105,
+      "log": "Verified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100101000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100102000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100103000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100104000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100105000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100106000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100107000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100108000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100109000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100110000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100111000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100112000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100113000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100114000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100115000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100116000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100117000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100118000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100119000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100120000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100121000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100122000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100123000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100124000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100125000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100126000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100127000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100128000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100129000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100130000000-fv07.1.nc\nVerified official raw observation: soil-moisture/ESACCI-SOILMOISTURE-L3S-SSMV-COMBINED-20100131000000-fv07.1.nc\nVerified official raw observation: surface-elevation/Copernicus_DSM_COG_30_N35_00_W099_00_DEM.tif\nVerified official raw observation: surface-elevation/Copernicus_DSM_COG_30_N35_00_W098_00_DEM.tif\nVerified official raw observation: surface-elevation/Copernicus_DSM_COG_30_N36_00_W099_00_DEM.tif\nVerified official raw observation: surface-elevation/Copernicus_DSM_COG_30_N36_00_W098_00_DEM.tif\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794775972.017198,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-diagnostics",
+      "exitCode": 0,
+      "finishedAt": 1794776096.1804683,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776093.5188618,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-eval-table",
+      "exitCode": 0,
+      "finishedAt": 1794776053.3918316,
+      "log": "Warning 1: for band 1, destination nodata value has been rounded to 0, Byte being an integer datatype.\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776051.7662537,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-moisture",
+      "exitCode": 0,
+      "finishedAt": 1794776043.26819,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776042.1215641,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-mosaic",
+      "exitCode": 0,
+      "finishedAt": 1794776043.7371123,
+      "log": "Exception ignored in: <built-in function delete_Dataset>\nRuntimeError: Failed to open /tmp/tmp6sz4cgnt/mosaic.vrt to write.\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776042.1387384,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-package",
+      "exitCode": 0,
+      "finishedAt": 1794776099.1013706,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776098.8180556,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-predict-knn",
+      "exitCode": 0,
+      "finishedAt": 1794776062.2880263,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776061.299859,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-predict-rf",
+      "exitCode": 0,
+      "finishedAt": 1794776087.2734184,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776086.411783,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-terrain",
+      "exitCode": 0,
+      "finishedAt": 1794776049.2707825,
+      "log": "[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776045.8575,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-train-knn",
+      "exitCode": 0,
+      "finishedAt": 1794776058.1483793,
+      "log": "Fitting 10 folds for each of 50 candidates, totalling 500 fits\n-0.030817451811889884\n{'weights': 'uniform', 'n_neighbors': 5, 'metric': 'euclidean'}\nKNeighborsRegressor(metric='euclidean')\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776056.063437,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-train-rf",
+      "exitCode": 0,
+      "finishedAt": 1794776083.250034,
+      "log": "Fitting 10 folds for each of 10 candidates, totalling 100 fits\n-0.4000761233985665\n{'n_jobs': -1, 'n_estimators': 317, 'max_features': 'sqrt', 'max_depth': 70, 'bootstrap': True}\nRandomForestRegressor(max_depth=70, max_features='sqrt', n_estimators=317,\n                      n_jobs=-1, random_state=3)\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776061.1203017,
+      "status": "completed"
+    },
+    {
+      "activityId": "somospie-local-8d06129260-train-table",
+      "exitCode": 0,
+      "finishedAt": 1794776053.488473,
+      "log": "Warning 1: for band 1, destination nodata value has been rounded to 0, Byte being an integer datatype.\n[AKOFLOW INFO] Activity started on runtime somospie-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794776052.0359411,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:a4bae47f3ca3453bc835181d91c93cb60e8c36010bb58270146245e6c3c0e5cc",
+      "dataObjectId": "1c098d35f32372abcaf1101194e661ae",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "c66146727c137481ec8b8dec890fe9c8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-acquire",
+      "relativePath": "acquisition.json",
+      "sizeBytes": 24371
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8e4675801be868c392b7c5f20cea57adee44c94fd8e56a790f87213d1957fe3e",
+      "dataObjectId": "4b940db23fde90defc19650a75a233ec",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "65b89ee4597a4da072195ed5aee20f33",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-acquire",
+      "relativePath": "raw-observations.tar.gz",
+      "sizeBytes": 57143756
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:159ef4804641dfebc8c633166e87887f36313e0b4c6f378d3fc78dc325234ad7",
+      "dataObjectId": "44c9185c97c8077ac3704b365b5654fa",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "55ac5643af09fd686c89224e196cc858",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-acquire",
+      "relativePath": "stage-acquire.json",
+      "sizeBytes": 65
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:25d4386b8edc57c9fde0f84b21f09f6396a98b9c9b6e35fa51718bacd6dfb50d",
+      "dataObjectId": "012b78a10ec5e64c76874e732e90cd52",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "7b04eae59b2560b7dec11ad47ce08f47",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-diagnostics",
+      "relativePath": "derived-results.tar.gz",
+      "sizeBytes": 3101290
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0bfa3864c2d275e1e2fd582cf682fac73a27b46925b1f607421fa4fee184ec7b",
+      "dataObjectId": "b3ba8ffd3450fa716a300b26ffa09be1",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "ee455c5f405a6167c3165c31805fc439",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-diagnostics",
+      "relativePath": "derived-summary.json",
+      "sizeBytes": 8314
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e24922114637343ac6644f22a14f15b7236ade1fd0c8ec43d5299a7554a718ad",
+      "dataObjectId": "6df0173d95a141486b45fb19a007a598",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "96c63309ef984d43be7dac66ba810a2c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-diagnostics",
+      "relativePath": "heldout-diagnostics.png",
+      "sizeBytes": 89638
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b868bdd0104758755cba6b378694ffdfac4bb390042c529ef943d17b5ebf9614",
+      "dataObjectId": "fa9375f9fb19ca59a20c59ab2adba4d0",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "2286854bf2f102fb083dd0efdb47f5a3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-diagnostics",
+      "relativePath": "soil-moisture-maps.png",
+      "sizeBytes": 1136453
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2d251d8f49d5f14d388a0134805e7abe55a01d08ffc8a0e132ecc3e930dc4b43",
+      "dataObjectId": "21eb54d20ead670f2bbb0722569b2e33",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "03734e536a48c576a08690fb7a0f2762",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-diagnostics",
+      "relativePath": "stage-diagnostics.json",
+      "sizeBytes": 69
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4667be562dfd026d6d8a719a53ee043f820555586bc50603d12a936d5d8cb2e4",
+      "dataObjectId": "5bc3354876737dc5e4d5e5da6bf89e47",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "f5696e4c3d3af240580fc857f9d09f16",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-eval-table",
+      "relativePath": "eval-table-qc.json",
+      "sizeBytes": 319
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bcabaee65af548fa132ee1caa0d617232f1d815d3f79e0095695599a2730438a",
+      "dataObjectId": "321a5960818045fa56a9b5ef8c53132e",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "daf4dcad2d35378a7af0ec17dc4d4678",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-eval-table",
+      "relativePath": "eval.csv",
+      "sizeBytes": 1944761
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:203f2ebf87801450f7e84ac6c4c7d833121a39da826ada27c87193900bca7393",
+      "dataObjectId": "2b022cf95382900de499c77dfeefdafd",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "6363754661352f55e7cfa8f77f332789",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-eval-table",
+      "relativePath": "stage-eval-table.json",
+      "sizeBytes": 68
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2eeba05fb93084de6417ba320221e39f5a7abed512fdca8513d0f06e265d9d35",
+      "dataObjectId": "09020d16393b1d0ab0f0f6df9bea8cb9",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "a9ad641f3525add8649c354b690572e9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-moisture",
+      "relativePath": "monthly-moisture.tif",
+      "sizeBytes": 1606
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:495be1415ff00c5042563a557d2359cbce945bdc9441dde98eb12261398c7631",
+      "dataObjectId": "bf43645ecbdcf149e4f5ff1dd53278c2",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "dc3cbd0599e20bbccbfc5adb691c7020",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-moisture",
+      "relativePath": "monthly-qc.json",
+      "sizeBytes": 475
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d63d781042406509d8f78d1f40d0a1f7c9d70d3b9638835cbcd48fa54210b070",
+      "dataObjectId": "85f651c3801be28bb45f18132bc52e4e",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "956c2f6969aa4d2371097b56d255b617",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-moisture",
+      "relativePath": "stage-moisture.json",
+      "sizeBytes": 66
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d4dca740493c5334909f7e049dc0e5be66df7f95e2d966dc9b22a204b24451c5",
+      "dataObjectId": "1a7b0a8a13ad1086b2cb6e88eb309cca",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "09c8e4fa09d9a85ec7a2722b4bbe5c7a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-moisture",
+      "relativePath": "valid-days.tif",
+      "sizeBytes": 1427
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:553f221df10ee99976f153dccce984ae0dd78b4046bba36406af581b63814388",
+      "dataObjectId": "6b05bc78c9a8e5402a9a60dcb8148f02",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "cd1ccab8914e2a3af0ea1d389a1f26f4",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-mosaic",
+      "relativePath": "metric-surface.tif",
+      "sizeBytes": 19874723
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:908b80d2942704d002b8635f0eaefb73e03e11ef356b5cfaff727dcee4235a20",
+      "dataObjectId": "59d34d488f69cd4757f4560ba51eedf5",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "e26a8a269278e4f05733053a3730b6d1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-mosaic",
+      "relativePath": "stage-mosaic.json",
+      "sizeBytes": 64
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e24922114637343ac6644f22a14f15b7236ade1fd0c8ec43d5299a7554a718ad",
+      "dataObjectId": "aa65267a46d8e59ecae47ca5fe513f03",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "8d51441ba7dffc5545f56b887f9d827b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-package",
+      "relativePath": "published-heldout-diagnostics.png",
+      "sizeBytes": 89638
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b868bdd0104758755cba6b378694ffdfac4bb390042c529ef943d17b5ebf9614",
+      "dataObjectId": "65e1109fce337004af252a1debbbd284",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "752c91d0b165e6473119e79bee5f19f1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-package",
+      "relativePath": "published-soil-moisture-maps.png",
+      "sizeBytes": 1136453
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:25d4386b8edc57c9fde0f84b21f09f6396a98b9c9b6e35fa51718bacd6dfb50d",
+      "dataObjectId": "894eb5518dc68b63b7605b4fb7b5b63d",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "c4d7e4f997f977ab91d32880644725e7",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-package",
+      "relativePath": "somospie-results.tar.gz",
+      "sizeBytes": 3101290
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0bfa3864c2d275e1e2fd582cf682fac73a27b46925b1f607421fa4fee184ec7b",
+      "dataObjectId": "1eff1e0a8b3b4718881f8de630c921a3",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "ad8f1efdc6eb9c13f3018e8f1884e46f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-package",
+      "relativePath": "somospie-summary.json",
+      "sizeBytes": 8314
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:55e1f205ac1790bb639558a4871b976ea1639ac4de033cb23d81b5f4d50c4918",
+      "dataObjectId": "d0dc32fd9497495bb45c22738c72676a",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "bbf5069925102b063d275deccfa4f9ee",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-package",
+      "relativePath": "stage-package.json",
+      "sizeBytes": 65
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f36194039cc10d0ade2d7f071f22d74de3ee9799d6604301e0679b134c408c6b",
+      "dataObjectId": "4a00a4be05d487762eeb6b7471ee0bfa",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "29d1794e92d7e013bbe3bcec34222894",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-knn",
+      "relativePath": "knn-predictions.csv",
+      "sizeBytes": 1214764
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8a8d945b811e1c9e90e7828229d2e09f326c6defcca75347f1cd2e48c8be9d61",
+      "dataObjectId": "9158f99bb54d00eb1593ab7ed1591105",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "c17349092176aef0d66db8dfb3a3924f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-knn",
+      "relativePath": "knn-predictions.tif",
+      "sizeBytes": 79126
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fdabc580269c80c40cc17fb6d1a20885266b8ff3ada6fc0e09563b32123b19df",
+      "dataObjectId": "06da31b2a0fe0fb554071662d5783280",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "4733f45bae1e08a5be93e505c0ae614b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-knn",
+      "relativePath": "stage-predict-knn.json",
+      "sizeBytes": 66
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:213e7e8ea64f15ff219404820e2aa0fc1aa75d6abdffba8bece02815b1fed72c",
+      "dataObjectId": "d55e9a7d23184a67d6be7b01031edf66",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "4cda18614d3c8e537aeb19dadc14c651",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-rf",
+      "relativePath": "rf-predictions.csv",
+      "sizeBytes": 1387691
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:78d72afed545ace6d3a450d58b5d78e711c463842753926745bc83e6fc7b6056",
+      "dataObjectId": "6d9787d803edd23e0bbf5899229baf8d",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "59f92dcf267f764e3314ae4bf5e9477e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-rf",
+      "relativePath": "rf-predictions.tif",
+      "sizeBytes": 169168
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e045c769afd3b7a389808c7d33baf02f868de62c4ed99c1a12ce1a133754d134",
+      "dataObjectId": "0916a8e0fbb5a44b388a49770e0b64df",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "b9db964d7b73eb5b0faf88a5d2565adf",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-predict-rf",
+      "relativePath": "stage-predict-rf.json",
+      "sizeBytes": 65
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f18d4cdc5be1bbf1e47c9f7b8125d72f5676d7a975adebfda61c03eec90f58ec",
+      "dataObjectId": "86902d7dd1029c8b85902e291aef6a38",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "9e5e5e31467f61ce52b4bafdc6b06d80",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-terrain",
+      "relativePath": "stage-terrain.json",
+      "sizeBytes": 65
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fc52210a9bd8f26ac1b7c3b7b88e3b2dbdadfee1bbf25cf8b33ee2b7c5c824a5",
+      "dataObjectId": "f50f54b6498eb614db0b8c75e37f7ac8",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "66939028e48b96ad2f1b4d9986595e79",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-terrain",
+      "relativePath": "terrain-features.tar.gz",
+      "sizeBytes": 63942205
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fc38d58d9b0642f3aad1086ad6d47762a31bb7ad4b663778cd5b69266f058a03",
+      "dataObjectId": "7294c165ea98b94f3a082ef489e5cbb4",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "ba4f531a7f49a5430a52117844679c87",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-terrain",
+      "relativePath": "terrain-qc.json",
+      "sizeBytes": 498
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bdae42ac7d679978377d8077f96ed42612bcf6d5c3dc2bca30d6e0024ff44bfe",
+      "dataObjectId": "db9c607c33ef19bb79feea6ba8a84c78",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "db53290bb58ff15dd24f0e036c267825",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "knn-cv.csv",
+      "sizeBytes": 21751
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:39f975233190b7aa0d002ae3231c6574eb9adcdc5dc04487ff13ccdc5b1b39e6",
+      "dataObjectId": "d7dd6141082a09d73b7a5b6dcc2937a1",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "01287cf9cffead74f0089be104c5112a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "knn-heldout.csv",
+      "sizeBytes": 301
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:48b9384519bb5b2964f721c8afc8f1aa8f5778c0c8bf14ceeb7e143145cb61a6",
+      "dataObjectId": "f172c238cf309ae4f3cc9dd50266bba5",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "c870ff084ae346c5c9f3296ea6d70d3b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "knn-model.pkl",
+      "sizeBytes": 4838
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bee3c61936b2382e7299dfea83cf9778b7ca10f8d61ca714fe83295dcec7f098",
+      "dataObjectId": "00beb23894b4e3eb3438c41d8385b96b",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "046341078c99f121b54604a3b6a92533",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "knn-scaler.pkl",
+      "sizeBytes": 731
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7cf1491fd8e235f6a129c863f8496b6e289f381aeb53111c7d4a3406fdcdd42f",
+      "dataObjectId": "675adf50b40a9db5de182ead30880d22",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "2f5c0b731ec02751ee67e23fa7008fda",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "knn-training.json",
+      "sizeBytes": 1314
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:32736228b56a5ba45167cf9db2514414d3606173dc6a502d8962771113e62279",
+      "dataObjectId": "205330119afe8b54528387cb67f91cae",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "846e891e10dcd19332048d3e58e22d64",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-knn",
+      "relativePath": "stage-train-knn.json",
+      "sizeBytes": 64
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e2f2ea6a4b7378f8dad0017e3edc3ea3710c0ab28aaf9407391c1210322344e4",
+      "dataObjectId": "309a5ad789eb43f32d4bd3403b17bded",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "18dc3048c66fdc92b2ec2fd3b4e84afe",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "rf-cv.csv",
+      "sizeBytes": 4742
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e1b87e37dc5d8d643369f9bd2fc2c4ccbaaa19a0e82238648c14257376ce89be",
+      "dataObjectId": "d31e5731241de285883235b15646b124",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "b3560274974f1bac6ab434b11bc857b4",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "rf-heldout.csv",
+      "sizeBytes": 335
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:52e44eefeb764572f41b1526a1059b2107e1f2c43887fff2cef61a4adffacffb",
+      "dataObjectId": "287209b63e146734d624d09e37868083",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "cab52d4cdd52f3fc470c49d7a85cadd3",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "rf-model.pkl",
+      "sizeBytes": 1530405
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bee3c61936b2382e7299dfea83cf9778b7ca10f8d61ca714fe83295dcec7f098",
+      "dataObjectId": "e803aa7f36398f4f1a327439dcdf82a4",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "50aec65c2f9b1a8a3d6ab831af4aadb9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "rf-scaler.pkl",
+      "sizeBytes": 731
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f07c8ada095c5112b7207ab3a50b3853ceab8ca624ce361cfef70571b63c17fb",
+      "dataObjectId": "0fd3d26d6af118ba687dd72f63c0bb2f",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "b4991da0f86a42256e96a9d51ef9d6d9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "rf-training.json",
+      "sizeBytes": 1578
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:96a0ba12feca997e609652b302309d0cc6ce6f409ac3c4685906703067f90146",
+      "dataObjectId": "cafa6a77cbaa11b07b6755b41be865ad",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "2b667d3926e0286a61eade4420c29b2e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-rf",
+      "relativePath": "stage-train-rf.json",
+      "sizeBytes": 63
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:481c7f41ea7a8c3100d6dd461a00f70a3a62e3dda4db493bed698e6f09b19f9d",
+      "dataObjectId": "5f22fcca63352f0e63f231edd2caed2a",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "4e0122f616e3643db2fcde37176ac5b6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-table",
+      "relativePath": "stage-train-table.json",
+      "sizeBytes": 69
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:5f6c685cf68b65645c728960ee4655013020400d698ea229bd5fa6b5a4b434df",
+      "dataObjectId": "11360f263b05e57957ba0f0d5d1e2985",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "476b6b044c2c0653c37fc48499508094",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-table",
+      "relativePath": "train-table-qc.json",
+      "sizeBytes": 321
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:eff0d1eda8f4952bd60ad16375533cf0b2f7018ca5e0bceb3b5ec543a761100c",
+      "dataObjectId": "50229812de4908ef8b7d2b80fe03477f",
+      "discovered": true,
+      "executionRunId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "id": "ede983d016030f3cdd8284486d034997",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "somospie-local-8d06129260-train-table",
+      "relativePath": "train.csv",
+      "sizeBytes": 3839
+    }
+  ],
+  "exportedAt": "2026-11-15T20:55:46.537861534Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "somospie-local-8d06129260",
+      "workflowVersionId": "somospie-local-8d06129260-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 12,
+      "redactionCount": 0,
+      "digest": "7b6ad41adf0daa8c63e30b7ffb2d0234aa514035ebf51a8186d929e58f4f457b"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,507 @@\n+name: somospie-local-8d06129260\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - acquire\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: acquire\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - moisture\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: moisture\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - mosaic\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: mosaic\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - terrain\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - mosaic\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: terrain\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - train-table\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - moisture\n+            - terrain\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: train-table\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - eval-table\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - terrain\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: eval-table\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - train\n+                - --output\n+                - .\n+                - --model\n+                - knn\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - train-table\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: train-knn\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - predict\n+                - --output\n+                - .\n+                - --model\n+                - knn\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - eval-table\n+            - train-knn\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: predict-knn\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - train\n+                - --output\n+                - .\n+                - --model\n+                - rf\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - train-table\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: train-rf\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - predict\n+                - --output\n+                - .\n+                - --model\n+                - rf\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"2\"\n+          dependsOn:\n+            - eval-table\n+            - train-rf\n+          memoryLimit: \"4294967296\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: predict-rf\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - diagnostics\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - eval-table\n+            - moisture\n+            - predict-knn\n+            - predict-rf\n+            - terrain\n+            - train-knn\n+            - train-rf\n+            - train-table\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: diagnostics\n+          runtime: somospie-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - package\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - diagnostics\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: somospie-local\n+            workspaceSeedPath: \"\"\n+          name: package\n+          runtime: somospie-local\n+    dataDependencies:\n+        - consumerActivity: moisture\n+          logicalName: raw-observations.tar.gz\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: mosaic\n+          logicalName: raw-observations.tar.gz\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-results.tar.gz\n+          producerActivity: diagnostics\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-summary.json\n+          producerActivity: diagnostics\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: heldout-diagnostics.png\n+          producerActivity: diagnostics\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: soil-moisture-maps.png\n+          producerActivity: diagnostics\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: eval-table-qc.json\n+          producerActivity: eval-table\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: eval.csv\n+          producerActivity: eval-table\n+          sizeBytes: 1\n+        - consumerActivity: predict-knn\n+          logicalName: eval.csv\n+          producerActivity: eval-table\n+          sizeBytes: 1\n+        - consumerActivity: predict-rf\n+          logicalName: eval.csv\n+          producerActivity: eval-table\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: monthly-moisture.tif\n+          producerActivity: moisture\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: monthly-qc.json\n+          producerActivity: moisture\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: valid-days.tif\n+          producerActivity: moisture\n+          sizeBytes: 1\n+        - consumerActivity: train-table\n+          logicalName: monthly-moisture.tif\n+          producerActivity: moisture\n+          sizeBytes: 1\n+        - consumerActivity: terrain\n+          logicalName: metric-surface.tif\n+          producerActivity: mosaic\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-predictions.csv\n+          producerActivity: predict-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-predictions.tif\n+          producerActivity: predict-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-predictions.csv\n+          producerActivity: predict-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-predictions.tif\n+          producerActivity: predict-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: terrain-qc.json\n+          producerActivity: terrain\n+          sizeBytes: 1\n+        - consumerActivity: eval-table\n+          logicalName: terrain-features.tar.gz\n+          producerActivity: terrain\n+          sizeBytes: 1\n+        - consumerActivity: train-table\n+          logicalName: terrain-features.tar.gz\n+          producerActivity: terrain\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-cv.csv\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-heldout.csv\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-model.pkl\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-scaler.pkl\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: knn-training.json\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: predict-knn\n+          logicalName: knn-model.pkl\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: predict-knn\n+          logicalName: knn-scaler.pkl\n+          producerActivity: train-knn\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-cv.csv\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-heldout.csv\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-model.pkl\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-scaler.pkl\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: rf-training.json\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: predict-rf\n+          logicalName: rf-model.pkl\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: predict-rf\n+          logicalName: rf-scaler.pkl\n+          producerActivity: train-rf\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: train-table-qc.json\n+          producerActivity: train-table\n+          sizeBytes: 1\n+        - consumerActivity: diagnostics\n+          logicalName: train.csv\n+          producerActivity: train-table\n+          sizeBytes: 1\n+        - consumerActivity: train-knn\n+          logicalName: train.csv\n+          producerActivity: train-table\n+          sizeBytes: 1\n+        - consumerActivity: train-rf\n+          logicalName: train.csv\n+          producerActivity: train-table\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:7c958e4d9e69041fbf3e01b6565b1417c2db97c20b4676d2b851a5c7d664f7fd",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "somospie-local-8d06129260-manual-plan-20261115t205251.148756766",
+            "run_id": "somospie-local-8d06129260-run-20261115t205251.196217106"
+          },
+          "status": "completed",
+          "durationSeconds": 127.08417248725891,
+          "metrics": {
+            "activity_count": 12,
+            "completed_activity_count": 12,
+            "computeSeconds": 106.71530318260193,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 127.08417248725891,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 12,
+            "queueSeconds": 0,
+            "transferSeconds": 32.29443311691284,
+            "transferred_bytes": 1341834406
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

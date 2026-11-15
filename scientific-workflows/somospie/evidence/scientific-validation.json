@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "observedAt": "2026-11-15T20:55:18.539613+00:00",
+  "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+  "image": "ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24",
+  "imageId": "sha256:6b6efc494e7bfe24d2f83e0731b31e37e5a3141ef521acc38ad1f1bd1a430f31",
+  "validatorCommand": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,src=/home/ovvesley/Workspace/AKOFLOW/akoflow-examples/scientific-workflows/somospie/outputs-daemon,dst=/outputs,readonly",
+    "ghcr.io/uffescience/akoflow-examples/somospie:local-6b6efc494e7bfe24",
+    "python3",
+    "/app/scripts/validate.py"
+  ],
+  "validatorExitCode": 0,
+  "validatorOutput": "{\"status\": \"success\", \"realSourceObjects\": 35, \"monthlyCells\": 64, \"dailyValidValues\": 722, \"fullCVCandidates\": [50, 10], \"predictionsPerModel\": 40000, \"figures\": 2, \"originalRawDataRedistributed\": false}",
+  "validatorSHA256": "6934fbb25292fd8d648271706943d916bd8f2c56b29d56293784b91cef5ea338",
+  "nativeOutputDigests": {
+    "somospie-results.tar.gz": "25d4386b8edc57c9fde0f84b21f09f6396a98b9c9b6e35fa51718bacd6dfb50d",
+    "somospie-summary.json": "0bfa3864c2d275e1e2fd582cf682fac73a27b46925b1f607421fa4fee184ec7b",
+    "published-soil-moisture-maps.png": "b868bdd0104758755cba6b378694ffdfac4bb390042c529ef943d17b5ebf9614",
+    "published-heldout-diagnostics.png": "e24922114637343ac6644f22a14f15b7236ade1fd0c8ec43d5299a7554a718ad"
+  },
+  "monthlyCells": 64,
+  "validDailyValues": 722,
+  "finePredictionsPerModel": 40000,
+  "visualCount": 2,
+  "originalRawDataRedistributed": false
+}

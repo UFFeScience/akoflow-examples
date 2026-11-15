@@ -1,4 +1,6 @@
-# Montage GCP/local: portable reference profile
+# Montage 050 — Deployment Profile Compatibility Bundle
+
+This compatibility bundle belongs to the [single Montage workflow publication](https://hub.akoflow.com/o/akoflow/scientific-workflows-montage-050). Use its separate local and GCP execution profiles; this bundle does not represent a second experiment.
 
 This profile preserves the complete original Montage 050d computation: 58 activities, 138 file handoffs, twelve FITS observations, three 1800×1800 mosaics and four PNG previews. All activities execute through local Docker.
 

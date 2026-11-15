@@ -79,7 +79,7 @@ func generate(root string) error {
 	if err := os.WriteFile(filepath.Join(bundle, "workflow.yaml"), buffer.Bytes(), 0644); err != nil {
 		return err
 	}
-	config := map[string]any{"slug": "montage-050-local", "title": "Montage 050 locally", "stages": stages, "dependencies": dependencies, "artifacts": artifacts, "validationMode": "local-workload", "localProfile": profile, "ciValidation": "image-and-contract", "upstreamImage": upstream}
+	config := map[string]any{"slug": "montage-050-local", "title": "Montage 050 — Astronomical Image Mosaicking", "stages": stages, "dependencies": dependencies, "artifacts": artifacts, "validationMode": "local-workload", "localProfile": profile, "ciValidation": "image-and-contract", "upstreamImage": upstream}
 	for filename, value := range map[string]any{"data/input.json": config, "expected/manifest.json": map[string]any{"showcase": "montage-050-local", "status": "success", "artifacts": artifacts}} {
 		data, err := json.MarshalIndent(value, "", "  ")
 		if err != nil {
@@ -111,7 +111,19 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 go run "$root/../../tools/montage-check/main.go" -root "$root" "$@"
 `,
-		"README.md": "# Montage 050 locally\n\n" + profile + `\n
+		"README.md": "# Montage 050 — Astronomical Image Mosaicking\n\n" + profile + `\n
+## Execution profiles
+
+### Local Docker — executed and validated
+
+The published reference run completed **58/58 activities** on the homeserver with two CPU slots. It produced three validated 1800×1800 FITS mosaics and four PNG previews. The immutable workflow URI and measured execution capture on this page refer to this profile. Configure [workflow.yaml](workflow.yaml), [environment.yaml](environment.yaml), [scope.yaml](scope.yaml) and [topology.yaml](topology.yaml) from the source bundle. On Apple Silicon, Docker requires amd64 emulation.
+
+### GCP + local processing — configuration reference, not executed in this validation
+
+The same 58-activity computation can use the [GCP/local deployment bundle](../../real/montage-cloud-local/README.md): twelve projection activities are assigned to four GCP workers and the remaining processing runs locally. This requires your own cloud account, credentials, quota, networking and cleanup. **No new GCP run or GCP timing/cost result is claimed.** Historical predicted values are configuration references, not measurements of the validated local run.
+
+The previous separate Montage GCP/local publication has been consolidated here. It reused the identical local execution; it was not a second experiment. Its immutable definitions remain available for compatibility: [historical GCP YAML](https://hub.akoflow.com/api/v1/publications/bae34aba-fbc6-423f-8921-6e4dc5ea5d4a/versions/1/yaml). The [GCP deployment guide](https://akoflow.com/docs/showcase/montage-cloud-local/) describes that optional profile.
+
 ## Run locally
 
 Install Go and Docker with linux/amd64 support. Keep at least 15 GiB of free disk for the image and intermediate workspaces; the exact peak depends on artifact retention and concurrency. The image already contains the 87 MiB input dataset, headers, tables, and Montage executables.

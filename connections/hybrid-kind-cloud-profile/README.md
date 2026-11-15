@@ -1,4 +1,4 @@
-# Hybrid kind to GCP: portable local profile
+# Distributed File Handoff
 
 Execute the original producer/consumer file-content checks in two Docker activities on one local host. The local profile verifies actual file handoff and receipt content. It does not measure GCP provisioning, Kubernetes placement, or cross-cloud networking.
 

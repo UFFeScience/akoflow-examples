@@ -1,0 +1,1466 @@
+name: openoil-ensemble-32
+spec:
+    activities:
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - prepare
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn: []
+          memoryLimit: 4Gi
+          name: prepare
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-000
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-000
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-001
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-001
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-002
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-002
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-003
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-003
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-004
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-004
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-005
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-005
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-006
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-006
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-007
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-007
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-008
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-008
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-009
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-009
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-010
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-010
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-011
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-011
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-012
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-012
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-013
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-013
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-014
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-014
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-015
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-015
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-016
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-016
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-017
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-017
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-018
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-018
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-019
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-019
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-020
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-020
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-021
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-021
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-022
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-022
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-023
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-023
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-024
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-024
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-025
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-025
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-026
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-026
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-027
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-027
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-028
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-028
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-029
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-029
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-030
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-030
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - member-031
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - prepare
+          memoryLimit: 4Gi
+          name: member-031
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - aggregate
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - member-000
+            - member-001
+            - member-002
+            - member-003
+            - member-004
+            - member-005
+            - member-006
+            - member-007
+            - member-008
+            - member-009
+            - member-010
+            - member-011
+            - member-012
+            - member-013
+            - member-014
+            - member-015
+            - member-016
+            - member-017
+            - member-018
+            - member-019
+            - member-020
+            - member-021
+            - member-022
+            - member-023
+            - member-024
+            - member-025
+            - member-026
+            - member-027
+            - member-028
+            - member-029
+            - member-030
+            - member-031
+          memoryLimit: 4Gi
+          name: aggregate
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - map
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - aggregate
+          memoryLimit: 4Gi
+          name: map
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - summary
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - aggregate
+          memoryLimit: 4Gi
+          name: summary
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - animate
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - aggregate
+          memoryLimit: 4Gi
+          name: animate
+          runtime: openoil-ensemble-32-local
+        - command:
+            arguments:
+                - /opt/openoil/workflow.py
+                - --stage
+                - validate
+                - --members
+                - "32"
+            entrypoint: python
+          cpuLimit: "1"
+          dependsOn:
+            - map
+            - summary
+            - animate
+          memoryLimit: 4Gi
+          name: validate
+          runtime: openoil-ensemble-32-local
+    dataDependencies:
+        - consumerActivity: member-000
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-000
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-001
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-001
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-002
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-002
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-003
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-003
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-004
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-004
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-005
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-005
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-006
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-006
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-007
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-007
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-008
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-008
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-009
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-009
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-010
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-010
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-011
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-011
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-012
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-012
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-013
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-013
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-014
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-014
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-015
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-015
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-016
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-016
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-017
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-017
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-018
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-018
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-019
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-019
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-020
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-020
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-021
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-021
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-022
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-022
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-023
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-023
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-024
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-024
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-025
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-025
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-026
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-026
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-027
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-027
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-028
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-028
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-029
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-029
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-030
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-030
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-031
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: member-031
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_000.nc
+          producerActivity: member-000
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-000.json
+          producerActivity: member-000
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_001.nc
+          producerActivity: member-001
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-001.json
+          producerActivity: member-001
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_002.nc
+          producerActivity: member-002
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-002.json
+          producerActivity: member-002
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_003.nc
+          producerActivity: member-003
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-003.json
+          producerActivity: member-003
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_004.nc
+          producerActivity: member-004
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-004.json
+          producerActivity: member-004
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_005.nc
+          producerActivity: member-005
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-005.json
+          producerActivity: member-005
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_006.nc
+          producerActivity: member-006
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-006.json
+          producerActivity: member-006
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_007.nc
+          producerActivity: member-007
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-007.json
+          producerActivity: member-007
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_008.nc
+          producerActivity: member-008
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-008.json
+          producerActivity: member-008
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_009.nc
+          producerActivity: member-009
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-009.json
+          producerActivity: member-009
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_010.nc
+          producerActivity: member-010
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-010.json
+          producerActivity: member-010
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_011.nc
+          producerActivity: member-011
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-011.json
+          producerActivity: member-011
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_012.nc
+          producerActivity: member-012
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-012.json
+          producerActivity: member-012
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_013.nc
+          producerActivity: member-013
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-013.json
+          producerActivity: member-013
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_014.nc
+          producerActivity: member-014
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-014.json
+          producerActivity: member-014
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_015.nc
+          producerActivity: member-015
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-015.json
+          producerActivity: member-015
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_016.nc
+          producerActivity: member-016
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-016.json
+          producerActivity: member-016
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_017.nc
+          producerActivity: member-017
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-017.json
+          producerActivity: member-017
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_018.nc
+          producerActivity: member-018
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-018.json
+          producerActivity: member-018
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_019.nc
+          producerActivity: member-019
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-019.json
+          producerActivity: member-019
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_020.nc
+          producerActivity: member-020
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-020.json
+          producerActivity: member-020
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_021.nc
+          producerActivity: member-021
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-021.json
+          producerActivity: member-021
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_022.nc
+          producerActivity: member-022
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-022.json
+          producerActivity: member-022
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_023.nc
+          producerActivity: member-023
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-023.json
+          producerActivity: member-023
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_024.nc
+          producerActivity: member-024
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-024.json
+          producerActivity: member-024
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_025.nc
+          producerActivity: member-025
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-025.json
+          producerActivity: member-025
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_026.nc
+          producerActivity: member-026
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-026.json
+          producerActivity: member-026
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_027.nc
+          producerActivity: member-027
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-027.json
+          producerActivity: member-027
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_028.nc
+          producerActivity: member-028
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-028.json
+          producerActivity: member-028
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_029.nc
+          producerActivity: member-029
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-029.json
+          producerActivity: member-029
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_030.nc
+          producerActivity: member-030
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-030.json
+          producerActivity: member-030
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: membro_031.nc
+          producerActivity: member-031
+          sizeBytes: 1000000
+        - consumerActivity: aggregate
+          logicalName: profile-member-031.json
+          producerActivity: member-031
+          sizeBytes: 1000000
+        - consumerActivity: map
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: map
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: map
+          logicalName: summary.json
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: summary.json
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: animate
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: animate
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: animate
+          logicalName: summary.json
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: map
+          logicalName: probability.nc
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: mass_balance.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: arrival.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: summary
+          logicalName: perfil_tarefas.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: animate
+          logicalName: selected-member.nc
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: scenario.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: parameters.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-prepare.json
+          producerActivity: prepare
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: summary.json
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: probability.nc
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: mass_balance.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: arrival.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: perfil_tarefas.csv
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: selected-member.nc
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-aggregate.json
+          producerActivity: aggregate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_000.nc
+          producerActivity: member-000
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-000.json
+          producerActivity: member-000
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_001.nc
+          producerActivity: member-001
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-001.json
+          producerActivity: member-001
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_002.nc
+          producerActivity: member-002
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-002.json
+          producerActivity: member-002
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_003.nc
+          producerActivity: member-003
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-003.json
+          producerActivity: member-003
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_004.nc
+          producerActivity: member-004
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-004.json
+          producerActivity: member-004
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_005.nc
+          producerActivity: member-005
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-005.json
+          producerActivity: member-005
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_006.nc
+          producerActivity: member-006
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-006.json
+          producerActivity: member-006
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_007.nc
+          producerActivity: member-007
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-007.json
+          producerActivity: member-007
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_008.nc
+          producerActivity: member-008
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-008.json
+          producerActivity: member-008
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_009.nc
+          producerActivity: member-009
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-009.json
+          producerActivity: member-009
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_010.nc
+          producerActivity: member-010
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-010.json
+          producerActivity: member-010
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_011.nc
+          producerActivity: member-011
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-011.json
+          producerActivity: member-011
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_012.nc
+          producerActivity: member-012
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-012.json
+          producerActivity: member-012
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_013.nc
+          producerActivity: member-013
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-013.json
+          producerActivity: member-013
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_014.nc
+          producerActivity: member-014
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-014.json
+          producerActivity: member-014
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_015.nc
+          producerActivity: member-015
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-015.json
+          producerActivity: member-015
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_016.nc
+          producerActivity: member-016
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-016.json
+          producerActivity: member-016
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_017.nc
+          producerActivity: member-017
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-017.json
+          producerActivity: member-017
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_018.nc
+          producerActivity: member-018
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-018.json
+          producerActivity: member-018
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_019.nc
+          producerActivity: member-019
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-019.json
+          producerActivity: member-019
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_020.nc
+          producerActivity: member-020
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-020.json
+          producerActivity: member-020
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_021.nc
+          producerActivity: member-021
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-021.json
+          producerActivity: member-021
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_022.nc
+          producerActivity: member-022
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-022.json
+          producerActivity: member-022
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_023.nc
+          producerActivity: member-023
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-023.json
+          producerActivity: member-023
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_024.nc
+          producerActivity: member-024
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-024.json
+          producerActivity: member-024
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_025.nc
+          producerActivity: member-025
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-025.json
+          producerActivity: member-025
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_026.nc
+          producerActivity: member-026
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-026.json
+          producerActivity: member-026
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_027.nc
+          producerActivity: member-027
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-027.json
+          producerActivity: member-027
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_028.nc
+          producerActivity: member-028
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-028.json
+          producerActivity: member-028
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_029.nc
+          producerActivity: member-029
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-029.json
+          producerActivity: member-029
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_030.nc
+          producerActivity: member-030
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-030.json
+          producerActivity: member-030
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: membro_031.nc
+          producerActivity: member-031
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-member-031.json
+          producerActivity: member-031
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: mapa_probabilidade.png
+          producerActivity: map
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-map.json
+          producerActivity: map
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: resumo_workflow.png
+          producerActivity: summary
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-summary.json
+          producerActivity: summary
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: animacao.gif
+          producerActivity: animate
+          sizeBytes: 1000000
+        - consumerActivity: validate
+          logicalName: profile-animate.json
+          producerActivity: animate
+          sizeBytes: 1000000
+    image: ghcr.io/uffescience/openoil-ensemble@sha256:9939dcaa4c26b62ce5496f46f3946d26f0ad1168fbfe1c5acd13b3385fd25b6e
+    namespace: oil

@@ -150,6 +150,7 @@ func collectResults(dir string, raw []byte, artifacts []string) error {
 		}
 		validator = exec.Command(filepath.Join(filepath.Dir(self), "montage-check"), "-root", dir)
 	}
+	validator.Dir = dir
 	validator.Stdout = os.Stdout
 	validator.Stderr = os.Stderr
 	if err = validator.Run(); err != nil {

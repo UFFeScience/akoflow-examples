@@ -1,0 +1,17 @@
+{
+  "activityCount": 14,
+  "examplePath": "scientific-workflows/openoil-ensemble-08",
+  "experimentId": "d20a815a-2c57-4a01-b774-4b7533421d41",
+  "image": "ghcr.io/uffescience/openoil-ensemble@sha256:267348059d11049d42458ab2e3a30cedb4efa143b619f60686d44525f1bba19a",
+  "publicationId": "0d02c2c1-da65-4a17-9919-a8cbcf703341",
+  "releaseTag": "openoil-ensemble-v1",
+  "resultCount": 1,
+  "route": "/docs/showcase/scientific-workflows/openoil-ensemble-08",
+  "runId": "oilv1-openoil-ensemble-08-local-6f5ac4d22a-run-20261115t161927.919327106",
+  "sourceRef": "1108f013b6bbe80897008c346d1a02069214f682",
+  "uri": "akoflow://hub/publications/0d02c2c1-da65-4a17-9919-a8cbcf703341/versions/1",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-openoil-ensemble-08",
+  "version": 1,
+  "versionId": "770cdc45-3c18-4ebb-8a79-ffca67906b76",
+  "yamlHash": "0ef0aa83a1d40e60ad831089c9a02939d81f8f96e6b0d2fb349ba076ce80d560"
+}

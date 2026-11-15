@@ -1,4 +1,4 @@
-# Hybrid local to GCP: portable local profile
+# Producer–Consumer Data Transfer
 
 Execute the original producer/consumer file-content checks in two Docker activities on one local host. The local profile verifies actual file handoff and receipt content. It does not measure GCP provisioning, Kubernetes placement, or cross-cloud networking.
 

@@ -17,7 +17,7 @@ Each command below starts from the repository root and keeps your shell in that 
 
 | Example | Local command (from the repository root) |
 | --- | --- |
-| [Montage 050 locally](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
+| [Montage 050 — Astronomical Image Mosaicking](scientific-workflows/montage-050/README.md) | `(cd scientific-workflows/montage-050 && ./prepare.sh && ./run.sh)` |
 | [AI Assisted Analysis](scientific-ai/ai-assisted-analysis/README.md) | `(cd scientific-ai/ai-assisted-analysis && ./prepare.sh && ./run.sh)` |
 | [Experiment Feedback Loop](scientific-ai/experiment-feedback-loop/README.md) | `(cd scientific-ai/experiment-feedback-loop && ./prepare.sh && ./run.sh)` |
 | [Surrogate Model](scientific-ai/surrogate-model/README.md) | `(cd scientific-ai/surrogate-model && ./prepare.sh && ./run.sh)` |
@@ -35,7 +35,7 @@ Each command below starts from the repository root and keeps your shell in that 
 | [Training with MLflow](machine-learning/training-with-mlflow/README.md) | `(cd machine-learning/training-with-mlflow && ./prepare.sh && ./run.sh)` |
 | [Audio Transcription](generative-ai/audio-transcription/README.md) | `(cd generative-ai/audio-transcription && ./prepare.sh && ./run.sh)` |
 | [Document Extraction](generative-ai/document-extraction/README.md) | `(cd generative-ai/document-extraction && ./prepare.sh && ./run.sh)` |
-| [Local RAG Factory](generative-ai/local-rag/README.md) | `(cd generative-ai/local-rag && ./prepare.sh && ./run.sh)` |
+| [RAG Pipeline](generative-ai/local-rag/README.md) | `(cd generative-ai/local-rag && ./prepare.sh && ./run.sh)` |
 | [RAG Indexing](generative-ai/rag-indexing/README.md) | `(cd generative-ai/rag-indexing && ./prepare.sh && ./run.sh)` |
 | [Synthetic Dataset](generative-ai/synthetic-dataset/README.md) | `(cd generative-ai/synthetic-dataset && ./prepare.sh && ./run.sh)` |
 | [AI Video Studio](generative-ai/video-studio/README.md) | `(cd generative-ai/video-studio && ./prepare.sh && ./run.sh)` |

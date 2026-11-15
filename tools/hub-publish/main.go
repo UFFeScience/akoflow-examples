@@ -22,6 +22,7 @@ import (
 )
 
 type contract struct {
+	Description  string            `json:"description"`
 	ResultImages map[string]string `json:"resultImages"`
 	OriginalYAML string            `json:"originalYAML"`
 	Title        string            `json:"title"`
@@ -337,6 +338,9 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	if cut := strings.Index(base, "## Current execution evidence"); cut >= 0 {
 		base = strings.TrimSpace(base[:cut])
 	}
+	if _, rest, ok := strings.Cut(base, "\n"); ok {
+		base = "# " + c.Title + "\n" + rest
+	}
 	base = strings.ReplaceAll(base, "New daemon execution and one capture per activity are still required before claiming Desktop verification.", "The measured execution and validated outputs for this publication are recorded below.")
 	absoluteRoot, eRoot := filepath.Abs(root)
 	if eRoot != nil {
@@ -351,7 +355,7 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 		if !strings.Contains(err.Error(), "HTTP 404") {
 			return nil, err
 		}
-		in := map[string]any{"namespaceId": hub.NamespaceID, "slug": slug, "title": c.Title, "description": c.LocalProfile, "readme": base, "visibility": "public"}
+		in := map[string]any{"namespaceId": hub.NamespaceID, "slug": slug, "title": c.Title, "description": publicationDescription(c), "readme": base, "visibility": "public"}
 		if err = hub.call("POST", "/publications", in, &pub); err != nil {
 			return nil, err
 		}
@@ -442,9 +446,16 @@ func publish(hub, api client, root, route string, c contract) (map[string]any, e
 	if err = os.WriteFile(filepath.Join(dir, "README.md"), []byte(readme), 0644); err != nil {
 		return nil, err
 	}
-	if err = hub.call("PATCH", "/publications/"+pub.ID, map[string]any{"title": c.Title, "description": c.LocalProfile, "readme": strings.ReplaceAll(readme, "<!-- hub-publication -->\n", ""), "visibility": "public"}, nil); err != nil {
+	if err = hub.call("PATCH", "/publications/"+pub.ID, map[string]any{"title": c.Title, "description": publicationDescription(c), "readme": strings.ReplaceAll(readme, "<!-- hub-publication -->\n", ""), "visibility": "public"}, nil); err != nil {
 		return nil, err
 	}
 	result := map[string]any{"route": route, "examplePath": c.ExamplePath, "publicationId": pub.ID, "versionId": receipt.Version.ID, "version": receipt.Version.Number, "yamlHash": receipt.Version.Hash, "uri": uri, "url": page, "experimentId": receipt.ExperimentID, "runId": e.RunID, "image": e.Image, "activityCount": e.Completed, "resultCount": receipt.ResultCount}
 	return result, write(filepath.Join(dir, "evidence/hub-publication.json"), result)
+}
+
+func publicationDescription(c contract) string {
+	if c.Description != "" {
+		return c.Description
+	}
+	return c.LocalProfile
 }

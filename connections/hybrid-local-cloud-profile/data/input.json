@@ -15,6 +15,6 @@
     "produce",
     "consume"
   ],
-  "title": "Hybrid local to cloud — local reproducibility profile",
+  "title": "Producer–Consumer Data Transfer",
   "validationMode": "local-workload"
 }

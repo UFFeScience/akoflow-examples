@@ -142,48 +142,70 @@
     {
       "slug": "viralrecon",
       "name": "Viralrecon",
-      "status": "queued",
+      "status": "skipped-user-request",
       "visualPlan": "Genome coverage and variant positions from reconstructed viral reads.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
     },
     {
       "slug": "mag",
       "name": "MAG",
-      "status": "queued",
+      "status": "skipped-user-request",
       "visualPlan": "Actual assembly/bin metrics, contig-length distribution and taxonomic summaries where produced.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
     },
     {
       "slug": "ampliseq",
       "name": "Ampliseq",
-      "status": "queued",
+      "status": "skipped-user-request",
       "visualPlan": "Read-retention summary and observed taxonomic/community composition.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
     },
     {
       "slug": "fmriprep",
       "name": "fMRIPrep",
-      "status": "queued",
+      "status": "skipped-user-request",
       "visualPlan": "Anatomical/functional registration and preprocessing quality-control views from actual BIDS outputs.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
     },
     {
       "slug": "1000genomes",
       "name": "1000Genomes",
-      "status": "queued",
+      "status": "skipped-user-request",
       "visualPlan": "Observed allele-frequency/variant-overlap distributions for the frozen public cohort subset.",
-      "visualRequiredBeforePublication": true
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
     },
     {
       "slug": "pycbc",
       "name": "PyCBC / LIGO",
-      "status": "queued",
-      "visualPlan": "Strain/spectrogram and detection statistic versus time for public GWOSC data.",
-      "visualRequiredBeforePublication": true
+      "status": "published-production",
+      "visualPlan": "Measured detector strain, noise spectra, matched-filter signal-to-noise and two-detector coincidence from real GWOSC observations",
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/pycbc",
+      "observationDurationPerDetectorSeconds": 4096,
+      "rawSamplesPerDetector": 16777216,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "catalogueEvent": "GW150914",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-pycbc",
+      "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "activityCount": 9,
+      "completedActivityCount": 9,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/pycbc/evidence/hub-production-publication.json",
+      "observedSeconds": 161.94806218147278,
+      "finding": "Full H1/L1 4096s observations; 66 physical templates; one clustered coincidence, network SNR 23.375389, lag 6.8359375ms; independent matched-filter normalization verified",
+      "calibratedSignificanceClaimed": false
     }
   ],
   "visualRequirement": "Every published workflow must include at least one visual derived from its real computation, with provenance and accessible download.",
-  "visualBrowserGate": "passed: Earthquake (four original PNGs) and SRA Search (actual-count SVG) rendered in production after AKO-250 deployment 43746068697",
+  "visualBrowserGate": "passed for all eight production publications; PyCBC detector/coincidence PNGs verified in dark theme",
   "productionAssetRegistry": {
     "compose": "/opt/projects/akoflow-scientific-registry/compose.yml",
     "publicImagePrefix": "hub.akoflow.com/akoflow-examples/",
@@ -195,11 +217,13 @@
     "verified": true,
     "content": "Three band mosaics and a color mosaic from the validated reference execution."
   },
-  "nextWorkflow": "viralrecon",
+  "nextWorkflow": null,
   "sourceBatchPR": {
     "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
     "status": "merged",
     "ciRun": 43747163688,
     "successfulChecks": 39
-  }
+  },
+  "scopeChange": "Original campaign retained for provenance. User explicitly skipped remaining biological items; next requested execution is PyCBC/LIGO. Existing biological publications remain available.",
+  "acceptedScopeStatus": "complete: eight production publications and five explicitly skipped items"
 }

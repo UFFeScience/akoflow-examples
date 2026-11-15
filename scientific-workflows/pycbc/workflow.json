@@ -1,0 +1,321 @@
+{
+  "name": "pycbc",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "ghcr.io/uffescience/akoflow-examples/pycbc:v1",
+    "activities": [
+      {
+        "name": "acquire",
+        "runtime": "pycbc-local",
+        "dependsOn": [],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "acquire",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "bank",
+        "runtime": "pycbc-local",
+        "dependsOn": [],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "bank",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "condition-H1",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "acquire"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "condition",
+            "--output",
+            ".",
+            "--detector",
+            "H1"
+          ]
+        }
+      },
+      {
+        "name": "filter-H1",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "condition-H1",
+          "bank"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "filter",
+            "--output",
+            ".",
+            "--detector",
+            "H1"
+          ]
+        }
+      },
+      {
+        "name": "condition-L1",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "acquire"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "condition",
+            "--output",
+            ".",
+            "--detector",
+            "L1"
+          ]
+        }
+      },
+      {
+        "name": "filter-L1",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "condition-L1",
+          "bank"
+        ],
+        "cpuLimit": "2",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "filter",
+            "--output",
+            ".",
+            "--detector",
+            "L1"
+          ]
+        }
+      },
+      {
+        "name": "coincidence",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "filter-H1",
+          "filter-L1"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "coincidence",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "figures",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "condition-H1",
+          "filter-H1",
+          "condition-L1",
+          "filter-L1",
+          "acquire",
+          "bank",
+          "coincidence"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "figures",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "package",
+        "runtime": "pycbc-local",
+        "dependsOn": [
+          "figures"
+        ],
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "package",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "condition-H1",
+        "logicalName": "observations.tar",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "condition-H1",
+        "consumerActivity": "filter-H1",
+        "logicalName": "H1-condition.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bank",
+        "consumerActivity": "filter-H1",
+        "logicalName": "template-bank.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-H1",
+        "consumerActivity": "coincidence",
+        "logicalName": "H1-triggers.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "condition-H1",
+        "consumerActivity": "figures",
+        "logicalName": "H1-condition.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-H1",
+        "consumerActivity": "figures",
+        "logicalName": "H1-triggers.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-H1",
+        "consumerActivity": "figures",
+        "logicalName": "H1-snr-envelopes.npz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "condition-L1",
+        "logicalName": "observations.tar",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "condition-L1",
+        "consumerActivity": "filter-L1",
+        "logicalName": "L1-condition.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bank",
+        "consumerActivity": "filter-L1",
+        "logicalName": "template-bank.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-L1",
+        "consumerActivity": "coincidence",
+        "logicalName": "L1-triggers.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "condition-L1",
+        "consumerActivity": "figures",
+        "logicalName": "L1-condition.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-L1",
+        "consumerActivity": "figures",
+        "logicalName": "L1-triggers.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-L1",
+        "consumerActivity": "figures",
+        "logicalName": "L1-snr-envelopes.npz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "acquire",
+        "consumerActivity": "figures",
+        "logicalName": "observations.tar",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bank",
+        "consumerActivity": "figures",
+        "logicalName": "template-bank.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "coincidence",
+        "consumerActivity": "figures",
+        "logicalName": "coincidences.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "figures",
+        "consumerActivity": "package",
+        "logicalName": "derived-summary.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "figures",
+        "consumerActivity": "package",
+        "logicalName": "derived-results.tar.gz",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "figures",
+        "consumerActivity": "package",
+        "logicalName": "detector-analysis.png",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "figures",
+        "consumerActivity": "package",
+        "logicalName": "coincidence-analysis.png",
+        "sizeBytes": 1
+      }
+    ]
+  }
+}

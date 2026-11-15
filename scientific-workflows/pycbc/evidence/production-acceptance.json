@@ -1,0 +1,61 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-pycbc",
+  "nativeCompletedActivities": 9,
+  "observedSeconds": 161.94806218147278,
+  "rawObservedSamples": 33554432,
+  "physicalTemplates": 66,
+  "selectedCoincidence": {
+    "template": 9,
+    "gps": 1126259462.425293,
+    "H1GPS": 1126259462.428711,
+    "L1GPS": 1126259462.421875,
+    "lagSeconds": 0.0068359375,
+    "H1SNR": 19.253089651656886,
+    "L1SNR": 13.256220045611185,
+    "networkSNR": 23.375389430604173
+  },
+  "visualCount": 2,
+  "visualBrowserGate": "passed",
+  "browserImageNaturalSizes": [
+    [
+      1800,
+      1650
+    ],
+    [
+      1800,
+      750
+    ]
+  ],
+  "browserTheme": "dark",
+  "publicAssetsHashVerified": [
+    {
+      "name": "pycbc-results.tar.gz",
+      "bytes": 477567747,
+      "sha256": "dfcd7758151be8d52270112e19105fc6d9d4699eb716299eac32a86681106c00"
+    },
+    {
+      "name": "pycbc-summary.json",
+      "bytes": 25438,
+      "sha256": "0eefc33c419d9cb72e8e47578f34a4c1689ea6d105e69d6ad2d3567f32f0e989"
+    },
+    {
+      "name": "published-detector-analysis.png",
+      "bytes": 380272,
+      "sha256": "b1ead805eff33f06dfd7211cbbb5a978ed6fd246861bce64d1fdb388a22d134b"
+    },
+    {
+      "name": "published-coincidence-analysis.png",
+      "bytes": 64306,
+      "sha256": "f24e1165b98f0a3a2b480858f0ab62f3523c847222213c13278e53356233ba86"
+    },
+    {
+      "name": "source.tar.gz",
+      "bytes": 11797669,
+      "sha256": "9d431fcb378823877c3bef312fedde10453f441b7776efc69a07972c7312fef6"
+    }
+  ],
+  "publicImmutableImageVerified": true,
+  "publicDockerPullVerified": true,
+  "independentMatchedFilterNormalizationChecked": true,
+  "calibratedSignificanceClaimed": false
+}

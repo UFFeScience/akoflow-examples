@@ -1,0 +1,57 @@
+{
+  "slug": "pycbc",
+  "title": "PyCBC / LIGO \u2014 Gravitational-Wave Matched Filtering",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "acquire",
+    "bank",
+    "condition-H1",
+    "filter-H1",
+    "condition-L1",
+    "filter-L1",
+    "coincidence",
+    "figures",
+    "package"
+  ],
+  "dependencies": {
+    "acquire": [],
+    "bank": [],
+    "condition-H1": [
+      "acquire"
+    ],
+    "filter-H1": [
+      "condition-H1",
+      "bank"
+    ],
+    "condition-L1": [
+      "acquire"
+    ],
+    "filter-L1": [
+      "condition-L1",
+      "bank"
+    ],
+    "coincidence": [
+      "filter-H1",
+      "filter-L1"
+    ],
+    "figures": [
+      "condition-H1",
+      "filter-H1",
+      "condition-L1",
+      "filter-L1",
+      "acquire",
+      "bank",
+      "coincidence"
+    ],
+    "package": [
+      "figures"
+    ]
+  },
+  "artifacts": [
+    "pycbc-results.tar.gz",
+    "pycbc-summary.json",
+    "published-detector-analysis.png",
+    "published-coincidence-analysis.png"
+  ]
+}

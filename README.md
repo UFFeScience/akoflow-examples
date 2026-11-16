@@ -17,6 +17,7 @@ Each command below starts from the repository root and keeps your shell in that 
 
 | Example | Local command (from the repository root) |
 | --- | --- |
+| [OpenDroneMap split/merge](scientific-workflows/opendronemap/README.md) | `(cd scientific-workflows/opendronemap && ./prepare.sh && ./run.sh)` |
 | [USGS Earthquake](scientific-workflows/earthquake/README.md) | `(cd scientific-workflows/earthquake && ./prepare.sh && ./run.sh)` |
 | [SRA Search — crAssphage Screening](scientific-workflows/sra-search/README.md) | `(cd scientific-workflows/sra-search && ./prepare.sh && ./run.sh)` |
 | [Variant Calling — E. coli Genome Comparison](scientific-workflows/variant-calling/README.md) | `(cd scientific-workflows/variant-calling && ./prepare.sh && ./run.sh)` |

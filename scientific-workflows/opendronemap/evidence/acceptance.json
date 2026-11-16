@@ -1,0 +1,34 @@
+{
+  "status": "success",
+  "runId": "opendronemap-caliterra-split-merge-local-1e96697664-run-20261116t134725.875498305",
+  "nativeCompletedActivities": 9,
+  "nativeLatestAttemptsAllCompleted": true,
+  "recoveredAfterExternalDaemonRestart": true,
+  "nativeAttemptOverlapSeconds": {
+    "reconstruct": 33.234641551971436,
+    "process": 690.9302859306335
+  },
+  "scientificWorkerOverlapSeconds": {
+    "reconstruct": 32.14210319519043,
+    "process": 689.8250916004181
+  },
+  "photographs": 77,
+  "sharedPhotographs": 47,
+  "allPhotographsReconstructed": true,
+  "inputPointCounts": [
+    2142686,
+    2367600
+  ],
+  "mergedPointCount": 4510286,
+  "nativeFinalWorkspaceState": "sealed",
+  "retainedFilesVerifiedAgainstNativeManifest": 15,
+  "adapterMatchesExecutedImage": true,
+  "adapterSha256": "63f397990d2a58722b9f80bbf37ce768c846a53118124798f350e2da2e9e4b9b",
+  "image": "akoflow-local/opendronemap:local-ce38c348fa95a1f0",
+  "imageId": "sha256:ce38c348fa95a1f0549546cb8cccd7eb64819a6a9fe9bad78640aff90f8ab76f",
+  "independentValidation": "Scientific output hashes, raster CRS/dimensions, complete cloud point count, PNG decoding and overlap checks passed with outputs mounted read-only.",
+  "submodelPhotoCounts": [
+    59,
+    65
+  ]
+}

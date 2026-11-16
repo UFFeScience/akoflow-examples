@@ -1,0 +1,46 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-opendronemap",
+  "anonymousPublicPageStatus": 200,
+  "visualCount": 5,
+  "visuals": [
+    {
+      "src": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/map-assembly.gif",
+      "width": 960,
+      "height": 720,
+      "complete": true,
+      "animationChangesVisible": true
+    },
+    {
+      "src": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/pointcloud-turntable.gif",
+      "width": 960,
+      "height": 720,
+      "complete": true,
+      "animationChangesVisible": true
+    },
+    {
+      "src": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/orthophoto.png",
+      "width": 885,
+      "height": 1008,
+      "complete": true
+    },
+    {
+      "src": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/surface.png",
+      "width": 442,
+      "height": 503,
+      "complete": true
+    },
+    {
+      "src": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/pointcloud.png",
+      "width": 624,
+      "height": 961,
+      "complete": true
+    }
+  ],
+  "darkThemeVerified": true,
+  "resultsPage": "https://hub.akoflow.com/o/akoflow/scientific-workflows-opendronemap#publication-results",
+  "resultsCompletedVisible": true,
+  "pageErrors": [],
+  "resultsTableCompletedCellVisible": true,
+  "resultsNativeRunVisible": true,
+  "resultsModeRealVisible": true
+}

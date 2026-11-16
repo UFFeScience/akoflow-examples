@@ -4,11 +4,11 @@
 
 The published execution completed all nine activities using 77 real CC0 photographs. Both dense-processing submodels ran in parallel; the native merge contains **4,510,286 points**, the exact sum of both submodel clouds. The recorded execution includes recovery after an external daemon restart; it is not an uninterrupted performance benchmark.
 
-![Presentation of the original photos and measured orthomosaic](https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/map-assembly.gif)
+![Presentation of the original photos and measured orthomosaic](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/map-assembly.gif)
 
 This presentation uses the original input-photo thumbnails and a progressive reveal of the actual final raster. It is an illustrative presentation, not footage of intermediate reconstruction states or execution timing.
 
-![360-degree view of the actual reconstructed colored point cloud](https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/pointcloud-turntable.gif)
+![360-degree view of the actual reconstructed colored point cloud](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/pointcloud-turntable.gif)
 
 The rotating view renders decimated measured LAZ points and their actual RGB values. It creates no new geometry. The downloadable LAZ retains all 4,510,286 points.
 
@@ -120,8 +120,24 @@ All 77 photographs were reconstructed. Native overlapping submodels contain 59 a
 
 The final workspace is sealed and retains the copied products. All 15 collected files were compared with the terminal activity's native artifact checksums. Independent verification passed for the six product hashes, raster coordinates/dimensions, complete cloud count, PNG decoding and worker overlap, with the collected output directory mounted read-only. See `evidence/daemon-run.json`, `evidence/scientific-validation.json` and `evidence/acceptance.json`.
 
-![Real merged Caliterra orthomosaic](https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/orthophoto.png)
+![Real merged Caliterra orthomosaic](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/orthophoto.png)
 
-![Surface elevation preview](https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/surface.png)
+![Surface elevation preview](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/surface.png)
 
-![Oblique projection of the merged colored point cloud](https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/pointcloud.png)
+![Oblique projection of the merged colored point cloud](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/f4baaf155960ca77a39b5391d8a0945cf00db9cb/scientific-workflows/opendronemap/evidence/pointcloud.png)
+
+<!-- connected-hub-publication -->
+
+## Measured daemon execution and Hub version
+
+[Open the published workflow and measured results](https://hub.akoflow.com/o/akoflow/scientific-workflows-opendronemap). Run `opendronemap-caliterra-split-merge-local-1e96697664-run-20261116t134725.875498305` completed **9/9 activities** in **1905.217 seconds**. These are observed Docker computations from a recovered execution following the documented external daemon restart. The reported makespan is the daemon metric for that recovered execution, not a clean uninterrupted benchmark. The imported manual plan contains placeholder predicted timings.
+
+Configured Hub origin: `https://hub.akoflow.com`. This receipt applies to that instance. Load the exact executed Docker image from the public release archive, or build the source bundle on the execution host. No public OCI registry tag is claimed.
+
+Import URI for this configured Hub:
+
+```text
+akoflow://hub/publications/fa855624-54cc-44a9-9c9a-b3117b31eb33/versions/1
+```
+
+The public page was checked anonymously in a real browser: all three PNGs loaded, both GIFs visibly animated, dark theme rendered correctly, and the Results view showed the completed native execution. Public source/results downloads and all uploaded file digests were verified. See `evidence/production-acceptance.json`.

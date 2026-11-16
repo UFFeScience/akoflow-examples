@@ -1,0 +1,15 @@
+{
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-opendronemap",
+  "experimentId": "07d82453-f91e-4395-a764-dc401ddc53dd",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "fa855624-54cc-44a9-9c9a-b3117b31eb33",
+  "runId": "opendronemap-caliterra-split-merge-local-1e96697664-run-20261116t134725.875498305",
+  "hubOrigin": "https://hub.akoflow.com",
+  "uri": "akoflow://hub/publications/fa855624-54cc-44a9-9c9a-b3117b31eb33/versions/1",
+  "image": "akoflow-local/opendronemap:local-ce38c348fa95a1f0",
+  "imageDistribution": "Download the exact executed Docker image archive or build the provided source; no public OCI registry tag is claimed.",
+  "exactImageArchive": "https://github.com/UFFeScience/akoflow-examples/releases/download/opendronemap-caliterra-v1/opendronemap-executed-image.tar.gz",
+  "exactImageArchiveSHA256": "93435411deae918ed885e7e345b96d429a4f8d998ceebfeb5cf91b53bbd4f9ab",
+  "releaseURL": "https://github.com/UFFeScience/akoflow-examples/releases/tag/opendronemap-caliterra-v1"
+}

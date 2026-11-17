@@ -1,5 +1,7 @@
 # Estrada Real — informed search on a curated historical graph
 
+Conference tags: `bresci`, `bresci-2026`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XX Brazilian e-Science Workshop (BreSci 2026), co-located with SBBD**. Original authors: **Davi Machado da Rocha**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/44084) · [Original code and data](https://zenodo.org/records/20867698)

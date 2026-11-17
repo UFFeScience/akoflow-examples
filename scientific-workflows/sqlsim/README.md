@@ -1,5 +1,7 @@
 # SQLSIM — analytical similarity queries in PostgreSQL
 
+Conference tags: `bresci`, `bresci-2024`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XVIII Brazilian e-Science Workshop (BreSci 2024), co-located with SBBD**. Original authors: **Antônio Lívio C. de Mendonça, Maria Camila N. Barioni, Humberto Razente**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/30580) · [Original code and data](https://github.com/liviomendonca/sqlsim)

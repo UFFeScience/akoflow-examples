@@ -1,5 +1,7 @@
 # INMET — São Paulo meteorological observations, 2013–2022
 
+Conference tags: `bresci`, `bresci-2025`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD**. Original authors: **Rosa Virginia Encinas Quille, Felipe Valencia de Almeida, Danielle Monteiro, Pedro Luiz Pizzigatti Corrêa**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/36912) · [Original code and data](https://zenodo.org/records/16864784)

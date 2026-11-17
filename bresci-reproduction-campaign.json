@@ -31,7 +31,13 @@
       "peakOverlappingActivities": 3,
       "evidence": "scientific-workflows/united/evidence/daemon-run.json",
       "readme": "scientific-workflows/united/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2025",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "estrada-real",
@@ -51,7 +57,13 @@
       "peakOverlappingActivities": 3,
       "evidence": "scientific-workflows/estrada-real/evidence/daemon-run.json",
       "readme": "scientific-workflows/estrada-real/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2026",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "sqlsim",
@@ -73,7 +85,13 @@
       "peakOverlappingActivities": 2,
       "evidence": "scientific-workflows/sqlsim/evidence/daemon-run.json",
       "readme": "scientific-workflows/sqlsim/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2024",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "eidolon",
@@ -100,7 +118,13 @@
       "peakOverlappingActivities": 2,
       "evidence": "scientific-workflows/eidolon/evidence/daemon-run.json",
       "readme": "scientific-workflows/eidolon/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2026",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "inmet",
@@ -123,7 +147,13 @@
       "peakOverlappingActivities": 3,
       "evidence": "scientific-workflows/inmet/evidence/daemon-run.json",
       "readme": "scientific-workflows/inmet/README.md",
-      "figureCount": 4
+      "figureCount": 4,
+      "tags": [
+        "bresci",
+        "bresci-2025",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "mafaulda-tinyml",
@@ -144,7 +174,13 @@
       "peakOverlappingActivities": 3,
       "evidence": "scientific-workflows/mafaulda-tinyml/evidence/daemon-run.json",
       "readme": "scientific-workflows/mafaulda-tinyml/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2026",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     },
     {
       "slug": "tpch-databases",
@@ -169,7 +205,13 @@
       "peakOverlappingActivities": 3,
       "evidence": "scientific-workflows/tpch-databases/evidence/daemon-run.json",
       "readme": "scientific-workflows/tpch-databases/README.md",
-      "figureCount": 3
+      "figureCount": 3,
+      "tags": [
+        "bresci",
+        "bresci-2024",
+        "scientific-reproducibility",
+        "scientific-workflows"
+      ]
     }
   ]
 }

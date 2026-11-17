@@ -15,5 +15,11 @@
   "article": "https://sol.sbc.org.br/index.php/bresci/article/view/44071",
   "source": "https://github.com/cefet-rj-dal/tspredbench",
   "scope": "Run the original R ETLs for the complete climate, bioenergy and emissions source tables, followed by the original miniature-generation script. Each newly generated complete R object is compared semantically with the authors’ published full object at the same commit; published objects are references only, never substituted for ETL output. This is a three-collection instantiation of Eidolon, not every collection or remote publication. Origin: FAOSTAT https://www.fao.org/faostat/en/#data/ET , https://www.fao.org/faostat/en/#data/BE and https://www.fao.org/faostat/en/#data/GT . Code is MIT; source data retain FAO terms. Three independent ETL branches and three dependent miniaturization activities expose real parallelism.",
-  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence.",
+  "tags": [
+    "bresci",
+    "bresci-2026",
+    "scientific-reproducibility",
+    "scientific-workflows"
+  ]
 }

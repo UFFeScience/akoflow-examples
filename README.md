@@ -137,3 +137,5 @@ These seven examples adapt studies from the **Brazilian e-Science Workshop (BreS
 Start from any linked bundle and run `./prepare.sh && ./run.sh`. Preparation acquires original inputs; computation executes offline. Native daemon execution instructions are in each README. Complete original inputs are used within each explicitly selected scope; the MAFAULDA portable profile and TPC-H Q1 audit do not claim whole-paper reproduction. Measured overlap demonstrates actual parallel execution, without assuming a speedup over a sequential baseline.
 
 The Estrada Real search stage reproduces all **3,715** reported Greedy divergences; Eidolon's three rebuilt full R collections match the pinned published references. The database example preserves and exposes the different Q1 date cutoffs in the original code before testing an explicitly aligned variant.
+
+BreSci Hub discovery tags: `bresci`, `bresci-2024`, `bresci-2025`, and `bresci-2026`. Each publication retains its original conference/year and scientific author attribution.

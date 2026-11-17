@@ -1,5 +1,7 @@
 # Eidolon — reproducible scientific data collections
 
+Conference tags: `bresci`, `bresci-2026`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XX Brazilian e-Science Workshop (BreSci 2026), co-located with SBBD**. Original authors: **Lucas Calmon, Marcus Junior, Lucas Santos, Fernando Alexandrino, Rafaelli Coutinho, Gustavo Guedes, Diego Carvalho, Eduardo Ogasawara**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/44071) · [Original code and data](https://github.com/cefet-rj-dal/tspredbench)

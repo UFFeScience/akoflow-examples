@@ -1,5 +1,7 @@
 # UniTED — labeled time-series event detection
 
+Conference tags: `bresci`, `bresci-2025`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD**. Original authors: **Janio Lima, Hélio Castro, Luiz Oliveira, Ellen Paixão, Lais Baroni, Rebecca Salles, Ricardo Vargas, Eduardo Ogasawara**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/36901) · [Original code and data](https://github.com/cefet-rj-dal/united)

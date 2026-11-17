@@ -1,5 +1,7 @@
 # TPC-H Q1 — MongoDB embedding versus PostgreSQL reproducibility audit
 
+Conference tags: `bresci`, `bresci-2024`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XVIII Brazilian e-Science Workshop (BreSci 2024), co-located with SBBD**. Original authors: **André Merlo, Jorge N. S. Pavão, Luiz C. de Freitas, Jorge Soares, Diego Brandão, Kele Belloze**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/30582) · [Original code and data](https://github.com/jnpavao/tpch_mongodb)

@@ -1,5 +1,7 @@
 # MAFAULDA — rotating-machinery faults and TinyML quantization
 
+Conference tags: `bresci`, `bresci-2026`. [Browse BreSci on the Hub](https://hub.akoflow.com/categories/bresci).
+
 Adapted from **XX Brazilian e-Science Workshop (BreSci 2026), co-located with SBBD**. Original authors: **Cândido Alfredo Carvalho de Lucena Filho, Felipe Valencia de Almeida**.
 
 [Original paper](https://sol.sbc.org.br/index.php/bresci/article/view/44074) · [Original code and data](https://github.com/candidoalfilho/MAFAULDA_TINY_ML_ANALYSIS)

@@ -19,6 +19,9 @@ jobs:
       - id: images
         run: echo "value=$(jq -c '{include:.images}' bresci-registry-images.json)" >> "$GITHUB_OUTPUT"
   publish:
+    permissions:
+      contents: write
+      packages: write
     needs: matrix
     runs-on: ubuntu-latest
     timeout-minutes: 30

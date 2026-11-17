@@ -20,12 +20,21 @@ type entry struct {
 
 func main() {
 	root := flag.String("root", ".", "examples checkout")
+	base := flag.String("changed-base", "", "select only example directories changed since this Git revision")
+	mergeBase := flag.Bool("merge-base", false, "compare from the merge base, for pull requests")
 	format := flag.String("format", "json", "json CI matrix or markdown local command table")
 	flag.Parse()
 	entries, err := discover(*root)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
+	}
+	if *base != "" {
+		entries, err = changedEntries(*root, entries, *base, *mergeBase)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
 	}
 	if *format == "markdown" {
 		fmt.Println("| Example | Local command (from the repository root) |")

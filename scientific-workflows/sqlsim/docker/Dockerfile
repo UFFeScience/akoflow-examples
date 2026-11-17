@@ -3,7 +3,7 @@ ENV MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTEC
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get update && apt-get install -y --no-install-recommends postgresql-15 postgresql-15-postgis-3 && rm -rf /var/lib/apt/lists/* && useradd --uid 1000 --no-create-home scientist
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-15 postgresql-15-postgis-3 && rm -rf /var/lib/apt/lists/* && useradd --uid 1000 --no-create-home scientist && useradd --uid 1001 --no-create-home ci-scientist
 COPY scripts /app/scripts
 COPY data /app/data
 ENV PATH=/usr/lib/postgresql/15/bin:$PATH

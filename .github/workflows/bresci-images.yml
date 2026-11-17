@@ -40,11 +40,11 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p "$RUNNER_TEMP/bresci"
-          for attempt in $(seq 1 15); do
+          for attempt in $(seq 1 60); do
             if gh release download bresci-workflows-v1 --pattern "$ARCHIVE" --dir "$RUNNER_TEMP/bresci"; then
               break
             fi
-            if [ "$attempt" = 15 ]; then exit 1; fi
+            if [ "$attempt" = 60 ]; then exit 1; fi
             sleep 15
           done
           cd "$RUNNER_TEMP/bresci"

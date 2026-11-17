@@ -3,7 +3,7 @@ ENV MPLBACKEND=Agg OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONDONTWRITEBYTEC
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN apt-get update && apt-get install -y --no-install-recommends postgresql-15 build-essential libcurl4 && useradd --uid 1000 --no-create-home scientist && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-15 build-essential libcurl4 && useradd --uid 1000 --no-create-home scientist && useradd --uid 1001 --no-create-home ci-scientist && rm -rf /var/lib/apt/lists/*
 COPY scripts /app/scripts
 COPY data /app/data
 RUN mkdir -p /opt/dbgen /opt/mongodb && tar -xzf /app/data/inputs/dbgen.tar.gz -C /opt/dbgen --strip-components=1 && make -C /opt/dbgen -f makefile.suite CC=gcc DATABASE=ORACLE MACHINE=LINUX WORKLOAD=TPCH && tar -xzf /app/data/inputs/mongodb.tgz -C /opt/mongodb --strip-components=1

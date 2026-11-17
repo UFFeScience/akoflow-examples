@@ -1,0 +1,9 @@
+{
+  "showcase": "trp-tcga-brca",
+  "status": "success",
+  "artifacts": [
+    "stage-06.tar.gz",
+    "scientific-validation.json",
+    "network-summary.png"
+  ]
+}

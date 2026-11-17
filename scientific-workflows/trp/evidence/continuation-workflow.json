@@ -1,0 +1,51 @@
+{
+  "name": "trp-tcga-brca-continuation",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "akoflow-local/trp:workload",
+    "activities": [
+      {
+        "name": "interaction-inference",
+        "runtime": "trp-local",
+        "cpuLimit": "2",
+        "memoryLimit": "12Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/resume.py",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "network-construction",
+        "runtime": "trp-local",
+        "cpuLimit": "2",
+        "memoryLimit": "12Gi",
+        "dependsOn": [
+          "interaction-inference"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "network-construction",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "interaction-inference",
+        "consumerActivity": "network-construction",
+        "logicalName": "stage-05.tar.gz",
+        "sizeBytes": 5000000000
+      }
+    ]
+  }
+}

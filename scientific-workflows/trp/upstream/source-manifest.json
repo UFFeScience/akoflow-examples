@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/LIS-Unicamp/pan-cancer-analysis",
+  "commit": "914e8f0b60a8ec5c7df2cedf73b482c183b9aa2b",
+  "files": {
+    "config.py": "bcf600876ad285c313a228ea903508f047d3003da65b48e80a8c12803d1d3348",
+    "notebooks/01_metadata-selective-access.ipynb": "a253d42c806abb004e99c169fc27ce761c856e1b3a71e04d3b666f2c6ed9ee7e",
+    "notebooks/02_metadata-filtering.ipynb": "d471729c24bccc0c7a6971952cf5afedc19e2fc3af23204b372b80a41a56e891",
+    "notebooks/03_expression-retrieval-and-aggregation.ipynb": "b7a466d0ca52531f2078b739a833552558d126744b42e9e144fc2982682ab0cf",
+    "notebooks/04_molecule-filtering-by-expression.ipynb": "3e588bbb1245d9f3985e4c6d2f9ebbd593a731fcfcb9be75e4fcbc49e422d967",
+    "notebooks/05_interaction-inference.ipynb": "3d80904d3f96555dd07dd163d9a925e305b1ebb5daf03706d790dee322a33f5f",
+    "notebooks/06_network-construction.ipynb": "fde9e69154bd08159a2532e5110caeb9df34ef78a4460a344a7c33c80f16e907",
+    "requirements.txt": "e708ea1997d557a0582fd19ce07f66b5c928a0e8ad221ed955d24865736508e2"
+  }
+}

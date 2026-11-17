@@ -1,0 +1,54 @@
+[
+  {
+    "artifact": "aggregated-mrna-raw-reads.csv",
+    "computedShape": [
+      19962,
+      88
+    ],
+    "referenceShape": [
+      19962,
+      88
+    ],
+    "sameLabels": true,
+    "valuesMatch": true
+  },
+  {
+    "artifact": "aggregated-mirna-normalized-reads.csv",
+    "computedShape": [
+      1919,
+      87
+    ],
+    "referenceShape": [
+      1919,
+      87
+    ],
+    "sameLabels": true,
+    "valuesMatch": true
+  },
+  {
+    "artifact": "aggregated-mrna-normalized-reads.csv",
+    "computedShape": [
+      19962,
+      88
+    ],
+    "referenceShape": [
+      19962,
+      88
+    ],
+    "sameLabels": true,
+    "valuesMatch": true
+  },
+  {
+    "artifact": "aggregated-mirna-raw-reads.csv",
+    "computedShape": [
+      1919,
+      87
+    ],
+    "referenceShape": [
+      1919,
+      87
+    ],
+    "sameLabels": true,
+    "valuesMatch": true
+  }
+]

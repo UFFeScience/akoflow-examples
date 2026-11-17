@@ -1,0 +1,42 @@
+environment:
+  id: trp
+  name: trp local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: trp-v1
+  environmentId: trp
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: trp-v1
+runtimes:
+  - environmentVersionId: trp-v1
+    id: trp-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: trp-local-docker
+    environmentVersionId: trp-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 2
+    cpuCapacity: 2
+    memoryBytes: 17179869184
+    storageBytes: 42949672960
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: trp-local-docker, runtimeId: trp-local, enabled: true}

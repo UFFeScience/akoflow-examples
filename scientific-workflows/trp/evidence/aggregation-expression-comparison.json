@@ -1,0 +1,293 @@
+{
+  "comparisonOnlyAfterComputation": true,
+  "rtol": 1e-12,
+  "atol": 1e-12,
+  "artifacts": [
+    {
+      "artifact": "interim/basal-like/aggregated-mrna-raw-reads.csv",
+      "computedShape": [
+        19962,
+        88
+      ],
+      "referenceShape": [
+        19962,
+        88
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/basal-like/aggregated-mirna-normalized-reads.csv",
+      "computedShape": [
+        1919,
+        87
+      ],
+      "referenceShape": [
+        1919,
+        87
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/basal-like/aggregated-mrna-normalized-reads.csv",
+      "computedShape": [
+        19962,
+        88
+      ],
+      "referenceShape": [
+        19962,
+        88
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/basal-like/aggregated-mirna-raw-reads.csv",
+      "computedShape": [
+        1919,
+        87
+      ],
+      "referenceShape": [
+        1919,
+        87
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/normal/aggregated-mrna-raw-reads.csv",
+      "computedShape": [
+        19962,
+        57
+      ],
+      "referenceShape": [
+        19962,
+        57
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/normal/aggregated-mirna-normalized-reads.csv",
+      "computedShape": [
+        1631,
+        56
+      ],
+      "referenceShape": [
+        1631,
+        56
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/normal/aggregated-mrna-normalized-reads.csv",
+      "computedShape": [
+        19962,
+        57
+      ],
+      "referenceShape": [
+        19962,
+        57
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/normal/aggregated-mirna-raw-reads.csv",
+      "computedShape": [
+        1631,
+        56
+      ],
+      "referenceShape": [
+        1631,
+        56
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/her2-enriched/aggregated-mrna-raw-reads.csv",
+      "computedShape": [
+        19962,
+        57
+      ],
+      "referenceShape": [
+        19962,
+        57
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/her2-enriched/aggregated-mirna-normalized-reads.csv",
+      "computedShape": [
+        1754,
+        56
+      ],
+      "referenceShape": [
+        1754,
+        56
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/her2-enriched/aggregated-mrna-normalized-reads.csv",
+      "computedShape": [
+        19962,
+        57
+      ],
+      "referenceShape": [
+        19962,
+        57
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/her2-enriched/aggregated-mirna-raw-reads.csv",
+      "computedShape": [
+        1754,
+        56
+      ],
+      "referenceShape": [
+        1754,
+        56
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-b/aggregated-mrna-raw-reads.csv",
+      "computedShape": [
+        19962,
+        121
+      ],
+      "referenceShape": [
+        19962,
+        121
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-b/aggregated-mirna-normalized-reads.csv",
+      "computedShape": [
+        1868,
+        120
+      ],
+      "referenceShape": [
+        1868,
+        120
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-b/aggregated-mrna-normalized-reads.csv",
+      "computedShape": [
+        19962,
+        121
+      ],
+      "referenceShape": [
+        19962,
+        121
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-b/aggregated-mirna-raw-reads.csv",
+      "computedShape": [
+        1868,
+        120
+      ],
+      "referenceShape": [
+        1868,
+        120
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-a/aggregated-mrna-raw-reads.csv",
+      "computedShape": [
+        19962,
+        224
+      ],
+      "referenceShape": [
+        19962,
+        224
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-a/aggregated-mirna-normalized-reads.csv",
+      "computedShape": [
+        1993,
+        223
+      ],
+      "referenceShape": [
+        1993,
+        223
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-a/aggregated-mrna-normalized-reads.csv",
+      "computedShape": [
+        19962,
+        224
+      ],
+      "referenceShape": [
+        19962,
+        224
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "interim/luminal-a/aggregated-mirna-raw-reads.csv",
+      "computedShape": [
+        1993,
+        223
+      ],
+      "referenceShape": [
+        1993,
+        223
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "processed/expressed-mirnas.csv",
+      "computedShape": [
+        2128,
+        1
+      ],
+      "referenceShape": [
+        2128,
+        1
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    },
+    {
+      "artifact": "processed/expressed-mrnas.csv",
+      "computedShape": [
+        19962,
+        2
+      ],
+      "referenceShape": [
+        19962,
+        2
+      ],
+      "sameLabels": true,
+      "valuesMatch": true
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "referenceUsedOnlyAfterComputation": true,
+  "upstreamCommit": "914e8f0b60a8ec5c7df2cedf73b482c183b9aa2b",
+  "rtol": 1e-10,
+  "atol": 1e-12,
+  "allMatch": true,
+  "artifacts": [
+    {
+      "artifact": "processed/networks/basal-like/association-network-edges.csv",
+      "computedRows": 13,
+      "referenceRows": 13,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/basal-like/association-network-nodes.csv",
+      "computedRows": 19,
+      "referenceRows": 19,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/basal-like/inferred-associations.csv",
+      "computedRows": 1653,
+      "referenceRows": 1653,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/basal-like/inferred-interactions.csv",
+      "computedRows": 41169,
+      "referenceRows": 41169,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/basal-like/interaction-network-edges.csv",
+      "computedRows": 296,
+      "referenceRows": 296,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/basal-like/interaction-network-nodes.csv",
+      "computedRows": 291,
+      "referenceRows": 291,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/association-network-edges.csv",
+      "computedRows": 0,
+      "referenceRows": 0,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/association-network-nodes.csv",
+      "computedRows": 0,
+      "referenceRows": 0,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/inferred-associations.csv",
+      "computedRows": 36,
+      "referenceRows": 36,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/inferred-interactions.csv",
+      "computedRows": 41169,
+      "referenceRows": 41169,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/interaction-network-edges.csv",
+      "computedRows": 13,
+      "referenceRows": 13,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/her2-enriched/interaction-network-nodes.csv",
+      "computedRows": 22,
+      "referenceRows": 22,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/association-network-edges.csv",
+      "computedRows": 11,
+      "referenceRows": 11,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/association-network-nodes.csv",
+      "computedRows": 17,
+      "referenceRows": 17,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/inferred-associations.csv",
+      "computedRows": 946,
+      "referenceRows": 946,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/inferred-interactions.csv",
+      "computedRows": 41169,
+      "referenceRows": 41169,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/interaction-network-edges.csv",
+      "computedRows": 259,
+      "referenceRows": 259,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-a/interaction-network-nodes.csv",
+      "computedRows": 251,
+      "referenceRows": 251,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/association-network-edges.csv",
+      "computedRows": 32,
+      "referenceRows": 32,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/association-network-nodes.csv",
+      "computedRows": 35,
+      "referenceRows": 35,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/inferred-associations.csv",
+      "computedRows": 5460,
+      "referenceRows": 5460,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/inferred-interactions.csv",
+      "computedRows": 41169,
+      "referenceRows": 41169,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/interaction-network-edges.csv",
+      "computedRows": 584,
+      "referenceRows": 584,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/luminal-b/interaction-network-nodes.csv",
+      "computedRows": 559,
+      "referenceRows": 559,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/association-network-edges.csv",
+      "computedRows": 48,
+      "referenceRows": 48,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/association-network-nodes.csv",
+      "computedRows": 61,
+      "referenceRows": 61,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/inferred-associations.csv",
+      "computedRows": 13695,
+      "referenceRows": 13695,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/inferred-interactions.csv",
+      "computedRows": 41169,
+      "referenceRows": 41169,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/interaction-network-edges.csv",
+      "computedRows": 5072,
+      "referenceRows": 5072,
+      "valuesMatch": true,
+      "difference": null
+    },
+    {
+      "artifact": "processed/networks/normal/interaction-network-nodes.csv",
+      "computedRows": 2915,
+      "referenceRows": 2915,
+      "valuesMatch": true,
+      "difference": null
+    }
+  ]
+}

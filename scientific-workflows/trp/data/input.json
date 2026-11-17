@@ -1,0 +1,37 @@
+{
+  "slug": "trp-tcga-brca",
+  "title": "TRP \u2014 TCGA-BRCA microRNA networks",
+  "validationMode": "local-workload",
+  "stages": [
+    "metadata-access",
+    "metadata-filtering",
+    "expression-aggregation",
+    "expression-filtering",
+    "interaction-inference",
+    "network-construction"
+  ],
+  "dependencies": {
+    "metadata-access": [],
+    "metadata-filtering": [
+      "metadata-access"
+    ],
+    "expression-aggregation": [
+      "metadata-filtering"
+    ],
+    "expression-filtering": [
+      "expression-aggregation"
+    ],
+    "interaction-inference": [
+      "expression-filtering"
+    ],
+    "network-construction": [
+      "interaction-inference"
+    ]
+  },
+  "artifacts": [
+    "stage-06.tar.gz",
+    "scientific-validation.json",
+    "network-summary.png"
+  ],
+  "ciValidation": "image-and-contract"
+}

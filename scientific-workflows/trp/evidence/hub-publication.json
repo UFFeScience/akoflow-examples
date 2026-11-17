@@ -1,0 +1,27 @@
+{
+  "publicationId": "1bd74e89-e564-45a5-9a3e-5d877fc660aa",
+  "url": "https://hub.akoflow.com/u/ovvesley/trp-tcga-brca",
+  "visibility": "public",
+  "account": "ovvesley",
+  "transport": "Existing authenticated daemon Hub connection",
+  "fullWorkflow": {
+    "version": 1,
+    "activityCount": 6,
+    "url": "https://hub.akoflow.com/u/ovvesley/trp-tcga-brca/versions/1",
+    "experimentId": "dfc46810-2a3c-4ffc-a3f5-cce402719139",
+    "originalRunStatus": "failed",
+    "originalCompletedActivityCount": 4
+  },
+  "completedContinuation": {
+    "version": 2,
+    "activityCount": 2,
+    "url": "https://hub.akoflow.com/u/ovvesley/trp-tcga-brca/results/2",
+    "experimentId": "6cb49daf-55a6-4c0f-8f4c-65c66cac9c43",
+    "status": "completed",
+    "completedActivityCount": 2
+  },
+  "scientificStagesCompletedAcrossBothRuns": 6,
+  "publicAnonymousHTTPVerified": true,
+  "datasetsUploaded": false,
+  "dockerImagesUploaded": false
+}

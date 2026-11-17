@@ -1,0 +1,4 @@
+{
+  "image": "ghcr.io/uffescience/akoflow-examples/trp:v1",
+  "platform": "linux/amd64"
+}

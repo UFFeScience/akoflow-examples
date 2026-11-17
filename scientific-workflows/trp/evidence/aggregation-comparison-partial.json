@@ -1,0 +1,33 @@
+{
+  "purpose": "Compare newly computed output against upstream only after computation, never as input",
+  "artifacts": [
+    {
+      "group": "basal-like",
+      "artifact": "aggregated-mrna-raw-reads.csv",
+      "computedSHA256": "668bebdd610326a0e7e977988457f7dbb8e7f5533ed2c0356698379c5331c78f",
+      "upstreamSHA256": "3459c1f9bbf6395b191e7518e40b67645ccc664cfce1537890b24daad22b17a3",
+      "byteIdentical": false
+    },
+    {
+      "group": "basal-like",
+      "artifact": "aggregated-mirna-normalized-reads.csv",
+      "computedSHA256": "f59250af7ccc1af2281ed59fe03d3c6c54713ae12f0935b1762e684ac4243960",
+      "upstreamSHA256": "f49bb86ed64aa39aab66f8dedb71071355902a5172122cc61daa49256bca0990",
+      "byteIdentical": false
+    },
+    {
+      "group": "basal-like",
+      "artifact": "aggregated-mrna-normalized-reads.csv",
+      "computedSHA256": "fca8c49754a9165f070de9b41b1dda9d66c1679a26719e4d281629598a0a96a2",
+      "upstreamSHA256": "1754774cf949cf3345002e900f8340dbdee2b40c457303983765d871aa5bfff5",
+      "byteIdentical": false
+    },
+    {
+      "group": "basal-like",
+      "artifact": "aggregated-mirna-raw-reads.csv",
+      "computedSHA256": "e0058ded5b1f58d43c32a3381039318dd24a729afff172bf54004453005dc97b",
+      "upstreamSHA256": "e1568e68001fdd66cb2d4c36cc0f773b533404764905f3669c55576604ce5e8e",
+      "byteIdentical": false
+    }
+  ]
+}

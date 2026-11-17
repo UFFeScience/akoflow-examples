@@ -1,0 +1,71 @@
+name: Publish exact BreSci images to GHCR
+on:
+  push:
+    branches: [AKO-46]
+    paths:
+      - .github/workflows/bresci-images.yml
+      - bresci-registry-images.json
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      images: ${{ steps.images.outputs.value }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: images
+        run: echo "value=$(jq -c '{include:.images}' bresci-registry-images.json)" >> "$GITHUB_OUTPUT"
+  publish:
+    needs: matrix
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix.outputs.images) }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      ARCHIVE: ${{ matrix.archive }}
+      ARCHIVE_SHA256: ${{ matrix.sha256 }}
+      IMAGE_DIGEST: ${{ matrix.imageId }}
+      IMAGE_SOURCE_TAG: ${{ matrix.sourceTag }}
+      IMAGE_REPOSITORY: ${{ matrix.repository }}
+      IMAGE_TAG: ${{ matrix.tag }}
+    steps:
+      - name: Acquire exact measured OCI archive
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/bresci"
+          for attempt in $(seq 1 15); do
+            if gh release download bresci-workflows-v1 --pattern "$ARCHIVE" --dir "$RUNNER_TEMP/bresci"; then
+              break
+            fi
+            if [ "$attempt" = 15 ]; then exit 1; fi
+            sleep 15
+          done
+          cd "$RUNNER_TEMP/bresci"
+          echo "$ARCHIVE_SHA256  $ARCHIVE" | sha256sum --check
+          gzip -dc "$ARCHIVE" > image.tar
+      - name: Install OCI copy tool
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends skopeo
+      - name: Push original manifest and blobs without rebuilding
+        shell: bash
+        run: |
+          set -euo pipefail
+          export REGISTRY_AUTH_FILE="$RUNNER_TEMP/registry-auth.json"
+          printf '%s' "$GH_TOKEN" | skopeo login --username "$GITHUB_ACTOR" --password-stdin ghcr.io
+          skopeo copy --all --preserve-digests "oci-archive:$RUNNER_TEMP/bresci/image.tar:$IMAGE_SOURCE_TAG" "docker://$IMAGE_REPOSITORY:$IMAGE_TAG"
+          skopeo inspect --raw "docker://$IMAGE_REPOSITORY:$IMAGE_TAG" > "$RUNNER_TEMP/bresci/remote-manifest.json"
+          echo "${IMAGE_DIGEST#sha256:}  $RUNNER_TEMP/bresci/remote-manifest.json" | sha256sum --check
+          printf '{"auths":{}}' > "$RUNNER_TEMP/anonymous-auth.json"
+          skopeo inspect --authfile "$RUNNER_TEMP/anonymous-auth.json" --raw "docker://$IMAGE_REPOSITORY@$IMAGE_DIGEST" > "$RUNNER_TEMP/bresci/public-manifest.json"
+          echo "${IMAGE_DIGEST#sha256:}  $RUNNER_TEMP/bresci/public-manifest.json" | sha256sum --check
+          jq -n --arg slug '${{ matrix.slug }}' --arg image "$IMAGE_REPOSITORY@$IMAGE_DIGEST" --arg archiveSha256 "$ARCHIVE_SHA256" '{slug:$slug,image:$image,archiveSha256:$archiveSha256,originalManifestPreserved:true,anonymousPullVerified:true}' > "$RUNNER_TEMP/bresci/registry-receipt.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ghcr-${{ matrix.slug }}
+          path: ${{ runner.temp }}/bresci/registry-receipt.json

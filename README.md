@@ -101,7 +101,19 @@ commit to that central workflow. Runnable showcases are discovered from their
 `docker/Dockerfile` and executable `run.sh`; adding a showcase does not require
 editing a duplicated matrix.
 
-After a push to `main`, CI publishes validated showcase images to GHCR and
+Automatic PR and push runs select only showcases whose own directories changed.
+A PR compares against its merge base; a push compares against the previous commit
+of that push, including every commit in a multi-commit push. Changes outside the
+showcase directories run the shared tooling checks without executing workloads
+or rebuilding images. Renames include both affected directories; removed showcases
+are skipped. Superseded runs of the same PR are cancelled.
+
+Use **Actions → Example checks → Run workflow → all_examples** for an explicit
+full-catalog run. Without that option, a manual run selects changes in the latest
+commit. The reusable workflow also accepts `examples_base_ref` to select another
+comparison range.
+
+After a push to `main`, CI publishes only the selected validated showcase images to GHCR and
 notifies the AkôFlow documentation workflow. Configure the repository secret
 `AKOFLOW_DOCS_DISPATCH_TOKEN` with access to dispatch workflows in
 `UFFeScience/akoflow`. If the secret is temporarily unavailable, the daily

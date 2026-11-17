@@ -5,6 +5,16 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      all_examples:
+        description: Explicitly validate and build every example.
+        required: false
+        type: boolean
+        default: false
+
+concurrency:
+  group: examples-${{ github.event_name }}-${{ github.event.pull_request.number || github.sha }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 permissions:
   contents: read
@@ -28,6 +38,8 @@ jobs:
     uses: UFFeScience/akoflow/.github/workflows/examples-ci.yml@main
     with:
       examples_ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      examples_base_ref: ${{ github.event.pull_request.base.sha || github.event.before || format('{0}^', github.sha) }}
+      all_examples: ${{ inputs.all_examples || false }}
       publish: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
     permissions:
       contents: read
@@ -35,7 +47,8 @@ jobs:
 
   notify-documentation:
     name: Notify AkôFlow documentation
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: checks
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && needs.checks.outputs.has_examples == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Dispatch documentation rebuild

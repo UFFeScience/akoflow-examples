@@ -1,0 +1,59 @@
+{
+  "environment": {
+    "id": "gawa-four",
+    "name": "GAWA four-tile execution",
+    "status": "ready"
+  },
+  "version": {
+    "id": "gawa-four-v1",
+    "environmentId": "gawa-four",
+    "version": 1,
+    "status": "published",
+    "networkModel": "local",
+    "interferenceModel": "none",
+    "costModel": "free",
+    "configurationHash": "gawa-four-v1"
+  },
+  "runtimes": [
+    {
+      "environmentVersionId": "gawa-four-v1",
+      "id": "gawa-four-local",
+      "name": "Local Docker host",
+      "driver": "local",
+      "mode": "execution",
+      "role": "compute",
+      "capabilities": {
+        "batch": true,
+        "container": true
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "gawa-four-host",
+      "environmentVersionId": "gawa-four-v1",
+      "type": "machine",
+      "name": "GAWA local host",
+      "providerId": "local-docker",
+      "cpuCores": 4,
+      "cpuCapacity": 4,
+      "memoryBytes": 17179869184,
+      "storageBytes": 21474836480,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "bootOverheadSeconds": 0,
+      "containerOverheadSeconds": 0,
+      "schedulable": true
+    }
+  ],
+  "storages": [],
+  "connections": [],
+  "activityResourceProfiles": [],
+  "resourceRuntimeBindings": [
+    {
+      "resourceId": "gawa-four-host",
+      "runtimeId": "gawa-four-local",
+      "enabled": true
+    }
+  ]
+}

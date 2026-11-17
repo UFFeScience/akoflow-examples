@@ -1,0 +1,36 @@
+name: Verify Eidolon Hub import on ARM64
+on:
+  push:
+    branches: [AKO-289]
+    paths: [.github/workflows/eidolon-arm64-verification.yml, tools/eidolon-arm64/verify.py]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start the released ARM64 daemon
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          test "$(uname -m)" = aarch64
+          gh release download v1.0.25 --repo UFFeScience/akoflow --pattern 'akoflow-daemon-*-linux-arm64.tar' --pattern 'akoflow-runtime-*-linux-arm64.sha256'
+          grep daemon akoflow-runtime-v1.0.25-linux-arm64.sha256 | sha256sum --check
+          docker load -i akoflow-daemon-v1.0.25-linux-arm64.tar
+          token=$(openssl rand -hex 32)
+          echo "::add-mask::$token"
+          echo "AKOFLOW_API_TOKEN=$token" >> "$GITHUB_ENV"
+          docker run -d --name akoflow -e AKOFLOW_API_TOKEN="$token" -e AKOFLOW_DATABASE_PATH=/app/storage/database.db -e AKOFLOW_HTTP_ADDRESS=0.0.0.0:18080 -e AKOFLOW_HUB_URL=https://hub.akoflow.com -e AKOFLOW_LOCAL_WORKSPACE_ROOT=/tmp/akoflow/workspace -v /tmp/akoflow/workspace:/tmp/akoflow/workspace -v /var/run/docker.sock:/var/run/docker.sock -p 127.0.0.1:18080:18080 akoflow/daemon:v1.0.25
+          curl --retry 30 --retry-all-errors --retry-delay 2 -fsS http://127.0.0.1:18080/akoflow-api/preflight/ >/dev/null
+      - name: Import the published workflow and run all activities
+        run: |
+          python3 tools/eidolon-arm64/verify.py
+          docker image inspect ghcr.io/uffescience/akoflow-examples/eidolon@sha256:c5a99b3bc4d66bf213446a9b09e0e40c21866ec9d826c278e0aed46cc582bc7f --format '{{.Architecture}}' | grep -Fx arm64
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eidolon-arm64-evidence
+          path: eidolon-*.json

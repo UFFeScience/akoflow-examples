@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "findings": {
+    "series": 4,
+    "detectorRuns": 8,
+    "totalInputPoints": 16128,
+    "evaluation": "held-out point-wise; Python adaptation"
+  },
+  "provenance": {
+    "slug": "united",
+    "title": "UniTED — labeled time-series event detection",
+    "authors": [
+      "Janio Lima",
+      "Hélio Castro",
+      "Luiz Oliveira",
+      "Ellen Paixão",
+      "Lais Baroni",
+      "Rebecca Salles",
+      "Ricardo Vargas",
+      "Eduardo Ogasawara"
+    ],
+    "conference": "XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD",
+    "article": "https://sol.sbc.org.br/index.php/bresci/article/view/36901",
+    "source": "https://github.com/cefet-rj-dal/united",
+    "scope": "Four complete labeled NAB artificialWithAnomaly source series curated by UniTED, with no point subsampling. ARIMA(2,0,2) and a causal rolling-residual baseline are Python adapters; they are not the original R/Harbinger implementation and do not claim paper-metric equivalence. Detectors fit thresholds on the first 25% and are scored on the remaining observations with point-wise labels; no temporal-tolerance NAB score is claimed. These artificial signals are original benchmark inputs, not locally generated substitutes. Original upstream benchmark: https://github.com/numenta/NAB. UniTED code: MIT; upstream dataset conditions remain applicable.",
+    "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+  },
+  "acquisition": {
+    "files": [
+      {
+        "path": "art_daily_flatmiddle.RData",
+        "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_flatmiddle.RData",
+        "sha256": "1432b25ee016df46c20857e3e3c45af0ff4a65bc9873edb7de473e16bfb4e485",
+        "bytes": 28895
+      },
+      {
+        "path": "art_daily_jumpsdown.RData",
+        "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsdown.RData",
+        "sha256": "6babdf95c152129987f738a9d89bd57f90d6bb40098163d0e7d2d7181ff08095",
+        "bytes": 30602
+      },
+      {
+        "path": "art_daily_jumpsup.RData",
+        "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsup.RData",
+        "sha256": "b06ecb354cbacfd6342c6e8da43ae628525d46ee2fab93c43cc31b953ffdbc58",
+        "bytes": 30612
+      },
+      {
+        "path": "art_daily_nojump.RData",
+        "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_nojump.RData",
+        "sha256": "5bdc8b198e47e8adc6f0bda4a3576c22e277a22f66286d1b967fbaf21d02ceca",
+        "bytes": 30567
+      }
+    ]
+  }
+}

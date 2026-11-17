@@ -1,0 +1,42 @@
+environment:
+  id: eidolon-local
+  name: eidolon-local local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: eidolon-local-v1
+  environmentId: eidolon-local
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: eidolon-local-v1
+runtimes:
+  - environmentVersionId: eidolon-local-v1
+    id: eidolon-local-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: eidolon-local-local-docker
+    environmentVersionId: eidolon-local-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 8589934592
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: eidolon-local-local-docker, runtimeId: eidolon-local-local, enabled: true}

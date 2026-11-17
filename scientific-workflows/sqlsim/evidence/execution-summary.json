@@ -1,0 +1,8 @@
+{
+  "runId": "sqlsim-local-164a71f419-run-20261117t150646.625598270",
+  "imageId": "sha256:fdf6a614d119ddf5b9b712ea9f4a7d61fbf280fe0ae80d5be6dbf55c742d573a",
+  "completedActivities": 4,
+  "observedMakespanSeconds": 15.898435115814209,
+  "peakOverlappingActivities": 2,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

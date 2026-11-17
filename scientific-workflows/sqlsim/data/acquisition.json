@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "wdbc.data",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/wdbc.data",
+      "sha256": "d606af411f3e5be8a317a5a8b652b425aaf0ff38ca683d5327ffff94c3695f4a",
+      "bytes": 124103
+    },
+    {
+      "path": "data_preparation.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/data_preparation.sql",
+      "sha256": "ca5be806e5538c64c1102831dfeb31fe23e45295d199d66d16df7e2433fd876f",
+      "bytes": 3400
+    },
+    {
+      "path": "functions.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/main.sql",
+      "sha256": "c480f237b511b2f26ea98c74b5f0154157eb1416766501d19ff7641ca93bbba5",
+      "bytes": 3561
+    },
+    {
+      "path": "queries.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/main.sql",
+      "sha256": "acfbcd3532fa8f7d32f201d4db8341694bae9c878272ddc71d63b5cde050fe05",
+      "bytes": 761
+    }
+  ]
+}

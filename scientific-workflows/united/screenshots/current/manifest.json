@@ -1,0 +1,25 @@
+{
+  "runId": "united-local-e796844aa5-run-20261117t145730.223156114",
+  "image": "akoflow-local/united:local-3ccc239aea4aedf2",
+  "imageId": "sha256:3ccc239aea4aedf2578d9f3895d5cda97472eff8bc6c51a456798070a0ed8192",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "detections.png": "2ed2af64e5318fbb9d7f8161156e89095f49a8c561f7413531f2089291f1685a",
+    "metrics.png": "7ac23c05fc7685ea1ca4489962ef074a4593f5810208ce516e448187484afd9c",
+    "execution-timeline.png": "c672c575ed671ccbaf8b1bd98e6a8c84c9969912ce0d5677f5dcac01321b7116"
+  },
+  "findings": {
+    "series": 4,
+    "detectorRuns": 8,
+    "totalInputPoints": 16128,
+    "evaluation": "held-out point-wise; Python adaptation"
+  },
+  "executionSummary": {
+    "runId": "united-local-e796844aa5-run-20261117t145730.223156114",
+    "imageId": "sha256:3ccc239aea4aedf2578d9f3895d5cda97472eff8bc6c51a456798070a0ed8192",
+    "completedActivities": 10,
+    "observedMakespanSeconds": 16.608977794647217,
+    "peakOverlappingActivities": 3,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

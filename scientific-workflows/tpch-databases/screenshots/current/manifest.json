@@ -1,0 +1,32 @@
+{
+  "runId": "tpch-databases-local-5dff16106f-run-20261117t152506.699433105",
+  "image": "akoflow-local/tpch-databases:local-9bfa73e297c7e7dd",
+  "imageId": "sha256:9bfa73e297c7e7ddbec9dfec7493e7c5373d8342392599374d0a37d59ad9459d",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "aligned-aggregates.png": "4c6d21151096bf70c6ab7bededc82c17df64f968803cac75d9da5ed8d0b91fb0",
+    "database-comparison.png": "59ed3dc845c171417cd03d55aa29d03c8d33f69694f31e2f3d68240d2852f1b2",
+    "execution-timeline.png": "81e0abd864c5b45937caf01c18975d9bf896cca8cd25789ddc261d4a53d1b0d3"
+  },
+  "findings": {
+    "query": "TPC-H Q1",
+    "scaleFactor": 0.01,
+    "originalMatchedRows": {
+      "postgres": 59307,
+      "mongo": 60175
+    },
+    "originalSourceMismatchObserved": true,
+    "alignedAllNumericAggregatesAgree": true,
+    "isolatedDatabaseRuns": 8,
+    "originalSqlCutoff": "1998-09-02",
+    "originalMongoCutoff": "1998-12-01"
+  },
+  "executionSummary": {
+    "runId": "tpch-databases-local-5dff16106f-run-20261117t152506.699433105",
+    "imageId": "sha256:9bfa73e297c7e7ddbec9dfec7493e7c5373d8342392599374d0a37d59ad9459d",
+    "completedActivities": 10,
+    "observedMakespanSeconds": 32.59038686752319,
+    "peakOverlappingActivities": 3,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

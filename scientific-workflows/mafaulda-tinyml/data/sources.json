@@ -1,0 +1,13 @@
+{
+  "notebook": "https://raw.githubusercontent.com/candidoalfilho/MAFAULDA_TINY_ML_ANALYSIS/4595b949ebaf019f5fd3ad3821e71156c3f3741d/mafaulda_tinyml_bresci2026.ipynb",
+  "datasetBase": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/",
+  "classes": [
+    "normal",
+    "horizontal-misalignment",
+    "vertical-misalignment",
+    "imbalance",
+    "underhang",
+    "overhang"
+  ],
+  "recordingsPerClass": 5
+}

@@ -1,0 +1,167 @@
+name: eidolon
+spec:
+  namespace: akoflow-examples
+  image: akoflow-local/eidolon:workload
+  activities:
+  - name: validate-inputs
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - validate-inputs
+      - --output
+      - .
+  - name: etl-climate
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - etl-climate
+      - --output
+      - .
+  - name: mini-climate
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - etl-climate
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - mini-climate
+      - --output
+      - .
+  - name: etl-bioenergy
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - etl-bioenergy
+      - --output
+      - .
+  - name: mini-bioenergy
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - etl-bioenergy
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - mini-bioenergy
+      - --output
+      - .
+  - name: etl-emissions
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - etl-emissions
+      - --output
+      - .
+  - name: mini-emissions
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - etl-emissions
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - mini-emissions
+      - --output
+      - .
+  - name: compare
+    runtime: eidolon-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - mini-climate
+    - mini-bioenergy
+    - mini-emissions
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - compare
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: validate-inputs
+    consumerActivity: etl-climate
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: etl-climate
+    consumerActivity: mini-climate
+    logicalName: climate.RData
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: etl-bioenergy
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: etl-bioenergy
+    consumerActivity: mini-bioenergy
+    logicalName: bioenergy.RData
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: etl-emissions
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: etl-emissions
+    consumerActivity: mini-emissions
+    logicalName: emissions.RData
+    sizeBytes: 10000000
+  - producerActivity: mini-climate
+    consumerActivity: compare
+    logicalName: climate.csv
+    sizeBytes: 10000000
+  - producerActivity: mini-climate
+    consumerActivity: compare
+    logicalName: climate-validation.json
+    sizeBytes: 10000000
+  - producerActivity: mini-bioenergy
+    consumerActivity: compare
+    logicalName: bioenergy.csv
+    sizeBytes: 10000000
+  - producerActivity: mini-bioenergy
+    consumerActivity: compare
+    logicalName: bioenergy-validation.json
+    sizeBytes: 10000000
+  - producerActivity: mini-emissions
+    consumerActivity: compare
+    logicalName: emissions.csv
+    sizeBytes: 10000000
+  - producerActivity: mini-emissions
+    consumerActivity: compare
+    logicalName: emissions-validation.json
+    sizeBytes: 10000000

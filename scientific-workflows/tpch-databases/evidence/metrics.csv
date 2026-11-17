@@ -1,0 +1,9 @@
+stage,engine,mode,indexed,medianQueryMs,matchedRows
+postgres-original-plain,postgres,original,False,36.56037896871567,59307
+postgres-original-indexed,postgres,original,True,50.60577602125704,59307
+postgres-aligned-plain,postgres,aligned,False,74.66737111099064,59307
+postgres-aligned-indexed,postgres,aligned,True,20.994374062865973,59307
+mongo-original-plain,mongo,original,False,122.37111292779446,60175
+mongo-original-indexed,mongo,original,True,124.81195898726583,60175
+mongo-aligned-plain,mongo,aligned,False,120.4406451433897,59307
+mongo-aligned-indexed,mongo,aligned,True,116.27641809172928,59307

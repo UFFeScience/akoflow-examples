@@ -1,0 +1,3 @@
+id: tpch-databases-local-scope
+name: tpch-databases-local local scope
+environmentVersionIds: [tpch-databases-local-v1]

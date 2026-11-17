@@ -1,0 +1,726 @@
+{
+  "name": "mafaulda-tinyml",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "akoflow-local/mafaulda-tinyml:workload",
+    "activities": [
+      {
+        "name": "validate-inputs",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "validate-inputs",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-0",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-0",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-1",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-1",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-2",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-2",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-3",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-3",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-4",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-4",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "features-5",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "features-5",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "merge-features",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "features-0",
+          "features-1",
+          "features-2",
+          "features-3",
+          "features-4",
+          "features-5"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "merge-features",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-mlp",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "merge-features"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train-mlp",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-cnn",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "merge-features"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train-cnn",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-lstm",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "merge-features"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train-lstm",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "train-rf",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "merge-features"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "train-rf",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mlp-fp32",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-mlp"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mlp-fp32",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mlp-fp16",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-mlp"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mlp-fp16",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mlp-int8",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-mlp"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mlp-int8",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "cnn-fp32",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-cnn"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "cnn-fp32",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "cnn-fp16",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-cnn"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "cnn-fp16",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "cnn-int8",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-cnn"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "cnn-int8",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "lstm-fp32",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-lstm"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "lstm-fp32",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "lstm-fp16",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-lstm"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "lstm-fp16",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "lstm-int8",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-lstm"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "lstm-int8",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "compare",
+        "runtime": "mafaulda-tinyml-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "train-mlp",
+          "train-cnn",
+          "train-lstm",
+          "train-rf",
+          "mlp-fp32",
+          "mlp-fp16",
+          "mlp-int8",
+          "cnn-fp32",
+          "cnn-fp16",
+          "cnn-int8",
+          "lstm-fp32",
+          "lstm-fp16",
+          "lstm-int8"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "compare",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-0",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-1",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-2",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-3",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-4",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "features-5",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-0",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-0.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-1",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-1.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-2",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-2.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-3",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-3.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-4",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-4.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "features-5",
+        "consumerActivity": "merge-features",
+        "logicalName": "features-5.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "merge-features",
+        "consumerActivity": "train-mlp",
+        "logicalName": "features.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "merge-features",
+        "consumerActivity": "train-cnn",
+        "logicalName": "features.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "merge-features",
+        "consumerActivity": "train-lstm",
+        "logicalName": "features.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "merge-features",
+        "consumerActivity": "train-rf",
+        "logicalName": "features.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-mlp",
+        "consumerActivity": "mlp-fp32",
+        "logicalName": "mlp-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-mlp",
+        "consumerActivity": "mlp-fp16",
+        "logicalName": "mlp-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-mlp",
+        "consumerActivity": "mlp-int8",
+        "logicalName": "mlp-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-cnn",
+        "consumerActivity": "cnn-fp32",
+        "logicalName": "cnn-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-cnn",
+        "consumerActivity": "cnn-fp16",
+        "logicalName": "cnn-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-cnn",
+        "consumerActivity": "cnn-int8",
+        "logicalName": "cnn-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-lstm",
+        "consumerActivity": "lstm-fp32",
+        "logicalName": "lstm-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-lstm",
+        "consumerActivity": "lstm-fp16",
+        "logicalName": "lstm-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-lstm",
+        "consumerActivity": "lstm-int8",
+        "logicalName": "lstm-model.zip",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-mlp",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-baseline.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-cnn",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-baseline.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-lstm",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-baseline.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "train-rf",
+        "consumerActivity": "compare",
+        "logicalName": "rf-baseline.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-fp32.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-fp32.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-fp16.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-fp16.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-int8",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-int8.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mlp-int8",
+        "consumerActivity": "compare",
+        "logicalName": "mlp-int8.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-fp32.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-fp32.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-fp16.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-fp16.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-int8",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-int8.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cnn-int8",
+        "consumerActivity": "compare",
+        "logicalName": "cnn-int8.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-fp32.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-fp32",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-fp32.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-fp16.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-fp16",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-fp16.tflite",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-int8",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-int8.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "lstm-int8",
+        "consumerActivity": "compare",
+        "logicalName": "lstm-int8.tflite",
+        "sizeBytes": 10000000
+      }
+    ]
+  }
+}

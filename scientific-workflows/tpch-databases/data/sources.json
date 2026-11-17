@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "path": "AvaliaMongoDB.py",
+      "url": "https://raw.githubusercontent.com/jnpavao/tpch_mongodb/680b36b32746df155f18620ee4e48d4a0f1eaf7a/AvaliaMongoDB.py"
+    },
+    {
+      "path": "AvaliaPostgreSQL.py",
+      "url": "https://raw.githubusercontent.com/jnpavao/tpch_mongodb/680b36b32746df155f18620ee4e48d4a0f1eaf7a/AvaliaPostgreSQL.py"
+    },
+    {
+      "path": "dbgen.tar.gz",
+      "url": "https://codeload.github.com/electrum/tpch-dbgen/tar.gz/32f1c1b92d1664dba542e927d23d86ffa57aa253"
+    },
+    {
+      "path": "mongodb.tgz",
+      "url": "https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian12-7.0.16.tgz",
+      "sha256": "073b4ffa712a7f74e1ad046e3c7dc8d7af8db550b329b5c75466c7ea43ec6d38"
+    }
+  ]
+}

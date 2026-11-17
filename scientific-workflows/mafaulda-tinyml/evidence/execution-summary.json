@@ -1,0 +1,8 @@
+{
+  "runId": "mafaulda-tinyml-local-351678315d-run-20261117t152055.178793114",
+  "imageId": "sha256:36dd0df262eb3cb373ef1cba2e824423aabf516e56e70b75ca62c1922978cc9e",
+  "completedActivities": 22,
+  "observedMakespanSeconds": 140.40111374855042,
+  "peakOverlappingActivities": 3,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

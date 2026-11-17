@@ -1,0 +1,8 @@
+{
+  "runId": "united-local-e796844aa5-run-20261117t145730.223156114",
+  "imageId": "sha256:3ccc239aea4aedf2578d9f3895d5cda97472eff8bc6c51a456798070a0ed8192",
+  "completedActivities": 10,
+  "observedMakespanSeconds": 16.608977794647217,
+  "peakOverlappingActivities": 3,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

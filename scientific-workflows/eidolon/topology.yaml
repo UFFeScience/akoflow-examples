@@ -1,0 +1,5 @@
+id: eidolon-local-topology
+name: eidolon-local local topology
+version: 1
+executionScopeId: eidolon-local-scope
+links: []

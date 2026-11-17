@@ -1,0 +1,216 @@
+name: united
+spec:
+  namespace: akoflow-examples
+  image: akoflow-local/united:workload
+  activities:
+  - name: validate-inputs
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - validate-inputs
+      - --output
+      - .
+  - name: art-daily-flatmiddle-arima
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-flatmiddle-arima
+      - --output
+      - .
+  - name: art-daily-flatmiddle-rolling
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-flatmiddle-rolling
+      - --output
+      - .
+  - name: art-daily-jumpsdown-arima
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-jumpsdown-arima
+      - --output
+      - .
+  - name: art-daily-jumpsdown-rolling
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-jumpsdown-rolling
+      - --output
+      - .
+  - name: art-daily-jumpsup-arima
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-jumpsup-arima
+      - --output
+      - .
+  - name: art-daily-jumpsup-rolling
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-jumpsup-rolling
+      - --output
+      - .
+  - name: art-daily-nojump-arima
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-nojump-arima
+      - --output
+      - .
+  - name: art-daily-nojump-rolling
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-inputs
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - art-daily-nojump-rolling
+      - --output
+      - .
+  - name: compare
+    runtime: united-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - art-daily-flatmiddle-arima
+    - art-daily-flatmiddle-rolling
+    - art-daily-jumpsdown-arima
+    - art-daily-jumpsdown-rolling
+    - art-daily-jumpsup-arima
+    - art-daily-jumpsup-rolling
+    - art-daily-nojump-arima
+    - art-daily-nojump-rolling
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - compare
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-flatmiddle-arima
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-flatmiddle-rolling
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-jumpsdown-arima
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-jumpsdown-rolling
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-jumpsup-arima
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-jumpsup-rolling
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-nojump-arima
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: validate-inputs
+    consumerActivity: art-daily-nojump-rolling
+    logicalName: inputs-validated.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-flatmiddle-arima
+    consumerActivity: compare
+    logicalName: art-daily-flatmiddle-arima.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-flatmiddle-rolling
+    consumerActivity: compare
+    logicalName: art-daily-flatmiddle-rolling.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-jumpsdown-arima
+    consumerActivity: compare
+    logicalName: art-daily-jumpsdown-arima.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-jumpsdown-rolling
+    consumerActivity: compare
+    logicalName: art-daily-jumpsdown-rolling.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-jumpsup-arima
+    consumerActivity: compare
+    logicalName: art-daily-jumpsup-arima.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-jumpsup-rolling
+    consumerActivity: compare
+    logicalName: art-daily-jumpsup-rolling.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-nojump-arima
+    consumerActivity: compare
+    logicalName: art-daily-nojump-arima.json
+    sizeBytes: 10000000
+  - producerActivity: art-daily-nojump-rolling
+    consumerActivity: compare
+    logicalName: art-daily-nojump-rolling.json
+    sizeBytes: 10000000

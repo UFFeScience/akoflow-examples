@@ -1,0 +1,38 @@
+{
+  "runId": "sqlsim-local-164a71f419-run-20261117t150646.625598270",
+  "image": "akoflow-local/sqlsim:local-fdf6a614d119ddf5",
+  "imageId": "sha256:fdf6a614d119ddf5b9b712ea9f4a7d61fbf280fe0ae80d5be6dbf55c742d573a",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "query-comparison.png": "0d3d1f62e6206f430b051d1f9a261a19d2083dcd0db8533c3d169ee016c1a06a",
+    "similarity-clusters.png": "99634b53f1c3ef925c353a97b4a876347b478982076f124f8314fc524b05c84b",
+    "execution-timeline.png": "d0290ced4d53dcec45aeea7c34b863315acb4885220d2ce67f2b57209e284879"
+  },
+  "findings": {
+    "observations": 569,
+    "queries": {
+      "cube-2d": {
+        "cubeRows": 486,
+        "assignedObservations": 569,
+        "metricClusters": 115,
+        "spatialClusters": 8
+      },
+      "cube-3d": {
+        "cubeRows": 1121,
+        "assignedObservations": 569,
+        "metricClusters": 67,
+        "spatialClusters": 8
+      }
+    },
+    "databaseIsolation": "one PostgreSQL cluster per activity",
+    "seed": 0.42
+  },
+  "executionSummary": {
+    "runId": "sqlsim-local-164a71f419-run-20261117t150646.625598270",
+    "imageId": "sha256:fdf6a614d119ddf5b9b712ea9f4a7d61fbf280fe0ae80d5be6dbf55c742d573a",
+    "completedActivities": 4,
+    "observedMakespanSeconds": 15.898435115814209,
+    "peakOverlappingActivities": 2,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

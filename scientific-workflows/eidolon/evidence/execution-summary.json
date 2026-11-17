@@ -1,0 +1,8 @@
+{
+  "runId": "eidolon-local-ba2593ae8f-run-20261117t150749.138605490",
+  "imageId": "sha256:4016e0bd5b954fdbb436736a69c96e0e260ddc562df56273db1501136a9a9939",
+  "completedActivities": 8,
+  "observedMakespanSeconds": 23.972549200057983,
+  "peakOverlappingActivities": 2,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

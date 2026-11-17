@@ -1,0 +1,18 @@
+{
+  "showcase": "eidolon",
+  "status": "success",
+  "artifacts": [
+    "collections.png",
+    "miniature-comparison.png",
+    "summary.csv",
+    "computed-collections.zip",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "collections.png": "f17c2b126dc352c34a903394daf3c2f3ea2c66cb40063c2fa8eeaae02af7424a",
+    "miniature-comparison.png": "98e99f4a2e22901194587329317b3748e7dc4a00c4be028f6975e32878b5fcb0",
+    "summary.csv": "37d13a4c453060a711c087670673001b5b9f027d5d0f0d7991ddc187f4d545e3",
+    "computed-collections.zip": "b068761991d499501d41304a096138417cc0cd6260ef946f03d706c8681abd41",
+    "scientific-validation.json": "901546d0918a4c35c9cbf05450939a5ca6e8a14ff209e2b13e2b756123e7d995"
+  }
+}

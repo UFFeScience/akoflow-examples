@@ -119,3 +119,23 @@ notifies the AkôFlow documentation workflow. Configure the repository secret
 `UFFeScience/akoflow`. If the secret is temporarily unavailable, the daily
 documentation reconciliation still checks out this repository and validates
 all referenced example files.
+
+## BreSci scientific reproducibility studies
+
+These seven examples adapt studies from the **Brazilian e-Science Workshop (BreSci), 2024–2026**, co-located with SBBD. Each README credits the original authors, links the paper and original data/code, describes the exact reproduced scope and protocol adaptations, and embeds actual result figures plus an observed native execution timeline. Input SHA-256 receipts, completed daemon evidence and independent artifact validators accompany each bundle.
+
+| Workflow | Original conference / paper | Native activities | Visual results |
+| --- | --- | --- | --- |
+| [UniTED — labeled time-series event detection](scientific-workflows/united/README.md) | [BreSci 2025](https://sol.sbc.org.br/index.php/bresci/article/view/36901) | 10 | [Figures](scientific-workflows/united/screenshots/current/) |
+| [Estrada Real — informed search on a curated historical graph](scientific-workflows/estrada-real/README.md) | [BreSci 2026](https://sol.sbc.org.br/index.php/bresci/article/view/44084) | 11 | [Figures](scientific-workflows/estrada-real/screenshots/current/) |
+| [SQLSIM — analytical similarity queries in PostgreSQL](scientific-workflows/sqlsim/README.md) | [BreSci 2024](https://sol.sbc.org.br/index.php/bresci/article/view/30580) | 4 | [Figures](scientific-workflows/sqlsim/screenshots/current/) |
+| [Eidolon — reproducible scientific data collections](scientific-workflows/eidolon/README.md) | [BreSci 2026](https://sol.sbc.org.br/index.php/bresci/article/view/44071) | 8 | [Figures](scientific-workflows/eidolon/screenshots/current/) |
+| [INMET — São Paulo meteorological observations, 2013–2022](scientific-workflows/inmet/README.md) | [BreSci 2025](https://sol.sbc.org.br/index.php/bresci/article/view/36912) | 16 | [Figures](scientific-workflows/inmet/screenshots/current/) |
+| [MAFAULDA — rotating-machinery faults and TinyML quantization](scientific-workflows/mafaulda-tinyml/README.md) | [BreSci 2026](https://sol.sbc.org.br/index.php/bresci/article/view/44074) | 22 | [Figures](scientific-workflows/mafaulda-tinyml/screenshots/current/) |
+| [TPC-H Q1 — MongoDB embedding versus PostgreSQL reproducibility audit](scientific-workflows/tpch-databases/README.md) | [BreSci 2024](https://sol.sbc.org.br/index.php/bresci/article/view/30582) | 10 | [Figures](scientific-workflows/tpch-databases/screenshots/current/) |
+
+Start from any linked bundle and run `./prepare.sh && ./run.sh`. Preparation acquires original inputs; computation executes offline. Native daemon execution instructions are in each README. Complete original inputs are used within each explicitly selected scope; the MAFAULDA portable profile and TPC-H Q1 audit do not claim whole-paper reproduction. Measured overlap demonstrates actual parallel execution, without assuming a speedup over a sequential baseline.
+
+The Estrada Real search stage reproduces all **3,715** reported Greedy divergences; Eidolon's three rebuilt full R collections match the pinned published references. The database example preserves and exposes the different Q1 date cutoffs in the original code before testing an explicitly aligned variant.
+
+BreSci Hub discovery tags: `bresci`, `bresci-2024`, `bresci-2025`, and `bresci-2026`. Each publication retains its original conference/year and scientific author attribution.

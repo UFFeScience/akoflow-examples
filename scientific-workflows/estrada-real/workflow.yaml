@@ -1,0 +1,239 @@
+name: estrada-real
+spec:
+  namespace: akoflow-examples
+  image: akoflow-local/estrada-real:workload
+  activities:
+  - name: validate-graph
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - validate-graph
+      - --output
+      - .
+  - name: tropeiro-ucs
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropeiro-ucs
+      - --output
+      - .
+  - name: tropeiro-greedy
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropeiro-greedy
+      - --output
+      - .
+  - name: tropeiro-astar
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropeiro-astar
+      - --output
+      - .
+  - name: contrabandista-ucs
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - contrabandista-ucs
+      - --output
+      - .
+  - name: contrabandista-greedy
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - contrabandista-greedy
+      - --output
+      - .
+  - name: contrabandista-astar
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - contrabandista-astar
+      - --output
+      - .
+  - name: tropa-oficial-ucs
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropa-oficial-ucs
+      - --output
+      - .
+  - name: tropa-oficial-greedy
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropa-oficial-greedy
+      - --output
+      - .
+  - name: tropa-oficial-astar
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - validate-graph
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - tropa-oficial-astar
+      - --output
+      - .
+  - name: compare
+    runtime: estrada-real-local-local
+    cpuLimit: '1'
+    memoryLimit: 4Gi
+    dependsOn:
+    - tropeiro-ucs
+    - tropeiro-greedy
+    - tropeiro-astar
+    - contrabandista-ucs
+    - contrabandista-greedy
+    - contrabandista-astar
+    - tropa-oficial-ucs
+    - tropa-oficial-greedy
+    - tropa-oficial-astar
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - compare
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: validate-graph
+    consumerActivity: tropeiro-ucs
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: tropeiro-greedy
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: tropeiro-astar
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: contrabandista-ucs
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: contrabandista-greedy
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: contrabandista-astar
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: tropa-oficial-ucs
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: tropa-oficial-greedy
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: validate-graph
+    consumerActivity: tropa-oficial-astar
+    logicalName: graph.json
+    sizeBytes: 10000000
+  - producerActivity: tropeiro-ucs
+    consumerActivity: compare
+    logicalName: tropeiro-ucs.csv
+    sizeBytes: 10000000
+  - producerActivity: tropeiro-greedy
+    consumerActivity: compare
+    logicalName: tropeiro-greedy.csv
+    sizeBytes: 10000000
+  - producerActivity: tropeiro-astar
+    consumerActivity: compare
+    logicalName: tropeiro-astar.csv
+    sizeBytes: 10000000
+  - producerActivity: contrabandista-ucs
+    consumerActivity: compare
+    logicalName: contrabandista-ucs.csv
+    sizeBytes: 10000000
+  - producerActivity: contrabandista-greedy
+    consumerActivity: compare
+    logicalName: contrabandista-greedy.csv
+    sizeBytes: 10000000
+  - producerActivity: contrabandista-astar
+    consumerActivity: compare
+    logicalName: contrabandista-astar.csv
+    sizeBytes: 10000000
+  - producerActivity: tropa-oficial-ucs
+    consumerActivity: compare
+    logicalName: tropa-oficial-ucs.csv
+    sizeBytes: 10000000
+  - producerActivity: tropa-oficial-greedy
+    consumerActivity: compare
+    logicalName: tropa-oficial-greedy.csv
+    sizeBytes: 10000000
+  - producerActivity: tropa-oficial-astar
+    consumerActivity: compare
+    logicalName: tropa-oficial-astar.csv
+    sizeBytes: 10000000

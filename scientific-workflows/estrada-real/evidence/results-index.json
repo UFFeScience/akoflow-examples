@@ -1,0 +1,7 @@
+{
+  "artifact": "comparison.csv",
+  "storedAs": "comparison.csv.gz",
+  "rows": 104004,
+  "uncompressedSha256": "6084e3bc01c1fffb7f7e0fb25f2cb47ee6b73ec85af0150a2370b97c7f71838a",
+  "storedSha256": "a304acf25b678066cc62914562dd57671c69b08177e5e690ceba7f4fbdd88d36"
+}

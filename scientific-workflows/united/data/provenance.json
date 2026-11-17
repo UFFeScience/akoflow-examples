@@ -1,0 +1,25 @@
+{
+  "slug": "united",
+  "title": "UniTED — labeled time-series event detection",
+  "authors": [
+    "Janio Lima",
+    "Hélio Castro",
+    "Luiz Oliveira",
+    "Ellen Paixão",
+    "Lais Baroni",
+    "Rebecca Salles",
+    "Ricardo Vargas",
+    "Eduardo Ogasawara"
+  ],
+  "conference": "XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD",
+  "article": "https://sol.sbc.org.br/index.php/bresci/article/view/36901",
+  "source": "https://github.com/cefet-rj-dal/united",
+  "scope": "Four complete labeled NAB artificialWithAnomaly source series curated by UniTED, with no point subsampling. ARIMA(2,0,2) and a causal rolling-residual baseline are Python adapters; they are not the original R/Harbinger implementation and do not claim paper-metric equivalence. Detectors fit thresholds on the first 25% and are scored on the remaining observations with point-wise labels; no temporal-tolerance NAB score is claimed. These artificial signals are original benchmark inputs, not locally generated substitutes. Original upstream benchmark: https://github.com/numenta/NAB. UniTED code: MIT; upstream dataset conditions remain applicable.",
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence.",
+  "tags": [
+    "bresci",
+    "bresci-2025",
+    "scientific-reproducibility",
+    "scientific-workflows"
+  ]
+}

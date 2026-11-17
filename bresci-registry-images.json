@@ -1,0 +1,68 @@
+{
+  "release": "bresci-workflows-v1",
+  "images": [
+    {
+      "slug": "united",
+      "archive": "united-executed-image.tar.gz",
+      "sha256": "e40ba70a49acbe104f7a31c13371c14189e295d0988aa777e4f243dd9e9ad971",
+      "imageId": "sha256:3ccc239aea4aedf2578d9f3895d5cda97472eff8bc6c51a456798070a0ed8192",
+      "sourceTag": "local-3ccc239aea4aedf2",
+      "repository": "ghcr.io/uffescience/akoflow-examples/united",
+      "tag": "bresci-3ccc239aea4aedf2"
+    },
+    {
+      "slug": "estrada-real",
+      "archive": "estrada-real-executed-image.tar.gz",
+      "sha256": "103b486ec3e4058b1225efd051e9b6b069d0b11f0e310a94c8f9dc810e7e910c",
+      "imageId": "sha256:22c0fa0da9d734498b20ddcb09f7765cfa1e4fab04e595c5401a3fcf2a238fd7",
+      "sourceTag": "local-22c0fa0da9d73449",
+      "repository": "ghcr.io/uffescience/akoflow-examples/estrada-real",
+      "tag": "bresci-22c0fa0da9d73449"
+    },
+    {
+      "slug": "sqlsim",
+      "archive": "sqlsim-executed-image.tar.gz",
+      "sha256": "d21c29e6ee51f8d2e78375f8a675719a0cd0d607ab1fd47a829873ee764a8fcd",
+      "imageId": "sha256:fdf6a614d119ddf5b9b712ea9f4a7d61fbf280fe0ae80d5be6dbf55c742d573a",
+      "sourceTag": "local-fdf6a614d119ddf5",
+      "repository": "ghcr.io/uffescience/akoflow-examples/sqlsim",
+      "tag": "bresci-fdf6a614d119ddf5"
+    },
+    {
+      "slug": "eidolon",
+      "archive": "eidolon-executed-image.tar.gz",
+      "sha256": "032337ed3e8390ae53c08ec4c12d3bf0c9cfe0896647fb72b54a3a06a96d4203",
+      "imageId": "sha256:4016e0bd5b954fdbb436736a69c96e0e260ddc562df56273db1501136a9a9939",
+      "sourceTag": "local-4016e0bd5b954fdb",
+      "repository": "ghcr.io/uffescience/akoflow-examples/eidolon",
+      "tag": "bresci-4016e0bd5b954fdb"
+    },
+    {
+      "slug": "inmet",
+      "archive": "inmet-executed-image.tar.gz",
+      "sha256": "b98adc205f08a78f77c83c80a4726a8a87b2180d004ad1d7480304a174109bf4",
+      "imageId": "sha256:5c61428db82753d20bb9ae9c3dea95d1e77e055afb4b5af80e2d5242fa643823",
+      "sourceTag": "local-5c61428db82753d2",
+      "repository": "ghcr.io/uffescience/akoflow-examples/inmet",
+      "tag": "bresci-5c61428db82753d2"
+    },
+    {
+      "slug": "mafaulda-tinyml",
+      "archive": "mafaulda-tinyml-executed-image.tar.gz",
+      "sha256": "bc7194d7375215a641851d05a7270879e9e5b311ab761d8224db8611ade2e9ed",
+      "imageId": "sha256:36dd0df262eb3cb373ef1cba2e824423aabf516e56e70b75ca62c1922978cc9e",
+      "sourceTag": "local-36dd0df262eb3cb3",
+      "repository": "ghcr.io/uffescience/akoflow-examples/mafaulda-tinyml",
+      "tag": "bresci-36dd0df262eb3cb3"
+    },
+    {
+      "slug": "tpch-databases",
+      "archive": "tpch-databases-executed-image.tar.gz",
+      "sha256": "9890c5323914f27a41904450ca6e7ae2a74ecc2b822373420c53d0c99551ceb5",
+      "imageId": "sha256:9bfa73e297c7e7ddbec9dfec7493e7c5373d8342392599374d0a37d59ad9459d",
+      "sourceTag": "local-9bfa73e297c7e7dd",
+      "repository": "ghcr.io/uffescience/akoflow-examples/tpch-databases",
+      "tag": "bresci-9bfa73e297c7e7dd"
+    }
+  ]
+}

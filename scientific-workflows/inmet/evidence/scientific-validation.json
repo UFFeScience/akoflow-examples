@@ -1,0 +1,130 @@
+{
+  "status": "passed",
+  "findings": {
+    "rawRows": 87648,
+    "cleanedRows": 87252,
+    "removedRows": 396,
+    "station": "A701",
+    "start": "2013-01-01 00:00:00",
+    "end": "2022-12-31 23:00:00",
+    "originalNotebookCells": [
+      16,
+      20
+    ],
+    "variables": {
+      "temperature": {
+        "observations": 87252,
+        "minimum": 4.1,
+        "maximum": 37.3,
+        "mean": 20.490728006234818
+      },
+      "precipitation": {
+        "observations": 87252,
+        "minimum": 0.0,
+        "maximum": 77.8,
+        "mean": 0.1712808875441251
+      },
+      "humidity": {
+        "observations": 87252,
+        "minimum": 12.0,
+        "maximum": 98.0,
+        "mean": 68.80686975656718
+      }
+    }
+  },
+  "provenance": {
+    "slug": "inmet",
+    "title": "INMET — São Paulo meteorological observations, 2013–2022",
+    "authors": [
+      "Rosa Virginia Encinas Quille",
+      "Felipe Valencia de Almeida",
+      "Danielle Monteiro",
+      "Pedro Luiz Pizzigatti Corrêa"
+    ],
+    "conference": "XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD",
+    "article": "https://sol.sbc.org.br/index.php/bresci/article/view/36912",
+    "source": "https://zenodo.org/records/16864784",
+    "scope": "Process all original hourly CSVs for São Paulo–Mirante station A701 from 2013 through 2022, the station and period illustrated by the paper. Execute the original notebook ingestion/normalization and cleaning definitions (cells 16 and 20), then generate noninteractive temperature, precipitation and humidity analyses. Yearly ingestion activities are independent; the original cleaning runs once after concatenation, preserving cross-year filling. Raw inputs come from the nested dataset.zip in the original Zenodo deposit, acquired by verified ZIP members through HTTP byte ranges. The entire 1.92 GB parent archive is not downloaded or claimed to have a newly verified global hash; extracted member CRC and SHA-256 are checked. Original notebook and data: CC BY 4.0. INMET source portal: https://portal.inmet.gov.br/dadoshistoricos . No processed author outputs are used as computation inputs.",
+    "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+  },
+  "acquisition": {
+    "files": [
+      {
+        "path": "original.ipynb",
+        "url": "https://zenodo.org/records/16864784/files/INMETDataTool_v4.0.ipynb?download=1",
+        "sha256": "63bb2e19e30ec28fa766269155a8b18a05b1b1921a38e477cfdf24f7e8d44315",
+        "bytes": 235769
+      },
+      {
+        "path": "raw/2013/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2013_A_31-12-2013.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "5f2a45f7be8129d373f937418de8b00f46e4ae6fc27fd7518ff772fcef13d8ba",
+        "bytes": 805357,
+        "archiveMember": "dataset/dataset.zip!/2013/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2013_A_31-12-2013.CSV"
+      },
+      {
+        "path": "raw/2014/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2014_A_31-12-2014.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "6690c2d8364def66d5df1daecdbd7ca408e4f3ea2d681a2ed8e0696a94d4ab55",
+        "bytes": 811595,
+        "archiveMember": "dataset/dataset.zip!/2014/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2014_A_31-12-2014.CSV"
+      },
+      {
+        "path": "raw/2015/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2015_A_31-12-2015.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "a0c96324f7c0d534f9e690f2a5178616281339d6de73647ada97e5f102eb78d2",
+        "bytes": 806900,
+        "archiveMember": "dataset/dataset.zip!/2015/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2015_A_31-12-2015.CSV"
+      },
+      {
+        "path": "raw/2016/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2016_A_31-12-2016.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "9989f6f158c83059b0a54d35842f66f159f2b5049952dff6986ba515517816fc",
+        "bytes": 809609,
+        "archiveMember": "dataset/dataset.zip!/2016/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2016_A_31-12-2016.CSV"
+      },
+      {
+        "path": "raw/2017/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2017_A_31-12-2017.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "1bac9171eb8660d5a282dc724913f7efeba52afdde7b93e6c6387b7f6465912f",
+        "bytes": 808768,
+        "archiveMember": "dataset/dataset.zip!/2017/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2017_A_31-12-2017.CSV"
+      },
+      {
+        "path": "raw/2018/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2018_A_31-12-2018.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "1bec33fd03bd0179a0e0a4b194578727468baac0af6bf524bf2d820a01d447d4",
+        "bytes": 807097,
+        "archiveMember": "dataset/dataset.zip!/2018/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2018_A_31-12-2018.CSV"
+      },
+      {
+        "path": "raw/2019/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2019_A_31-12-2019.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "51527c56c4ff94d005f69bd2d5d1d167a478d7882e398f6e059ee989522a5b6c",
+        "bytes": 811521,
+        "archiveMember": "dataset/dataset.zip!/2019/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2019_A_31-12-2019.CSV"
+      },
+      {
+        "path": "raw/2020/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2020_A_31-12-2020.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "aec112b14d90797dcd905c8a5932fb4eb09015582f459edbf3b7a4a8cdafed12",
+        "bytes": 813664,
+        "archiveMember": "dataset/dataset.zip!/2020/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2020_A_31-12-2020.CSV"
+      },
+      {
+        "path": "raw/2021/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2021_A_31-12-2021.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "815c01daf4a6da98d26517b0214932a0754fa5cf997a79ce726516b50192fef1",
+        "bytes": 802037,
+        "archiveMember": "dataset/dataset.zip!/2021/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2021_A_31-12-2021.CSV"
+      },
+      {
+        "path": "raw/2022/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2022_A_31-12-2022.CSV",
+        "url": "https://zenodo.org/records/16864784/files/dataset.zip?download=1",
+        "sha256": "ceb3a4cde159602228959b96c32eb46134f37b9b3b84c90126d8cbf169d8d088",
+        "bytes": 811830,
+        "archiveMember": "dataset/dataset.zip!/2022/INMET_SE_SP_A701_SAO PAULO - MIRANTE_01-01-2022_A_31-12-2022.CSV"
+      }
+    ]
+  }
+}

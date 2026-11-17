@@ -1,0 +1,3 @@
+id: sqlsim-local-scope
+name: sqlsim-local local scope
+environmentVersionIds: [sqlsim-local-v1]

@@ -1,0 +1,52 @@
+{
+  "runId": "eidolon-local-ba2593ae8f-run-20261117t150749.138605490",
+  "image": "akoflow-local/eidolon:local-4016e0bd5b954fdb",
+  "imageId": "sha256:4016e0bd5b954fdbb436736a69c96e0e260ddc562df56273db1501136a9a9939",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "collections.png": "f17c2b126dc352c34a903394daf3c2f3ea2c66cb40063c2fa8eeaae02af7424a",
+    "miniature-comparison.png": "98e99f4a2e22901194587329317b3748e7dc4a00c4be028f6975e32878b5fcb0",
+    "execution-timeline.png": "194b2a7af49b8197c8ab42e7c46fc05dd26baaed254d54dde1c3ee97115e2b68"
+  },
+  "findings": {
+    "collections": [
+      {
+        "collection": "climate",
+        "fullSeries": 10,
+        "observations": 630,
+        "referenceAgreement": true,
+        "miniSeries": 1,
+        "completeBytes": 2729,
+        "miniBytes": 770
+      },
+      {
+        "collection": "bioenergy",
+        "fullSeries": 20,
+        "observations": 660,
+        "referenceAgreement": true,
+        "miniSeries": 1,
+        "completeBytes": 3070,
+        "miniBytes": 468
+      },
+      {
+        "collection": "emissions",
+        "fullSeries": 20,
+        "observations": 1220,
+        "referenceAgreement": true,
+        "miniSeries": 1,
+        "completeBytes": 7941,
+        "miniBytes": 870
+      }
+    ],
+    "originalRCodeExecuted": true,
+    "allFullObjectsMatchPinnedPublishedReferences": true
+  },
+  "executionSummary": {
+    "runId": "eidolon-local-ba2593ae8f-run-20261117t150749.138605490",
+    "imageId": "sha256:4016e0bd5b954fdbb436736a69c96e0e260ddc562df56273db1501136a9a9939",
+    "completedActivities": 8,
+    "observedMakespanSeconds": 23.972549200057983,
+    "peakOverlappingActivities": 2,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

@@ -1,0 +1,3 @@
+query,cubeRows,assignedObservations,metricClusters,spatialClusters
+cube-2d,486,569,115,8
+cube-3d,1121,569,67,8

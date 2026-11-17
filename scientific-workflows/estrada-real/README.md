@@ -67,3 +67,5 @@ The native run completed 11 activities in **24.29 seconds**, with **3 overlappin
 Python dependency versions from the measured image are retained in [`evidence/python-packages.txt`](evidence/python-packages.txt). Independent post-run validation is recorded in [`evidence/independent-validation.json`](evidence/independent-validation.json).
 
 To regenerate the execution timeline from an observed run, mount this bundle at `/bundle` in its measured image and run `python /bundle/expected/render_execution.py`. The renderer uses `evidence/daemon-run.json`; predicted schedule times are excluded.
+
+The full 104,004-row measured search table is retained as [`evidence/comparison.csv.gz`](evidence/comparison.csv.gz), with original and compressed SHA-256 hashes in [`evidence/results-index.json`](evidence/results-index.json).

@@ -1,0 +1,17 @@
+{
+  "publicationId": "57ec61de-48b3-4de0-9789-803fbbf30d77",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-gawa",
+  "version": 1,
+  "versionId": "9baf9ed3-3bf3-4a30-9ccb-dc9d0198285a",
+  "experimentId": "024535d7-e520-4b62-9d23-352158ec3008",
+  "resultCount": 1,
+  "uri": "akoflow://hub/publications/57ec61de-48b3-4de0-9789-803fbbf30d77/versions/1",
+  "projectId": "c49415f5-40a0-486d-bbf1-3175a9d49158",
+  "tags": [
+    "astronomy",
+    "fits",
+    "showcase",
+    "stellar-clusters",
+    "wavelets"
+  ]
+}

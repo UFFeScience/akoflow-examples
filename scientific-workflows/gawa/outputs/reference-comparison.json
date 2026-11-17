@@ -1,0 +1,9 @@
+{
+  "referenceCandidates": 67,
+  "actualCandidates": 67,
+  "sameColumns": true,
+  "maxRaDifferenceDegrees": 0.0,
+  "maxDecDifferenceDegrees": 3.552713678800501e-15,
+  "maxSnrDifference": 0.0,
+  "allNumericColumnsClose": true
+}

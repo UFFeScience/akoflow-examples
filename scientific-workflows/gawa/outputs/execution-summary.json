@@ -1,0 +1,10 @@
+{
+  "runId": "gawa-tile-detection-local-c60307f120-run-20261115t171918.650188456",
+  "status": "completed",
+  "completedActivities": 16,
+  "observedMaximumParallelTiles": 4,
+  "wallSeconds": 428.0,
+  "imageId": "sha256:f68f0939d5255163d4e30703ac6a7b61073f332dd4de177bb034ab68f5931e77",
+  "pngCount": 91,
+  "note": "Manual plan predictions are placeholders; elapsed time and overlap are observed."
+}

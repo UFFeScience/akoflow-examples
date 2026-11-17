@@ -43,15 +43,17 @@ type workflow struct {
 	Activities []activity `yaml:"activities"` // Accepted by small runner regression fixtures.
 }
 type options struct {
-	Container bool
-	Parallel  int
+	Container     bool
+	Parallel      int
+	NetworkStages string
 }
 
 func main() {
 	root := flag.String("root", ".", "showcase directory")
-	container := flag.Bool("container", os.Getenv("AKOFLOW_LOCAL_CONTAINER") == "1", "execute each activity in its prepared OCI image with network access disabled")
+	container := flag.Bool("container", os.Getenv("AKOFLOW_LOCAL_CONTAINER") == "1", "execute each activity in its prepared OCI image; network access defaults to disabled")
 	prepare := flag.Bool("prepare-container", false, "build the local image and exit; network may be required during preparation")
 	parallel := flag.Int("parallel", 4, "maximum concurrent local activities")
+	networkStages := flag.String("network-stages", "", "comma-separated acquisition activity names allowed to use the Docker bridge network")
 	flag.Parse()
 	if *prepare {
 		if err := prepareContainer(*root); err != nil {
@@ -60,7 +62,7 @@ func main() {
 		}
 		return
 	}
-	if err := runWithOptions(*root, options{Container: *container, Parallel: *parallel}); err != nil {
+	if err := runWithOptions(*root, options{Container: *container, Parallel: *parallel, NetworkStages: *networkStages}); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
@@ -159,6 +161,17 @@ func runWithOptions(root string, opts options) error {
 	if err != nil {
 		return err
 	}
+	activities := map[string]activity{}
+	for _, a := range definition.Spec.Activities {
+		activities[a.Name] = a
+	}
+	for _, name := range strings.Split(opts.NetworkStages, ",") {
+		if name = strings.TrimSpace(name); name != "" {
+			if _, found := activities[name]; !found {
+				return fmt.Errorf("unknown network-enabled acquisition activity: %s", name)
+			}
+		}
+	}
 	waves, err := dependencyWaves(config)
 	if err != nil {
 		return err
@@ -205,10 +218,6 @@ func runWithOptions(root string, opts options) error {
 			python = filepath.Join(root, ".venv/bin/python")
 		}
 	}
-	activities := map[string]activity{}
-	for _, a := range definition.Spec.Activities {
-		activities[a.Name] = a
-	}
 	work := func(name string) error {
 		a := activities[name]
 		args := append([]string{}, a.Command.Arguments...)
@@ -237,9 +246,15 @@ func runWithOptions(root string, opts options) error {
 			if entrypoint == "" {
 				entrypoint = "python"
 			}
-			dockerArgs := []string{"run", "--rm", "--network", "none", "--mount", "type=bind,src=" + output + ",dst=/outputs", "--workdir", "/outputs", "--entrypoint", entrypoint, image}
+			network := "none"
+			for _, online := range strings.Split(opts.NetworkStages, ",") {
+				if strings.TrimSpace(online) == name {
+					network = "bridge"
+				}
+			}
+			dockerArgs := []string{"run", "--rm", "--network", network, "--mount", "type=bind,src=" + output + ",dst=/outputs", "--workdir", "/outputs", "--entrypoint", entrypoint, image}
 			if profile := os.Getenv("AKOFLOW_PROFILE"); profile != "" {
-				dockerArgs = append([]string{"run", "--rm", "--network", "none", "--env", "AKOFLOW_PROFILE=" + profile, "--mount", "type=bind,src=" + output + ",dst=/outputs", "--workdir", "/outputs", "--entrypoint", entrypoint, image}, args...)
+				dockerArgs = append([]string{"run", "--rm", "--network", network, "--env", "AKOFLOW_PROFILE=" + profile, "--mount", "type=bind,src=" + output + ",dst=/outputs", "--workdir", "/outputs", "--entrypoint", entrypoint, image}, args...)
 			} else {
 				dockerArgs = append(dockerArgs, args...)
 			}

@@ -1,0 +1,214 @@
+name: earthquake-local
+spec:
+  namespace: akoflow-examples
+  image: ghcr.io/uffescience/akoflow-examples/earthquake-local:v1
+  activities:
+  - name: fetch
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - fetch
+      - --output
+      - .
+  - name: patterns
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - patterns
+      - --output
+      - .
+  - name: map
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - map
+      - --output
+      - .
+  - name: anomalies
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - anomalies
+      - --output
+      - .
+  - name: zones
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - zones
+      - --output
+      - .
+  - name: aftershocks
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - aftershocks
+      - --output
+      - .
+  - name: aftershock-map
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    - aftershocks
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - aftershock-map
+      - --output
+      - .
+  - name: hazard
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - hazard
+      - --output
+      - .
+  - name: gaps
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - gaps
+      - --output
+      - .
+  - name: hazard-map
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    - hazard
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - hazard-map
+      - --output
+      - .
+  - name: gap-map
+    runtime: earthquake-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - fetch
+    - gaps
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - gap-map
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: fetch
+    consumerActivity: patterns
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: map
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: anomalies
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: zones
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: aftershocks
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: aftershock-map
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: aftershocks
+    consumerActivity: aftershock-map
+    logicalName: aftershocks.json
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: hazard
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: gaps
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: hazard-map
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: hazard
+    consumerActivity: hazard-map
+    logicalName: hazard.json
+    sizeBytes: 1000000
+  - producerActivity: fetch
+    consumerActivity: gap-map
+    logicalName: catalog.csv
+    sizeBytes: 1000000
+  - producerActivity: gaps
+    consumerActivity: gap-map
+    logicalName: gaps.json
+    sizeBytes: 1000000

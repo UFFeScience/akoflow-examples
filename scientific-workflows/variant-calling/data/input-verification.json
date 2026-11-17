@@ -1,0 +1,29 @@
+{
+  "status": "verified",
+  "sourceCommit": "d8fdae78e564ee8eed98515ba86886d0c944e029",
+  "verifiedAt": "2026-11-15T18:40:39.897825+00:00",
+  "source": "ENA complete FASTQ mirrors of the two original upstream tests/2 accessions; no subsampling",
+  "referenceSHA256": "ef4a59af680335c374124786c9652bb18ff38586ddabd18e492b19a0b1114413",
+  "files": [
+    {
+      "name": "SRR2584866_1.fastq.gz",
+      "bytes": 323891149,
+      "md5": "8e13edae2126bdaa6afe6a8e9871ec80"
+    },
+    {
+      "name": "SRR2584866_2.fastq.gz",
+      "bytes": 310299496,
+      "md5": "b2eec14b37fa6963e90682a52f9e6174"
+    },
+    {
+      "name": "SRR2589044_1.fastq.gz",
+      "bytes": 129138426,
+      "md5": "21476c1587a76d4160b346fa3668561c"
+    },
+    {
+      "name": "SRR2589044_2.fastq.gz",
+      "bytes": 134214678,
+      "md5": "631c06c60f81e7766eb548b57b37ed26"
+    }
+  ]
+}

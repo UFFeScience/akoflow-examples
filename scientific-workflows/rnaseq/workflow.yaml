@@ -1,0 +1,85 @@
+name: rnaseq
+spec:
+  activities:
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - acquire
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn: []
+      memoryLimit: 2Gi
+      name: acquire
+      runtime: rnaseq-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - pipeline
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "4"
+      dependsOn:
+        - acquire
+      memoryLimit: 12Gi
+      name: pipeline
+      runtime: rnaseq-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - visuals
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - pipeline
+      memoryLimit: 2Gi
+      name: visuals
+      runtime: rnaseq-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - package
+          - --output
+          - .
+        entrypoint: python3
+      cpuLimit: "1"
+      dependsOn:
+        - visuals
+      memoryLimit: 2Gi
+      name: package
+      runtime: rnaseq-local
+  dataDependencies:
+    - consumerActivity: pipeline
+      logicalName: observations.tar.gz
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: visuals
+      logicalName: pipeline-results.tar.gz
+      producerActivity: pipeline
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-summary.json
+      producerActivity: visuals
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-results.tar.gz
+      producerActivity: visuals
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: transcript-abundance.png
+      producerActivity: visuals
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: library-qc.png
+      producerActivity: visuals
+      sizeBytes: 1
+  image: ghcr.io/uffescience/akoflow-examples/rnaseq:v1
+  namespace: akoflow-examples

@@ -1,0 +1,229 @@
+{
+  "objective": "Execute Earthquake and all twelve named scientific workflows sequentially and publish each to production Hub with native measured evidence, immutable exact execution images, reproducible inputs/source, validated downloadable results and meaningful scientific visuals.",
+  "hub": "https://hub.akoflow.com",
+  "hubScope": "Production Hub; exact measured images distributed by immutable aliases at its read-only OCI registry.",
+  "workflows": [
+    {
+      "slug": "earthquake",
+      "name": "Earthquake",
+      "status": "published-production",
+      "evidence": "scientific-workflows/earthquake/evidence/hub-production-publication.json",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-earthquake",
+      "visualCount": 4,
+      "visualPlan": "Observed seismic distribution plus aftershock, hazard and gap maps from the completed daemon execution.",
+      "visualRequiredBeforePublication": true
+    },
+    {
+      "slug": "sra-search",
+      "name": "SRA Search",
+      "status": "published-production",
+      "visualPlan": "Measured processed, mapped and unmapped read counts, explicitly preserving zero-hit findings.",
+      "visualRequiredBeforePublication": true,
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sra-search",
+      "activityCount": 5,
+      "completedActivityCount": 5,
+      "visualCount": 1,
+      "evidence": "scientific-workflows/sra-search/evidence/hub-production-publication.json",
+      "finding": "0 reference matches from 2,044,828 processed mates; all full real observations retained in BAM"
+    },
+    {
+      "slug": "variant-calling",
+      "name": "Variant Calling",
+      "status": "published-production",
+      "visualPlan": "Variant counts by type and genomic position, generated from actual VCF output.",
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/variant-calling",
+      "inputFiles": 4,
+      "compressedInputBytes": 897543749,
+      "upstreamCommit": "d8fdae78e564ee8eed98515ba86886d0c944e029",
+      "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+      "activityCount": 14,
+      "evidence": "scientific-workflows/variant-calling/evidence/hub-production-publication.json",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-variant-calling",
+      "completedActivityCount": 14,
+      "visualCount": 1,
+      "finding": "790 and 11 filtered E. coli variants from 3,875,488 full read pairs",
+      "observedSeconds": 1673.4412508010864
+    },
+    {
+      "slug": "orcasound",
+      "name": "Orcasound",
+      "status": "published-production",
+      "visualPlan": "Spectrogram and detections timeline computed from the selected real hydrophone recording.",
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/orcasound",
+      "recordingObjects": 12,
+      "modelRevision": "f8705749f36d65d870cc7b5d21e71802ae77059e",
+      "modelSHA256": "a1e41e52989e1677f1e5ca5eef2a289efab50ba7da6b5826048f546f2160f89b",
+      "knownUpstreamIssue": "Pegasus file-path checkpoint lookup silently skips loading incompatible supplied FastAI learner; use declared official trained OrcaHello inference with strict matching weights, never random initialization.",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-orcasound",
+      "activityCount": 12,
+      "completedActivityCount": 12,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/orcasound/evidence/hub-production-publication.json",
+      "finding": "120 decoded real-audio seconds, 48 trained-model windows, 0 positive candidates at the declared thresholds",
+      "observedSeconds": 92.41712808609009,
+      "acquisitionPolicy": "Restricted unmodified model/source acquired directly from upstream at immutable revisions; not redistributed in public image/source/results"
+    },
+    {
+      "slug": "somospie",
+      "name": "SOMOSPIE",
+      "status": "published-production",
+      "visualPlan": "Observed/predicted soil-moisture map and held-out prediction diagnostics.",
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/somospie",
+      "upstreamCommit": "55d317ea4d751d823086005dd5d8247e65dffd55",
+      "inputFiles": 35,
+      "inputBytes": 60606972,
+      "soilMoisturePeriod": [
+        "2010-01-01",
+        "2010-01-31"
+      ],
+      "regionEPSG": 4326,
+      "boundsWestSouthEastNorth": [
+        -99,
+        35,
+        -97,
+        37
+      ],
+      "inputSources": [
+        "ESA CCI Soil Moisture COMBINED v07.1",
+        "Copernicus GLO-90 2021 DSM"
+      ],
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-somospie",
+      "runId": "somospie-local-8d06129260-run-20261115t205251.196217106",
+      "activityCount": 12,
+      "completedActivityCount": 12,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/somospie/evidence/hub-production-publication.json",
+      "observedSeconds": 127.08417248725891,
+      "finding": "31 real daily products, 64 monthly cells with 722 valid daily observations, full original 50/10-candidate searches and 40,000 predictions per model",
+      "originalRawDataRedistributed": false
+    },
+    {
+      "slug": "rnaseq",
+      "name": "RNA-seq",
+      "status": "published-production",
+      "visualPlan": "Actual transcript abundances and full-library trimming/mapping counts; single-library QC, no differential-expression claim",
+      "visualRequiredBeforePublication": true,
+      "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "activityCount": 4,
+      "originalPipelineVersion": "3.27.0",
+      "originalPipelineCommit": "a1fcdddd3b826fe46eb46f0479f2ff8a7815af05",
+      "fullLibraryReads": 1039872,
+      "profile": "rapid_quant",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-rnaseq",
+      "completedActivityCount": 4,
+      "innerCompletedNextflowTasks": 16,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/rnaseq/evidence/hub-production-publication.json",
+      "observedSeconds": 229.33325839042664,
+      "finding": "Full 1,039,872-read yeast RNA-seq library quantified with the unmodified nf-core/rnaseq rapid_quant pipeline; actual transcript abundances and full QC retained",
+      "differentialExpressionClaimed": false
+    },
+    {
+      "slug": "sarek",
+      "name": "Sarek",
+      "status": "published-production",
+      "visualPlan": "Measured variant summary and genomic distribution from real sequencing inputs.",
+      "visualRequiredBeforePublication": true,
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sarek",
+      "runId": "sarek-local-c963b87180-run-20261115t220044.437311757",
+      "activityCount": 4,
+      "completedActivityCount": 4,
+      "innerCompletedNextflowTasks": 14,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/sarek/evidence/hub-production-publication.json",
+      "observedSeconds": 265.81150364875793,
+      "finding": "280,468 real HG002 regional alignment records; 1,757 raw VCF records, 1,437 SNP/354 INDEL/1 MNV alternate alleles; all reference alleles verified",
+      "rawUnfilteredCalls": true,
+      "wholeGenomeClaimed": false
+    },
+    {
+      "slug": "viralrecon",
+      "name": "Viralrecon",
+      "status": "skipped-user-request",
+      "visualPlan": "Genome coverage and variant positions from reconstructed viral reads.",
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
+    },
+    {
+      "slug": "mag",
+      "name": "MAG",
+      "status": "skipped-user-request",
+      "visualPlan": "Actual assembly/bin metrics, contig-length distribution and taxonomic summaries where produced.",
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
+    },
+    {
+      "slug": "ampliseq",
+      "name": "Ampliseq",
+      "status": "skipped-user-request",
+      "visualPlan": "Read-retention summary and observed taxonomic/community composition.",
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
+    },
+    {
+      "slug": "fmriprep",
+      "name": "fMRIPrep",
+      "status": "skipped-user-request",
+      "visualPlan": "Anatomical/functional registration and preprocessing quality-control views from actual BIDS outputs.",
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
+    },
+    {
+      "slug": "1000genomes",
+      "name": "1000Genomes",
+      "status": "skipped-user-request",
+      "visualPlan": "Observed allele-frequency/variant-overlap distributions for the frozen public cohort subset.",
+      "visualRequiredBeforePublication": true,
+      "skipReason": "User explicitly asked to skip the remaining biological workflows and proceed with a non-biological workflow."
+    },
+    {
+      "slug": "pycbc",
+      "name": "PyCBC / LIGO",
+      "status": "published-production",
+      "visualPlan": "Measured detector strain, noise spectra, matched-filter signal-to-noise and two-detector coincidence from real GWOSC observations",
+      "visualRequiredBeforePublication": true,
+      "inputPath": "/home/ovvesley/Workspace/akoflow-scientific-data/pycbc",
+      "observationDurationPerDetectorSeconds": 4096,
+      "rawSamplesPerDetector": 16777216,
+      "detectors": [
+        "H1",
+        "L1"
+      ],
+      "catalogueEvent": "GW150914",
+      "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-pycbc",
+      "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+      "activityCount": 9,
+      "completedActivityCount": 9,
+      "visualCount": 2,
+      "evidence": "scientific-workflows/pycbc/evidence/hub-production-publication.json",
+      "observedSeconds": 161.94806218147278,
+      "finding": "Full H1/L1 4096s observations; 66 physical templates; one clustered coincidence, network SNR 23.375389, lag 6.8359375ms; independent matched-filter normalization verified",
+      "calibratedSignificanceClaimed": false
+    }
+  ],
+  "visualRequirement": "Every published workflow must include at least one visual derived from its real computation, with provenance and accessible download.",
+  "visualBrowserGate": "passed for all eight production publications; PyCBC detector/coincidence PNGs verified in dark theme",
+  "productionAssetRegistry": {
+    "compose": "/opt/projects/akoflow-scientific-registry/compose.yml",
+    "publicImagePrefix": "hub.akoflow.com/akoflow-examples/",
+    "publicAssetsPrefix": "https://hub.akoflow.com/showcase-results/scientific/",
+    "writeAccess": "localhost:15000 via SSH only; public routes allow only GET/HEAD"
+  },
+  "existingMontageVisuals": {
+    "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-montage-050",
+    "verified": true,
+    "content": "Three band mosaics and a color mosaic from the validated reference execution."
+  },
+  "nextWorkflow": null,
+  "sourceBatchPR": {
+    "url": "https://github.com/UFFeScience/akoflow-examples/pull/34",
+    "status": "merged",
+    "ciRun": 43747163688,
+    "successfulChecks": 39
+  },
+  "scopeChange": "Original campaign retained for provenance. User explicitly skipped remaining biological items; next requested execution is PyCBC/LIGO. Existing biological publications remain available.",
+  "acceptedScopeStatus": "complete: eight production publications and five explicitly skipped items"
+}

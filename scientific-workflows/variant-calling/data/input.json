@@ -1,0 +1,80 @@
+{
+  "slug": "variant-calling",
+  "title": "Variant Calling - E. coli Genome Comparison",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "index",
+    "extract-srr2584866",
+    "align-srr2584866",
+    "bam-srr2584866",
+    "pileup-srr2584866",
+    "call-srr2584866",
+    "filter-srr2584866",
+    "extract-srr2589044",
+    "align-srr2589044",
+    "bam-srr2589044",
+    "pileup-srr2589044",
+    "call-srr2589044",
+    "filter-srr2589044",
+    "summary"
+  ],
+  "dependencies": {
+    "index": [],
+    "extract-srr2584866": [],
+    "align-srr2584866": [
+      "index",
+      "extract-srr2584866"
+    ],
+    "bam-srr2584866": [
+      "align-srr2584866"
+    ],
+    "pileup-srr2584866": [
+      "bam-srr2584866",
+      "index"
+    ],
+    "call-srr2584866": [
+      "pileup-srr2584866"
+    ],
+    "filter-srr2584866": [
+      "call-srr2584866"
+    ],
+    "extract-srr2589044": [],
+    "align-srr2589044": [
+      "index",
+      "extract-srr2589044"
+    ],
+    "bam-srr2589044": [
+      "align-srr2589044"
+    ],
+    "pileup-srr2589044": [
+      "bam-srr2589044",
+      "index"
+    ],
+    "call-srr2589044": [
+      "pileup-srr2589044"
+    ],
+    "filter-srr2589044": [
+      "call-srr2589044"
+    ],
+    "summary": [
+      "filter-srr2584866",
+      "call-srr2584866",
+      "bam-srr2584866",
+      "extract-srr2584866",
+      "pileup-srr2584866",
+      "filter-srr2589044",
+      "call-srr2589044",
+      "bam-srr2589044",
+      "extract-srr2589044",
+      "pileup-srr2589044",
+      "index"
+    ]
+  },
+  "artifacts": [
+    "variant-results.tar.gz",
+    "variant-summary.json",
+    "variant-positions.tsv",
+    "variant-summary.svg"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "experimentId": "c7f7136f-b7ee-4280-b38e-706b81ad9695",
+  "version": {
+    "id": "e0cc7ac2-99b0-451f-8043-22fac24eef98",
+    "workflowId": "0e8f2db1-cace-467c-b7f5-ca4940c1f7cf",
+    "number": 1,
+    "message": "Measured PyCBC analysis of full 4096s public H1/L1 observations: nine native activities, 66 physical templates, independent matched-filter validation and actual scientific figures. Targeted known-event reanalysis; no calibrated significance claim.",
+    "hash": "57935df92d82b3cdd676b0c9368b9b6a64477f7a9b904aebfc3b768dcc4cf2c5",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "76c93d7b-fbf5-4760-9d94-0537a03335f5",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-pycbc",
+  "image": "hub.akoflow.com/akoflow-examples/pycbc@sha256:43c41477e1dd556ab921f1832b3f638e60f49dd3f1b25d2a214f61308027227a",
+  "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+  "visualCount": 2
+}

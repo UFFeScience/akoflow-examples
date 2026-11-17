@@ -1,0 +1,72 @@
+{
+  "slug": "somospie",
+  "title": "SOMOSPIE \u2014 Soil Moisture Inference",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "acquire",
+    "moisture",
+    "mosaic",
+    "terrain",
+    "train-table",
+    "eval-table",
+    "train-knn",
+    "predict-knn",
+    "train-rf",
+    "predict-rf",
+    "diagnostics",
+    "package"
+  ],
+  "dependencies": {
+    "acquire": [],
+    "moisture": [
+      "acquire"
+    ],
+    "mosaic": [
+      "acquire"
+    ],
+    "terrain": [
+      "mosaic"
+    ],
+    "train-table": [
+      "moisture",
+      "terrain"
+    ],
+    "eval-table": [
+      "terrain"
+    ],
+    "train-knn": [
+      "train-table"
+    ],
+    "predict-knn": [
+      "train-knn",
+      "eval-table"
+    ],
+    "train-rf": [
+      "train-table"
+    ],
+    "predict-rf": [
+      "train-rf",
+      "eval-table"
+    ],
+    "diagnostics": [
+      "train-knn",
+      "predict-knn",
+      "train-rf",
+      "predict-rf",
+      "moisture",
+      "terrain",
+      "train-table",
+      "eval-table"
+    ],
+    "package": [
+      "diagnostics"
+    ]
+  },
+  "artifacts": [
+    "somospie-results.tar.gz",
+    "somospie-summary.json",
+    "published-soil-moisture-maps.png",
+    "published-heldout-diagnostics.png"
+  ]
+}

@@ -1,0 +1,3243 @@
+{
+  "activityCount": 4,
+  "image": "ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79",
+  "imageId": "sha256:edb949835c96cf793c9ef21009d583bb7b93cb845df784ac0e5221d1b9b23acb",
+  "observedAt": "2026-11-15T21:24:21.059164+00:00",
+  "planId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619",
+  "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+  "status": "completed",
+  "workflowId": "rnaseq-local-5c8f15ca6f",
+  "completedActivityCount": 4,
+  "projection": {
+    "activities": [
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-acquire",
+        "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777618.955874,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777618.955874,
+        "startedAt": 1794777619.2068129,
+        "finishedAt": 1794777664.1681638,
+        "runtimeSeconds": 44.96135091781616,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "rnaseq-local"
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-pipeline",
+        "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777666.186129,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777666.186129,
+        "startedAt": 1794777667.050059,
+        "finishedAt": 1794777779.7023745,
+        "runtimeSeconds": 112.65231537818909,
+        "queueSeconds": 0,
+        "transferSeconds": 0.31041383743286133,
+        "transferBytes": 52439334,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.5194549560546875,
+          "preparationFinishedAt": 1794777666.5306041,
+          "preparationStartedAt": 1794777666.2201903,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011462688446044922,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 0.31041383743286133,
+          "transferWorkSeconds": 0.31041383743286133
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-visuals",
+        "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777781.0723772,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777781.0723772,
+        "startedAt": 1794777784.7743232,
+        "finishedAt": 1794777841.4494505,
+        "runtimeSeconds": 56.675127267837524,
+        "queueSeconds": 0,
+        "transferSeconds": 1.2032430171966553,
+        "transferBytes": 378641787,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 2.265348196029663,
+          "preparationFinishedAt": 1794777782.508975,
+          "preparationStartedAt": 1794777781.305732,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.08925747871398926,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 1.2032430171966553,
+          "transferWorkSeconds": 1.2032430171966553
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-package",
+        "activityId": "rnaseq-local-5c8f15ca6f-package",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777843.4152176,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777843.4152176,
+        "startedAt": 1794777848.1609504,
+        "finishedAt": 1794777848.5400712,
+        "runtimeSeconds": 0.3791208267211914,
+        "queueSeconds": 0,
+        "transferSeconds": 1.9962072372436523,
+        "transferBytes": 701848281,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 2.7128350734710693,
+          "preparationFinishedAt": 1794777845.4481153,
+          "preparationStartedAt": 1794777843.451908,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012128353118896484,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 1.9962072372436523,
+          "transferWorkSeconds": 1.9962072372436523
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-acquire",
+        "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777618.955874,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777618.955874,
+        "startedAt": 1794777619.2068129,
+        "finishedAt": 1794777664.1681638,
+        "runtimeSeconds": 44.96135091781616,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "rnaseq-local"
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-pipeline",
+        "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777666.186129,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777666.186129,
+        "startedAt": 1794777667.050059,
+        "finishedAt": 1794777779.7023745,
+        "runtimeSeconds": 112.65231537818909,
+        "queueSeconds": 0,
+        "transferSeconds": 0.31041383743286133,
+        "transferBytes": 52439334,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.5194549560546875,
+          "preparationFinishedAt": 1794777666.5306041,
+          "preparationStartedAt": 1794777666.2201903,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011462688446044922,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 0.31041383743286133,
+          "transferWorkSeconds": 0.31041383743286133
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-visuals",
+        "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777781.0723772,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777781.0723772,
+        "startedAt": 1794777784.7743232,
+        "finishedAt": 1794777841.4494505,
+        "runtimeSeconds": 56.675127267837524,
+        "queueSeconds": 0,
+        "transferSeconds": 1.2032430171966553,
+        "transferBytes": 378641787,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 2.265348196029663,
+          "preparationFinishedAt": 1794777782.508975,
+          "preparationStartedAt": 1794777781.305732,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.08925747871398926,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 1.2032430171966553,
+          "transferWorkSeconds": 1.2032430171966553
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "planAssignmentId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619-rnaseq-local-5c8f15ca6f-package",
+        "activityId": "rnaseq-local-5c8f15ca6f-package",
+        "plannedResourceId": "rnaseq-local-docker",
+        "allocatedResourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794777843.4152176,
+        "dataReadyAt": 0,
+        "queuedAt": 1794777843.4152176,
+        "startedAt": 1794777848.1609504,
+        "finishedAt": 1794777848.5400712,
+        "runtimeSeconds": 0.3791208267211914,
+        "queueSeconds": 0,
+        "transferSeconds": 1.9962072372436523,
+        "transferBytes": 701848281,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 2.7128350734710693,
+          "preparationFinishedAt": 1794777845.4481153,
+          "preparationStartedAt": 1794777843.451908,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.012128353118896484,
+          "runtimeId": "rnaseq-local",
+          "transferElapsedSeconds": 1.9962072372436523,
+          "transferWorkSeconds": 1.9962072372436523
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package-0",
+        "planId": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-package",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794777843.451908,
+        "finishedAt": 1794777845.4481153,
+        "durationSeconds": 1.9962072372436523,
+        "transferredBytes": 701848281,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-package",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 18,
+          "sshChannelWaitSeconds": 5.76e-07,
+          "rsyncExecutionSeconds": 1.195473019,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 701848281,
+        "filesTransferred": 18
+      },
+      {
+        "id": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-0",
+        "planId": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794777666.2201903,
+        "finishedAt": 1794777666.5306041,
+        "durationSeconds": 0.31041383743286133,
+        "transferredBytes": 52439334,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 1.281e-06,
+          "rsyncExecutionSeconds": 0.167684989,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 52439334,
+        "filesTransferred": 3
+      },
+      {
+        "id": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-0",
+        "planId": "transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794777781.305732,
+        "finishedAt": 1794777782.508975,
+        "durationSeconds": 1.2032430171966553,
+        "transferredBytes": 378641787,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 13,
+          "sshChannelWaitSeconds": 9.959999999999999e-07,
+          "rsyncExecutionSeconds": 0.729181262,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 378641787,
+        "filesTransferred": 13
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T21:24:20.633249052Z"
+    },
+    "dataLocations": [
+      {
+        "id": "afb6b29c807d2e663df07e0ddbc701e8",
+        "dataObjectInstanceId": "fec4dc4d48f78d12310504a22a5cdc9f",
+        "storageResourceId": "b3b482c071700d2f4cfcb780b20bd2d3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire/acquisition.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ef0b9c4a93de9f7d78e2fefa3ffcab96",
+        "dataObjectInstanceId": "cda6453631ecb838abd3cce08ef4e06c",
+        "storageResourceId": "b3b482c071700d2f4cfcb780b20bd2d3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire/observations.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "11e672676e484b66ac7864a48b4fde1f",
+        "dataObjectInstanceId": "394138b48f28f1d7b67595c360f87eec",
+        "storageResourceId": "b3b482c071700d2f4cfcb780b20bd2d3",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire/stage-acquire.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b51adc4d9aaeefefb00191254f795932",
+        "dataObjectInstanceId": "2b7c0d9be73972140fec74f80dc23de4",
+        "storageResourceId": "742af80ca7c3f36a012adf754f18728b",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package/published-library-qc.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "a9f251d106301bb4915c0781b7db3bbe",
+        "dataObjectInstanceId": "176b8f89d3c3d2d1bc554ad44bad0c39",
+        "storageResourceId": "742af80ca7c3f36a012adf754f18728b",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package/published-transcript-abundance.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "21857162b72ed985188a079745553753",
+        "dataObjectInstanceId": "cfab420c44f209ff62b46a17fcb278f1",
+        "storageResourceId": "742af80ca7c3f36a012adf754f18728b",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package/rnaseq-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "91b44a7baa511dd5682a9d894244beea",
+        "dataObjectInstanceId": "ee99d03b3690e5e32d0c1b711a1f2a08",
+        "storageResourceId": "742af80ca7c3f36a012adf754f18728b",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package/rnaseq-summary.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "1b8b4db0adc6c09e04455b88f99e3150",
+        "dataObjectInstanceId": "472559396863db5bf66d964e4e4e8313",
+        "storageResourceId": "742af80ca7c3f36a012adf754f18728b",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package/stage-package.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "abf634221b22bcd2f51ce36a3d632bbc",
+        "dataObjectInstanceId": "0ef994166f960ae85187d802de28055d",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/.nextflow.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "38ceb40d714b0ffb8f1a03c17294c4b6",
+        "dataObjectInstanceId": "816e4cce34731fb5bd5700ce3a8f2689",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/nextflow-console.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "41e5a770880591476dab8ad3da5e002f",
+        "dataObjectInstanceId": "f510d559bbb1e6a58ec8f0b65552ba9c",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/nextflow-report.html",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "9c89e70c69b3a9b384d319b6f29227f1",
+        "dataObjectInstanceId": "14abd87b0eb19e5a747e0e620ac5ea05",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/nextflow-timeline.html",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "96919951acf2e203ea20a3cb055e7cb7",
+        "dataObjectInstanceId": "60dc5fa3fe04fa4b382003873d1fd77d",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/nextflow-trace.tsv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "54cc60585743f58129b9f5f2c0bfc368",
+        "dataObjectInstanceId": "f7e7357916a6b9e427fe1afff95b63ed",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/params.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "bf87d0f17585fdd6a30e801a2ab77db7",
+        "dataObjectInstanceId": "c34749c2b6c6cb9430d1fce9d020d50e",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/pipeline-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "af685141072df351225217cf5a092333",
+        "dataObjectInstanceId": "eaebb02facb0d3ea2461a3cba2694464",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/pipeline-run.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "7d13c5778bfe29db0ab8bd8ce366884b",
+        "dataObjectInstanceId": "6f8c7eb62fa76b0fe64c1d38f911b7f1",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/samplesheet.csv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "11dbf50df1d226fa019d75ae58ffa369",
+        "dataObjectInstanceId": "4f99465a349a26d065d045ace9f7e460",
+        "storageResourceId": "367c47545e42247c046f2790e744bc98",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline/stage-pipeline.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "6021ee7f46f128ea95fd0bb34b500014",
+        "dataObjectInstanceId": "a891ca359a3e04ee59786d96d2b8a1d5",
+        "storageResourceId": "711a1fdf99249b8d6e9756f47af35f61",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals/derived-results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "39c403ef2169d21a4be569db03dd7d84",
+        "dataObjectInstanceId": "1bb9ec926124b56e902f8dcdb586e51a",
+        "storageResourceId": "711a1fdf99249b8d6e9756f47af35f61",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals/derived-summary.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "d973f4a67eefbb026f383695ac674b93",
+        "dataObjectInstanceId": "d48bd697176a40592b5142801cc99033",
+        "storageResourceId": "711a1fdf99249b8d6e9756f47af35f61",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals/library-qc.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ff498c3e493781008f2ad06f16b4186d",
+        "dataObjectInstanceId": "6b11904b47582fec943a8a249bebd263",
+        "storageResourceId": "711a1fdf99249b8d6e9756f47af35f61",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals/stage-visuals.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "68bf31cc2219b00437781ab6f9a55172",
+        "dataObjectInstanceId": "7c4b2fb566635ec130a6c6002d960be6",
+        "storageResourceId": "711a1fdf99249b8d6e9756f47af35f61",
+        "resourceId": "rnaseq-local-docker",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals/transcript-abundance.png",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "fec4dc4d48f78d12310504a22a5cdc9f",
+        "dataObjectId": "fac7d14d1ec21b8a4f256ad3969224d3",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "attempt": 1,
+        "relativePath": "acquisition.json",
+        "sizeBytes": 1720,
+        "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "cda6453631ecb838abd3cce08ef4e06c",
+        "dataObjectId": "96067369ef8d047b1fd9c5386d678ed7",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "attempt": 1,
+        "relativePath": "observations.tar.gz",
+        "sizeBytes": 52437566,
+        "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "394138b48f28f1d7b67595c360f87eec",
+        "dataObjectId": "6046c5078e84ec49f7eda02d4f5fea45",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "attempt": 1,
+        "relativePath": "stage-acquire.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "2b7c0d9be73972140fec74f80dc23de4",
+        "dataObjectId": "5e0079c8ff8ba24db27fb3e194dceb84",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "attempt": 1,
+        "relativePath": "published-library-qc.png",
+        "sizeBytes": 47638,
+        "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "176b8f89d3c3d2d1bc554ad44bad0c39",
+        "dataObjectId": "942e520ec38c161aee9803b560c3dba6",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "attempt": 1,
+        "relativePath": "published-transcript-abundance.png",
+        "sizeBytes": 144179,
+        "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "cfab420c44f209ff62b46a17fcb278f1",
+        "dataObjectId": "be008f960aff2222ba4a26da5ab12f04",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "attempt": 1,
+        "relativePath": "rnaseq-results.tar.gz",
+        "sizeBytes": 322975673,
+        "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "ee99d03b3690e5e32d0c1b711a1f2a08",
+        "dataObjectId": "bf4358dafc0216216d924d27992e5a2a",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "attempt": 1,
+        "relativePath": "rnaseq-summary.json",
+        "sizeBytes": 38956,
+        "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "472559396863db5bf66d964e4e4e8313",
+        "dataObjectId": "ba06153688cea11f2744b8e251d214a5",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "attempt": 1,
+        "relativePath": "stage-package.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "0ef994166f960ae85187d802de28055d",
+        "dataObjectId": "d72d70ffbac700b3975efbfd3cc4c324",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": ".nextflow.log",
+        "sizeBytes": 93572,
+        "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "816e4cce34731fb5bd5700ce3a8f2689",
+        "dataObjectId": "e882c4df4bbdbd02d69206d2c8fb2c53",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-console.log",
+        "sizeBytes": 6250,
+        "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f510d559bbb1e6a58ec8f0b65552ba9c",
+        "dataObjectId": "e2acce585deed6cfde938ca10fdc66dc",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-report.html",
+        "sizeBytes": 3028909,
+        "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "14abd87b0eb19e5a747e0e620ac5ea05",
+        "dataObjectId": "df085b893655f264eae70e362a98946d",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-timeline.html",
+        "sizeBytes": 256731,
+        "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "60dc5fa3fe04fa4b382003873d1fd77d",
+        "dataObjectId": "c51873ba9f0d9b1b17ed00856d1c2f35",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-trace.tsv",
+        "sizeBytes": 3058,
+        "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f7e7357916a6b9e427fe1afff95b63ed",
+        "dataObjectId": "23aff365ce12215aae232d34cb8063a5",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "params.json",
+        "sizeBytes": 878,
+        "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "c34749c2b6c6cb9430d1fce9d020d50e",
+        "dataObjectId": "e0b223a971b995b0450ac8c72ffe3853",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "pipeline-results.tar.gz",
+        "sizeBytes": 322811258,
+        "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "eaebb02facb0d3ea2461a3cba2694464",
+        "dataObjectId": "e72f51b1502b9bfb8504bb507d4d72fd",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "pipeline-run.json",
+        "sizeBytes": 1543,
+        "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "6f8c7eb62fa76b0fe64c1d38f911b7f1",
+        "dataObjectId": "52be1855cd2d7e60437c80b085ad7efc",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "samplesheet.csv",
+        "sizeBytes": 205,
+        "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "4f99465a349a26d065d045ace9f7e460",
+        "dataObjectId": "bf4a409a6d1423fae85c1a912eeeeca1",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "attempt": 1,
+        "relativePath": "stage-pipeline.json",
+        "sizeBytes": 49,
+        "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "a891ca359a3e04ee59786d96d2b8a1d5",
+        "dataObjectId": "a2a3a1a03d0a92e8964a668e03f88c99",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "attempt": 1,
+        "relativePath": "derived-results.tar.gz",
+        "sizeBytes": 322975673,
+        "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "1bb9ec926124b56e902f8dcdb586e51a",
+        "dataObjectId": "f0a0ad71adebdbafd1f5fe5ce6068b86",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "attempt": 1,
+        "relativePath": "derived-summary.json",
+        "sizeBytes": 38956,
+        "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "d48bd697176a40592b5142801cc99033",
+        "dataObjectId": "3b7511ce679e69745f3db2e65e960112",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "attempt": 1,
+        "relativePath": "library-qc.png",
+        "sizeBytes": 47638,
+        "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "6b11904b47582fec943a8a249bebd263",
+        "dataObjectId": "760b891ac508c6739a7681d7cd62e8d3",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "attempt": 1,
+        "relativePath": "stage-visuals.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "7c4b2fb566635ec130a6c6002d960be6",
+        "dataObjectId": "8b349705ccbdc8511c5be6be5d0c8481",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "attempt": 1,
+        "relativePath": "transcript-abundance.png",
+        "sizeBytes": 144179,
+        "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "sourceResourceId": "rnaseq-local-docker",
+        "targetResourceId": "rnaseq-local-docker",
+        "bytes": 52439334,
+        "startedAt": 1794777666.2201903,
+        "finishedAt": 1794777666.5306041,
+        "durationSeconds": 0.31041383743286133,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 1.281e-06,
+          "rsyncExecutionSeconds": 0.167684989,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 52439334
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "sourceResourceId": "rnaseq-local-docker",
+        "targetResourceId": "rnaseq-local-docker",
+        "bytes": 378641787,
+        "startedAt": 1794777781.305732,
+        "finishedAt": 1794777782.508975,
+        "durationSeconds": 1.2032430171966553,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 13,
+          "sshChannelWaitSeconds": 9.959999999999999e-07,
+          "rsyncExecutionSeconds": 0.729181262,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 378641787
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package-0",
+        "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "sourceResourceId": "rnaseq-local-docker",
+        "targetResourceId": "rnaseq-local-docker",
+        "bytes": 701848281,
+        "startedAt": 1794777843.451908,
+        "finishedAt": 1794777845.4481153,
+        "durationSeconds": 1.9962072372436523,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "consumerActivityId": "rnaseq-local-5c8f15ca6f-package",
+          "sourceResourceId": "rnaseq-local-docker",
+          "targetResourceId": "rnaseq-local-docker",
+          "sourceEnvironmentId": "rnaseq-v1",
+          "targetEnvironmentId": "rnaseq-v1",
+          "filesTransferred": 18,
+          "sshChannelWaitSeconds": 5.76e-07,
+          "rsyncExecutionSeconds": 1.195473019,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 701848281
+      }
+    ],
+    "events": [
+      {
+        "id": "431d711f324db298ae788455eee72192",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619"
+        },
+        "occurredAt": "2026-11-15T21:20:18.86087441Z"
+      },
+      {
+        "id": "089521e84c4bec4f84da8a45397fcfd9",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:20:21.06771512Z"
+      },
+      {
+        "id": "02bb89ec2800917c1269740b17b8a9ed",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 44.96135091781616,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:21:06.17406876Z"
+      },
+      {
+        "id": "7b3107e62be86c51c924bfd4a2447cba",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:21:08.585610749Z"
+      },
+      {
+        "id": "912b17be538be69e9ea87c33da114899",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 112.65231537818909,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:23:01.019416464Z"
+      },
+      {
+        "id": "6aa5578827fc5d0c95a882810bb5af27",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:23:06.315353681Z"
+      },
+      {
+        "id": "ba69d0ee65900d3328028ecc7428b57a",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 56.675127267837524,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:24:03.40298262Z"
+      },
+      {
+        "id": "a3996f2fd9cd8fea19a6d8ff528c28e3",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:24:10.016680604Z"
+      },
+      {
+        "id": "f0516a24df0bbe8c077d1e3c1e7064bd",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package",
+        "payload": {
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "attempt": 1,
+          "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "failureReason": "",
+          "runtimeId": "rnaseq-local",
+          "runtimeSeconds": 0.3791208267211914,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:24:11.406213645Z"
+      },
+      {
+        "id": "e27de1aece5b978ce1f85909c8ef5b7f",
+        "eventType": "execution.run.completed",
+        "aggregateType": "execution_run",
+        "aggregateId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "payload": {
+          "cost": 0,
+          "makespanSeconds": 229.33325839042664
+        },
+        "occurredAt": "2026-11-15T21:24:11.41937135Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "85f70955b371c17ca78a78adeab8cc436f8161aafdfb83b5bad58394f81c98e3",
+        "status": "completed",
+        "startedAt": 1794777619.2068129,
+        "finishedAt": 1794777664.1681638,
+        "exitCode": 0,
+        "log": "Verified full scientific input: SRR10143877.fastq.gz\nVerified full scientific input: genome.fa.gz\nVerified full scientific input: transcripts.fa.gz\nVerified full scientific input: genes.gtf.gz\n[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire",
+          "startedAt": 1794777619.2068129,
+          "finishedAt": 1794777664.1681638,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "acquisition.json",
+              "change": "created",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777664128747215
+            },
+            {
+              "path": "observations.tar.gz",
+              "change": "created",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777664123747097
+            },
+            {
+              "path": "stage-acquire.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777664128747215
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777664128747215
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777664123747097
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777664128747215
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794777619.2068129,
+              "finishedAt": 1794777664.1681638,
+              "durationSeconds": 44.96135091781616
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 3,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 52439334
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire",
+          "dockerMetricCPUSeconds": 0.40030053579807284,
+          "dockerMetricObservedAt": 1794777663.301161,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-acquire",
+          "submittedAt": 1794777619.2068129
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-package",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "1768efd99c7d992763864b440450adb8ff7175d1fb4a4318b40661fdfb2dc841",
+        "status": "completed",
+        "startedAt": 1794777848.1609504,
+        "finishedAt": 1794777848.5400712,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package",
+          "startedAt": 1794777848.1609504,
+          "finishedAt": 1794777848.5400712,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "published-library-qc.png",
+              "change": "created",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "published-transcript-abundance.png",
+              "change": "created",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "rnaseq-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "rnaseq-summary.json",
+              "change": "created",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777848379078387
+            },
+            {
+              "path": "stage-package.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "modifiedUnixNano": 1794777848498081193
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777844961997830
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777844961997830
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "library-qc.png",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777845216003818
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777845217003841
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "transcript-abundance.png",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777845406008297
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777844961997830
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777844961997830
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "library-qc.png",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777845183003040
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777845185003087
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777845216003818
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777845217003841
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "published-library-qc.png",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "published-transcript-abundance.png",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "rnaseq-results.tar.gz",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "rnaseq-summary.json",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777848379078387
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-package.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "modifiedUnixNano": 1794777848498081193
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794777845406008297
+            },
+            {
+              "path": "transcript-abundance.png",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777845406008297
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794777848.1609504,
+              "finishedAt": 1794777848.5400712,
+              "durationSeconds": 0.3791208267211914
+            }
+          ],
+          "summary": {
+            "initialFiles": 18,
+            "finalFiles": 23,
+            "createdFiles": 5,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 323206494
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794777848.1609585,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package",
+          "submittedAt": 1794777848.1609504
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "3c2d8b8029172797ea0e406d1a47838a7a2703f00450a20fb4e331528946867c",
+        "status": "completed",
+        "startedAt": 1794777667.050059,
+        "finishedAt": 1794777779.7023745,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline",
+          "startedAt": 1794777667.050059,
+          "finishedAt": 1794777779.7023745,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": ".nextflow.log",
+              "change": "created",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777728904266761
+            },
+            {
+              "path": "nextflow-console.log",
+              "change": "created",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777727579235641
+            },
+            {
+              "path": "nextflow-report.html",
+              "change": "created",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777728782263896
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "change": "created",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777728850265493
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "change": "created",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777727476233222
+            },
+            {
+              "path": "params.json",
+              "change": "created",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777669297868335
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777779565457674
+            },
+            {
+              "path": "pipeline-run.json",
+              "change": "created",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777729001269040
+            },
+            {
+              "path": "samplesheet.csv",
+              "change": "created",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777669297868335
+            },
+            {
+              "path": "stage-pipeline.json",
+              "change": "created",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777779659459886
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777666458801808
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777666488802511
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777666488802511
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777728904266761
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777666458801808
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777727579235641
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777728782263896
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777728850265493
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777727476233222
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777666488802511
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777669297868335
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777779565457674
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777729001269040
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777669297868335
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777666488802511
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777779659459886
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794777667.050059,
+              "finishedAt": 1794777779.7023745,
+              "durationSeconds": 112.65231537818909
+            }
+          ],
+          "summary": {
+            "initialFiles": 3,
+            "finalFiles": 13,
+            "createdFiles": 10,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 326202453
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline",
+          "dockerMetricCPUSeconds": 163.51862624075414,
+          "dockerMetricObservedAt": 1794777771.5564005,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline",
+          "submittedAt": 1794777667.050059
+        }
+      },
+      {
+        "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "externalId": "614fffbe64e98dbebfbbbbb613049a9db1897e4a93ea566069feadd3cab86506",
+        "status": "completed",
+        "startedAt": 1794777784.7743232,
+        "finishedAt": 1794777841.4494505,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "attempt": 1,
+          "runtime": "rnaseq-local",
+          "root": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals",
+          "startedAt": 1794777784.7743232,
+          "finishedAt": 1794777841.4494505,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "derived-results.tar.gz",
+              "change": "created",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777841310911764
+            },
+            {
+              "path": "derived-summary.json",
+              "change": "created",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777789879700380
+            },
+            {
+              "path": "library-qc.png",
+              "change": "created",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777789576693249
+            },
+            {
+              "path": "stage-visuals.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794777841355912825
+            },
+            {
+              "path": "transcript-abundance.png",
+              "change": "created",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777789477690919
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777782260521085
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777782260521085
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777782466525932
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 93572,
+              "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 1720,
+              "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "sizeBytes": 322975673,
+              "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "modifiedUnixNano": 1794777841310911764
+            },
+            {
+              "path": "derived-summary.json",
+              "sizeBytes": 38956,
+              "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "modifiedUnixNano": 1794777789879700380
+            },
+            {
+              "path": "library-qc.png",
+              "sizeBytes": 47638,
+              "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "modifiedUnixNano": 1794777789576693249
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 6250,
+              "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "modifiedUnixNano": 1794777782226520285
+            },
+            {
+              "path": "nextflow-report.html",
+              "sizeBytes": 3028909,
+              "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "sizeBytes": 256731,
+              "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "sizeBytes": 3058,
+              "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "modifiedUnixNano": 1794777782228520332
+            },
+            {
+              "path": "observations.tar.gz",
+              "sizeBytes": 52437566,
+              "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "modifiedUnixNano": 1794777782260521085
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 878,
+              "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "modifiedUnixNano": 1794777782260521085
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "sizeBytes": 322811258,
+              "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "pipeline-run.json",
+              "sizeBytes": 1543,
+              "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 205,
+              "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "stage-pipeline.json",
+              "sizeBytes": 49,
+              "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "modifiedUnixNano": 1794777782466525932
+            },
+            {
+              "path": "stage-visuals.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "modifiedUnixNano": 1794777841355912825
+            },
+            {
+              "path": "transcript-abundance.png",
+              "sizeBytes": 144179,
+              "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "modifiedUnixNano": 1794777789477690919
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794777784.7743232,
+              "finishedAt": 1794777841.4494505,
+              "durationSeconds": 56.675127267837524
+            }
+          ],
+          "summary": {
+            "initialFiles": 13,
+            "finalFiles": 18,
+            "createdFiles": 5,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 323206494
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals",
+          "dockerMetricCPUSeconds": 52.43247166223526,
+          "dockerMetricObservedAt": 1794777836.5396326,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals",
+          "submittedAt": 1794777784.7743232
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "schedulePlanId": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619",
+      "mode": "real",
+      "seed": 0,
+      "status": "completed",
+      "makespanSeconds": 229.33325839042664,
+      "cost": 0,
+      "activityCount": 4,
+      "completedActivityCount": 4,
+      "breakdown": {
+        "computeSeconds": 214.66791439056396,
+        "transferSeconds": 3.509864091873169,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 1132929402,
+      "kind": "workflow",
+      "title": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "workflowId": "rnaseq-local-5c8f15ca6f",
+      "workflowVersionId": "rnaseq-local-5c8f15ca6f-v1",
+      "workflowName": "rnaseq-local-5c8f15ca6f",
+      "environmentNames": [
+        "rnaseq local Docker"
+      ],
+      "startedAt": "2026-11-15T21:20:18Z",
+      "finishedAt": "2026-11-15T21:24:11Z"
+    },
+    "timeline": {
+      "startedAt": 1794777618,
+      "finishedAt": 1794777851,
+      "wallSeconds": 233,
+      "computeMakespanSeconds": 229.33325839042664,
+      "coveredWallSeconds": 224.23046207427979,
+      "unclassifiedWallSeconds": 8.769537925720215,
+      "totals": {
+        "resourceQueueSeconds": 0.5550453662872314,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 3.509864091873169,
+        "launchSeconds": 5.49763822555542,
+        "runtimeSeconds": 214.66791439056396,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777618.955874,
+          "finishedAt": 1794777619.2068129,
+          "durationSeconds": 0.25093889236450195
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-acquire:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794777619.2068129,
+          "finishedAt": 1794777664.1681638,
+          "durationSeconds": 44.96135091781616
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777666.186129,
+          "finishedAt": 1794777666.2201903,
+          "durationSeconds": 0.03406119346618652
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-0",
+          "category": "workspace-transfer",
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "transferId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794777666.2201903,
+          "finishedAt": 1794777666.5306041,
+          "durationSeconds": 0.31041383743286133
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:launch",
+          "category": "launch",
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794777666.5306041,
+          "finishedAt": 1794777667.050059,
+          "durationSeconds": 0.5194549560546875
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-pipeline:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794777667.050059,
+          "finishedAt": 1794777779.7023745,
+          "durationSeconds": 112.65231537818909
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777781.0723772,
+          "finishedAt": 1794777781.305732,
+          "durationSeconds": 0.23335480690002441
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-0",
+          "category": "workspace-transfer",
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "transferId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794777781.305732,
+          "finishedAt": 1794777782.508975,
+          "durationSeconds": 1.2032430171966553
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:launch",
+          "category": "launch",
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794777782.508975,
+          "finishedAt": 1794777784.7743232,
+          "durationSeconds": 2.265348196029663
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-visuals:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794777784.7743232,
+          "finishedAt": 1794777841.4494505,
+          "durationSeconds": 56.675127267837524
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:queue:0",
+          "category": "resource-queue",
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794777843.4152176,
+          "finishedAt": 1794777843.451908,
+          "durationSeconds": 0.036690473556518555
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package-0",
+          "category": "workspace-transfer",
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "transferId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:transfer-workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794777843.451908,
+          "finishedAt": 1794777845.4481153,
+          "durationSeconds": 1.9962072372436523
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:launch",
+          "category": "launch",
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794777845.4481153,
+          "finishedAt": 1794777848.1609504,
+          "durationSeconds": 2.7128350734710693
+        },
+        {
+          "id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330:rnaseq-local-5c8f15ca6f-package:runtime",
+          "category": "runtime",
+          "activityId": "rnaseq-local-5c8f15ca6f-package",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794777848.1609504,
+          "finishedAt": 1794777848.5400712,
+          "durationSeconds": 0.3791208267211914
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-acquire-rnaseq-local-5c8f15ca6f-pipeline",
+        "workspaceId": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-acquire",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "released": true,
+        "releasedAt": "2026-11-15T21:21:06.548732906Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline-rnaseq-local-5c8f15ca6f-visuals",
+        "workspaceId": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "released": true,
+        "releasedAt": "2026-11-15T21:23:02.646267578Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals-rnaseq-local-5c8f15ca6f-package",
+        "workspaceId": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "consumerActivityId": "rnaseq-local-5c8f15ca6f-package",
+        "released": true,
+        "releasedAt": "2026-11-15T21:24:05.537859344Z",
+        "releaseReason": "consumer workspace materialized"
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-acquire",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-acquire",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 3,
+        "sizeBytes": 52439334,
+        "inputBytes": 0,
+        "outputBytes": 52439334,
+        "reclaimedBytes": 52439334,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T21:20:18.87244647Z",
+        "sealedAt": "2026-11-15T21:21:06.158985235Z",
+        "releasedAt": "2026-11-15T21:21:06.602571941Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-package",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-package",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-package",
+        "driver": "local",
+        "state": "sealed",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "published-library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "published-transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            },
+            {
+              "path": "rnaseq-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "rnaseq-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            }
+          ],
+          "inputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            }
+          ],
+          "outputs": [
+            {
+              "path": "published-library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "published-transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            },
+            {
+              "path": "rnaseq-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "rnaseq-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 5,
+        "sizeBytes": 323206494,
+        "inputBytes": 701848281,
+        "outputBytes": 323206494,
+        "reclaimedBytes": 701848281,
+        "releaseReason": "inherited inputs pruned",
+        "createdAt": "2026-11-15T21:20:18.87244647Z",
+        "sealedAt": "2026-11-15T21:24:10.843725782Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-pipeline",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-pipeline",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "inputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ]
+        },
+        "fileCount": 13,
+        "sizeBytes": 378641787,
+        "inputBytes": 52439334,
+        "outputBytes": 326202453,
+        "reclaimedBytes": 378641787,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T21:20:18.87244647Z",
+        "sealedAt": "2026-11-15T21:23:00.880761574Z",
+        "releasedAt": "2026-11-15T21:23:02.879994625Z"
+      },
+      {
+        "id": "workspace-rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330-rnaseq-local-5c8f15ca6f-visuals",
+        "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+        "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+        "environmentId": "rnaseq-v1",
+        "resourceId": "rnaseq-local-docker",
+        "runtimeId": "rnaseq-local",
+        "uri": "file:///akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals",
+        "executionPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals",
+        "observationPath": "/akoflow/workspace/runs/rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330/rnaseq-local-5c8f15ca6f-visuals",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "final": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            }
+          ],
+          "inputs": [
+            {
+              "path": ".nextflow.log",
+              "digest": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+              "sizeBytes": 93572
+            },
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+              "sizeBytes": 1720
+            },
+            {
+              "path": "nextflow-console.log",
+              "digest": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+              "sizeBytes": 6250
+            },
+            {
+              "path": "nextflow-report.html",
+              "digest": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+              "sizeBytes": 3028909
+            },
+            {
+              "path": "nextflow-timeline.html",
+              "digest": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+              "sizeBytes": 256731
+            },
+            {
+              "path": "nextflow-trace.tsv",
+              "digest": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+              "sizeBytes": 3058
+            },
+            {
+              "path": "observations.tar.gz",
+              "digest": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+              "sizeBytes": 52437566
+            },
+            {
+              "path": "params.json",
+              "digest": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+              "sizeBytes": 878
+            },
+            {
+              "path": "pipeline-results.tar.gz",
+              "digest": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+              "sizeBytes": 322811258
+            },
+            {
+              "path": "pipeline-run.json",
+              "digest": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+              "sizeBytes": 1543
+            },
+            {
+              "path": "samplesheet.csv",
+              "digest": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+              "sizeBytes": 205
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            },
+            {
+              "path": "stage-pipeline.json",
+              "digest": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+              "sizeBytes": 49
+            }
+          ],
+          "outputs": [
+            {
+              "path": "derived-results.tar.gz",
+              "digest": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+              "sizeBytes": 322975673
+            },
+            {
+              "path": "derived-summary.json",
+              "digest": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+              "sizeBytes": 38956
+            },
+            {
+              "path": "library-qc.png",
+              "digest": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+              "sizeBytes": 47638
+            },
+            {
+              "path": "stage-visuals.json",
+              "digest": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+              "sizeBytes": 48
+            },
+            {
+              "path": "transcript-abundance.png",
+              "digest": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+              "sizeBytes": 144179
+            }
+          ]
+        },
+        "fileCount": 18,
+        "sizeBytes": 701848281,
+        "inputBytes": 378641787,
+        "outputBytes": 323206494,
+        "reclaimedBytes": 701848281,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T21:20:18.87244647Z",
+        "sealedAt": "2026-11-15T21:24:03.388279768Z",
+        "releasedAt": "2026-11-15T21:24:05.645437657Z"
+      }
+    ]
+  }
+}

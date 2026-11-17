@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-variant-calling",
+  "experimentId": "11e14526-84c5-4814-b942-4fabcdc07b04",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "840afc82-c144-4178-a8ce-abf38ca35145",
+  "runId": "variant-calling-local-45b3727a54-run-20261115t185749.814980328",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/840afc82-c144-4178-a8ce-abf38ca35145/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/variant-calling:local-4733fd62b59887b9",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

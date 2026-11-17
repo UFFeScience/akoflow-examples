@@ -1,0 +1,3 @@
+id: orcasound-scope
+name: orcasound local scope
+environmentVersionIds: [orcasound-v1]

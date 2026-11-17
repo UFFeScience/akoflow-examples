@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-pycbc",
+  "experimentId": "f2f8d747-440c-44de-bac9-677e8045b0ef",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "7117fe91-1ecc-40f2-86a8-2f1c21bc2efe",
+  "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/7117fe91-1ecc-40f2-86a8-2f1c21bc2efe/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

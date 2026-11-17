@@ -1,0 +1,422 @@
+{
+  "id": "fb20fb215a236c399b17a3b90a9e6ef8eee5846ed74c381048406b2b82da4108",
+  "publication": {
+    "id": "1984f007-fe54-45e3-87c6-33b74e629f13",
+    "title": "RNA-seq \u2014 Transcript Abundance and Quality Control",
+    "slug": "scientific-workflows-rnaseq",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 4 completed activities.",
+    "readme": "# RNA-seq \u2014 Transcript Abundance and Quality Control\n\nRun the unmodified nf-core/rnaseq 3.27.0 pipeline (a1fcdddd3b826fe46eb46f0479f2ff8a7815af05, MIT) through Ak\u00f4Flow, using the official rapid_quant profile. The original source and license are under upstream/. Four outer activities acquire full observations, run the original Nextflow pipeline with its local executor and preinstalled original module environments, calculate scientific figures and retain final derived outputs. Internal Nextflow task counts/times are recorded separately; four outer activities do not mean the nf-core pipeline has only four tasks.\n\nThe real single-end yeast library SRR10143877 contains all 1,039,872 reads and 53,033,472 bases, with no read subsampling for quantification. Full Ensembl release 110 S288c R64-1-1 genome, transcriptome and annotations are frozen with all source lengths and SHA256/ENA MD5. This profile performs abundance estimation and QC for one library, not differential expression. Library type U assumes unstranded single-end reads; Salmon uses its default fragment-length prior rather than a length distribution measured from paired reads.\n\nThe scientific pipeline uses original FastQC, fastp trimming, reference preparation, Salmon indexing/quantification and MultiQC processes. Alignment-dependent stages are skipped by the official rapid_quant profile. Original modules execute directly inside the immutable Docker image using Nextflow's local executor, without nested Docker. Sixteen original environment recipes and exact resolved package URLs are retained for provenance. Only acquisition needs internet access after the execution image is prepared; Nextflow and nf-schema are preinstalled, institutional remote configs are disabled by upstream offline handling, and scientific input paths are local.\n\nPrepare with ./prepare.sh, check the contract with ./validate.sh -definition, run ./run.sh and validate with ./validate.sh. Native completion must be measured before scientific execution is claimed. Actual transcript abundance and full-library retention figures will be published with the completed run, all original pipeline reports/trace and tool versions.\n\nSources: https://github.com/nf-core/rnaseq/tree/a1fcdddd3b826fe46eb46f0479f2ff8a7815af05 ; https://www.ncbi.nlm.nih.gov/sra/SRX6871872 ; https://ftp.ensembl.org/pub/release-110/ .\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+  "workflowName": "rnaseq-local-5c8f15ca6f",
+  "yaml": "name: rnaseq-local-5c8f15ca6f\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - acquire\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: rnaseq-local\n            workspaceSeedPath: \"\"\n          name: acquire\n          runtime: rnaseq-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - pipeline\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n                    type: oci\n          cpuLimit: \"4\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"12884901888\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: rnaseq-local\n            workspaceSeedPath: \"\"\n          name: pipeline\n          runtime: rnaseq-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - visuals\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - pipeline\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: rnaseq-local\n            workspaceSeedPath: \"\"\n          name: visuals\n          runtime: rnaseq-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - package\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - visuals\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: rnaseq-local\n            workspaceSeedPath: \"\"\n          name: package\n          runtime: rnaseq-local\n    dataDependencies:\n        - consumerActivity: pipeline\n          logicalName: observations.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: visuals\n          logicalName: pipeline-results.tar.gz\n          producerActivity: pipeline\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-results.tar.gz\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: derived-summary.json\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: library-qc.png\n          producerActivity: visuals\n          sizeBytes: 1\n        - consumerActivity: package\n          logicalName: transcript-abundance.png\n          producerActivity: visuals\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "rnaseq-local-5c8f15ca6f-acquire",
+      "exitCode": 0,
+      "finishedAt": 1794777664.1681638,
+      "log": "Verified full scientific input: SRR10143877.fastq.gz\nVerified full scientific input: genome.fa.gz\nVerified full scientific input: transcripts.fa.gz\nVerified full scientific input: genes.gtf.gz\n[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794777619.2068129,
+      "status": "completed"
+    },
+    {
+      "activityId": "rnaseq-local-5c8f15ca6f-package",
+      "exitCode": 0,
+      "finishedAt": 1794777848.5400712,
+      "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794777848.1609504,
+      "status": "completed"
+    },
+    {
+      "activityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "exitCode": 0,
+      "finishedAt": 1794777779.7023745,
+      "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794777667.050059,
+      "status": "completed"
+    },
+    {
+      "activityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "exitCode": 0,
+      "finishedAt": 1794777841.4494505,
+      "log": "[AKOFLOW INFO] Activity started on runtime rnaseq-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794777784.7743232,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:5a62e073ffe779af1aa3336ae1b0ee940ecbe35d086eee8270f7ff8b8a320f26",
+      "dataObjectId": "fac7d14d1ec21b8a4f256ad3969224d3",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "fec4dc4d48f78d12310504a22a5cdc9f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+      "relativePath": "acquisition.json",
+      "sizeBytes": 1720
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:25f29da0c01d344e36e61267c947941f7821b01b358199ae5b12917be989204b",
+      "dataObjectId": "96067369ef8d047b1fd9c5386d678ed7",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "cda6453631ecb838abd3cce08ef4e06c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+      "relativePath": "observations.tar.gz",
+      "sizeBytes": 52437566
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+      "dataObjectId": "6046c5078e84ec49f7eda02d4f5fea45",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "394138b48f28f1d7b67595c360f87eec",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-acquire",
+      "relativePath": "stage-acquire.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+      "dataObjectId": "5e0079c8ff8ba24db27fb3e194dceb84",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "2b7c0d9be73972140fec74f80dc23de4",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+      "relativePath": "published-library-qc.png",
+      "sizeBytes": 47638
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+      "dataObjectId": "942e520ec38c161aee9803b560c3dba6",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "176b8f89d3c3d2d1bc554ad44bad0c39",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+      "relativePath": "published-transcript-abundance.png",
+      "sizeBytes": 144179
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+      "dataObjectId": "be008f960aff2222ba4a26da5ab12f04",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "cfab420c44f209ff62b46a17fcb278f1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+      "relativePath": "rnaseq-results.tar.gz",
+      "sizeBytes": 322975673
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+      "dataObjectId": "bf4358dafc0216216d924d27992e5a2a",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "ee99d03b3690e5e32d0c1b711a1f2a08",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+      "relativePath": "rnaseq-summary.json",
+      "sizeBytes": 38956
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:80717fe8f3d93d7a026213b2f82d226ca66e69f465dc68ce61e1de1e516fa3c9",
+      "dataObjectId": "ba06153688cea11f2744b8e251d214a5",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "472559396863db5bf66d964e4e4e8313",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-package",
+      "relativePath": "stage-package.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:fd4e3009868610886571bfb76cb791d4a0f33b992a8e0a9df6287458aa7d1ccd",
+      "dataObjectId": "d72d70ffbac700b3975efbfd3cc4c324",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "0ef994166f960ae85187d802de28055d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": ".nextflow.log",
+      "sizeBytes": 93572
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:802f3e92ac06bc1aed3f9248c2dd4169f07f46e0521559b954323b918c3c9219",
+      "dataObjectId": "e882c4df4bbdbd02d69206d2c8fb2c53",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "816e4cce34731fb5bd5700ce3a8f2689",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "nextflow-console.log",
+      "sizeBytes": 6250
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:de050a85ed2b36d5560d24133ad797ad6193e775ca75d9366ce126fc1558d051",
+      "dataObjectId": "e2acce585deed6cfde938ca10fdc66dc",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "f510d559bbb1e6a58ec8f0b65552ba9c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "nextflow-report.html",
+      "sizeBytes": 3028909
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4b7074ecdf67d452e35886fbb0e7866cb8e476bdc5c8de2306ae438eb6ce92e7",
+      "dataObjectId": "df085b893655f264eae70e362a98946d",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "14abd87b0eb19e5a747e0e620ac5ea05",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "nextflow-timeline.html",
+      "sizeBytes": 256731
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e9918e8e45c87ece24588eab3c543626f8a4133287e8bd547a344511616e8bfa",
+      "dataObjectId": "c51873ba9f0d9b1b17ed00856d1c2f35",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "60dc5fa3fe04fa4b382003873d1fd77d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "nextflow-trace.tsv",
+      "sizeBytes": 3058
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:cf4812c37678b7f3e1ca31de8c7e7db9fd3c3489e285ad3516ccfadcedf3ab3a",
+      "dataObjectId": "23aff365ce12215aae232d34cb8063a5",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "f7e7357916a6b9e427fe1afff95b63ed",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "params.json",
+      "sizeBytes": 878
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7d95fdf8106e71228cb8069f86cfbec448a98a30a23237e24cde31d9b18ea8b1",
+      "dataObjectId": "e0b223a971b995b0450ac8c72ffe3853",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "c34749c2b6c6cb9430d1fce9d020d50e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "pipeline-results.tar.gz",
+      "sizeBytes": 322811258
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:f928261067bd2eda49879170e12052358cadacae9caa6a000586ae9bf236191f",
+      "dataObjectId": "e72f51b1502b9bfb8504bb507d4d72fd",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "eaebb02facb0d3ea2461a3cba2694464",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "pipeline-run.json",
+      "sizeBytes": 1543
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:2bb1e671b9a0e37a98ba59dab1a41d8ca473b4d65114b22ec02ef2d5796e9b5a",
+      "dataObjectId": "52be1855cd2d7e60437c80b085ad7efc",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "6f8c7eb62fa76b0fe64c1d38f911b7f1",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "samplesheet.csv",
+      "sizeBytes": 205
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:7277db000063d642f8d7d78ddf4ce916fcd3f72c326fb64907f716a101d42d4e",
+      "dataObjectId": "bf4a409a6d1423fae85c1a912eeeeca1",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "4f99465a349a26d065d045ace9f7e460",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-pipeline",
+      "relativePath": "stage-pipeline.json",
+      "sizeBytes": 49
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:4a2cb82f75f7e55c247a2dff9773f2c34acc62b16171a368b42e6bffb48817e8",
+      "dataObjectId": "a2a3a1a03d0a92e8964a668e03f88c99",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "a891ca359a3e04ee59786d96d2b8a1d5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "relativePath": "derived-results.tar.gz",
+      "sizeBytes": 322975673
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c8598d6f84568cd2b72c1d8c6efce8b6800296d45b9462a19c95bf07191d2504",
+      "dataObjectId": "f0a0ad71adebdbafd1f5fe5ce6068b86",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "1bb9ec926124b56e902f8dcdb586e51a",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "relativePath": "derived-summary.json",
+      "sizeBytes": 38956
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:358aa0337ac743756b1a80b60c16dbfacc5a734135b66b1fdf1f033e62e012c7",
+      "dataObjectId": "3b7511ce679e69745f3db2e65e960112",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "d48bd697176a40592b5142801cc99033",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "relativePath": "library-qc.png",
+      "sizeBytes": 47638
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:6dcb03aa670bdef9f84a5bfa99fd7f0e9bea8d3fe832daa554c7ad98a885bb79",
+      "dataObjectId": "760b891ac508c6739a7681d7cd62e8d3",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "6b11904b47582fec943a8a249bebd263",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "relativePath": "stage-visuals.json",
+      "sizeBytes": 48
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:b6e6518be84e7b1d5c5ec5c13fe7abeca4193bcc92f6768df232789caf7858b9",
+      "dataObjectId": "8b349705ccbdc8511c5be6be5d0c8481",
+      "discovered": true,
+      "executionRunId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+      "id": "7c4b2fb566635ec130a6c6002d960be6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "rnaseq-local-5c8f15ca6f-visuals",
+      "relativePath": "transcript-abundance.png",
+      "sizeBytes": 144179
+    }
+  ],
+  "exportedAt": "2026-11-15T21:24:56.772350295Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "rnaseq-local-5c8f15ca6f",
+      "workflowVersionId": "rnaseq-local-5c8f15ca6f-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 4,
+      "redactionCount": 0,
+      "digest": "2ab58c32e9072efb11f766f60cc27e2c8f0ec99d623e8551791379f73e8fa403"
+    },
+    "diff": "--- v0/workflow.yaml\n+++ v1/workflow.yaml\n@@ -1 +1,137 @@\n+name: rnaseq-local-5c8f15ca6f\n+spec:\n+    activities:\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - acquire\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n+                    type: oci\n+          cpuLimit: \"1\"\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: rnaseq-local\n+            workspaceSeedPath: \"\"\n+          name: acquire\n+          runtime: rnaseq-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - pipeline\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n+                    type: oci\n+          cpuLimit: \"4\"\n+          dependsOn:\n+            - acquire\n+          memoryLimit: \"12884901888\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: rnaseq-local\n+            workspaceSeedPath: \"\"\n+          name: pipeline\n+          runtime: rnaseq-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - visuals\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - pipeline\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: rnaseq-local\n+            workspaceSeedPath: \"\"\n+          name: visuals\n+          runtime: rnaseq-local\n+        - command:\n+            arguments:\n+                - /app/scripts/run_stage.py\n+                - --stage\n+                - package\n+                - --output\n+                - .\n+            entrypoint: python3\n+            executable:\n+                delivery:\n+                    strategy: auto\n+                source:\n+                    reference: ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79\n+                    type: oci\n+          cpuLimit: \"1\"\n+          dependsOn:\n+            - visuals\n+          memoryLimit: \"2147483648\"\n+          metadata:\n+            expectedOutputs: null\n+            keepDisk: false\n+            mountPath: \"\"\n+            resourceSelector: \"\"\n+            runtime: rnaseq-local\n+            workspaceSeedPath: \"\"\n+          name: package\n+          runtime: rnaseq-local\n+    dataDependencies:\n+        - consumerActivity: pipeline\n+          logicalName: observations.tar.gz\n+          producerActivity: acquire\n+          sizeBytes: 1\n+        - consumerActivity: visuals\n+          logicalName: pipeline-results.tar.gz\n+          producerActivity: pipeline\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-results.tar.gz\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: derived-summary.json\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: library-qc.png\n+          producerActivity: visuals\n+          sizeBytes: 1\n+        - consumerActivity: package\n+          logicalName: transcript-abundance.png\n+          producerActivity: visuals\n+          sizeBytes: 1\n+    namespace: akoflow-examples\n+    storagePolicy: {}\n \n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:56d1eaf368898fa92cedf3f876e77951a34bee12aed5348dec500f6f6a69fcd8",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "rnaseq-local-5c8f15ca6f-manual-plan-20261115t212018.388721619",
+            "run_id": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330"
+          },
+          "status": "completed",
+          "durationSeconds": 229.33325839042664,
+          "metrics": {
+            "activity_count": 4,
+            "completed_activity_count": 4,
+            "computeSeconds": 214.66791439056396,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 229.33325839042664,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 4,
+            "queueSeconds": 0,
+            "transferSeconds": 3.509864091873169,
+            "transferred_bytes": 1132929402
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

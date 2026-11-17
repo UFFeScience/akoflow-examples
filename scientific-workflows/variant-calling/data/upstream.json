@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/pegasus-isi/variant-calling-pegasus-workflow",
+  "commit": "d8fdae78e564ee8eed98515ba86886d0c944e029",
+  "license": "Apache-2.0",
+  "baseImage": "pegasus/variant-calling@sha256:b38fb01e141061a12d13078accd2b116fb1a86081dc2b170658ff1c6f8737f6a",
+  "originalSamples": "tests/2/sra_ids.txt",
+  "adaptations": [
+    "Acquire complete ENA FASTQ mirrors of the same accessions during preparation, decompress offline instead of calling fasterq-dump over the network.",
+    "Use local Akoflow file handoffs instead of HTCondor/Pegasus/OSN staging.",
+    "Prepare the samtools FASTA index with the BWA reference-index activity rather than lazily in each mpileup.",
+    "Use .vcf filenames for the text VCF output originally named .bcf.",
+    "Add observed QC, reference-allele validation, a scientific vector visualization and a retained result archive.",
+    "Do not run upstream AMQP telemetry or email event hooks."
+  ],
+  "toolchain": {
+    "bwa": "0.7.17-r1188",
+    "samtools": "1.15.1",
+    "bcftools": "1.15.1",
+    "htslib": "1.15.1",
+    "sraTools": "3.0.0 (not used for the ENA acquisition adaptation)"
+  }
+}

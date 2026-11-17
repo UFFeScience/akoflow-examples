@@ -1,0 +1,73 @@
+{
+  "slug": "orcasound",
+  "title": "Orcasound \u2014 Hydrophone Audio and Orca Call Candidates",
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "stages": [
+    "acquire",
+    "convert-0",
+    "spectrogram-0",
+    "predict-0",
+    "convert-1",
+    "spectrogram-1",
+    "predict-1",
+    "convert-2",
+    "spectrogram-2",
+    "predict-2",
+    "merge",
+    "summary"
+  ],
+  "dependencies": {
+    "acquire": [],
+    "convert-0": [
+      "acquire"
+    ],
+    "spectrogram-0": [
+      "convert-0"
+    ],
+    "predict-0": [
+      "convert-0",
+      "acquire"
+    ],
+    "convert-1": [
+      "acquire"
+    ],
+    "spectrogram-1": [
+      "convert-1"
+    ],
+    "predict-1": [
+      "convert-1",
+      "acquire"
+    ],
+    "convert-2": [
+      "acquire"
+    ],
+    "spectrogram-2": [
+      "convert-2"
+    ],
+    "predict-2": [
+      "convert-2",
+      "acquire"
+    ],
+    "merge": [
+      "predict-0",
+      "predict-1",
+      "predict-2"
+    ],
+    "summary": [
+      "merge",
+      "spectrogram-0",
+      "spectrogram-1",
+      "spectrogram-2",
+      "convert-0",
+      "convert-1",
+      "convert-2"
+    ]
+  },
+  "artifacts": [
+    "orcasound-results.tar.gz",
+    "orcasound-summary.json",
+    "hydrophone-spectrograms.png",
+    "orca-confidence.svg"
+  ]
+}

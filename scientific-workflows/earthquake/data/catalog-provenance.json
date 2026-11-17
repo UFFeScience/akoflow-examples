@@ -1,0 +1,16 @@
+{
+  "source": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+  "parameters": [
+    "--region",
+    "california",
+    "--start-date",
+    "2000-01-01",
+    "--end-date",
+    "2025-12-31",
+    "--min-magnitude",
+    "3.0"
+  ],
+  "retrievedAt": "2026-11-15T17:19:34.200287+00:00",
+  "events": 12160,
+  "sha256": "86cbb0d325486e5a83c1338f98b6eac72aabbbec39fe62a78f90e40ab15b76f7"
+}

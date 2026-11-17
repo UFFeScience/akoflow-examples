@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/nf-core/rnaseq",
+  "version": "3.27.0",
+  "commit": "a1fcdddd3b826fe46eb46f0479f2ff8a7815af05",
+  "license": "MIT",
+  "nextflowConfigSHA256": "6cc9f85d4db8a630031ca3d13952d8b22b62f751dc5cb42039b65f890a83ad0d"
+}

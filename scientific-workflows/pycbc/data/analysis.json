@@ -1,0 +1,42 @@
+{
+  "sampleRate": 1024,
+  "masses": [
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70
+  ],
+  "approximant": "IMRPhenomD",
+  "flow": 20,
+  "fhigh": 300,
+  "threshold": 5.5,
+  "requiredDQ": [
+    "DATA",
+    "CBC_CAT1",
+    "CBC_CAT2"
+  ],
+  "timeSlidesSeconds": [
+    -10,
+    -5,
+    -2,
+    -1,
+    -0.5,
+    -0.2,
+    -0.1,
+    0.1,
+    0.2,
+    0.5,
+    1,
+    2,
+    5,
+    10
+  ],
+  "injectionMaskRequirement": "NO_CBC_HW_INJ; all other provided hardware-injection flags are preserved, not silently declared absent."
+}

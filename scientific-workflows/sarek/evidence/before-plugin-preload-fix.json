@@ -1,0 +1,1156 @@
+{
+  "activityCount": 4,
+  "image": "ghcr.io/uffescience/akoflow-examples/sarek:local-31bbc2dd906e7779",
+  "imageId": "sha256:31bbc2dd906e7779867bdcbc4ab59e0fb285938e16974f1730ab6ff091361b51",
+  "observedAt": "2026-11-15T21:58:26.476562+00:00",
+  "planId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388",
+  "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+  "status": "failed",
+  "workflowId": "sarek-local-51bd18f5e1",
+  "completedActivityCount": 1,
+  "projection": {
+    "activities": [
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "planAssignmentId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388-sarek-local-51bd18f5e1-acquire",
+        "activityId": "sarek-local-51bd18f5e1-acquire",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794779750.9542055,
+        "dataReadyAt": 0,
+        "queuedAt": 1794779750.9542055,
+        "startedAt": 1794779751.1945136,
+        "finishedAt": 1794779849.7827454,
+        "runtimeSeconds": 98.5882318019867,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sarek-local"
+        }
+      },
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "planAssignmentId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388-sarek-local-51bd18f5e1-pipeline",
+        "activityId": "sarek-local-51bd18f5e1-pipeline",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "failed",
+        "readyAt": 1794779853.604927,
+        "dataReadyAt": 0,
+        "queuedAt": 1794779853.604927,
+        "startedAt": 1794779862.3985786,
+        "finishedAt": 1794779881.582439,
+        "runtimeSeconds": 19.183860301971436,
+        "queueSeconds": 0,
+        "transferSeconds": 2.591085433959961,
+        "transferBytes": 946036003,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "failureReason": "local Docker container exited with code 1",
+        "metadata": {
+          "launchWaitSeconds": 6.168236017227173,
+          "preparationFinishedAt": 1794779856.2303426,
+          "preparationStartedAt": 1794779853.6392572,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011246919631958008,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.591085433959961,
+          "transferWorkSeconds": 2.591085433959961
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "planAssignmentId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388-sarek-local-51bd18f5e1-acquire",
+        "activityId": "sarek-local-51bd18f5e1-acquire",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794779750.9542055,
+        "dataReadyAt": 0,
+        "queuedAt": 1794779750.9542055,
+        "startedAt": 1794779751.1945136,
+        "finishedAt": 1794779849.7827454,
+        "runtimeSeconds": 98.5882318019867,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sarek-local"
+        }
+      },
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "planAssignmentId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388-sarek-local-51bd18f5e1-pipeline",
+        "activityId": "sarek-local-51bd18f5e1-pipeline",
+        "plannedResourceId": "sarek-local-docker",
+        "allocatedResourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "attempt": 1,
+        "status": "failed",
+        "readyAt": 1794779853.604927,
+        "dataReadyAt": 0,
+        "queuedAt": 1794779853.604927,
+        "startedAt": 1794779862.3985786,
+        "finishedAt": 1794779881.582439,
+        "runtimeSeconds": 19.183860301971436,
+        "queueSeconds": 0,
+        "transferSeconds": 2.591085433959961,
+        "transferBytes": 946036003,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "failureReason": "local Docker container exited with code 1",
+        "metadata": {
+          "launchWaitSeconds": 6.168236017227173,
+          "preparationFinishedAt": 1794779856.2303426,
+          "preparationStartedAt": 1794779853.6392572,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011246919631958008,
+          "runtimeId": "sarek-local",
+          "transferElapsedSeconds": 2.591085433959961,
+          "transferWorkSeconds": 2.591085433959961
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline-0",
+        "planId": "transfer-workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline-0",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-pipeline",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794779853.6392572,
+        "finishedAt": 1794779856.2303426,
+        "durationSeconds": 2.591085433959961,
+        "transferredBytes": 946036003,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sarek-local-51bd18f5e1-acquire",
+          "consumerActivityId": "sarek-local-51bd18f5e1-pipeline",
+          "sourceResourceId": "sarek-local-docker",
+          "targetResourceId": "sarek-local-docker",
+          "sourceEnvironmentId": "sarek-v1",
+          "targetEnvironmentId": "sarek-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 8.74e-07,
+          "rsyncExecutionSeconds": 1.6103834350000001,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 946036003,
+        "filesTransferred": 3
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T21:58:26.452267915Z"
+    },
+    "dataLocations": [
+      {
+        "id": "91c6859a3e1f0d3ddf98dd6bf4678d35",
+        "dataObjectInstanceId": "dba38d65c01562ec9c2f9b02967e13dc",
+        "storageResourceId": "76a75f62c638c3e69dba4cd6f8f06bf2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire/acquisition.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b2908fd407aa56d7959698cc33cc7078",
+        "dataObjectInstanceId": "34bc20012db9c24241433e571ee03f87",
+        "storageResourceId": "76a75f62c638c3e69dba4cd6f8f06bf2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire/observations.tar",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b12b55f4a460e0aa30a91abbf87a9988",
+        "dataObjectInstanceId": "f145a07f6256711ddd958e5411765d6b",
+        "storageResourceId": "76a75f62c638c3e69dba4cd6f8f06bf2",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire/stage-acquire.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "0657543164e2ea67cd4b641296ec8057",
+        "dataObjectInstanceId": "db0ddaac00e7f6904cc3a39d77690ea4",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/.nextflow.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ca1e3cbc8ee1a75690667b493b802f59",
+        "dataObjectInstanceId": "bd5a184fb2a1c754ecc8c7ee43111a42",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/nextflow-console.log",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "442332aa70cc1a9193ea42a2c26dc63c",
+        "dataObjectInstanceId": "4e9bd10791e83756e5282ad687cddae1",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/observations/HG002.chr20-10-11Mb.bam",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "c0caaa1c11b156a3f6c6b11caf07ac90",
+        "dataObjectInstanceId": "f8f968948364b5e0e35624045f7111b8",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/observations/HG002.chr20-10-11Mb.bam.bai",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "f96e42711fcd3030f1aec5f189370e0a",
+        "dataObjectInstanceId": "ff27464963e9bbba24598377b831853f",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/observations/intervals.bed",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "1e1040749ed9adb517e64e40a0e4c8da",
+        "dataObjectInstanceId": "09ecc2348a0081a2dd749b569443627e",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/observations/reference.fa",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "907706dedbf29345b052a763cffa9cc4",
+        "dataObjectInstanceId": "60f204100e74014d45b1384b18095240",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/observations/reference.fa.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "84273a03931fd669ff4fb21c174a6d17",
+        "dataObjectInstanceId": "47994f630d006397d0542a8c007983dd",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/params.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "f300708dc1ffc737c41b2ba7843ded71",
+        "dataObjectInstanceId": "2bcaf164fac606e97d524bd85073f186",
+        "storageResourceId": "617a75b1affcb734a0d059275da6e45e",
+        "resourceId": "sarek-local-docker",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline/samplesheet.csv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "dba38d65c01562ec9c2f9b02967e13dc",
+        "dataObjectId": "d1ffa6c2bcd9b545b38e9c1b7c382643",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-acquire",
+        "attempt": 1,
+        "relativePath": "acquisition.json",
+        "sizeBytes": 3315,
+        "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "34bc20012db9c24241433e571ee03f87",
+        "dataObjectId": "8a62ac52e5d8a2956cdb039983feda8a",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-acquire",
+        "attempt": 1,
+        "relativePath": "observations.tar",
+        "sizeBytes": 946032640,
+        "checksum": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f145a07f6256711ddd958e5411765d6b",
+        "dataObjectId": "6362f5cdd48fca758a744b6fe38e64c4",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-acquire",
+        "attempt": 1,
+        "relativePath": "stage-acquire.json",
+        "sizeBytes": 48,
+        "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "db0ddaac00e7f6904cc3a39d77690ea4",
+        "dataObjectId": "ca716900ffc1197eeea08f2171bb9ff5",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": ".nextflow.log",
+        "sizeBytes": 5882,
+        "checksum": "sha256:0531fb42ec87a83a7e5ff41a1e19fba66a2abd97815befe03c31817b61ededd6",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "bd5a184fb2a1c754ecc8c7ee43111a42",
+        "dataObjectId": "193eacf2cc9d925e946ec44588c0321d",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "nextflow-console.log",
+        "sizeBytes": 184,
+        "checksum": "sha256:78a177307b4a95e675f3005e11632aa1a3ec375398822ece16eacda1dc5c3de7",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "4e9bd10791e83756e5282ad687cddae1",
+        "dataObjectId": "07cd3cb34b800b2ef265327b135e5af1",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/HG002.chr20-10-11Mb.bam",
+        "sizeBytes": 40541058,
+        "checksum": "sha256:1f2fbf7267f7f2b4dbc7208ceedb2c0cb33e832c89d172207d80509a424da3b7",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f8f968948364b5e0e35624045f7111b8",
+        "dataObjectId": "b6e9a2e0f432ce6eb318b863a64ded1e",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/HG002.chr20-10-11Mb.bam.bai",
+        "sizeBytes": 28672,
+        "checksum": "sha256:ad9e8f881da1ad8fff85d0a4a7cdff00fed5476fd40f4e190e13cad4de435bd3",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "ff27464963e9bbba24598377b831853f",
+        "dataObjectId": "bd5c5499cc5e81da4681d8977ab991a1",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/intervals.bed",
+        "sizeBytes": 24,
+        "checksum": "sha256:9df4ad3d4d3bced4f6abca8189198dddc85322bea31716f1ce1c74d4fa15cc34",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "09ecc2348a0081a2dd749b569443627e",
+        "dataObjectId": "32c87c214a5471de4e05e19e6a6897e3",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/reference.fa",
+        "sizeBytes": 3263683042,
+        "checksum": "sha256:3b103f4742abfd54938fb0333e19ad067635c8eb86f1dbf0ce44b165c4292b50",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "60f204100e74014d45b1384b18095240",
+        "dataObjectId": "b306b774abe0bc161037eb4ffb44c361",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "observations/reference.fa.gz",
+        "sizeBytes": 905452288,
+        "checksum": "sha256:75bb9329cace9a71c0d53a981307f94d6c0eb46fc93e1febade0228d8c076a1c",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "47994f630d006397d0542a8c007983dd",
+        "dataObjectId": "c0482d7b27c9db71d2b5841389b44c25",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "params.json",
+        "sizeBytes": 752,
+        "checksum": "sha256:7482b7b699ffc2f1662e7081d135a07bd89b8a00dc8bbb83e58d02fe803d5a4c",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "2bcaf164fac606e97d524bd85073f186",
+        "dataObjectId": "9ef70cc33f6a0e7f3ed49e2e6f226002",
+        "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "attempt": 1,
+        "relativePath": "samplesheet.csv",
+        "sizeBytes": 331,
+        "checksum": "sha256:1ce8be8f57220521349f25f2380df7671065143dea617ff1de0bb2f8c424d0f6",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [],
+    "events": [
+      {
+        "id": "85137d13c1a3b74ee6e67c1321b3443f",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388"
+        },
+        "occurredAt": "2026-11-15T21:55:50.857525153Z"
+      },
+      {
+        "id": "6f6463b7601c6b81fb64a1ebdef20fe4",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire",
+        "payload": {
+          "activityId": "sarek-local-51bd18f5e1-acquire",
+          "attempt": 1,
+          "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:55:52.766723137Z"
+      },
+      {
+        "id": "22eed10a07039644c25aa2bb16e03c8e",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire",
+        "payload": {
+          "activityId": "sarek-local-51bd18f5e1-acquire",
+          "attempt": 1,
+          "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 98.5882318019867,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T21:57:33.59243809Z"
+      },
+      {
+        "id": "a4b54a73e3abfc407199acf93626dd51",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline",
+        "payload": {
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "attempt": 1,
+          "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "failureReason": "",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T21:57:43.952700398Z"
+      },
+      {
+        "id": "67edbdcc2a11f093970745f4620be420",
+        "eventType": "activity.failed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline",
+        "payload": {
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "attempt": 1,
+          "executionRunId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "failureReason": "local Docker container exited with code 1",
+          "runtimeId": "sarek-local",
+          "runtimeSeconds": 19.183860301971436,
+          "status": "failed"
+        },
+        "occurredAt": "2026-11-15T21:58:11.810871904Z"
+      },
+      {
+        "id": "e1cbd8f39bdeac41defce76e7cadd9a0",
+        "eventType": "execution.run.failed",
+        "aggregateType": "execution_run",
+        "aggregateId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "payload": {
+          "reason": "activity \"sarek-local-51bd18f5e1-pipeline\" failed: local Docker container exited with code 1"
+        },
+        "occurredAt": "2026-11-15T21:58:11.82696295Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-acquire",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "7d1e9b74e3459da7e5a3017aec12d15748e7c113aced0a2e3fa4159d01f46fec",
+        "status": "completed",
+        "startedAt": 1794779751.1945136,
+        "finishedAt": 1794779849.7827454,
+        "exitCode": 0,
+        "log": "Verified full frozen real input: HG002.chr20-10-11Mb.bam 40541058\nVerified full frozen real input: HG002.chr20-10-11Mb.bam.bai 28672\nVerified full frozen real input: reference.fa.gz 905452288\nVerified full frozen real input: intervals.bed 24\n[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "activityId": "sarek-local-51bd18f5e1-acquire",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire",
+          "startedAt": 1794779751.1945136,
+          "finishedAt": 1794779849.7827454,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "acquisition.json",
+              "change": "created",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794779849742947190
+            },
+            {
+              "path": "observations.tar",
+              "change": "created",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "modifiedUnixNano": 1794779849653946172
+            },
+            {
+              "path": "stage-acquire.json",
+              "change": "created",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794779849742947190
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794779849742947190
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "modifiedUnixNano": 1794779849653946172
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794779849742947190
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794779751.1945136,
+              "finishedAt": 1794779849.7827454,
+              "durationSeconds": 98.5882318019867
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 3,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 946036003
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire",
+          "dockerMetricCPUSeconds": 3.450898999643326,
+          "dockerMetricObservedAt": 1794779838.9252343,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-acquire",
+          "submittedAt": 1794779751.1945136
+        }
+      },
+      {
+        "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-pipeline",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "externalId": "6122d74d968b42ce00451713b5aa5e6d7927f1c1d8ec7a0dee7ad46f392e22a5",
+        "status": "failed",
+        "startedAt": 1794779862.3985786,
+        "finishedAt": 1794779881.582439,
+        "exitCode": 1,
+        "failure": "local Docker container exited with code 1",
+        "log": "N E X T F L O W  ~  version 25.10.4\nDownloading plugin nf-core-utils@0.4.0\nERROR ~ Plugin with id nf-core-utils not found in any repository\n\n -- Check '.nextflow.log' file for details\n[AKOFLOW INFO] Activity started on runtime sarek-local.\n[AKOFLOW ERROR] local Docker container exited with code 1\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "attempt": 1,
+          "runtime": "sarek-local",
+          "root": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline",
+          "startedAt": 1794779862.3985786,
+          "finishedAt": 1794779881.582439,
+          "exitCode": 1,
+          "files": [
+            {
+              "path": ".nextflow.log",
+              "change": "created",
+              "sizeBytes": 5882,
+              "checksum": "sha256:0531fb42ec87a83a7e5ff41a1e19fba66a2abd97815befe03c31817b61ededd6",
+              "modifiedUnixNano": 1794779881460312168
+            },
+            {
+              "path": "nextflow-console.log",
+              "change": "created",
+              "sizeBytes": 184,
+              "checksum": "sha256:78a177307b4a95e675f3005e11632aa1a3ec375398822ece16eacda1dc5c3de7",
+              "modifiedUnixNano": 1794779881497312597
+            },
+            {
+              "path": "observations/HG002.chr20-10-11Mb.bam",
+              "change": "created",
+              "sizeBytes": 40541058,
+              "checksum": "sha256:1f2fbf7267f7f2b4dbc7208ceedb2c0cb33e832c89d172207d80509a424da3b7",
+              "modifiedUnixNano": 1794779862617094768
+            },
+            {
+              "path": "observations/HG002.chr20-10-11Mb.bam.bai",
+              "change": "created",
+              "sizeBytes": 28672,
+              "checksum": "sha256:ad9e8f881da1ad8fff85d0a4a7cdff00fed5476fd40f4e190e13cad4de435bd3",
+              "modifiedUnixNano": 1794779862617094768
+            },
+            {
+              "path": "observations/intervals.bed",
+              "change": "created",
+              "sizeBytes": 24,
+              "checksum": "sha256:9df4ad3d4d3bced4f6abca8189198dddc85322bea31716f1ce1c74d4fa15cc34",
+              "modifiedUnixNano": 1794779862993099089
+            },
+            {
+              "path": "observations/reference.fa",
+              "change": "created",
+              "sizeBytes": 3263683042,
+              "checksum": "sha256:3b103f4742abfd54938fb0333e19ad067635c8eb86f1dbf0ce44b165c4292b50",
+              "modifiedUnixNano": 1794779875115238780
+            },
+            {
+              "path": "observations/reference.fa.gz",
+              "change": "created",
+              "sizeBytes": 905452288,
+              "checksum": "sha256:75bb9329cace9a71c0d53a981307f94d6c0eb46fc93e1febade0228d8c076a1c",
+              "modifiedUnixNano": 1794779862993099089
+            },
+            {
+              "path": "params.json",
+              "change": "created",
+              "sizeBytes": 752,
+              "checksum": "sha256:7482b7b699ffc2f1662e7081d135a07bd89b8a00dc8bbb83e58d02fe803d5a4c",
+              "modifiedUnixNano": 1794779877636267917
+            },
+            {
+              "path": "samplesheet.csv",
+              "change": "created",
+              "sizeBytes": 331,
+              "checksum": "sha256:1ce8be8f57220521349f25f2380df7671065143dea617ff1de0bb2f8c424d0f6",
+              "modifiedUnixNano": 1794779877636267917
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794779855601014244
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "modifiedUnixNano": 1794779856189020983
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794779856189020983
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": ".nextflow.log",
+              "sizeBytes": 5882,
+              "checksum": "sha256:0531fb42ec87a83a7e5ff41a1e19fba66a2abd97815befe03c31817b61ededd6",
+              "modifiedUnixNano": 1794779881460312168
+            },
+            {
+              "path": "acquisition.json",
+              "sizeBytes": 3315,
+              "checksum": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "modifiedUnixNano": 1794779855601014244
+            },
+            {
+              "path": "nextflow-console.log",
+              "sizeBytes": 184,
+              "checksum": "sha256:78a177307b4a95e675f3005e11632aa1a3ec375398822ece16eacda1dc5c3de7",
+              "modifiedUnixNano": 1794779881497312597
+            },
+            {
+              "path": "observations.tar",
+              "sizeBytes": 946032640,
+              "checksum": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "modifiedUnixNano": 1794779856189020983
+            },
+            {
+              "path": "observations/HG002.chr20-10-11Mb.bam",
+              "sizeBytes": 40541058,
+              "checksum": "sha256:1f2fbf7267f7f2b4dbc7208ceedb2c0cb33e832c89d172207d80509a424da3b7",
+              "modifiedUnixNano": 1794779862617094768
+            },
+            {
+              "path": "observations/HG002.chr20-10-11Mb.bam.bai",
+              "sizeBytes": 28672,
+              "checksum": "sha256:ad9e8f881da1ad8fff85d0a4a7cdff00fed5476fd40f4e190e13cad4de435bd3",
+              "modifiedUnixNano": 1794779862617094768
+            },
+            {
+              "path": "observations/intervals.bed",
+              "sizeBytes": 24,
+              "checksum": "sha256:9df4ad3d4d3bced4f6abca8189198dddc85322bea31716f1ce1c74d4fa15cc34",
+              "modifiedUnixNano": 1794779862993099089
+            },
+            {
+              "path": "observations/reference.fa",
+              "sizeBytes": 3263683042,
+              "checksum": "sha256:3b103f4742abfd54938fb0333e19ad067635c8eb86f1dbf0ce44b165c4292b50",
+              "modifiedUnixNano": 1794779875115238780
+            },
+            {
+              "path": "observations/reference.fa.gz",
+              "sizeBytes": 905452288,
+              "checksum": "sha256:75bb9329cace9a71c0d53a981307f94d6c0eb46fc93e1febade0228d8c076a1c",
+              "modifiedUnixNano": 1794779862993099089
+            },
+            {
+              "path": "params.json",
+              "sizeBytes": 752,
+              "checksum": "sha256:7482b7b699ffc2f1662e7081d135a07bd89b8a00dc8bbb83e58d02fe803d5a4c",
+              "modifiedUnixNano": 1794779877636267917
+            },
+            {
+              "path": "samplesheet.csv",
+              "sizeBytes": 331,
+              "checksum": "sha256:1ce8be8f57220521349f25f2380df7671065143dea617ff1de0bb2f8c424d0f6",
+              "modifiedUnixNano": 1794779877636267917
+            },
+            {
+              "path": "stage-acquire.json",
+              "sizeBytes": 48,
+              "checksum": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "modifiedUnixNano": 1794779856189020983
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "failed",
+              "startedAt": 1794779862.3985786,
+              "finishedAt": 1794779881.582439,
+              "durationSeconds": 19.183860301971436
+            }
+          ],
+          "summary": {
+            "initialFiles": 3,
+            "finalFiles": 12,
+            "createdFiles": 9,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 4209712233
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline",
+          "dockerMetricCPUSeconds": 9.70916166703701,
+          "dockerMetricObservedAt": 1794779872.6478856,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline",
+          "submittedAt": 1794779862.3985786
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+      "schedulePlanId": "sarek-local-51bd18f5e1-manual-plan-20261115t215550.480660388",
+      "mode": "real",
+      "seed": 0,
+      "status": "failed",
+      "makespanSeconds": 0,
+      "cost": 0,
+      "failureReason": "activity \"sarek-local-51bd18f5e1-pipeline\" failed: local Docker container exited with code 1",
+      "activityCount": 2,
+      "completedActivityCount": 1,
+      "breakdown": {
+        "computeSeconds": 117.77209210395813,
+        "transferSeconds": 0,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 0,
+      "kind": "workflow",
+      "title": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+      "workflowId": "sarek-local-51bd18f5e1",
+      "workflowVersionId": "sarek-local-51bd18f5e1-v1",
+      "workflowName": "sarek-local-51bd18f5e1",
+      "environmentNames": [
+        "sarek local Docker"
+      ],
+      "startedAt": "2026-11-15T21:55:50Z",
+      "finishedAt": "2026-11-15T21:58:11Z"
+    },
+    "timeline": {
+      "startedAt": 1794779750,
+      "finishedAt": 1794779891,
+      "wallSeconds": 141,
+      "computeMakespanSeconds": 0,
+      "coveredWallSeconds": 126.80605173110962,
+      "unclassifiedWallSeconds": 14.19394826889038,
+      "totals": {
+        "resourceQueueSeconds": 2.8657236099243164,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 0,
+        "launchSeconds": 6.168236017227173,
+        "runtimeSeconds": 117.77209210395813,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-51bd18f5e1-acquire",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794779750.9542055,
+          "finishedAt": 1794779751.1945136,
+          "durationSeconds": 0.24030804634094238
+        },
+        {
+          "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-acquire:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-51bd18f5e1-acquire",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794779751.1945136,
+          "finishedAt": 1794779849.7827454,
+          "durationSeconds": 98.5882318019867
+        },
+        {
+          "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline:queue:0",
+          "category": "resource-queue",
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794779853.604927,
+          "finishedAt": 1794779856.2303426,
+          "durationSeconds": 2.625415563583374
+        },
+        {
+          "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline:launch",
+          "category": "launch",
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794779856.2303426,
+          "finishedAt": 1794779862.3985786,
+          "durationSeconds": 6.168236017227173
+        },
+        {
+          "id": "sarek-local-51bd18f5e1-run-20261115t215550.536679297:sarek-local-51bd18f5e1-pipeline:runtime",
+          "category": "runtime",
+          "activityId": "sarek-local-51bd18f5e1-pipeline",
+          "status": "failed",
+          "source": "activity-handle",
+          "startedAt": 1794779862.3985786,
+          "finishedAt": 1794779881.582439,
+          "durationSeconds": 19.183860301971436
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-acquire-sarek-local-51bd18f5e1-pipeline",
+        "workspaceId": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-acquire",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-acquire",
+        "consumerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "released": true,
+        "releasedAt": "2026-11-15T21:57:36.347593182Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline-sarek-local-51bd18f5e1-visuals",
+        "workspaceId": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-pipeline",
+        "consumerActivityId": "sarek-local-51bd18f5e1-visuals",
+        "released": false
+      },
+      {
+        "id": "workspace-lease-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-visuals-sarek-local-51bd18f5e1-package",
+        "workspaceId": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-visuals",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "producerActivityId": "sarek-local-51bd18f5e1-visuals",
+        "consumerActivityId": "sarek-local-51bd18f5e1-package",
+        "released": false
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-acquire",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-acquire",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-acquire",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ],
+          "outputs": [
+            {
+              "path": "acquisition.json",
+              "digest": "sha256:62db399245c89dbfb2a90ef77a1b9e290562cbba7cc52602c2d5e47c30d2dfe2",
+              "sizeBytes": 3315
+            },
+            {
+              "path": "observations.tar",
+              "digest": "sha256:0a2907ebcff2214e9f9b129ca18c8157f0d39398beb68599af9ea10e28badc88",
+              "sizeBytes": 946032640
+            },
+            {
+              "path": "stage-acquire.json",
+              "digest": "sha256:8d70e86ff1d1e815192be635d61cf13bce5dc2663b0655e52ff4a2f1fa83eb9d",
+              "sizeBytes": 48
+            }
+          ]
+        },
+        "fileCount": 3,
+        "sizeBytes": 946036003,
+        "inputBytes": 0,
+        "outputBytes": 946036003,
+        "reclaimedBytes": 946036003,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T21:55:50.873189564Z",
+        "sealedAt": "2026-11-15T21:57:33.578057741Z",
+        "releasedAt": "2026-11-15T21:57:36.476695182Z"
+      },
+      {
+        "id": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-package",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-package",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-package",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-package",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-package",
+        "driver": "local",
+        "state": "planned",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:55:50.873189564Z"
+      },
+      {
+        "id": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-pipeline",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-pipeline",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-pipeline",
+        "driver": "local",
+        "state": "active",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:55:50.873189564Z"
+      },
+      {
+        "id": "workspace-sarek-local-51bd18f5e1-run-20261115t215550.536679297-sarek-local-51bd18f5e1-visuals",
+        "runId": "sarek-local-51bd18f5e1-run-20261115t215550.536679297",
+        "activityId": "sarek-local-51bd18f5e1-visuals",
+        "environmentId": "sarek-v1",
+        "resourceId": "sarek-local-docker",
+        "runtimeId": "sarek-local",
+        "uri": "file:///akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-visuals",
+        "executionPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-visuals",
+        "observationPath": "/akoflow/workspace/runs/sarek-local-51bd18f5e1-run-20261115t215550.536679297/sarek-local-51bd18f5e1-visuals",
+        "driver": "local",
+        "state": "planned",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {},
+        "fileCount": 0,
+        "sizeBytes": 0,
+        "inputBytes": 0,
+        "outputBytes": 0,
+        "reclaimedBytes": 0,
+        "createdAt": "2026-11-15T21:55:50.873189564Z"
+      }
+    ]
+  }
+}

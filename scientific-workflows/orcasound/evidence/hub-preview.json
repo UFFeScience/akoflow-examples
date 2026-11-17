@@ -1,0 +1,612 @@
+{
+  "id": "710c3cbfc301566b6c3c7699c6c0fba924ac1fde5c1f7f659d4610f1f9fe209d",
+  "publication": {
+    "id": "d82b1f46-f186-44fe-99a1-434491afbbb2",
+    "title": "Orcasound \u2014 Hydrophone Audio and Orca Call Candidates",
+    "slug": "scientific-workflows-orcasound",
+    "description": "Real scientific computation through the Ak\u00f4Flow daemon: 12 completed activities.",
+    "readme": "# Orcasound \u2014 Hydrophone Audio and Orca Call Candidates\n\nRun the real hydrophone-audio processing chain as twelve Ak\u00f4Flow activities: verified acquisition, three branches each with conversion, spectrogram calculation and trained inference, prediction merging and scientific result assembly. The frozen profile uses twelve complete consecutive public HLS objects from Bush Point session `1539203407`, approximately two minutes of audio. It is a bounded observation profile, not a claim to process an entire day or the full archive.\n\n## Scientific inputs and model\n\nThe recording URLs, object lengths, original MD5 ETags, SHA-256 digests and playlist durations are frozen in `data/input-verification.json`. Every TS object is decoded in full by FFmpeg. Per-file sample count, rate, channel count, RMS energy and WAV hash are measured from the actual decoded observations.\n\nInference uses the official OrcaHello ResNet50 SRKW detector and its actual trained safetensors checkpoint at immutable revision `f8705749f36d65d870cc7b5d21e71802ae77059e`. All 332 tensors must load strictly into the matching unmodified official implementation; no random or partially loaded model may yield a result. The official frontend/config are retained, including the declared three-second windows, two-second hop, normalization, model feature preparation and aggregation. Candidate scores require expert confirmation and do not establish that orcas are present.\n\nThe Pegasus repository's old VGGish/checkpoint-directory lookup does not load its supplied FastAI learner file. This adaptation declares the matching official trained implementation rather than reporting randomly initialized predictions as science. Original conversion, power-spectrogram, inference and merge purposes remain; numerical equivalence to that broken lookup is not claimed.\n\n## Run\n\nOn Linux amd64 with Docker and Go:\n\n```sh\n./prepare.sh\n./run.sh\n```\n\nThe image contains pinned CPU PyTorch 2.9.1, torchvision 0.24.1, torchaudio 2.9.1 and the recorded scientific dependencies. Only the acquisition activity requires internet access; it retrieves the complete frozen observations and unmodified official inference payload and verifies every file. The standalone runner disables container networking for all other activities. Subsequent scientific computations use local inputs. The daemon profile requests two execution lanes on a four-CPU, 12-GiB allocation; measured execution must be inspected separately before a completed result is claimed.\n\nThe upstream [OrcaHello RAIL-AMS license](https://github.com/orcasound/aifororcas-livesystem/blob/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem/model/LICENSE) prohibits redistribution of its artifacts. Consequently this source bundle and image contain our wrapper, scientific dependencies and hash manifests. Every installation retrieves the unmodified official source and weights directly for local use, retaining their license. That private payload is excluded from public source/image/result archives. Use remains subject to the upstream terms.\n\n## Scientific visualizations and validation\n\nThe final activity owns `orcasound-results.tar.gz`, `orcasound-summary.json`, a contact sheet of twelve real power spectrograms (`hydrophone-spectrograms.png`) and a per-window trained-model confidence figure (`orca-confidence.svg`). The public result archive retains all twelve decoded WAV files, individual spectrograms and measured predictions. Its numeric results are generated from the real observations; no positive whale calls are fabricated.\n\nValidation checks complete decoded duration against the source playlist, WAV integrity/energy, immutable source/model fingerprints, strict trained-tensor loading, all expected inference windows, thresholds and aggregation, actual PNG/SVG files, output hashes and exclusion of restricted model/source artifacts from public outputs. CI checks the large image and DAG contract; full native scientific execution and output validation are recorded separately. No completed execution is claimed by this initial source definition.\n\nOriginal workflow: [Pegasus Orcasound](https://github.com/pegasus-isi/orcasound-workflow/tree/c66d070663b02536ac730b4f32f3812fdeffa2f4). Trained inference: [official OrcaHello source](https://github.com/orcasound/aifororcas-livesystem/tree/dd879cfd4140c70e1478a2d67c41a13e0ee7acf4/InferenceSystem). Exact adaptation and provenance are in `data/upstream.json`.\n",
+    "visibility": "public",
+    "owner": "ovvesley",
+    "kind": "user"
+  },
+  "runId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+  "workflowName": "orcasound-local-bf42ac090f",
+  "yaml": "name: orcasound-local-bf42ac090f\nspec:\n    activities:\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - acquire\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: acquire\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - convert\n                - --output\n                - .\n                - --part\n                - \"0\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: convert-0\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - spectrogram\n                - --output\n                - .\n                - --part\n                - \"0\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - convert-0\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: spectrogram-0\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - predict\n                - --output\n                - .\n                - --part\n                - \"0\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - acquire\n            - convert-0\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: predict-0\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - convert\n                - --output\n                - .\n                - --part\n                - \"1\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: convert-1\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - spectrogram\n                - --output\n                - .\n                - --part\n                - \"1\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - convert-1\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: spectrogram-1\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - predict\n                - --output\n                - .\n                - --part\n                - \"1\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - acquire\n            - convert-1\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: predict-1\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - convert\n                - --output\n                - .\n                - --part\n                - \"2\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - acquire\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: convert-2\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - spectrogram\n                - --output\n                - .\n                - --part\n                - \"2\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - convert-2\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: spectrogram-2\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - predict\n                - --output\n                - .\n                - --part\n                - \"2\"\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"2\"\n          dependsOn:\n            - acquire\n            - convert-2\n          memoryLimit: \"4294967296\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: predict-2\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - merge\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - predict-0\n            - predict-1\n            - predict-2\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: merge\n          runtime: orcasound-local\n        - command:\n            arguments:\n                - /app/scripts/run_stage.py\n                - --stage\n                - summary\n                - --output\n                - .\n            entrypoint: python3\n            executable:\n                delivery:\n                    strategy: auto\n                source:\n                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                    type: oci\n          cpuLimit: \"1\"\n          dependsOn:\n            - convert-0\n            - convert-1\n            - convert-2\n            - merge\n            - spectrogram-0\n            - spectrogram-1\n            - spectrogram-2\n          memoryLimit: \"2147483648\"\n          metadata:\n            expectedOutputs: null\n            keepDisk: false\n            mountPath: \"\"\n            resourceSelector: \"\"\n            runtime: orcasound-local\n            workspaceSeedPath: \"\"\n          name: summary\n          runtime: orcasound-local\n    dataDependencies:\n        - consumerActivity: convert-0\n          logicalName: recordings.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: convert-1\n          logicalName: recordings.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: convert-2\n          logicalName: recordings.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-0\n          logicalName: acquisition.json\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-0\n          logicalName: private-inference-inputs.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-1\n          logicalName: acquisition.json\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-1\n          logicalName: private-inference-inputs.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-2\n          logicalName: acquisition.json\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-2\n          logicalName: private-inference-inputs.tar.gz\n          producerActivity: acquire\n          sizeBytes: 1\n        - consumerActivity: predict-0\n          logicalName: waveform-qc-0.json\n          producerActivity: convert-0\n          sizeBytes: 1\n        - consumerActivity: predict-0\n          logicalName: waveforms-0.tar.gz\n          producerActivity: convert-0\n          sizeBytes: 1\n        - consumerActivity: spectrogram-0\n          logicalName: waveforms-0.tar.gz\n          producerActivity: convert-0\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: waveforms-0.tar.gz\n          producerActivity: convert-0\n          sizeBytes: 1\n        - consumerActivity: predict-1\n          logicalName: waveform-qc-1.json\n          producerActivity: convert-1\n          sizeBytes: 1\n        - consumerActivity: predict-1\n          logicalName: waveforms-1.tar.gz\n          producerActivity: convert-1\n          sizeBytes: 1\n        - consumerActivity: spectrogram-1\n          logicalName: waveforms-1.tar.gz\n          producerActivity: convert-1\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: waveforms-1.tar.gz\n          producerActivity: convert-1\n          sizeBytes: 1\n        - consumerActivity: predict-2\n          logicalName: waveform-qc-2.json\n          producerActivity: convert-2\n          sizeBytes: 1\n        - consumerActivity: predict-2\n          logicalName: waveforms-2.tar.gz\n          producerActivity: convert-2\n          sizeBytes: 1\n        - consumerActivity: spectrogram-2\n          logicalName: waveforms-2.tar.gz\n          producerActivity: convert-2\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: waveforms-2.tar.gz\n          producerActivity: convert-2\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: merged-predictions.json\n          producerActivity: merge\n          sizeBytes: 1\n        - consumerActivity: merge\n          logicalName: predictions-0.json\n          producerActivity: predict-0\n          sizeBytes: 1\n        - consumerActivity: merge\n          logicalName: predictions-1.json\n          producerActivity: predict-1\n          sizeBytes: 1\n        - consumerActivity: merge\n          logicalName: predictions-2.json\n          producerActivity: predict-2\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: spectrograms-0.tar.gz\n          producerActivity: spectrogram-0\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: spectrograms-1.tar.gz\n          producerActivity: spectrogram-1\n          sizeBytes: 1\n        - consumerActivity: summary\n          logicalName: spectrograms-2.tar.gz\n          producerActivity: spectrogram-2\n          sizeBytes: 1\n    namespace: akoflow-examples\n    storagePolicy: {}\n",
+  "logs": [
+    {
+      "activityId": "orcasound-local-bf42ac090f-acquire",
+      "exitCode": 0,
+      "finishedAt": 1794772894.6410203,
+      "log": "Official input acquired and hash verified: live000.ts 186496\nOfficial input acquired and hash verified: live001.ts 186308\nOfficial input acquired and hash verified: live002.ts 186308\nOfficial input acquired and hash verified: live003.ts 185932\nOfficial input acquired and hash verified: live004.ts 186308\nOfficial input acquired and hash verified: live005.ts 186308\nOfficial input acquired and hash verified: live006.ts 186308\nOfficial input acquired and hash verified: live007.ts 185932\nOfficial input acquired and hash verified: live008.ts 186308\nOfficial input acquired and hash verified: live009.ts 186120\nOfficial input acquired and hash verified: live010.ts 186308\nOfficial input acquired and hash verified: live011.ts 185932\nOfficial input acquired and hash verified: LICENSE 11343\nOfficial input acquired and hash verified: config.json 789\nOfficial input acquired and hash verified: config.yaml 1634\nOfficial input acquired and hash verified: README.md 8659\nOfficial input acquired and hash verified: model.safetensors 102720184\nOfficial input acquired and hash verified: __init__.py 686\nOfficial input acquired and hash verified: inference.py 12712\nOfficial input acquired and hash verified: audio_frontend.py 19103\nOfficial input acquired and hash verified: types.py 6625\n[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772855.5700479,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-convert-0",
+      "exitCode": 0,
+      "finishedAt": 1794772897.6146832,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772896.7284775,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-convert-1",
+      "exitCode": 0,
+      "finishedAt": 1794772906.3897476,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772905.4469428,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-convert-2",
+      "exitCode": 0,
+      "finishedAt": 1794772922.912123,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772921.9374142,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-merge",
+      "exitCode": 0,
+      "finishedAt": 1794772939.5789165,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772939.3218071,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-predict-0",
+      "exitCode": 0,
+      "finishedAt": 1794772910.805433,
+      "log": "/usr/local/lib/python3.11/site-packages/torchaudio/functional/functional.py:582: UserWarning: At least one mel filterbank has all zero values. The value for `n_mels` (256) may be set too high. Or, the value for `n_freqs` (1281) may be set too low.\n  warnings.warn(\n[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772900.5834498,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-predict-1",
+      "exitCode": 0,
+      "finishedAt": 1794772919.6945493,
+      "log": "/usr/local/lib/python3.11/site-packages/torchaudio/functional/functional.py:582: UserWarning: At least one mel filterbank has all zero values. The value for `n_mels` (256) may be set too high. Or, the value for `n_freqs` (1281) may be set too low.\n  warnings.warn(\n[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772909.0080838,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-predict-2",
+      "exitCode": 0,
+      "finishedAt": 1794772935.9805117,
+      "log": "/usr/local/lib/python3.11/site-packages/torchaudio/functional/functional.py:582: UserWarning: At least one mel filterbank has all zero values. The value for `n_mels` (256) may be set too high. Or, the value for `n_freqs` (1281) may be set too low.\n  warnings.warn(\n[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772925.9433844,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-spectrogram-0",
+      "exitCode": 0,
+      "finishedAt": 1794772903.0546024,
+      "log": "/usr/local/lib/python3.11/site-packages/matplotlib/axes/_axes.py:8283: RuntimeWarning: divide by zero encountered in log10\n  Z = 10. * np.log10(spec)\n[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772900.4396124,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-spectrogram-1",
+      "exitCode": 0,
+      "finishedAt": 1794772918.3781526,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772915.219701,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-spectrogram-2",
+      "exitCode": 0,
+      "finishedAt": 1794772928.4470813,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772925.6979036,
+      "status": "completed"
+    },
+    {
+      "activityId": "orcasound-local-bf42ac090f-summary",
+      "exitCode": 0,
+      "finishedAt": 1794772947.987176,
+      "log": "[AKOFLOW INFO] Activity started on runtime orcasound-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+      "startedAt": 1794772945.3693001,
+      "status": "completed"
+    }
+  ],
+  "files": [
+    {
+      "attempt": 1,
+      "checksum": "sha256:637e5d1b1445c2f19ee61ec068f27e5ce70e0a3b046cce96a207bb44764061b5",
+      "dataObjectId": "06f4ffd7231e985590f4de20ef479ff8",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "5438ad172cf3ce5c77349955a19e629b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-acquire",
+      "relativePath": "acquisition.json",
+      "sizeBytes": 9712
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:60604cc639074bf25cbbf794604c940450eef3f587e02bed737d12a8b0483a6c",
+      "dataObjectId": "cbea2fe8248ec30d5ecb60f30b240b69",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "d345d62e8ca03c2f2a491f10114fcd30",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-acquire",
+      "relativePath": "private-inference-inputs.tar.gz",
+      "sizeBytes": 96063581
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:323479c48530598f424eae3115e9c1edfdcf190b2cf0d1ba2dcdc7514dbd8999",
+      "dataObjectId": "2ae6c9dd518f36d1f3363defd79c3df3",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "06d3cf618274e87fb28ecb37d7f3aa9f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-acquire",
+      "relativePath": "recordings.tar.gz",
+      "sizeBytes": 1852999
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:846f78fef3dd649d2926818c33680f8b85764f6df37d1ead34d0cfed9cd8bc22",
+      "dataObjectId": "63009f1740ab9edab69dd21e72f523fe",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "b6cc6cfa66db27a8b75897472bf85e73",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-acquire",
+      "relativePath": "stage-acquire.json",
+      "sizeBytes": 116
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0f943a2af210756bb3d07edf6d86ca277baac42647fcb07bf1938e89a8827bbd",
+      "dataObjectId": "ffc9d1a3190cb5f31d6b282fdfbb4d57",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "5471fb3e926cba525ec6b0bb6a8751bd",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-0",
+      "relativePath": "stage-convert-0.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c833ca27ab79b9a528a13ef47424440452bb70ffd9a90255e7439e27564879ed",
+      "dataObjectId": "790ef3d5b7ee834ab169ad712e6a2675",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "6a1eaa97278115982b1d701734242a7d",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-0",
+      "relativePath": "waveform-qc-0.json",
+      "sizeBytes": 1162
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d0b570e5df4a6a1eec29dbc6bee5f6e5f9bf7fe81c14436e79a6e97f626305f5",
+      "dataObjectId": "c4c535ef39db0ede1d2e49ec3abbe19a",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "14db873a706fb95be7ebcf8b72465498",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-0",
+      "relativePath": "waveforms-0.tar.gz",
+      "sizeBytes": 4095427
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:cc5e9fdedf911a679f6c76d9e4715cde7e17c4a080c497fb1dddf1584794f5f9",
+      "dataObjectId": "a3d8eb03a4743babb425255c4c5e99ec",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "0815dff2539502155ab5b55c5f36b238",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-1",
+      "relativePath": "stage-convert-1.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:60f875ea0497e0b8d48531e225fb7b4794d71988cbfdc21fadc3a5a4ea67e7ee",
+      "dataObjectId": "93a33d32c4a71b25bb996cba88541b81",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "c9a00c7656a5791d296462e79b633d91",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-1",
+      "relativePath": "waveform-qc-1.json",
+      "sizeBytes": 1165
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bbcb42e92c50c3fa3992113571d7f012536bbec8e212392d692d98fb87dfe5e4",
+      "dataObjectId": "0f456cdabf6705757e8fd407dec5354a",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "ec3d28525ebb731550579e03c374583b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-1",
+      "relativePath": "waveforms-1.tar.gz",
+      "sizeBytes": 4132439
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:114241c794aa0801126c66ed4bd87d31b50cc2757ebbaf0c220b33dc0dac3513",
+      "dataObjectId": "847aacfd9da46813d21566ce93b952e2",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "a825975134f52e1b95057d097f20921b",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-2",
+      "relativePath": "stage-convert-2.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:ecf1fbeaff9f95148401b6af227f24322d4ee5163f07648355d3ed71b36d1d6f",
+      "dataObjectId": "a0eb00be28d89871f183afeb50d70c62",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "195cf0d588b05522e819c191906233e9",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-2",
+      "relativePath": "waveform-qc-2.json",
+      "sizeBytes": 1164
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1cd5c9df7d572ba857a8dff6b9f2d62429115a8cc7512efbe3ee3bb949b9ddf7",
+      "dataObjectId": "7534a873dfced20525b29701b460b6e8",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "2efb25d746dee861b4dbb6dcf52ac9a0",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-convert-2",
+      "relativePath": "waveforms-2.tar.gz",
+      "sizeBytes": 4153670
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bbe54a62bf8c59c58df5d6db2a8a6dbbefb0729fdf62789ce3a401c9cbe82c04",
+      "dataObjectId": "c2d3bc766127150bad7e898d651edcd9",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "7d396e80c455045ca29455f4f9e800fc",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-merge",
+      "relativePath": "merged-predictions.json",
+      "sizeBytes": 18599
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:a098eb6f8074f233dfa1f2b94d19091d61399c65f5de87aaf31c4ed6b051b646",
+      "dataObjectId": "ad28f01185e3ae5026728958ee5bde92",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "c749956f29197fa0256bc47311e93b87",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-merge",
+      "relativePath": "stage-merge.json",
+      "sizeBytes": 114
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:591f6a3058d663d3717c8289bfbc6cfc801696d073df6c287aa686d8bf78e22b",
+      "dataObjectId": "a95c0b4b370164084da99d5c818365fc",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "2938e104448a7c04a0c4bab433fe33dc",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-0",
+      "relativePath": "predictions-0.json",
+      "sizeBytes": 6604
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:0268b14caca47923adcea31b2b4233c7761e2f876fdd15ce4510d834471a6d98",
+      "dataObjectId": "290fa4f3883a7ef513229d0bbda1ccbd",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "f252855ab267f9b54395ec0be0996f41",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-0",
+      "relativePath": "stage-predict-0.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:197d18e6992ca96bbb6ae9d2f7bbe6ebefa9e7f45915e9dbd568ac68f4f4c8a7",
+      "dataObjectId": "5a9bb32e1b422e2a219cf0d2f72e2048",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "cd000690eed71834a77c243fed916023",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-1",
+      "relativePath": "predictions-1.json",
+      "sizeBytes": 6611
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:3621159de670bdce1c014f677a5b9f54b86963be56df25236c668ccd75feea53",
+      "dataObjectId": "f125f912e9dde0111adadda2b5ee2136",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "9907caa628be45e8dc4137b12be6f651",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-1",
+      "relativePath": "stage-predict-1.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:86c5eaef2f3166131e9026d1ae808baf799d01ae633f56bbfce35e4434c9f126",
+      "dataObjectId": "11cfaac9f4d042d6f652643a606279e6",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "882865c31d4b602022b85fdb9b0d554f",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-2",
+      "relativePath": "predictions-2.json",
+      "sizeBytes": 6612
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:779e1107194a856c1eb628d4827173e13757fe63386aec5b56d2b5864e8e2c87",
+      "dataObjectId": "88be453ac7550c3fcd94828616fedfa5",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "c1ee6331ad44474997123a07e635faf8",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-predict-2",
+      "relativePath": "stage-predict-2.json",
+      "sizeBytes": 113
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:bb4660b297b617cfc95979a4843adcbf481b6d79f309a44d8d6b0954b962a971",
+      "dataObjectId": "741ec8b0d8a8faa0a29e2c6256b38e17",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "830435ba70dec50b6846d337501d35a5",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-0",
+      "relativePath": "spectrograms-0.tar.gz",
+      "sizeBytes": 1602591
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:e298e62bd7a468d5e978d296d4239ee62383e98324ae6a28319b1dbbe4194dfb",
+      "dataObjectId": "54a1da705bc61b93e7ef536bae9617c3",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "b81c805d8ebdf5b3479088bbb47f9a82",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-0",
+      "relativePath": "stage-spectrogram-0.json",
+      "sizeBytes": 117
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:d4627a177b1c00785efc77164b1d84fd4d170a576086a2c03356256e9bf2de5b",
+      "dataObjectId": "1e67adf9bc4e3a18acd23b51ab2f69a1",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "b33fff8fe8c6b2f24668d4f7963f9788",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-1",
+      "relativePath": "spectrograms-1.tar.gz",
+      "sizeBytes": 1617165
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:cf01b921e9951821471e3977f61ff7f7e37f63149bd1dee4d6f9a04f5cd24b21",
+      "dataObjectId": "43edb6d89718fa445c165d87f9e2edff",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "353b297dc6752ffb6ae1b4899b487544",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-1",
+      "relativePath": "stage-spectrogram-1.json",
+      "sizeBytes": 117
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:c95beef0d17b4c3340bef2b794f4e517edda78ed234ae0cf40f8200f9119a6ae",
+      "dataObjectId": "123acbe1b6f14c17d07635c99bc2703d",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "e0c50c27fec7154606923d2440bb9cf6",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-2",
+      "relativePath": "spectrograms-2.tar.gz",
+      "sizeBytes": 1593725
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:38755a52bb5bd14090d55c035370ed267c8e7272c4b3691f9afc7b38119ff951",
+      "dataObjectId": "9105829b31ae01a99553f43de7a2aa15",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "b8f7d575b5a21a66513fafe02ebd814e",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-spectrogram-2",
+      "relativePath": "stage-spectrogram-2.json",
+      "sizeBytes": 117
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:9b2ba9bfbaa6a75077bdfd0dda018d1d4a379720b9d2295e3dd10f90052e541c",
+      "dataObjectId": "0e54a7b6f6f6fe133b422474069c99c8",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "3884bff46e6a1a7a087f1b584fe873fd",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-summary",
+      "relativePath": "hydrophone-spectrograms.png",
+      "sizeBytes": 730606
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1d38027e0c86aae62e2c5558f9629f58bcfceaefef2e7d1f41ece03b1097b9d1",
+      "dataObjectId": "a35a7d930787467acda56c4411b28a25",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "2eef359d9abd49de91a64e1a423fb4ae",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-summary",
+      "relativePath": "orca-confidence.svg",
+      "sizeBytes": 62333
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1af2490631d9c4cd643794511525e86f6176762662ca14b70fb54b82322c2676",
+      "dataObjectId": "e64086db7a2155eb6ba54872abda1d16",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "c3d874baa139d506f73ad62c190a6a19",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-summary",
+      "relativePath": "orcasound-results.tar.gz",
+      "sizeBytes": 17924126
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:37db8031b2055fc0a450c30e34cc1768bb39bd53e2a62e51395afe1bfba10fe3",
+      "dataObjectId": "9a4d04716bfcecb7bbf4a59773a0eb58",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "ebb7f7c2a7719cf35b9f70a46f20ca67",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-summary",
+      "relativePath": "orcasound-summary.json",
+      "sizeBytes": 21603
+    },
+    {
+      "attempt": 1,
+      "checksum": "sha256:1a93bb87de31a4f36aa2c4913a3a345d47897a32186e11ef22e18307e3d32a14",
+      "dataObjectId": "db42a55cf4529e70f1cd462dd61c6204",
+      "discovered": true,
+      "executionRunId": "orcasound-local-bf42ac090f-run-20261115t200054.526733277",
+      "id": "b485da4a84ee4fc99c09df9a887df59c",
+      "metadata": {
+        "change": "created"
+      },
+      "producerActivityId": "orcasound-local-bf42ac090f-summary",
+      "relativePath": "stage-summary.json",
+      "sizeBytes": 116
+    }
+  ],
+  "exportedAt": "2026-11-15T20:03:25.617671028Z",
+  "review": {
+    "experiment": {
+      "schemaVersion": "1.0",
+      "workflowId": "orcasound-local-bf42ac090f",
+      "workflowVersionId": "orcasound-local-bf42ac090f-v1",
+      "planCount": 1,
+      "executionCount": 1,
+      "activityCount": 12,
+      "redactionCount": 0,
+      "digest": "3350b169555cabc954af760227268dc66ed6d82f288ca9bbdbf708845a2abf06"
+    },
+    "diff": "--- v1/workflow.yaml\n+++ v2/workflow.yaml\n@@ -1,4 +1,4 @@\n-name: orcasound-local-974fdc674d\n+name: orcasound-local-bf42ac090f\n spec:\n     activities:\n         - command:\n@@ -13,7 +13,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           memoryLimit: \"2147483648\"\n@@ -40,7 +40,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -69,7 +69,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -98,7 +98,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"2\"\n           dependsOn:\n@@ -128,7 +128,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -157,7 +157,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -186,7 +186,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"2\"\n           dependsOn:\n@@ -216,7 +216,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -245,7 +245,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -274,7 +274,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"2\"\n           dependsOn:\n@@ -302,7 +302,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n@@ -331,7 +331,7 @@\n                 delivery:\n                     strategy: auto\n                 source:\n-                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-f9babb8d1f33aea6\n+                    reference: ghcr.io/uffescience/akoflow-examples/orcasound:local-fdf5475451f0787c\n                     type: oci\n           cpuLimit: \"1\"\n           dependsOn:\n",
+    "results": [
+      {
+        "id": "",
+        "versionId": "",
+        "sourceId": "experiment:08891581760745b613dd4c0456edae218b7fb698f64857ecc39ea25f628913a7",
+        "summary": {
+          "parameters": {
+            "algorithm": "manual",
+            "execution_mode": "real",
+            "objective": "custom",
+            "plan_id": "orcasound-local-bf42ac090f-manual-plan-20261115t200054.481229900",
+            "run_id": "orcasound-local-bf42ac090f-run-20261115t200054.526733277"
+          },
+          "status": "completed",
+          "durationSeconds": 92.41712808609009,
+          "metrics": {
+            "activity_count": 12,
+            "completed_activity_count": 12,
+            "computeSeconds": 84.21787214279175,
+            "interferenceSeconds": 0,
+            "observed_cost_usd": 0,
+            "observed_makespan_seconds": 92.41712808609009,
+            "overheadSeconds": 0,
+            "planned_cost_usd": 0,
+            "planned_makespan_seconds": 12,
+            "queueSeconds": 0,
+            "transferSeconds": 26.628657817840576,
+            "transferred_bytes": 1131604829
+          },
+          "activities": []
+        }
+      }
+    ],
+    "skippedRows": 0
+  }
+}

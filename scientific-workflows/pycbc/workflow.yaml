@@ -1,0 +1,231 @@
+name: pycbc
+spec:
+  activities:
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - acquire
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn: []
+      memoryLimit: 2Gi
+      name: acquire
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - bank
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn: []
+      memoryLimit: 2Gi
+      name: bank
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - condition
+          - --output
+          - .
+          - --detector
+          - H1
+        entrypoint: python
+      cpuLimit: "2"
+      dependsOn:
+        - acquire
+      memoryLimit: 4Gi
+      name: condition-H1
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - filter
+          - --output
+          - .
+          - --detector
+          - H1
+        entrypoint: python
+      cpuLimit: "2"
+      dependsOn:
+        - condition-H1
+        - bank
+      memoryLimit: 4Gi
+      name: filter-H1
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - condition
+          - --output
+          - .
+          - --detector
+          - L1
+        entrypoint: python
+      cpuLimit: "2"
+      dependsOn:
+        - acquire
+      memoryLimit: 4Gi
+      name: condition-L1
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - filter
+          - --output
+          - .
+          - --detector
+          - L1
+        entrypoint: python
+      cpuLimit: "2"
+      dependsOn:
+        - condition-L1
+        - bank
+      memoryLimit: 4Gi
+      name: filter-L1
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - coincidence
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - filter-H1
+        - filter-L1
+      memoryLimit: 2Gi
+      name: coincidence
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - figures
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - condition-H1
+        - filter-H1
+        - condition-L1
+        - filter-L1
+        - acquire
+        - bank
+        - coincidence
+      memoryLimit: 4Gi
+      name: figures
+      runtime: pycbc-local
+    - command:
+        arguments:
+          - /app/scripts/run_stage.py
+          - --stage
+          - package
+          - --output
+          - .
+        entrypoint: python
+      cpuLimit: "1"
+      dependsOn:
+        - figures
+      memoryLimit: 2Gi
+      name: package
+      runtime: pycbc-local
+  dataDependencies:
+    - consumerActivity: condition-H1
+      logicalName: observations.tar
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: filter-H1
+      logicalName: H1-condition.tar.gz
+      producerActivity: condition-H1
+      sizeBytes: 1
+    - consumerActivity: filter-H1
+      logicalName: template-bank.json
+      producerActivity: bank
+      sizeBytes: 1
+    - consumerActivity: coincidence
+      logicalName: H1-triggers.json
+      producerActivity: filter-H1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: H1-condition.tar.gz
+      producerActivity: condition-H1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: H1-triggers.json
+      producerActivity: filter-H1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: H1-snr-envelopes.npz
+      producerActivity: filter-H1
+      sizeBytes: 1
+    - consumerActivity: condition-L1
+      logicalName: observations.tar
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: filter-L1
+      logicalName: L1-condition.tar.gz
+      producerActivity: condition-L1
+      sizeBytes: 1
+    - consumerActivity: filter-L1
+      logicalName: template-bank.json
+      producerActivity: bank
+      sizeBytes: 1
+    - consumerActivity: coincidence
+      logicalName: L1-triggers.json
+      producerActivity: filter-L1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: L1-condition.tar.gz
+      producerActivity: condition-L1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: L1-triggers.json
+      producerActivity: filter-L1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: L1-snr-envelopes.npz
+      producerActivity: filter-L1
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: observations.tar
+      producerActivity: acquire
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: template-bank.json
+      producerActivity: bank
+      sizeBytes: 1
+    - consumerActivity: figures
+      logicalName: coincidences.json
+      producerActivity: coincidence
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-summary.json
+      producerActivity: figures
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: derived-results.tar.gz
+      producerActivity: figures
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: detector-analysis.png
+      producerActivity: figures
+      sizeBytes: 1
+    - consumerActivity: package
+      logicalName: coincidence-analysis.png
+      producerActivity: figures
+      sizeBytes: 1
+  image: ghcr.io/uffescience/akoflow-examples/pycbc:v1
+  namespace: akoflow-examples

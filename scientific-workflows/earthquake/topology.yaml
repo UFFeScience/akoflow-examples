@@ -1,0 +1,5 @@
+id: earthquake-local-topology
+name: earthquake-local local topology
+version: 1
+executionScopeId: earthquake-local-scope
+links: []

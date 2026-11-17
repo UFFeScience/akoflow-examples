@@ -1,0 +1,44 @@
+{
+  "status": "passed",
+  "observedAt": "2026-11-15T22:59:33.181173+00:00",
+  "runId": "pycbc-local-25b5a1fbc4-run-20261115t225353.992003631",
+  "image": "ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a",
+  "imageId": "sha256:43c41477e1dd556ab921f1832b3f638e60f49dd3f1b25d2a214f61308027227a",
+  "validatorCommand": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "--mount",
+    "type=bind,src=/home/ovvesley/Workspace/AKOFLOW/akoflow-examples/scientific-workflows/pycbc/outputs-daemon,dst=/outputs,readonly",
+    "ghcr.io/uffescience/akoflow-examples/pycbc:local-43c41477e1dd556a",
+    "python3",
+    "/app/scripts/validate.py"
+  ],
+  "validatorExitCode": 0,
+  "validatorOutput": "{\"status\": \"success\", \"rawObservedSamples\": 33554432, \"physicalTemplates\": 66, \"independentMatchedFilterNormalizationChecked\": true, \"zeroLagClusteredCoincidences\": 1, \"realFigures\": 2}",
+  "validatorSHA256": "f3c0616784d91f51b540fc69223515a1950c4896858158a79e8a2653430de213",
+  "nativeOutputDigests": {
+    "pycbc-results.tar.gz": "dfcd7758151be8d52270112e19105fc6d9d4699eb716299eac32a86681106c00",
+    "pycbc-summary.json": "0eefc33c419d9cb72e8e47578f34a4c1689ea6d105e69d6ad2d3567f32f0e989",
+    "published-detector-analysis.png": "b1ead805eff33f06dfd7211cbbb5a978ed6fd246861bce64d1fdb388a22d134b",
+    "published-coincidence-analysis.png": "f24e1165b98f0a3a2b480858f0ab62f3523c847222213c13278e53356233ba86"
+  },
+  "completedActivities": 9,
+  "physicalTemplateCount": 66,
+  "rawObservedSamples": 33554432,
+  "zeroLagClusteredCoincidences": 1,
+  "selectedCoincidence": {
+    "template": 9,
+    "gps": 1126259462.425293,
+    "H1GPS": 1126259462.428711,
+    "L1GPS": 1126259462.421875,
+    "lagSeconds": 0.0068359375,
+    "H1SNR": 19.253089651656886,
+    "L1SNR": 13.256220045611185,
+    "networkSNR": 23.375389430604173
+  },
+  "visualCount": 2,
+  "calibratedSignificanceClaimed": false
+}

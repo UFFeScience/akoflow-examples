@@ -1,0 +1,17 @@
+{
+  "experimentId": "611c0c93-b536-4967-aa8f-93702d60ae3c",
+  "version": {
+    "id": "10da55b0-2263-4682-be34-3c465b32af05",
+    "workflowId": "05f57604-89c4-4911-b9a3-9b129d8b83f7",
+    "number": 1,
+    "message": "Measured homeserver execution: 11/11 completed; exact executed image published by immutable registry alias; four original visual outputs.",
+    "hash": "31948cc05c3d20575ff2a8d5a3bbf198a1a8cf50766be94b1fd730b13d8f7adf",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "ca0b7a6e-ddcf-4f75-b597-16c11bec3908",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-earthquake",
+  "image": "hub.akoflow.com/akoflow-examples/earthquake@sha256:f0fa40c0f1fce87927a1b82e36968990bd2884ba21b12d2b9f717fdbb941f171",
+  "runId": "earthquake-local-local-5aca190e53-run-20261115t173311.816778865",
+  "visualCount": 4
+}

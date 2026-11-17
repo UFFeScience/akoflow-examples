@@ -1,0 +1,3839 @@
+{
+  "activityCount": 5,
+  "image": "ghcr.io/uffescience/akoflow-examples/sra-search-local:local-cd38a47030638191",
+  "imageId": "sha256:cd38a47030638191a6136755272cdfa990b8264795d0bfad0c69034f933074a4",
+  "observedAt": "2026-11-15T18:11:13Z",
+  "planId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265",
+  "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+  "status": "completed",
+  "workflowId": "sra-search-local-local-2d26c73544",
+  "projection": {
+    "activities": [
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-index",
+        "activityId": "sra-search-local-local-2d26c73544-index",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766273.9818366,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766273.9818366,
+        "startedAt": 1794766274.2586591,
+        "finishedAt": 1794766274.5658138,
+        "runtimeSeconds": 0.30715465545654297,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sra-search-local-local"
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-extract-reads",
+        "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766275.9670465,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766275.9670465,
+        "startedAt": 1794766276.195264,
+        "finishedAt": 1794766279.3655064,
+        "runtimeSeconds": 3.1702423095703125,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sra-search-local-local"
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-align",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766282.8237991,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766282.8237991,
+        "startedAt": 1794766289.78928,
+        "finishedAt": 1794766328.0990236,
+        "runtimeSeconds": 38.30974364280701,
+        "queueSeconds": 0,
+        "transferSeconds": 4.81650185585022,
+        "transferBytes": 1035082805,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 3.8640050888061523,
+          "preparationFinishedAt": 1794766285.9252748,
+          "preparationStartedAt": 1794766282.8896601,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.04381108283996582,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.0356147289276123,
+          "transferWorkSeconds": 4.81650185585022
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-package",
+        "activityId": "sra-search-local-local-2d26c73544-package",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766329.7191398,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766329.7191398,
+        "startedAt": 1794766337.677966,
+        "finishedAt": 1794766342.7336261,
+        "runtimeSeconds": 5.055660009384155,
+        "queueSeconds": 0,
+        "transferSeconds": 3.3744566440582275,
+        "transferBytes": 1275657169,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 4.549698829650879,
+          "preparationFinishedAt": 1794766333.1282673,
+          "preparationStartedAt": 1794766329.7538106,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011883020401000977,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.3744566440582275,
+          "transferWorkSeconds": 3.3744566440582275
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-visualize",
+        "activityId": "sra-search-local-local-2d26c73544-visualize",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766344.5918841,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766344.5918841,
+        "startedAt": 1794766355.0865266,
+        "finishedAt": 1794766355.2160165,
+        "runtimeSeconds": 0.12948989868164062,
+        "queueSeconds": 0,
+        "transferSeconds": 3.956543207168579,
+        "transferBytes": 1516062399,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 6.503951787948608,
+          "preparationFinishedAt": 1794766348.5825748,
+          "preparationStartedAt": 1794766344.6260316,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011618375778198242,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.956543207168579,
+          "transferWorkSeconds": 3.956543207168579
+        }
+      }
+    ],
+    "activityAttempts": [
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-index",
+        "activityId": "sra-search-local-local-2d26c73544-index",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766273.9818366,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766273.9818366,
+        "startedAt": 1794766274.2586591,
+        "finishedAt": 1794766274.5658138,
+        "runtimeSeconds": 0.30715465545654297,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sra-search-local-local"
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-extract-reads",
+        "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766275.9670465,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766275.9670465,
+        "startedAt": 1794766276.195264,
+        "finishedAt": 1794766279.3655064,
+        "runtimeSeconds": 3.1702423095703125,
+        "queueSeconds": 0,
+        "transferSeconds": 0,
+        "transferBytes": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "sra-search-local-local"
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-align",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766282.8237991,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766282.8237991,
+        "startedAt": 1794766289.78928,
+        "finishedAt": 1794766328.0990236,
+        "runtimeSeconds": 38.30974364280701,
+        "queueSeconds": 0,
+        "transferSeconds": 4.81650185585022,
+        "transferBytes": 1035082805,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 3.8640050888061523,
+          "preparationFinishedAt": 1794766285.9252748,
+          "preparationStartedAt": 1794766282.8896601,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.04381108283996582,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.0356147289276123,
+          "transferWorkSeconds": 4.81650185585022
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-package",
+        "activityId": "sra-search-local-local-2d26c73544-package",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766329.7191398,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766329.7191398,
+        "startedAt": 1794766337.677966,
+        "finishedAt": 1794766342.7336261,
+        "runtimeSeconds": 5.055660009384155,
+        "queueSeconds": 0,
+        "transferSeconds": 3.3744566440582275,
+        "transferBytes": 1275657169,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 4.549698829650879,
+          "preparationFinishedAt": 1794766333.1282673,
+          "preparationStartedAt": 1794766329.7538106,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011883020401000977,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.3744566440582275,
+          "transferWorkSeconds": 3.3744566440582275
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "planAssignmentId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265-sra-search-local-local-2d26c73544-visualize",
+        "activityId": "sra-search-local-local-2d26c73544-visualize",
+        "plannedResourceId": "sra-search-local-local-docker",
+        "allocatedResourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "attempt": 1,
+        "status": "completed",
+        "readyAt": 1794766344.5918841,
+        "dataReadyAt": 0,
+        "queuedAt": 1794766344.5918841,
+        "startedAt": 1794766355.0865266,
+        "finishedAt": 1794766355.2160165,
+        "runtimeSeconds": 0.12948989868164062,
+        "queueSeconds": 0,
+        "transferSeconds": 3.956543207168579,
+        "transferBytes": 1516062399,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "cost": 0,
+        "metadata": {
+          "launchWaitSeconds": 6.503951787948608,
+          "preparationFinishedAt": 1794766348.5825748,
+          "preparationStartedAt": 1794766344.6260316,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011618375778198242,
+          "runtimeId": "sra-search-local-local",
+          "transferElapsedSeconds": 3.956543207168579,
+          "transferWorkSeconds": 3.956543207168579
+        }
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "id": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-0",
+        "planId": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794766282.8896601,
+        "finishedAt": 1794766284.6705472,
+        "durationSeconds": 1.7808871269226074,
+        "transferredBytes": 8625377,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-index",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 8,
+          "sshChannelWaitSeconds": 7.93e-07,
+          "rsyncExecutionSeconds": 0.103343205,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 8625377,
+        "filesTransferred": 8
+      },
+      {
+        "id": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-1",
+        "planId": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-1",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794766282.8896601,
+        "finishedAt": 1794766285.9252748,
+        "durationSeconds": 3.0356147289276123,
+        "transferredBytes": 1026457428,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 8.77e-07,
+          "rsyncExecutionSeconds": 1.7420487900000001,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1026457428,
+        "filesTransferred": 3
+      },
+      {
+        "id": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-0",
+        "planId": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-package",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794766329.7538106,
+        "finishedAt": 1794766333.1282673,
+        "durationSeconds": 3.3744566440582275,
+        "transferredBytes": 1275657169,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-align",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-package",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 17,
+          "sshChannelWaitSeconds": 9.240000000000001e-07,
+          "rsyncExecutionSeconds": 2.015105607,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1275657169,
+        "filesTransferred": 17
+      },
+      {
+        "id": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize-0",
+        "planId": "transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-visualize",
+        "strategy": "gateway",
+        "status": "completed",
+        "startedAt": 1794766344.6260316,
+        "finishedAt": 1794766348.5825748,
+        "durationSeconds": 3.956543207168579,
+        "transferredBytes": 1516062399,
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-package",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-visualize",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 20,
+          "sshChannelWaitSeconds": 5.85e-07,
+          "rsyncExecutionSeconds": 2.432831395,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1516062399,
+        "filesTransferred": 20
+      }
+    ],
+    "cloudBilling": {
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "status": "estimated",
+      "estimatedCost": 0,
+      "knownCost": 0,
+      "instances": [],
+      "asOf": "2026-11-15T18:13:12.955552886Z"
+    },
+    "dataLocations": [
+      {
+        "id": "58ea79038c7ddeeec8495ab831aa7070",
+        "dataObjectInstanceId": "4d16c32d08100718b25d823b52c2d2b0",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/SRR3403832.bam",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "5402ceb0325ab1e8db020a4e3252de0a",
+        "dataObjectInstanceId": "713520a5dd609b64dcd83cc180444051",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/SRR3403832.bam.bai",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "95e29511dbd64e358b6d52f4b55e3201",
+        "dataObjectInstanceId": "e752cf424fa5ff5bb5e997fbe885c296",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/alignment-summary.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "640fc60c8ab1894dad4c64e164fc620a",
+        "dataObjectInstanceId": "2defd1344d217ae487c1067f2f31c162",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/flagstat.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "ea8f626c663d764445b888cef532acd6",
+        "dataObjectInstanceId": "48d494ed8e691b4b6f352b1bb967bb0c",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/idxstats.tsv",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "d4de9dc2cff5ad3be25b53dd05909560",
+        "dataObjectInstanceId": "5b89e30ee50c29f9cb15670c9f737413",
+        "storageResourceId": "1503a3b7ef5e0abc47ccf12ef8284e92",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align/stage-align.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "7949a94e36ff08641a24f969fc0c8796",
+        "dataObjectInstanceId": "1e9877d9039e6a2b130f845b52cb1a08",
+        "storageResourceId": "ddde63eea3421fac3eb9b9334ede8bfd",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads/SRR3403832_1.fastq",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "d5da6dfa3ae91c4632fd88b0edad979e",
+        "dataObjectInstanceId": "146edf2a8f111ddf7b192c80b61987db",
+        "storageResourceId": "ddde63eea3421fac3eb9b9334ede8bfd",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads/SRR3403832_2.fastq",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "b411d62069dc7d72264cbcfd3782b07d",
+        "dataObjectInstanceId": "9129c54b568db1bf031a1c18c72a9068",
+        "storageResourceId": "ddde63eea3421fac3eb9b9334ede8bfd",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads/stage-extract-reads.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "bafd0926f3477fe0de5bcd3320cc2c91",
+        "dataObjectInstanceId": "9a85525939d275880b1e1fb70cce1669",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.1.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "c32773e7f32cd448a71ab5f547f03868",
+        "dataObjectInstanceId": "01085a5cc6aec1cd4b15f43a85b5d6bd",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.2.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "4ecd4cc247311857a82525fb35604ded",
+        "dataObjectInstanceId": "9075513e8ccf2c972883e8a2cba3aad1",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.3.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "d57feb7a9abd9a487f59880696814c08",
+        "dataObjectInstanceId": "815fb089a401d2da3e10d2c40eff42e0",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.4.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "4e3168e7b7497ddd0e960b5d34c4e646",
+        "dataObjectInstanceId": "c46852b77a71e1a4fe5a4aa6ac155b13",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.fna",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "63edeb1e7f7eb052034245367130cd43",
+        "dataObjectInstanceId": "1bbc1184ea4d47190e9ebe073a99b05d",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.rev.1.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "a5134bdd4fa6c27a065d266f199f61e0",
+        "dataObjectInstanceId": "15aa1f9166697c2c0203e4bcc5a8fa21",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/reference.rev.2.bt2",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "03e46ba44df21eb8f926473eec0c2199",
+        "dataObjectInstanceId": "31cfac5587198d2ef3d07ea8e7fb3a48",
+        "storageResourceId": "da80f5188a88afe47bf62004ff69c701",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index/stage-index.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "00a474f8e88660e79d9c2318f9b121a4",
+        "dataObjectInstanceId": "04810d972479babe84ceeed040fa7405",
+        "storageResourceId": "2568eba295fbc01b0328fb46aaa3108b",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package/results.tar.gz",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "19019239193f32fec21b63e1a36b1d11",
+        "dataObjectInstanceId": "f3c542a6059786a4f56141a25677295d",
+        "storageResourceId": "2568eba295fbc01b0328fb46aaa3108b",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package/stage-package.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "fa4ce967fb41e7e2e7d0bbbdc3d1ca0e",
+        "dataObjectInstanceId": "ec865c2dbcd917a606d1c7a616caaa60",
+        "storageResourceId": "2568eba295fbc01b0328fb46aaa3108b",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package/validation.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "28406e6ca91bc01663592e7298677e9d",
+        "dataObjectInstanceId": "bc8c1655bbdf622421e3bbcfcde416ab",
+        "storageResourceId": "17c6aa90f918078eb17c512fa5be07ac",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize/mapping-summary.svg",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      },
+      {
+        "id": "d9028b46a6cfd8771ffb6d5ea380e012",
+        "dataObjectInstanceId": "a284652dd3d98b64562d0614de26a304",
+        "storageResourceId": "17c6aa90f918078eb17c512fa5be07ac",
+        "resourceId": "sra-search-local-local-docker",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize/stage-visualize.json",
+        "status": "ephemeral",
+        "metadata": {
+          "lifetime": "pod"
+        }
+      }
+    ],
+    "dataObjects": [
+      {
+        "id": "4d16c32d08100718b25d823b52c2d2b0",
+        "dataObjectId": "19348ca08df5b67053df9e4d175687f5",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "SRR3403832.bam",
+        "sizeBytes": 240573032,
+        "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "713520a5dd609b64dcd83cc180444051",
+        "dataObjectId": "f4c471f6152eaf48efc5c06395dcfb18",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "SRR3403832.bam.bai",
+        "sizeBytes": 24,
+        "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "e752cf424fa5ff5bb5e997fbe885c296",
+        "dataObjectId": "e6935076a61c7d4e1efaed31109464b6",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "alignment-summary.json",
+        "sizeBytes": 78,
+        "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "2defd1344d217ae487c1067f2f31c162",
+        "dataObjectId": "2ab5bace2fd9be5a9aed2a76e9f03db0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "flagstat.json",
+        "sizeBytes": 1107,
+        "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "48d494ed8e691b4b6f352b1bb967bb0c",
+        "dataObjectId": "7e5aeb98bfbef6e8a341ac5b34512729",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "idxstats.tsv",
+        "sizeBytes": 33,
+        "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "5b89e30ee50c29f9cb15670c9f737413",
+        "dataObjectId": "6f9b1c3422fa7f107b9dde778c1ad637",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "attempt": 1,
+        "relativePath": "stage-align.json",
+        "sizeBytes": 90,
+        "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "1e9877d9039e6a2b130f845b52cb1a08",
+        "dataObjectId": "653da7f06464ec576bce987fa00a5da0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "attempt": 1,
+        "relativePath": "SRR3403832_1.fastq",
+        "sizeBytes": 513191800,
+        "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "146edf2a8f111ddf7b192c80b61987db",
+        "dataObjectId": "a9f83c2a52ef1f50c577356ea81c101d",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "attempt": 1,
+        "relativePath": "SRR3403832_2.fastq",
+        "sizeBytes": 513265530,
+        "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "9129c54b568db1bf031a1c18c72a9068",
+        "dataObjectId": "79bb0505f20176517579ee1b5c9efb39",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "attempt": 1,
+        "relativePath": "stage-extract-reads.json",
+        "sizeBytes": 98,
+        "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "9a85525939d275880b1e1fb70cce1669",
+        "dataObjectId": "e591297a4806e6fb456b54a11fd12c9f",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.1.bt2",
+        "sizeBytes": 4226858,
+        "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "01085a5cc6aec1cd4b15f43a85b5d6bd",
+        "dataObjectId": "57d401fe8f9defbc0246361f3e884161",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.2.bt2",
+        "sizeBytes": 24280,
+        "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "9075513e8ccf2c972883e8a2cba3aad1",
+        "dataObjectId": "d25a880a1bd6a8e97325cfa8a64ba2b9",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.3.bt2",
+        "sizeBytes": 17,
+        "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "815fb089a401d2da3e10d2c40eff42e0",
+        "dataObjectId": "db5520545f26e13afce03190c29034e5",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.4.bt2",
+        "sizeBytes": 24273,
+        "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "c46852b77a71e1a4fe5a4aa6ac155b13",
+        "dataObjectId": "0093fa2b51aa1f46893e9e84e03b8acb",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.fna",
+        "sizeBytes": 98721,
+        "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "1bbc1184ea4d47190e9ebe073a99b05d",
+        "dataObjectId": "2782ebce9964c1ddd96a6b423cbceaad",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.rev.1.bt2",
+        "sizeBytes": 4226858,
+        "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "15aa1f9166697c2c0203e4bcc5a8fa21",
+        "dataObjectId": "04cbfdcc5317ae0d8abc7d9e081bdca7",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "reference.rev.2.bt2",
+        "sizeBytes": 24280,
+        "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "31cfac5587198d2ef3d07ea8e7fb3a48",
+        "dataObjectId": "5301dd6fd5481cdc2a054d50b2ae8a09",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "attempt": 1,
+        "relativePath": "stage-index.json",
+        "sizeBytes": 90,
+        "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "04810d972479babe84ceeed040fa7405",
+        "dataObjectId": "38f34f0b9dbbe687e37af85a37f888ec",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-package",
+        "attempt": 1,
+        "relativePath": "results.tar.gz",
+        "sizeBytes": 240403905,
+        "checksum": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "f3c542a6059786a4f56141a25677295d",
+        "dataObjectId": "7d396f4d73988dfa9bc84d93b6046e7d",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-package",
+        "attempt": 1,
+        "relativePath": "stage-package.json",
+        "sizeBytes": 92,
+        "checksum": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "ec865c2dbcd917a606d1c7a616caaa60",
+        "dataObjectId": "72eac05e06b44017b176d572004a2732",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-package",
+        "attempt": 1,
+        "relativePath": "validation.json",
+        "sizeBytes": 1233,
+        "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "bc8c1655bbdf622421e3bbcfcde416ab",
+        "dataObjectId": "8e5b2edff0d03311d20f8343824488b8",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-visualize",
+        "attempt": 1,
+        "relativePath": "mapping-summary.svg",
+        "sizeBytes": 1533,
+        "checksum": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      },
+      {
+        "id": "a284652dd3d98b64562d0614de26a304",
+        "dataObjectId": "4b63267cb83b299b8cb3c32c013d9b57",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-visualize",
+        "attempt": 1,
+        "relativePath": "stage-visualize.json",
+        "sizeBytes": 94,
+        "checksum": "sha256:3136ee8957c48dba0b974873d553549f52c1c4ef2304a660a38b15e7ef48f217",
+        "discovered": true,
+        "metadata": {
+          "change": "created"
+        }
+      }
+    ],
+    "dataTransfers": [
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-1",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+        "sourceResourceId": "sra-search-local-local-docker",
+        "targetResourceId": "sra-search-local-local-docker",
+        "bytes": 1026457428,
+        "startedAt": 1794766282.8896601,
+        "finishedAt": 1794766285.9252748,
+        "durationSeconds": 3.0356147289276123,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 3,
+          "sshChannelWaitSeconds": 8.77e-07,
+          "rsyncExecutionSeconds": 1.7420487900000001,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1026457428
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+        "sourceResourceId": "sra-search-local-local-docker",
+        "targetResourceId": "sra-search-local-local-docker",
+        "bytes": 8625377,
+        "startedAt": 1794766282.8896601,
+        "finishedAt": 1794766284.6705472,
+        "durationSeconds": 1.7808871269226074,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-index",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 8,
+          "sshChannelWaitSeconds": 7.93e-07,
+          "rsyncExecutionSeconds": 0.103343205,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 8625377
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-package",
+        "sourceResourceId": "sra-search-local-local-docker",
+        "targetResourceId": "sra-search-local-local-docker",
+        "bytes": 1275657169,
+        "startedAt": 1794766329.7538106,
+        "finishedAt": 1794766333.1282673,
+        "durationSeconds": 3.3744566440582275,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-align",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-package",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 17,
+          "sshChannelWaitSeconds": 9.240000000000001e-07,
+          "rsyncExecutionSeconds": 2.015105607,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1275657169
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize-0",
+        "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-package",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-visualize",
+        "sourceResourceId": "sra-search-local-local-docker",
+        "targetResourceId": "sra-search-local-local-docker",
+        "bytes": 1516062399,
+        "startedAt": 1794766344.6260316,
+        "finishedAt": 1794766348.5825748,
+        "durationSeconds": 3.956543207168579,
+        "cost": 0,
+        "strategy": "gateway",
+        "route": {
+          "strategy": "gateway",
+          "producerActivityId": "sra-search-local-local-2d26c73544-package",
+          "consumerActivityId": "sra-search-local-local-2d26c73544-visualize",
+          "sourceResourceId": "sra-search-local-local-docker",
+          "targetResourceId": "sra-search-local-local-docker",
+          "sourceEnvironmentId": "sra-search-local-v1",
+          "targetEnvironmentId": "sra-search-local-v1",
+          "filesTransferred": 20,
+          "sshChannelWaitSeconds": 5.85e-07,
+          "rsyncExecutionSeconds": 2.432831395,
+          "reason": "incremental rsync of predecessor workspace through verified staging"
+        },
+        "logicalBytes": 1516062399
+      }
+    ],
+    "events": [
+      {
+        "id": "8a7aa6d5d524d5d6536a1ef93d03ef74",
+        "eventType": "execution.run.started",
+        "aggregateType": "execution_run",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265"
+        },
+        "occurredAt": "2026-11-15T18:11:13.857402353Z"
+      },
+      {
+        "id": "cda3a28317a0e5c50d4ed06c2fca1107",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-index",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T18:11:15.80654133Z"
+      },
+      {
+        "id": "58240a492907070884f845026c264999",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-index",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0.30715465545654297,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T18:11:15.954645178Z"
+      },
+      {
+        "id": "03d2231cdcbee89943332a6da37bf7ad",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T18:11:17.818019073Z"
+      },
+      {
+        "id": "8e0bbf50e64a1ad7aed9c969ac50a332",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 3.1702423095703125,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T18:11:22.812365393Z"
+      },
+      {
+        "id": "50585aa4c139b1f2da33278a860a12e4",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T18:11:31.356736662Z"
+      },
+      {
+        "id": "da85e48477c095b0a730eaa1ecdcc97e",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 38.30974364280701,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T18:12:09.707150555Z"
+      },
+      {
+        "id": "5fe544dbc4616d1bde53fd4ee38373db",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T18:12:19.223610124Z"
+      },
+      {
+        "id": "307ed3c541868e08cfbfa825883c0e92",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 5.055660009384155,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T18:12:24.580317016Z"
+      },
+      {
+        "id": "3818f61fe1e03b9439d5e1e70932346a",
+        "eventType": "activity.started",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        },
+        "occurredAt": "2026-11-15T18:12:36.625381755Z"
+      },
+      {
+        "id": "71a2af82bab7988e2b0d3e8154ac2066",
+        "eventType": "activity.completed",
+        "aggregateType": "activity_execution",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize",
+        "payload": {
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "attempt": 1,
+          "executionRunId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "failureReason": "",
+          "runtimeId": "sra-search-local-local",
+          "runtimeSeconds": 0.12948989868164062,
+          "status": "completed"
+        },
+        "occurredAt": "2026-11-15T18:12:38.967628728Z"
+      },
+      {
+        "id": "c1e2c058192d80d3dd04c921a656adfa",
+        "eventType": "execution.run.completed",
+        "aggregateType": "execution_run",
+        "aggregateId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "payload": {
+          "cost": 0,
+          "makespanSeconds": 80.95735740661621
+        },
+        "occurredAt": "2026-11-15T18:12:38.980262835Z"
+      }
+    ],
+    "handles": [
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "externalId": "360bbe33e8336c8941b4949ca2b3d183f0950f3324b1f7aa098661e00e66c6ba",
+        "status": "completed",
+        "startedAt": 1794766289.78928,
+        "finishedAt": 1794766328.0990236,
+        "exitCode": 0,
+        "log": "1022414 reads; of these:\n  1022414 (100.00%) were paired; of these:\n    1022414 (100.00%) aligned concordantly 0 times\n    0 (0.00%) aligned concordantly exactly 1 time\n    0 (0.00%) aligned concordantly >1 times\n    ----\n    1022414 pairs aligned concordantly 0 times; of these:\n      0 (0.00%) aligned discordantly 1 time\n    ----\n    1022414 pairs aligned 0 times concordantly or discordantly; of these:\n      2044828 mates make up the pairs; of these:\n        2044828 (100.00%) aligned 0 times\n        0 (0.00%) aligned exactly 1 time\n        0 (0.00%) aligned >1 times\n0.00% overall alignment rate\n[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "attempt": 1,
+          "runtime": "sra-search-local-local",
+          "root": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align",
+          "startedAt": 1794766289.78928,
+          "finishedAt": 1794766328.0990236,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "SRR3403832.bam",
+              "change": "created",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766325195962052
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "change": "created",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766326933982677
+            },
+            {
+              "path": "alignment-summary.json",
+              "change": "created",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766301990688875
+            },
+            {
+              "path": "flagstat.json",
+              "change": "created",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766328090996421
+            },
+            {
+              "path": "idxstats.tsv",
+              "change": "created",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766328091996433
+            },
+            {
+              "path": "stage-align.json",
+              "change": "created",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766328091996433
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766285551497910
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766285882501734
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766284624487207
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766284624487207
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766284627487241
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766284627487241
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766285882501734
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766284627487241
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "SRR3403832.bam",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766325195962052
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766326933982677
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766285551497910
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766285882501734
+            },
+            {
+              "path": "alignment-summary.json",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766301990688875
+            },
+            {
+              "path": "flagstat.json",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766328090996421
+            },
+            {
+              "path": "idxstats.tsv",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766328091996433
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766284624487207
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766284624487207
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766284625487218
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766284627487241
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766284627487241
+            },
+            {
+              "path": "stage-align.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766328091996433
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766285882501734
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766284627487241
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794766289.78928,
+              "finishedAt": 1794766328.0990236,
+              "durationSeconds": 38.30974364280701
+            }
+          ],
+          "summary": {
+            "initialFiles": 11,
+            "finalFiles": 17,
+            "createdFiles": 6,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 240574364
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align",
+          "dockerMetricCPUSeconds": 36.04217897062301,
+          "dockerMetricObservedAt": 1794766321.3056219,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align",
+          "submittedAt": 1794766289.78928
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "externalId": "19f6f77b834f52aef188fda248865513056f5a98f5fbd1778295d8f94367c8a5",
+        "status": "completed",
+        "startedAt": 1794766276.195264,
+        "finishedAt": 1794766279.3655064,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "attempt": 1,
+          "runtime": "sra-search-local-local",
+          "root": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads",
+          "startedAt": 1794766276.195264,
+          "finishedAt": 1794766279.3655064,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "change": "created",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766277688407342
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "change": "created",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766279358426535
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "change": "created",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766279358426535
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766277688407342
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766279358426535
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766279358426535
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794766276.195264,
+              "finishedAt": 1794766279.3655064,
+              "durationSeconds": 3.1702423095703125
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 3,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 1026457428
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794766276.1952703,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-extract-reads",
+          "submittedAt": 1794766276.195264
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-index",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "externalId": "0e47b7a04f7b836db2995d42926b9546cfb225f27bbb9db45452cee7fcce1705",
+        "status": "completed",
+        "startedAt": 1794766274.2586591,
+        "finishedAt": 1794766274.5658138,
+        "exitCode": 0,
+        "log": "Settings:\n  Output files: \"reference.*.bt2\"\n  Line rate: 6 (line is 64 bytes)\n  Lines per side: 1 (side is 64 bytes)\n  Offset rate: 4 (one in 16)\n  FTable chars: 10\n  Strings: unpacked\n  Max bucket size: default\n  Max bucket size, sqrt multiplier: default\n  Max bucket size, len divisor: 4\n  Difference-cover sample period: 1024\n  Endianness: little\n  Actual local endianness: little\n  Sanity checking: disabled\n  Assertions: disabled\n  Random seed: 0\n  Sizeofs: void*:8, int:4, long:8, size_t:8\nInput files DNA, FASTA:\n  reference.fna\nReading reference sizes\n  Time reading reference sizes: 00:00:00\nCalculating joined length\nWriting header\nReserving space for joined string\nJoining reference sequences\n  Time to join reference sequences: 00:00:00\nbmax according to bmaxDivN setting: 24273\nUsing parameters --bmax 18205 --dcv 1024\n  Doing ahead-of-time memory usage test\n  Passed!  Constructing with these parameters: --bmax 18205 --dcv 1024\nConstructing suffix-array element generator\nBuilding DifferenceCoverSample\n  Building sPrime\n  Building sPrimeOrder\n  V-Sorting samples\n  V-Sorting samples time: 00:00:00\n  Allocating rank array\n  Ranking v-sort output\n  Ranking v-sort output time: 00:00:00\n  Invoking Larsson-Sadakane on ranks\n  Invoking Larsson-Sadakane on ranks time: 00:00:00\n  Sanity-checking and returning\nBuilding samples\nReserving space for 12 sample suffixes\nGenerating random suffixes\nQSorting 12 sample offsets, eliminating duplicates\nQSorting sample offsets, eliminating duplicates time: 00:00:00\nMultikey QSorting 12 samples\n  (Using difference cover)\n  Multikey QSorting samples time: 00:00:00\nCalculating bucket sizes\nSplitting and merging\n  Splitting and merging time: 00:00:00\nSplit 1, merged 6; iterating...\nSplitting and merging\n  Splitting and merging time: 00:00:00\nAvg bucket size: 12135.6 (target: 18204)\nConverting suffix-array elements to index image\nAllocating ftab, absorbFtab\nEntering Ebwt loop\nGetting block 1 of 8\n  Reserving size (18205) for bucket 1\n  Calculating Z arrays for bucket 1\n  Entering block accumulator loop for bucket 1:\n  bucket 1: 10%\n  bucket 1: 20%\n  bucket 1: 30%\n  bucket 1: 40%\n  bucket 1: 50%\n  bucket 1: 60%\n  bucket 1: 70%\n  bucket 1: 80%\n  bucket 1: 90%\n  bucket 1: 100%\n  Sorting block of length 13660 for bucket 1\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 13661 for bucket 1\nGetting block 2 of 8\n  Reserving size (18205) for bucket 2\n  Calculating Z arrays for bucket 2\n  Entering block accumulator loop for bucket 2:\n  bucket 2: 10%\n  bucket 2: 20%\n  bucket 2: 30%\n  bucket 2: 40%\n  bucket 2: 50%\n  bucket 2: 60%\n  bucket 2: 70%\n  bucket 2: 80%\n  bucket 2: 90%\n  bucket 2: 100%\n  Sorting block of length 12564 for bucket 2\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 12565 for bucket 2\nGetting block 3 of 8\n  Reserving size (18205) for bucket 3\n  Calculating Z arrays for bucket 3\n  Entering block accumulator loop for bucket 3:\n  bucket 3: 10%\n  bucket 3: 20%\n  bucket 3: 30%\n  bucket 3: 40%\n  bucket 3: 50%\n  bucket 3: 60%\n  bucket 3: 70%\n  bucket 3: 80%\n  bucket 3: 90%\n  bucket 3: 100%\n  Sorting block of length 15398 for bucket 3\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15399 for bucket 3\nGetting block 4 of 8\n  Reserving size (18205) for bucket 4\n  Calculating Z arrays for bucket 4\n  Entering block accumulator loop for bucket 4:\n  bucket 4: 10%\n  bucket 4: 20%\n  bucket 4: 30%\n  bucket 4: 40%\n  bucket 4: 50%\n  bucket 4: 60%\n  bucket 4: 70%\n  bucket 4: 80%\n  bucket 4: 90%\n  bucket 4: 100%\n  Sorting block of length 14725 for bucket 4\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14726 for bucket 4\nGetting block 5 of 8\n  Reserving size (18205) for bucket 5\n  Calculating Z arrays for bucket 5\n  Entering block accumulator loop for bucket 5:\n  bucket 5: 10%\n  bucket 5: 20%\n  bucket 5: 30%\n  bucket 5: 40%\n  bucket 5: 50%\n  bucket 5: 60%\n  bucket 5: 70%\n  bucket 5: 80%\n  bucket 5: 90%\n  bucket 5: 100%\n  Sorting block of length 10013 for bucket 5\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 10014 for bucket 5\nGetting block 6 of 8\n  Reserving size (18205) for bucket 6\n  Calculating Z arrays for bucket 6\n  Entering block accumulator loop for bucket 6:\n  bucket 6: 10%\n  bucket 6: 20%\n  bucket 6: 30%\n  bucket 6: 40%\n  bucket 6: 50%\n  bucket 6: 60%\n  bucket 6: 70%\n  bucket 6: 80%\n  bucket 6: 90%\n  bucket 6: 100%\n  Sorting block of length 10449 for bucket 6\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 10450 for bucket 6\nGetting block 7 of 8\n  Reserving size (18205) for bucket 7\n  Calculating Z arrays for bucket 7\n  Entering block accumulator loop for bucket 7:\n  bucket 7: 10%\n  bucket 7: 20%\n  bucket 7: 30%\n  bucket 7: 40%\n  bucket 7: 50%\n  bucket 7: 60%\n  bucket 7: 70%\n  bucket 7: 80%\n  bucket 7: 90%\n  bucket 7: 100%\n  Sorting block of length 15906 for bucket 7\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15907 for bucket 7\nGetting block 8 of 8\n  Reserving size (18205) for bucket 8\n  Calculating Z arrays for bucket 8\n  Entering block accumulator loop for bucket 8:\n  bucket 8: 10%\n  bucket 8: 20%\n  bucket 8: 30%\n  bucket 8: 40%\n  bucket 8: 50%\n  bucket 8: 60%\n  bucket 8: 70%\n  bucket 8: 80%\n  bucket 8: 90%\n  bucket 8: 100%\n  Sorting block of length 4370 for bucket 8\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 4371 for bucket 8\nExited Ebwt loop\nfchr[A]: 0\nfchr[C]: 34027\nfchr[G]: 49282\nfchr[T]: 62449\nfchr[$]: 97092\nExiting Ebwt::buildToDisk()\nReturning from initFromVector\nWrote 4226858 bytes to primary EBWT file: reference.1.bt2.tmp\nWrote 24280 bytes to secondary EBWT file: reference.2.bt2.tmp\nRe-opening _in1 and _in2 as input streams\nReturning from Ebwt constructor\nHeaders:\n    len: 97092\n    bwtLen: 97093\n    sz: 24273\n    bwtSz: 24274\n    lineRate: 6\n    offRate: 4\n    offMask: 0xfffffff0\n    ftabChars: 10\n    eftabLen: 20\n    eftabSz: 80\n    ftabLen: 1048577\n    ftabSz: 4194308\n    offsLen: 6069\n    offsSz: 24276\n    lineSz: 64\n    sideSz: 64\n    sideBwtSz: 48\n    sideBwtLen: 192\n    numSides: 506\n    numLines: 506\n    ebwtTotLen: 32384\n    ebwtTotSz: 32384\n    color: 0\n    reverse: 0\nTotal time for call to driver() for forward index: 00:00:00\nReading reference sizes\n  Time reading reference sizes: 00:00:00\nCalculating joined length\nWriting header\nReserving space for joined string\nJoining reference sequences\n  Time to join reference sequences: 00:00:00\n  Time to reverse reference sequence: 00:00:00\nbmax according to bmaxDivN setting: 24273\nUsing parameters --bmax 18205 --dcv 1024\n  Doing ahead-of-time memory usage test\n  Passed!  Constructing with these parameters: --bmax 18205 --dcv 1024\nConstructing suffix-array element generator\nBuilding DifferenceCoverSample\n  Building sPrime\n  Building sPrimeOrder\n  V-Sorting samples\n  V-Sorting samples time: 00:00:00\n  Allocating rank array\n  Ranking v-sort output\n  Ranking v-sort output time: 00:00:00\n  Invoking Larsson-Sadakane on ranks\n  Invoking Larsson-Sadakane on ranks time: 00:00:00\n  Sanity-checking and returning\nBuilding samples\nReserving space for 12 sample suffixes\nGenerating random suffixes\nQSorting 12 sample offsets, eliminating duplicates\nQSorting sample offsets, eliminating duplicates time: 00:00:00\nMultikey QSorting 12 samples\n  (Using difference cover)\n  Multikey QSorting samples time: 00:00:00\nCalculating bucket sizes\nSplitting and merging\n  Splitting and merging time: 00:00:00\nSplit 2, merged 7; iterating...\nSplitting and merging\n  Splitting and merging time: 00:00:00\nAvg bucket size: 12135.6 (target: 18204)\nConverting suffix-array elements to index image\nAllocating ftab, absorbFtab\nEntering Ebwt loop\nGetting block 1 of 8\n  Reserving size (18205) for bucket 1\n  Calculating Z arrays for bucket 1\n  Entering block accumulator loop for bucket 1:\n  bucket 1: 10%\n  bucket 1: 20%\n  bucket 1: 30%\n  bucket 1: 40%\n  bucket 1: 50%\n  bucket 1: 60%\n  bucket 1: 70%\n  bucket 1: 80%\n  bucket 1: 90%\n  bucket 1: 100%\n  Sorting block of length 14483 for bucket 1\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14484 for bucket 1\nGetting block 2 of 8\n  Reserving size (18205) for bucket 2\n  Calculating Z arrays for bucket 2\n  Entering block accumulator loop for bucket 2:\n  bucket 2: 10%\n  bucket 2: 20%\n  bucket 2: 30%\n  bucket 2: 40%\n  bucket 2: 50%\n  bucket 2: 60%\n  bucket 2: 70%\n  bucket 2: 80%\n  bucket 2: 90%\n  bucket 2: 100%\n  Sorting block of length 7054 for bucket 2\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 7055 for bucket 2\nGetting block 3 of 8\n  Reserving size (18205) for bucket 3\n  Calculating Z arrays for bucket 3\n  Entering block accumulator loop for bucket 3:\n  bucket 3: 10%\n  bucket 3: 20%\n  bucket 3: 30%\n  bucket 3: 40%\n  bucket 3: 50%\n  bucket 3: 60%\n  bucket 3: 70%\n  bucket 3: 80%\n  bucket 3: 90%\n  bucket 3: 100%\n  Sorting block of length 15602 for bucket 3\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 15603 for bucket 3\nGetting block 4 of 8\n  Reserving size (18205) for bucket 4\n  Calculating Z arrays for bucket 4\n  Entering block accumulator loop for bucket 4:\n  bucket 4: 10%\n  bucket 4: 20%\n  bucket 4: 30%\n  bucket 4: 40%\n  bucket 4: 50%\n  bucket 4: 60%\n  bucket 4: 70%\n  bucket 4: 80%\n  bucket 4: 90%\n  bucket 4: 100%\n  Sorting block of length 9181 for bucket 4\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 9182 for bucket 4\nGetting block 5 of 8\n  Reserving size (18205) for bucket 5\n  Calculating Z arrays for bucket 5\n  Entering block accumulator loop for bucket 5:\n  bucket 5: 10%\n  bucket 5: 20%\n  bucket 5: 30%\n  bucket 5: 40%\n  bucket 5: 50%\n  bucket 5: 60%\n  bucket 5: 70%\n  bucket 5: 80%\n  bucket 5: 90%\n  bucket 5: 100%\n  Sorting block of length 16283 for bucket 5\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 16284 for bucket 5\nGetting block 6 of 8\n  Reserving size (18205) for bucket 6\n  Calculating Z arrays for bucket 6\n  Entering block accumulator loop for bucket 6:\n  bucket 6: 10%\n  bucket 6: 20%\n  bucket 6: 30%\n  bucket 6: 40%\n  bucket 6: 50%\n  bucket 6: 60%\n  bucket 6: 70%\n  bucket 6: 80%\n  bucket 6: 90%\n  bucket 6: 100%\n  Sorting block of length 2136 for bucket 6\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 2137 for bucket 6\nGetting block 7 of 8\n  Reserving size (18205) for bucket 7\n  Calculating Z arrays for bucket 7\n  Entering block accumulator loop for bucket 7:\n  bucket 7: 10%\n  bucket 7: 20%\n  bucket 7: 30%\n  bucket 7: 40%\n  bucket 7: 50%\n  bucket 7: 60%\n  bucket 7: 70%\n  bucket 7: 80%\n  bucket 7: 90%\n  bucket 7: 100%\n  Sorting block of length 18193 for bucket 7\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 18194 for bucket 7\nGetting block 8 of 8\n  Reserving size (18205) for bucket 8\n  Calculating Z arrays for bucket 8\n  Entering block accumulator loop for bucket 8:\n  bucket 8: 10%\n  bucket 8: 20%\n  bucket 8: 30%\n  bucket 8: 40%\n  bucket 8: 50%\n  bucket 8: 60%\n  bucket 8: 70%\n  bucket 8: 80%\n  bucket 8: 90%\n  bucket 8: 100%\n  Sorting block of length 14153 for bucket 8\n  (Using difference cover)\n  Sorting block time: 00:00:00\nReturning block of 14154 for bucket 8\nExited Ebwt loop\nfchr[A]: 0\nfchr[C]: 34027\nfchr[G]: 49282\nfchr[T]: 62449\nfchr[$]: 97092\nExiting Ebwt::buildToDisk()\nReturning from initFromVector\nWrote 4226858 bytes to primary EBWT file: reference.rev.1.bt2.tmp\nWrote 24280 bytes to secondary EBWT file: reference.rev.2.bt2.tmp\nRe-opening _in1 and _in2 as input streams\nReturning from Ebwt constructor\nHeaders:\n    len: 97092\n    bwtLen: 97093\n    sz: 24273\n    bwtSz: 24274\n    lineRate: 6\n    offRate: 4\n    offMask: 0xfffffff0\n    ftabChars: 10\n    eftabLen: 20\n    eftabSz: 80\n    ftabLen: 1048577\n    ftabSz: 4194308\n    offsLen: 6069\n    offsSz: 24276\n    lineSz: 64\n    sideSz: 64\n    sideBwtSz: 48\n    sideBwtLen: 192\n    numSides: 506\n    numLines: 506\n    ebwtTotLen: 32384\n    ebwtTotSz: 32384\n    color: 0\n    reverse: 1\nTotal time for backward call to driver() for mirror index: 00:00:00\n\nBuilding a SMALL index\nRenaming reference.3.bt2.tmp to reference.3.bt2\nRenaming reference.4.bt2.tmp to reference.4.bt2\nRenaming reference.1.bt2.tmp to reference.1.bt2\nRenaming reference.2.bt2.tmp to reference.2.bt2\nRenaming reference.rev.1.bt2.tmp to reference.rev.1.bt2\nRenaming reference.rev.2.bt2.tmp to reference.rev.2.bt2\n[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "activityId": "sra-search-local-local-2d26c73544-index",
+          "attempt": 1,
+          "runtime": "sra-search-local-local",
+          "root": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index",
+          "startedAt": 1794766274.2586591,
+          "finishedAt": 1794766274.5658138,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "reference.1.bt2",
+              "change": "created",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766274488370630
+            },
+            {
+              "path": "reference.2.bt2",
+              "change": "created",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766274488370630
+            },
+            {
+              "path": "reference.3.bt2",
+              "change": "created",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766274420369851
+            },
+            {
+              "path": "reference.4.bt2",
+              "change": "created",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766274420369851
+            },
+            {
+              "path": "reference.fna",
+              "change": "created",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766274394369553
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "change": "created",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766274552371363
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "change": "created",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766274552371363
+            },
+            {
+              "path": "stage-index.json",
+              "change": "created",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766274558371432
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766274488370630
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766274488370630
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766274420369851
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766274420369851
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766274394369553
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766274552371363
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766274552371363
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766274558371432
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794766274.2586591,
+              "finishedAt": 1794766274.5658138,
+              "durationSeconds": 0.30715465545654297
+            }
+          ],
+          "summary": {
+            "initialFiles": 0,
+            "finalFiles": 8,
+            "createdFiles": 8,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 8625377
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794766274.258664,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-index",
+          "submittedAt": 1794766274.2586591
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-package",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "externalId": "6fae820aeebf9de2361682ff65448e29ae004cb4452b9a97ba8069a424d0ee58",
+        "status": "completed",
+        "startedAt": 1794766337.677966,
+        "finishedAt": 1794766342.7336261,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "attempt": 1,
+          "runtime": "sra-search-local-local",
+          "root": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package",
+          "startedAt": 1794766337.677966,
+          "finishedAt": 1794766342.7336261,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "results.tar.gz",
+              "change": "created",
+              "sizeBytes": 240403905,
+              "checksum": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "modifiedUnixNano": 1794766342495168352
+            },
+            {
+              "path": "stage-package.json",
+              "change": "created",
+              "sizeBytes": 92,
+              "checksum": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "modifiedUnixNano": 1794766342727171133
+            },
+            {
+              "path": "validation.json",
+              "change": "created",
+              "sizeBytes": 1233,
+              "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "modifiedUnixNano": 1794766342727171133
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "SRR3403832.bam",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766332425047992
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766332425047992
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766332756051936
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "alignment-summary.json",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "flagstat.json",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "idxstats.tsv",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766333086055869
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-align.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766333087055881
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "SRR3403832.bam",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766332425047992
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766332425047992
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766332756051936
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "alignment-summary.json",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "flagstat.json",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "idxstats.tsv",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766333082055821
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766333084055845
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766333086055869
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "results.tar.gz",
+              "sizeBytes": 240403905,
+              "checksum": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "modifiedUnixNano": 1794766342495168352
+            },
+            {
+              "path": "stage-align.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766333087055881
+            },
+            {
+              "path": "stage-package.json",
+              "sizeBytes": 92,
+              "checksum": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "modifiedUnixNano": 1794766342727171133
+            },
+            {
+              "path": "validation.json",
+              "sizeBytes": 1233,
+              "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "modifiedUnixNano": 1794766342727171133
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794766337.677966,
+              "finishedAt": 1794766342.7336261,
+              "durationSeconds": 5.055660009384155
+            }
+          ],
+          "summary": {
+            "initialFiles": 17,
+            "finalFiles": 20,
+            "createdFiles": 3,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 240405230
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794766337.6779733,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package",
+          "submittedAt": 1794766337.677966
+        }
+      },
+      {
+        "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-visualize",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "externalId": "6201c39a2e4a3f11cd7387a2589391e202995d79b6483633fda4938e830a9549",
+        "status": "completed",
+        "startedAt": 1794766355.0865266,
+        "finishedAt": 1794766355.2160165,
+        "exitCode": 0,
+        "log": "[AKOFLOW INFO] Activity started on runtime sra-search-local-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "artifacts": {
+          "schemaVersion": 1,
+          "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "attempt": 1,
+          "runtime": "sra-search-local-local",
+          "root": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize",
+          "startedAt": 1794766355.0865266,
+          "finishedAt": 1794766355.2160165,
+          "exitCode": 0,
+          "files": [
+            {
+              "path": "mapping-summary.svg",
+              "change": "created",
+              "sizeBytes": 1533,
+              "checksum": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+              "modifiedUnixNano": 1794766355208321354
+            },
+            {
+              "path": "stage-visualize.json",
+              "change": "created",
+              "sizeBytes": 94,
+              "checksum": "sha256:3136ee8957c48dba0b974873d553549f52c1c4ef2304a660a38b15e7ef48f217",
+              "modifiedUnixNano": 1794766355208321354
+            }
+          ],
+          "initialSnapshot": [
+            {
+              "path": "SRR3403832.bam",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766347754231503
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766347754231503
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766348066235255
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "alignment-summary.json",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "flagstat.json",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "idxstats.tsv",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766348404239322
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766348404239322
+            },
+            {
+              "path": "results.tar.gz",
+              "sizeBytes": 240403905,
+              "checksum": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-align.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-package.json",
+              "sizeBytes": 92,
+              "checksum": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "validation.json",
+              "sizeBytes": 1233,
+              "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "modifiedUnixNano": 1794766348540240959
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "path": "SRR3403832.bam",
+              "sizeBytes": 240573032,
+              "checksum": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "modifiedUnixNano": 1794766347754231503
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "sizeBytes": 24,
+              "checksum": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "modifiedUnixNano": 1794766347754231503
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "sizeBytes": 513191800,
+              "checksum": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "modifiedUnixNano": 1794766348066235255
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "sizeBytes": 513265530,
+              "checksum": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "alignment-summary.json",
+              "sizeBytes": 78,
+              "checksum": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "flagstat.json",
+              "sizeBytes": 1107,
+              "checksum": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "idxstats.tsv",
+              "sizeBytes": 33,
+              "checksum": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "modifiedUnixNano": 1794766348397239238
+            },
+            {
+              "path": "mapping-summary.svg",
+              "sizeBytes": 1533,
+              "checksum": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+              "modifiedUnixNano": 1794766355208321354
+            },
+            {
+              "path": "reference.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.3.bt2",
+              "sizeBytes": 17,
+              "checksum": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.4.bt2",
+              "sizeBytes": 24273,
+              "checksum": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.fna",
+              "sizeBytes": 98721,
+              "checksum": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "modifiedUnixNano": 1794766348401239286
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "sizeBytes": 4226858,
+              "checksum": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "modifiedUnixNano": 1794766348404239322
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "sizeBytes": 24280,
+              "checksum": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "modifiedUnixNano": 1794766348404239322
+            },
+            {
+              "path": "results.tar.gz",
+              "sizeBytes": 240403905,
+              "checksum": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-align.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "sizeBytes": 98,
+              "checksum": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-index.json",
+              "sizeBytes": 90,
+              "checksum": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-package.json",
+              "sizeBytes": 92,
+              "checksum": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "modifiedUnixNano": 1794766348540240959
+            },
+            {
+              "path": "stage-visualize.json",
+              "sizeBytes": 94,
+              "checksum": "sha256:3136ee8957c48dba0b974873d553549f52c1c4ef2304a660a38b15e7ef48f217",
+              "modifiedUnixNano": 1794766355208321354
+            },
+            {
+              "path": "validation.json",
+              "sizeBytes": 1233,
+              "checksum": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "modifiedUnixNano": 1794766348540240959
+            }
+          ],
+          "phases": [
+            {
+              "phase": "execution",
+              "status": "completed",
+              "startedAt": 1794766355.0865266,
+              "finishedAt": 1794766355.2160165,
+              "durationSeconds": 0.12948989868164062
+            }
+          ],
+          "summary": {
+            "initialFiles": 20,
+            "finalFiles": 22,
+            "createdFiles": 2,
+            "modifiedFiles": 0,
+            "deletedFiles": 0,
+            "outputBytes": 1627
+          }
+        },
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794766355.0865335,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize",
+          "submittedAt": 1794766355.0865266
+        }
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+      "schedulePlanId": "sra-search-local-local-2d26c73544-manual-plan-20261115t181113.344135265",
+      "mode": "real",
+      "seed": 0,
+      "status": "completed",
+      "makespanSeconds": 80.95735740661621,
+      "cost": 0,
+      "activityCount": 5,
+      "completedActivityCount": 5,
+      "breakdown": {
+        "computeSeconds": 46.97229051589966,
+        "transferSeconds": 12.147501707077026,
+        "queueSeconds": 0,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0
+      },
+      "transferredBytes": 3826802373,
+      "kind": "workflow",
+      "title": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+      "workflowId": "sra-search-local-local-2d26c73544",
+      "workflowVersionId": "sra-search-local-local-2d26c73544-v1",
+      "workflowName": "sra-search-local-local-2d26c73544",
+      "environmentNames": [
+        "sra-search-local local Docker"
+      ],
+      "startedAt": "2026-11-15T18:11:13Z",
+      "finishedAt": "2026-11-15T18:12:38Z"
+    },
+    "timeline": {
+      "startedAt": 1794766273,
+      "finishedAt": 1794766358,
+      "wallSeconds": 85,
+      "computeMakespanSeconds": 80.95735740661621,
+      "coveredWallSeconds": 72.89628028869629,
+      "unclassifiedWallSeconds": 12.103719711303711,
+      "totals": {
+        "resourceQueueSeconds": 0.6397194862365723,
+        "provisionSeconds": 0,
+        "startSeconds": 0,
+        "validationSeconds": 0,
+        "executablePreparationSeconds": 0,
+        "workspaceTransferSeconds": 12.147501707077026,
+        "launchSeconds": 14.91765570640564,
+        "runtimeSeconds": 46.97229051589966,
+        "stopSeconds": 0,
+        "destroySeconds": 0
+      },
+      "phases": [
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index:queue:0",
+          "category": "resource-queue",
+          "activityId": "sra-search-local-local-2d26c73544-index",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794766273.9818366,
+          "finishedAt": 1794766274.2586591,
+          "durationSeconds": 0.276822566986084
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-index:runtime",
+          "category": "runtime",
+          "activityId": "sra-search-local-local-2d26c73544-index",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794766274.2586591,
+          "finishedAt": 1794766274.5658138,
+          "durationSeconds": 0.30715465545654297
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads:queue:0",
+          "category": "resource-queue",
+          "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794766275.9670465,
+          "finishedAt": 1794766276.195264,
+          "durationSeconds": 0.22821760177612305
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-extract-reads:runtime",
+          "category": "runtime",
+          "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794766276.195264,
+          "finishedAt": 1794766279.3655064,
+          "durationSeconds": 3.1702423095703125
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:queue:0",
+          "category": "resource-queue",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794766282.8237991,
+          "finishedAt": 1794766282.8896601,
+          "durationSeconds": 0.06586098670959473
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-0",
+          "category": "workspace-transfer",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "transferId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794766282.8896601,
+          "finishedAt": 1794766284.6705472,
+          "durationSeconds": 1.7808871269226074
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-1",
+          "category": "workspace-transfer",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "transferId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-1",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794766282.8896601,
+          "finishedAt": 1794766285.9252748,
+          "durationSeconds": 3.0356147289276123
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:launch",
+          "category": "launch",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794766285.9252748,
+          "finishedAt": 1794766289.78928,
+          "durationSeconds": 3.8640050888061523
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-align:runtime",
+          "category": "runtime",
+          "activityId": "sra-search-local-local-2d26c73544-align",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794766289.78928,
+          "finishedAt": 1794766328.0990236,
+          "durationSeconds": 38.30974364280701
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:queue:0",
+          "category": "resource-queue",
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794766329.7191398,
+          "finishedAt": 1794766329.7538106,
+          "durationSeconds": 0.03467082977294922
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-0",
+          "category": "workspace-transfer",
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "transferId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794766329.7538106,
+          "finishedAt": 1794766333.1282673,
+          "durationSeconds": 3.3744566440582275
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:launch",
+          "category": "launch",
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794766333.1282673,
+          "finishedAt": 1794766337.677966,
+          "durationSeconds": 4.549698829650879
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-package:runtime",
+          "category": "runtime",
+          "activityId": "sra-search-local-local-2d26c73544-package",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794766337.677966,
+          "finishedAt": 1794766342.7336261,
+          "durationSeconds": 5.055660009384155
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:queue:0",
+          "category": "resource-queue",
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "status": "completed",
+          "source": "derived-residual",
+          "startedAt": 1794766344.5918841,
+          "finishedAt": 1794766344.6260316,
+          "durationSeconds": 0.03414750099182129
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize-0",
+          "category": "workspace-transfer",
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "transferId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:transfer-workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize-0",
+          "status": "completed",
+          "source": "transfer-observation",
+          "startedAt": 1794766344.6260316,
+          "finishedAt": 1794766348.5825748,
+          "durationSeconds": 3.956543207168579
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:launch",
+          "category": "launch",
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "status": "completed",
+          "source": "task-metadata",
+          "startedAt": 1794766348.5825748,
+          "finishedAt": 1794766355.0865266,
+          "durationSeconds": 6.503951787948608
+        },
+        {
+          "id": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664:sra-search-local-local-2d26c73544-visualize:runtime",
+          "category": "runtime",
+          "activityId": "sra-search-local-local-2d26c73544-visualize",
+          "status": "completed",
+          "source": "activity-handle",
+          "startedAt": 1794766355.0865266,
+          "finishedAt": 1794766355.2160165,
+          "durationSeconds": 0.12948989868164062
+        }
+      ]
+    },
+    "workspaceLeases": [
+      {
+        "id": "workspace-lease-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align-sra-search-local-local-2d26c73544-package",
+        "workspaceId": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-align",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-package",
+        "released": true,
+        "releasedAt": "2026-11-15T18:12:13.299128036Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-extract-reads-sra-search-local-local-2d26c73544-align",
+        "workspaceId": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-extract-reads",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+        "released": true,
+        "releasedAt": "2026-11-15T18:11:26.071642293Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-index-sra-search-local-local-2d26c73544-align",
+        "workspaceId": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-index",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-index",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-align",
+        "released": true,
+        "releasedAt": "2026-11-15T18:11:26.071642293Z",
+        "releaseReason": "consumer workspace materialized"
+      },
+      {
+        "id": "workspace-lease-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package-sra-search-local-local-2d26c73544-visualize",
+        "workspaceId": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "producerActivityId": "sra-search-local-local-2d26c73544-package",
+        "consumerActivityId": "sra-search-local-local-2d26c73544-visualize",
+        "released": true,
+        "releasedAt": "2026-11-15T18:12:29.971516932Z",
+        "releaseReason": "consumer workspace materialized"
+      }
+    ],
+    "workspaces": [
+      {
+        "id": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-align",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-align",
+        "environmentId": "sra-search-local-v1",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align",
+        "executionPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align",
+        "observationPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-align",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "final": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "inputs": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "outputs": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            }
+          ]
+        },
+        "fileCount": 17,
+        "sizeBytes": 1275657169,
+        "inputBytes": 1035082805,
+        "outputBytes": 240574364,
+        "reclaimedBytes": 1275657169,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T18:11:13.869571043Z",
+        "sealedAt": "2026-11-15T18:12:09.692888962Z",
+        "releasedAt": "2026-11-15T18:12:13.458302931Z"
+      },
+      {
+        "id": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-extract-reads",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-extract-reads",
+        "environmentId": "sra-search-local-v1",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads",
+        "executionPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads",
+        "observationPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-extract-reads",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            }
+          ],
+          "outputs": [
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            }
+          ]
+        },
+        "fileCount": 3,
+        "sizeBytes": 1026457428,
+        "inputBytes": 0,
+        "outputBytes": 1026457428,
+        "reclaimedBytes": 1026457428,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T18:11:13.869571043Z",
+        "sealedAt": "2026-11-15T18:11:22.798766512Z",
+        "releasedAt": "2026-11-15T18:11:26.154757128Z"
+      },
+      {
+        "id": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-index",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-index",
+        "environmentId": "sra-search-local-v1",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index",
+        "executionPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index",
+        "observationPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-index",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "final": [
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "outputs": [
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ]
+        },
+        "fileCount": 8,
+        "sizeBytes": 8625377,
+        "inputBytes": 0,
+        "outputBytes": 8625377,
+        "reclaimedBytes": 8625377,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T18:11:13.869571043Z",
+        "sealedAt": "2026-11-15T18:11:15.93963494Z",
+        "releasedAt": "2026-11-15T18:11:26.202459348Z"
+      },
+      {
+        "id": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-package",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-package",
+        "environmentId": "sra-search-local-v1",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package",
+        "executionPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package",
+        "observationPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-package",
+        "driver": "local",
+        "state": "released",
+        "retention": "intermediate",
+        "isFinal": false,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "final": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "results.tar.gz",
+              "digest": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "sizeBytes": 240403905
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "sizeBytes": 92
+            },
+            {
+              "path": "validation.json",
+              "digest": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "sizeBytes": 1233
+            }
+          ],
+          "inputs": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            }
+          ],
+          "outputs": [
+            {
+              "path": "results.tar.gz",
+              "digest": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "sizeBytes": 240403905
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "sizeBytes": 92
+            },
+            {
+              "path": "validation.json",
+              "digest": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "sizeBytes": 1233
+            }
+          ]
+        },
+        "fileCount": 20,
+        "sizeBytes": 1516062399,
+        "inputBytes": 1275657169,
+        "outputBytes": 240405230,
+        "reclaimedBytes": 1516062399,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "createdAt": "2026-11-15T18:11:13.869571043Z",
+        "sealedAt": "2026-11-15T18:12:24.56606117Z",
+        "releasedAt": "2026-11-15T18:12:30.134829383Z"
+      },
+      {
+        "id": "workspace-sra-search-local-local-2d26c73544-run-20261115t181113.397251664-sra-search-local-local-2d26c73544-visualize",
+        "runId": "sra-search-local-local-2d26c73544-run-20261115t181113.397251664",
+        "activityId": "sra-search-local-local-2d26c73544-visualize",
+        "environmentId": "sra-search-local-v1",
+        "resourceId": "sra-search-local-local-docker",
+        "runtimeId": "sra-search-local-local",
+        "uri": "file:///akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize",
+        "executionPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize",
+        "observationPath": "/akoflow/workspace/runs/sra-search-local-local-2d26c73544-run-20261115t181113.397251664/sra-search-local-local-2d26c73544-visualize",
+        "driver": "local",
+        "state": "sealed",
+        "retention": "final",
+        "isFinal": true,
+        "pinned": false,
+        "manifest": {
+          "initial": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "results.tar.gz",
+              "digest": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "sizeBytes": 240403905
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "sizeBytes": 92
+            },
+            {
+              "path": "validation.json",
+              "digest": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "sizeBytes": 1233
+            }
+          ],
+          "final": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "mapping-summary.svg",
+              "digest": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+              "sizeBytes": 1533
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "results.tar.gz",
+              "digest": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "sizeBytes": 240403905
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "sizeBytes": 92
+            },
+            {
+              "path": "stage-visualize.json",
+              "digest": "sha256:3136ee8957c48dba0b974873d553549f52c1c4ef2304a660a38b15e7ef48f217",
+              "sizeBytes": 94
+            },
+            {
+              "path": "validation.json",
+              "digest": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "sizeBytes": 1233
+            }
+          ],
+          "inputs": [
+            {
+              "path": "SRR3403832.bam",
+              "digest": "sha256:4a955dc3168a17eed17981969356b2d47d64841a6963c91dafe478aaad834e4d",
+              "sizeBytes": 240573032
+            },
+            {
+              "path": "SRR3403832.bam.bai",
+              "digest": "sha256:fb7b9e6bf731e1fb01df4231fc90fa6a7a5c2be0979cdbd777d5a72989414cc9",
+              "sizeBytes": 24
+            },
+            {
+              "path": "SRR3403832_1.fastq",
+              "digest": "sha256:d661c7ac64a93a62fff75e7c35d0cda66a9517578043feed79fb800edc78da2c",
+              "sizeBytes": 513191800
+            },
+            {
+              "path": "SRR3403832_2.fastq",
+              "digest": "sha256:2af82014604efbf6758342669c1d3aa29fd1276a598b01de52263ba0ee2858bd",
+              "sizeBytes": 513265530
+            },
+            {
+              "path": "alignment-summary.json",
+              "digest": "sha256:92c023dcff8e9e9f091c1a1b12f13e61a4f0116c3677b80c605bf73a859ce910",
+              "sizeBytes": 78
+            },
+            {
+              "path": "flagstat.json",
+              "digest": "sha256:e2d274c9a3d91b01354bff805fde224005e984df9e5dc568207feebe135aa36a",
+              "sizeBytes": 1107
+            },
+            {
+              "path": "idxstats.tsv",
+              "digest": "sha256:e2888d0ec0205bfe8756e7d9f29068ac495d98b6b4d69ac53864b55a3a1e15b9",
+              "sizeBytes": 33
+            },
+            {
+              "path": "reference.1.bt2",
+              "digest": "sha256:6b2d91e8d15d586b1c543b1c2b19753305b8b4b28ed4b1ba1e0b89a3296d108b",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.2.bt2",
+              "digest": "sha256:7f52f31bde59ea03fee658f078d533cc17b9d01b6a575c93482c4615a4d27bdd",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "reference.3.bt2",
+              "digest": "sha256:1b0a7052f729f0425857ae40ed375722e7e30bb0d7b608336fa45ba5ee3dfd0f",
+              "sizeBytes": 17
+            },
+            {
+              "path": "reference.4.bt2",
+              "digest": "sha256:4dfbcbb9cd7a9b581f5929c783b69848f0f738ccaf982e97ca3558d5e36a840e",
+              "sizeBytes": 24273
+            },
+            {
+              "path": "reference.fna",
+              "digest": "sha256:e679c4ba46945f3427508eeb0d8664b28d03b1d3470da35226bc62ef980f7cff",
+              "sizeBytes": 98721
+            },
+            {
+              "path": "reference.rev.1.bt2",
+              "digest": "sha256:533efc9822f2d0b8268d8983ab64f2531fe922507e6f268cd09684aa198a301e",
+              "sizeBytes": 4226858
+            },
+            {
+              "path": "reference.rev.2.bt2",
+              "digest": "sha256:0daf4d409798dcd1278a5bee2858709793629623902dbd34edb96cfda77afc72",
+              "sizeBytes": 24280
+            },
+            {
+              "path": "results.tar.gz",
+              "digest": "sha256:949650fc9f45f9c5f329c5d7bf0f2094550eaba58841905ec480bef9384fbe59",
+              "sizeBytes": 240403905
+            },
+            {
+              "path": "stage-align.json",
+              "digest": "sha256:4e5cea659ba41ce7b08bc7908dedd735536686d21db57c66349da792d31f015a",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-extract-reads.json",
+              "digest": "sha256:7e8a4f8bf757fc1edf1b8eecbd642ebadb6e6d627c04c9c2fff043d7c7c7b23c",
+              "sizeBytes": 98
+            },
+            {
+              "path": "stage-index.json",
+              "digest": "sha256:1d9e791a9449617d7f20f4d7f0ae0f9c75da12f307432e744ee5da60b5b8e49d",
+              "sizeBytes": 90
+            },
+            {
+              "path": "stage-package.json",
+              "digest": "sha256:db847babc0c74307cae25a8394613c5040d3f30c457004c13dd4eaf8cdf8d006",
+              "sizeBytes": 92
+            },
+            {
+              "path": "validation.json",
+              "digest": "sha256:699aba6c798cd923c6df048f51234ff3dc4f0a080615cbd066a1f8a5fd4a9504",
+              "sizeBytes": 1233
+            }
+          ],
+          "outputs": [
+            {
+              "path": "mapping-summary.svg",
+              "digest": "sha256:32b5eba50b7751107363e80e595f7c12de60d8de92961a63fbf765291bf35f2d",
+              "sizeBytes": 1533
+            },
+            {
+              "path": "stage-visualize.json",
+              "digest": "sha256:3136ee8957c48dba0b974873d553549f52c1c4ef2304a660a38b15e7ef48f217",
+              "sizeBytes": 94
+            }
+          ]
+        },
+        "fileCount": 2,
+        "sizeBytes": 1627,
+        "inputBytes": 1516062399,
+        "outputBytes": 1627,
+        "reclaimedBytes": 1516062399,
+        "releaseReason": "inherited inputs pruned",
+        "createdAt": "2026-11-15T18:11:13.869571043Z",
+        "sealedAt": "2026-11-15T18:12:37.742712629Z"
+      }
+    ]
+  },
+  "completedActivityCount": 5
+}

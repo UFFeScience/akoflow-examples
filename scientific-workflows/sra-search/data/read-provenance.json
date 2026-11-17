@@ -1,0 +1,10 @@
+[
+  {
+    "run_accession": "SRR3403832",
+    "fastq_ftp": "ftp.sra.ebi.ac.uk/vol1/fastq/SRR340/002/SRR3403832/SRR3403832_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR340/002/SRR3403832/SRR3403832_2.fastq.gz",
+    "fastq_md5": "4f0014d3dac1ea76516bed934f3673a1;31a5a3aa81fd721c114a39a0a7435860",
+    "fastq_bytes": "99172892;124995213",
+    "read_count": "1022414",
+    "base_count": "480688797"
+  }
+]

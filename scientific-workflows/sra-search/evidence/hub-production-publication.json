@@ -1,0 +1,17 @@
+{
+  "experimentId": "c1eaee43-8ea3-427c-b993-f86abbfef983",
+  "version": {
+    "id": "53ba8b59-0097-46cc-8532-710cfbca0f2c",
+    "workflowId": "116692ff-7dd1-49b7-acd2-e61ec365b307",
+    "number": 1,
+    "message": "Measured full SRR3403832 search: 5/5 real activities, 2,044,828 processed mates, zero reference matches; validated BAM/BAI and generated mapping visualization.",
+    "hash": "d7f3b948e9c1553fae85cd02ff67c7b5e33bdf8ebffc20767368d19df9d82166",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "a247b881-2843-43e6-9e46-19621fcb805d",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-sra-search",
+  "image": "hub.akoflow.com/akoflow-examples/sra-search@sha256:97cf0b996c5745f39b4c733e84dde417463351d107a81dea93673cd49b7cb35c",
+  "runId": "sra-search-local-local-637b388236-run-20261115t181424.364230297",
+  "visualCount": 1
+}

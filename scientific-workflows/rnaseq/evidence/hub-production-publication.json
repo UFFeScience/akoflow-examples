@@ -1,0 +1,17 @@
+{
+  "experimentId": "12f39127-e1a2-4cab-90b0-59559cedd150",
+  "version": {
+    "id": "3e4bcc54-88da-4632-8742-e5def5389d6c",
+    "workflowId": "6c7eddc8-f02c-4a01-84d2-e7bd69aa2865",
+    "number": 1,
+    "message": "Measured original nf-core/rnaseq on the full real SRR10143877 library: four completed outer native activities, full internal Nextflow task trace, actual transcript abundances, QC and scientific figures. No differential-expression claim.",
+    "hash": "4ee2a36a5c7bd51ed1f2df0cba174247bd19fe87f8d45d9418b4fae2235cf147",
+    "createdAt": "0001-01-01T00:00:00Z"
+  },
+  "resultCount": 1,
+  "publicationId": "a0214db2-7c0d-4061-a3e5-d6dd4a1db6cd",
+  "url": "https://hub.akoflow.com/o/akoflow/scientific-workflows-rnaseq",
+  "image": "hub.akoflow.com/akoflow-examples/rnaseq@sha256:edb949835c96cf793c9ef21009d583bb7b93cb845df784ac0e5221d1b9b23acb",
+  "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+  "visualCount": 2
+}

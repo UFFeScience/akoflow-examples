@@ -1,0 +1,12 @@
+{
+  "url": "http://192.168.1.13:3100/u/ovvesley/scientific-workflows-rnaseq",
+  "experimentId": "67c3dae5-1d5d-434f-8ce8-c1130b843607",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "1984f007-fe54-45e3-87c6-33b74e629f13",
+  "runId": "rnaseq-local-5c8f15ca6f-run-20261115t212018.433415330",
+  "hubOrigin": "http://192.168.1.13:3100",
+  "uri": "akoflow://hub/publications/1984f007-fe54-45e3-87c6-33b74e629f13/versions/1",
+  "image": "ghcr.io/uffescience/akoflow-examples/rnaseq:local-edb949835c96cf79",
+  "imageDistribution": "Build from the source Dockerfile; public registry availability is not inferred."
+}

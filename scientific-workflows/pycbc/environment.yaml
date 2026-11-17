@@ -1,0 +1,42 @@
+environment:
+  id: pycbc
+  name: pycbc local Docker
+  description: CPU-only local execution; no remote capacity is provisioned
+  status: ready
+version:
+  id: pycbc-v1
+  environmentId: pycbc
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: none
+  costModel: free
+  configurationHash: pycbc-v1
+runtimes:
+  - environmentVersionId: pycbc-v1
+    id: pycbc-local
+    name: Local Docker host
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: pycbc-local-docker
+    environmentVersionId: pycbc-v1
+    type: machine
+    name: Local Docker host
+    providerId: local-docker
+    cpuCores: 4
+    cpuCapacity: 4
+    memoryBytes: 12884901888
+    storageBytes: 21474836480
+    computeSpeedup: 1
+    pricePerSecond: 0
+    bootOverheadSeconds: 0
+    containerOverheadSeconds: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: pycbc-local-docker, runtimeId: pycbc-local, enabled: true}

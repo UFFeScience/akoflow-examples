@@ -1,0 +1,6 @@
+/outputs/
+/data/*.fastq.gz
+/data/*.partial
+/outputs-daemon/
+/evidence/*.tar.gz
+__pycache__/

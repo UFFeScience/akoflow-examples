@@ -1,0 +1,627 @@
+{
+  "name": "variant-calling",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "ghcr.io/uffescience/akoflow-examples/variant-calling:v1",
+    "activities": [
+      {
+        "name": "index",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "index",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "extract-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "extract",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "align-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "3",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "index",
+          "extract-srr2584866"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "align",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "bam-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "align-srr2584866"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "bam",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "pileup-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "bam-srr2584866",
+          "index"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "pileup",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "call-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "pileup-srr2584866"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "call",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "filter-srr2584866",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "call-srr2584866"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "filter",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2584866"
+          ]
+        }
+      },
+      {
+        "name": "extract-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "extract",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "align-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "3",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "index",
+          "extract-srr2589044"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "align",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "bam-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "align-srr2589044"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "bam",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "pileup-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "bam-srr2589044",
+          "index"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "pileup",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "call-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "pileup-srr2589044"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "call",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "filter-srr2589044",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "2Gi",
+        "dependsOn": [
+          "call-srr2589044"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "filter",
+            "--output",
+            ".",
+            "--sample",
+            "SRR2589044"
+          ]
+        }
+      },
+      {
+        "name": "summary",
+        "runtime": "variant-calling-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "filter-srr2584866",
+          "call-srr2584866",
+          "bam-srr2584866",
+          "extract-srr2584866",
+          "pileup-srr2584866",
+          "filter-srr2589044",
+          "call-srr2589044",
+          "bam-srr2589044",
+          "extract-srr2589044",
+          "pileup-srr2589044",
+          "index"
+        ],
+        "command": {
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "summary",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.fai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.amb",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.ann",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.bwt",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.pac",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "reference.fasta.sa",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2584866",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "SRR2584866_1.fastq",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2584866",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "SRR2584866_2.fastq",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2584866",
+        "consumerActivity": "align-srr2584866",
+        "logicalName": "SRR2584866.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "align-srr2584866",
+        "consumerActivity": "bam-srr2584866",
+        "logicalName": "SRR2584866.aligned.sam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "align-srr2584866",
+        "consumerActivity": "bam-srr2584866",
+        "logicalName": "SRR2584866.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "pileup-srr2584866",
+        "logicalName": "reference.fasta",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "pileup-srr2584866",
+        "logicalName": "reference.fasta.fai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2584866",
+        "consumerActivity": "pileup-srr2584866",
+        "logicalName": "SRR2584866.aligned.sorted.bam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2584866",
+        "consumerActivity": "pileup-srr2584866",
+        "logicalName": "SRR2584866.aligned.sorted.bam.bai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "pileup-srr2584866",
+        "consumerActivity": "call-srr2584866",
+        "logicalName": "SRR2584866.raw.bcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "call-srr2584866",
+        "consumerActivity": "filter-srr2584866",
+        "logicalName": "SRR2584866.variants.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.fai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.amb",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.ann",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.bwt",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.pac",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "reference.fasta.sa",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2589044",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "SRR2589044_1.fastq",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2589044",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "SRR2589044_2.fastq",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2589044",
+        "consumerActivity": "align-srr2589044",
+        "logicalName": "SRR2589044.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "align-srr2589044",
+        "consumerActivity": "bam-srr2589044",
+        "logicalName": "SRR2589044.aligned.sam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "align-srr2589044",
+        "consumerActivity": "bam-srr2589044",
+        "logicalName": "SRR2589044.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "pileup-srr2589044",
+        "logicalName": "reference.fasta",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "pileup-srr2589044",
+        "logicalName": "reference.fasta.fai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2589044",
+        "consumerActivity": "pileup-srr2589044",
+        "logicalName": "SRR2589044.aligned.sorted.bam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2589044",
+        "consumerActivity": "pileup-srr2589044",
+        "logicalName": "SRR2589044.aligned.sorted.bam.bai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "pileup-srr2589044",
+        "consumerActivity": "call-srr2589044",
+        "logicalName": "SRR2589044.raw.bcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "call-srr2589044",
+        "consumerActivity": "filter-srr2589044",
+        "logicalName": "SRR2589044.variants.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.final.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.filtered-stats.txt",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "call-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.variants.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.aligned.sorted.bam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.aligned.sorted.bam.bai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.flagstat.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "pileup-srr2584866",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2584866.coverage.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.final.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "filter-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.filtered-stats.txt",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "call-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.variants.vcf",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.aligned.sorted.bam",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.aligned.sorted.bam.bai",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "bam-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.flagstat.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "extract-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.read-counts.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "pileup-srr2589044",
+        "consumerActivity": "summary",
+        "logicalName": "SRR2589044.coverage.json",
+        "sizeBytes": 1
+      },
+      {
+        "producerActivity": "index",
+        "consumerActivity": "summary",
+        "logicalName": "reference.fasta",
+        "sizeBytes": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "showcase": "somospie",
+  "status": "success",
+  "artifacts": [
+    "somospie-results.tar.gz",
+    "somospie-summary.json",
+    "published-soil-moisture-maps.png",
+    "published-heldout-diagnostics.png"
+  ]
+}

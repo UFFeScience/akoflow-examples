@@ -1,0 +1,5 @@
+N E X T F L O W  ~  version 25.10.4
+Downloading plugin nf-core-utils@0.4.0
+ERROR ~ Plugin with id nf-core-utils not found in any repository
+
+ -- Check '.nextflow.log' file for details

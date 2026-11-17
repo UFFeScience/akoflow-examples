@@ -1,0 +1,131 @@
+name: sra-search-local
+spec:
+  namespace: akoflow-examples
+  image: ghcr.io/uffescience/akoflow-examples/sra-search-local:v1
+  activities:
+  - name: index
+    runtime: sra-search-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - index
+      - --output
+      - .
+  - name: extract-reads
+    runtime: sra-search-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - extract-reads
+      - --output
+      - .
+  - name: align
+    runtime: sra-search-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - index
+    - extract-reads
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - align
+      - --output
+      - .
+  - name: package
+    runtime: sra-search-local-local
+    cpuLimit: '1'
+    memoryLimit: 2Gi
+    dependsOn:
+    - align
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - package
+      - --output
+      - .
+  - name: visualize
+    runtime: sra-search-local-local
+    cpuLimit: "1"
+    memoryLimit: 1Gi
+    dependsOn:
+    - package
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - visualize
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.1.bt2
+    sizeBytes: 1
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.2.bt2
+    sizeBytes: 1
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.3.bt2
+    sizeBytes: 1
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.4.bt2
+    sizeBytes: 1
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.rev.1.bt2
+    sizeBytes: 1
+  - producerActivity: index
+    consumerActivity: align
+    logicalName: reference.rev.2.bt2
+    sizeBytes: 1
+  - producerActivity: extract-reads
+    consumerActivity: align
+    logicalName: SRR3403832_1.fastq
+    sizeBytes: 1
+  - producerActivity: extract-reads
+    consumerActivity: align
+    logicalName: SRR3403832_2.fastq
+    sizeBytes: 1
+  - producerActivity: align
+    consumerActivity: package
+    logicalName: SRR3403832.bam
+    sizeBytes: 1
+  - producerActivity: align
+    consumerActivity: package
+    logicalName: SRR3403832.bam.bai
+    sizeBytes: 1
+  - producerActivity: align
+    consumerActivity: package
+    logicalName: flagstat.json
+    sizeBytes: 1
+  - producerActivity: align
+    consumerActivity: package
+    logicalName: idxstats.tsv
+    sizeBytes: 1
+  - producerActivity: align
+    consumerActivity: package
+    logicalName: alignment-summary.json
+    sizeBytes: 1
+  - producerActivity: package
+    consumerActivity: visualize
+    logicalName: validation.json
+    sizeBytes: 1

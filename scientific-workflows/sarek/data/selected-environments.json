@@ -1,0 +1,218 @@
+[
+  {
+    "module": "gatk4/createsequencedictionary",
+    "process": "GATK4_CREATESEQUENCEDICTIONARY",
+    "environmentSHA256": "d0a783c2e85a3e83a0f900823b50ba48357b12a3c940adf2fd0d7c1fbcd74025",
+    "normalizedRecipeSHA256": "7a76a1a96509d47b4dc8fafd5061d67a7151ef5308d1a0d22d0c964a4703848e",
+    "prefix": "/opt/nf-envs/sarek-7a76a1a96509",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/gatk4/createsequencedictionary"
+  },
+  {
+    "module": "samtools/faidx",
+    "process": "SAMTOOLS_FAIDX",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "normalizedRecipeSHA256": "6a60f0f87efb866fbe1eee66d7de964bf4235316dad8361cb3ac3d0f16a1c2c3",
+    "prefix": "/opt/nf-envs/samtools-faidx",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/samtools/faidx"
+  },
+  {
+    "module": "gunzip",
+    "process": "GUNZIP",
+    "environmentSHA256": "744c448dd17c4da5cfd257c470309e2de7e6d1adcbbb74c9f7fbc0ae4db6a452",
+    "normalizedRecipeSHA256": "95734eaf678dbba796fd3751f51b574c1725d3743d945fd7b1c7b0875b2f545a",
+    "prefix": "/opt/nf-envs/gunzip",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/gunzip"
+  },
+  {
+    "module": "bedtools/sort",
+    "process": "BEDTOOLS_SORT",
+    "environmentSHA256": "6c882f3d70943c20995e14d00787760c68e5edcc2cec8a7de0a80f45840598f5",
+    "normalizedRecipeSHA256": "79834e3e6d8c625107fbdca703f01ab28206fc3fa0e4fc4d5017abe4d099632d",
+    "prefix": "/opt/nf-envs/sarek-79834e3e6d8c",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/bedtools/sort"
+  },
+  {
+    "module": "gatk4/intervallisttobed",
+    "process": "GATK4_INTERVALLISTTOBED",
+    "environmentSHA256": "d0a783c2e85a3e83a0f900823b50ba48357b12a3c940adf2fd0d7c1fbcd74025",
+    "normalizedRecipeSHA256": "7a76a1a96509d47b4dc8fafd5061d67a7151ef5308d1a0d22d0c964a4703848e",
+    "prefix": "/opt/nf-envs/sarek-7a76a1a96509",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/gatk4/intervallisttobed"
+  },
+  {
+    "module": "gawk",
+    "process": "GAWK",
+    "environmentSHA256": "3f15b00283980bf9c8a25bd63ab3b364f7fc537e4a566c40758e90a1b0dd2a0b",
+    "normalizedRecipeSHA256": "b7682ac7c9eeb981796a274160b0adb6470039e7dbeea2817b8d7ae622d4d618",
+    "prefix": "/opt/nf-envs/sarek-b7682ac7c9ee",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/gawk"
+  },
+  {
+    "module": "htslib/bgziptabix",
+    "process": "HTSLIB_BGZIPTABIX",
+    "environmentSHA256": "226100f17e28c01b45552a2856b1ec451edb4c139773d1614d2567d37898f71a",
+    "normalizedRecipeSHA256": "0e04ebbbf085cc53526795835f6642d26a2b7a741d0f9d1bfb401909c0f76f99",
+    "prefix": "/opt/nf-envs/sarek-0e04ebbbf085",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/htslib/bgziptabix"
+  },
+  {
+    "module": "gatk4/haplotypecaller",
+    "process": "GATK4_HAPLOTYPECALLER",
+    "environmentSHA256": "d0a783c2e85a3e83a0f900823b50ba48357b12a3c940adf2fd0d7c1fbcd74025",
+    "normalizedRecipeSHA256": "7a76a1a96509d47b4dc8fafd5061d67a7151ef5308d1a0d22d0c964a4703848e",
+    "prefix": "/opt/nf-envs/sarek-7a76a1a96509",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/gatk4/haplotypecaller"
+  },
+  {
+    "module": "gatk4/mergevcfs",
+    "process": "GATK4_MERGEVCFS",
+    "environmentSHA256": "d0a783c2e85a3e83a0f900823b50ba48357b12a3c940adf2fd0d7c1fbcd74025",
+    "normalizedRecipeSHA256": "7a76a1a96509d47b4dc8fafd5061d67a7151ef5308d1a0d22d0c964a4703848e",
+    "prefix": "/opt/nf-envs/sarek-7a76a1a96509",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/gatk4/mergevcfs"
+  },
+  {
+    "module": "gatk4/genotypegvcfs",
+    "process": "GATK4_GENOTYPEGVCFS",
+    "environmentSHA256": "d0a783c2e85a3e83a0f900823b50ba48357b12a3c940adf2fd0d7c1fbcd74025",
+    "normalizedRecipeSHA256": "7a76a1a96509d47b4dc8fafd5061d67a7151ef5308d1a0d22d0c964a4703848e",
+    "prefix": "/opt/nf-envs/sarek-7a76a1a96509",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/gatk4/genotypegvcfs"
+  },
+  {
+    "module": "samtools/merge",
+    "process": "SAMTOOLS_MERGE",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "normalizedRecipeSHA256": "6a60f0f87efb866fbe1eee66d7de964bf4235316dad8361cb3ac3d0f16a1c2c3",
+    "prefix": "/opt/nf-envs/samtools-faidx",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/samtools/merge"
+  },
+  {
+    "module": "samtools/index",
+    "process": "SAMTOOLS_INDEX",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "normalizedRecipeSHA256": "6a60f0f87efb866fbe1eee66d7de964bf4235316dad8361cb3ac3d0f16a1c2c3",
+    "prefix": "/opt/nf-envs/samtools-faidx",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/samtools/index"
+  },
+  {
+    "module": "samtools/view",
+    "process": "SAMTOOLS_VIEW",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "normalizedRecipeSHA256": "6a60f0f87efb866fbe1eee66d7de964bf4235316dad8361cb3ac3d0f16a1c2c3",
+    "prefix": "/opt/nf-envs/samtools-faidx",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/samtools/view"
+  },
+  {
+    "module": "samtools/stats",
+    "process": "SAMTOOLS_STATS",
+    "environmentSHA256": "ca91fae97ce546db59f4249c04af6eec4245acbb9ad893e2cdc71408be9760ff",
+    "normalizedRecipeSHA256": "6a60f0f87efb866fbe1eee66d7de964bf4235316dad8361cb3ac3d0f16a1c2c3",
+    "prefix": "/opt/nf-envs/samtools-faidx",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/samtools/stats"
+  },
+  {
+    "module": "bcftools/concat",
+    "process": "BCFTOOLS_CONCAT",
+    "environmentSHA256": "c965ee29784670a03e6ff4296e978d01930bb000616767ff5990e0950f51fa01",
+    "normalizedRecipeSHA256": "8087b7c1a8b55f96f108d2859d1d988c94eebdafabd6c3c594a61a1b6559bcba",
+    "prefix": "/opt/nf-envs/sarek-8087b7c1a8b5",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/bcftools/concat"
+  },
+  {
+    "module": "bcftools/sort",
+    "process": "BCFTOOLS_SORT",
+    "environmentSHA256": "c965ee29784670a03e6ff4296e978d01930bb000616767ff5990e0950f51fa01",
+    "normalizedRecipeSHA256": "8087b7c1a8b55f96f108d2859d1d988c94eebdafabd6c3c594a61a1b6559bcba",
+    "prefix": "/opt/nf-envs/sarek-8087b7c1a8b5",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/bcftools/sort"
+  },
+  {
+    "module": "bcftools/norm",
+    "process": "BCFTOOLS_NORM",
+    "environmentSHA256": "c965ee29784670a03e6ff4296e978d01930bb000616767ff5990e0950f51fa01",
+    "normalizedRecipeSHA256": "8087b7c1a8b55f96f108d2859d1d988c94eebdafabd6c3c594a61a1b6559bcba",
+    "prefix": "/opt/nf-envs/sarek-8087b7c1a8b5",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/bcftools/norm"
+  },
+  {
+    "module": "bcftools/stats",
+    "process": "BCFTOOLS_STATS",
+    "environmentSHA256": "c965ee29784670a03e6ff4296e978d01930bb000616767ff5990e0950f51fa01",
+    "normalizedRecipeSHA256": "8087b7c1a8b55f96f108d2859d1d988c94eebdafabd6c3c594a61a1b6559bcba",
+    "prefix": "/opt/nf-envs/sarek-8087b7c1a8b5",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/bcftools/stats"
+  },
+  {
+    "module": "bcftools/view",
+    "process": "BCFTOOLS_VIEW",
+    "environmentSHA256": "c965ee29784670a03e6ff4296e978d01930bb000616767ff5990e0950f51fa01",
+    "normalizedRecipeSHA256": "8087b7c1a8b55f96f108d2859d1d988c94eebdafabd6c3c594a61a1b6559bcba",
+    "prefix": "/opt/nf-envs/sarek-8087b7c1a8b5",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/bcftools/view"
+  },
+  {
+    "module": "vcftools",
+    "process": "VCFTOOLS",
+    "environmentSHA256": "e6615722478841141a9b7e22fa826419a54180850b2515f876c708d4b705967c",
+    "normalizedRecipeSHA256": "63248d3d790d1edfc92740258889e4c2d23ff904ecd7689f398865661d7e3062",
+    "prefix": "/opt/nf-envs/sarek-63248d3d790d",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/vcftools"
+  },
+  {
+    "module": "mosdepth",
+    "process": "MOSDEPTH",
+    "environmentSHA256": "55933bdd4522df8b0753a4be1be6b829d6a797079997ce98f1cdef9619063c85",
+    "normalizedRecipeSHA256": "fb630f3315e9aa5ec53bb263349767a51e837ef1629c3430faa66dc7265fc09c",
+    "prefix": "/opt/nf-envs/sarek-fb630f3315e9",
+    "reusesInstalledEnvironment": false,
+    "modulePath": "modules/nf-core/mosdepth"
+  },
+  {
+    "module": "multiqc",
+    "process": "MULTIQC",
+    "environmentSHA256": "d177f136e201eec8ac5f17fd56be42d6967875d55519b8f4ddd412491e39cccc",
+    "normalizedRecipeSHA256": "ec4cff12d3365069c2301f441362451c2ff42925bfb7f61046221fb059023d71",
+    "prefix": "/opt/nf-envs/multiqc",
+    "reusesInstalledEnvironment": true,
+    "modulePath": "modules/nf-core/multiqc"
+  },
+  {
+    "module": "local/create_intervals_bed",
+    "modulePath": "modules/local/create_intervals_bed",
+    "process": "CREATE_INTERVALS_BED",
+    "environmentSHA256": "9fc8ef277a76a4d0075aa34c16058f3926ecc38886362ebac45f02027807df0d",
+    "normalizedRecipeSHA256": "0f94555c069ed28fe227df34c725a6833304b0ee5f66d7058e38bba13c63e70b",
+    "prefix": "/opt/nf-envs/sarek-0f94555c069e",
+    "reusesInstalledEnvironment": false
+  },
+  {
+    "module": "local/add_info_to_vcf",
+    "modulePath": "modules/local/add_info_to_vcf",
+    "process": "ADD_INFO_TO_VCF",
+    "environmentSHA256": "9fc8ef277a76a4d0075aa34c16058f3926ecc38886362ebac45f02027807df0d",
+    "normalizedRecipeSHA256": "0f94555c069ed28fe227df34c725a6833304b0ee5f66d7058e38bba13c63e70b",
+    "prefix": "/opt/nf-envs/sarek-0f94555c069e",
+    "reusesInstalledEnvironment": true
+  }
+]

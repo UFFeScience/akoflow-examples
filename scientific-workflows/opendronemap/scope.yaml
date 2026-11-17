@@ -1,0 +1,3 @@
+id: opendronemap-scope
+name: opendronemap local scope
+environmentVersionIds: [opendronemap-v1]

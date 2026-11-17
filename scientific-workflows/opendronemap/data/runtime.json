@@ -1,0 +1,15 @@
+{
+  "version": "3.5.6",
+  "upstreamRepository": "https://github.com/OpenDroneMap/ODM",
+  "upstreamCommit": "064120f219b62287a2f1c7f093aaa73466967826",
+  "image": "opendronemap/odm@sha256:ca5634e99e711b67e082c7493d2ad5573b0edff3f7e521661f94b99a992f5df1",
+  "architecture": "linux/amd64",
+  "verifiedUnmodifiedImageSources": {
+    "opendm/osfm.py": "04fdcf0d93734e2cdb7341e76afe7d9bd7f08edd524d1ce11b794f4992080515",
+    "opendm/config.py": "486b41a4f962425b677d9dfd04edc971f7fe386a361c4e96de0dd8063e7858fb",
+    "opendm/types.py": "43ff38ccdaf6ae812a8e3dac6c6e6f71e9c0eec2399835f5003c8767c730b5c4",
+    "stages/odm_app.py": "bf383b70dfdea20c172e1af59005a5bf38466ab5b7c711967edec853c5ac6474",
+    "stages/dataset.py": "841f38248b56273de15f4a6820d7874b1efb54066590ec28f1fd5d7be9fd244d",
+    "stages/splitmerge.py": "09babffb46f1c1b1e67244ee64345a37e0df41be94b04f038039ec114a5cdc6d"
+  }
+}

@@ -1,0 +1,294 @@
+name: opendronemap-caliterra-split-merge
+spec:
+  image: akoflow-local/opendronemap:workload
+  activities:
+  - name: split
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn: []
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - split
+      - --output
+      - .
+  - name: reconstruct-0
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - split
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - reconstruct-0
+      - --output
+      - .
+  - name: reconstruct-1
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - split
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - reconstruct-1
+      - --output
+      - .
+  - name: align
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - split
+    - reconstruct-0
+    - reconstruct-1
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - align
+      - --output
+      - .
+  - name: process-0
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - align
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - process-0
+      - --output
+      - .
+  - name: process-1
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - align
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - process-1
+      - --output
+      - .
+  - name: merge
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - split
+    - process-0
+    - process-1
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - merge
+      - --output
+      - .
+  - name: previews
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - merge
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - previews
+      - --output
+      - .
+  - name: validate
+    runtime: opendronemap-local
+    cpuLimit: '2'
+    memoryLimit: 6Gi
+    dependsOn:
+    - split
+    - reconstruct-0
+    - reconstruct-1
+    - align
+    - process-0
+    - process-1
+    - merge
+    - previews
+    command:
+      entrypoint: python3
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - validate
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: split
+    consumerActivity: reconstruct-0
+    logicalName: split.tar
+    sizeBytes: 100000000
+  - producerActivity: split
+    consumerActivity: reconstruct-0
+    logicalName: split.json
+    sizeBytes: 1000000
+  - producerActivity: split
+    consumerActivity: reconstruct-1
+    logicalName: split.tar
+    sizeBytes: 100000000
+  - producerActivity: split
+    consumerActivity: reconstruct-1
+    logicalName: split.json
+    sizeBytes: 1000000
+  - producerActivity: split
+    consumerActivity: align
+    logicalName: split.tar
+    sizeBytes: 100000000
+  - producerActivity: split
+    consumerActivity: align
+    logicalName: split.json
+    sizeBytes: 1000000
+  - producerActivity: reconstruct-0
+    consumerActivity: align
+    logicalName: reconstructed-0.tar
+    sizeBytes: 100000000
+  - producerActivity: reconstruct-0
+    consumerActivity: align
+    logicalName: reconstruct-0.json
+    sizeBytes: 1000000
+  - producerActivity: reconstruct-1
+    consumerActivity: align
+    logicalName: reconstructed-1.tar
+    sizeBytes: 100000000
+  - producerActivity: reconstruct-1
+    consumerActivity: align
+    logicalName: reconstruct-1.json
+    sizeBytes: 1000000
+  - producerActivity: align
+    consumerActivity: process-0
+    logicalName: aligned.tar
+    sizeBytes: 100000000
+  - producerActivity: align
+    consumerActivity: process-0
+    logicalName: align.json
+    sizeBytes: 1000000
+  - producerActivity: align
+    consumerActivity: process-1
+    logicalName: aligned.tar
+    sizeBytes: 100000000
+  - producerActivity: align
+    consumerActivity: process-1
+    logicalName: align.json
+    sizeBytes: 1000000
+  - producerActivity: split
+    consumerActivity: merge
+    logicalName: split.tar
+    sizeBytes: 100000000
+  - producerActivity: split
+    consumerActivity: merge
+    logicalName: split.json
+    sizeBytes: 1000000
+  - producerActivity: process-0
+    consumerActivity: merge
+    logicalName: products-0.tar
+    sizeBytes: 100000000
+  - producerActivity: process-0
+    consumerActivity: merge
+    logicalName: process-0.json
+    sizeBytes: 1000000
+  - producerActivity: process-1
+    consumerActivity: merge
+    logicalName: products-1.tar
+    sizeBytes: 100000000
+  - producerActivity: process-1
+    consumerActivity: merge
+    logicalName: process-1.json
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: previews
+    logicalName: orthophoto.tif
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: previews
+    logicalName: surface.tif
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: previews
+    logicalName: pointcloud.laz
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: previews
+    logicalName: merge.json
+    sizeBytes: 1000000
+  - producerActivity: split
+    consumerActivity: validate
+    logicalName: split.json
+    sizeBytes: 1000000
+  - producerActivity: reconstruct-0
+    consumerActivity: validate
+    logicalName: reconstruct-0.json
+    sizeBytes: 1000000
+  - producerActivity: reconstruct-1
+    consumerActivity: validate
+    logicalName: reconstruct-1.json
+    sizeBytes: 1000000
+  - producerActivity: align
+    consumerActivity: validate
+    logicalName: align.json
+    sizeBytes: 1000000
+  - producerActivity: process-0
+    consumerActivity: validate
+    logicalName: process-0.json
+    sizeBytes: 1000000
+  - producerActivity: process-1
+    consumerActivity: validate
+    logicalName: process-1.json
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: validate
+    logicalName: orthophoto.tif
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: validate
+    logicalName: surface.tif
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: validate
+    logicalName: pointcloud.laz
+    sizeBytes: 1000000
+  - producerActivity: merge
+    consumerActivity: validate
+    logicalName: merge.json
+    sizeBytes: 1000000
+  - producerActivity: previews
+    consumerActivity: validate
+    logicalName: orthophoto.png
+    sizeBytes: 1000000
+  - producerActivity: previews
+    consumerActivity: validate
+    logicalName: surface.png
+    sizeBytes: 1000000
+  - producerActivity: previews
+    consumerActivity: validate
+    logicalName: pointcloud.png
+    sizeBytes: 1000000
+  - producerActivity: previews
+    consumerActivity: validate
+    logicalName: previews.json
+    sizeBytes: 1000000
+  namespace: akoflow-examples

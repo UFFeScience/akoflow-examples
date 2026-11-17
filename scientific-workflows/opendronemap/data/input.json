@@ -1,0 +1,64 @@
+{
+  "slug": "opendronemap-caliterra-split-merge",
+  "stages": [
+    "split",
+    "reconstruct-0",
+    "reconstruct-1",
+    "align",
+    "process-0",
+    "process-1",
+    "merge",
+    "previews",
+    "validate"
+  ],
+  "dependencies": {
+    "split": [],
+    "reconstruct-0": [
+      "split"
+    ],
+    "reconstruct-1": [
+      "split"
+    ],
+    "align": [
+      "split",
+      "reconstruct-0",
+      "reconstruct-1"
+    ],
+    "process-0": [
+      "align"
+    ],
+    "process-1": [
+      "align"
+    ],
+    "merge": [
+      "split",
+      "process-0",
+      "process-1"
+    ],
+    "previews": [
+      "merge"
+    ],
+    "validate": [
+      "split",
+      "reconstruct-0",
+      "reconstruct-1",
+      "align",
+      "process-0",
+      "process-1",
+      "merge",
+      "previews"
+    ]
+  },
+  "artifacts": [
+    "orthophoto.tif",
+    "surface.tif",
+    "pointcloud.laz",
+    "orthophoto.png",
+    "surface.png",
+    "pointcloud.png",
+    "validation.json"
+  ],
+  "validationMode": "local-workload",
+  "ciValidation": "image-and-contract",
+  "title": "OpenDroneMap \u2014 real Caliterra split/merge"
+}

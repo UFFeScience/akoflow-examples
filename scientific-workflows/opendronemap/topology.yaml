@@ -1,0 +1,5 @@
+id: opendronemap-topology
+name: opendronemap local topology
+version: 1
+executionScopeId: opendronemap-scope
+links: []

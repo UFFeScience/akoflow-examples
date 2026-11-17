@@ -1,0 +1,60 @@
+{
+  "status": "success",
+  "sourceCommit": "bec3dc7296e90aacb3930eb9df8061849fbfe0d0",
+  "photographs": 77,
+  "mergedSubmodels": 2,
+  "workerOverlapSeconds": {
+    "reconstruct": 32.14210319519043,
+    "process": 689.8250916004181
+  },
+  "rasters": {
+    "orthophoto.tif": {
+      "width": 885,
+      "height": 1008,
+      "bands": 4,
+      "crs": "EPSG:32614",
+      "bounds": [
+        587519.4007482753,
+        3338019.2534108823,
+        587696.2978423276,
+        3338220.745596927
+      ],
+      "validSamplePixels": 183246,
+      "range": [
+        3.0,
+        227.0
+      ]
+    },
+    "surface.tif": {
+      "width": 442,
+      "height": 503,
+      "bands": 1,
+      "crs": "EPSG:32614",
+      "bounds": [
+        587519.403,
+        3338019.2849999997,
+        587696.2030000001,
+        3338220.485
+      ],
+      "validSamplePixels": 156103,
+      "range": [
+        269.0338134765625,
+        420.821044921875
+      ]
+    }
+  },
+  "pointCount": 4510286,
+  "sha256": {
+    "orthophoto.tif": "b9bb4bb8e1d025c7d5e2ca73a9ecf9f4f61e738a80f0288f09849eee94a6bd89",
+    "surface.tif": "088360794e82b7da75bc13f476549fb72e081d067a5ce018fcdc7e4deafb32d8",
+    "pointcloud.laz": "8b3af0245b50b5e2d335ef69b5c9a1b9b6bf6c2fd385071603112b69361cc3d0",
+    "orthophoto.png": "8448b5d1a203897f643b86e550d7e930dc1acfaeac54b1419dc09f0f2aaeb993",
+    "surface.png": "b1db2da9bedbd4ff289e9ae69ce33572200b77bba993bd52a1dc164c5dbac079",
+    "pointcloud.png": "a0e250d4010f57953afdcf705b5ad6f34096bcbefaf7115a083b5582a8c881cd"
+  },
+  "stage": "validate",
+  "startedEpoch": 1794838752.6478975,
+  "finishedEpoch": 1794838752.7544668,
+  "startedAt": "2026-11-16T14:19:12.647897+00:00",
+  "durationSeconds": 0.10656929016113281
+}

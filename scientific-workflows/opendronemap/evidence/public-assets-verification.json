@@ -1,0 +1,135 @@
+{
+  "uploadedAssets": [
+    {
+      "name": "acceptance.json",
+      "bytes": 1241,
+      "sha256": "de7fc763ba66e14f873040d699c8a88d4de6b5f252e82c78540e442b1debc314",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "animation-provenance.json",
+      "bytes": 1536,
+      "sha256": "11d70a2e209f7f00173a655d09dd988cf918c1d4ebbdc1c66e74f2e1e4306c2a",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "map-assembly.gif",
+      "bytes": 5077594,
+      "sha256": "ad2cff868598946ad2d42f6e76d090c02dee5cddad45be2fe76643601620b48e",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "opendronemap-executed-image.tar.gz",
+      "bytes": 863453319,
+      "sha256": "93435411deae918ed885e7e345b96d429a4f8d998ceebfeb5cf91b53bbd4f9ab",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "opendronemap-results.tar.gz",
+      "bytes": 32085595,
+      "sha256": "4ca93b072bde40ca1777089c5ad7a8553e3d7455b8a17afb7676be0ecb864e87",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "opendronemap-source.tar.gz",
+      "bytes": 8414616,
+      "sha256": "5a6fe8fd1c6bd80a4b6b7443d55a2541d3a0cc953f62c26e34052ffa29cfa714",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "orthophoto.png",
+      "bytes": 1014217,
+      "sha256": "8448b5d1a203897f643b86e550d7e930dc1acfaeac54b1419dc09f0f2aaeb993",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "pointcloud-turntable.gif",
+      "bytes": 1788707,
+      "sha256": "b9b608ddd150fb543814dc9fad79bde5b945083d216b5cec252de8d034aa7cf6",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "pointcloud.png",
+      "bytes": 510597,
+      "sha256": "a0e250d4010f57953afdcf705b5ad6f34096bcbefaf7115a083b5582a8c881cd",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "scientific-validation.json",
+      "bytes": 1714,
+      "sha256": "80ed47cc3c6f559fb2fd9ba54b48906f208ffc796548d533dd5168de1684a025",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 969,
+      "sha256": "2156b2a16d97de0b9dc481999c663e8d890bd221affa9328e9b90af60bff0482",
+      "githubUploadedDigestVerified": true
+    },
+    {
+      "name": "surface.png",
+      "bytes": 112030,
+      "sha256": "b1db2da9bedbd4ff289e9ae69ce33572200b77bba993bd52a1dc164c5dbac079",
+      "githubUploadedDigestVerified": true
+    }
+  ],
+  "anonymousVisuals": [
+    {
+      "name": "map-assembly.gif",
+      "bytes": 5077594,
+      "contentType": "image/gif",
+      "anonymousSHA256Verified": true
+    },
+    {
+      "name": "pointcloud-turntable.gif",
+      "bytes": 1788707,
+      "contentType": "image/gif",
+      "anonymousSHA256Verified": true
+    },
+    {
+      "name": "orthophoto.png",
+      "bytes": 1014217,
+      "contentType": "image/png",
+      "anonymousSHA256Verified": true
+    },
+    {
+      "name": "surface.png",
+      "bytes": 112030,
+      "contentType": "image/png",
+      "anonymousSHA256Verified": true
+    },
+    {
+      "name": "pointcloud.png",
+      "bytes": 510597,
+      "contentType": "image/png",
+      "anonymousSHA256Verified": true
+    }
+  ],
+  "anonymousDownloads": [
+    {
+      "name": "opendronemap-results.tar.gz",
+      "bytes": 32085595,
+      "sha256": "4ca93b072bde40ca1777089c5ad7a8553e3d7455b8a17afb7676be0ecb864e87",
+      "anonymousDownloadVerified": true
+    },
+    {
+      "name": "opendronemap-source.tar.gz",
+      "bytes": 8414616,
+      "sha256": "5a6fe8fd1c6bd80a4b6b7443d55a2541d3a0cc953f62c26e34052ffa29cfa714",
+      "anonymousDownloadVerified": true
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 969,
+      "sha256": "2156b2a16d97de0b9dc481999c663e8d890bd221affa9328e9b90af60bff0482",
+      "anonymousDownloadVerified": true
+    }
+  ],
+  "exactImageAnonymousRange": {
+    "status": 206,
+    "bytesRead": 4096,
+    "gzipHeaderVerified": true,
+    "anonymousAccessVerified": true
+  },
+  "exactImageDockerLoadVerified": true
+}

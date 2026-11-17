@@ -1,0 +1,8 @@
+{
+  "runId": "tpch-databases-local-5dff16106f-run-20261117t152506.699433105",
+  "imageId": "sha256:9bfa73e297c7e7ddbec9dfec7493e7c5373d8342392599374d0a37d59ad9459d",
+  "completedActivities": 10,
+  "observedMakespanSeconds": 32.59038686752319,
+  "peakOverlappingActivities": 3,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

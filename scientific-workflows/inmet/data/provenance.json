@@ -1,0 +1,15 @@
+{
+  "slug": "inmet",
+  "title": "INMET — São Paulo meteorological observations, 2013–2022",
+  "authors": [
+    "Rosa Virginia Encinas Quille",
+    "Felipe Valencia de Almeida",
+    "Danielle Monteiro",
+    "Pedro Luiz Pizzigatti Corrêa"
+  ],
+  "conference": "XIX Brazilian e-Science Workshop (BreSci 2025), co-located with SBBD",
+  "article": "https://sol.sbc.org.br/index.php/bresci/article/view/36912",
+  "source": "https://zenodo.org/records/16864784",
+  "scope": "Process all original hourly CSVs for São Paulo–Mirante station A701 from 2013 through 2022, the station and period illustrated by the paper. Execute the original notebook ingestion/normalization and cleaning definitions (cells 16 and 20), then generate noninteractive temperature, precipitation and humidity analyses. Yearly ingestion activities are independent; the original cleaning runs once after concatenation, preserving cross-year filling. Raw inputs come from the nested dataset.zip in the original Zenodo deposit, acquired by verified ZIP members through HTTP byte ranges. The entire 1.92 GB parent archive is not downloaded or claimed to have a newly verified global hash; extracted member CRC and SHA-256 are checked. Original notebook and data: CC BY 4.0. INMET source portal: https://portal.inmet.gov.br/dadoshistoricos . No processed author outputs are used as computation inputs.",
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+}

@@ -1,0 +1,18 @@
+{
+  "showcase": "sqlsim",
+  "status": "success",
+  "artifacts": [
+    "query-results.zip",
+    "summary.csv",
+    "similarity-clusters.png",
+    "query-comparison.png",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "query-results.zip": "c6b4d550892b9aa8d69150bc9969cf95f4f2e4594dc70d99c19d199ffaf3a636",
+    "summary.csv": "cbf359e093e26a6c631092337b07c8f511e245b9fec9d4f6e954db211c51b0ec",
+    "similarity-clusters.png": "99634b53f1c3ef925c353a97b4a876347b478982076f124f8314fc524b05c84b",
+    "query-comparison.png": "0d3d1f62e6206f430b051d1f9a261a19d2083dcd0db8533c3d169ee016c1a06a",
+    "scientific-validation.json": "c9a15dee2b9c4100ec02ff8157096963a40f7e84c334d46e0613480105192523"
+  }
+}

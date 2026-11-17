@@ -1,0 +1,18 @@
+{
+  "showcase": "inmet",
+  "status": "success",
+  "artifacts": [
+    "observations.zip",
+    "result-temperature.png",
+    "result-precipitation.png",
+    "result-humidity.png",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "observations.zip": "d3531dec3ca664f426bcfec1ab2f29d53d1b56e033ff44f0d10c3179f4efa2f2",
+    "result-temperature.png": "f0c5416979d81e6c0b949e96c5b94a96b45d334f2ea81286be9b1f55f284862e",
+    "result-precipitation.png": "e77aa2eaa2564d4cd1f21c166cc13f29ce2e5a044152f5c7167cc95b771870d4",
+    "result-humidity.png": "08f47d310971270fc0fe7876499a1f83fc5fd4811c52afd0a2094d3dd429f4e7",
+    "scientific-validation.json": "e441a0beda9140a9729ca5b1c7b85ea53b610d4be75ce7252c775741c828806c"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "name": "tpch-databases",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "akoflow-local/tpch-databases:workload",
+    "activities": [
+      {
+        "name": "generate",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "generate",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "postgres-original-plain",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "postgres-original-plain",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "postgres-original-indexed",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "postgres-original-indexed",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "postgres-aligned-plain",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "postgres-aligned-plain",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "postgres-aligned-indexed",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "postgres-aligned-indexed",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mongo-original-plain",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mongo-original-plain",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mongo-original-indexed",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mongo-original-indexed",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mongo-aligned-plain",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mongo-aligned-plain",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "mongo-aligned-indexed",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "generate"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "mongo-aligned-indexed",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "compare",
+        "runtime": "tpch-databases-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "postgres-original-plain",
+          "postgres-original-indexed",
+          "postgres-aligned-plain",
+          "postgres-aligned-indexed",
+          "mongo-original-plain",
+          "mongo-original-indexed",
+          "mongo-aligned-plain",
+          "mongo-aligned-indexed"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "compare",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "postgres-original-plain",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "postgres-original-indexed",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "postgres-aligned-plain",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "postgres-aligned-indexed",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "mongo-original-plain",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "mongo-original-indexed",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "mongo-aligned-plain",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "generate",
+        "consumerActivity": "mongo-aligned-indexed",
+        "logicalName": "lineitem.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "postgres-original-plain",
+        "consumerActivity": "compare",
+        "logicalName": "postgres-original-plain.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "postgres-original-indexed",
+        "consumerActivity": "compare",
+        "logicalName": "postgres-original-indexed.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "postgres-aligned-plain",
+        "consumerActivity": "compare",
+        "logicalName": "postgres-aligned-plain.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "postgres-aligned-indexed",
+        "consumerActivity": "compare",
+        "logicalName": "postgres-aligned-indexed.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mongo-original-plain",
+        "consumerActivity": "compare",
+        "logicalName": "mongo-original-plain.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mongo-original-indexed",
+        "consumerActivity": "compare",
+        "logicalName": "mongo-original-indexed.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mongo-aligned-plain",
+        "consumerActivity": "compare",
+        "logicalName": "mongo-aligned-plain.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "mongo-aligned-indexed",
+        "consumerActivity": "compare",
+        "logicalName": "mongo-aligned-indexed.json",
+        "sizeBytes": 10000000
+      }
+    ]
+  }
+}

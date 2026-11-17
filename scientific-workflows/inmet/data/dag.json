@@ -1,0 +1,511 @@
+{
+  "name": "inmet",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "akoflow-local/inmet:workload",
+    "activities": [
+      {
+        "name": "validate-inputs",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "validate-inputs",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2013",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2013",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2014",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2014",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2015",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2015",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2016",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2016",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2017",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2017",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2018",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2018",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2019",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2019",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2020",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2020",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2021",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2021",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "ingest-2022",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "ingest-2022",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "clean",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "ingest-2013",
+          "ingest-2014",
+          "ingest-2015",
+          "ingest-2016",
+          "ingest-2017",
+          "ingest-2018",
+          "ingest-2019",
+          "ingest-2020",
+          "ingest-2021",
+          "ingest-2022"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "clean",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "temperature",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "clean"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "temperature",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "precipitation",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "clean"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "precipitation",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "humidity",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "clean"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "humidity",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "compare",
+        "runtime": "inmet-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "temperature",
+          "precipitation",
+          "humidity",
+          "clean"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "compare",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2013",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2014",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2015",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2016",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2017",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2018",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2019",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2020",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2021",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "ingest-2022",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2013",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2013.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2014",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2014.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2015",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2015.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2016",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2016.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2017",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2017.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2018",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2018.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2019",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2019.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2020",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2020.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2021",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2021.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "ingest-2022",
+        "consumerActivity": "clean",
+        "logicalName": "raw-2022.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "clean",
+        "consumerActivity": "temperature",
+        "logicalName": "cleaned.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "clean",
+        "consumerActivity": "precipitation",
+        "logicalName": "cleaned.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "clean",
+        "consumerActivity": "humidity",
+        "logicalName": "cleaned.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "temperature",
+        "consumerActivity": "compare",
+        "logicalName": "temperature.png",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "temperature",
+        "consumerActivity": "compare",
+        "logicalName": "temperature.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "precipitation",
+        "consumerActivity": "compare",
+        "logicalName": "precipitation.png",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "precipitation",
+        "consumerActivity": "compare",
+        "logicalName": "precipitation.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "humidity",
+        "consumerActivity": "compare",
+        "logicalName": "humidity.png",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "humidity",
+        "consumerActivity": "compare",
+        "logicalName": "humidity.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "clean",
+        "consumerActivity": "compare",
+        "logicalName": "cleaned.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "clean",
+        "consumerActivity": "compare",
+        "logicalName": "cleaning.json",
+        "sizeBytes": 10000000
+      }
+    ]
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "name": "sqlsim",
+  "spec": {
+    "namespace": "akoflow-examples",
+    "image": "akoflow-local/sqlsim:workload",
+    "activities": [
+      {
+        "name": "validate-inputs",
+        "runtime": "sqlsim-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "validate-inputs",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "cube-2d",
+        "runtime": "sqlsim-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "cube-2d",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "cube-3d",
+        "runtime": "sqlsim-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "validate-inputs"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "cube-3d",
+            "--output",
+            "."
+          ]
+        }
+      },
+      {
+        "name": "compare",
+        "runtime": "sqlsim-local-local",
+        "cpuLimit": "1",
+        "memoryLimit": "4Gi",
+        "dependsOn": [
+          "cube-2d",
+          "cube-3d"
+        ],
+        "command": {
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/run_stage.py",
+            "--stage",
+            "compare",
+            "--output",
+            "."
+          ]
+        }
+      }
+    ],
+    "dataDependencies": [
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "cube-2d",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "validate-inputs",
+        "consumerActivity": "cube-3d",
+        "logicalName": "inputs-validated.json",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cube-2d",
+        "consumerActivity": "compare",
+        "logicalName": "cube-2d.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cube-2d",
+        "consumerActivity": "compare",
+        "logicalName": "cube-2d-assignments.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cube-3d",
+        "consumerActivity": "compare",
+        "logicalName": "cube-3d.csv",
+        "sizeBytes": 10000000
+      },
+      {
+        "producerActivity": "cube-3d",
+        "consumerActivity": "compare",
+        "logicalName": "cube-3d-assignments.csv",
+        "sizeBytes": 10000000
+      }
+    ]
+  }
+}

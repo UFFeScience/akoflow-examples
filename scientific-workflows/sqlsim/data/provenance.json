@@ -1,0 +1,14 @@
+{
+  "slug": "sqlsim",
+  "title": "SQLSIM — analytical similarity queries in PostgreSQL",
+  "authors": [
+    "Antônio Lívio C. de Mendonça",
+    "Maria Camila N. Barioni",
+    "Humberto Razente"
+  ],
+  "conference": "XVIII Brazilian e-Science Workshop (BreSci 2024), co-located with SBBD",
+  "article": "https://sol.sbc.org.br/index.php/bresci/article/view/30580",
+  "source": "https://github.com/liviomendonca/sqlsim",
+  "scope": "Execute the original PL/pgSQL functions and both original 2D/3D CUBE queries on all 569 original Wisconsin Diagnostic Breast Cancer observations supplied by the authors. Each query gets an isolated PostgreSQL/PostGIS instance, so parallel activities do not mutate one another’s clustering state. Transport path is adapted and PostgreSQL random seed is fixed to 0.42 for the authors’ generated hospital/date dimensions. Hospital locations and dates are illustrative generated dimensions, not clinical provenance. Runtime uses PostgreSQL 15/PostGIS 3 on Debian Bookworm rather than the paper’s PostgreSQL 16.3; result semantics, not timing equivalence, are checked. Original dataset: https://archive.ics.uci.edu/dataset/17/breast+cancer+wisconsin+diagnostic . Upstream repository has no explicit code license; no redistribution grant is inferred.",
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+}

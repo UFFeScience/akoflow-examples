@@ -1,0 +1,18 @@
+{
+  "showcase": "mafaulda-tinyml",
+  "status": "success",
+  "artifacts": [
+    "metrics.csv",
+    "quantization-comparison.png",
+    "confusion-matrices.png",
+    "quantized-models.zip",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "metrics.csv": "0b6f3e293a978ce54fec83670edc008a6c9fc22adbb2dcc1d176e93aa63ded45",
+    "quantization-comparison.png": "b8475963c7969d8d4d77b17bcc96efbcd7772672cd6d408dae9664280fd3620e",
+    "confusion-matrices.png": "84286eecd0f1202c66e82c397921e83a5aa5d9c374e587542b638f150354a682",
+    "quantized-models.zip": "4d7bf6b89be0dfa69ef97a85c2a76740238128822c301b8ef93d8a9515cbf8d6",
+    "scientific-validation.json": "d091340f9e8a652683dfb7b6a50780e1c275b796ab22afd953b98164f6bcb177"
+  }
+}

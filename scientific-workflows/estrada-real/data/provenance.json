@@ -1,0 +1,12 @@
+{
+  "slug": "estrada-real",
+  "title": "Estrada Real — informed search on a curated historical graph",
+  "authors": [
+    "Davi Machado da Rocha"
+  ],
+  "conference": "XX Brazilian e-Science Workshop (BreSci 2026), co-located with SBBD",
+  "article": "https://sol.sbc.org.br/index.php/bresci/article/view/44084",
+  "source": "https://zenodo.org/records/20867698",
+  "scope": "Re-execute the original UCS, Greedy and A* notebook functions over the complete frozen curated graph: 108 nodes, 226 directed edges, all 11,556 distinct ordered origin–destination pairs for each of three original cost profiles. Nine independent search activities produce 104,004 searches. This reproduces the search stage, not the upstream geographic source reconstruction. The paper reports 3,715 Greedy divergences; the workflow measures and reports actual agreement. Original data deposit: https://doi.org/10.5281/zenodo.20867698. Deposit metadata states CC BY 4.0; its README contains provisional code-license wording, so no broader code redistribution license is inferred.",
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+}

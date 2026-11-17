@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "AvaliaMongoDB.py",
+      "url": "https://raw.githubusercontent.com/jnpavao/tpch_mongodb/680b36b32746df155f18620ee4e48d4a0f1eaf7a/AvaliaMongoDB.py",
+      "sha256": "6d19fae08ad3f21f7cdf2579bb9cce9b97a50e2a5103ce98ba81ea67a5003d05",
+      "bytes": 46876
+    },
+    {
+      "path": "AvaliaPostgreSQL.py",
+      "url": "https://raw.githubusercontent.com/jnpavao/tpch_mongodb/680b36b32746df155f18620ee4e48d4a0f1eaf7a/AvaliaPostgreSQL.py",
+      "sha256": "2924e1aa5ab337c61bf1b3b528d7ca0abbc50ab0a100886ef82778e9761cb918",
+      "bytes": 36172
+    },
+    {
+      "path": "dbgen.tar.gz",
+      "url": "https://codeload.github.com/electrum/tpch-dbgen/tar.gz/32f1c1b92d1664dba542e927d23d86ffa57aa253",
+      "sha256": "01d8a4fa0fff4be83a9f43dbdc5a69f560d34f5ff0b4dbff1fc3a5320baf6318",
+      "bytes": 211381
+    },
+    {
+      "path": "mongodb.tgz",
+      "url": "https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-debian12-7.0.16.tgz",
+      "sha256": "073b4ffa712a7f74e1ad046e3c7dc8d7af8db550b329b5c75466c7ea43ec6d38",
+      "bytes": 84762182
+    }
+  ]
+}

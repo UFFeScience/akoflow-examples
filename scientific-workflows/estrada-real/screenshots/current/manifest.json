@@ -1,0 +1,33 @@
+{
+  "runId": "estrada-real-local-0c3426a638-run-20261117t145937.986646313",
+  "image": "akoflow-local/estrada-real:local-22c0fa0da9d73449",
+  "imageId": "sha256:22c0fa0da9d734498b20ddcb09f7765cfa1e4fab04e595c5401a3fcf2a238fd7",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "graph-map.png": "30085db4b270b388a15b1fdb24f85e562602465e86813b6037dbafb06a6c53b2",
+    "search-comparison.png": "64e91c94004842e0cea0fe78c97ba148ec61756d2ef0f0f9a1903be1440ff3ac",
+    "execution-timeline.png": "6893c353083743338c3ae0cf69dcc83469805d64a202bf08526130c36259aa47"
+  },
+  "findings": {
+    "nodes": 108,
+    "directedEdges": 226,
+    "searches": 104004,
+    "greedyDivergences": 3715,
+    "paperGreedyDivergences": 3715,
+    "paperCountMatches": true,
+    "astarUcsAgreementPairs": 34668,
+    "originalNotebookCells": [
+      19,
+      34,
+      36
+    ]
+  },
+  "executionSummary": {
+    "runId": "estrada-real-local-0c3426a638-run-20261117t145937.986646313",
+    "imageId": "sha256:22c0fa0da9d734498b20ddcb09f7765cfa1e4fab04e595c5401a3fcf2a238fd7",
+    "completedActivities": 11,
+    "observedMakespanSeconds": 24.28536081314087,
+    "peakOverlappingActivities": 3,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

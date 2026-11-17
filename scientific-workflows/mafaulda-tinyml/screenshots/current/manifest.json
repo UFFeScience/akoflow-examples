@@ -1,0 +1,382 @@
+{
+  "runId": "mafaulda-tinyml-local-351678315d-run-20261117t152055.178793114",
+  "image": "akoflow-local/mafaulda-tinyml:local-36dd0df262eb3cb3",
+  "imageId": "sha256:36dd0df262eb3cb373ef1cba2e824423aabf516e56e70b75ca62c1922978cc9e",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "confusion-matrices.png": "84286eecd0f1202c66e82c397921e83a5aa5d9c374e587542b638f150354a682",
+    "quantization-comparison.png": "b8475963c7969d8d4d77b17bcc96efbcd7772672cd6d408dae9664280fd3620e",
+    "execution-timeline.png": "bfb4f29587740160d00f7d2b4a081a7b703fc5b23c4f66c8c5398ac0f69130bc"
+  },
+  "findings": {
+    "recordings": 30,
+    "classes": 6,
+    "windows": 1500,
+    "features": 132,
+    "baselineModels": [
+      {
+        "model": "mlp",
+        "folds": [
+          {
+            "fold": 0,
+            "f1": 0.25924250041897096,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 1,
+            "f1": 0.9832915622389308,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 2,
+            "f1": 0.4748495989840349,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 3,
+            "f1": 0.7766713577023013,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 4,
+            "f1": 0.3125652223042002,
+            "testWindows": 300,
+            "testRecordings": 6
+          }
+        ],
+        "meanF1": 0.5613240483296876,
+        "lastFoldConfusion": [
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            35,
+            13,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            50,
+            0
+          ],
+          [
+            5,
+            6,
+            0,
+            34,
+            0,
+            5
+          ]
+        ],
+        "epochs": 10,
+        "recordingGroupsDisjoint": true
+      },
+      {
+        "model": "cnn",
+        "folds": [
+          {
+            "fold": 0,
+            "f1": 0.07076611365844117,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 1,
+            "f1": 0.08603468163527944,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 2,
+            "f1": 0.08589470192765504,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 3,
+            "f1": 0.047619047619047616,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 4,
+            "f1": 0.048875855327468236,
+            "testWindows": 300,
+            "testRecordings": 6
+          }
+        ],
+        "meanF1": 0.0678380800335783,
+        "lastFoldConfusion": [
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            49,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            50,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            42,
+            0,
+            0,
+            8,
+            0
+          ]
+        ],
+        "epochs": 10,
+        "recordingGroupsDisjoint": true
+      },
+      {
+        "model": "lstm",
+        "folds": [
+          {
+            "fold": 0,
+            "f1": 0.38889901074989064,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 1,
+            "f1": 0.04775549188156638,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 2,
+            "f1": 0.2242416688661447,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 3,
+            "f1": 0.05611672278338945,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 4,
+            "f1": 0.15202363773792346,
+            "testWindows": 300,
+            "testRecordings": 6
+          }
+        ],
+        "meanF1": 0.17380730640378292,
+        "lastFoldConfusion": [
+          [
+            0,
+            0,
+            5,
+            0,
+            37,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            50,
+            0
+          ],
+          [
+            15,
+            0,
+            1,
+            20,
+            0,
+            14
+          ],
+          [
+            0,
+            0,
+            21,
+            0,
+            11,
+            18
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            32,
+            18
+          ],
+          [
+            11,
+            0,
+            0,
+            0,
+            0,
+            39
+          ]
+        ],
+        "epochs": 5,
+        "recordingGroupsDisjoint": true
+      },
+      {
+        "model": "rf",
+        "folds": [
+          {
+            "fold": 0,
+            "f1": 0.12848867825171142,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 1,
+            "f1": 0.6321322723318853,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 2,
+            "f1": 0.3635254528293146,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 3,
+            "f1": 0.7859265993044486,
+            "testWindows": 300,
+            "testRecordings": 6
+          },
+          {
+            "fold": 4,
+            "f1": 0.3124308900630487,
+            "testWindows": 300,
+            "testRecordings": 6
+          }
+        ],
+        "meanF1": 0.44450077855608167,
+        "lastFoldConfusion": [
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            50,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            22,
+            28,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            50,
+            0
+          ],
+          [
+            5,
+            0,
+            1,
+            38,
+            6,
+            0
+          ]
+        ],
+        "epochs": 0,
+        "recordingGroupsDisjoint": true
+      }
+    ],
+    "quantizedModels": 9,
+    "evaluation": "recording-disjoint 5-fold; quantization calibration=train, evaluation=test",
+    "paperScoreAgreementClaimed": false
+  },
+  "executionSummary": {
+    "runId": "mafaulda-tinyml-local-351678315d-run-20261117t152055.178793114",
+    "imageId": "sha256:36dd0df262eb3cb373ef1cba2e824423aabf516e56e70b75ca62c1922978cc9e",
+    "completedActivities": 22,
+    "observedMakespanSeconds": 140.40111374855042,
+    "peakOverlappingActivities": 3,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

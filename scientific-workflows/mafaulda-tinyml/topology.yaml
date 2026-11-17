@@ -1,0 +1,5 @@
+id: mafaulda-tinyml-local-topology
+name: mafaulda-tinyml-local local topology
+version: 1
+executionScopeId: mafaulda-tinyml-local-scope
+links: []

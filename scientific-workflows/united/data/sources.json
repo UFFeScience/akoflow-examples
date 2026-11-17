@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "art_daily_flatmiddle.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_flatmiddle.RData"
+    },
+    {
+      "path": "art_daily_jumpsdown.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsdown.RData"
+    },
+    {
+      "path": "art_daily_jumpsup.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsup.RData"
+    },
+    {
+      "path": "art_daily_nojump.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_nojump.RData"
+    }
+  ]
+}

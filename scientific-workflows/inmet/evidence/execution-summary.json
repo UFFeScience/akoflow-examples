@@ -1,0 +1,8 @@
+{
+  "runId": "inmet-local-1514940793-run-20261117t151423.285983342",
+  "imageId": "sha256:5c61428db82753d20bb9ae9c3dea95d1e77e055afb4b5af80e2d5242fa643823",
+  "completedActivities": 16,
+  "observedMakespanSeconds": 36.5455048084259,
+  "peakOverlappingActivities": 3,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

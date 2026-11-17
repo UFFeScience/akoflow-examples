@@ -1,0 +1,18 @@
+{
+  "showcase": "estrada-real",
+  "status": "success",
+  "artifacts": [
+    "comparison.csv",
+    "summary.csv",
+    "search-comparison.png",
+    "graph-map.png",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "comparison.csv": "6084e3bc01c1fffb7f7e0fb25f2cb47ee6b73ec85af0150a2370b97c7f71838a",
+    "summary.csv": "a5cecb3474d9022c7cdbcc4a52426b17cd711354fd9f138beb59a8285690025f",
+    "search-comparison.png": "64e91c94004842e0cea0fe78c97ba148ec61756d2ef0f0f9a1903be1440ff3ac",
+    "graph-map.png": "30085db4b270b388a15b1fdb24f85e562602465e86813b6037dbafb06a6c53b2",
+    "scientific-validation.json": "4e2db6d398bb245c7fde47e4db839aba4a22c0246a0e1036cba6f1cbedff3610"
+  }
+}

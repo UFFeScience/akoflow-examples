@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "path": "art_daily_flatmiddle.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_flatmiddle.RData",
+      "sha256": "1432b25ee016df46c20857e3e3c45af0ff4a65bc9873edb7de473e16bfb4e485",
+      "bytes": 28895
+    },
+    {
+      "path": "art_daily_jumpsdown.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsdown.RData",
+      "sha256": "6babdf95c152129987f738a9d89bd57f90d6bb40098163d0e7d2d7181ff08095",
+      "bytes": 30602
+    },
+    {
+      "path": "art_daily_jumpsup.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_jumpsup.RData",
+      "sha256": "b06ecb354cbacfd6342c6e8da43ae628525d46ee2fab93c43cc31b953ffdbc58",
+      "bytes": 30612
+    },
+    {
+      "path": "art_daily_nojump.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/united/ed3c0369f49a643559e0da1ffba811afccfb6e92/etl/numenta/source/artificialWithAnomaly/art_daily_nojump.RData",
+      "sha256": "5bdc8b198e47e8adc6f0bda4a3576c22e277a22f66286d1b967fbaf21d02ceca",
+      "bytes": 30567
+    }
+  ]
+}

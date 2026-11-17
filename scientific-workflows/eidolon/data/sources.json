@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "etl/climate/01-extract_transform_load-climate.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/01-extract_transform_load-climate.R"
+    },
+    {
+      "path": "etl/climate/source/Environment_Temperature_change_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/source/Environment_Temperature_change_E_All_Data_NOFLAG.csv"
+    },
+    {
+      "path": "tspredit/climate.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/climate.RData"
+    },
+    {
+      "path": "etl/climate/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/README.md"
+    },
+    {
+      "path": "etl/bioenergy/01-extract_transform_load-bioenergy.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/01-extract_transform_load-bioenergy.R"
+    },
+    {
+      "path": "etl/bioenergy/source/Environment_Bioenergy_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/source/Environment_Bioenergy_E_All_Data_NOFLAG.csv"
+    },
+    {
+      "path": "tspredit/bioenergy.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/bioenergy.RData"
+    },
+    {
+      "path": "etl/bioenergy/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/README.md"
+    },
+    {
+      "path": "etl/emissions/01-extract_transform_load-emissions.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/01-extract_transform_load-emissions.R"
+    },
+    {
+      "path": "etl/emissions/source/Emissions_Totals_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/source/Emissions_Totals_E_All_Data_NOFLAG.csv"
+    },
+    {
+      "path": "tspredit/emissions.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/emissions.RData"
+    },
+    {
+      "path": "etl/emissions/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/README.md"
+    },
+    {
+      "path": "etl/02-build-minidata.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/02-build-minidata.R"
+    }
+  ]
+}

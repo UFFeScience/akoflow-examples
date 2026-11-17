@@ -1,0 +1,18 @@
+{
+  "showcase": "tpch-databases",
+  "status": "success",
+  "artifacts": [
+    "metrics.csv",
+    "query-results.json",
+    "database-comparison.png",
+    "aligned-aggregates.png",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "metrics.csv": "92d5609819620dab97f5c232898394c6266c9403fc12d79961a137ee593edc7c",
+    "query-results.json": "2700bf5a9ba4e26329a3c03302ec783c3fe3ee1f9f9fd4a6a4ed8726cd9479c7",
+    "database-comparison.png": "59ed3dc845c171417cd03d55aa29d03c8d33f69694f31e2f3d68240d2852f1b2",
+    "aligned-aggregates.png": "4c6d21151096bf70c6ab7bededc82c17df64f968803cac75d9da5ed8d0b91fb0",
+    "scientific-validation.json": "3c2d7e2cc8515039d3005c3d129d3f54c7802c2c23994089d1b3e6c690d6197a"
+  }
+}

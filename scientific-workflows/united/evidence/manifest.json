@@ -1,0 +1,16 @@
+{
+  "showcase": "united",
+  "status": "success",
+  "artifacts": [
+    "detections.png",
+    "metrics.png",
+    "metrics.csv",
+    "scientific-validation.json"
+  ],
+  "sha256": {
+    "detections.png": "2ed2af64e5318fbb9d7f8161156e89095f49a8c561f7413531f2089291f1685a",
+    "metrics.png": "7ac23c05fc7685ea1ca4489962ef074a4593f5810208ce516e448187484afd9c",
+    "metrics.csv": "a2cde851da8b8c831a558038f34f6802ef80f5447d94c1da46d6078f409c98d5",
+    "scientific-validation.json": "03af73ac57edbe73917a645a78dd1930b5a24570dfdf98753c9b295369eaf1d2"
+  }
+}

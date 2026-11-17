@@ -1,0 +1,52 @@
+{
+  "runId": "inmet-local-1514940793-run-20261117t151423.285983342",
+  "image": "akoflow-local/inmet:local-5c61428db82753d2",
+  "imageId": "sha256:5c61428db82753d20bb9ae9c3dea95d1e77e055afb4b5af80e2d5242fa643823",
+  "source": "scientific figures copied from completed daemon outputs; timeline derived from observed native activity times",
+  "figures": {
+    "result-humidity.png": "08f47d310971270fc0fe7876499a1f83fc5fd4811c52afd0a2094d3dd429f4e7",
+    "result-precipitation.png": "e77aa2eaa2564d4cd1f21c166cc13f29ce2e5a044152f5c7167cc95b771870d4",
+    "result-temperature.png": "f0c5416979d81e6c0b949e96c5b94a96b45d334f2ea81286be9b1f55f284862e",
+    "execution-timeline.png": "ea12c4f69b24b39bbd07979e6a64b18e04874268de2d65e780c8caa1d6e47416"
+  },
+  "findings": {
+    "rawRows": 87648,
+    "cleanedRows": 87252,
+    "removedRows": 396,
+    "station": "A701",
+    "start": "2013-01-01 00:00:00",
+    "end": "2022-12-31 23:00:00",
+    "originalNotebookCells": [
+      16,
+      20
+    ],
+    "variables": {
+      "temperature": {
+        "observations": 87252,
+        "minimum": 4.1,
+        "maximum": 37.3,
+        "mean": 20.490728006234818
+      },
+      "precipitation": {
+        "observations": 87252,
+        "minimum": 0.0,
+        "maximum": 77.8,
+        "mean": 0.1712808875441251
+      },
+      "humidity": {
+        "observations": 87252,
+        "minimum": 12.0,
+        "maximum": 98.0,
+        "mean": 68.80686975656718
+      }
+    }
+  },
+  "executionSummary": {
+    "runId": "inmet-local-1514940793-run-20261117t151423.285983342",
+    "imageId": "sha256:5c61428db82753d20bb9ae9c3dea95d1e77e055afb4b5af80e2d5242fa643823",
+    "completedActivities": 16,
+    "observedMakespanSeconds": 36.5455048084259,
+    "peakOverlappingActivities": 3,
+    "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+  }
+}

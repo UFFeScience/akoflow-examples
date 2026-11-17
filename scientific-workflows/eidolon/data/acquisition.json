@@ -1,0 +1,82 @@
+{
+  "files": [
+    {
+      "path": "etl/climate/01-extract_transform_load-climate.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/01-extract_transform_load-climate.R",
+      "sha256": "718e1e4333bc03e41116e48c254411200040822d200de78ac704c6097520a413",
+      "bytes": 1784
+    },
+    {
+      "path": "etl/climate/source/Environment_Temperature_change_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/source/Environment_Temperature_change_E_All_Data_NOFLAG.csv",
+      "sha256": "e88a744eba9e9b6d912e54f026e625efc3c6c703339504f7cd2ad62c2e00ba57",
+      "bytes": 6814488
+    },
+    {
+      "path": "tspredit/climate.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/climate.RData",
+      "sha256": "028b4bbed60dbdb35e0543565803c59eab499875251cceb146b681254c2232f7",
+      "bytes": 2730
+    },
+    {
+      "path": "etl/climate/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/climate/README.md",
+      "sha256": "166748d1d2081ddad59955b9de5efb4f926ec284056c8238aab473f831571956",
+      "bytes": 1689
+    },
+    {
+      "path": "etl/bioenergy/01-extract_transform_load-bioenergy.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/01-extract_transform_load-bioenergy.R",
+      "sha256": "f40ea00a8d33ef6f7b3f3dff13fda6c635f360d9ec96540162927dc62fb813a9",
+      "bytes": 1903
+    },
+    {
+      "path": "etl/bioenergy/source/Environment_Bioenergy_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/source/Environment_Bioenergy_E_All_Data_NOFLAG.csv",
+      "sha256": "4e79fd1f15987ff1c4d0d985a564a173ae79a19e48117920fdb685c484117e3b",
+      "bytes": 1859528
+    },
+    {
+      "path": "tspredit/bioenergy.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/bioenergy.RData",
+      "sha256": "c5e6bd0edee21ccdc77ef25a79443d36459fe5fa609ef92628164eada851a622",
+      "bytes": 3071
+    },
+    {
+      "path": "etl/bioenergy/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/bioenergy/README.md",
+      "sha256": "ea9de46c0b56c2501c867347d430e07b35b93c2ec06f693e18a312fe48559b76",
+      "bytes": 1897
+    },
+    {
+      "path": "etl/emissions/01-extract_transform_load-emissions.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/01-extract_transform_load-emissions.R",
+      "sha256": "2e022c058363de4293103c077f24fda9673be012c25d6094160f4c5ff311a0cf",
+      "bytes": 2337
+    },
+    {
+      "path": "etl/emissions/source/Emissions_Totals_E_All_Data_NOFLAG.csv",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/source/Emissions_Totals_E_All_Data_NOFLAG.csv",
+      "sha256": "b71684f9b64e2fc091279af49cd00ad04c54122d2c25adca74066e51d86cd973",
+      "bytes": 39900443
+    },
+    {
+      "path": "tspredit/emissions.RData",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/tspredit/emissions.RData",
+      "sha256": "a6c00a7b9166f665fb7d9b9ce1a63d660fe11f1fda00961f33a7bbe583f4f86b",
+      "bytes": 7942
+    },
+    {
+      "path": "etl/emissions/README.md",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/emissions/README.md",
+      "sha256": "3a8298c72d7d4e083a3f98f1a259432f135825b1461e0d17e92e9f13f02c7486",
+      "bytes": 1731
+    },
+    {
+      "path": "etl/02-build-minidata.R",
+      "url": "https://raw.githubusercontent.com/cefet-rj-dal/tspredbench/b5f7ed830784c24807e8ec37b8fe9759baaf922f/etl/02-build-minidata.R",
+      "sha256": "9db010c83957de4f7192bb92373037348dc67777c545b543eb6f83ea5f563d1e",
+      "bytes": 2317
+    }
+  ]
+}

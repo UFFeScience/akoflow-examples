@@ -1,0 +1,250 @@
+{
+  "files": [
+    {
+      "path": "original.ipynb",
+      "url": "https://raw.githubusercontent.com/candidoalfilho/MAFAULDA_TINY_ML_ANALYSIS/4595b949ebaf019f5fd3ad3821e71156c3f3741d/mafaulda_tinyml_bresci2026.ipynb",
+      "sha256": "d8973c66eac65e3491122240e239b4bab2217ee7f75e5590f9a7393b6c770b8c",
+      "bytes": 89953
+    },
+    {
+      "path": "recordings/horizontal-misalignment/0.5mm/12.288.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/horizontal-misalignment.zip",
+      "sha256": "00d42807776b5f4085c2e107851ba5df9e4068c3129f79dafc8c2a90b31678c9",
+      "bytes": 17122444,
+      "class": "horizontal-misalignment",
+      "archiveMember": "horizontal-misalignment/0.5mm/12.288.csv"
+    },
+    {
+      "path": "recordings/horizontal-misalignment/0.5mm/62.0544.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/horizontal-misalignment.zip",
+      "sha256": "9da5f17ad1e9526ae2ca6bffaf8c8b6635a009b21130b2f61406b0694f340e76",
+      "bytes": 17279965,
+      "class": "horizontal-misalignment",
+      "archiveMember": "horizontal-misalignment/0.5mm/62.0544.csv"
+    },
+    {
+      "path": "recordings/horizontal-misalignment/1.0mm/60.416.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/horizontal-misalignment.zip",
+      "sha256": "1415e5f14a31b063e5476ccccd794dbc121336502446e55a791e86dc82f4e3c1",
+      "bytes": 17142838,
+      "class": "horizontal-misalignment",
+      "archiveMember": "horizontal-misalignment/1.0mm/60.416.csv"
+    },
+    {
+      "path": "recordings/horizontal-misalignment/1.5mm/61.44.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/horizontal-misalignment.zip",
+      "sha256": "93ee3655699922610598142f1810c8ccf1a5f789b9a88ef9ec5445a9f91b7d70",
+      "bytes": 17226571,
+      "class": "horizontal-misalignment",
+      "archiveMember": "horizontal-misalignment/1.5mm/61.44.csv"
+    },
+    {
+      "path": "recordings/horizontal-misalignment/2.0mm/60.8256.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/horizontal-misalignment.zip",
+      "sha256": "2a04143cd6cb253acc59e4acbaa25563405eed7361825d77225a2dfb9d2ebe99",
+      "bytes": 17298122,
+      "class": "horizontal-misalignment",
+      "archiveMember": "horizontal-misalignment/2.0mm/60.8256.csv"
+    },
+    {
+      "path": "recordings/imbalance/10g/13.9264.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/imbalance.zip",
+      "sha256": "b413941b616ae5784ca772cb32b03d696d1a5c4becbdfdf6bb6f726a54226725",
+      "bytes": 17582498,
+      "class": "imbalance",
+      "archiveMember": "imbalance/10g/13.9264.csv"
+    },
+    {
+      "path": "recordings/imbalance/15g/49.5616.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/imbalance.zip",
+      "sha256": "dd832d3816b2f7454ef407a1aacd4c920fc3909a90e6c0e10b8bd598a14d3221",
+      "bytes": 17357750,
+      "class": "imbalance",
+      "archiveMember": "imbalance/15g/49.5616.csv"
+    },
+    {
+      "path": "recordings/imbalance/25g/33.3824.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/imbalance.zip",
+      "sha256": "34ecd9c61fd96fbe0091ceaf590dfbe3d0c28408bc4ec6cec4fc7bad6b7dd1ce",
+      "bytes": 17457646,
+      "class": "imbalance",
+      "archiveMember": "imbalance/25g/33.3824.csv"
+    },
+    {
+      "path": "recordings/imbalance/35g/22.1184.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/imbalance.zip",
+      "sha256": "43c121247e24e86679bda7f124692e7096ef5cbb0a4b5844713f3b75d47ebf42",
+      "bytes": 17362800,
+      "class": "imbalance",
+      "archiveMember": "imbalance/35g/22.1184.csv"
+    },
+    {
+      "path": "recordings/imbalance/6g/62.0544.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/imbalance.zip",
+      "sha256": "276d6d7ec632ba7dece7216d8c1be5c3e954e230236da75dc05a1875f317e8b9",
+      "bytes": 17386285,
+      "class": "imbalance",
+      "archiveMember": "imbalance/6g/62.0544.csv"
+    },
+    {
+      "path": "recordings/normal/12.288.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/normal.zip",
+      "sha256": "24a5cdd91538f456909b3205aefe283882eb12f9d76a212fc0040b218dd198d8",
+      "bytes": 17642507,
+      "class": "normal",
+      "archiveMember": "normal/12.288.csv"
+    },
+    {
+      "path": "recordings/normal/24.576.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/normal.zip",
+      "sha256": "c17ff3ed4379e50cab33fb9fce0247ea978226a2cad8eebe91f929b98340a363",
+      "bytes": 17549615,
+      "class": "normal",
+      "archiveMember": "normal/24.576.csv"
+    },
+    {
+      "path": "recordings/normal/36.4544.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/normal.zip",
+      "sha256": "de92754f447f2159199dd6f014143b2a8d2215b125eeb2b3a511bb8471fa28a2",
+      "bytes": 17451095,
+      "class": "normal",
+      "archiveMember": "normal/36.4544.csv"
+    },
+    {
+      "path": "recordings/normal/48.9472.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/normal.zip",
+      "sha256": "35dcfd0d00e82f870a081240be97f7697f38029c0260a0e7d626e83b6a6a8d52",
+      "bytes": 17338499,
+      "class": "normal",
+      "archiveMember": "normal/48.9472.csv"
+    },
+    {
+      "path": "recordings/normal/61.44.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/normal.zip",
+      "sha256": "7d22f706bb984e45aba7c8d48c493b9a13e327fd3f9e4d2be3d523e01dbde7d1",
+      "bytes": 17413303,
+      "class": "normal",
+      "archiveMember": "normal/61.44.csv"
+    },
+    {
+      "path": "recordings/overhang/ball_fault/0g/12.9024.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/overhang.zip",
+      "sha256": "765a90fb6474100bf3451e41dcdadd5d7489ba96c28bddf2851f01157d001af1",
+      "bytes": 16566032,
+      "class": "overhang",
+      "archiveMember": "overhang/ball_fault/0g/12.9024.csv"
+    },
+    {
+      "path": "recordings/overhang/ball_fault/6g/47.104.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/overhang.zip",
+      "sha256": "337701ca3f68be4fd50c262c7e2cdde481b0d1e91a75f08edfe59391db1cdb4b",
+      "bytes": 15739194,
+      "class": "overhang",
+      "archiveMember": "overhang/ball_fault/6g/47.104.csv"
+    },
+    {
+      "path": "recordings/overhang/cage_fault/35g/34.2016.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/overhang.zip",
+      "sha256": "8bf7778efd10684f85c3d09481ea7d6bdcb3d73954f383cd2151919c31ecfd86",
+      "bytes": 16596739,
+      "class": "overhang",
+      "archiveMember": "overhang/cage_fault/35g/34.2016.csv"
+    },
+    {
+      "path": "recordings/overhang/outer_race/20g/23.552.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/overhang.zip",
+      "sha256": "8393a5aa192349186b533e8025ed38ec7182267b4f0b5380f4ee6df9a19b0127",
+      "bytes": 17312933,
+      "class": "overhang",
+      "archiveMember": "overhang/outer_race/20g/23.552.csv"
+    },
+    {
+      "path": "recordings/overhang/outer_race/6g/61.8496.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/overhang.zip",
+      "sha256": "0f92025f049a37ef235923088f3d04e394edeafaa028435e332877acbdf4d6fc",
+      "bytes": 16952791,
+      "class": "overhang",
+      "archiveMember": "overhang/outer_race/6g/61.8496.csv"
+    },
+    {
+      "path": "recordings/underhang/ball_fault/0g/13.1072.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/underhang.zip",
+      "sha256": "8efc0ab43a34d9ef1ec65e52850841045f03926b89dcdc25ed8916d69d918a3a",
+      "bytes": 17333344,
+      "class": "underhang",
+      "archiveMember": "underhang/ball_fault/0g/13.1072.csv"
+    },
+    {
+      "path": "recordings/underhang/ball_fault/6g/15.1552.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/underhang.zip",
+      "sha256": "938789dd2c2af68873fbc305e881c4bf7a1e7c36bf0f0ad31a21b7cb387daeaa",
+      "bytes": 17065997,
+      "class": "underhang",
+      "archiveMember": "underhang/ball_fault/6g/15.1552.csv"
+    },
+    {
+      "path": "recordings/underhang/cage_fault/20g/56.7296.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/underhang.zip",
+      "sha256": "ad4332f601faa905593afb72598c7936eec4e73ff04bacad28c187d9b9bbf2a5",
+      "bytes": 16401410,
+      "class": "underhang",
+      "archiveMember": "underhang/cage_fault/20g/56.7296.csv"
+    },
+    {
+      "path": "recordings/underhang/outer_race/0g/57.7536.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/underhang.zip",
+      "sha256": "545fa83da710c5dd949eb98eada2a4d1327dd741a92ea214f9f5cae2cc1fec3d",
+      "bytes": 17024031,
+      "class": "underhang",
+      "archiveMember": "underhang/outer_race/0g/57.7536.csv"
+    },
+    {
+      "path": "recordings/underhang/outer_race/6g/61.6448.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/underhang.zip",
+      "sha256": "7125ce554e40c183d04447af85a35835b5c04e089d9fd684cf732ab75069e089",
+      "bytes": 16662740,
+      "class": "underhang",
+      "archiveMember": "underhang/outer_race/6g/61.6448.csv"
+    },
+    {
+      "path": "recordings/vertical-misalignment/0.51mm/12.4928.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/vertical-misalignment.zip",
+      "sha256": "cd233a6527268bf2efde5c560bb6f4a5603b8801718f9c10146300b3f7ce61a1",
+      "bytes": 17149830,
+      "class": "vertical-misalignment",
+      "archiveMember": "vertical-misalignment/0.51mm/12.4928.csv"
+    },
+    {
+      "path": "recordings/vertical-misalignment/0.63mm/36.6592.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/vertical-misalignment.zip",
+      "sha256": "bf752c43224ef7ae9c06c31c9b8518f5decf732394d35da96259a2bd1a9fa511",
+      "bytes": 17498958,
+      "class": "vertical-misalignment",
+      "archiveMember": "vertical-misalignment/0.63mm/36.6592.csv"
+    },
+    {
+      "path": "recordings/vertical-misalignment/1.27mm/62.2592.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/vertical-misalignment.zip",
+      "sha256": "d7f9b2392a8b6702afc3aa545f1218936b8ae0dd134075bcdc531df90d0c1372",
+      "bytes": 17179305,
+      "class": "vertical-misalignment",
+      "archiveMember": "vertical-misalignment/1.27mm/62.2592.csv"
+    },
+    {
+      "path": "recordings/vertical-misalignment/1.78mm/36.6592.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/vertical-misalignment.zip",
+      "sha256": "b8dbe8fa34489673118e8e6a424f8a58046aa4a9a591b7643f7bff577513e36b",
+      "bytes": 17557519,
+      "class": "vertical-misalignment",
+      "archiveMember": "vertical-misalignment/1.78mm/36.6592.csv"
+    },
+    {
+      "path": "recordings/vertical-misalignment/1.90mm/61.44.csv",
+      "url": "https://www02.smt.ufrj.br/~offshore/mfs/database/mafaulda/vertical-misalignment.zip",
+      "sha256": "8c80db554206f99856d6c8172ba1b3c3308aeed5bf93bf02028e05e75c765856",
+      "bytes": 17193947,
+      "class": "vertical-misalignment",
+      "archiveMember": "vertical-misalignment/1.90mm/61.44.csv"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "runId": "estrada-real-local-0c3426a638-run-20261117t145937.986646313",
+  "imageId": "sha256:22c0fa0da9d734498b20ddcb09f7765cfa1e4fab04e595c5401a3fcf2a238fd7",
+  "completedActivities": 11,
+  "observedMakespanSeconds": 24.28536081314087,
+  "peakOverlappingActivities": 3,
+  "timingSource": "observed native startedAt/finishedAt; imported predicted times excluded"
+}

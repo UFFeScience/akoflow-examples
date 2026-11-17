@@ -1,0 +1,20 @@
+{
+  "files": [
+    {
+      "path": "wdbc.data",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/wdbc.data"
+    },
+    {
+      "path": "data_preparation.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/data_preparation.sql"
+    },
+    {
+      "path": "functions.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/main.sql"
+    },
+    {
+      "path": "queries.sql",
+      "url": "https://raw.githubusercontent.com/liviomendonca/sqlsim/dc37bacae5c2d51fc8aa16ae1230bda3a57933c5/examples/breastcancer/main.sql"
+    }
+  ]
+}

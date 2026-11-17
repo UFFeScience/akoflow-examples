@@ -1,0 +1,13 @@
+{
+  "slug": "mafaulda-tinyml",
+  "title": "MAFAULDA — rotating-machinery faults and TinyML quantization",
+  "authors": [
+    "Cândido Alfredo Carvalho de Lucena Filho",
+    "Felipe Valencia de Almeida"
+  ],
+  "conference": "XX Brazilian e-Science Workshop (BreSci 2026), co-located with SBBD",
+  "article": "https://sol.sbc.org.br/index.php/bresci/article/view/44074",
+  "source": "https://github.com/candidoalfilho/MAFAULDA_TINY_ML_ANALYSIS",
+  "scope": "Portable reproduction profile: five complete original UFRJ recordings from each of six fault classes (30 recordings, selected deterministically across each archive). Execute the original notebook’s 132-feature extraction and neural architecture definitions; retain its 2,048-sample window, 1,024 hop and maximum 50 windows per recording. Run five-fold group-aware evaluation with complete relative recording paths as group IDs. Default training is shortened to 10 epochs (LSTM 5); AKOFLOW_PROFILE=standard uses 50 (LSTM 15). Quantization uses the final fold model, calibrates only on its training recordings and evaluates only on held-out recordings. These explicit protocol adaptations avoid mixing training observations into quantization evaluation; results do not claim to reproduce the paper’s F1=0.98 or on-device memory/latency. No physical microcontroller is tested. Original data creators: Signals, Multimedia and Telecommunications Laboratory, COPPE/Poli/UFRJ; source https://www02.smt.ufrj.br/~offshore/mfs/page_01.html . The original notebook and data remain attributed to their authors; no license is inferred from public availability.",
+  "executionClaim": "Adapted scientific workflow; completion and agreement are reported only by measured evidence."
+}

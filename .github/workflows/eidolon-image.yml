@@ -1,0 +1,41 @@
+name: Publish multi-platform Eidolon image
+on:
+  push:
+    branches: [main, AKO-49]
+    paths:
+      - .github/workflows/eidolon-image.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04-arm
+    env:
+      IMAGE: ghcr.io/uffescience/akoflow-examples/eidolon
+      AMD64_DIGEST: sha256:606072bf7ef5490223580b055c630c87983423513b5b7287fc36b021b1dc2928
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Recover verified source and original inputs
+        run: |
+          gh release download bresci-workflows-v1 --repo "$GITHUB_REPOSITORY" --pattern eidolon-source.tar.gz
+          echo 'c526184387a8ce0b6f6d995ef49a56e821e42e7b2a5752995c385c25cc6c10d2  eidolon-source.tar.gz' | sha256sum -c
+          tar -xzf eidolon-source.tar.gz
+          container=$(docker create --platform linux/amd64 "$IMAGE@$AMD64_DIGEST")
+          trap 'docker rm "$container" >/dev/null' EXIT
+          docker cp "$container:/app/data/." scientific-workflows/eidolon/data/
+      - name: Build and run the first activity on ARM64
+        run: |
+          test "$(uname -m)" = aarch64
+          docker build --platform linux/arm64 -f scientific-workflows/eidolon/docker/Dockerfile -t "$IMAGE:arm64-$GITHUB_SHA" scientific-workflows/eidolon
+          docker run --rm --network none --workdir /tmp "$IMAGE:arm64-$GITHUB_SHA" python /app/scripts/run_stage.py --stage validate-inputs --output .
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish both platforms
+        run: |
+          docker push "$IMAGE:arm64-$GITHUB_SHA"
+          docker buildx imagetools create --tag "$IMAGE:multiarch-$GITHUB_SHA" "$IMAGE@$AMD64_DIGEST" "$IMAGE:arm64-$GITHUB_SHA"
+          docker --config "$(mktemp -d)" buildx imagetools inspect "$IMAGE:multiarch-$GITHUB_SHA"

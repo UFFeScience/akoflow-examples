@@ -1,0 +1,29 @@
+name: Publish automatic OCI build example
+on:
+  push:
+    branches: [main, AKO-285]
+    paths:
+      - containers/oci-automatic-build/Dockerfile
+      - .github/workflows/oci-automatic-build.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE: ghcr.io/uffescience/akoflow-examples/oci-automatic-build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and verify the example
+        run: |
+          docker build --platform linux/amd64 --tag "$IMAGE:sha-$GITHUB_SHA" containers/oci-automatic-build
+          docker run --rm --network none "$IMAGE:sha-$GITHUB_SHA" | grep -Fx 'Akoflow built this OCI image automatically before execution.'
+      - name: Push the verified image
+        run: docker push "$IMAGE:sha-$GITHUB_SHA"

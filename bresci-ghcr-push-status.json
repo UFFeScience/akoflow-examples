@@ -1,0 +1,56 @@
+{
+  "status": "awaiting-public-package-visibility",
+  "registry": "ghcr.io",
+  "workflowRun": "https://github.com/UFFeScience/akoflow-examples/actions/runs/44136396326",
+  "pushedImages": 7,
+  "originalManifestChecksPassed": 7,
+  "anonymousPullChecksPassed": 0,
+  "anonymousPullHttpStatus": 401,
+  "hubPublicationCompleted": false,
+  "sourceAndResultArchivesVerifiedByGitHubSha256": 21,
+  "releaseDraft": true,
+  "images": [
+    {
+      "slug": "united",
+      "image": "ghcr.io/uffescience/akoflow-examples/united@sha256:3ccc239aea4aedf2578d9f3895d5cda97472eff8bc6c51a456798070a0ed8192",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "estrada-real",
+      "image": "ghcr.io/uffescience/akoflow-examples/estrada-real@sha256:22c0fa0da9d734498b20ddcb09f7765cfa1e4fab04e595c5401a3fcf2a238fd7",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "sqlsim",
+      "image": "ghcr.io/uffescience/akoflow-examples/sqlsim@sha256:fdf6a614d119ddf5b9b712ea9f4a7d61fbf280fe0ae80d5be6dbf55c742d573a",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "eidolon",
+      "image": "ghcr.io/uffescience/akoflow-examples/eidolon@sha256:4016e0bd5b954fdbb436736a69c96e0e260ddc562df56273db1501136a9a9939",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "inmet",
+      "image": "ghcr.io/uffescience/akoflow-examples/inmet@sha256:5c61428db82753d20bb9ae9c3dea95d1e77e055afb4b5af80e2d5242fa643823",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "mafaulda-tinyml",
+      "image": "ghcr.io/uffescience/akoflow-examples/mafaulda-tinyml@sha256:36dd0df262eb3cb373ef1cba2e824423aabf516e56e70b75ca62c1922978cc9e",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    },
+    {
+      "slug": "tpch-databases",
+      "image": "ghcr.io/uffescience/akoflow-examples/tpch-databases@sha256:9bfa73e297c7e7ddbec9dfec7493e7c5373d8342392599374d0a37d59ad9459d",
+      "originalManifestPreserved": true,
+      "publicPullVerified": false
+    }
+  ]
+}

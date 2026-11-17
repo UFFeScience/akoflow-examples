@@ -1,7 +1,7 @@
 name: trp-tcga-brca
 spec:
   namespace: akoflow-examples
-  image: ghcr.io/uffescience/akoflow-examples/trp:v1
+  image: ghcr.io/uffescience/akoflow-examples/trp@sha256:81ff98bb9842441458a89685dfe66399346d5f8d3774a89f2f765085c8cce62d
   activities:
   - name: metadata-access
     runtime: trp-local

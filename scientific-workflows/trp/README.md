@@ -4,6 +4,12 @@ Run all six scientific stages from [BSB 2025](https://doi.org/10.5753/bsb.2025.1
 
 [Tracking item AKO-44](https://github.com/UFFeScience/akoflow-examples/issues/44) · [Hub publication](https://hub.akoflow.com/u/ovvesley/trp-tcga-brca) · [Original scientific source v0.1.0](https://github.com/LIS-Unicamp/pan-cancer-analysis/tree/v0.1.0)
 
+## Released package and executable Hub version
+
+[Standalone source package](https://github.com/UFFeScience/akoflow-examples/releases/tag/trp-v1.0.0) · [Portable full workflow in Hub](https://hub.akoflow.com/u/ovvesley/trp-tcga-brca/versions/3) · [Successful image-build CI](https://github.com/UFFeScience/akoflow-examples/actions/runs/44136959209)
+
+The latest portable definition runs all six stages and pins the GHCR image digest. Historical Hub v1/v2 preserve the previous interrupted run and its successful continuation. The portable definition is a new deployment of that scientific pipeline, without fabricating another full measured execution; the prior scientific results remain in their original versions.
+
 ## Build and run locally
 
 Requirements: Docker Engine/Desktop and Python 3. Linux amd64 is the tested execution platform; other CPU architectures require Docker's amd64 emulation. Start with 16 GiB available RAM and 40 GiB available scratch storage. A complete run downloads about 2.5 GB of GDC observations plus several GB of miRWalk data and can take tens of minutes. GDC and miRWalk must be reachable from Docker.
@@ -25,7 +31,7 @@ To pull the released public image instead of building:
 ./run.sh
 ```
 
-`image.lock.json` records the public immutable image reference once released. To use another empty output directory:
+`image.lock.json` records the released image by immutable SHA-256 digest and identifies its successful CI build. To use another empty output directory:
 
 ```sh
 ./run.sh --output /absolute/path/to/new-results

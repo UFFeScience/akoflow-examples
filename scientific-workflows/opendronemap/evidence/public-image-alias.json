@@ -1,0 +1,11 @@
+{
+  "originalImage": "akoflow-local/opendronemap:local-ce38c348fa95a1f0",
+  "imageId": "sha256:ce38c348fa95a1f0549546cb8cccd7eb64819a6a9fe9bad78640aff90f8ab76f",
+  "publicImage": "ghcr.io/uffescience/akoflow-examples/opendronemap@sha256:ce38c348fa95a1f0549546cb8cccd7eb64819a6a9fe9bad78640aff90f8ab76f",
+  "identical": true,
+  "rebuilt": false,
+  "platform": "linux/amd64",
+  "anonymousPullVerified": true,
+  "archiveSha256": "93435411deae918ed885e7e345b96d429a4f8d998ceebfeb5cf91b53bbd4f9ab",
+  "publisherRun": "https://github.com/UFFeScience/akoflow-examples/actions/runs/44212043297"
+}

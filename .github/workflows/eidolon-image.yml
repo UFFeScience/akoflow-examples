@@ -1,0 +1,42 @@
+name: Publish multi-platform Eidolon image
+on:
+  push:
+    branches: [main, AKO-49]
+    paths:
+      - .github/workflows/eidolon-image.yml
+      - containers/eidolon/Dockerfile
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-24.04-arm
+    env:
+      IMAGE: ghcr.io/uffescience/akoflow-examples/eidolon
+      AMD64_DIGEST: sha256:606072bf7ef5490223580b055c630c87983423513b5b7287fc36b021b1dc2928
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover verified source and original inputs
+        run: |
+          mkdir -p build-context
+          container=$(docker create --platform linux/amd64 "$IMAGE@$AMD64_DIGEST")
+          trap 'docker rm "$container" >/dev/null' EXIT
+          for item in data scripts requirements.txt; do
+            docker cp "$container:/app/$item" build-context/
+          done
+      - name: Build and run the first activity on ARM64
+        run: |
+          test "$(uname -m)" = aarch64
+          docker build --platform linux/arm64 -f containers/eidolon/Dockerfile -t "$IMAGE:arm64-$GITHUB_SHA" build-context
+          docker run --rm --network none --workdir /tmp "$IMAGE:arm64-$GITHUB_SHA" python /app/scripts/run_stage.py --stage validate-inputs --output .
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish both platforms
+        run: |
+          docker push "$IMAGE:arm64-$GITHUB_SHA"
+          docker buildx imagetools create --tag "$IMAGE:multiarch-$GITHUB_SHA" "$IMAGE@$AMD64_DIGEST" "$IMAGE:arm64-$GITHUB_SHA"
+          docker --config "$(mktemp -d)" buildx imagetools inspect "$IMAGE:multiarch-$GITHUB_SHA"

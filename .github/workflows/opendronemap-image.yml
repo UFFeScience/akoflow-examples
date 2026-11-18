@@ -1,0 +1,49 @@
+name: Publish measured OpenDroneMap image
+on:
+  push:
+    branches: [AKO-28]
+    paths: [.github/workflows/opendronemap-image.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+  packages: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      IMAGE: ghcr.io/uffescience/akoflow-examples/opendronemap
+      TAG: caliterra-ce38c348fa95a1f0
+      ORIGINAL: sha256:ce38c348fa95a1f0549546cb8cccd7eb64819a6a9fe9bad78640aff90f8ab76f
+    steps:
+      - name: Download checksummed executed archive
+        run: |
+          gh release download opendronemap-caliterra-v1 -p opendronemap-executed-image.tar.gz -D "$RUNNER_TEMP"
+          cd "$RUNNER_TEMP"
+          echo '93435411deae918ed885e7e345b96d429a4f8d998ceebfeb5cf91b53bbd4f9ab  opendronemap-executed-image.tar.gz' | sha256sum -c -
+          gzip -dc opendronemap-executed-image.tar.gz > image.tar
+      - name: Install registry copy tool
+        run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends skopeo
+      - name: Preserve measured image and publish registry origin
+        run: |
+          set -euo pipefail
+          export REGISTRY_AUTH_FILE="$RUNNER_TEMP/registry-auth.json"
+          printf '%s' "$GH_TOKEN" | skopeo login --username "$GITHUB_ACTOR" --password-stdin ghcr.io
+          SRC="oci-archive:$RUNNER_TEMP/image.tar"
+          if ! skopeo inspect --raw "$SRC" > "$RUNNER_TEMP/original-manifest.json"; then
+            SRC="docker-archive:$RUNNER_TEMP/image.tar"
+            skopeo inspect --raw "$SRC" > "$RUNNER_TEMP/original-manifest.json"
+          fi
+          MANIFEST="sha256:$(sha256sum "$RUNNER_TEMP/original-manifest.json" | cut -d' ' -f1)"
+          CONFIG=$(jq -r '.config.digest' "$RUNNER_TEMP/original-manifest.json")
+          test "$ORIGINAL" = "$MANIFEST" || test "$ORIGINAL" = "$CONFIG"
+          skopeo copy --all --preserve-digests "$SRC" "docker://$IMAGE:$TAG"
+          skopeo inspect --raw "docker://$IMAGE:$TAG" > "$RUNNER_TEMP/published-manifest.json"
+          cmp "$RUNNER_TEMP/original-manifest.json" "$RUNNER_TEMP/published-manifest.json"
+          jq -n --arg image "$IMAGE@$MANIFEST" --arg configDigest "$CONFIG" --arg platform linux/amd64 --arg original "$ORIGINAL" '{image:$image,platform:$platform,configDigest:$configDigest,originalEvidenceDigest:$original,rebuilt:false}' > "$RUNNER_TEMP/registry-receipt.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: opendronemap-registry-receipt
+          path: ${{ runner.temp }}/registry-receipt.json

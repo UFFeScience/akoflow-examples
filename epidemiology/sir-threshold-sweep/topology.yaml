@@ -1,0 +1,5 @@
+id: community-sir-parallel-topology
+name: SIR local topology
+version: 1
+executionScopeId: community-sir-parallel-scope
+links: []

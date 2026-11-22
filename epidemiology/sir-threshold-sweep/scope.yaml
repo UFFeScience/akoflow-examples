@@ -1,0 +1,3 @@
+id: community-sir-parallel-scope
+name: SIR threshold sweep parallel scope
+environmentVersionIds: [community-sir-parallel-v1]

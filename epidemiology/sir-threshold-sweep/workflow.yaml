@@ -1,0 +1,17 @@
+name: community-sir-threshold-sweep-v2
+spec:
+  namespace: community-explorer
+  image: akoflow/community-sir-threshold-sweep:v1
+  activities:
+    - {name: prepare, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: r0-05, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "0.5"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-08, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "0.8"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-10, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "1.0"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-12, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "1.2"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-15, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "1.5"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-20, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "2.0"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-30, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "3.0"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: r0-50, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --r0, "5.0"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [r0-05, r0-08, r0-10, r0-12, r0-15, r0-20, r0-30, r0-50]}
+    - {name: render, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-sir-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}

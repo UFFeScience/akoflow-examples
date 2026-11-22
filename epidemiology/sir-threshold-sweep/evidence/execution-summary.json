@@ -1,0 +1,27 @@
+{
+  "runId": "community-sir-threshold-sweep-run-v2",
+  "workflowVersionId": "community-sir-threshold-sweep-v2-v1",
+  "schedulePlanId": "community-sir-threshold-sweep-plan-v2",
+  "status": "completed",
+  "activityCount": 12,
+  "makespanSeconds": 17.76669216156006,
+  "computeSeconds": 16.207813262939453,
+  "transferSeconds": 10.649320125579834,
+  "transferredBytes": 2899816,
+  "imageDigest": "sha256:903019bb4493ec6788b1a243c152682d620498f3a8bb026d9a797426883402b2",
+  "fourWayOverlap": {
+    "startedAt": 1795368645.6484559,
+    "finishedAt": 1795368646.6002054,
+    "seconds": 0.9517495632171631,
+    "activities": ["r0-05", "r0-08", "r0-10", "r0-12"]
+  },
+  "scientificHashes": {
+    "aggregate.json": "04bdc854261d8e25de35421a4469a49d6d29b5fc1676ada0912dc19ad0f58d99",
+    "metrics.csv": "caa95bae1f4a7fa62a08395636a7ce6b6277b78f4649a4a4fce5bc49108f5720",
+    "validation.json": "966fd626a0b90272616868b234096587d50a74997b0a18c9a1ddfa34f4b6dff8",
+    "sir-threshold-final-size.png": "30ff38ef5247d62fb95144e1e695206b08d7040ed58859c2f72ef8effe34b7af",
+    "sir-parameter-sweep.gif": "360d52e9ed83234ebc74c335f26343c1b6af7410f31645af37b8c569815930c1"
+  },
+  "speedupClaimed": false,
+  "failedPredecessorRun": "community-sir-threshold-sweep-run-v1"
+}

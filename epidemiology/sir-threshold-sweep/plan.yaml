@@ -1,0 +1,23 @@
+plan:
+  id: community-sir-threshold-sweep-plan-v2
+  workflowVersionId: community-sir-threshold-sweep-v2-v1
+  executionScopeId: community-sir-parallel-scope
+  networkTopologyId: community-sir-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 120, cost: 0, feasible: true}
+  assignments:
+    - {id: sir2-prepare, activityId: community-sir-threshold-sweep-v2-prepare, resourceId: community-sir-slot-0, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-05, activityId: community-sir-threshold-sweep-v2-r0-05, resourceId: community-sir-slot-0, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-08, activityId: community-sir-threshold-sweep-v2-r0-08, resourceId: community-sir-slot-1, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-10, activityId: community-sir-threshold-sweep-v2-r0-10, resourceId: community-sir-slot-2, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-12, activityId: community-sir-threshold-sweep-v2-r0-12, resourceId: community-sir-slot-3, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-15, activityId: community-sir-threshold-sweep-v2-r0-15, resourceId: community-sir-slot-0, orderOnResource: 2, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-20, activityId: community-sir-threshold-sweep-v2-r0-20, resourceId: community-sir-slot-1, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-30, activityId: community-sir-threshold-sweep-v2-r0-30, resourceId: community-sir-slot-2, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-50, activityId: community-sir-threshold-sweep-v2-r0-50, resourceId: community-sir-slot-3, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-aggregate, activityId: community-sir-threshold-sweep-v2-aggregate, resourceId: community-sir-slot-0, orderOnResource: 3, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-render, activityId: community-sir-threshold-sweep-v2-render, resourceId: community-sir-slot-0, orderOnResource: 4, metadata: {runtimeId: community-sir-local}}
+    - {id: sir2-validate, activityId: community-sir-threshold-sweep-v2-validate, resourceId: community-sir-slot-0, orderOnResource: 5, metadata: {runtimeId: community-sir-local}}

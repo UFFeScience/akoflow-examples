@@ -1,0 +1,10 @@
+[
+  {"activity":"r0-10","resource":"slot-2","startedAt":1795368645.500646,"finishedAt":1795368646.6002054},
+  {"activity":"r0-05","resource":"slot-0","startedAt":1795368645.542721,"finishedAt":1795368646.665038},
+  {"activity":"r0-12","resource":"slot-3","startedAt":1795368645.5633652,"finishedAt":1795368646.9276652},
+  {"activity":"r0-08","resource":"slot-1","startedAt":1795368645.6484559,"finishedAt":1795368646.6787624},
+  {"activity":"r0-30","resource":"slot-2","startedAt":1795368647.9079528,"finishedAt":1795368649.497243},
+  {"activity":"r0-50","resource":"slot-3","startedAt":1795368649.139452,"finishedAt":1795368650.618086},
+  {"activity":"r0-20","resource":"slot-1","startedAt":1795368649.278037,"finishedAt":1795368650.6764832},
+  {"activity":"r0-15","resource":"slot-0","startedAt":1795368649.293077,"finishedAt":1795368650.6384225}
+]

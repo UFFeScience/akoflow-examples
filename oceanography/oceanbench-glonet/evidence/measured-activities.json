@@ -1,0 +1,65 @@
+[
+  {
+    "activityId": "community-oceanbench-glonet-v1-glorys-state",
+    "resource": "community-oceanbench-slot-0",
+    "startedAt": 1795366159.5003815,
+    "finishedAt": 1795366192.6929386,
+    "runtimeSeconds": 33.19255709648132
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glorys-mld",
+    "resource": "community-oceanbench-slot-1",
+    "startedAt": 1795366159.5578904,
+    "finishedAt": 1795366195.1480682,
+    "runtimeSeconds": 35.59017777442932
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glorys-geostrophic",
+    "resource": "community-oceanbench-slot-2",
+    "startedAt": 1795366159.583252,
+    "finishedAt": 1795366167.5570283,
+    "runtimeSeconds": 7.973776340484619
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-observations",
+    "resource": "community-oceanbench-slot-3",
+    "startedAt": 1795366159.613626,
+    "finishedAt": 1795366373.192117,
+    "runtimeSeconds": 213.57849097251892
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glo12-mld",
+    "resource": "community-oceanbench-slot-2",
+    "startedAt": 1795366168.7712111,
+    "finishedAt": 1795366209.0898015,
+    "runtimeSeconds": 40.31859040260315
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glorys-lagrangian",
+    "resource": "community-oceanbench-slot-0",
+    "startedAt": 1795366195.9144197,
+    "finishedAt": 1795366257.8520348,
+    "runtimeSeconds": 61.937615156173706
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glo12-state",
+    "resource": "community-oceanbench-slot-1",
+    "startedAt": 1795366197.3504338,
+    "finishedAt": 1795366234.137308,
+    "runtimeSeconds": 36.78687405586243
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glo12-lagrangian",
+    "resource": "community-oceanbench-slot-0",
+    "startedAt": 1795366260.957368,
+    "finishedAt": 1795366316.3279996,
+    "runtimeSeconds": 55.3706316947937
+  },
+  {
+    "activityId": "community-oceanbench-glonet-v1-glo12-geostrophic",
+    "resource": "community-oceanbench-slot-3",
+    "startedAt": 1795366374.1304119,
+    "finishedAt": 1795366382.1351633,
+    "runtimeSeconds": 8.004751443862915
+  }
+]

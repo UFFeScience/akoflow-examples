@@ -1,0 +1,10 @@
+{
+  "acceptance": "notebook displayed precision (6 decimals)",
+  "artifacts": {
+    "metric-leads.png": "d16d5d5fed2dbe075ac827f26f4339760339c57c90a916a89561b4fae4dfba7f",
+    "observation-coverage.png": "5f3ff632db250726b919f5b310f26ba818c03d3f12e64efd23adf87cd1a76c5c",
+    "results.json": "28b34a84aa5aa8c4fb6660b929132c2848f8bc6d586ec79b82b740a139b3a4cd"
+  },
+  "errors": [],
+  "passed": true
+}

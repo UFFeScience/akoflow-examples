@@ -1,0 +1,18 @@
+name: community-oceanbench-glonet-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-oceanbench-glonet:v1
+  activities:
+    - {name: prepare, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi}
+    - {name: glorys-state, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-state]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glorys-mld, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-mld]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glorys-geostrophic, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-geostrophic]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: observations, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, observations]}, cpuLimit: "1", memoryLimit: 6Gi, dependsOn: [prepare]}
+    - {name: glorys-lagrangian, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-lagrangian]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glo12-state, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glo12-state]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glo12-mld, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glo12-mld]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glo12-geostrophic, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glo12-geostrophic]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: glo12-lagrangian, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glo12-lagrangian]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [glorys-state, glorys-mld, glorys-geostrophic, observations, glorys-lagrangian, glo12-state, glo12-mld, glo12-geostrophic, glo12-lagrangian]}
+    - {name: render, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-oceanbench-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}

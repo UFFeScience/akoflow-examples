@@ -1,0 +1,12 @@
+{
+  "imageDigest": "sha256:97b12642a566f905fcdd28f8e20aa99c2bb1570922b5c1d5af2b57fb137fb503",
+  "inputManifestSha256": "036437dec25f0562b16cedfc0b402fdbeaaa1da12e81bc65c8f625d3129c800d",
+  "runId": "community-oceanbench-glonet-run-v1",
+  "makespanSeconds": 261.99154138565063,
+  "computeSeconds": 523.8170945644379,
+  "completedActivities": 13,
+  "overlapEvidence": {
+    "firstWaveStartMin": 1795366159.5003815,
+    "firstWaveStartMax": 1795366159.613626
+  }
+}

@@ -1,0 +1,3 @@
+id: community-oceanbench-parallel-scope
+name: OceanBench GLONET parallel scope
+environmentVersionIds: [community-oceanbench-parallel-v1]

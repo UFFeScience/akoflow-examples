@@ -1,0 +1,238 @@
+{
+  "phase_boundaries": [
+    0.04641588833612779,
+    0.21544346900318834
+  ],
+  "rows": [
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": 0.006539901430843709,
+      "cold_final": 0.9874077683810292,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.01249663125850234,
+      "intermediate_late": 0.0008910942773646174,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.13338661144455788,
+      "sha256": "7cfc3b5be027792100b20cc4c1ab2f2835f983b00f6f86c3833bb52484c5a68e",
+      "tcool": 0.03,
+      "vrms_late": 0.05509020118674116,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": 0.005454962151770215,
+      "cold_final": 0.9858259508348285,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.013280107369610135,
+      "intermediate_late": 0.0011925574453301756,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.12505839028747046,
+      "sha256": "7274a1ee2daf404e392cafac0a7de08668a834d78c5af48ed1c3eb844822be99",
+      "tcool": 0.06,
+      "vrms_late": 0.05287328120391538,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": 0.003189510695692843,
+      "cold_final": 0.9840727676627941,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.014383010298351508,
+      "intermediate_late": 0.002355105972666294,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.101957047025385,
+      "sha256": "4a8d39a19bea829b01de8c25a78fa7d089de82f14c676fca3a94365e6e994ebe",
+      "tcool": 0.1,
+      "vrms_late": 0.045809972959998724,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": 0.0018754790536616994,
+      "cold_final": 0.9809459422794875,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.01560366304067516,
+      "intermediate_late": 0.0024484848723734234,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.07144392136520117,
+      "sha256": "30a0218124429556c889dfbb94b3f20acee1946d35d74c7ed5179b717f57dc21",
+      "tcool": 0.18,
+      "vrms_late": 0.04522098922778126,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": 0.00032391607148629653,
+      "cold_final": 0.9808902257419798,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.017114637242518268,
+      "intermediate_late": 0.0024890736527059133,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.05214035714217835,
+      "sha256": "06cbd36c1dbea84e70906a363d20143b228765ee37850ec65351e247cf7df747",
+      "tcool": 0.32,
+      "vrms_late": 0.04217935854352087,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": -0.0015361755973030133,
+      "cold_final": 0.9793091814607581,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.017629859962714833,
+      "intermediate_late": 0.003833942601298572,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.037160587043414184,
+      "sha256": "d69d6f41c950d69e2a21688c65e303fd5cd415c37ec686df055db7da73a838fe",
+      "tcool": 0.56,
+      "vrms_late": 0.04004765825000399,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": -0.005922510485302568,
+      "cold_final": 0.9772442613527346,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.01965894987902023,
+      "intermediate_late": 0.006191187572992709,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.024810495559876466,
+      "sha256": "97f5d10132c6f4b100d1c77d94e91fa2acdc4954cc359733087b9ae5fc983838",
+      "tcool": 1.0,
+      "vrms_late": 0.040122637104358864,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": -0.00996198376860069,
+      "cold_final": 0.9704689204291593,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.01938340948736929,
+      "intermediate_late": 0.01050620124794189,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.020648802965302915,
+      "sha256": "f53524c481e095be20d607dd3f9a2738dd1a2dd8c0a675c0794f000822c79c2b",
+      "tcool": 1.78,
+      "vrms_late": 0.04012822732085516,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    },
+    {
+      "boundaries": [
+        "PERIODIC",
+        "OPEN"
+      ],
+      "cold_delta_late": -0.00849569362010294,
+      "cold_final": 0.9714976142251137,
+      "cold_initial": 0.9800723730332895,
+      "frames": 101,
+      "hot_late": 0.0205741541758571,
+      "intermediate_late": 0.007849166410956307,
+      "late_start_time": 127.76264190673828,
+      "mass_drift_final": 0.009284665471985809,
+      "sha256": "02a7d46a9ac1f36a479d32396a07818e26832015d083dee63845d64b92b39cf3",
+      "tcool": 3.16,
+      "vrms_late": 0.04008620235880781,
+      "x_range": [
+        -0.5,
+        0.5
+      ],
+      "y_range": [
+        -1.0,
+        2.0
+      ]
+    }
+  ],
+  "sign_transition": [
+    0.32,
+    0.56
+  ],
+  "trajectory_count": 9
+}

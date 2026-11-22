@@ -1,0 +1,13 @@
+{
+  "artifacts": {
+    "aggregate.csv": "b01819b5c7799052d6f90c776dcb2332658587c0320009da55c263c09b4a3df4",
+    "aggregate.json": "ef03821af1a3150ae0cdfa01093eadd32e819a9cb4317feaf020a40fa9813a3e",
+    "cold-phase-evolution.png": "4580a17dd9974ac933f01e8bb388b7aab903350c7414112ca89d5a398a35bfbd",
+    "cooling-time-trend.png": "4341f8a804e4a57422fb12e49be2f1cbbb898ecfe753427a23b05420b8df03f6",
+    "phase-evolution.gif": "05e6289660fc4c9826220bb9ec99aa7497ac4c0d47b93caeae0680b9f952e253"
+  },
+  "checks": 20,
+  "errors": [],
+  "passed": true,
+  "tolerance": 1e-10
+}

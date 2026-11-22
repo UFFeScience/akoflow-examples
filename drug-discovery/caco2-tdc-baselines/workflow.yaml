@@ -1,0 +1,24 @@
+name: community-caco2-tdc-baselines-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-caco2-tdc-baselines:v1
+  activities:
+    - {name: prepare, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: morgan-seed-1, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, morgan, --seed, "1"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: morgan-seed-2, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, morgan, --seed, "2"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: morgan-seed-3, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, morgan, --seed, "3"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: morgan-seed-4, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, morgan, --seed, "4"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: morgan-seed-5, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, morgan, --seed, "5"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: rdkit2d-seed-1, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, rdkit2d, --seed, "1"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: rdkit2d-seed-2, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, rdkit2d, --seed, "2"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: rdkit2d-seed-3, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, rdkit2d, --seed, "3"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: rdkit2d-seed-4, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, rdkit2d, --seed, "4"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: rdkit2d-seed-5, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, rdkit2d, --seed, "5"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: cnn-seed-1, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, cnn, --seed, "1"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: cnn-seed-2, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, cnn, --seed, "2"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: cnn-seed-3, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, cnn, --seed, "3"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: cnn-seed-4, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, cnn, --seed, "4"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: cnn-seed-5, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, train, --output, ., --model, cnn, --seed, "5"]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [morgan-seed-1, morgan-seed-2, morgan-seed-3, morgan-seed-4, morgan-seed-5, rdkit2d-seed-1, rdkit2d-seed-2, rdkit2d-seed-3, rdkit2d-seed-4, rdkit2d-seed-5, cnn-seed-1, cnn-seed-2, cnn-seed-3, cnn-seed-4, cnn-seed-5]}
+    - {name: render, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-caco2-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}

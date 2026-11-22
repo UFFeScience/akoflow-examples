@@ -1,0 +1,30 @@
+plan:
+  id: community-caco2-tdc-baselines-plan-v1
+  workflowVersionId: community-caco2-tdc-baselines-v1-v1
+  executionScopeId: community-caco2-parallel-scope
+  networkTopologyId: community-caco2-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 480, cost: 0, feasible: true}
+  assignments:
+    - {id: caco2-prepare, activityId: community-caco2-tdc-baselines-v1-prepare, resourceId: community-caco2-slot-0, orderOnResource: 0, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-morgan-1, activityId: community-caco2-tdc-baselines-v1-morgan-seed-1, resourceId: community-caco2-slot-0, orderOnResource: 1, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-morgan-2, activityId: community-caco2-tdc-baselines-v1-morgan-seed-2, resourceId: community-caco2-slot-1, orderOnResource: 0, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-morgan-3, activityId: community-caco2-tdc-baselines-v1-morgan-seed-3, resourceId: community-caco2-slot-2, orderOnResource: 0, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-morgan-4, activityId: community-caco2-tdc-baselines-v1-morgan-seed-4, resourceId: community-caco2-slot-3, orderOnResource: 0, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-morgan-5, activityId: community-caco2-tdc-baselines-v1-morgan-seed-5, resourceId: community-caco2-slot-0, orderOnResource: 2, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-rdkit2d-1, activityId: community-caco2-tdc-baselines-v1-rdkit2d-seed-1, resourceId: community-caco2-slot-1, orderOnResource: 1, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-rdkit2d-2, activityId: community-caco2-tdc-baselines-v1-rdkit2d-seed-2, resourceId: community-caco2-slot-2, orderOnResource: 1, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-rdkit2d-3, activityId: community-caco2-tdc-baselines-v1-rdkit2d-seed-3, resourceId: community-caco2-slot-3, orderOnResource: 1, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-rdkit2d-4, activityId: community-caco2-tdc-baselines-v1-rdkit2d-seed-4, resourceId: community-caco2-slot-0, orderOnResource: 3, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-rdkit2d-5, activityId: community-caco2-tdc-baselines-v1-rdkit2d-seed-5, resourceId: community-caco2-slot-1, orderOnResource: 2, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-cnn-1, activityId: community-caco2-tdc-baselines-v1-cnn-seed-1, resourceId: community-caco2-slot-2, orderOnResource: 2, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-cnn-2, activityId: community-caco2-tdc-baselines-v1-cnn-seed-2, resourceId: community-caco2-slot-3, orderOnResource: 2, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-cnn-3, activityId: community-caco2-tdc-baselines-v1-cnn-seed-3, resourceId: community-caco2-slot-0, orderOnResource: 4, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-cnn-4, activityId: community-caco2-tdc-baselines-v1-cnn-seed-4, resourceId: community-caco2-slot-1, orderOnResource: 3, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-cnn-5, activityId: community-caco2-tdc-baselines-v1-cnn-seed-5, resourceId: community-caco2-slot-2, orderOnResource: 3, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-aggregate, activityId: community-caco2-tdc-baselines-v1-aggregate, resourceId: community-caco2-slot-3, orderOnResource: 3, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-render, activityId: community-caco2-tdc-baselines-v1-render, resourceId: community-caco2-slot-3, orderOnResource: 4, metadata: {runtimeId: community-caco2-local}}
+    - {id: caco2-validate, activityId: community-caco2-tdc-baselines-v1-validate, resourceId: community-caco2-slot-3, orderOnResource: 5, metadata: {runtimeId: community-caco2-local}}

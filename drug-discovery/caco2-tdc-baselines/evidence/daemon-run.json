@@ -1,0 +1,32 @@
+{
+  "run": {
+    "id": "community-caco2-tdc-baselines-run-v1",
+    "status": "completed",
+    "workflowVersionId": "community-caco2-tdc-baselines-v1-v1",
+    "schedulePlanId": "community-caco2-tdc-baselines-plan-v1",
+    "activityCount": 19,
+    "completedActivityCount": 19,
+    "startedAt": "2026-11-22T09:45:35Z",
+    "finishedAt": "2026-11-22T09:50:59Z",
+    "makespanSeconds": 322.1283130645752,
+    "computeSeconds": 873.1925632953644,
+    "transferSeconds": 40.67010712623596,
+    "transferredBytes": 145181468,
+    "cost": 0
+  },
+  "execution": {
+    "image": "akoflow/community-caco2-tdc-baselines:v1",
+    "imageId": "sha256:7dd70ca60602c37a9432fd0f2d7e98ac392e31a68426ec105e884ba0449a5a25",
+    "maximumConcurrentActivities": 4,
+    "fourWayOverlapObservedAtUnix": 1795340747.6470919
+  },
+  "results": {
+    "passed": true,
+    "rdkit2d": {"meanMae": 0.4112036012660301, "populationStd": 0.029662925208352734},
+    "cnn": {"meanMae": 0.4390035220121815, "populationStd": 0.04264164885661428},
+    "morgan": {"meanMae": 0.9680523643086827, "populationStd": 0.06029282121571547},
+    "validationSha256": "a70793aec186aa0e9b4c97628150fb418e57ab50944e848d25ca609524da14a7",
+    "aggregateSha256": "e4f61f40f3baad7f226f8d1957424b0485d61a8aaef83e9f2bd4beb878f86028",
+    "figureSha256": "0a67915511c2d0371670716eb525fd3cac943b53eb4774a9448de34f956f07d4"
+  }
+}

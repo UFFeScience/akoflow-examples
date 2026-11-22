@@ -1,0 +1,390 @@
+{
+  "artifacts": {
+    "results/aggregate.json": {
+      "bytes": 16496,
+      "sha256": "e4f61f40f3baad7f226f8d1957424b0485d61a8aaef83e9f2bd4beb878f86028"
+    },
+    "results/branches/cnn/seed-1/checkpoint.pt": {
+      "bytes": 1189858,
+      "sha256": "b972250687fb7394ef25e3b10ab9f8dc11f9d0a94d50bd0f65b9ff6d06274888"
+    },
+    "results/branches/cnn/seed-1/metrics.json": {
+      "bytes": 859,
+      "sha256": "c1926c3f538c0247557e7ea83cec8d39c9dc482cbe3c86215e138042ff7ed85e"
+    },
+    "results/branches/cnn/seed-1/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "bb8f6e69fe7807429ccdf466e9087b84bcfed9f4d39e120790b0561884842e7f"
+    },
+    "results/branches/cnn/seed-1/training/CNN_logits.npy": {
+      "bytes": 1584,
+      "sha256": "bb8f6e69fe7807429ccdf466e9087b84bcfed9f4d39e120790b0561884842e7f"
+    },
+    "results/branches/cnn/seed-1/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "692b0e09c7ae898020c02d4f1a44c0b40f1b334b61d6732f99fe1be5ffcaf59f"
+    },
+    "results/branches/cnn/seed-1/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "4b047979ae0e166f1adccd4993e3da606bb8e4e53ca208fc447fed3b5cc028b3"
+    },
+    "results/branches/cnn/seed-2/checkpoint.pt": {
+      "bytes": 1189858,
+      "sha256": "233743fdb6c14b5b0e991d68e8298042ea46bdeeec39a974edc6c9304b2a974b"
+    },
+    "results/branches/cnn/seed-2/metrics.json": {
+      "bytes": 858,
+      "sha256": "c7b1aad9a97d056f7667af1304c1b9860fbfcb5384d943f3e338cac6dbd1a4bc"
+    },
+    "results/branches/cnn/seed-2/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "eb039a901243f24b2ab4a9b0465eb3721b155afef26b18b8396dd957f847a9c3"
+    },
+    "results/branches/cnn/seed-2/training/CNN_logits.npy": {
+      "bytes": 1584,
+      "sha256": "eb039a901243f24b2ab4a9b0465eb3721b155afef26b18b8396dd957f847a9c3"
+    },
+    "results/branches/cnn/seed-2/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "a64dbc810c81200f0559e24d5ec4335d30457c45ece8950b8e6da729fcc95eaf"
+    },
+    "results/branches/cnn/seed-2/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "1ca35bedadb54dc7cee8cd98f8cc60e50e3390b0292a622cd0cc0c0b0f9a1695"
+    },
+    "results/branches/cnn/seed-3/checkpoint.pt": {
+      "bytes": 1189858,
+      "sha256": "e5cc3970267a604da9927ed8e18581646648e3d06c64fd894945278bd5690689"
+    },
+    "results/branches/cnn/seed-3/metrics.json": {
+      "bytes": 858,
+      "sha256": "a8f08f0e1a198e2f6d5aa27bbe43f86ddb9a9e7f595d3c33d34b7425c10da634"
+    },
+    "results/branches/cnn/seed-3/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "92809d956fd93bee68fd8949f50b7d47db31063a115ba87ccad9efe0c5c9e9e9"
+    },
+    "results/branches/cnn/seed-3/training/CNN_logits.npy": {
+      "bytes": 1584,
+      "sha256": "92809d956fd93bee68fd8949f50b7d47db31063a115ba87ccad9efe0c5c9e9e9"
+    },
+    "results/branches/cnn/seed-3/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "8745c030ac72b20dd8b281faa55e01131a9b75b84a21bf3ddadcb35714815aa7"
+    },
+    "results/branches/cnn/seed-3/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "c8a70fdceb2d0b4aaf625a9fc17aaac98a91d7c9bfd8f3d049778e2d1249f415"
+    },
+    "results/branches/cnn/seed-4/checkpoint.pt": {
+      "bytes": 1189858,
+      "sha256": "00ff3ae470ec4f200b33b28288417d4d2741e2f8e61c546e660c9016483845c7"
+    },
+    "results/branches/cnn/seed-4/metrics.json": {
+      "bytes": 857,
+      "sha256": "ee0dbe04a736b562616dea82e527f758595535796928dfd55eb6182bfdec68d5"
+    },
+    "results/branches/cnn/seed-4/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "3d160f259c3914335a4f2d845d9ac8fa337e5a3ef26cca2cfb59a4242b58d659"
+    },
+    "results/branches/cnn/seed-4/training/CNN_logits.npy": {
+      "bytes": 1584,
+      "sha256": "3d160f259c3914335a4f2d845d9ac8fa337e5a3ef26cca2cfb59a4242b58d659"
+    },
+    "results/branches/cnn/seed-4/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "ab25e96eae8460fd25f5ca048f95df3f840b0bb3ca733821fb22e01f4b837b5f"
+    },
+    "results/branches/cnn/seed-4/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "799edb3ee17a50e2b5cdbe984be3566538171ca25069b03fa8d92816370d7814"
+    },
+    "results/branches/cnn/seed-5/checkpoint.pt": {
+      "bytes": 1189858,
+      "sha256": "62486c1cde8577170320efa6c576e8c68c6656630969ce092cafd24ce90137fd"
+    },
+    "results/branches/cnn/seed-5/metrics.json": {
+      "bytes": 859,
+      "sha256": "fd4d6dfc5b3996f3aaa53b4fee7d069cf0bd7ac02d601a6b9137d1fb807440d5"
+    },
+    "results/branches/cnn/seed-5/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "febd38c7175acc2298ea1d220394f8933d06d14c76415daeb8018bd7681a982d"
+    },
+    "results/branches/cnn/seed-5/training/CNN_logits.npy": {
+      "bytes": 1584,
+      "sha256": "febd38c7175acc2298ea1d220394f8933d06d14c76415daeb8018bd7681a982d"
+    },
+    "results/branches/cnn/seed-5/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "c6fd826da0eedc07080747a85d771c5b46c18ef167b009693386f7aefb7fbf2e"
+    },
+    "results/branches/cnn/seed-5/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "8da744d7a8ac526b7dace1409b8792c0f28171e130e672561704ae7e1c3992f4"
+    },
+    "results/branches/morgan/seed-1/checkpoint.pt": {
+      "bytes": 5913378,
+      "sha256": "ce0242e8f56c999e361babbdccce38113f935ce4747396a80c16397507235503"
+    },
+    "results/branches/morgan/seed-1/metrics.json": {
+      "bytes": 873,
+      "sha256": "5c9a0f7db3d20d27b9ea769bd03bec66d364bf19feafead56c74eec55f7b6848"
+    },
+    "results/branches/morgan/seed-1/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "42bc8a08b008ae80497c705b18ec7aab700d0f030459803a967e776fb51fb8af"
+    },
+    "results/branches/morgan/seed-1/training/Morgan_logits.npy": {
+      "bytes": 1584,
+      "sha256": "42bc8a08b008ae80497c705b18ec7aab700d0f030459803a967e776fb51fb8af"
+    },
+    "results/branches/morgan/seed-1/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "b2559b5b729e558e8aa922421edad82814fc7d4b4cd59670175538a257944c7a"
+    },
+    "results/branches/morgan/seed-1/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "f1f150699d2ce86c6d578e2cd8632ae8164865f0c64cb33d7ebe23f8bcccff9b"
+    },
+    "results/branches/morgan/seed-2/checkpoint.pt": {
+      "bytes": 5913378,
+      "sha256": "a70a2949960da6730ccb8dd50be86a17c4cd8892768d32f02ea315c074d441ce"
+    },
+    "results/branches/morgan/seed-2/metrics.json": {
+      "bytes": 873,
+      "sha256": "a454c9b16a4cfd0cdee65e2f7fa39059b32567df1a5eebbe990ee10097922eb3"
+    },
+    "results/branches/morgan/seed-2/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "a1bcb1fe6ee0743f244a6ab56ee1f82f1fa619e1579932cc4f7ece26d17c38b2"
+    },
+    "results/branches/morgan/seed-2/training/Morgan_logits.npy": {
+      "bytes": 1584,
+      "sha256": "a1bcb1fe6ee0743f244a6ab56ee1f82f1fa619e1579932cc4f7ece26d17c38b2"
+    },
+    "results/branches/morgan/seed-2/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "8e1e5793ebda42d07863ad8cd169c68adbf8cf5d694b4209f70b7b7bc892cad6"
+    },
+    "results/branches/morgan/seed-2/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "ebfd0f298b330c3f1f1b34816ab2ec3e3bfc99c05408d1b2230e88a8fc9df1bb"
+    },
+    "results/branches/morgan/seed-3/checkpoint.pt": {
+      "bytes": 5913378,
+      "sha256": "092ab0bd039e7caed7aae96587001d5e5eb8fb84abb057d20db65148a45c3819"
+    },
+    "results/branches/morgan/seed-3/metrics.json": {
+      "bytes": 873,
+      "sha256": "952bd1428f32b0494430e88be27b645cdc0b95f6f583297b596c8697bda044f7"
+    },
+    "results/branches/morgan/seed-3/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "cb49c156fcc2befff83a1d40e8554299308d7fba0f4e0d6cf12298f2f591f67f"
+    },
+    "results/branches/morgan/seed-3/training/Morgan_logits.npy": {
+      "bytes": 1584,
+      "sha256": "cb49c156fcc2befff83a1d40e8554299308d7fba0f4e0d6cf12298f2f591f67f"
+    },
+    "results/branches/morgan/seed-3/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "929bf933126f50b22dfa3d129166635e6be18e4d38e96ca109c28466685c4e0f"
+    },
+    "results/branches/morgan/seed-3/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "fe82b83a544adce9b673798973395a1a4d9e0f6a540ef94cc9cacca8e8506d8d"
+    },
+    "results/branches/morgan/seed-4/checkpoint.pt": {
+      "bytes": 5913378,
+      "sha256": "f556f7e30a45d9ca8824056676664c4312f8403f797048d4df8dd8e5ae85a548"
+    },
+    "results/branches/morgan/seed-4/metrics.json": {
+      "bytes": 873,
+      "sha256": "78deb42f6c2fd3f21bf86aa719ddf94b55c68fea26e5e02b7a0064bb5b33c2af"
+    },
+    "results/branches/morgan/seed-4/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "a48cc04baab5e20137376611101e8c58b9cf710ac6de1c0e5acc1856a0ff01cd"
+    },
+    "results/branches/morgan/seed-4/training/Morgan_logits.npy": {
+      "bytes": 1584,
+      "sha256": "a48cc04baab5e20137376611101e8c58b9cf710ac6de1c0e5acc1856a0ff01cd"
+    },
+    "results/branches/morgan/seed-4/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "5484296230372341a5a158f896938db67c907c4b42ca30f27ea5cc0631cb3b28"
+    },
+    "results/branches/morgan/seed-4/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "e2cb07f35031a1f5b8a3ca2595b704730ff793de5f0f10b7ffb24c96d1db5b5e"
+    },
+    "results/branches/morgan/seed-5/checkpoint.pt": {
+      "bytes": 5913378,
+      "sha256": "ff01577c19354a2c644b1a44183fbb6739ea202d3515eb1986e448f582141bb6"
+    },
+    "results/branches/morgan/seed-5/metrics.json": {
+      "bytes": 872,
+      "sha256": "a5c5ee58f7346c168bbd62c463f5d914445608970f48246c1f55a4acb2b112de"
+    },
+    "results/branches/morgan/seed-5/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "eccbb9ad8440732d174c3ff04845b756fc20d710510305c0ef2a54a2f9a1d919"
+    },
+    "results/branches/morgan/seed-5/training/Morgan_logits.npy": {
+      "bytes": 1584,
+      "sha256": "eccbb9ad8440732d174c3ff04845b756fc20d710510305c0ef2a54a2f9a1d919"
+    },
+    "results/branches/morgan/seed-5/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "85f4a8990fa5ad7a978aa7bbe4c2f009cf221c8e4b2a01cce7168ca720d33dc3"
+    },
+    "results/branches/morgan/seed-5/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "38f0847332f553f523f659114c413071f75789dc58d4e9434bc4abcfb966cfab"
+    },
+    "results/branches/rdkit2d/seed-1/checkpoint.pt": {
+      "bytes": 2538274,
+      "sha256": "016e604ca248d7fb05d7ae1b1ce417fee983096915f6c8965eb9c74512b4b761"
+    },
+    "results/branches/rdkit2d/seed-1/metrics.json": {
+      "bytes": 888,
+      "sha256": "05af93319ccde19b857408941a5a091f8df95c947248d6a3480ef240bd71465d"
+    },
+    "results/branches/rdkit2d/seed-1/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "f8bf285c87e7d4119d9b469612857c4158e59a97fc3df398b9b7a05b2d127c28"
+    },
+    "results/branches/rdkit2d/seed-1/training/rdkit_2d_normalized_logits.npy": {
+      "bytes": 1584,
+      "sha256": "f8bf285c87e7d4119d9b469612857c4158e59a97fc3df398b9b7a05b2d127c28"
+    },
+    "results/branches/rdkit2d/seed-1/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "fbed8f49209eb757a9584eda5a238be16e6c5cd89c28b5c9a2788b62c431d442"
+    },
+    "results/branches/rdkit2d/seed-1/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "7bbd7e01be5430c265d1c9a5944abd74183598804f569a7d0a762b3a098beac8"
+    },
+    "results/branches/rdkit2d/seed-2/checkpoint.pt": {
+      "bytes": 2538274,
+      "sha256": "cec12ea2aa1ed5cc417a7e87c7f797d23b20713f0526669cd724610125c21849"
+    },
+    "results/branches/rdkit2d/seed-2/metrics.json": {
+      "bytes": 888,
+      "sha256": "9885a06a3d89561506481808fa371e244ee729fe75d1841781c36f06e0ff0c3d"
+    },
+    "results/branches/rdkit2d/seed-2/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "d6ebf49b338b3f491930936512229efcc8ee27e43dc73be0eb46d8d554f1a2de"
+    },
+    "results/branches/rdkit2d/seed-2/training/rdkit_2d_normalized_logits.npy": {
+      "bytes": 1584,
+      "sha256": "d6ebf49b338b3f491930936512229efcc8ee27e43dc73be0eb46d8d554f1a2de"
+    },
+    "results/branches/rdkit2d/seed-2/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "b8b98bf178963d388b6f324dbddce077dd8a30a95e7aaf8f52d9e78a6abb93c7"
+    },
+    "results/branches/rdkit2d/seed-2/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "68b0e0420f1d6610d4f9f304bb7eeff86dc88cdddf113500599b8a6b24733c8d"
+    },
+    "results/branches/rdkit2d/seed-3/checkpoint.pt": {
+      "bytes": 2538274,
+      "sha256": "0a568fb15b9ddd9b0231e52d47da30c83df4be688c90a8e7934b76a2122d5948"
+    },
+    "results/branches/rdkit2d/seed-3/metrics.json": {
+      "bytes": 888,
+      "sha256": "41d45f6ec7714ad6ba30201ab07b1cfe478127172ad365036d74332235ed1df2"
+    },
+    "results/branches/rdkit2d/seed-3/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "c6ba140e6a7f409ca2b6ad5b5b3cd5940630bb3d66a3a8390424a7982e884028"
+    },
+    "results/branches/rdkit2d/seed-3/training/rdkit_2d_normalized_logits.npy": {
+      "bytes": 1584,
+      "sha256": "c6ba140e6a7f409ca2b6ad5b5b3cd5940630bb3d66a3a8390424a7982e884028"
+    },
+    "results/branches/rdkit2d/seed-3/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "e006d1a3814bd2a144ca39abb7baeef8280dfc3b99b5dc5ff61d0dcb7f5c8967"
+    },
+    "results/branches/rdkit2d/seed-3/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "15c2bccb3abaf42f5b0cf65355239c8b6db3765de2c288973e4c018c54fd2004"
+    },
+    "results/branches/rdkit2d/seed-4/checkpoint.pt": {
+      "bytes": 2538274,
+      "sha256": "98f5f6907a82bfa82d4d89f3d00f161edb533f598a01c0131ef699163494e339"
+    },
+    "results/branches/rdkit2d/seed-4/metrics.json": {
+      "bytes": 888,
+      "sha256": "29f1f173e5ebb0ca12a38d1dc00432d7d63855ab5941786e710dd68dfdf1b0fd"
+    },
+    "results/branches/rdkit2d/seed-4/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "3fb6f4eae7431574a68f09c88c39c1f3d5d91bc2819602a3e854048cd94e05cc"
+    },
+    "results/branches/rdkit2d/seed-4/training/rdkit_2d_normalized_logits.npy": {
+      "bytes": 1584,
+      "sha256": "3fb6f4eae7431574a68f09c88c39c1f3d5d91bc2819602a3e854048cd94e05cc"
+    },
+    "results/branches/rdkit2d/seed-4/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "bfe349a42dcc45665b7d6c3a4a8827854915bad5ccb20c40a0d925576260076e"
+    },
+    "results/branches/rdkit2d/seed-4/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "62eff8d3ce6870ef01e4d5cd0e778cdf95317d06338399d7adf15ceb177aeef8"
+    },
+    "results/branches/rdkit2d/seed-5/checkpoint.pt": {
+      "bytes": 2538274,
+      "sha256": "0785da379b8604acaab9c299bc07217be8e18bfd52df50ac80fad43532e952b9"
+    },
+    "results/branches/rdkit2d/seed-5/metrics.json": {
+      "bytes": 889,
+      "sha256": "4fc1dae2748bd7774e730fbe303b5004c681e3dffe6e98fcbcab268659b5c22f"
+    },
+    "results/branches/rdkit2d/seed-5/predictions.npy": {
+      "bytes": 1584,
+      "sha256": "f3cc839ae3f35a7325d27e83b8fa9be38e2b7c1696b55b18441cba89195e3cc2"
+    },
+    "results/branches/rdkit2d/seed-5/training/rdkit_2d_normalized_logits.npy": {
+      "bytes": 1584,
+      "sha256": "f3cc839ae3f35a7325d27e83b8fa9be38e2b7c1696b55b18441cba89195e3cc2"
+    },
+    "results/branches/rdkit2d/seed-5/training/test_markdowntable.txt": {
+      "bytes": 339,
+      "sha256": "6584e435e7873c752b120ad3c30db1300d2b8732820c3f5fe94843f2197b34f6"
+    },
+    "results/branches/rdkit2d/seed-5/training/valid_markdowntable.txt": {
+      "bytes": 4319,
+      "sha256": "a13379fda55f44e12266f022be6bb68134a112e6f7c450e55ae1253da9aef97a"
+    },
+    "results/caco2-baselines.png": {
+      "bytes": 63544,
+      "sha256": "0a67915511c2d0371670716eb525fd3cac943b53eb4774a9448de34f956f07d4"
+    },
+    "results/input-audit.json": {
+      "bytes": 3885,
+      "sha256": "3bf7d8a2b439a3a6acda770dde6d46f2c0fe8d24a87df4545d503274f1deda4c"
+    },
+    "results/metrics.csv": {
+      "bytes": 447,
+      "sha256": "622a2e048c5cac3bd879a9bd756d422882e67bf202af4c0a4e9fd205f3df8d40"
+    }
+  },
+  "checks": {
+    "aggregate_passed": true,
+    "fifteen_checkpoints": true,
+    "fifteen_metrics": true,
+    "fifteen_predictions": true,
+    "input_audit_passed": true,
+    "required_files_nonempty": true
+  },
+  "limitations": "Benchmark reproduction only; predictive accuracy is not experimental or clinical validation.",
+  "passed": true
+}

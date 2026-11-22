@@ -1,0 +1,16 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.2.2+cpu
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.13.1
+scikit-learn==1.5.2
+matplotlib==3.9.2
+lifelines==0.30.0
+prettytable==3.12.0
+tqdm==4.67.0
+wget==3.2
+requests==2.32.5
+subword-nmt==0.3.8
+pandas-flavor==0.6.0
+rdkit==2023.9.6
+descriptastorus==2.8.0

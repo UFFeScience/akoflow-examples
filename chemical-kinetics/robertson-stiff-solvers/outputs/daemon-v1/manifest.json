@@ -1,0 +1,18 @@
+{
+  "files": {
+    "branches/bdf/metrics.json": "608cf45de0991f8066a487415c9943d442ec278fd778a64a4aa969cd9169e76d",
+    "branches/bdf/trajectory.npz": "36d828ed828b73008d355b43398e860a00ce5d200a65d369fd1ab27b23b0d21e",
+    "branches/lsoda/metrics.json": "87664e1b49e7477fbbdc87a0b123f16e04a29b60db06624f8b521c87d7ad18c5",
+    "branches/lsoda/trajectory.npz": "5def9f7875740a507b52e6a9feb6fd41868e7d6c535f4a94a59dbd0663b92dd8",
+    "branches/radau/metrics.json": "9126ff379e17edcf46a925f3f84a71de7dd004a25ca6f1ea76282602145e9a2d",
+    "branches/radau/trajectory.npz": "09944d6f12fd0d8e77808e3d9db251e96a3687e808b6532efbd01f58900ea492",
+    "comparison.json": "b1f2a35f41d9f1f1d749913bd29adc51b4b08614bbc54b1a129b831019cd0974",
+    "evaluation-times.npy": "ae770ac149b4d3215f0fb9b7c5e6321c8041ce2dd2346ed6e6cab5714dba01e7",
+    "events.json": "8902692eeb79e2ac44c17c4932f15e664124e29cb5ab436e7608141c1a86da0e",
+    "kinetics-logtime.gif": "db2b720de409c954557b8a2a5c872b27e220992bc4c06a56854064772122d9c0",
+    "kinetics-logtime.png": "c7b027e730a4746e6d7ae83792b3fb3a0622768489c83bd043aeca41a888f328",
+    "scenario.json": "843c72f96494ce177879f931540e365592ccac1c229aaff7e696de6bbf85807c",
+    "solver-comparison.csv": "8383b914a3bce7c2588f8d3c043e0f40821ba056b50cf4d73d16aab0d82213e9"
+  },
+  "validationPassed": true
+}

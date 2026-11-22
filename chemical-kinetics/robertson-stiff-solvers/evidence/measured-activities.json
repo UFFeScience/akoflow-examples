@@ -1,0 +1,72 @@
+[
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-prepare-scenario",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-0",
+    "startedAt": 1795376568.0718853,
+    "finishedAt": 1795376568.8607447,
+    "runtimeSeconds": 0.7888593673706055,
+    "transferSeconds": 0,
+    "transferBytes": 0
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-solve-radau",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-0",
+    "startedAt": 1795376570.0755892,
+    "finishedAt": 1795376571.510832,
+    "runtimeSeconds": 1.4352428913116455,
+    "transferSeconds": 0.19211316108703613,
+    "transferBytes": 1197
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-solve-lsoda",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-2",
+    "startedAt": 1795376570.1263084,
+    "finishedAt": 1795376571.0497596,
+    "runtimeSeconds": 0.9234511852264404,
+    "transferSeconds": 0.19435739517211914,
+    "transferBytes": 1197
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-solve-bdf",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-1",
+    "startedAt": 1795376570.1326668,
+    "finishedAt": 1795376571.3088608,
+    "runtimeSeconds": 1.1761939525604248,
+    "transferSeconds": 0.1973891258239746,
+    "transferBytes": 1197
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-compare-solvers",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-0",
+    "startedAt": 1795376573.846119,
+    "finishedAt": 1795376574.662825,
+    "runtimeSeconds": 0.8167061805725098,
+    "transferSeconds": 1.3553860187530518,
+    "transferBytes": 5418
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-render-kinetics",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-0",
+    "startedAt": 1795376575.8803356,
+    "finishedAt": 1795376578.399737,
+    "runtimeSeconds": 2.5194013118743896,
+    "transferSeconds": 0.211592435836792,
+    "transferBytes": 8453
+  },
+  {
+    "activityId": "community-robertson-stiff-solvers-v1-validate",
+    "status": "completed",
+    "resourceId": "community-robertson-slot-0",
+    "startedAt": 1795376580.0047426,
+    "finishedAt": 1795376580.9343808,
+    "runtimeSeconds": 0.929638147354126,
+    "transferSeconds": 0.2064206600189209,
+    "transferBytes": 212922
+  }
+]

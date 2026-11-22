@@ -1,0 +1,15 @@
+environment: {id: community-robertson-parallel, name: Community Robertson parallel local Docker, status: ready}
+version: {id: community-robertson-parallel-v1, environmentId: community-robertson-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-robertson-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-robertson-parallel-v1, id: community-robertson-local, name: Robertson CPU integration, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-robertson-slot-0, environmentVersionId: community-robertson-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-robertson-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-robertson-slot-1, environmentVersionId: community-robertson-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-robertson-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-robertson-slot-2, environmentVersionId: community-robertson-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-robertson-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-robertson-slot-0, runtimeId: community-robertson-local, enabled: true}
+  - {resourceId: community-robertson-slot-1, runtimeId: community-robertson-local, enabled: true}
+  - {resourceId: community-robertson-slot-2, runtimeId: community-robertson-local, enabled: true}

@@ -1,0 +1,12 @@
+name: community-robertson-stiff-solvers-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-robertson-stiff-solvers:v1
+  activities:
+    - {name: prepare-scenario, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: solve-radau, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --method, Radau]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: solve-bdf, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --method, BDF]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: solve-lsoda, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --method, LSODA]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: compare-solvers, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [solve-radau, solve-bdf, solve-lsoda]}
+    - {name: render-kinetics, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [compare-solvers]}
+    - {name: validate, runtime: community-robertson-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-kinetics]}

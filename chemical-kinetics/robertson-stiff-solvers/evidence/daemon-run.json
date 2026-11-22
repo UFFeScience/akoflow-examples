@@ -1,0 +1,320 @@
+{
+  "run": {
+    "id": "community-robertson-stiff-solvers-run-v1",
+    "schedulePlanId": "community-robertson-stiff-solvers-plan-v1",
+    "mode": "real",
+    "seed": 0,
+    "status": "completed",
+    "makespanSeconds": 12.862495422363281,
+    "cost": 0,
+    "activityCount": 7,
+    "completedActivityCount": 7,
+    "breakdown": {
+      "computeSeconds": 8.589493036270142,
+      "transferSeconds": 2.3572587966918945,
+      "queueSeconds": 0,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0
+    },
+    "transferredBytes": 230384,
+    "kind": "workflow",
+    "title": "community-robertson-stiff-solvers-run-v1",
+    "workflowId": "community-robertson-stiff-solvers-v1",
+    "workflowVersionId": "community-robertson-stiff-solvers-v1-v1",
+    "workflowName": "community-robertson-stiff-solvers-v1",
+    "environmentNames": [
+      "Community Robertson parallel local Docker"
+    ],
+    "startedAt": "2026-11-22T19:42:47Z",
+    "finishedAt": "2026-11-22T19:43:02Z"
+  },
+  "activities": [
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-prepare-scenario",
+      "status": "completed",
+      "startedAt": 1795376568.0718853,
+      "finishedAt": 1795376568.8607447,
+      "runtimeSeconds": 0.7888593673706055,
+      "allocatedResourceId": "community-robertson-slot-0"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-solve-radau",
+      "status": "completed",
+      "startedAt": 1795376570.0755892,
+      "finishedAt": 1795376571.510832,
+      "runtimeSeconds": 1.4352428913116455,
+      "allocatedResourceId": "community-robertson-slot-0"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-solve-lsoda",
+      "status": "completed",
+      "startedAt": 1795376570.1263084,
+      "finishedAt": 1795376571.0497596,
+      "runtimeSeconds": 0.9234511852264404,
+      "allocatedResourceId": "community-robertson-slot-2"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-solve-bdf",
+      "status": "completed",
+      "startedAt": 1795376570.1326668,
+      "finishedAt": 1795376571.3088608,
+      "runtimeSeconds": 1.1761939525604248,
+      "allocatedResourceId": "community-robertson-slot-1"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-compare-solvers",
+      "status": "completed",
+      "startedAt": 1795376573.846119,
+      "finishedAt": 1795376574.662825,
+      "runtimeSeconds": 0.8167061805725098,
+      "allocatedResourceId": "community-robertson-slot-0"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-render-kinetics",
+      "status": "completed",
+      "startedAt": 1795376575.8803356,
+      "finishedAt": 1795376578.399737,
+      "runtimeSeconds": 2.5194013118743896,
+      "allocatedResourceId": "community-robertson-slot-0"
+    },
+    {
+      "activityId": "community-robertson-stiff-solvers-v1-validate",
+      "status": "completed",
+      "startedAt": 1795376580.0047426,
+      "finishedAt": 1795376580.9343808,
+      "runtimeSeconds": 0.929638147354126,
+      "allocatedResourceId": "community-robertson-slot-0"
+    }
+  ],
+  "finalWorkspace": [
+    {
+      "id": "workspace-community-robertson-stiff-solvers-run-v1-community-robertson-stiff-solvers-v1-validate",
+      "state": "sealed",
+      "manifest": {
+        "initial": [
+          {
+            "path": "branches/bdf/metrics.json",
+            "digest": "sha256:608cf45de0991f8066a487415c9943d442ec278fd778a64a4aa969cd9169e76d",
+            "sizeBytes": 466
+          },
+          {
+            "path": "branches/bdf/trajectory.npz",
+            "digest": "sha256:36d828ed828b73008d355b43398e860a00ce5d200a65d369fd1ab27b23b0d21e",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/lsoda/metrics.json",
+            "digest": "sha256:87664e1b49e7477fbbdc87a0b123f16e04a29b60db06624f8b521c87d7ad18c5",
+            "sizeBytes": 469
+          },
+          {
+            "path": "branches/lsoda/trajectory.npz",
+            "digest": "sha256:5def9f7875740a507b52e6a9feb6fd41868e7d6c535f4a94a59dbd0663b92dd8",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/radau/metrics.json",
+            "digest": "sha256:9126ff379e17edcf46a925f3f84a71de7dd004a25ca6f1ea76282602145e9a2d",
+            "sizeBytes": 472
+          },
+          {
+            "path": "branches/radau/trajectory.npz",
+            "digest": "sha256:09944d6f12fd0d8e77808e3d9db251e96a3687e808b6532efbd01f58900ea492",
+            "sizeBytes": 938
+          },
+          {
+            "path": "comparison.json",
+            "digest": "sha256:b1f2a35f41d9f1f1d749913bd29adc51b4b08614bbc54b1a129b831019cd0974",
+            "sizeBytes": 2246
+          },
+          {
+            "path": "evaluation-times.npy",
+            "digest": "sha256:ae770ac149b4d3215f0fb9b7c5e6321c8041ce2dd2346ed6e6cab5714dba01e7",
+            "sizeBytes": 232
+          },
+          {
+            "path": "events.json",
+            "digest": "sha256:8902692eeb79e2ac44c17c4932f15e664124e29cb5ab436e7608141c1a86da0e",
+            "sizeBytes": 260
+          },
+          {
+            "path": "kinetics-logtime.gif",
+            "digest": "sha256:db2b720de409c954557b8a2a5c872b27e220992bc4c06a56854064772122d9c0",
+            "sizeBytes": 53135
+          },
+          {
+            "path": "kinetics-logtime.png",
+            "digest": "sha256:c7b027e730a4746e6d7ae83792b3fb3a0622768489c83bd043aeca41a888f328",
+            "sizeBytes": 151334
+          },
+          {
+            "path": "scenario.json",
+            "digest": "sha256:843c72f96494ce177879f931540e365592ccac1c229aaff7e696de6bbf85807c",
+            "sizeBytes": 965
+          },
+          {
+            "path": "solver-comparison.csv",
+            "digest": "sha256:8383b914a3bce7c2588f8d3c043e0f40821ba056b50cf4d73d16aab0d82213e9",
+            "sizeBytes": 529
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/bdf/metrics.json",
+            "digest": "sha256:608cf45de0991f8066a487415c9943d442ec278fd778a64a4aa969cd9169e76d",
+            "sizeBytes": 466
+          },
+          {
+            "path": "branches/bdf/trajectory.npz",
+            "digest": "sha256:36d828ed828b73008d355b43398e860a00ce5d200a65d369fd1ab27b23b0d21e",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/lsoda/metrics.json",
+            "digest": "sha256:87664e1b49e7477fbbdc87a0b123f16e04a29b60db06624f8b521c87d7ad18c5",
+            "sizeBytes": 469
+          },
+          {
+            "path": "branches/lsoda/trajectory.npz",
+            "digest": "sha256:5def9f7875740a507b52e6a9feb6fd41868e7d6c535f4a94a59dbd0663b92dd8",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/radau/metrics.json",
+            "digest": "sha256:9126ff379e17edcf46a925f3f84a71de7dd004a25ca6f1ea76282602145e9a2d",
+            "sizeBytes": 472
+          },
+          {
+            "path": "branches/radau/trajectory.npz",
+            "digest": "sha256:09944d6f12fd0d8e77808e3d9db251e96a3687e808b6532efbd01f58900ea492",
+            "sizeBytes": 938
+          },
+          {
+            "path": "comparison.json",
+            "digest": "sha256:b1f2a35f41d9f1f1d749913bd29adc51b4b08614bbc54b1a129b831019cd0974",
+            "sizeBytes": 2246
+          },
+          {
+            "path": "evaluation-times.npy",
+            "digest": "sha256:ae770ac149b4d3215f0fb9b7c5e6321c8041ce2dd2346ed6e6cab5714dba01e7",
+            "sizeBytes": 232
+          },
+          {
+            "path": "events.json",
+            "digest": "sha256:8902692eeb79e2ac44c17c4932f15e664124e29cb5ab436e7608141c1a86da0e",
+            "sizeBytes": 260
+          },
+          {
+            "path": "kinetics-logtime.gif",
+            "digest": "sha256:db2b720de409c954557b8a2a5c872b27e220992bc4c06a56854064772122d9c0",
+            "sizeBytes": 53135
+          },
+          {
+            "path": "kinetics-logtime.png",
+            "digest": "sha256:c7b027e730a4746e6d7ae83792b3fb3a0622768489c83bd043aeca41a888f328",
+            "sizeBytes": 151334
+          },
+          {
+            "path": "manifest.json",
+            "digest": "sha256:8df5031b9faab56dbc95ff830550ad4546a081c06bf20e215336154241ae05cc",
+            "sizeBytes": 1320
+          },
+          {
+            "path": "scenario.json",
+            "digest": "sha256:843c72f96494ce177879f931540e365592ccac1c229aaff7e696de6bbf85807c",
+            "sizeBytes": 965
+          },
+          {
+            "path": "solver-comparison.csv",
+            "digest": "sha256:8383b914a3bce7c2588f8d3c043e0f40821ba056b50cf4d73d16aab0d82213e9",
+            "sizeBytes": 529
+          },
+          {
+            "path": "validation.json",
+            "digest": "sha256:f5e4de6ba036071ef815bd4505d124b0c74910b3a9ff94c1952cdb1c1ce1a5cb",
+            "sizeBytes": 1554
+          }
+        ],
+        "inputs": [
+          {
+            "path": "branches/bdf/metrics.json",
+            "digest": "sha256:608cf45de0991f8066a487415c9943d442ec278fd778a64a4aa969cd9169e76d",
+            "sizeBytes": 466
+          },
+          {
+            "path": "branches/bdf/trajectory.npz",
+            "digest": "sha256:36d828ed828b73008d355b43398e860a00ce5d200a65d369fd1ab27b23b0d21e",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/lsoda/metrics.json",
+            "digest": "sha256:87664e1b49e7477fbbdc87a0b123f16e04a29b60db06624f8b521c87d7ad18c5",
+            "sizeBytes": 469
+          },
+          {
+            "path": "branches/lsoda/trajectory.npz",
+            "digest": "sha256:5def9f7875740a507b52e6a9feb6fd41868e7d6c535f4a94a59dbd0663b92dd8",
+            "sizeBytes": 938
+          },
+          {
+            "path": "branches/radau/metrics.json",
+            "digest": "sha256:9126ff379e17edcf46a925f3f84a71de7dd004a25ca6f1ea76282602145e9a2d",
+            "sizeBytes": 472
+          },
+          {
+            "path": "branches/radau/trajectory.npz",
+            "digest": "sha256:09944d6f12fd0d8e77808e3d9db251e96a3687e808b6532efbd01f58900ea492",
+            "sizeBytes": 938
+          },
+          {
+            "path": "comparison.json",
+            "digest": "sha256:b1f2a35f41d9f1f1d749913bd29adc51b4b08614bbc54b1a129b831019cd0974",
+            "sizeBytes": 2246
+          },
+          {
+            "path": "evaluation-times.npy",
+            "digest": "sha256:ae770ac149b4d3215f0fb9b7c5e6321c8041ce2dd2346ed6e6cab5714dba01e7",
+            "sizeBytes": 232
+          },
+          {
+            "path": "events.json",
+            "digest": "sha256:8902692eeb79e2ac44c17c4932f15e664124e29cb5ab436e7608141c1a86da0e",
+            "sizeBytes": 260
+          },
+          {
+            "path": "kinetics-logtime.gif",
+            "digest": "sha256:db2b720de409c954557b8a2a5c872b27e220992bc4c06a56854064772122d9c0",
+            "sizeBytes": 53135
+          },
+          {
+            "path": "kinetics-logtime.png",
+            "digest": "sha256:c7b027e730a4746e6d7ae83792b3fb3a0622768489c83bd043aeca41a888f328",
+            "sizeBytes": 151334
+          },
+          {
+            "path": "scenario.json",
+            "digest": "sha256:843c72f96494ce177879f931540e365592ccac1c229aaff7e696de6bbf85807c",
+            "sizeBytes": 965
+          },
+          {
+            "path": "solver-comparison.csv",
+            "digest": "sha256:8383b914a3bce7c2588f8d3c043e0f40821ba056b50cf4d73d16aab0d82213e9",
+            "sizeBytes": 529
+          }
+        ],
+        "outputs": [
+          {
+            "path": "manifest.json",
+            "digest": "sha256:8df5031b9faab56dbc95ff830550ad4546a081c06bf20e215336154241ae05cc",
+            "sizeBytes": 1320
+          },
+          {
+            "path": "validation.json",
+            "digest": "sha256:f5e4de6ba036071ef815bd4505d124b0c74910b3a9ff94c1952cdb1c1ce1a5cb",
+            "sizeBytes": 1554
+          }
+        ]
+      }
+    }
+  ]
+}

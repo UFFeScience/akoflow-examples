@@ -1,0 +1,9 @@
+{
+  "Id": "sha256:22360c7b5cfbfb1b23dc019201469cd7f6a96ab52a55b8833eb4eac531be6dd9",
+  "RepoDigests": [
+    "akoflow/community-robertson-stiff-solvers@sha256:22360c7b5cfbfb1b23dc019201469cd7f6a96ab52a55b8833eb4eac531be6dd9"
+  ],
+  "Created": "2026-11-22T19:41:43.849914112Z",
+  "Architecture": "amd64",
+  "Os": "linux"
+}

@@ -1,0 +1,19 @@
+{
+  "runId": "community-robertson-stiff-solvers-run-v1",
+  "status": "completed",
+  "workflowVersionId": "community-robertson-stiff-solvers-v1-v1",
+  "schedulePlanId": "community-robertson-stiff-solvers-plan-v1",
+  "startedAt": "2026-11-22T19:42:47Z",
+  "finishedAt": "2026-11-22T19:43:02Z",
+  "makespanSeconds": 12.862495422363281,
+  "activityCount": 7,
+  "completedActivityCount": 7,
+  "breakdown": {
+    "computeSeconds": 8.589493036270142,
+    "transferSeconds": 2.3572587966918945,
+    "queueSeconds": 0,
+    "interferenceSeconds": 0,
+    "overheadSeconds": 0
+  },
+  "transferredBytes": 230384
+}

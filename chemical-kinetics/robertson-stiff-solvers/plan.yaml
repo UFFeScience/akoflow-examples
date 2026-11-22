@@ -1,0 +1,18 @@
+plan:
+  id: community-robertson-stiff-solvers-plan-v1
+  workflowVersionId: community-robertson-stiff-solvers-v1-v1
+  executionScopeId: community-robertson-parallel-scope
+  networkTopologyId: community-robertson-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 60, cost: 0, feasible: true}
+  assignments:
+    - {id: robertson-prepare, activityId: community-robertson-stiff-solvers-v1-prepare-scenario, resourceId: community-robertson-slot-0, orderOnResource: 0, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-radau, activityId: community-robertson-stiff-solvers-v1-solve-radau, resourceId: community-robertson-slot-0, orderOnResource: 1, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-bdf, activityId: community-robertson-stiff-solvers-v1-solve-bdf, resourceId: community-robertson-slot-1, orderOnResource: 0, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-lsoda, activityId: community-robertson-stiff-solvers-v1-solve-lsoda, resourceId: community-robertson-slot-2, orderOnResource: 0, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-compare, activityId: community-robertson-stiff-solvers-v1-compare-solvers, resourceId: community-robertson-slot-0, orderOnResource: 2, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-render, activityId: community-robertson-stiff-solvers-v1-render-kinetics, resourceId: community-robertson-slot-0, orderOnResource: 3, metadata: {runtimeId: community-robertson-local}}
+    - {id: robertson-validate, activityId: community-robertson-stiff-solvers-v1-validate, resourceId: community-robertson-slot-0, orderOnResource: 4, metadata: {runtimeId: community-robertson-local}}

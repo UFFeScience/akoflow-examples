@@ -1,0 +1,23 @@
+{
+  "arraySha256": "5def9f7875740a507b52e6a9feb6fd41868e7d6c535f4a94a59dbd0663b92dd8",
+  "events": {
+    "y1_0001": [
+      20795498.401894733
+    ],
+    "y3_001": [
+      0.2640190781818342
+    ]
+  },
+  "final": [
+    5.2084991634654894e-08,
+    2.0833997725995418e-13,
+    0.9999999479147963
+  ],
+  "maximumConservationError": 3.774758283725532e-15,
+  "method": "LSODA",
+  "minimumConcentration": 0.0,
+  "nfev": 4302,
+  "njev": 346,
+  "nlu": 346,
+  "success": true
+}

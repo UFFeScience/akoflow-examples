@@ -1,0 +1,11 @@
+{
+  "fourWayOverlapStart": 1795381381.921903,
+  "fourWayOverlapEnd": 1795381383.739752,
+  "fourWayOverlapSeconds": 1.8178491592407227,
+  "activities": [
+    "community-turing-schnakenberg-v1-simulate-control-5",
+    "community-turing-schnakenberg-v1-simulate-primary-128",
+    "community-turing-schnakenberg-v1-simulate-control-1",
+    "community-turing-schnakenberg-v1-simulate-primary-64"
+  ]
+}

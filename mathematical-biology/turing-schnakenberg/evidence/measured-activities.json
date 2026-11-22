@@ -1,0 +1,47 @@
+[
+  {
+    "id": "community-turing-schnakenberg-v1-prepare-scenario",
+    "startedAt": 1795381378.204396,
+    "finishedAt": 1795381378.368211
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-simulate-control-5",
+    "startedAt": 1795381380.698608,
+    "finishedAt": 1795381388.512982
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-simulate-primary-128",
+    "startedAt": 1795381381.879441,
+    "finishedAt": 1795381388.501726
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-simulate-control-1",
+    "startedAt": 1795381381.897358,
+    "finishedAt": 1795381388.489293
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-simulate-primary-64",
+    "startedAt": 1795381381.921903,
+    "finishedAt": 1795381383.739752
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-simulate-halfstep",
+    "startedAt": 1795381385.915729,
+    "finishedAt": 1795381398.198204
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-aggregate-analysis",
+    "startedAt": 1795381400.863057,
+    "finishedAt": 1795381401.012256
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-render-results",
+    "startedAt": 1795381402.872141,
+    "finishedAt": 1795381404.097299
+  },
+  {
+    "id": "community-turing-schnakenberg-v1-validate",
+    "startedAt": 1795381405.89721,
+    "finishedAt": 1795381406.075681
+  }
+]

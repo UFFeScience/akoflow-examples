@@ -1,0 +1,20 @@
+plan:
+  id: community-turing-schnakenberg-plan-v1
+  workflowVersionId: community-turing-schnakenberg-v1-v1
+  executionScopeId: community-turing-parallel-scope
+  networkTopologyId: community-turing-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 40, cost: 0, feasible: true}
+  assignments:
+    - {id: turing-prepare, activityId: community-turing-schnakenberg-v1-prepare-scenario, resourceId: community-turing-slot-0, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-primary-128, activityId: community-turing-schnakenberg-v1-simulate-primary-128, resourceId: community-turing-slot-0, orderOnResource: 1, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-primary-64, activityId: community-turing-schnakenberg-v1-simulate-primary-64, resourceId: community-turing-slot-1, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-control-5, activityId: community-turing-schnakenberg-v1-simulate-control-5, resourceId: community-turing-slot-2, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-control-1, activityId: community-turing-schnakenberg-v1-simulate-control-1, resourceId: community-turing-slot-3, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-halfstep, activityId: community-turing-schnakenberg-v1-simulate-halfstep, resourceId: community-turing-slot-1, orderOnResource: 1, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-aggregate, activityId: community-turing-schnakenberg-v1-aggregate-analysis, resourceId: community-turing-slot-0, orderOnResource: 2, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-render, activityId: community-turing-schnakenberg-v1-render-results, resourceId: community-turing-slot-0, orderOnResource: 3, metadata: {runtimeId: community-turing-local}}
+    - {id: turing-validate, activityId: community-turing-schnakenberg-v1-validate, resourceId: community-turing-slot-0, orderOnResource: 4, metadata: {runtimeId: community-turing-local}}

@@ -1,0 +1,92 @@
+[
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-prepare-scenario",
+    "occurredAt": "2026-11-22T21:02:58.204396667Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-prepare-scenario",
+    "occurredAt": "2026-11-22T21:02:58.36821194Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-simulate-control-5",
+    "occurredAt": "2026-11-22T21:03:00.698608126Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-simulate-primary-128",
+    "occurredAt": "2026-11-22T21:03:01.8794412Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-simulate-control-1",
+    "occurredAt": "2026-11-22T21:03:01.897358852Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-simulate-primary-64",
+    "occurredAt": "2026-11-22T21:03:01.921903597Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-simulate-primary-64",
+    "occurredAt": "2026-11-22T21:03:03.73975207Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-simulate-halfstep",
+    "occurredAt": "2026-11-22T21:03:05.915729711Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-simulate-control-1",
+    "occurredAt": "2026-11-22T21:03:08.489293783Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-simulate-primary-128",
+    "occurredAt": "2026-11-22T21:03:08.501726814Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-simulate-control-5",
+    "occurredAt": "2026-11-22T21:03:08.512982091Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-simulate-halfstep",
+    "occurredAt": "2026-11-22T21:03:18.198204398Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-aggregate-analysis",
+    "occurredAt": "2026-11-22T21:03:20.863057176Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-aggregate-analysis",
+    "occurredAt": "2026-11-22T21:03:21.01225638Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-render-results",
+    "occurredAt": "2026-11-22T21:03:22.872141605Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-render-results",
+    "occurredAt": "2026-11-22T21:03:24.097299444Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-turing-schnakenberg-v1-validate",
+    "occurredAt": "2026-11-22T21:03:25.897210213Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-turing-schnakenberg-v1-validate",
+    "occurredAt": "2026-11-22T21:03:26.075681468Z"
+  }
+]

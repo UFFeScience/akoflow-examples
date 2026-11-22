@@ -1,0 +1,1468 @@
+{
+  "workspaces": [
+    {
+      "activityId": "community-turing-schnakenberg-v1-aggregate-analysis",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 15,
+      "sizeBytes": 3681358,
+      "manifest": {
+        "initial": [
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-prepare-scenario",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 4,
+      "sizeBytes": 534176,
+      "manifest": {
+        "final": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-render-results",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 17,
+      "sizeBytes": 4127197,
+      "manifest": {
+        "initial": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "pattern-emergence.gif",
+            "digest": "sha256:2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+            "sizeBytes": 188902
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          },
+          {
+            "path": "turing-pattern-selection.png",
+            "digest": "sha256:a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081",
+            "sizeBytes": 256937
+          }
+        ],
+        "inputs": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "pattern-emergence.gif",
+            "digest": "sha256:2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+            "sizeBytes": 188902
+          },
+          {
+            "path": "turing-pattern-selection.png",
+            "digest": "sha256:a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081",
+            "sizeBytes": 256937
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-simulate-control-1",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 6,
+      "sizeBytes": 861743,
+      "manifest": {
+        "initial": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-simulate-control-5",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 6,
+      "sizeBytes": 861744,
+      "manifest": {
+        "initial": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-simulate-halfstep",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 6,
+      "sizeBytes": 861744,
+      "manifest": {
+        "initial": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-simulate-primary-128",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 6,
+      "sizeBytes": 2565682,
+      "manifest": {
+        "initial": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-simulate-primary-64",
+      "state": "released",
+      "isFinal": false,
+      "fileCount": 6,
+      "sizeBytes": 665135,
+      "manifest": {
+        "initial": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "final": [
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "inputs": [
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          }
+        ],
+        "outputs": [
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          }
+        ]
+      }
+    },
+    {
+      "activityId": "community-turing-schnakenberg-v1-validate",
+      "state": "sealed",
+      "isFinal": true,
+      "fileCount": 2,
+      "sizeBytes": 6000,
+      "manifest": {
+        "initial": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "pattern-emergence.gif",
+            "digest": "sha256:2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+            "sizeBytes": 188902
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          },
+          {
+            "path": "turing-pattern-selection.png",
+            "digest": "sha256:a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081",
+            "sizeBytes": 256937
+          }
+        ],
+        "final": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "manifest.json",
+            "digest": "sha256:15c4311da030c8e7ab6d67e51064b64a936f4c788cc7e44884ecdf8c2d4ef090",
+            "sizeBytes": 1771
+          },
+          {
+            "path": "pattern-emergence.gif",
+            "digest": "sha256:2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+            "sizeBytes": 188902
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          },
+          {
+            "path": "turing-pattern-selection.png",
+            "digest": "sha256:a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081",
+            "sizeBytes": 256937
+          },
+          {
+            "path": "validation.json",
+            "digest": "sha256:cd74f61fe3c20ab6a800f5c6c66da7c98bc48e8af22a7a31aadf5a2ce04837fb",
+            "sizeBytes": 4229
+          }
+        ],
+        "inputs": [
+          {
+            "path": "analysis.json",
+            "digest": "sha256:3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+            "sizeBytes": 2014
+          },
+          {
+            "path": "branches/control-1/result.npz",
+            "digest": "sha256:b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-1/summary.json",
+            "digest": "sha256:320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+            "sizeBytes": 307
+          },
+          {
+            "path": "branches/control-5/result.npz",
+            "digest": "sha256:a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/control-5/summary.json",
+            "digest": "sha256:d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/halfstep/result.npz",
+            "digest": "sha256:4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+            "sizeBytes": 327260
+          },
+          {
+            "path": "branches/halfstep/summary.json",
+            "digest": "sha256:85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+            "sizeBytes": 308
+          },
+          {
+            "path": "branches/primary-128/result.npz",
+            "digest": "sha256:4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+            "sizeBytes": 2031196
+          },
+          {
+            "path": "branches/primary-128/summary.json",
+            "digest": "sha256:1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+            "sizeBytes": 310
+          },
+          {
+            "path": "branches/primary-64/result.npz",
+            "digest": "sha256:6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+            "sizeBytes": 130652
+          },
+          {
+            "path": "branches/primary-64/summary.json",
+            "digest": "sha256:8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+            "sizeBytes": 307
+          },
+          {
+            "path": "dispersion.csv",
+            "digest": "sha256:c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+            "sizeBytes": 203808
+          },
+          {
+            "path": "initial-128.npz",
+            "digest": "sha256:3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+            "sizeBytes": 262634
+          },
+          {
+            "path": "initial-64.npz",
+            "digest": "sha256:03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+            "sizeBytes": 66026
+          },
+          {
+            "path": "pattern-emergence.gif",
+            "digest": "sha256:2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+            "sizeBytes": 188902
+          },
+          {
+            "path": "scenario-manifest.json",
+            "digest": "sha256:f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+            "sizeBytes": 1708
+          },
+          {
+            "path": "turing-pattern-selection.png",
+            "digest": "sha256:a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081",
+            "sizeBytes": 256937
+          }
+        ],
+        "outputs": [
+          {
+            "path": "manifest.json",
+            "digest": "sha256:15c4311da030c8e7ab6d67e51064b64a936f4c788cc7e44884ecdf8c2d4ef090",
+            "sizeBytes": 1771
+          },
+          {
+            "path": "validation.json",
+            "digest": "sha256:cd74f61fe3c20ab6a800f5c6c66da7c98bc48e8af22a7a31aadf5a2ce04837fb",
+            "sizeBytes": 4229
+          }
+        ]
+      }
+    }
+  ],
+  "dataObjects": [
+    {
+      "id": "ddfa3c2795607f22872342e85127576a",
+      "name": null,
+      "path": null,
+      "sizeBytes": 2014,
+      "digest": null
+    },
+    {
+      "id": "16f33a2e225a7eb7ea0c02faaa94a1f0",
+      "name": null,
+      "path": null,
+      "sizeBytes": 203808,
+      "digest": null
+    },
+    {
+      "id": "84f1e739a72fb0562788d41ebfd324fb",
+      "name": null,
+      "path": null,
+      "sizeBytes": 262634,
+      "digest": null
+    },
+    {
+      "id": "67cdaf6649f93ce2dc66813776b2a98c",
+      "name": null,
+      "path": null,
+      "sizeBytes": 66026,
+      "digest": null
+    },
+    {
+      "id": "40b6baefc85df8365cd34cebae2f1a7b",
+      "name": null,
+      "path": null,
+      "sizeBytes": 1708,
+      "digest": null
+    },
+    {
+      "id": "1be52399b23a9cdde1f575554e4f81c5",
+      "name": null,
+      "path": null,
+      "sizeBytes": 188902,
+      "digest": null
+    },
+    {
+      "id": "f8427250af3c26d41bfbb4462610c848",
+      "name": null,
+      "path": null,
+      "sizeBytes": 256937,
+      "digest": null
+    },
+    {
+      "id": "c9dfd8b9b6a1894ab953d2a8dc58ea5b",
+      "name": null,
+      "path": null,
+      "sizeBytes": 327260,
+      "digest": null
+    },
+    {
+      "id": "0cd2acc6356ea20e4ec96a08dabf4802",
+      "name": null,
+      "path": null,
+      "sizeBytes": 307,
+      "digest": null
+    },
+    {
+      "id": "acbd35df9c54b791dcf4b8d205ae9e54",
+      "name": null,
+      "path": null,
+      "sizeBytes": 327260,
+      "digest": null
+    },
+    {
+      "id": "1ff512cfb56bb94d56773cf0e2a445a2",
+      "name": null,
+      "path": null,
+      "sizeBytes": 308,
+      "digest": null
+    },
+    {
+      "id": "8323e23fe7f5b16464d1e703a6963608",
+      "name": null,
+      "path": null,
+      "sizeBytes": 327260,
+      "digest": null
+    },
+    {
+      "id": "25aa3616ce7b66172ee7ea3b8e7b3008",
+      "name": null,
+      "path": null,
+      "sizeBytes": 308,
+      "digest": null
+    },
+    {
+      "id": "00f0abe22421543b978fd5c748e46711",
+      "name": null,
+      "path": null,
+      "sizeBytes": 2031196,
+      "digest": null
+    },
+    {
+      "id": "e8db6241bb47762d8cbe0031d332d609",
+      "name": null,
+      "path": null,
+      "sizeBytes": 310,
+      "digest": null
+    },
+    {
+      "id": "ccef6db8da38a624f4da82fea5f4471a",
+      "name": null,
+      "path": null,
+      "sizeBytes": 130652,
+      "digest": null
+    },
+    {
+      "id": "7c1577ae2eda04605cdfac394cb8ffe6",
+      "name": null,
+      "path": null,
+      "sizeBytes": 307,
+      "digest": null
+    },
+    {
+      "id": "77fb315da1148d4a35fa041b125315e0",
+      "name": null,
+      "path": null,
+      "sizeBytes": 1771,
+      "digest": null
+    },
+    {
+      "id": "2dfcd73c7a48a6cb47cef48c25560480",
+      "name": null,
+      "path": null,
+      "sizeBytes": 4229,
+      "digest": null
+    }
+  ]
+}

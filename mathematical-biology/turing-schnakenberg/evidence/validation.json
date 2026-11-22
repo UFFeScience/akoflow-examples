@@ -1,0 +1,103 @@
+{
+  "analysis": {
+    "analyticGrowth": 0.044676318319031516,
+    "resolutionRelativeL2": 5.878835864807414e-11,
+    "summaries": {
+      "control-1": {
+        "branch": "control-1",
+        "dominantShell": 1,
+        "dt": 0.02,
+        "dv": 1.0,
+        "minU": 0.9999999998775123,
+        "minV": 0.8999999999455242,
+        "n": 128,
+        "r2Shell4": 0.9600083513562314,
+        "resultSha256": "b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+        "slopeShell4": -0.4249003274864931
+      },
+      "control-5": {
+        "branch": "control-5",
+        "dominantShell": 4,
+        "dt": 0.02,
+        "dv": 5.0,
+        "minU": 0.9999999999836565,
+        "minV": 0.8999999999947854,
+        "n": 128,
+        "r2Shell4": 0.9999999999935665,
+        "resultSha256": "a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+        "slopeShell4": -0.25739059163918615
+      },
+      "halfstep": {
+        "branch": "halfstep",
+        "dominantShell": 4,
+        "dt": 0.01,
+        "dv": 10.0,
+        "minU": 0.9995801099581944,
+        "minV": 0.8998470580190864,
+        "n": 128,
+        "r2Shell4": 0.9999999999999483,
+        "resultSha256": "4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+        "slopeShell4": 0.044676322906200994
+      },
+      "primary-128": {
+        "branch": "primary-128",
+        "dominantShell": 4,
+        "dt": 0.02,
+        "dv": 10.0,
+        "minU": 0.9995801088299011,
+        "minV": 0.8998470575589865,
+        "n": 128,
+        "r2Shell4": 0.9999999999999483,
+        "resultSha256": "4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+        "slopeShell4": 0.04467627638900089
+      },
+      "primary-64": {
+        "branch": "primary-64",
+        "dominantShell": 4,
+        "dt": 0.02,
+        "dv": 10.0,
+        "minU": 0.9995808919290076,
+        "minV": 0.899847146747793,
+        "n": 64,
+        "r2Shell4": 0.9999999999999483,
+        "resultSha256": "6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+        "slopeShell4": 0.04467627638912754
+      }
+    },
+    "timestepRelativeL2": 3.238940955858578e-06
+  },
+  "checks": {
+    "analyticMode": true,
+    "controlsAnalytic": true,
+    "controlsDecay": true,
+    "dominantMode": true,
+    "equilibrium": true,
+    "finitePositive": true,
+    "measuredGrowth": true,
+    "repeatAnalysis": true,
+    "repeatResults": true,
+    "requiredFiles": true,
+    "resolutionConvergence": true,
+    "timestepConvergence": true
+  },
+  "inventory": {
+    "analysis.json": "3f8ac2196ad675de505193ee6dad4d74f3bea039d6bf2325e902840f30a0ef3f",
+    "branches/control-1/result.npz": "b091f0e3370568f9f9163380eb45f7754257313b32ebef0494ea1190a6612ea3",
+    "branches/control-1/summary.json": "320ce93c26ae2881776fa2e63e5d55ed3fd1c1de9e187a4136a062a78d7080a7",
+    "branches/control-5/result.npz": "a7ca480268b085bac8dc1ec95b58f3a5c245deae7436142d049e7a7aabc61a15",
+    "branches/control-5/summary.json": "d7ff5f4a62acdec6bcbea4f9f2c89cbbc61a957554750022ec71e843563c6501",
+    "branches/halfstep/result.npz": "4e5ee6a0dda27cf7dd4635462c67315ec7d43562c7ed6459f1dafcc7b3b50d1f",
+    "branches/halfstep/summary.json": "85b6ea8e803bd59be870eaa9c641ccddfadc1ba14f9c0ca3191d35c98fdb1303",
+    "branches/primary-128/result.npz": "4fb9286091eaad41aaa0825816cd7974d8c590b28f840ed3d4bbdd7dd6cf0232",
+    "branches/primary-128/summary.json": "1ce641c20f1b595db224ce17c97898edd5466c19508c1f1d88006ab78615e7d4",
+    "branches/primary-64/result.npz": "6ce92bc927a4af49aaa197281cdff645f4f68ffdc005157aa04f0642cebf6ac7",
+    "branches/primary-64/summary.json": "8bfb2fb9cf337df0ab72927ea4836b1c851bc642e894e397788473aff02b4c46",
+    "dispersion.csv": "c2a794b60dac1d61ac374b0ba643ab9e1aa401b8614c1fea66df600c7ee5f575",
+    "initial-128.npz": "3bd9a404a3e34afdd8e50425e36c14503b7763f096235f278114ed0f85ef42d1",
+    "initial-64.npz": "03ea11110056699a94148dbb74eaa979d56e82fb236a2289c99573572817406b",
+    "pattern-emergence.gif": "2d5b3dfe02811f7fa41698653391d0c679a9f4fccfe82c8635911515aa4e35be",
+    "scenario-manifest.json": "f2cf8c69fc535a8e8ebf64de1c1ee70707c7c6d0d9ac5fdaf43a8285c116a4c1",
+    "turing-pattern-selection.png": "a2a6e4561cfee00700ca13eda7e94cc7e9d926f8a7fb85b53df4e24c1a0d5081"
+  },
+  "passed": true
+}

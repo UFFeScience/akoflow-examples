@@ -1,0 +1,5 @@
+id: community-turing-parallel-topology
+name: Community Turing local topology
+version: 1
+executionScopeId: community-turing-parallel-scope
+links: []

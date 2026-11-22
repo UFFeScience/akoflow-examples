@@ -1,0 +1,29 @@
+{
+  "id": "community-turing-schnakenberg-run-v1",
+  "schedulePlanId": "community-turing-schnakenberg-plan-v1",
+  "mode": "real",
+  "seed": 0,
+  "status": "completed",
+  "makespanSeconds": 28.394708395004272,
+  "cost": 0,
+  "activityCount": 9,
+  "completedActivityCount": 9,
+  "breakdown": {
+    "computeSeconds": 44.751787424087524,
+    "transferSeconds": 5.059861183166504,
+    "queueSeconds": 0,
+    "interferenceSeconds": 0,
+    "overheadSeconds": 0
+  },
+  "transferredBytes": 14158779,
+  "kind": "workflow",
+  "title": "community-turing-schnakenberg-run-v1",
+  "workflowId": "community-turing-schnakenberg-v1",
+  "workflowVersionId": "community-turing-schnakenberg-v1-v1",
+  "workflowName": "community-turing-schnakenberg-v1",
+  "environmentNames": [
+    "Community Turing four-slot local Docker"
+  ],
+  "startedAt": "2026-11-22T21:02:56Z",
+  "finishedAt": "2026-11-22T21:03:26Z"
+}

@@ -1,0 +1,12 @@
+{
+  "Id": "sha256:812ef4e0fa23044744ae3cc9e0edafb3241956ee510506753dcbbd43938aeaeb",
+  "RepoTags": [
+    "akoflow/community-turing-schnakenberg:v1"
+  ],
+  "RepoDigests": [
+    "akoflow/community-turing-schnakenberg@sha256:812ef4e0fa23044744ae3cc9e0edafb3241956ee510506753dcbbd43938aeaeb"
+  ],
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Created": "2026-11-22T21:01:07.20606303Z"
+}

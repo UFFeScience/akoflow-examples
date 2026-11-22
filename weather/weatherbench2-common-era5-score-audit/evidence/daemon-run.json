@@ -1,0 +1,299 @@
+{
+  "run": {
+    "id": "community-weatherbench2-score-audit-run-v1",
+    "schedulePlanId": "community-weatherbench2-score-audit-plan-v1",
+    "mode": "real",
+    "seed": 0,
+    "status": "completed",
+    "makespanSeconds": 20.684038877487183,
+    "cost": 0,
+    "activityCount": 10,
+    "completedActivityCount": 10,
+    "breakdown": {
+      "computeSeconds": 11.585512161254883,
+      "transferSeconds": 3.1461431980133057,
+      "queueSeconds": 0,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0
+    },
+    "transferredBytes": 929630,
+    "kind": "workflow",
+    "title": "community-weatherbench2-score-audit-run-v1",
+    "workflowId": "community-weatherbench2-score-audit",
+    "workflowVersionId": "community-weatherbench2-score-audit-v1",
+    "workflowName": "community-weatherbench2-score-audit",
+    "environmentNames": [
+      "Community WeatherBench 2 parallel local Docker"
+    ],
+    "startedAt": "2026-11-22T20:43:45Z",
+    "finishedAt": "2026-11-22T20:44:07Z"
+  },
+  "activities": [
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-verify-inputs",
+      "status": "completed",
+      "startedAt": 1795380226.0684757,
+      "finishedAt": 1795380226.6664047
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-extract-graphcast-t2m",
+      "status": "completed",
+      "startedAt": 1795380228.0576303,
+      "finishedAt": 1795380228.668105
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-extract-graphcast-z500",
+      "status": "completed",
+      "startedAt": 1795380228.0696156,
+      "finishedAt": 1795380228.667479
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-extract-hres-z500",
+      "status": "completed",
+      "startedAt": 1795380229.9760423,
+      "finishedAt": 1795380230.5424957
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-extract-hres-t2m",
+      "status": "completed",
+      "startedAt": 1795380231.0122278,
+      "finishedAt": 1795380231.552469
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-compare-z500",
+      "status": "completed",
+      "startedAt": 1795380232.3769631,
+      "finishedAt": 1795380232.9160104
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-compare-t2m",
+      "status": "completed",
+      "startedAt": 1795380233.4301093,
+      "finishedAt": 1795380233.9413652
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-aggregate",
+      "status": "completed",
+      "startedAt": 1795380236.2158847,
+      "finishedAt": 1795380237.8034556
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-animate-leads",
+      "status": "completed",
+      "startedAt": 1795380239.2427115,
+      "finishedAt": 1795380244.7169607
+    },
+    {
+      "id": "community-weatherbench2-score-audit-run-v1:community-weatherbench2-score-audit-validate",
+      "status": "completed",
+      "startedAt": 1795380246.1920874,
+      "finishedAt": 1795380246.7525146
+    }
+  ],
+  "finalWorkspace": {
+    "id": "workspace-community-weatherbench2-score-audit-run-v1-community-weatherbench2-score-audit-validate",
+    "resourceId": "community-wb2-slot-0",
+    "runtimeId": "community-wb2-local",
+    "state": "sealed",
+    "manifest": {
+      "initial": [
+        {
+          "path": "comparison-t2m.json",
+          "digest": "sha256:f0c7e241769d07b20bf60f3961a4d9ca222b74835c505ddc10d3559bda9b1424",
+          "sizeBytes": 6546
+        },
+        {
+          "path": "comparison-z500.json",
+          "digest": "sha256:798f627878a30ad3bc277b78e216bcd5eeaf0e4ac7916c7b56e110b7e9241d8e",
+          "sizeBytes": 6480
+        },
+        {
+          "path": "curve-graphcast_t2m.json",
+          "digest": "sha256:6e3b01bf5313fd961d01025c534a6ba9cebddf2a353cb4af6bd8720b5caabdbb",
+          "sizeBytes": 927
+        },
+        {
+          "path": "curve-graphcast_z500.json",
+          "digest": "sha256:b13546c2ebadcb8553caf6517369b6a0a3f892f79e9a61a1836578a332402a78",
+          "sizeBytes": 908
+        },
+        {
+          "path": "curve-hres_t2m.json",
+          "digest": "sha256:a995fe062e21db2505c8922c766e2c196f0e1234cfd3726e8c2d2401f5ae6231",
+          "sizeBytes": 914
+        },
+        {
+          "path": "curve-hres_z500.json",
+          "digest": "sha256:c8c1e9093f92071624d976fed556882fccc7e39cc298d972c7d56c0d6525418d",
+          "sizeBytes": 902
+        },
+        {
+          "path": "graphcast-minus-hres.png",
+          "digest": "sha256:e224fc23ae3f79044142b8e6ba8d282bb49caf1c9c06d7bdce058fa35726d3dc",
+          "sizeBytes": 88141
+        },
+        {
+          "path": "input-verification.json",
+          "digest": "sha256:f1bd73e0a8d7cdb62dd5e55f875a192e5b60905810d417860fbe935683ec2ca8",
+          "sizeBytes": 324
+        },
+        {
+          "path": "rmse-by-lead.gif",
+          "digest": "sha256:fb831f57a914212a9b38ee3331b503e301e0d44bd675ee30577a47daaa5b9018",
+          "sizeBytes": 425924
+        },
+        {
+          "path": "rmse-by-lead.png",
+          "digest": "sha256:918862abd2d5cb593f1b3bdb9fc311e158e1cd292ffb0b84f931e53d83e9f907",
+          "sizeBytes": 128329
+        },
+        {
+          "path": "weatherbench2-common-target-scores.csv",
+          "digest": "sha256:a0cda79c11d787c480865cbd2d0b6470666195638318ace7ee46ebdf2d576a2d",
+          "sizeBytes": 3201
+        },
+        {
+          "path": "weatherbench2-common-target-scores.json",
+          "digest": "sha256:c00839b8d1da600b3e1ff53f34c8a57d32f6580ea02b8fd8c481730bd0382fd4",
+          "sizeBytes": 3883
+        }
+      ],
+      "final": [
+        {
+          "path": "comparison-t2m.json",
+          "digest": "sha256:f0c7e241769d07b20bf60f3961a4d9ca222b74835c505ddc10d3559bda9b1424",
+          "sizeBytes": 6546
+        },
+        {
+          "path": "comparison-z500.json",
+          "digest": "sha256:798f627878a30ad3bc277b78e216bcd5eeaf0e4ac7916c7b56e110b7e9241d8e",
+          "sizeBytes": 6480
+        },
+        {
+          "path": "curve-graphcast_t2m.json",
+          "digest": "sha256:6e3b01bf5313fd961d01025c534a6ba9cebddf2a353cb4af6bd8720b5caabdbb",
+          "sizeBytes": 927
+        },
+        {
+          "path": "curve-graphcast_z500.json",
+          "digest": "sha256:b13546c2ebadcb8553caf6517369b6a0a3f892f79e9a61a1836578a332402a78",
+          "sizeBytes": 908
+        },
+        {
+          "path": "curve-hres_t2m.json",
+          "digest": "sha256:a995fe062e21db2505c8922c766e2c196f0e1234cfd3726e8c2d2401f5ae6231",
+          "sizeBytes": 914
+        },
+        {
+          "path": "curve-hres_z500.json",
+          "digest": "sha256:c8c1e9093f92071624d976fed556882fccc7e39cc298d972c7d56c0d6525418d",
+          "sizeBytes": 902
+        },
+        {
+          "path": "graphcast-minus-hres.png",
+          "digest": "sha256:e224fc23ae3f79044142b8e6ba8d282bb49caf1c9c06d7bdce058fa35726d3dc",
+          "sizeBytes": 88141
+        },
+        {
+          "path": "input-verification.json",
+          "digest": "sha256:f1bd73e0a8d7cdb62dd5e55f875a192e5b60905810d417860fbe935683ec2ca8",
+          "sizeBytes": 324
+        },
+        {
+          "path": "rmse-by-lead.gif",
+          "digest": "sha256:fb831f57a914212a9b38ee3331b503e301e0d44bd675ee30577a47daaa5b9018",
+          "sizeBytes": 425924
+        },
+        {
+          "path": "rmse-by-lead.png",
+          "digest": "sha256:918862abd2d5cb593f1b3bdb9fc311e158e1cd292ffb0b84f931e53d83e9f907",
+          "sizeBytes": 128329
+        },
+        {
+          "path": "validation.json",
+          "digest": "sha256:191f314a6449620b194317b4ddb23ad5bc1c97555ce6d3fb2f60dc073a0b7c43",
+          "sizeBytes": 1681
+        },
+        {
+          "path": "weatherbench2-common-target-scores.csv",
+          "digest": "sha256:a0cda79c11d787c480865cbd2d0b6470666195638318ace7ee46ebdf2d576a2d",
+          "sizeBytes": 3201
+        },
+        {
+          "path": "weatherbench2-common-target-scores.json",
+          "digest": "sha256:c00839b8d1da600b3e1ff53f34c8a57d32f6580ea02b8fd8c481730bd0382fd4",
+          "sizeBytes": 3883
+        }
+      ],
+      "inputs": [
+        {
+          "path": "comparison-t2m.json",
+          "digest": "sha256:f0c7e241769d07b20bf60f3961a4d9ca222b74835c505ddc10d3559bda9b1424",
+          "sizeBytes": 6546
+        },
+        {
+          "path": "comparison-z500.json",
+          "digest": "sha256:798f627878a30ad3bc277b78e216bcd5eeaf0e4ac7916c7b56e110b7e9241d8e",
+          "sizeBytes": 6480
+        },
+        {
+          "path": "curve-graphcast_t2m.json",
+          "digest": "sha256:6e3b01bf5313fd961d01025c534a6ba9cebddf2a353cb4af6bd8720b5caabdbb",
+          "sizeBytes": 927
+        },
+        {
+          "path": "curve-graphcast_z500.json",
+          "digest": "sha256:b13546c2ebadcb8553caf6517369b6a0a3f892f79e9a61a1836578a332402a78",
+          "sizeBytes": 908
+        },
+        {
+          "path": "curve-hres_t2m.json",
+          "digest": "sha256:a995fe062e21db2505c8922c766e2c196f0e1234cfd3726e8c2d2401f5ae6231",
+          "sizeBytes": 914
+        },
+        {
+          "path": "curve-hres_z500.json",
+          "digest": "sha256:c8c1e9093f92071624d976fed556882fccc7e39cc298d972c7d56c0d6525418d",
+          "sizeBytes": 902
+        },
+        {
+          "path": "graphcast-minus-hres.png",
+          "digest": "sha256:e224fc23ae3f79044142b8e6ba8d282bb49caf1c9c06d7bdce058fa35726d3dc",
+          "sizeBytes": 88141
+        },
+        {
+          "path": "input-verification.json",
+          "digest": "sha256:f1bd73e0a8d7cdb62dd5e55f875a192e5b60905810d417860fbe935683ec2ca8",
+          "sizeBytes": 324
+        },
+        {
+          "path": "rmse-by-lead.gif",
+          "digest": "sha256:fb831f57a914212a9b38ee3331b503e301e0d44bd675ee30577a47daaa5b9018",
+          "sizeBytes": 425924
+        },
+        {
+          "path": "rmse-by-lead.png",
+          "digest": "sha256:918862abd2d5cb593f1b3bdb9fc311e158e1cd292ffb0b84f931e53d83e9f907",
+          "sizeBytes": 128329
+        },
+        {
+          "path": "weatherbench2-common-target-scores.csv",
+          "digest": "sha256:a0cda79c11d787c480865cbd2d0b6470666195638318ace7ee46ebdf2d576a2d",
+          "sizeBytes": 3201
+        },
+        {
+          "path": "weatherbench2-common-target-scores.json",
+          "digest": "sha256:c00839b8d1da600b3e1ff53f34c8a57d32f6580ea02b8fd8c481730bd0382fd4",
+          "sizeBytes": 3883
+        }
+      ],
+      "outputs": [
+        {
+          "path": "validation.json",
+          "digest": "sha256:191f314a6449620b194317b4ddb23ad5bc1c97555ce6d3fb2f60dc073a0b7c43",
+          "sizeBytes": 1681
+        }
+      ]
+    }
+  }
+}

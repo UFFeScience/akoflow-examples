@@ -1,0 +1,72 @@
+[
+  {
+    "activityId": "community-weatherbench2-score-audit-verify-inputs",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380226.0684757,
+    "finishedAt": 1795380226.6664047
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-extract-graphcast-t2m",
+    "resourceId": "community-wb2-slot-1",
+    "status": "completed",
+    "startedAt": 1795380228.0576303,
+    "finishedAt": 1795380228.668105
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-extract-graphcast-z500",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380228.0696156,
+    "finishedAt": 1795380228.667479
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-extract-hres-z500",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380229.9760423,
+    "finishedAt": 1795380230.5424957
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-extract-hres-t2m",
+    "resourceId": "community-wb2-slot-1",
+    "status": "completed",
+    "startedAt": 1795380231.0122278,
+    "finishedAt": 1795380231.552469
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-compare-z500",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380232.3769631,
+    "finishedAt": 1795380232.9160104
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-compare-t2m",
+    "resourceId": "community-wb2-slot-1",
+    "status": "completed",
+    "startedAt": 1795380233.4301093,
+    "finishedAt": 1795380233.9413652
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-aggregate",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380236.2158847,
+    "finishedAt": 1795380237.8034556
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-animate-leads",
+    "resourceId": "community-wb2-slot-1",
+    "status": "completed",
+    "startedAt": 1795380239.2427115,
+    "finishedAt": 1795380244.7169607
+  },
+  {
+    "activityId": "community-weatherbench2-score-audit-validate",
+    "resourceId": "community-wb2-slot-0",
+    "status": "completed",
+    "startedAt": 1795380246.1920874,
+    "finishedAt": 1795380246.7525146
+  }
+]

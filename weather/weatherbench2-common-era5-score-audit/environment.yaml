@@ -1,0 +1,13 @@
+environment: {id: community-wb2-parallel, name: Community WeatherBench 2 parallel local Docker, status: ready}
+version: {id: community-wb2-parallel-v1, environmentId: community-wb2-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-wb2-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-wb2-parallel-v1, id: community-wb2-local, name: WeatherBench 2 offline CPU audit, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-wb2-slot-0, environmentVersionId: community-wb2-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-wb2-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-wb2-slot-1, environmentVersionId: community-wb2-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-wb2-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-wb2-slot-0, runtimeId: community-wb2-local, enabled: true}
+  - {resourceId: community-wb2-slot-1, runtimeId: community-wb2-local, enabled: true}

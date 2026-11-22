@@ -1,0 +1,15 @@
+name: community-weatherbench2-score-audit
+spec:
+  namespace: community-explorer
+  image: akoflow/community-weatherbench2-score-audit:v1
+  activities:
+    - {name: verify-inputs, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, verify, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: extract-graphcast-z500, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, graphcast, --variable, z500]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
+    - {name: extract-graphcast-t2m, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, graphcast, --variable, t2m]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
+    - {name: extract-hres-z500, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, hres, --variable, z500]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
+    - {name: extract-hres-t2m, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, hres, --variable, t2m]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
+    - {name: compare-z500, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, compare, --output, ., --variable, z500]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [extract-graphcast-z500, extract-hres-z500]}
+    - {name: compare-t2m, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, compare, --output, ., --variable, t2m]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [extract-graphcast-t2m, extract-hres-t2m]}
+    - {name: aggregate, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [compare-z500, compare-t2m]}
+    - {name: animate-leads, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, animate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-wb2-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [animate-leads]}

@@ -1,0 +1,3 @@
+id: community-wb2-parallel-scope
+name: Community WeatherBench 2 two-slot scope
+environmentVersionIds: [community-wb2-parallel-v1]

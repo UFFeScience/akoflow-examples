@@ -1,0 +1,26 @@
+{
+  "runId": "community-weatherbench2-score-audit-run-v1",
+  "status": "completed",
+  "workflowVersionId": "community-weatherbench2-score-audit-v1",
+  "schedulePlanId": "community-weatherbench2-score-audit-plan-v1",
+  "environmentNames": [
+    "Community WeatherBench 2 parallel local Docker"
+  ],
+  "makespanSeconds": 20.684038877487183,
+  "computeSeconds": 11.585512161254883,
+  "transferSeconds": 3.1461431980133057,
+  "transferredBytes": 929630,
+  "activityCount": 10,
+  "completedActivityCount": 10,
+  "measuredOverlap": {
+    "activities": [
+      "extract-graphcast-t2m",
+      "extract-graphcast-z500"
+    ],
+    "start": 1795380228.0696156,
+    "finish": 1795380228.667479,
+    "seconds": 0.5978634357452393
+  },
+  "speedupClaim": false,
+  "imageDigest": "sha256:1189e4bf1f8abcc6b5cb6fbfe4db954fc5dca6543e34487c2b4a9e24f3ba459c"
+}

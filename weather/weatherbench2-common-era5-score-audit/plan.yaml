@@ -1,0 +1,21 @@
+plan:
+  id: community-weatherbench2-score-audit-plan-v1
+  workflowVersionId: community-weatherbench2-score-audit-v1
+  executionScopeId: community-wb2-parallel-scope
+  networkTopologyId: community-wb2-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: wb2-verify, activityId: community-weatherbench2-score-audit-verify-inputs, resourceId: community-wb2-slot-0, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-gc-z, activityId: community-weatherbench2-score-audit-extract-graphcast-z500, resourceId: community-wb2-slot-0, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-gc-t, activityId: community-weatherbench2-score-audit-extract-graphcast-t2m, resourceId: community-wb2-slot-1, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-hr-z, activityId: community-weatherbench2-score-audit-extract-hres-z500, resourceId: community-wb2-slot-0, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-hr-t, activityId: community-weatherbench2-score-audit-extract-hres-t2m, resourceId: community-wb2-slot-1, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-cmp-z, activityId: community-weatherbench2-score-audit-compare-z500, resourceId: community-wb2-slot-0, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-cmp-t, activityId: community-weatherbench2-score-audit-compare-t2m, resourceId: community-wb2-slot-1, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-aggregate, activityId: community-weatherbench2-score-audit-aggregate, resourceId: community-wb2-slot-0, orderOnResource: 4, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-animate, activityId: community-weatherbench2-score-audit-animate-leads, resourceId: community-wb2-slot-1, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-validate, activityId: community-weatherbench2-score-audit-validate, resourceId: community-wb2-slot-0, orderOnResource: 5, metadata: {runtimeId: community-wb2-local}}

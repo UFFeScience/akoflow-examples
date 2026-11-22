@@ -1,0 +1,5 @@
+id: community-wb2-parallel-topology
+name: Community WeatherBench 2 local topology
+version: 1
+executionScopeId: community-wb2-parallel-scope
+links: []

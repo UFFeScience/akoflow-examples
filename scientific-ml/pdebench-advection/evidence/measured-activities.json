@@ -1,0 +1,9 @@
+[
+  {"activity":"prepare","resource":"slot-0","startedAt":1795375402.7207057,"finishedAt":1795375405.1469214},
+  {"activity":"infer-fno","resource":"slot-0","startedAt":1795375406.8606348,"finishedAt":1795375432.356944},
+  {"activity":"infer-unet","resource":"slot-1","startedAt":1795375406.8761938,"finishedAt":1795375527.47079},
+  {"activity":"metrics-fno","resource":"slot-0","startedAt":1795375433.6566348,"finishedAt":1795375435.6428473},
+  {"activity":"metrics-unet","resource":"slot-1","startedAt":1795375529.122292,"finishedAt":1795375531.2365527},
+  {"activity":"compare","resource":"slot-0","startedAt":1795375532.8401122,"finishedAt":1795375539.1937313},
+  {"activity":"validate","resource":"slot-0","startedAt":1795375540.4736176,"finishedAt":1795375542.113013}
+]

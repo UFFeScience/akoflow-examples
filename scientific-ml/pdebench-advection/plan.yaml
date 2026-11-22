@@ -1,0 +1,18 @@
+plan:
+  id: community-pdebench-advection-plan-v1
+  workflowVersionId: community-pdebench-advection-v1-v1
+  executionScopeId: community-pdebench-parallel-scope
+  networkTopologyId: community-pdebench-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 900, cost: 0, feasible: true}
+  assignments:
+    - {id: pde-prepare, activityId: community-pdebench-advection-v1-prepare, resourceId: community-pdebench-slot-0, orderOnResource: 0, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-fno, activityId: community-pdebench-advection-v1-infer-fno, resourceId: community-pdebench-slot-0, orderOnResource: 1, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-unet, activityId: community-pdebench-advection-v1-infer-unet, resourceId: community-pdebench-slot-1, orderOnResource: 0, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-mfno, activityId: community-pdebench-advection-v1-metrics-fno, resourceId: community-pdebench-slot-0, orderOnResource: 2, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-munet, activityId: community-pdebench-advection-v1-metrics-unet, resourceId: community-pdebench-slot-1, orderOnResource: 1, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-compare, activityId: community-pdebench-advection-v1-compare, resourceId: community-pdebench-slot-0, orderOnResource: 3, metadata: {runtimeId: community-pdebench-local}}
+    - {id: pde-validate, activityId: community-pdebench-advection-v1-validate, resourceId: community-pdebench-slot-0, orderOnResource: 4, metadata: {runtimeId: community-pdebench-local}}

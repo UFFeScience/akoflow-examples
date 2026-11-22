@@ -1,0 +1,6 @@
+{
+  "dataset": {"id": 133113, "name": "1D_Advection_Sols_beta4.0.hdf5", "source_size": 8232968312, "range_bytes": 823298048, "range_sha256": "6551dc175b2c345e745a4a0b760025567f9f26e2a0fe3b1eecf068ff0d64afb7", "license": "CC BY 4.0"},
+  "fno": {"archive_id": 133576, "sha256": "075b7c247854bdf8113662b951892a0c817de8d37e8ed28ba9359c94f92e9d04"},
+  "unet": {"archive_id": 133583, "sha256": "e09095a9b32e854d21fc7b9fa117ae82e89a12e82aac2f1ae696084d5e7449dd"},
+  "population": {"samples": 1000, "shape": [1000, 256, 41, 1], "initial_step": 10, "spatial_stride": 4, "temporal_stride": 5}
+}

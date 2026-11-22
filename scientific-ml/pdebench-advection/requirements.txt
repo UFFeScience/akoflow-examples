@@ -1,0 +1,4 @@
+numpy==1.24.4
+torch==1.13.1+cpu
+matplotlib==3.7.5
+Pillow==10.4.0

@@ -1,0 +1,55 @@
+environment:
+  id: community-pdebench-parallel
+  name: Community PDEBench parallel local Docker
+  description: Two isolated CPU slots for the PDEBench advection checkpoint audit
+  status: ready
+version:
+  id: community-pdebench-parallel-v1
+  environmentId: community-pdebench-parallel
+  version: 1
+  status: published
+  networkModel: local
+  interferenceModel: observed
+  costModel: free
+  configurationHash: community-pdebench-parallel-v1
+runtimes:
+  - environmentVersionId: community-pdebench-parallel-v1
+    id: community-pdebench-local
+    name: PDEBench CPU evaluation
+    driver: local
+    mode: execution
+    role: compute
+    capabilities: {batch: true, container: true}
+resources:
+  - id: community-pdebench-slot-0
+    environmentVersionId: community-pdebench-parallel-v1
+    executionTarget: batch
+    type: local_machine
+    name: Local Docker slot 0
+    providerId: local-docker-pdebench-0
+    cpuCores: 1
+    cpuCapacity: 1
+    memoryBytes: 3221225472
+    storageBytes: 2147483648
+    computeSpeedup: 1
+    pricePerSecond: 0
+    schedulable: true
+  - id: community-pdebench-slot-1
+    environmentVersionId: community-pdebench-parallel-v1
+    executionTarget: batch
+    type: local_machine
+    name: Local Docker slot 1
+    providerId: local-docker-pdebench-1
+    cpuCores: 1
+    cpuCapacity: 1
+    memoryBytes: 3221225472
+    storageBytes: 2147483648
+    computeSpeedup: 1
+    pricePerSecond: 0
+    schedulable: true
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-pdebench-slot-0, runtimeId: community-pdebench-local, enabled: true}
+  - {resourceId: community-pdebench-slot-1, runtimeId: community-pdebench-local, enabled: true}

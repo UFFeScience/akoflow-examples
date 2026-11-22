@@ -1,0 +1,16 @@
+{
+  "runId": "community-pdebench-advection-run-v2",
+  "workflowVersionId": "community-pdebench-advection-v1-v1",
+  "schedulePlanId": "community-pdebench-advection-plan-v1",
+  "status": "completed",
+  "activityCount": 7,
+  "completedActivityCount": 7,
+  "makespanSeconds": 139.39230728149414,
+  "computeSeconds": 160.61060881614685,
+  "transferSeconds": 2.827270269393921,
+  "transferredBytes": 252142168,
+  "cost": 0,
+  "imageDigest": "sha256:0efafedf6d9379f9587ad4afa66dfec116ad914cb34796e05cf5dc71b7ef5c6e",
+  "twoWayOverlapSeconds": 25.48075008392334,
+  "overlapInterval": [1795375406.8761938, 1795375432.356944]
+}

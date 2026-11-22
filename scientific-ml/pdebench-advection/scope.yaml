@@ -1,0 +1,3 @@
+id: community-pdebench-parallel-scope
+name: PDEBench advection parallel scope
+environmentVersionIds: [community-pdebench-parallel-v1]

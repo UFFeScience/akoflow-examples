@@ -1,0 +1,5 @@
+id: community-bateman-parallel-topology
+name: Bateman local topology
+version: 1
+executionScopeId: community-bateman-parallel-scope
+links: []

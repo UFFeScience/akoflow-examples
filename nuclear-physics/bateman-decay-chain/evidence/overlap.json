@@ -1,0 +1,9 @@
+{
+  "multi_run_id": "community-bateman-decay-run-v1",
+  "one_slot_run_id": "community-bateman-decay-one-slot-v1",
+  "multi_makespan_seconds": 12.814974308013916,
+  "one_slot_makespan_seconds": 12.492727756500244,
+  "whole_workflow_ratio": 0.9748539057692723,
+  "all_three_solver_overlap_seconds": 0.40065860748291016,
+  "speedup_claimed": false
+}

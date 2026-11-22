@@ -1,0 +1,12 @@
+name: community-bateman-decay-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-bateman-decay:v1
+  activities:
+    - {name: prepare-manifest, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi}
+    - {name: solve-transient, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, transient]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: solve-secular, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, secular]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: solve-repeated-root, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, repeated]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: aggregate-audit, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [solve-transient, solve-secular, solve-repeated-root]}
+    - {name: render-results, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [aggregate-audit]}
+    - {name: validate, runtime: community-bateman-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [render-results]}

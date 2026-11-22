@@ -1,0 +1,53 @@
+{
+  "activities": [
+    {
+      "name": "community-bateman-decay-v1-prepare-manifest",
+      "resource": "community-bateman-slot-0",
+      "started_at": 1795387192.4761088,
+      "finished_at": 1795387192.651222,
+      "runtime_seconds": 0.17511320114135742
+    },
+    {
+      "name": "community-bateman-decay-v1-solve-transient",
+      "resource": "community-bateman-slot-0",
+      "started_at": 1795387194.5076559,
+      "finished_at": 1795387194.9663188,
+      "runtime_seconds": 0.4586629867553711
+    },
+    {
+      "name": "community-bateman-decay-v1-solve-repeated-root",
+      "resource": "community-bateman-slot-2",
+      "started_at": 1795387194.5655613,
+      "finished_at": 1795387194.989348,
+      "runtime_seconds": 0.42378664016723633
+    },
+    {
+      "name": "community-bateman-decay-v1-solve-secular",
+      "resource": "community-bateman-slot-1",
+      "started_at": 1795387194.5656602,
+      "finished_at": 1795387194.991607,
+      "runtime_seconds": 0.4259467124938965
+    },
+    {
+      "name": "community-bateman-decay-v1-aggregate-audit",
+      "resource": "community-bateman-slot-0",
+      "started_at": 1795387198.1705508,
+      "finished_at": 1795387198.3639581,
+      "runtime_seconds": 0.19340729713439941
+    },
+    {
+      "name": "community-bateman-decay-v1-render-results",
+      "resource": "community-bateman-slot-0",
+      "started_at": 1795387199.2707367,
+      "finished_at": 1795387200.4925456,
+      "runtime_seconds": 1.221808910369873
+    },
+    {
+      "name": "community-bateman-decay-v1-validate",
+      "resource": "community-bateman-slot-0",
+      "started_at": 1795387205.0520003,
+      "finished_at": 1795387205.291083,
+      "runtime_seconds": 0.23908281326293945
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+environment: {id: community-bateman-parallel, name: Community Bateman parallel local Docker, status: ready}
+version: {id: community-bateman-parallel-v1, environmentId: community-bateman-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-bateman-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-bateman-parallel-v1, id: community-bateman-local, name: Bateman standard-library CPU, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-bateman-slot-0, environmentVersionId: community-bateman-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-bateman-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 134217728, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-bateman-slot-1, environmentVersionId: community-bateman-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-bateman-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 134217728, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-bateman-slot-2, environmentVersionId: community-bateman-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-bateman-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 134217728, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-bateman-slot-0, runtimeId: community-bateman-local, enabled: true}
+  - {resourceId: community-bateman-slot-1, runtimeId: community-bateman-local, enabled: true}
+  - {resourceId: community-bateman-slot-2, runtimeId: community-bateman-local, enabled: true}

@@ -1,0 +1,3 @@
+id: community-bateman-parallel-scope
+name: Bateman local execution scope
+environmentVersionIds: [community-bateman-parallel-v1]

@@ -1,0 +1,18 @@
+plan:
+  id: community-bateman-decay-one-slot-plan-v1
+  workflowVersionId: community-bateman-decay-v1-v1
+  executionScopeId: community-bateman-parallel-scope
+  networkTopologyId: community-bateman-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: one-prepare, activityId: community-bateman-decay-v1-prepare-manifest, resourceId: community-bateman-slot-0, orderOnResource: 0, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-transient, activityId: community-bateman-decay-v1-solve-transient, resourceId: community-bateman-slot-0, orderOnResource: 1, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-secular, activityId: community-bateman-decay-v1-solve-secular, resourceId: community-bateman-slot-0, orderOnResource: 2, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-repeated, activityId: community-bateman-decay-v1-solve-repeated-root, resourceId: community-bateman-slot-0, orderOnResource: 3, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-aggregate, activityId: community-bateman-decay-v1-aggregate-audit, resourceId: community-bateman-slot-0, orderOnResource: 4, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-render, activityId: community-bateman-decay-v1-render-results, resourceId: community-bateman-slot-0, orderOnResource: 5, metadata: {runtimeId: community-bateman-local}}
+    - {id: one-validate, activityId: community-bateman-decay-v1-validate, resourceId: community-bateman-slot-0, orderOnResource: 6, metadata: {runtimeId: community-bateman-local}}

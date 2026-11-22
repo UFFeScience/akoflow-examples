@@ -1,0 +1,9 @@
+{
+  "id": "sha256:f8e693478378338d69a9c8955130735c0947bb8fe33129b5d56a0f5433933e58",
+  "repoDigests": [
+    "akoflow/community-lorenz-sensitivity@sha256:f8e693478378338d69a9c8955130735c0947bb8fe33129b5d56a0f5433933e58"
+  ],
+  "created": "2026-11-22T21:15:04.638246525Z",
+  "architecture": "amd64",
+  "os": "linux"
+}

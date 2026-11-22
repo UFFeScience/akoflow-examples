@@ -1,0 +1,17 @@
+environment: {id: community-lorenz-parallel, name: Community Lorenz four-slot local Docker, status: ready}
+version: {id: community-lorenz-parallel-v1, environmentId: community-lorenz-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-lorenz-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-lorenz-parallel-v1, id: community-lorenz-local, name: Lorenz CPU simulation, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-lorenz-slot-0, environmentVersionId: community-lorenz-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-lorenz-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-lorenz-slot-1, environmentVersionId: community-lorenz-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-lorenz-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-lorenz-slot-2, environmentVersionId: community-lorenz-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-lorenz-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-lorenz-slot-3, environmentVersionId: community-lorenz-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-lorenz-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-lorenz-slot-0, runtimeId: community-lorenz-local, enabled: true}
+  - {resourceId: community-lorenz-slot-1, runtimeId: community-lorenz-local, enabled: true}
+  - {resourceId: community-lorenz-slot-2, runtimeId: community-lorenz-local, enabled: true}
+  - {resourceId: community-lorenz-slot-3, runtimeId: community-lorenz-local, enabled: true}

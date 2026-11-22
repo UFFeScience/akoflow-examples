@@ -1,0 +1,5 @@
+id: community-lorenz-parallel-topology
+name: Community Lorenz local topology
+version: 1
+executionScopeId: community-lorenz-parallel-scope
+links: []

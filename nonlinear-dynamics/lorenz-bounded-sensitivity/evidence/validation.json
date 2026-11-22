@@ -1,0 +1,80 @@
+{
+  "checks": {
+    "bounded": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true,
+      "reference": true
+    },
+    "gallery": true,
+    "hashes": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true,
+      "reference": true
+    },
+    "max_separation": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true
+    },
+    "rows": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true,
+      "reference": true
+    },
+    "ten_by_34": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true
+    },
+    "unit_crossing": {
+      "perturb-x": true,
+      "perturb-y": true,
+      "perturb-z": true
+    }
+  },
+  "expected_hashes": {
+    "perturb-x": "bea2e6c60ac198737d53b2715192576e065f4f542bfe5716c0f137980d1d5512",
+    "perturb-y": "e6d484ca3d801efbe25cf127766492cf242ac1dbd522d5ecaf7af8cf146275dc",
+    "perturb-z": "c75e5d89ca87b8dfdd6a6761abb980b48c8058a225ddf4da07c3b712245984b7",
+    "reference": "304c89e0a5c2480242873ac136df402f896b1e4c2686e4968f0e39043de7f87e"
+  },
+  "metrics": {
+    "perturb-x": {
+      "crossings": {
+        "0.0001": 21.301000000000002,
+        "0.01": 25.199,
+        "1.0": 31.143,
+        "10.0": 33.549,
+        "1e-06": 14.015
+      },
+      "final": 8.705001497986087,
+      "maximum": 42.544960389509015
+    },
+    "perturb-y": {
+      "crossings": {
+        "0.0001": 21.382,
+        "0.01": 27.283,
+        "1.0": 31.225,
+        "10.0": 33.642,
+        "1e-06": 16.764
+      },
+      "final": 23.360895036892362,
+      "maximum": 47.6891949554666
+    },
+    "perturb-z": {
+      "crossings": {
+        "0.0001": 18.36,
+        "0.01": 21.592,
+        "1.0": 28.878,
+        "10.0": 31.18,
+        "1e-06": 13.056000000000001
+      },
+      "final": 20.559264142649038,
+      "maximum": 46.58162401025586
+    }
+  },
+  "passed": true
+}

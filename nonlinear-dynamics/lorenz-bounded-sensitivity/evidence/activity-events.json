@@ -1,0 +1,82 @@
+[
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-prepare-scenario",
+    "occurredAt": "2026-11-22T21:15:50.284397744Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-prepare-scenario",
+    "occurredAt": "2026-11-22T21:15:50.466920867Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-reference",
+    "occurredAt": "2026-11-22T21:15:52.657137246Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-reference",
+    "occurredAt": "2026-11-22T21:15:52.840602469Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-y",
+    "occurredAt": "2026-11-22T21:15:53.735501325Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-z",
+    "occurredAt": "2026-11-22T21:15:53.74236754Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-z",
+    "occurredAt": "2026-11-22T21:15:53.966563784Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-y",
+    "occurredAt": "2026-11-22T21:15:53.978049254Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-x",
+    "occurredAt": "2026-11-22T21:15:53.98379977Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-integrate-perturb-x",
+    "occurredAt": "2026-11-22T21:15:54.156034044Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-aggregate-analysis",
+    "occurredAt": "2026-11-22T21:15:56.692007184Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-aggregate-analysis",
+    "occurredAt": "2026-11-22T21:15:56.865469691Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-render-results",
+    "occurredAt": "2026-11-22T21:15:58.725172475Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-render-results",
+    "occurredAt": "2026-11-22T21:16:05.561336313Z"
+  },
+  {
+    "eventType": "activity.started",
+    "activityId": "community-lorenz-sensitivity-v1-validate",
+    "occurredAt": "2026-11-22T21:16:06.638319338Z"
+  },
+  {
+    "eventType": "activity.completed",
+    "activityId": "community-lorenz-sensitivity-v1-validate",
+    "occurredAt": "2026-11-22T21:16:06.880356743Z"
+  }
+]

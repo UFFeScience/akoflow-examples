@@ -1,0 +1,9 @@
+{
+  "twoWayOverlapStart": 1795382153.742367,
+  "twoWayOverlapEnd": 1795382153.966563,
+  "twoWayOverlapSeconds": 0.2241959571838379,
+  "activities": [
+    "community-lorenz-sensitivity-v1-integrate-perturb-y",
+    "community-lorenz-sensitivity-v1-integrate-perturb-z"
+  ]
+}

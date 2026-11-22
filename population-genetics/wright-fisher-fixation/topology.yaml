@@ -1,0 +1,6 @@
+id: community-wf-parallel-topology
+name: Wright-Fisher local topology
+version: 1
+executionScopeId: community-wf-parallel-scope
+links: []
+

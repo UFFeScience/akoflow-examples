@@ -1,0 +1,19 @@
+{
+  "runId": "community-wright-fisher-run-v1",
+  "status": "completed",
+  "workflowVersionId": "community-wright-fisher-fixation-v1",
+  "schedulePlanId": "community-wright-fisher-plan-v1",
+  "startedAt": "2026-11-22T20:28:10Z",
+  "finishedAt": "2026-11-22T20:28:45Z",
+  "makespanSeconds": 33.38196539878845,
+  "activityCount": 28,
+  "completedActivityCount": 28,
+  "breakdown": {
+    "computeSeconds": 41.20016932487488,
+    "transferSeconds": 20.539817810058594,
+    "queueSeconds": 0,
+    "interferenceSeconds": 0,
+    "overheadSeconds": 0
+  },
+  "transferredBytes": 2064585
+}

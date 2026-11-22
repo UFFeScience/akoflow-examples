@@ -1,0 +1,40 @@
+plan:
+  id: community-wright-fisher-plan-v1
+  workflowVersionId: community-wright-fisher-fixation-v1
+  executionScopeId: community-wf-parallel-scope
+  networkTopologyId: community-wf-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 300, cost: 0, feasible: true}
+  assignments:
+    - {id: wf-prepare, activityId: community-wright-fisher-fixation-prepare, resourceId: community-wf-slot-0, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-005-0, activityId: community-wright-fisher-fixation-sim-p005-s0, resourceId: community-wf-slot-0, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-005-1, activityId: community-wright-fisher-fixation-sim-p005-s1, resourceId: community-wf-slot-1, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-005-2, activityId: community-wright-fisher-fixation-sim-p005-s2, resourceId: community-wf-slot-2, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-005-3, activityId: community-wright-fisher-fixation-sim-p005-s3, resourceId: community-wf-slot-3, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-010-0, activityId: community-wright-fisher-fixation-sim-p010-s0, resourceId: community-wf-slot-0, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-010-1, activityId: community-wright-fisher-fixation-sim-p010-s1, resourceId: community-wf-slot-1, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-010-2, activityId: community-wright-fisher-fixation-sim-p010-s2, resourceId: community-wf-slot-2, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-010-3, activityId: community-wright-fisher-fixation-sim-p010-s3, resourceId: community-wf-slot-3, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-025-0, activityId: community-wright-fisher-fixation-sim-p025-s0, resourceId: community-wf-slot-0, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-025-1, activityId: community-wright-fisher-fixation-sim-p025-s1, resourceId: community-wf-slot-1, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-025-2, activityId: community-wright-fisher-fixation-sim-p025-s2, resourceId: community-wf-slot-2, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-025-3, activityId: community-wright-fisher-fixation-sim-p025-s3, resourceId: community-wf-slot-3, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-050-0, activityId: community-wright-fisher-fixation-sim-p050-s0, resourceId: community-wf-slot-0, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-050-1, activityId: community-wright-fisher-fixation-sim-p050-s1, resourceId: community-wf-slot-1, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-050-2, activityId: community-wright-fisher-fixation-sim-p050-s2, resourceId: community-wf-slot-2, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-050-3, activityId: community-wright-fisher-fixation-sim-p050-s3, resourceId: community-wf-slot-3, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-075-0, activityId: community-wright-fisher-fixation-sim-p075-s0, resourceId: community-wf-slot-0, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-075-1, activityId: community-wright-fisher-fixation-sim-p075-s1, resourceId: community-wf-slot-1, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-075-2, activityId: community-wright-fisher-fixation-sim-p075-s2, resourceId: community-wf-slot-2, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-075-3, activityId: community-wright-fisher-fixation-sim-p075-s3, resourceId: community-wf-slot-3, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-agg-005, activityId: community-wright-fisher-fixation-aggregate-p005, resourceId: community-wf-slot-0, orderOnResource: 6, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-agg-010, activityId: community-wright-fisher-fixation-aggregate-p010, resourceId: community-wf-slot-1, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-agg-025, activityId: community-wright-fisher-fixation-aggregate-p025, resourceId: community-wf-slot-2, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-agg-050, activityId: community-wright-fisher-fixation-aggregate-p050, resourceId: community-wf-slot-3, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-agg-075, activityId: community-wright-fisher-fixation-aggregate-p075, resourceId: community-wf-slot-0, orderOnResource: 7, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-render, activityId: community-wright-fisher-fixation-render, resourceId: community-wf-slot-0, orderOnResource: 8, metadata: {runtimeId: community-wf-local}}
+    - {id: wf-validate, activityId: community-wright-fisher-fixation-validate, resourceId: community-wf-slot-0, orderOnResource: 9, metadata: {runtimeId: community-wf-local}}
+

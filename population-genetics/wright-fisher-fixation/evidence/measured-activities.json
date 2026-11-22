@@ -1,0 +1,162 @@
+[
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p005-s2",
+    "resourceId": "community-wf-slot-2",
+    "status": "completed",
+    "startedAt": 1795379293.1023786,
+    "finishedAt": 1795379294.1378934,
+    "runtimeSeconds": 1.0355148315429688
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p005-s0",
+    "resourceId": "community-wf-slot-0",
+    "status": "completed",
+    "startedAt": 1795379293.122126,
+    "finishedAt": 1795379294.147565,
+    "runtimeSeconds": 1.0254387855529785
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p005-s3",
+    "resourceId": "community-wf-slot-3",
+    "status": "completed",
+    "startedAt": 1795379293.202023,
+    "finishedAt": 1795379294.250123,
+    "runtimeSeconds": 1.0480999946594238
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p005-s1",
+    "resourceId": "community-wf-slot-1",
+    "status": "completed",
+    "startedAt": 1795379293.2714424,
+    "finishedAt": 1795379294.342327,
+    "runtimeSeconds": 1.0708847045898438
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p010-s0",
+    "resourceId": "community-wf-slot-0",
+    "status": "completed",
+    "startedAt": 1795379295.426646,
+    "finishedAt": 1795379296.6901457,
+    "runtimeSeconds": 1.2634997367858887
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p010-s1",
+    "resourceId": "community-wf-slot-1",
+    "status": "completed",
+    "startedAt": 1795379296.7265024,
+    "finishedAt": 1795379297.9975038,
+    "runtimeSeconds": 1.2710013389587402
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p010-s3",
+    "resourceId": "community-wf-slot-3",
+    "status": "completed",
+    "startedAt": 1795379296.7691035,
+    "finishedAt": 1795379298.0837138,
+    "runtimeSeconds": 1.314610242843628
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p010-s2",
+    "resourceId": "community-wf-slot-2",
+    "status": "completed",
+    "startedAt": 1795379296.7941751,
+    "finishedAt": 1795379298.1442864,
+    "runtimeSeconds": 1.3501112461090088
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p025-s0",
+    "resourceId": "community-wf-slot-0",
+    "status": "completed",
+    "startedAt": 1795379298.6464622,
+    "finishedAt": 1795379300.6767216,
+    "runtimeSeconds": 2.030259370803833
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p025-s3",
+    "resourceId": "community-wf-slot-3",
+    "status": "completed",
+    "startedAt": 1795379299.6330986,
+    "finishedAt": 1795379301.6066058,
+    "runtimeSeconds": 1.9735071659088135
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p025-s1",
+    "resourceId": "community-wf-slot-1",
+    "status": "completed",
+    "startedAt": 1795379300.0844023,
+    "finishedAt": 1795379302.0173519,
+    "runtimeSeconds": 1.9329495429992676
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p025-s2",
+    "resourceId": "community-wf-slot-2",
+    "status": "completed",
+    "startedAt": 1795379300.1022277,
+    "finishedAt": 1795379302.11895,
+    "runtimeSeconds": 2.0167222023010254
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p050-s3",
+    "resourceId": "community-wf-slot-3",
+    "status": "completed",
+    "startedAt": 1795379302.661687,
+    "finishedAt": 1795379305.0570424,
+    "runtimeSeconds": 2.395355463027954
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p050-s0",
+    "resourceId": "community-wf-slot-0",
+    "status": "completed",
+    "startedAt": 1795379302.6792629,
+    "finishedAt": 1795379305.1906672,
+    "runtimeSeconds": 2.511404275894165
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p050-s2",
+    "resourceId": "community-wf-slot-2",
+    "status": "completed",
+    "startedAt": 1795379303.6433237,
+    "finishedAt": 1795379305.9720283,
+    "runtimeSeconds": 2.328704595565796
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p050-s1",
+    "resourceId": "community-wf-slot-1",
+    "status": "completed",
+    "startedAt": 1795379303.7017028,
+    "finishedAt": 1795379305.9303148,
+    "runtimeSeconds": 2.228611946105957
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p075-s3",
+    "resourceId": "community-wf-slot-3",
+    "status": "completed",
+    "startedAt": 1795379306.8643641,
+    "finishedAt": 1795379308.804154,
+    "runtimeSeconds": 1.9397897720336914
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p075-s0",
+    "resourceId": "community-wf-slot-0",
+    "status": "completed",
+    "startedAt": 1795379306.8957586,
+    "finishedAt": 1795379308.97236,
+    "runtimeSeconds": 2.076601266860962
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p075-s2",
+    "resourceId": "community-wf-slot-2",
+    "status": "completed",
+    "startedAt": 1795379307.5231657,
+    "finishedAt": 1795379309.4237227,
+    "runtimeSeconds": 1.900557041168213
+  },
+  {
+    "activityId": "community-wright-fisher-fixation-sim-p075-s1",
+    "resourceId": "community-wf-slot-1",
+    "status": "completed",
+    "startedAt": 1795379307.5430913,
+    "finishedAt": 1795379309.5587864,
+    "runtimeSeconds": 2.015695095062256
+  }
+]

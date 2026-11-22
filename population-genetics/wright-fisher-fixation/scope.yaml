@@ -1,0 +1,3 @@
+id: community-wf-parallel-scope
+name: Wright-Fisher local execution scope
+environmentVersionIds: [community-wf-parallel-v1]

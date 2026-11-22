@@ -1,0 +1,2 @@
+branch,trials,product_sum,alice_sum,bob_sum,exact_correlation,estimate,standard_error,seed,alice_angle_radians,bob_angle_radians,chsh_sign
+a-prime-b-prime,1000000,707042,-1412,-2326,0.7071067811865475,0.707042,0.0007071067811865476,2026112204,1.5707963267948966,-0.7853981633974483,-1

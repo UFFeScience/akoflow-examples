@@ -1,0 +1,20 @@
+plan:
+  id: community-chsh-singlet-plan-one-slot-v1
+  workflowVersionId: community-chsh-singlet-v1-v1
+  executionScopeId: community-chsh-parallel-scope
+  networkTopologyId: community-chsh-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: chsh-serial-prepare, activityId: community-chsh-singlet-v1-prepare-scenario, resourceId: community-chsh-slot-0, orderOnResource: 0, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-ab, activityId: community-chsh-singlet-v1-sample-a-b, resourceId: community-chsh-slot-0, orderOnResource: 1, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-abp, activityId: community-chsh-singlet-v1-sample-a-b-prime, resourceId: community-chsh-slot-0, orderOnResource: 2, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-apb, activityId: community-chsh-singlet-v1-sample-a-prime-b, resourceId: community-chsh-slot-0, orderOnResource: 3, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-apbp, activityId: community-chsh-singlet-v1-sample-a-prime-b-prime, resourceId: community-chsh-slot-0, orderOnResource: 4, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-local, activityId: community-chsh-singlet-v1-enumerate-local-strategies, resourceId: community-chsh-slot-0, orderOnResource: 5, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-aggregate, activityId: community-chsh-singlet-v1-aggregate-chsh, resourceId: community-chsh-slot-0, orderOnResource: 6, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-render, activityId: community-chsh-singlet-v1-render-results, resourceId: community-chsh-slot-0, orderOnResource: 7, metadata: {runtimeId: community-chsh-local}}
+    - {id: chsh-serial-validate, activityId: community-chsh-singlet-v1-validate, resourceId: community-chsh-slot-0, orderOnResource: 8, metadata: {runtimeId: community-chsh-local}}

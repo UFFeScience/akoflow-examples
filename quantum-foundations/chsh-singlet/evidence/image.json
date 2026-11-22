@@ -1,0 +1,1 @@
+{"architecture":"amd64","base_image":"python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d","image":"akoflow/community-chsh-singlet:v1","image_digest":"sha256:f7e11931b344f65e67a934773645acd31c6f84a029f78541ffa20272b975b999","network_during_scientific_execution":false,"os":"linux"}

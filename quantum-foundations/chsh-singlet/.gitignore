@@ -1,0 +1,4 @@
+outputs/*
+!outputs/reference/
+!outputs/reference/**
+scripts/__pycache__/

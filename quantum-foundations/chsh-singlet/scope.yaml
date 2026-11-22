@@ -1,0 +1,3 @@
+id: community-chsh-parallel-scope
+name: CHSH local execution scope
+environmentVersionIds: [community-chsh-parallel-v1]

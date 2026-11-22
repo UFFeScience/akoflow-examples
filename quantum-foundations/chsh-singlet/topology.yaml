@@ -1,0 +1,5 @@
+id: community-chsh-parallel-topology
+name: CHSH local topology
+version: 1
+executionScopeId: community-chsh-parallel-scope
+links: []

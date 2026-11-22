@@ -1,0 +1,2 @@
+workflow_version,total_trials,total_crossings,exact_probability,probability,probability_standard_error,probability_absolute_error,pi_hat,pi_standard_error_delta,pi_absolute_error,pearson_dispersion
+community-buffon-needle-v1,8000000,5092558,0.6366197723675814,0.63656975,0.0001700496390022007,5.002236758133716e-05,3.1418395234771994,0.0008391613327498881,0.000246869887406298,1.982546191154961

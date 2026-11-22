@@ -1,0 +1,13 @@
+name: community-buffon-needle-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-buffon-needle:v1
+  activities:
+    - {name: prepare-scenario, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: toss-seed-1, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, seed-1]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: toss-seed-2, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, seed-2]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: toss-seed-3, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, seed-3]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: toss-seed-4, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, seed-4]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-probability, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [toss-seed-1, toss-seed-2, toss-seed-3, toss-seed-4]}
+    - {name: render-results, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-probability]}
+    - {name: validate, runtime: community-buffon-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-results]}

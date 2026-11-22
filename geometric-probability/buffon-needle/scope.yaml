@@ -1,0 +1,3 @@
+id: community-buffon-parallel-scope
+name: Buffon local execution scope
+environmentVersionIds: [community-buffon-parallel-v1]

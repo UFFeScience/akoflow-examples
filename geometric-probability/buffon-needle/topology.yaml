@@ -1,0 +1,5 @@
+id: community-buffon-parallel-topology
+name: Buffon local topology
+version: 1
+executionScopeId: community-buffon-parallel-scope
+links: []

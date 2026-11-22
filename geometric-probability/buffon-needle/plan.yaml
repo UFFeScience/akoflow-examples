@@ -1,0 +1,19 @@
+plan:
+  id: community-buffon-needle-plan-v1
+  workflowVersionId: community-buffon-needle-v1-v1
+  executionScopeId: community-buffon-parallel-scope
+  networkTopologyId: community-buffon-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: buffon-prepare, activityId: community-buffon-needle-v1-prepare-scenario, resourceId: community-buffon-slot-0, orderOnResource: 0, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-1, activityId: community-buffon-needle-v1-toss-seed-1, resourceId: community-buffon-slot-0, orderOnResource: 1, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-2, activityId: community-buffon-needle-v1-toss-seed-2, resourceId: community-buffon-slot-1, orderOnResource: 0, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-3, activityId: community-buffon-needle-v1-toss-seed-3, resourceId: community-buffon-slot-2, orderOnResource: 0, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-4, activityId: community-buffon-needle-v1-toss-seed-4, resourceId: community-buffon-slot-3, orderOnResource: 0, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-aggregate, activityId: community-buffon-needle-v1-aggregate-probability, resourceId: community-buffon-slot-0, orderOnResource: 2, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-render, activityId: community-buffon-needle-v1-render-results, resourceId: community-buffon-slot-0, orderOnResource: 3, metadata: {runtimeId: community-buffon-local}}
+    - {id: buffon-validate, activityId: community-buffon-needle-v1-validate, resourceId: community-buffon-slot-0, orderOnResource: 4, metadata: {runtimeId: community-buffon-local}}

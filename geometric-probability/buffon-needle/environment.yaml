@@ -1,0 +1,17 @@
+environment: {id: community-buffon-parallel, name: Community Buffon parallel local Docker, status: ready}
+version: {id: community-buffon-parallel-v1, environmentId: community-buffon-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-buffon-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-buffon-parallel-v1, id: community-buffon-local, name: Buffon standard-library CPU, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-buffon-slot-0, environmentVersionId: community-buffon-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-buffon-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-buffon-slot-1, environmentVersionId: community-buffon-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-buffon-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-buffon-slot-2, environmentVersionId: community-buffon-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-buffon-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-buffon-slot-3, environmentVersionId: community-buffon-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-buffon-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 536870912, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-buffon-slot-0, runtimeId: community-buffon-local, enabled: true}
+  - {resourceId: community-buffon-slot-1, runtimeId: community-buffon-local, enabled: true}
+  - {resourceId: community-buffon-slot-2, runtimeId: community-buffon-local, enabled: true}
+  - {resourceId: community-buffon-slot-3, runtimeId: community-buffon-local, enabled: true}

@@ -2,9 +2,9 @@
 
 This deterministic workflow reproduces Harry Bateman's analytic solution for a synthetic three-member serial transformation. It checks transient equilibrium, secular equilibrium, and the continuous repeated-root limit against an independently coded fixed-step RK4 integration.
 
-![Three synthetic decay regimes](outputs/reference/bateman-regimes.png)
+![Three synthetic decay regimes](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/8e38244/nuclear-physics/bateman-decay-chain/outputs/reference/bateman-regimes.png)
 
-The [activity-equilibrium animation](outputs/reference/activity-equilibrium.gif) shows transient parent and daughter activity evolution. The measured daemon timeline records actual activity intervals.
+The [activity-equilibrium animation](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/8e38244/nuclear-physics/bateman-decay-chain/outputs/reference/activity-equilibrium.gif) shows transient parent and daughter activity evolution. The [measured daemon timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/8e38244/nuclear-physics/bateman-decay-chain/evidence/measured-timeline.png) records actual activity intervals.
 
 ## Measured execution
 

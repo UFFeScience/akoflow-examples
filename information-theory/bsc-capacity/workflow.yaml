@@ -1,0 +1,13 @@
+name: community-bsc-capacity-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-bsc-capacity:v1
+  activities:
+    - {name: prepare-scenario, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: simulate-q001, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, q001]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: simulate-q005, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, q005]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: simulate-q010, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, q010]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: simulate-q020, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, q020]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-capacity, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [simulate-q001, simulate-q005, simulate-q010, simulate-q020]}
+    - {name: render-channel, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-capacity]}
+    - {name: validate, runtime: community-bsc-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-channel]}

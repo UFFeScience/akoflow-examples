@@ -1,0 +1,3 @@
+id: community-bsc-parallel-scope
+name: BSC local execution scope
+environmentVersionIds: [community-bsc-parallel-v1]

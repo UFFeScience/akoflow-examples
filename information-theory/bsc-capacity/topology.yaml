@@ -1,0 +1,5 @@
+id: community-bsc-parallel-topology
+name: BSC local topology
+version: 1
+executionScopeId: community-bsc-parallel-scope
+links: []

@@ -1,0 +1,11 @@
+{
+  "image": "akoflow/community-bsc-capacity:v1",
+  "digest": "sha256:de660e733ce1ea128118b64b5430a3f8534c988ada9c6bc507c4824c623d5b30",
+  "repo_digests": [
+    "akoflow/community-bsc-capacity@sha256:de660e733ce1ea128118b64b5430a3f8534c988ada9c6bc507c4824c623d5b30"
+  ],
+  "platform": {
+    "architecture": "amd64",
+    "os": "linux"
+  }
+}

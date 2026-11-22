@@ -1,0 +1,58 @@
+[
+    {
+        "Id": "sha256:de660e733ce1ea128118b64b5430a3f8534c988ada9c6bc507c4824c623d5b30",
+        "RepoTags": [
+            "akoflow/community-bsc-capacity:v1"
+        ],
+        "RepoDigests": [
+            "akoflow/community-bsc-capacity@sha256:de660e733ce1ea128118b64b5430a3f8534c988ada9c6bc507c4824c623d5b30"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-22T22:05:26.865458986Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.14",
+                "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78",
+                "PYTHONHASHSEED=0"
+            ],
+            "Cmd": [
+                "python3"
+            ],
+            "WorkingDir": "/app"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 195403527,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:9eb9a78eeb101ab215acf43ffb2a709d5fca9ca2a22178564c7ee5cc30774c60",
+                "sha256:f3098f2e4408e57b4f0787f1e18511cd06ddecfad252a0f51f478088fe0052df",
+                "sha256:da331f07f3e9fb1214ced70513485eefe47e1d0a647b4af8fa5afb176b40b2a7",
+                "sha256:f108605b29eebcf199a536318658e173a8b1eb01172bdef33740acc5e50ee9ef",
+                "sha256:bf2eaa3d141fd669451f652b458c45d41fabef22ef056bf6c04a613de7fe1f0e",
+                "sha256:2eaa2d593f5f425a5fcafb06de478a262ece885dcf58af6b094c93b8d42cac7f",
+                "sha256:a87874922ca6418dd316aaaa07e1df7696c1104988059eded8ff6059b9fbaa4b"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-22T22:05:26.965919661Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:de660e733ce1ea128118b64b5430a3f8534c988ada9c6bc507c4824c623d5b30",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "8myalfm3acqiuh01svqb1cmky",
+                    "CreatedAt": "2026-11-22T22:05:26.991335775Z"
+                }
+            ]
+        }
+    }
+]

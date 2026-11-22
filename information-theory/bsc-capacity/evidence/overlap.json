@@ -1,0 +1,8 @@
+{
+  "parallel_run": "community-bsc-capacity-run-v1",
+  "parallel_makespan_seconds": 9.985360860824585,
+  "one_slot_run": "community-bsc-capacity-one-slot-v1",
+  "one_slot_makespan_seconds": 13.795631408691406,
+  "observed_ratio": 1.3815856633499946,
+  "common_branch_overlap_seconds": 0.6850886344909668
+}

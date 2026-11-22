@@ -1,0 +1,19 @@
+plan:
+  id: community-bsc-capacity-plan-v1
+  workflowVersionId: community-bsc-capacity-v1-v1
+  executionScopeId: community-bsc-parallel-scope
+  networkTopologyId: community-bsc-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: bsc-prepare, activityId: community-bsc-capacity-v1-prepare-scenario, resourceId: community-bsc-slot-0, orderOnResource: 0, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-001, activityId: community-bsc-capacity-v1-simulate-q001, resourceId: community-bsc-slot-0, orderOnResource: 1, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-005, activityId: community-bsc-capacity-v1-simulate-q005, resourceId: community-bsc-slot-1, orderOnResource: 0, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-010, activityId: community-bsc-capacity-v1-simulate-q010, resourceId: community-bsc-slot-2, orderOnResource: 0, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-020, activityId: community-bsc-capacity-v1-simulate-q020, resourceId: community-bsc-slot-3, orderOnResource: 0, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-aggregate, activityId: community-bsc-capacity-v1-aggregate-capacity, resourceId: community-bsc-slot-0, orderOnResource: 2, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-render, activityId: community-bsc-capacity-v1-render-channel, resourceId: community-bsc-slot-0, orderOnResource: 3, metadata: {runtimeId: community-bsc-local}}
+    - {id: bsc-validate, activityId: community-bsc-capacity-v1-validate, resourceId: community-bsc-slot-0, orderOnResource: 4, metadata: {runtimeId: community-bsc-local}}

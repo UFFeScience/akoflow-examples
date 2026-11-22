@@ -1,0 +1,21 @@
+environment: {id: community-rrlyrae-parallel, name: Community RR Lyrae parallel local Docker, status: ready}
+version: {id: community-rrlyrae-parallel-v1, environmentId: community-rrlyrae-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-rrlyrae-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-rrlyrae-parallel-v1, id: community-rrlyrae-parallel-local, name: Offline parallel local Docker, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-rrlyrae-slot-0, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-slot-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rrlyrae-slot-1, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-slot-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rrlyrae-slot-2, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-slot-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rrlyrae-slot-3, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-slot-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rrlyrae-slot-4, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 4, providerId: local-docker-slot-4, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rrlyrae-slot-5, environmentVersionId: community-rrlyrae-parallel-v1, type: machine, name: Local Docker slot 5, providerId: local-docker-slot-5, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-rrlyrae-slot-0, runtimeId: community-rrlyrae-parallel-local, enabled: true}
+  - {resourceId: community-rrlyrae-slot-1, runtimeId: community-rrlyrae-parallel-local, enabled: true}
+  - {resourceId: community-rrlyrae-slot-2, runtimeId: community-rrlyrae-parallel-local, enabled: true}
+  - {resourceId: community-rrlyrae-slot-3, runtimeId: community-rrlyrae-parallel-local, enabled: true}
+  - {resourceId: community-rrlyrae-slot-4, runtimeId: community-rrlyrae-parallel-local, enabled: true}
+  - {resourceId: community-rrlyrae-slot-5, runtimeId: community-rrlyrae-parallel-local, enabled: true}

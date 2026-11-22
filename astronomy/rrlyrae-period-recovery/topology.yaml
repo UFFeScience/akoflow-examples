@@ -1,0 +1,5 @@
+id: community-rrlyrae-parallel-topology
+name: Community RR Lyrae local topology
+version: 1
+executionScopeId: community-rrlyrae-parallel-scope
+links: []

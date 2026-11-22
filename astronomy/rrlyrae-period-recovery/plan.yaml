@@ -1,0 +1,24 @@
+plan:
+  id: community-rrlyrae-plan-v2
+  workflowVersionId: community-rrlyrae-period-recovery-v1
+  executionScopeId: community-rrlyrae-parallel-scope
+  networkTopologyId: community-rrlyrae-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted:
+    makespanSeconds: 60
+    cost: 0
+    feasible: true
+  assignments:
+    - {id: community-rrlyrae-v2-assignment-prepare, activityId: community-rrlyrae-period-recovery-prepare-observations, resourceId: community-rrlyrae-slot-0, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-u, activityId: community-rrlyrae-period-recovery-periodogram-u, resourceId: community-rrlyrae-slot-0, orderOnResource: 1, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-g, activityId: community-rrlyrae-period-recovery-periodogram-g, resourceId: community-rrlyrae-slot-1, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-r, activityId: community-rrlyrae-period-recovery-periodogram-r, resourceId: community-rrlyrae-slot-2, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-i, activityId: community-rrlyrae-period-recovery-periodogram-i, resourceId: community-rrlyrae-slot-3, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-z, activityId: community-rrlyrae-period-recovery-periodogram-z, resourceId: community-rrlyrae-slot-4, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-multiband, activityId: community-rrlyrae-period-recovery-periodogram-multiband, resourceId: community-rrlyrae-slot-5, orderOnResource: 0, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-aggregate, activityId: community-rrlyrae-period-recovery-aggregate-results, resourceId: community-rrlyrae-slot-0, orderOnResource: 2, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-animate, activityId: community-rrlyrae-period-recovery-animate-scan, resourceId: community-rrlyrae-slot-1, orderOnResource: 1, metadata: {runtimeId: community-rrlyrae-parallel-local}}
+    - {id: community-rrlyrae-v2-assignment-validate, activityId: community-rrlyrae-period-recovery-validate, resourceId: community-rrlyrae-slot-0, orderOnResource: 3, metadata: {runtimeId: community-rrlyrae-parallel-local}}

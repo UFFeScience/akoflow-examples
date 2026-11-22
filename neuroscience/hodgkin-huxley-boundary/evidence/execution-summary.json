@@ -1,0 +1,28 @@
+{
+  "runId": "community-hodgkin-huxley-boundary-run-v2",
+  "workflowVersionId": "community-hodgkin-huxley-boundary-v2-v1",
+  "schedulePlanId": "community-hodgkin-huxley-boundary-plan-v2",
+  "status": "completed",
+  "activityCount": 15,
+  "makespanSeconds": 25.776877880096436,
+  "computeSeconds": 31.11269783973694,
+  "transferSeconds": 19.34875226020813,
+  "transferredBytes": 4289206,
+  "imageDigest": "sha256:af3d9555e83357ef9410ff6b66bfb471c7c8a8e346ef2394796241219acd29c3",
+  "fourWayOverlap": {
+    "startedAt": 1795369721.3768246,
+    "finishedAt": 1795369723.285186,
+    "seconds": 1.9083614349365234,
+    "activities": ["v00", "v02", "v04", "v05"]
+  },
+  "transitionBracketMv": [6.5, 6.75],
+  "scientificHashes": {
+    "aggregate.json": "04e701281a9090ba79a5cf58eb19a4eb4ece8e8f4e47313cb27f2b7aef22649f",
+    "metrics.csv": "9572ca67a2fd3ea53fcdd4add22c0bc64fd25c75bcaecd2faa55ecfa8f6c484a",
+    "validation.json": "ddde4a02017f3f0044bf35780e01906e11e0bfc3c0e1037fb28b13b855d4a253",
+    "hh-excitation-boundary.png": "93b64fd4fc1dd9b87113ea57d04af2372f756fa269df26709bf35ae2d8549936",
+    "hh-excitation-sweep.gif": "74e2693b4f7606c064694690f8b0760974e9c3a29c2b3af5d73032229b30b5cd"
+  },
+  "speedupClaimed": false,
+  "supersededRetentionRun": "community-hodgkin-huxley-boundary-run-v1"
+}

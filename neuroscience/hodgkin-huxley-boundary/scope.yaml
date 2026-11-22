@@ -1,0 +1,3 @@
+id: community-hh-parallel-scope
+name: Hodgkin-Huxley boundary parallel scope
+environmentVersionIds: [community-hh-parallel-v1]

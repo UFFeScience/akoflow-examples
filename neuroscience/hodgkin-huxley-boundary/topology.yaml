@@ -1,0 +1,5 @@
+id: community-hh-parallel-topology
+name: Hodgkin-Huxley local topology
+version: 1
+executionScopeId: community-hh-parallel-scope
+links: []

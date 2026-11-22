@@ -1,0 +1,13 @@
+[
+  {"activity":"v05","resource":"slot-3","startedAt":1795369721.2388878,"finishedAt":1795369723.2894716},
+  {"activity":"v04","resource":"slot-2","startedAt":1795369721.3007152,"finishedAt":1795369723.285186},
+  {"activity":"v00","resource":"slot-0","startedAt":1795369721.368138,"finishedAt":1795369723.2952833},
+  {"activity":"v02","resource":"slot-1","startedAt":1795369721.3768246,"finishedAt":1795369723.493241},
+  {"activity":"v0675","resource":"slot-3","startedAt":1795369725.1498399,"finishedAt":1795369727.7676983},
+  {"activity":"v0650","resource":"slot-2","startedAt":1795369725.1586084,"finishedAt":1795369727.418116},
+  {"activity":"v0625","resource":"slot-1","startedAt":1795369725.5314336,"finishedAt":1795369727.8141057},
+  {"activity":"v06","resource":"slot-0","startedAt":1795369725.5877848,"finishedAt":1795369727.8825092},
+  {"activity":"v10","resource":"slot-2","startedAt":1795369729.1067195,"finishedAt":1795369731.602612},
+  {"activity":"v08","resource":"slot-1","startedAt":1795369729.1316063,"finishedAt":1795369731.6595592},
+  {"activity":"v07","resource":"slot-0","startedAt":1795369729.3934467,"finishedAt":1795369732.001394}
+]

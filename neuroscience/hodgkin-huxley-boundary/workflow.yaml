@@ -1,0 +1,20 @@
+name: community-hodgkin-huxley-boundary-v2
+spec:
+  namespace: community-explorer
+  image: akoflow/community-hodgkin-huxley:v1
+  activities:
+    - {name: prepare, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: v00, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "0"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v02, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "2"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v04, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "4"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v05, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "5"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v06, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "6"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v0625, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "6.25"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v0650, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "6.5"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v0675, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "6.75"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v07, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "7"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v08, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "8"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: v10, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, scenario, --output, ., --v0, "10"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [v00, v02, v04, v05, v06, v0625, v0650, v0675, v07, v08, v10]}
+    - {name: render, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-hh-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}

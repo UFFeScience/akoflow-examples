@@ -5,7 +5,7 @@ root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
 run_id=${AKOFLOW_RUN_ID:-community-mfc-sod-run-v1}
-plan_id=${AKOFLOW_PLAN_ID:-community-mfc-sod-plan-v1}
+plan_id=${AKOFLOW_PLAN_ID:-community-mfc-sod-plan-v2}
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 
@@ -30,7 +30,7 @@ create_yaml schedule-plans/import plan.yaml
 request GET environments/community-mfc-parallel > "$temporary/environment.json"
 request GET execution-scopes/community-mfc-parallel-scope > "$temporary/scope.json"
 request GET network-topologies/community-mfc-parallel-topology > "$temporary/topology.json"
-request GET workflow-definitions/community-mfc-sod-refinement > "$temporary/workflow.json"
+request GET workflow-definitions/community-mfc-sod-refinement-r2 > "$temporary/workflow.json"
 request GET "schedule-plans/$plan_id" > "$temporary/plan.json"
 
 jq -n --arg run_id "$run_id" \

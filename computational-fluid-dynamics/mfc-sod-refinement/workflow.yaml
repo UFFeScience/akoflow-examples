@@ -1,4 +1,4 @@
-name: community-mfc-sod-refinement
+name: community-mfc-sod-refinement-r2
 spec:
   namespace: community-explorer
   image: akoflow/community-mfc-sod-refinement:v1
@@ -15,4 +15,3 @@ spec:
     - {name: aggregate, runtime: community-mfc-local, command: {entrypoint: python3, arguments: ["/app/workflow.py", aggregate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [measure-n100, measure-n200, measure-n400, measure-n800]}
     - {name: animate, runtime: community-mfc-local, command: {entrypoint: python3, arguments: ["/app/workflow.py", animate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [simulate-n800]}
     - {name: validate, runtime: community-mfc-local, command: {entrypoint: python3, arguments: ["/app/workflow.py", validate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate, animate]}
-

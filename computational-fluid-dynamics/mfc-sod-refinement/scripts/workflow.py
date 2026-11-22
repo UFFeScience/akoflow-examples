@@ -298,7 +298,10 @@ def main():
     parser.add_argument("stage", choices=("prepare", "simulate", "measure", "aggregate", "animate", "validate"))
     parser.add_argument("--input", default="."); parser.add_argument("--output", default=".")
     parser.add_argument("--resolution", type=int)
-    args = parser.parse_args(); root, out = pathlib.Path(args.input), pathlib.Path(args.output)
+    args = parser.parse_args()
+    # Daemon activities pass "." inside their mounted workspace.  Resolve it
+    # before MFC changes subprocess cwd to /opt/mfc.
+    root, out = pathlib.Path(args.input).resolve(), pathlib.Path(args.output).resolve()
     if args.stage == "prepare": prepare(out)
     elif args.stage == "simulate": simulate(out, args.resolution)
     elif args.stage == "measure": measure(root, out, args.resolution)

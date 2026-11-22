@@ -67,6 +67,31 @@ Scientific activities run offline without Hub credentials or the host Docker
 socket. `preflight.sh` is only a local integration check; authoritative
 execution evidence must come from the AkôFlow daemon.
 
+## Reference daemon run
+
+AkôFlow run `community-mfc-sod-run-v2` completed all 12 activities using
+workflow version `community-mfc-sod-refinement-r2-v1`, schedule plan
+`community-mfc-sod-plan-v2`, and image digest
+`sha256:f9ee240ddc78b32b7396f486758be073e0c5fa64b0984963856916bcca7f3ee1`.
+Measured makespan was 18.782 seconds, compute time was 28.016 seconds, and
+14,770,853 bytes were transferred at zero configured cost.
+
+The four independent MFC simulations overlapped from Unix timestamp
+`1795330651.065916` through `1795330654.990757`, a measured four-way overlap
+of 3.925 seconds. This proves concurrent scientific activity; it is not a
+speedup claim because no matched one-slot run was performed.
+The timeline renderer records this evidence in `measured-timeline.json` and
+`measured-timeline.png`; the reference PNG SHA-256 is
+`9f552a84dc6e5c808af540a402643e1d3c028a930e9ae05ec2c26574821f247f`.
+
+The recorded validator passed every scientific and artifact check. Its
+SHA-256 is `fd9f5211f171f6365228575c54fffc15fa84c32147c31c6a8e83f49f742dc4f9`;
+`metrics.json` is `190e8784c85e3d96d47fc8173d62d9436c5c8cf14d056fb5c0ea45000079ec7e`.
+The convergence figure, finest-grid result, and evolution GIF are respectively
+`8a688aa958a1fbcc482c10161d91a0434f9cdbc218d3c83cd8c1959f49139321`,
+`6f507f9284ef0aed5d262b72b11b5fc7bcf484a0e78e74519876d23d149e6cd5`,
+and `332f2ccbcf66e30dc0fdb7d765a9e2cce8bd5efbdf7efdc149f22c9e71afe8b8`.
+
 ## Qualified reference values
 
 | N | density L1 | velocity L1 | pressure L1 |

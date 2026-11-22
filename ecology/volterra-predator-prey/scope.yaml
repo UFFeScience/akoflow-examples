@@ -1,0 +1,3 @@
+id: community-volterra-parallel-scope
+name: Volterra predator-prey parallel scope
+environmentVersionIds: [community-volterra-parallel-v1]

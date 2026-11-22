@@ -1,0 +1,18 @@
+plan:
+  id: community-volterra-predator-prey-plan-v1
+  workflowVersionId: community-volterra-predator-prey-v1-v1
+  executionScopeId: community-volterra-parallel-scope
+  networkTopologyId: community-volterra-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 60, cost: 0, feasible: true}
+  assignments:
+    - {id: volterra-prepare, activityId: community-volterra-predator-prey-v1-prepare, resourceId: community-volterra-slot-0, orderOnResource: 0, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-moderate, activityId: community-volterra-predator-prey-v1-solve-moderate, resourceId: community-volterra-slot-0, orderOnResource: 1, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-prey-rich, activityId: community-volterra-predator-prey-v1-solve-prey-rich, resourceId: community-volterra-slot-1, orderOnResource: 0, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-predator-rich, activityId: community-volterra-predator-prey-v1-solve-predator-rich, resourceId: community-volterra-slot-2, orderOnResource: 0, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-aggregate, activityId: community-volterra-predator-prey-v1-aggregate, resourceId: community-volterra-slot-0, orderOnResource: 2, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-render, activityId: community-volterra-predator-prey-v1-render, resourceId: community-volterra-slot-0, orderOnResource: 3, metadata: {runtimeId: community-volterra-local}}
+    - {id: volterra-validate, activityId: community-volterra-predator-prey-v1-validate, resourceId: community-volterra-slot-0, orderOnResource: 4, metadata: {runtimeId: community-volterra-local}}

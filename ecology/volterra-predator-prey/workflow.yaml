@@ -1,0 +1,12 @@
+name: community-volterra-predator-prey-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-volterra-predator-prey:v1
+  activities:
+    - {name: prepare, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: solve-moderate, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --scenario, moderate]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: solve-prey-rich, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --scenario, prey-rich]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: solve-predator-rich, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --scenario, predator-rich]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [solve-moderate, solve-prey-rich, solve-predator-rich]}
+    - {name: render, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-volterra-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}

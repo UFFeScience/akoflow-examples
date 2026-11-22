@@ -1,0 +1,9 @@
+[
+  {"activity":"prepare","resource":"slot-0","startedAt":1795370415.2838805,"finishedAt":1795370416.3582032},
+  {"activity":"solve-predator-rich","resource":"slot-2","startedAt":1795370418.004591,"finishedAt":1795370419.631669},
+  {"activity":"solve-prey-rich","resource":"slot-1","startedAt":1795370418.130007,"finishedAt":1795370419.756911},
+  {"activity":"solve-moderate","resource":"slot-0","startedAt":1795370418.1838381,"finishedAt":1795370419.8623514},
+  {"activity":"aggregate","resource":"slot-0","startedAt":1795370423.2946677,"finishedAt":1795370424.413321},
+  {"activity":"render","resource":"slot-0","startedAt":1795370425.6702971,"finishedAt":1795370441.1570504},
+  {"activity":"validate","resource":"slot-0","startedAt":1795370442.7108324,"finishedAt":1795370443.6422799}
+]

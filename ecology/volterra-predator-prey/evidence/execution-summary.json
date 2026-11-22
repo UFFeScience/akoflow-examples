@@ -1,0 +1,16 @@
+{
+  "runId": "community-volterra-predator-prey-run-v1",
+  "workflowVersionId": "community-volterra-predator-prey-v1-v1",
+  "schedulePlanId": "community-volterra-predator-prey-plan-v1",
+  "status": "completed",
+  "activityCount": 7,
+  "completedActivityCount": 7,
+  "makespanSeconds": 28.358399391174316,
+  "computeSeconds": 23.54367208480835,
+  "transferSeconds": 2.7777271270751953,
+  "transferredBytes": 12816245,
+  "cost": 0,
+  "imageDigest": "sha256:eb21fc18249d95b8aa1de6dc45886c9ff6f67bbe1d8b67d26ffc94e0c2cf8241",
+  "threeWayOverlapSeconds": 1.4478309154510498,
+  "overlapInterval": [1795370418.1838381, 1795370419.631669]
+}

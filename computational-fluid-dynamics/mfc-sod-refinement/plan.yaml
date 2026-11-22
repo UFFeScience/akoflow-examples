@@ -1,0 +1,23 @@
+plan:
+  id: community-mfc-sod-plan-v1
+  workflowVersionId: community-mfc-sod-refinement-v1
+  executionScopeId: community-mfc-parallel-scope
+  networkTopologyId: community-mfc-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 120, cost: 0, feasible: true}
+  assignments:
+    - {id: mfc-prepare, activityId: community-mfc-sod-refinement-prepare, resourceId: community-mfc-slot-0, orderOnResource: 0, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-sim100, activityId: community-mfc-sod-refinement-simulate-n100, resourceId: community-mfc-slot-0, orderOnResource: 1, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-sim200, activityId: community-mfc-sod-refinement-simulate-n200, resourceId: community-mfc-slot-1, orderOnResource: 0, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-sim400, activityId: community-mfc-sod-refinement-simulate-n400, resourceId: community-mfc-slot-2, orderOnResource: 0, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-sim800, activityId: community-mfc-sod-refinement-simulate-n800, resourceId: community-mfc-slot-3, orderOnResource: 0, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-measure100, activityId: community-mfc-sod-refinement-measure-n100, resourceId: community-mfc-slot-0, orderOnResource: 2, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-measure200, activityId: community-mfc-sod-refinement-measure-n200, resourceId: community-mfc-slot-1, orderOnResource: 1, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-measure400, activityId: community-mfc-sod-refinement-measure-n400, resourceId: community-mfc-slot-2, orderOnResource: 1, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-measure800, activityId: community-mfc-sod-refinement-measure-n800, resourceId: community-mfc-slot-3, orderOnResource: 1, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-aggregate, activityId: community-mfc-sod-refinement-aggregate, resourceId: community-mfc-slot-0, orderOnResource: 3, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-animate, activityId: community-mfc-sod-refinement-animate, resourceId: community-mfc-slot-3, orderOnResource: 2, metadata: {runtimeId: community-mfc-parallel-local}}
+    - {id: mfc-validate, activityId: community-mfc-sod-refinement-validate, resourceId: community-mfc-slot-0, orderOnResource: 4, metadata: {runtimeId: community-mfc-parallel-local}}

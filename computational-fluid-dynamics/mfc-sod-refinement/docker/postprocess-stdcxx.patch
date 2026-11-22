@@ -1,0 +1,11 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -549,6 +549,7 @@ if (MFC_POST_PROCESS)
+     MFC_SETUP_TARGET(TARGET  post_process
+                      SOURCES "${post_process_SRCs}"
+                      MPI SILO HDF5 FFTW)
++    target_link_libraries(post_process PRIVATE stdc++)
+ 
+     # -O0 is in response to https://github.com/MFlowCode/MFC-develop/issues/95
+

@@ -1,0 +1,18 @@
+environment: {id: community-mfc-parallel, name: Community MFC Sod parallel local Docker, status: ready}
+version: {id: community-mfc-parallel-v1, environmentId: community-mfc-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-mfc-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-mfc-parallel-v1, id: community-mfc-parallel-local, name: Offline parallel local Docker, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-mfc-slot-0, environmentVersionId: community-mfc-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-mfc-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-mfc-slot-1, environmentVersionId: community-mfc-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-mfc-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-mfc-slot-2, environmentVersionId: community-mfc-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-mfc-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-mfc-slot-3, environmentVersionId: community-mfc-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-mfc-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 21474836480, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-mfc-slot-0, runtimeId: community-mfc-parallel-local, enabled: true}
+  - {resourceId: community-mfc-slot-1, runtimeId: community-mfc-parallel-local, enabled: true}
+  - {resourceId: community-mfc-slot-2, runtimeId: community-mfc-parallel-local, enabled: true}
+  - {resourceId: community-mfc-slot-3, runtimeId: community-mfc-parallel-local, enabled: true}
+

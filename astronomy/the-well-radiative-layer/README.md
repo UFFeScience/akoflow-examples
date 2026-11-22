@@ -109,3 +109,7 @@ confidence interval is claimed. Fractions use discrete density sums because
 cell-edge conventions are not explicit. The open y boundary makes mass drift
 a diagnostic, not an assumed conservation failure. No power-law exponent or
 parallel speedup is an acceptance target.
+
+## Animation
+
+![Animated phase evolution from the reference output](evidence/gallery/phase-evolution.gif)

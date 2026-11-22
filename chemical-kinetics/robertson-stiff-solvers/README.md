@@ -37,3 +37,7 @@ The gallery animation [`kinetics-logtime.gif`](outputs/daemon-v1/kinetics-logtim
 Build with `./build.sh`, run two network-isolated deterministic checks with `./preflight.sh`, and daemon-preflight with `./run.sh`. Set `AKOFLOW_SUBMIT=1` only to submit the idempotent run ID. Scientific containers receive neither network access, the host Docker socket, nor Hub credentials.
 
 Machine-readable evidence is in `evidence/`; validated outputs and checksums are in `outputs/daemon-v1/`. Function/Jacobian/LU evaluation counts are reported rather than accepted as invariant across platforms. Cross-solver agreement is strong numerical evidence, not a formal global-error proof.
+
+## Animation
+
+![Animated Robertson concentration history](outputs/daemon-v1/kinetics-logtime.gif)

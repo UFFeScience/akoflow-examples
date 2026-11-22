@@ -30,3 +30,9 @@ The calculation preserves the first 1,000 geometries per branch, integer checkpo
 Scientific source: Georges-Louis Leclerc, Comte de Buffon, “Essai d'arithmétique morale,” *Histoire naturelle, générale et particulière, Supplément*, tome IV, pp. 46–123 (1777), needle discussion pp. 95–105 ([historical scan](https://www.hist-math.fr/textes/Buffon1777_SupplementHistoire4.pdf)). The public-domain source is linked, not redistributed.
 
 The workflow and generated artifacts are maintained by UFFeScience for AkôFlow Community Explorer and licensed under the MIT License.
+
+## Animation and measured execution
+
+![Animated convergence of the Buffon estimate](outputs/reference/convergence.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

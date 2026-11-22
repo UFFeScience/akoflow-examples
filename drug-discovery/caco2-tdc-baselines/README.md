@@ -50,3 +50,8 @@ Submit the checked-in environment, scope, topology, workflow, and four-slot plan
 ## Acceptance and limitations
 
 Validation requires all 15 branches, exactly 182 finite predictions per branch, all input/scaffold audits, and all three reproduced means inside their frozen intervals. The benchmark combines heterogeneous Caco-2 measurements, includes conflicting duplicates, is small, and measures only agreement with its held-out labels. No benchmark result substitutes for experimental permeability measurement or any safety, efficacy, pharmacokinetic, or clinical assessment.
+
+## Measured result gallery
+
+This benchmark is a static model-comparison result; it has no scientifically
+meaningful temporal evolution, so no decorative animation is added.

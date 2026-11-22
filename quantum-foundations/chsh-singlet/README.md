@@ -68,3 +68,9 @@ Richard A. Holt, “Proposed Experiment to Test Local Hidden-Variable Theories,�
 The workflow implementation and generated artifacts are maintained by
 UFFeScience for the AkôFlow Community Explorer and are licensed under the MIT
 License. The cited paper is linked, not redistributed.
+
+## Animation and measured execution
+
+![Animated CHSH Monte Carlo convergence](outputs/reference/convergence.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

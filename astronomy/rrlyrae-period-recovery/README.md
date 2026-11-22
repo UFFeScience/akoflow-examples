@@ -113,3 +113,9 @@ the validator therefore checks the pre-qualified modern stack and records exact
 arrays. The animation scans trial period; it is not temporal evolution of the
 star. This workflow makes no population-level accuracy or parallel speedup
 claim.
+
+## Measured result gallery
+
+![Recovered multiband period and alias structure](outputs/scientific-result.png)
+
+![Animated period-search convergence](outputs/period-scan.gif)

@@ -60,3 +60,8 @@ Submit `environment.yaml`, `scope.yaml`, `topology.yaml`, `workflow.yaml`, and `
 ## Limitations
 
 The benchmark includes only 400 animal species selected partly by image availability, uses historical EOL/ITIS labels that may change, and contains strong class imbalance for five short species. Near-duplicate candidates and visually ambiguous or mislabeled images can influence results. The model's held-out manifests do not prove universal training-data absence. Hierarchical agreement can make an error look biologically closer, but it does not make the species prediction correct. No source photograph is suitable for Hub display without applying its individual license and attribution.
+
+## Measured result gallery
+
+This evaluation is a static score decomposition; no animation is claimed
+because the experiment has no temporal or iterative scientific dimension.

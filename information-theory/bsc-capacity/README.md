@@ -30,3 +30,9 @@ This is an audit of an ideal independent memoryless channel, not a physical comm
 Scientific source: Claude E. Shannon, “A Mathematical Theory of Communication,” *The Bell System Technical Journal* 27(3), 379–423 (1948), [DOI 10.1002/j.1538-7305.1948.tb01338.x](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x). The paper is linked and not redistributed.
 
 The workflow and generated artifacts are maintained by UFFeScience for AkôFlow Community Explorer and licensed under the MIT License.
+
+## Animation and measured execution
+
+![Animated empirical capacity convergence](outputs/reference/convergence.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

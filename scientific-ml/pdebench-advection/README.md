@@ -87,3 +87,11 @@ only the frozen 2022 `beta=4.0` first-1,000 population. The historical all-slot
 metric includes the ten copied input slots, so the predicted-slot metric is
 reported separately. Results do not apply to later regenerated PDEBench data,
 other advection coefficients, accelerators, or training configurations.
+
+## Measured result gallery
+
+![PDEBench advection model-error comparison](outputs/preflight-20261122T191301/run-a/model-error-comparison.png)
+
+![Animated advection evolution](outputs/preflight-20261122T191301/run-a/advection-evolution.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

@@ -28,3 +28,11 @@ The validated reference run is `community-sir-threshold-sweep-run-v2` using work
 New workflow code is BSD-3-Clause. NumPy and SciPy are BSD-3-Clause, Matplotlib uses its PSF-compatible license, and Pillow uses HPND. The Python base image is pinned by digest. No paper figure, empirical data, patient record, or fitted parameter is redistributed.
 
 This is the homogeneous, deterministic, closed-population constant-rate slice—not the paper’s full infection-age theory. It ignores demographics, heterogeneity, intervention, uncertainty, and parameter inference. The one-week removal scale is a controlled numerical parameter, not an estimate about people.
+
+## Measured result gallery
+
+![SIR threshold and final-size sweep](outputs/preflight-20261122T172758/run-a/sir-threshold-final-size.png)
+
+![Animated SIR parameter sweep](outputs/preflight-20261122T172758/run-a/sir-parameter-sweep.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

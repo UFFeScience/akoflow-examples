@@ -28,3 +28,11 @@ The validated reference run is `community-hodgkin-huxley-boundary-run-v2`, using
 New workflow code is BSD-3-Clause. NumPy and SciPy are BSD-3-Clause, Matplotlib has a PSF-compatible license, Pillow uses HPND, and the Python base image is pinned by digest. No empirical recording, animal-derived dataset, paper figure, or paper PDF is redistributed.
 
 This is the original squid giant-axon, space-clamped, 6.3 °C model. It is not a human or mammalian neuron, a propagated cable, a finite-duration current clamp, an experimental reanalysis, or an in-vivo firing claim. The denser sweep is a numerical reproducibility audit and does not add experimental precision.
+
+## Measured result gallery
+
+![Hodgkin–Huxley excitation boundary](outputs/daemon-v2/hh-excitation-boundary.png)
+
+![Animated membrane-response sweep](outputs/daemon-v2/hh-excitation-sweep.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

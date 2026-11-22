@@ -11,3 +11,13 @@ The scientific image runs offline without credentials or the host Docker socket.
 The authoritative AkôFlow execution is `community-weatherbench2-score-audit-run-v1`, workflow version `community-weatherbench2-score-audit-v1`, plan `community-weatherbench2-score-audit-plan-v1`, and image digest `sha256:1189e4bf1f8abcc6b5cb6fbfe4db954fc5dca6543e34487c2b4a9e24f3ba459c`. It completed 10/10 activities in 20.684039 seconds. The independent GraphCast Z500 and T2M branches overlapped for 0.597863 seconds. This is concurrency evidence only; no speedup is claimed. Validation passed with canonical scientific-result hash `f41b786d485398860ce21861b3ffdb137100bdd68a5957ae92b0a8248a442cea`.
 
 Reference: Rasp et al., “WeatherBench 2: A Benchmark for the Next Generation of Data-Driven Global Weather Models,” JAMES 16 (2024), e2023MS004019, https://doi.org/10.1029/2023MS004019. GraphCast forecasts are credited to Lam et al. (2023). The input-preparation step preserves the exact Google/ECMWF/Copernicus license texts; derived artifacts must retain their attribution and disclaimers.
+
+## Measured result gallery
+
+![WeatherBench 2 RMSE by forecast lead](outputs/daemon-v1/rmse-by-lead.png)
+
+![GraphCast-minus-HRES score difference](outputs/daemon-v1/graphcast-minus-hres.png)
+
+![Animated RMSE evolution by lead time](outputs/daemon-v1/rmse-by-lead.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

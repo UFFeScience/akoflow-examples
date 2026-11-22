@@ -129,3 +129,11 @@ reference uses deterministic quadrature of an analytic Riemann solution and
 does not establish general MFC accuracy. CPU timings depend on the host and
 must not be presented as accelerator evidence. Publication and anonymous Hub
 verification remain separate gates after a validated daemon run.
+
+## Measured result gallery
+
+![Mesh-refinement convergence](outputs/reference/convergence.png)
+
+![Finest-grid Sod shock-tube result](outputs/reference/scientific-result.png)
+
+![Animated finest-grid shock evolution](outputs/reference/sod-evolution.gif)

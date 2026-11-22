@@ -30,3 +30,13 @@ This is a modern RK4 reproduction of bounded sensitivity, not Lorenz's original 
 AkôFlow run `community-lorenz-sensitivity-run-v1` completed all 8 activities with workflow version `community-lorenz-sensitivity-v1-v1`, plan `community-lorenz-sensitivity-plan-v1`, and image digest `sha256:f8e693478378338d69a9c8955130735c0947bb8fe33129b5d56a0f5433933e58`. Measured makespan was 16.462526 s, compute 12.801033 s, transfer 3.877208 s, and 49,985,235 transferred bytes. The independent y- and z-perturbation integrations overlapped for 0.224196 s (`1795382153.742367`–`1795382153.966563`). This proves concurrency only; no speedup is claimed.
 
 Daemon validation passed every gate. Unit-separation crossings were 31.143, 31.225, and 28.878 time units for x, y, and z perturbations. Maximum separations were 42.544960, 47.689195, and 46.581624. The retained evidence includes daemon artifacts, validation SHA-256 `22bd9dfba6c16a05508b2af7ef62d59404b8408e324737fd177570dbad0f8d7e`, measured timestamps, overlap calculation, and timeline image.
+
+## Measured result gallery
+
+![Lorenz attractor trajectories](outputs/preflight-20261122T211505/run-a/lorenz-attractor.png)
+
+![Bounded sensitivity across perturbation branches](outputs/preflight-20261122T211505/run-a/sensitivity.png)
+
+![Animated trajectory divergence](outputs/preflight-20261122T211505/run-a/lorenz-divergence.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

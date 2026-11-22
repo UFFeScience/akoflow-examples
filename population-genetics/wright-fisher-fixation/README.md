@@ -11,3 +11,13 @@ The gallery contains the fixation-law figure, absorption summary, real simulated
 The validated reference execution is `community-wright-fisher-run-v1`, workflow version `community-wright-fisher-fixation-v1`, schedule plan `community-wright-fisher-plan-v1`, and image `sha256:e9f448de9228a5ef5ee5bbd28590ac22beda9e468809969c86876653504d6664`. The daemon completed 28/28 activities in 33.381965 seconds, with 41.200169 compute seconds and 2,064,585 transferred bytes. The first four independent shards overlapped for 0.866451 seconds. This proves concurrency only; no speedup is claimed.
 
 This is a neutral haploid finite-population slice. It does not model selection, mutation, migration, recombination, diploid genotype sampling, or a named biological population. Model generations are not laboratory time.
+
+## Measured result gallery
+
+![Neutral fixation probability against Kimura's exact law](outputs/reference/fixation-probability.png)
+
+![Absorption-time distributions](outputs/reference/absorption-times.png)
+
+![Animated simulated allele drift](outputs/reference/allele-drift.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

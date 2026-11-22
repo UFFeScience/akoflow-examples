@@ -30,3 +30,11 @@ All reported populations are mathematical fractions, not real atom counts. Half-
 Scientific source: Harry Bateman, “The solution of a system of differential equations occurring in the theory of radio-active transformations,” *Proceedings of the Cambridge Philosophical Society* 15 (1910), 423–427. The [primary scan hosted by MIT OpenCourseWare](https://ocw.mit.edu/courses/12-744-marine-isotope-chemistry-fall-2012/resources/mit12_744f12_rd1910btmn/) is linked and not redistributed.
 
 The original workflow code and generated artifacts are maintained by UFFeScience for AkôFlow Community Explorer and licensed under the MIT License. Python is distributed under the PSF License.
+
+## Animation and measured execution
+
+![Animated Bateman activity equilibrium](outputs/reference/activity-equilibrium.gif)
+
+![Measured AkôFlow DAG](evidence/measured-dag.png)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

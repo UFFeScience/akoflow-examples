@@ -35,3 +35,11 @@ This is measured concurrency evidence, not a speedup claim; no matching one-slot
 Key validated hashes are `ensemble-metrics.csv` `7a7e0635...9ecb`, `ensemble-metrics.json` `9a8cfcfd...249a`, `population-cycles.png` `7ff02ffe...83f1`, `predator-prey-cycles.gif` `d6c32100...715a`, and daemon `validation.json` `a59e3cc6...61d59`.
 
 Hub publication and anonymous public verification are deliberately not claimed here. They remain gated on a daemon connection to Community Explorer project `44e9e6b5-454b-43b9-bf73-240be5e31aab`.
+
+## Measured result gallery
+
+![Predator–prey population cycles](outputs/preflight-20261122T175912/run-a/population-cycles.png)
+
+![Animated predator–prey phase cycles](outputs/preflight-20261122T175912/run-a/predator-prey-cycles.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

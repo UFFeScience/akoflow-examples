@@ -80,3 +80,7 @@ three gallery files, and `branches/<transform>/{labels.npy,metrics.json}`.
 ## Limitations
 
 The analysis uses one bundled microscopy image and one pretrained model. Rotation/reflection stability on this image does not establish performance on other microscopes, tissues, organisms, acquisition settings, or clinical tasks. Small output changes can also occur if the pinned CPU, TensorFlow, compiler, or postprocessing stack is changed.
+
+The measured gallery above is part of the reference result: it includes the
+scientific overlays, disagreement map, animation, and daemon timeline rather
+than decorative or placeholder media.

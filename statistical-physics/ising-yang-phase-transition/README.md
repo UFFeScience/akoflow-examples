@@ -33,3 +33,7 @@ The gallery animation [`spin-configurations.gif`](outputs/daemon-v1/spin-configu
 Run `./build.sh`, then `./preflight.sh` for two isolated deterministic executions. `./run.sh` registers the definitions and performs daemon preflight; set `AKOFLOW_SUBMIT=1` to submit the idempotent run ID. Scientific containers run with no network, Hub credentials, or host Docker socket.
 
 Finite lattices round and shift the transition; `|m|` is used because a finite zero-field lattice tunnels between symmetry-related states. Linear interpolation on a 0.02 temperature grid is a bounded transition estimate, not a precision determination of `Tc`. Block standard errors diagnose finite sampling but do not eliminate every autocorrelation or finite-size effect. Machine-readable evidence, hashes, and validated outputs are in `evidence/` and `outputs/daemon-v1/`.
+
+## Animation
+
+![Animated spin configurations across the sweep](outputs/daemon-v1/spin-configurations.gif)

@@ -35,3 +35,14 @@ The forecast is attributed to MOI GLONET. GLORYS, GLO12, and observation product
 ## Limitations
 
 This audit contains two initializations and ten lead days from a tutorial sample. It does not quantify seasonal performance, uncertainty, statistical significance, model-training quality, or leaderboard rank. The notebook exposes rounded table values, so the frozen oracle is displayed precision rather than hidden full-precision arrays.
+
+## Measured result gallery
+
+![Observation coverage used by the audit](evidence/gallery/observation-coverage.png)
+
+![GLONET metrics across forecast leads](evidence/gallery/metric-leads.png)
+
+![Measured AkôFlow timeline](evidence/gallery/timeline.png)
+
+The bounded source exposes score tables rather than evolving physical fields,
+so the gallery intentionally remains static instead of inventing an animation.

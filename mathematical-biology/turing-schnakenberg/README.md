@@ -114,3 +114,11 @@ The daemon result passed all validation gates. Primary shell-4 growth was
 resolution relative errors were `3.238940955858578e-6` and
 `5.878835864807414e-11`. Evidence, measured timestamps, checksums, and the
 timeline are retained in `evidence/`.
+
+## Measured result gallery
+
+![Turing–Schnakenberg pattern selection](outputs/preflight-20261122T210119/run-a/turing-pattern-selection.png)
+
+![Animated pattern emergence](outputs/preflight-20261122T210119/run-a/pattern-emergence.gif)
+
+![Measured AkôFlow timeline](evidence/measured-timeline.png)

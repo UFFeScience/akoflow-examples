@@ -1,0 +1,17 @@
+name: community-stardist-equivariance-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-stardist-equivariance:v1
+  activities:
+    - {name: prepare, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: predict-identity, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, identity]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-r90, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, r90]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-r180, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, r180]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-r270, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, r270]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-reflect, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, reflect]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-reflect-r90, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, reflect-r90]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-reflect-r180, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, reflect-r180]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: predict-reflect-r270, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", predict, --output, ., --transform, reflect-r270]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [predict-identity, predict-r90, predict-r180, predict-r270, predict-reflect, predict-reflect-r90, predict-reflect-r180, predict-reflect-r270]}
+    - {name: render, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-stardist-local, command: {entrypoint: python, arguments: ["/app/workflow.py", validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}

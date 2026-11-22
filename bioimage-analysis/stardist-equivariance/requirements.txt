@@ -1,0 +1,13 @@
+numpy==1.26.4
+scipy==1.11.4
+scikit-image==0.22.0
+imageio==2.33.1
+tifffile==2023.9.26
+numba==0.59.1
+llvmlite==0.42.0
+csbdeep==0.8.2
+tensorflow-cpu==2.15.1
+keras==2.15.0
+h5py==3.10.0
+matplotlib==3.10.9
+pillow==12.3.0

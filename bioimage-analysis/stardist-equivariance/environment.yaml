@@ -1,0 +1,17 @@
+environment: {id: community-stardist-parallel, name: Community StarDist parallel local Docker, status: ready}
+version: {id: community-stardist-parallel-v1, environmentId: community-stardist-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-stardist-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-stardist-parallel-v1, id: community-stardist-local, name: Offline StarDist CPU, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-stardist-slot-0, environmentVersionId: community-stardist-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-stardist-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 2147483648, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-stardist-slot-1, environmentVersionId: community-stardist-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-stardist-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 2147483648, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-stardist-slot-2, environmentVersionId: community-stardist-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-stardist-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 2147483648, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-stardist-slot-3, environmentVersionId: community-stardist-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-stardist-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 2147483648, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-stardist-slot-0, runtimeId: community-stardist-local, enabled: true}
+  - {resourceId: community-stardist-slot-1, runtimeId: community-stardist-local, enabled: true}
+  - {resourceId: community-stardist-slot-2, runtimeId: community-stardist-local, enabled: true}
+  - {resourceId: community-stardist-slot-3, runtimeId: community-stardist-local, enabled: true}

@@ -1,0 +1,9 @@
+{
+  "multi_slot_run": "community-airy-diffraction-run-v1",
+  "one_slot_run": "community-airy-diffraction-one-slot-v1",
+  "multi_slot_makespan_seconds": 90.64620804786682,
+  "one_slot_makespan_seconds": 111.15426754951477,
+  "whole_workflow_ratio": 1.2262428836605985,
+  "three_branch_overlap_seconds": 11.00661039352417,
+  "claim": "Measured three-way scientific overlap; matched one-slot comparison."
+}

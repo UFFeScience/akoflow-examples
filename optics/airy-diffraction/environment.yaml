@@ -1,0 +1,15 @@
+environment: {id: community-airy-parallel, name: Community Airy parallel local Docker, status: ready}
+version: {id: community-airy-parallel-v1, environmentId: community-airy-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-airy-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-airy-parallel-v1, id: community-airy-local, name: Airy standard-library CPU, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-airy-slot-0, environmentVersionId: community-airy-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-airy-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 268435456, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-airy-slot-1, environmentVersionId: community-airy-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-airy-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 268435456, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-airy-slot-2, environmentVersionId: community-airy-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-airy-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 268435456, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-airy-slot-0, runtimeId: community-airy-local, enabled: true}
+  - {resourceId: community-airy-slot-1, runtimeId: community-airy-local, enabled: true}
+  - {resourceId: community-airy-slot-2, runtimeId: community-airy-local, enabled: true}

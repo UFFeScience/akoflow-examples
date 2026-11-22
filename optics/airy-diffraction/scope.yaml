@@ -1,0 +1,3 @@
+id: community-airy-parallel-scope
+name: Airy local execution scope
+environmentVersionIds: [community-airy-parallel-v1]

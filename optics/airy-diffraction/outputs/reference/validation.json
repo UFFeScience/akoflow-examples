@@ -1,0 +1,1 @@
+{"checks":{"450nm":true,"550nm":true,"650nm":true,"determinism":true,"files":true,"identity":true,"ratios":true},"limitations":"Ideal scalar monochromatic paraxial unobscured aperture; not a measured telescope PSF.","passed":true}

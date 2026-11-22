@@ -1,0 +1,12 @@
+name: community-airy-diffraction-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-airy-diffraction:v1
+  activities:
+    - {name: prepare-manifest, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: evaluate-450nm, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, evaluate, --output, ., --branch, 450nm]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare-manifest]}
+    - {name: evaluate-550nm, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, evaluate, --output, ., --branch, 550nm]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare-manifest]}
+    - {name: evaluate-650nm, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, evaluate, --output, ., --branch, 650nm]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare-manifest]}
+    - {name: aggregate-scaling, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [evaluate-450nm, evaluate-550nm, evaluate-650nm]}
+    - {name: render-results, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [aggregate-scaling]}
+    - {name: validate, runtime: community-airy-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [render-results]}

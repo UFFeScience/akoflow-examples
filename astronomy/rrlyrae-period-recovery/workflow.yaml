@@ -1,0 +1,20 @@
+name: community-rrlyrae-period-recovery
+spec:
+  namespace: community-explorer
+  image: akoflow/community-rrlyrae-period-recovery:v1
+  activities:
+    - name: prepare-observations
+      runtime: community-rrlyrae-local
+      command: {entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}
+      cpuLimit: "1"
+      memoryLimit: 512Mi
+    - {name: periodogram-u, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, u]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: periodogram-g, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, g]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: periodogram-r, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, r]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: periodogram-i, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, i]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: periodogram-z, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, z]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: periodogram-multiband, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", periodogram, --input, ., --output, ., --band, multiband]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-observations]}
+    - {name: aggregate-results, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", aggregate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [periodogram-u, periodogram-g, periodogram-r, periodogram-i, periodogram-z, periodogram-multiband]}
+    - {name: animate-scan, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", animate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [periodogram-multiband]}
+    - {name: validate, runtime: community-rrlyrae-local, command: {entrypoint: python, arguments: ["/app/workflow.py", validate, --input, ., --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-results, animate-scan]}
+

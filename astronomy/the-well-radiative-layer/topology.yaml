@@ -1,0 +1,6 @@
+id: community-well-parallel-topology
+name: The Well local topology
+version: 1
+executionScopeId: community-well-parallel-scope
+links: []
+

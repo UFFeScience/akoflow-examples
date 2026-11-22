@@ -1,0 +1,53 @@
+{
+  "activities": [
+    {
+      "activity": "community-debye-heat-v1-prepare-manifest",
+      "resource": "community-debye-slot-0",
+      "started_at": 1795391859.4703984,
+      "finished_at": 1795391859.6290503,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-calculate-asymptotic",
+      "resource": "community-debye-slot-2",
+      "started_at": 1795391860.5628,
+      "finished_at": 1795391860.7350316,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-calculate-energy",
+      "resource": "community-debye-slot-1",
+      "started_at": 1795391860.5782733,
+      "finished_at": 1795391861.1181157,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-calculate-direct",
+      "resource": "community-debye-slot-0",
+      "started_at": 1795391860.591784,
+      "finished_at": 1795391861.3100703,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-aggregate-audit",
+      "resource": "community-debye-slot-0",
+      "started_at": 1795391863.9648464,
+      "finished_at": 1795391864.1369138,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-render-results",
+      "resource": "community-debye-slot-0",
+      "started_at": 1795391865.0556464,
+      "finished_at": 1795391865.4297287,
+      "status": "completed"
+    },
+    {
+      "activity": "community-debye-heat-v1-validate",
+      "resource": "community-debye-slot-0",
+      "started_at": 1795391866.9446318,
+      "finished_at": 1795391867.103258,
+      "status": "completed"
+    }
+  ]
+}

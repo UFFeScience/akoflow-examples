@@ -1,0 +1,6 @@
+{
+  "multi_slot_seconds": 7.632859468460083,
+  "one_slot_seconds": 10.764760494232178,
+  "scientific_overlap_seconds": 0.1432476043701172,
+  "claim": "Measured overlap and matched one-slot baseline; observed whole-workflow speedup is reported without generalization."
+}

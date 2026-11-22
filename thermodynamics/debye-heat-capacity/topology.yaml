@@ -1,0 +1,5 @@
+id: community-debye-parallel-topology
+name: Debye local topology
+version: 1
+executionScopeId: community-debye-parallel-scope
+links: []

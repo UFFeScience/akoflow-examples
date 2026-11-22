@@ -1,0 +1,3 @@
+id: community-debye-parallel-scope
+name: Debye local execution scope
+environmentVersionIds: [community-debye-parallel-v1]

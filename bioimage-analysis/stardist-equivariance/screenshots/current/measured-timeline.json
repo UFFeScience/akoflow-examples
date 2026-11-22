@@ -1,0 +1,21 @@
+{
+  "compute_seconds": 111.40391564369202,
+  "makespan_seconds": 59.144084453582764,
+  "prediction_overlap": {
+    "activities": [
+      "community-stardist-equivariance-v1-predict-reflect-r180",
+      "community-stardist-equivariance-v1-predict-reflect",
+      "community-stardist-equivariance-v1-predict-reflect-r90",
+      "community-stardist-equivariance-v1-predict-reflect-r270"
+    ],
+    "finish_unix": 1795335307.341782,
+    "maximum_concurrency": 4,
+    "seconds": 9.653280258178711,
+    "start_unix": 1795335297.6885018
+  },
+  "run_id": "community-stardist-equivariance-run-v3",
+  "speedup_claimed": false,
+  "status": "completed",
+  "transferred_bytes": 14236040,
+  "workflow_version_id": "community-stardist-equivariance-v1-v1"
+}

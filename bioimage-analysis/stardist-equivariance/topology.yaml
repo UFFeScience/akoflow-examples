@@ -1,0 +1,5 @@
+id: community-stardist-parallel-topology
+name: Community StarDist local topology
+version: 1
+executionScopeId: community-stardist-parallel-scope
+links: []

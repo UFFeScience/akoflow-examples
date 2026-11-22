@@ -1,0 +1,5 @@
+id: community-ising-parallel-topology
+name: Community Ising local topology
+version: 1
+executionScopeId: community-ising-parallel-scope
+links: []

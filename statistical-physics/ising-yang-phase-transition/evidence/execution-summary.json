@@ -1,0 +1,29 @@
+{
+  "id": "community-ising-yang-run-v1",
+  "schedulePlanId": "community-ising-yang-plan-v1",
+  "mode": "real",
+  "seed": 0,
+  "status": "completed",
+  "makespanSeconds": 44.30173993110657,
+  "cost": 0,
+  "activityCount": 12,
+  "completedActivityCount": 12,
+  "breakdown": {
+    "computeSeconds": 121.09630489349365,
+    "transferSeconds": 12.0048828125,
+    "queueSeconds": 0,
+    "interferenceSeconds": 0,
+    "overheadSeconds": 0
+  },
+  "transferredBytes": 32990606,
+  "kind": "workflow",
+  "title": "community-ising-yang-run-v1",
+  "workflowId": "community-ising-yang-v1",
+  "workflowVersionId": "community-ising-yang-v1-v1",
+  "workflowName": "community-ising-yang-v1",
+  "environmentNames": [
+    "Community Ising four-slot local Docker"
+  ],
+  "startedAt": "2026-11-22T20:11:31Z",
+  "finishedAt": "2026-11-22T20:12:17Z"
+}

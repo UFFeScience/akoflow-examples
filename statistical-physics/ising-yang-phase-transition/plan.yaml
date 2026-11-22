@@ -1,0 +1,23 @@
+plan:
+  id: community-ising-yang-plan-v1
+  workflowVersionId: community-ising-yang-v1-v1
+  executionScopeId: community-ising-parallel-scope
+  networkTopologyId: community-ising-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 120, cost: 0, feasible: true}
+  assignments:
+    - {id: ising-prepare, activityId: community-ising-yang-v1-prepare-scenario, resourceId: community-ising-slot-0, orderOnResource: 0, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-0, activityId: community-ising-yang-v1-sample-shard-0, resourceId: community-ising-slot-0, orderOnResource: 1, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-1, activityId: community-ising-yang-v1-sample-shard-1, resourceId: community-ising-slot-1, orderOnResource: 0, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-2, activityId: community-ising-yang-v1-sample-shard-2, resourceId: community-ising-slot-2, orderOnResource: 0, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-3, activityId: community-ising-yang-v1-sample-shard-3, resourceId: community-ising-slot-3, orderOnResource: 0, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-4, activityId: community-ising-yang-v1-sample-shard-4, resourceId: community-ising-slot-0, orderOnResource: 2, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-5, activityId: community-ising-yang-v1-sample-shard-5, resourceId: community-ising-slot-1, orderOnResource: 1, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-6, activityId: community-ising-yang-v1-sample-shard-6, resourceId: community-ising-slot-2, orderOnResource: 1, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-shard-7, activityId: community-ising-yang-v1-sample-shard-7, resourceId: community-ising-slot-3, orderOnResource: 1, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-aggregate, activityId: community-ising-yang-v1-aggregate-observables, resourceId: community-ising-slot-0, orderOnResource: 3, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-render, activityId: community-ising-yang-v1-render-results, resourceId: community-ising-slot-0, orderOnResource: 4, metadata: {runtimeId: community-ising-local}}
+    - {id: ising-validate, activityId: community-ising-yang-v1-validate, resourceId: community-ising-slot-0, orderOnResource: 5, metadata: {runtimeId: community-ising-local}}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-prepare-scenario",
+    "status": "completed",
+    "startedAt": 1795378292.2096336,
+    "finishedAt": 1795378293.1488502,
+    "durationSeconds": 0.9392166137695312
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-3",
+    "status": "completed",
+    "startedAt": 1795378294.4537194,
+    "finishedAt": 1795378308.76456,
+    "durationSeconds": 14.310840606689453
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-2",
+    "status": "completed",
+    "startedAt": 1795378294.493773,
+    "finishedAt": 1795378308.7059822,
+    "durationSeconds": 14.212209224700928
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-0",
+    "status": "completed",
+    "startedAt": 1795378294.5929952,
+    "finishedAt": 1795378308.6427515,
+    "durationSeconds": 14.049756288528442
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-1",
+    "status": "completed",
+    "startedAt": 1795378294.6008215,
+    "finishedAt": 1795378308.461434,
+    "durationSeconds": 13.860612392425537
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-5",
+    "status": "completed",
+    "startedAt": 1795378311.0626369,
+    "finishedAt": 1795378325.973983,
+    "durationSeconds": 14.911346197128296
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-6",
+    "status": "completed",
+    "startedAt": 1795378311.0742047,
+    "finishedAt": 1795378325.887834,
+    "durationSeconds": 14.813629388809204
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-7",
+    "status": "completed",
+    "startedAt": 1795378311.1567771,
+    "finishedAt": 1795378326.2335467,
+    "durationSeconds": 15.076769590377808
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-sample-shard-4",
+    "status": "completed",
+    "startedAt": 1795378311.200872,
+    "finishedAt": 1795378326.3116984,
+    "durationSeconds": 15.11082649230957
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-aggregate-observables",
+    "status": "completed",
+    "startedAt": 1795378330.1905706,
+    "finishedAt": 1795378331.0607765,
+    "durationSeconds": 0.8702058792114258
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-render-results",
+    "status": "completed",
+    "startedAt": 1795378332.3347278,
+    "finishedAt": 1795378334.3945842,
+    "durationSeconds": 2.059856414794922
+  },
+  {
+    "id": "community-ising-yang-run-v1:community-ising-yang-v1-validate",
+    "status": "completed",
+    "startedAt": 1795378335.6303377,
+    "finishedAt": 1795378336.5113735,
+    "durationSeconds": 0.8810358047485352
+  }
+]

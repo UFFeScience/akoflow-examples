@@ -1,0 +1,1300 @@
+{
+  "J": 1,
+  "algorithm": "Wolff single-cluster",
+  "blocks": 20,
+  "branches": [
+    {
+      "L": 32,
+      "id": "L32-T2.16-R0",
+      "replicate": 0,
+      "seed": 1428063794723756309,
+      "shard": 0,
+      "temperature": 2.16
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.16-R1",
+      "replicate": 1,
+      "seed": 6186274495168252603,
+      "shard": 1,
+      "temperature": 2.16
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.16-R2",
+      "replicate": 2,
+      "seed": 4457345489467334804,
+      "shard": 2,
+      "temperature": 2.16
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.16-R3",
+      "replicate": 3,
+      "seed": 5812071817072307594,
+      "shard": 3,
+      "temperature": 2.16
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.18-R0",
+      "replicate": 0,
+      "seed": 8899764739103493060,
+      "shard": 4,
+      "temperature": 2.18
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.18-R1",
+      "replicate": 1,
+      "seed": 12853106940688333862,
+      "shard": 5,
+      "temperature": 2.18
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.18-R2",
+      "replicate": 2,
+      "seed": 7664265805927728724,
+      "shard": 6,
+      "temperature": 2.18
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.18-R3",
+      "replicate": 3,
+      "seed": 10448383165673559314,
+      "shard": 7,
+      "temperature": 2.18
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.20-R0",
+      "replicate": 0,
+      "seed": 3279613396547105423,
+      "shard": 0,
+      "temperature": 2.2
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.20-R1",
+      "replicate": 1,
+      "seed": 7697162778594159692,
+      "shard": 1,
+      "temperature": 2.2
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.20-R2",
+      "replicate": 2,
+      "seed": 5688068895763645967,
+      "shard": 2,
+      "temperature": 2.2
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.20-R3",
+      "replicate": 3,
+      "seed": 16676025434714135648,
+      "shard": 3,
+      "temperature": 2.2
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.22-R0",
+      "replicate": 0,
+      "seed": 15583204590163673567,
+      "shard": 4,
+      "temperature": 2.22
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.22-R1",
+      "replicate": 1,
+      "seed": 3415427281718267630,
+      "shard": 5,
+      "temperature": 2.22
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.22-R2",
+      "replicate": 2,
+      "seed": 17185991250690815369,
+      "shard": 6,
+      "temperature": 2.22
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.22-R3",
+      "replicate": 3,
+      "seed": 12307859607328482622,
+      "shard": 7,
+      "temperature": 2.22
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.24-R0",
+      "replicate": 0,
+      "seed": 2135405142624632588,
+      "shard": 0,
+      "temperature": 2.24
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.24-R1",
+      "replicate": 1,
+      "seed": 15931385611586892154,
+      "shard": 1,
+      "temperature": 2.24
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.24-R2",
+      "replicate": 2,
+      "seed": 13654967061051107901,
+      "shard": 2,
+      "temperature": 2.24
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.24-R3",
+      "replicate": 3,
+      "seed": 17851147037469897835,
+      "shard": 3,
+      "temperature": 2.24
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.26-R0",
+      "replicate": 0,
+      "seed": 6707850077393675602,
+      "shard": 4,
+      "temperature": 2.26
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.26-R1",
+      "replicate": 1,
+      "seed": 5205548234811597856,
+      "shard": 5,
+      "temperature": 2.26
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.26-R2",
+      "replicate": 2,
+      "seed": 17775723932895015995,
+      "shard": 6,
+      "temperature": 2.26
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.26-R3",
+      "replicate": 3,
+      "seed": 8369644658924603072,
+      "shard": 7,
+      "temperature": 2.26
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.28-R0",
+      "replicate": 0,
+      "seed": 14071854423308979351,
+      "shard": 0,
+      "temperature": 2.28
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.28-R1",
+      "replicate": 1,
+      "seed": 6703600912624639401,
+      "shard": 1,
+      "temperature": 2.28
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.28-R2",
+      "replicate": 2,
+      "seed": 17093029354010333543,
+      "shard": 2,
+      "temperature": 2.28
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.28-R3",
+      "replicate": 3,
+      "seed": 15143610659190458234,
+      "shard": 3,
+      "temperature": 2.28
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.30-R0",
+      "replicate": 0,
+      "seed": 7774414069629623991,
+      "shard": 4,
+      "temperature": 2.3
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.30-R1",
+      "replicate": 1,
+      "seed": 6626582779119679163,
+      "shard": 5,
+      "temperature": 2.3
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.30-R2",
+      "replicate": 2,
+      "seed": 11313688168250553707,
+      "shard": 6,
+      "temperature": 2.3
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.30-R3",
+      "replicate": 3,
+      "seed": 3475140611068323446,
+      "shard": 7,
+      "temperature": 2.3
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.32-R0",
+      "replicate": 0,
+      "seed": 9734285653665631471,
+      "shard": 0,
+      "temperature": 2.32
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.32-R1",
+      "replicate": 1,
+      "seed": 13096828408291355917,
+      "shard": 1,
+      "temperature": 2.32
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.32-R2",
+      "replicate": 2,
+      "seed": 1272222874985088441,
+      "shard": 2,
+      "temperature": 2.32
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.32-R3",
+      "replicate": 3,
+      "seed": 6251544366866799827,
+      "shard": 3,
+      "temperature": 2.32
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.34-R0",
+      "replicate": 0,
+      "seed": 5293645192849800494,
+      "shard": 4,
+      "temperature": 2.34
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.34-R1",
+      "replicate": 1,
+      "seed": 9570751424845609531,
+      "shard": 5,
+      "temperature": 2.34
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.34-R2",
+      "replicate": 2,
+      "seed": 16095706491138070843,
+      "shard": 6,
+      "temperature": 2.34
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.34-R3",
+      "replicate": 3,
+      "seed": 2519715709853466310,
+      "shard": 7,
+      "temperature": 2.34
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.36-R0",
+      "replicate": 0,
+      "seed": 4317540270530655791,
+      "shard": 0,
+      "temperature": 2.36
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.36-R1",
+      "replicate": 1,
+      "seed": 8937639973367193154,
+      "shard": 1,
+      "temperature": 2.36
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.36-R2",
+      "replicate": 2,
+      "seed": 18433988934870534592,
+      "shard": 2,
+      "temperature": 2.36
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.36-R3",
+      "replicate": 3,
+      "seed": 5311374035668963070,
+      "shard": 3,
+      "temperature": 2.36
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.38-R0",
+      "replicate": 0,
+      "seed": 3524169609225028843,
+      "shard": 4,
+      "temperature": 2.38
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.38-R1",
+      "replicate": 1,
+      "seed": 18279040251107797201,
+      "shard": 5,
+      "temperature": 2.38
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.38-R2",
+      "replicate": 2,
+      "seed": 3887321910148638250,
+      "shard": 6,
+      "temperature": 2.38
+    },
+    {
+      "L": 32,
+      "id": "L32-T2.38-R3",
+      "replicate": 3,
+      "seed": 4396371760081118573,
+      "shard": 7,
+      "temperature": 2.38
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.16-R0",
+      "replicate": 0,
+      "seed": 2365571986769877534,
+      "shard": 0,
+      "temperature": 2.16
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.16-R1",
+      "replicate": 1,
+      "seed": 15224360766002183625,
+      "shard": 1,
+      "temperature": 2.16
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.16-R2",
+      "replicate": 2,
+      "seed": 2505878379645658886,
+      "shard": 2,
+      "temperature": 2.16
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.16-R3",
+      "replicate": 3,
+      "seed": 8958417129211442582,
+      "shard": 3,
+      "temperature": 2.16
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.18-R0",
+      "replicate": 0,
+      "seed": 11173069068413073065,
+      "shard": 4,
+      "temperature": 2.18
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.18-R1",
+      "replicate": 1,
+      "seed": 7647268551917236858,
+      "shard": 5,
+      "temperature": 2.18
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.18-R2",
+      "replicate": 2,
+      "seed": 18391525616754369004,
+      "shard": 6,
+      "temperature": 2.18
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.18-R3",
+      "replicate": 3,
+      "seed": 9084663980299313759,
+      "shard": 7,
+      "temperature": 2.18
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.20-R0",
+      "replicate": 0,
+      "seed": 8723516433064855464,
+      "shard": 0,
+      "temperature": 2.2
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.20-R1",
+      "replicate": 1,
+      "seed": 5371821547841416691,
+      "shard": 1,
+      "temperature": 2.2
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.20-R2",
+      "replicate": 2,
+      "seed": 10038034350415551811,
+      "shard": 2,
+      "temperature": 2.2
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.20-R3",
+      "replicate": 3,
+      "seed": 12382313378672236554,
+      "shard": 3,
+      "temperature": 2.2
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.22-R0",
+      "replicate": 0,
+      "seed": 17003350575131172202,
+      "shard": 4,
+      "temperature": 2.22
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.22-R1",
+      "replicate": 1,
+      "seed": 4662695233290944092,
+      "shard": 5,
+      "temperature": 2.22
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.22-R2",
+      "replicate": 2,
+      "seed": 1370413575494563553,
+      "shard": 6,
+      "temperature": 2.22
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.22-R3",
+      "replicate": 3,
+      "seed": 17904911361520969842,
+      "shard": 7,
+      "temperature": 2.22
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.24-R0",
+      "replicate": 0,
+      "seed": 5482586738598909478,
+      "shard": 0,
+      "temperature": 2.24
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.24-R1",
+      "replicate": 1,
+      "seed": 9623882660145393762,
+      "shard": 1,
+      "temperature": 2.24
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.24-R2",
+      "replicate": 2,
+      "seed": 13783414570948974908,
+      "shard": 2,
+      "temperature": 2.24
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.24-R3",
+      "replicate": 3,
+      "seed": 18153568681308986108,
+      "shard": 3,
+      "temperature": 2.24
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.26-R0",
+      "replicate": 0,
+      "seed": 10782701348975178782,
+      "shard": 4,
+      "temperature": 2.26
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.26-R1",
+      "replicate": 1,
+      "seed": 15949469818074285549,
+      "shard": 5,
+      "temperature": 2.26
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.26-R2",
+      "replicate": 2,
+      "seed": 17052526195062518554,
+      "shard": 6,
+      "temperature": 2.26
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.26-R3",
+      "replicate": 3,
+      "seed": 5237274537169199037,
+      "shard": 7,
+      "temperature": 2.26
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.28-R0",
+      "replicate": 0,
+      "seed": 8066715365429388053,
+      "shard": 0,
+      "temperature": 2.28
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.28-R1",
+      "replicate": 1,
+      "seed": 14539657421941242077,
+      "shard": 1,
+      "temperature": 2.28
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.28-R2",
+      "replicate": 2,
+      "seed": 4923391281031253178,
+      "shard": 2,
+      "temperature": 2.28
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.28-R3",
+      "replicate": 3,
+      "seed": 13139342752494134813,
+      "shard": 3,
+      "temperature": 2.28
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.30-R0",
+      "replicate": 0,
+      "seed": 6685764118325632883,
+      "shard": 4,
+      "temperature": 2.3
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.30-R1",
+      "replicate": 1,
+      "seed": 12135907996613518372,
+      "shard": 5,
+      "temperature": 2.3
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.30-R2",
+      "replicate": 2,
+      "seed": 53362367206844729,
+      "shard": 6,
+      "temperature": 2.3
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.30-R3",
+      "replicate": 3,
+      "seed": 3974267375246270072,
+      "shard": 7,
+      "temperature": 2.3
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.32-R0",
+      "replicate": 0,
+      "seed": 2579444308778501591,
+      "shard": 0,
+      "temperature": 2.32
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.32-R1",
+      "replicate": 1,
+      "seed": 13721734789906730060,
+      "shard": 1,
+      "temperature": 2.32
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.32-R2",
+      "replicate": 2,
+      "seed": 7203303139643756348,
+      "shard": 2,
+      "temperature": 2.32
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.32-R3",
+      "replicate": 3,
+      "seed": 15270318866253742474,
+      "shard": 3,
+      "temperature": 2.32
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.34-R0",
+      "replicate": 0,
+      "seed": 15466845446678565827,
+      "shard": 4,
+      "temperature": 2.34
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.34-R1",
+      "replicate": 1,
+      "seed": 9385654341021179802,
+      "shard": 5,
+      "temperature": 2.34
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.34-R2",
+      "replicate": 2,
+      "seed": 12719196529875500363,
+      "shard": 6,
+      "temperature": 2.34
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.34-R3",
+      "replicate": 3,
+      "seed": 17405894192099377718,
+      "shard": 7,
+      "temperature": 2.34
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.36-R0",
+      "replicate": 0,
+      "seed": 1641000755010259792,
+      "shard": 0,
+      "temperature": 2.36
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.36-R1",
+      "replicate": 1,
+      "seed": 18214331153743578208,
+      "shard": 1,
+      "temperature": 2.36
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.36-R2",
+      "replicate": 2,
+      "seed": 15092113080099386625,
+      "shard": 2,
+      "temperature": 2.36
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.36-R3",
+      "replicate": 3,
+      "seed": 12040555402571390989,
+      "shard": 3,
+      "temperature": 2.36
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.38-R0",
+      "replicate": 0,
+      "seed": 15875111054068746050,
+      "shard": 4,
+      "temperature": 2.38
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.38-R1",
+      "replicate": 1,
+      "seed": 4805385547755186252,
+      "shard": 5,
+      "temperature": 2.38
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.38-R2",
+      "replicate": 2,
+      "seed": 4056337656089653216,
+      "shard": 6,
+      "temperature": 2.38
+    },
+    {
+      "L": 64,
+      "id": "L64-T2.38-R3",
+      "replicate": 3,
+      "seed": 14338601807082388554,
+      "shard": 7,
+      "temperature": 2.38
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.50-R0",
+      "replicate": 0,
+      "seed": 14891677772623977979,
+      "shard": 0,
+      "temperature": 1.5
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.50-R1",
+      "replicate": 1,
+      "seed": 388678654190735279,
+      "shard": 1,
+      "temperature": 1.5
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.50-R2",
+      "replicate": 2,
+      "seed": 5118142350342777191,
+      "shard": 2,
+      "temperature": 1.5
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.50-R3",
+      "replicate": 3,
+      "seed": 4896390615237017723,
+      "shard": 3,
+      "temperature": 1.5
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.75-R0",
+      "replicate": 0,
+      "seed": 17402319523519459336,
+      "shard": 4,
+      "temperature": 1.75
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.75-R1",
+      "replicate": 1,
+      "seed": 781077792260263988,
+      "shard": 5,
+      "temperature": 1.75
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.75-R2",
+      "replicate": 2,
+      "seed": 9744553676295192146,
+      "shard": 6,
+      "temperature": 1.75
+    },
+    {
+      "L": 96,
+      "id": "L96-T1.75-R3",
+      "replicate": 3,
+      "seed": 211203006701736758,
+      "shard": 7,
+      "temperature": 1.75
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.00-R0",
+      "replicate": 0,
+      "seed": 17776507467743235205,
+      "shard": 0,
+      "temperature": 2.0
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.00-R1",
+      "replicate": 1,
+      "seed": 4540701707914138273,
+      "shard": 1,
+      "temperature": 2.0
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.00-R2",
+      "replicate": 2,
+      "seed": 3345800470519025043,
+      "shard": 2,
+      "temperature": 2.0
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.00-R3",
+      "replicate": 3,
+      "seed": 7995606992810886147,
+      "shard": 3,
+      "temperature": 2.0
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.10-R0",
+      "replicate": 0,
+      "seed": 14800346068066184521,
+      "shard": 4,
+      "temperature": 2.1
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.10-R1",
+      "replicate": 1,
+      "seed": 3452334886340537625,
+      "shard": 5,
+      "temperature": 2.1
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.10-R2",
+      "replicate": 2,
+      "seed": 3978758380440281459,
+      "shard": 6,
+      "temperature": 2.1
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.10-R3",
+      "replicate": 3,
+      "seed": 48626217783383587,
+      "shard": 7,
+      "temperature": 2.1
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.16-R0",
+      "replicate": 0,
+      "seed": 10082451258571393768,
+      "shard": 0,
+      "temperature": 2.16
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.16-R1",
+      "replicate": 1,
+      "seed": 6940584443113316120,
+      "shard": 1,
+      "temperature": 2.16
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.16-R2",
+      "replicate": 2,
+      "seed": 6459319586633602496,
+      "shard": 2,
+      "temperature": 2.16
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.16-R3",
+      "replicate": 3,
+      "seed": 18367730119479863612,
+      "shard": 3,
+      "temperature": 2.16
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.18-R0",
+      "replicate": 0,
+      "seed": 10422043841199359345,
+      "shard": 4,
+      "temperature": 2.18
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.18-R1",
+      "replicate": 1,
+      "seed": 10059360110744433371,
+      "shard": 5,
+      "temperature": 2.18
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.18-R2",
+      "replicate": 2,
+      "seed": 2425007204812286900,
+      "shard": 6,
+      "temperature": 2.18
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.18-R3",
+      "replicate": 3,
+      "seed": 9922336186006848933,
+      "shard": 7,
+      "temperature": 2.18
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.20-R0",
+      "replicate": 0,
+      "seed": 12529509980318645401,
+      "shard": 0,
+      "temperature": 2.2
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.20-R1",
+      "replicate": 1,
+      "seed": 8841219899033625842,
+      "shard": 1,
+      "temperature": 2.2
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.20-R2",
+      "replicate": 2,
+      "seed": 7253954491759955590,
+      "shard": 2,
+      "temperature": 2.2
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.20-R3",
+      "replicate": 3,
+      "seed": 6115307088964668364,
+      "shard": 3,
+      "temperature": 2.2
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.22-R0",
+      "replicate": 0,
+      "seed": 1666371211229958583,
+      "shard": 4,
+      "temperature": 2.22
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.22-R1",
+      "replicate": 1,
+      "seed": 334826144964205281,
+      "shard": 5,
+      "temperature": 2.22
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.22-R2",
+      "replicate": 2,
+      "seed": 13996340276106989685,
+      "shard": 6,
+      "temperature": 2.22
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.22-R3",
+      "replicate": 3,
+      "seed": 12035954204077993564,
+      "shard": 7,
+      "temperature": 2.22
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.24-R0",
+      "replicate": 0,
+      "seed": 3731074511443903361,
+      "shard": 0,
+      "temperature": 2.24
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.24-R1",
+      "replicate": 1,
+      "seed": 17911696775323479533,
+      "shard": 1,
+      "temperature": 2.24
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.24-R2",
+      "replicate": 2,
+      "seed": 14398313185021150776,
+      "shard": 2,
+      "temperature": 2.24
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.24-R3",
+      "replicate": 3,
+      "seed": 1080221646454491539,
+      "shard": 3,
+      "temperature": 2.24
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.26-R0",
+      "replicate": 0,
+      "seed": 5979601396865309805,
+      "shard": 4,
+      "temperature": 2.26
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.26-R1",
+      "replicate": 1,
+      "seed": 15443514608324156633,
+      "shard": 5,
+      "temperature": 2.26
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.26-R2",
+      "replicate": 2,
+      "seed": 11980053292551758054,
+      "shard": 6,
+      "temperature": 2.26
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.26-R3",
+      "replicate": 3,
+      "seed": 661391592572687053,
+      "shard": 7,
+      "temperature": 2.26
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.28-R0",
+      "replicate": 0,
+      "seed": 2600603266592110383,
+      "shard": 0,
+      "temperature": 2.28
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.28-R1",
+      "replicate": 1,
+      "seed": 7378144348021965445,
+      "shard": 1,
+      "temperature": 2.28
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.28-R2",
+      "replicate": 2,
+      "seed": 11731518187179217299,
+      "shard": 2,
+      "temperature": 2.28
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.28-R3",
+      "replicate": 3,
+      "seed": 16006690211775372539,
+      "shard": 3,
+      "temperature": 2.28
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.30-R0",
+      "replicate": 0,
+      "seed": 15891719568239110104,
+      "shard": 4,
+      "temperature": 2.3
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.30-R1",
+      "replicate": 1,
+      "seed": 8950376282340071683,
+      "shard": 5,
+      "temperature": 2.3
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.30-R2",
+      "replicate": 2,
+      "seed": 15729818249193832955,
+      "shard": 6,
+      "temperature": 2.3
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.30-R3",
+      "replicate": 3,
+      "seed": 16382009818960602856,
+      "shard": 7,
+      "temperature": 2.3
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.32-R0",
+      "replicate": 0,
+      "seed": 2896292258193008583,
+      "shard": 0,
+      "temperature": 2.32
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.32-R1",
+      "replicate": 1,
+      "seed": 12761105515623802030,
+      "shard": 1,
+      "temperature": 2.32
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.32-R2",
+      "replicate": 2,
+      "seed": 3003172565763396432,
+      "shard": 2,
+      "temperature": 2.32
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.32-R3",
+      "replicate": 3,
+      "seed": 13208302422118273227,
+      "shard": 3,
+      "temperature": 2.32
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.34-R0",
+      "replicate": 0,
+      "seed": 12499114247121500239,
+      "shard": 4,
+      "temperature": 2.34
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.34-R1",
+      "replicate": 1,
+      "seed": 546478540684682323,
+      "shard": 5,
+      "temperature": 2.34
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.34-R2",
+      "replicate": 2,
+      "seed": 1058290236108865549,
+      "shard": 6,
+      "temperature": 2.34
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.34-R3",
+      "replicate": 3,
+      "seed": 17568618567969896679,
+      "shard": 7,
+      "temperature": 2.34
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.36-R0",
+      "replicate": 0,
+      "seed": 42281775582917505,
+      "shard": 0,
+      "temperature": 2.36
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.36-R1",
+      "replicate": 1,
+      "seed": 7186827815687811629,
+      "shard": 1,
+      "temperature": 2.36
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.36-R2",
+      "replicate": 2,
+      "seed": 14827324348170272430,
+      "shard": 2,
+      "temperature": 2.36
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.36-R3",
+      "replicate": 3,
+      "seed": 3026027388039037692,
+      "shard": 3,
+      "temperature": 2.36
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.38-R0",
+      "replicate": 0,
+      "seed": 3703547589722057585,
+      "shard": 4,
+      "temperature": 2.38
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.38-R1",
+      "replicate": 1,
+      "seed": 15197245226956182106,
+      "shard": 5,
+      "temperature": 2.38
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.38-R2",
+      "replicate": 2,
+      "seed": 16726719443205778642,
+      "shard": 6,
+      "temperature": 2.38
+    },
+    {
+      "L": 96,
+      "id": "L96-T2.38-R3",
+      "replicate": 3,
+      "seed": 10464316685336969666,
+      "shard": 7,
+      "temperature": 2.38
+    }
+  ],
+  "burnSweepEquivalents": 500,
+  "criticalTemperature": 2.269185314213022,
+  "kB": 1,
+  "measurementSweepEquivalents": 2000,
+  "model": "zero-field periodic square-lattice Ising model",
+  "rng": "NumPy PCG64DXSM",
+  "version": "community-ising-yang-v1",
+  "versions": {
+    "matplotlib": "3.9.2",
+    "numba": "0.60.0",
+    "numpy": "1.26.4",
+    "python": "3.11.14"
+  }
+}

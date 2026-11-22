@@ -1,0 +1,18 @@
+{
+  "id": "community-ising-yang-run-v1",
+  "status": "completed",
+  "makespanSeconds": 44.30173993110657,
+  "cost": 0,
+  "activityCount": 12,
+  "completedActivityCount": 12,
+  "breakdown": {
+    "computeSeconds": 121.09630489349365,
+    "transferSeconds": 12.0048828125,
+    "queueSeconds": 0,
+    "interferenceSeconds": 0,
+    "overheadSeconds": 0
+  },
+  "transferredBytes": 32990606,
+  "startedAt": "2026-11-22T20:11:31Z",
+  "finishedAt": "2026-11-22T20:12:17Z"
+}

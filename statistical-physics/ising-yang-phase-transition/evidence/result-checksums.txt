@@ -1,0 +1,4 @@
+6f4a7deb9f991ff6bd8b8ab565c848d83b3a6e931a1e37a280b528c4283d04b6  outputs/daemon-v1/validation.json
+0b5a5f4ff8ff37e82ec57570fd461a619afe67e2d9d96bed9cce977cdfa9d5f4  outputs/daemon-v1/aggregate.json
+5cd7ca10b1550152ff5aca33f227fb6e418d618e7ce390823e270c0e562d9a56  outputs/daemon-v1/ising-phase-transition.png
+6467f0a88530d4effbed04ea26d04b18d34563898598fe6be0c2c967a6834397  outputs/daemon-v1/spin-configurations.gif

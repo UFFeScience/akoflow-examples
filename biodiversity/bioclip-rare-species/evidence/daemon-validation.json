@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "assets_frozen": true,
+    "benchmark_complete": true,
+    "eight_shards": true,
+    "no_source_photographs": true,
+    "outputs_nonempty": true,
+    "published_gate": true,
+    "topk_order": true
+  },
+  "output_sha256": {
+    "aggregate.json": "c8d63ad09bb2c4fc4f8eb1cac449110b98122bf71b8a42eb06fa1d088a7e04af",
+    "bioclip-rare-species.png": "7d19307aa1d4aa85fc3cf3012b18fb9692728df6518ce415374abb066722b39c",
+    "predictions.csv": "334fd14533462cfbca94bc10659a59ccc33faa48608e28a849a9d99b50d7f018"
+  },
+  "passed": true
+}

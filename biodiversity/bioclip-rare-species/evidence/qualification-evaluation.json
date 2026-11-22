@@ -1,0 +1,43 @@
+{
+  "acceptance": {
+    "absolute_tolerance": 0.01,
+    "passed": true,
+    "published_top1": 0.3809
+  },
+  "elapsed_seconds": 1950.672268629074,
+  "environment": {
+    "device": "cpu",
+    "python": "3.10.14",
+    "threads": 8,
+    "torch": "2.2.2+cpu"
+  },
+  "metrics": {
+    "macro_top1": 0.38068796752417455,
+    "max_class_top1": 1.0,
+    "min_class_top1": 0.0,
+    "rank_accuracy": {
+      "class": 0.882667111741634,
+      "family": 0.6124509722106317,
+      "genus": 0.501043144454644,
+      "kingdom": 1.0,
+      "order": 0.771843444880247,
+      "phylum": 0.9707085037135943,
+      "species": 0.38112325794876073
+    },
+    "top1": 0.3809563548360177,
+    "top3": 0.6011850121004757,
+    "top5": 0.6884753400650923
+  },
+  "protocol": {
+    "classes": 400,
+    "dataset_revision": "59689732c07819c9472b6a2ef5b9da9b473f7c27",
+    "deterministic_algorithms": true,
+    "model": "ViT-B-16",
+    "model_revision": "799f1d9eb01abf82c9353de5951967755315725f",
+    "precision": "fp32",
+    "prompt_order_sha256": "f5754d551759fc79d78820819b67ea9e58ec7a51b529fa564698d4e6a00bcf71",
+    "rows": 11983,
+    "seed": 0,
+    "templates": 81
+  }
+}

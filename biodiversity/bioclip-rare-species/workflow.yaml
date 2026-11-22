@@ -1,0 +1,17 @@
+name: community-bioclip-rare-species-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-bioclip-rare-species:v1
+  activities:
+    - {name: prepare, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: infer-00, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "0"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-01, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "1"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-02, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "2"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-03, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "3"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-04, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "4"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-05, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "5"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-06, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "6"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: infer-07, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "7"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [infer-00, infer-01, infer-02, infer-03, infer-04, infer-05, infer-06, infer-07]}
+    - {name: render, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-bioclip-local, command: {entrypoint: python, arguments: ["/app/workflow.py", validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}

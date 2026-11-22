@@ -1,0 +1,898 @@
+{
+  "dimensions": {
+    "max_height": 8688,
+    "max_width": 17000,
+    "min_height": 125,
+    "min_width": 170,
+    "most_common": [
+      [
+        [
+          2048,
+          1536
+        ],
+        1179
+      ],
+      [
+        [
+          2048,
+          1365
+        ],
+        525
+      ],
+      [
+        [
+          1536,
+          2048
+        ],
+        457
+      ],
+      [
+        [
+          640,
+          480
+        ],
+        154
+      ],
+      [
+        [
+          1000,
+          753
+        ],
+        141
+      ],
+      [
+        [
+          2820,
+          1680
+        ],
+        121
+      ],
+      [
+        [
+          4608,
+          3456
+        ],
+        96
+      ],
+      [
+        [
+          2048,
+          1152
+        ],
+        87
+      ],
+      [
+        [
+          1024,
+          768
+        ],
+        79
+      ],
+      [
+        [
+          800,
+          600
+        ],
+        76
+      ]
+    ],
+    "unique": 5229
+  },
+  "elapsed_seconds": 199.92239832878113,
+  "errors": [],
+  "exact_cross_taxon_groups": 0,
+  "exact_duplicate_extra_images": 0,
+  "exact_duplicate_groups": 0,
+  "modes": {
+    "CMYK": 178,
+    "L": 183,
+    "RGB": 11622
+  },
+  "near_examples": [
+    {
+      "a": "322e2f6a-a20e-401e-825e-6c1c47905139",
+      "a_taxon": "Anolis monteverde",
+      "b": "c47b835c-add6-4f78-bab4-90f8cbfbd4d4",
+      "b_taxon": "Anolis monteverde",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "553ab00e-fea6-4985-9508-45d3664c5113",
+      "a_taxon": "Bombus mexicanus",
+      "b": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "b_taxon": "Bombus mexicanus",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "29e1f2d0-2665-470e-9f94-c76c888c4794",
+      "a_taxon": "Harpagoxenus canadensis",
+      "b": "8e2f932e-12c6-4251-ac5a-782a746913df",
+      "b_taxon": "Harpagoxenus canadensis",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "0ea32747-cbe4-4aba-913c-7f8ecc0b2202",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "0a378a41-6729-4e7a-8ccb-b4e5fd4d9ce4",
+      "b_taxon": "Bombus crotchii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "3c240b7c-28d2-4eef-a4c6-aa99a89c595a",
+      "a_taxon": "Nothomyrmecia macrops",
+      "b": "d86bdd8f-e45d-4e66-bc3c-530387338ad8",
+      "b_taxon": "Nothomyrmecia macrops",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "553ab00e-fea6-4985-9508-45d3664c5113",
+      "a_taxon": "Bombus mexicanus",
+      "b": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "b_taxon": "Ognorhynchus icterotis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "553ab00e-fea6-4985-9508-45d3664c5113",
+      "a_taxon": "Bombus mexicanus",
+      "b": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "b_taxon": "Ognorhynchus icterotis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "b_taxon": "Ognorhynchus icterotis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "a_taxon": "Bombus mexicanus",
+      "b": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "75fda7d5-8831-4b27-98af-5ec5c877fcd6",
+      "a_taxon": "Aneuretus simoni",
+      "b": "a81b1059-aafd-45ea-b8de-ca1ad05f65b9",
+      "b_taxon": "Aneuretus simoni",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "e78fbc7d-5cdd-4a16-b626-bad34ffd0d32",
+      "a_taxon": "Stichopus herrmanni",
+      "b": "b0a4c6d6-6116-46da-bc04-11406ec5aec0",
+      "b_taxon": "Stichopus herrmanni",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "83bfc50b-1b1d-4623-980b-64a604a2c11b",
+      "a_taxon": "Pyrrhula murina",
+      "b": "de25d598-059b-4751-9a35-ae131c78875d",
+      "b_taxon": "Pyrrhula murina",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "57f1736a-01ff-4e42-82cb-4ffc41f37e41",
+      "a_taxon": "Presbytis melalophos",
+      "b": "08d01753-815c-4487-bae3-cbe3f8e3683a",
+      "b_taxon": "Presbytis melalophos",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "3ad777ec-430e-453d-b4b8-beda2e24ca4e",
+      "a_taxon": "Adetomyrma venatrix",
+      "b": "6bae3d5b-6ce2-47fb-9295-517a2fa3c5a4",
+      "b_taxon": "Pheidole neokohli",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "633a2077-f36e-4fbe-aff5-aa1ce35dd3b2",
+      "a_taxon": "Euryceros prevostii",
+      "b": "5f814511-e191-4453-84ab-1cc4196f1a33",
+      "b_taxon": "Euryceros prevostii",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "a_taxon": "Bombus mexicanus",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "70a61f8a-952c-4b99-aa5d-dd55587d982f",
+      "a_taxon": "Thinornis novaeseelandiae",
+      "b": "fb7efef3-e485-46bc-8b6a-31692089675e",
+      "b_taxon": "Thinornis novaeseelandiae",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "205a8d6f-0e4a-4645-a5d0-d60efc226df5",
+      "a_taxon": "Conus mercator",
+      "b": "96f9d47b-4cee-438e-adf7-c4022d9768ac",
+      "b_taxon": "Conus mercator",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "242e6896-1a0e-4c10-9f13-5c9c5e607014",
+      "a_taxon": "Priodontes maximus",
+      "b": "7a1dc12b-8440-4f48-91b3-9d53bf2a2943",
+      "b_taxon": "Priodontes maximus",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "32514ef0-5096-4c70-8461-bf784b897045",
+      "a_taxon": "Acipenser sturio",
+      "b": "a500b896-934f-4173-9c33-7e67bd141a3d",
+      "b_taxon": "Acipenser sturio",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "0852d00a-b433-4e5c-b508-fa6f6e0cf20c",
+      "a_taxon": "Hylobates funereus",
+      "b": "bc3c37c6-d515-4531-b800-27bcd82e803a",
+      "b_taxon": "Cercopithecus mona",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "cfb837b0-7191-4c2c-a4a2-bb17321a634c",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "cfb837b0-7191-4c2c-a4a2-bb17321a634c",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "a_taxon": "Bombus mexicanus",
+      "b": "cfb837b0-7191-4c2c-a4a2-bb17321a634c",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "b_taxon": "Bombus morrisoni",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "cfee0e76-c70c-4b26-9c91-9f00bf35d2ae",
+      "a_taxon": "Stichopus herrmanni",
+      "b": "f34806df-ceea-440a-b721-7df38ec90d93",
+      "b_taxon": "Stichopus herrmanni",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "463489c8-f68f-486d-b7f5-bee697527b3a",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "463489c8-f68f-486d-b7f5-bee697527b3a",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "cfb837b0-7191-4c2c-a4a2-bb17321a634c",
+      "a_taxon": "Bombus variabilis",
+      "b": "463489c8-f68f-486d-b7f5-bee697527b3a",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "a_taxon": "Bombus mexicanus",
+      "b": "463489c8-f68f-486d-b7f5-bee697527b3a",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "384321c9-5183-469e-917d-5c892f67209f",
+      "a_taxon": "Nothomyrmecia macrops",
+      "b": "71ae5907-ebb2-4810-b770-a666847d2fac",
+      "b_taxon": "Nothomyrmecia macrops",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "306ade50-83ce-49e9-ba98-5a1f96a38a3a",
+      "a_taxon": "Miopithecus ogouensis",
+      "b": "2773ee74-212d-4f64-8568-5574a592b6b3",
+      "b_taxon": "Miopithecus ogouensis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "1c523149-eebf-49be-98ec-4f7394f58d2a",
+      "a_taxon": "Bombus mexicanus",
+      "b": "e75e9603-ef4d-44d0-84f7-8a1caa022af0",
+      "b_taxon": "Bombus crotchii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b3990453-1297-4517-b805-eeae8fe92489",
+      "a_taxon": "Balistes vetula",
+      "b": "d31b10f0-4c2d-41ac-9c84-bd69992c2107",
+      "b_taxon": "Balistes vetula",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "d120fac8-1e6d-486c-bf81-d0016a7e5810",
+      "a_taxon": "Naja siamensis",
+      "b": "1b5fbe1a-6632-4d49-864f-361001931d0c",
+      "b_taxon": "Naja siamensis",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "0dfe30fd-6f4f-49c8-9b2d-6e07b26ee528",
+      "a_taxon": "Campylopterus ensipennis",
+      "b": "f9a342d4-b863-4a9d-b6c0-62e87faac578",
+      "b_taxon": "Campylopterus ensipennis",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "292693eb-ac0c-4fdd-8864-83d5230c170c",
+      "a_taxon": "Pyrrhula murina",
+      "b": "14e22aef-74cf-49e6-95f2-ef91e8edb077",
+      "b_taxon": "Pyrrhula murina",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "e75e9603-ef4d-44d0-84f7-8a1caa022af0",
+      "a_taxon": "Bombus crotchii",
+      "b": "a814234c-ced5-499f-9329-77a5084324e7",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "1c523149-eebf-49be-98ec-4f7394f58d2a",
+      "a_taxon": "Bombus mexicanus",
+      "b": "a814234c-ced5-499f-9329-77a5084324e7",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "2b140153-e137-4922-a422-fc2f0c29f587",
+      "a_taxon": "Leptobasis melinogaster",
+      "b": "74b4d1f4-a542-4489-8770-c3d45f6fb6c0",
+      "b_taxon": "Leptobasis melinogaster",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "2bc037b0-1633-4fe1-a89e-7bba1ecbee49",
+      "a_taxon": "Potamilus amphichaenus",
+      "b": "4601560d-f34a-42d0-8b5b-129e5c11654c",
+      "b_taxon": "Potamilus amphichaenus",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "758c8117-3ab8-4e27-b466-f02c98519477",
+      "a_taxon": "Miopithecus ogouensis",
+      "b": "2475a8a4-3aa7-4b8d-ae9b-c80c31a5732e",
+      "b_taxon": "Miopithecus ogouensis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "67b9c848-2ea6-45aa-b485-d10477f83199",
+      "a_taxon": "Campylopterus villaviscensio",
+      "b": "635ddc6d-5621-4255-aaf1-271a167603e8",
+      "b_taxon": "Campylopterus villaviscensio",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "a680119d-5bfa-4c88-b8a8-5d2d8a8e40ed",
+      "a_taxon": "Galaxea astreata",
+      "b": "98744b95-af29-4086-961a-47c23da4f206",
+      "b_taxon": "Galaxea astreata",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "3a06c59e-e97f-4cc9-a79d-e306cfc41244",
+      "a_taxon": "Bombus morrisoni",
+      "b": "da8a1ce8-c221-49b6-b34a-833e4b2892c8",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "463489c8-f68f-486d-b7f5-bee697527b3a",
+      "a_taxon": "Bombus variabilis",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "a_taxon": "Bombus morrisoni",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "daf97a26-b831-4c5f-8124-4d5b79046dc7",
+      "a_taxon": "Bombus mexicanus",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "b_taxon": "Bombus variabilis",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "a24eec96-c554-4b30-a46d-47c1e5f2bde5",
+      "a_taxon": "Branta ruficollis",
+      "b": "8227de69-6b91-4970-8458-3406231baae4",
+      "b_taxon": "Branta ruficollis",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "e6777e0f-9429-4b4a-83dd-a78d304f0bf9",
+      "a_taxon": "Bombus variabilis",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "a_taxon": "Bombus morrisoni",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "104a7ff1-2c85-419f-93cf-fa31202d8b66",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "be97173a-94b8-4422-854e-d3849dc3d889",
+      "a_taxon": "Anolis koopmani",
+      "b": "c23928ef-cb30-4a32-8f8f-2470270f8c9c",
+      "b_taxon": "Anolis cooki",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "dcf26fe9-4adf-4f09-a440-62dd301cafbe",
+      "a_taxon": "Hippocampus spinosissimus",
+      "b": "09cc54ed-c352-4c03-ac14-9aa5e5e18700",
+      "b_taxon": "Hippocampus spinosissimus",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "55463c8e-6d43-4345-bed0-a8af4c74b543",
+      "a_taxon": "Rhyticeros undulatus",
+      "b": "b3ac724f-005c-4b61-871d-d861442e24d0",
+      "b_taxon": "Falco deiroleucus",
+      "cross_taxon": true,
+      "distance": 2
+    },
+    {
+      "a": "b727f3d0-2ec6-4af1-a4a7-3cd54832650e",
+      "a_taxon": "Eudyptes moseleyi",
+      "b": "223ce8d8-0e4a-4d9c-9f30-345732ab3438",
+      "b_taxon": "Eudyptes moseleyi",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "d6f5b92e-0e0a-4bb1-b11e-291e969dfca6",
+      "a_taxon": "Bombus crotchii",
+      "b": "a0f130ed-caa3-4b07-8239-57c245cd85ba",
+      "b_taxon": "Bombus mexicanus",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "099cf914-a1bf-4cf5-b918-aa7b38b5c85e",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "8cee94b7-50cd-42c5-bf87-6841f3636694",
+      "a_taxon": "Bombus variabilis",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "b259f1df-b975-4200-969f-c80e0cb54303",
+      "a_taxon": "Ognorhynchus icterotis",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5af36e7e-6370-4acb-8796-cc70ef159ca8",
+      "a_taxon": "Bombus morrisoni",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "09330ca3-d678-4d8d-aac1-c1fcec8bb57f",
+      "a_taxon": "Bombus morrisoni",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "cfb837b0-7191-4c2c-a4a2-bb17321a634c",
+      "a_taxon": "Bombus variabilis",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "3c91362b-8d4a-43f2-9bb2-3a24c3d6a6d9",
+      "a_taxon": "Bombus variabilis",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "6ea30166-283b-45ce-a022-c12f56d202f9",
+      "a_taxon": "Bombus morrisoni",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": true,
+      "distance": 4
+    },
+    {
+      "a": "5b092a36-f6b3-4fb8-bced-efd04e2499cf",
+      "a_taxon": "Bombus dahlbomii",
+      "b": "61693da1-0d4f-47b6-8e50-aeee7fae5404",
+      "b_taxon": "Bombus dahlbomii",
+      "cross_taxon": false,
+      "distance": 4
+    },
+    {
+      "a": "b3a49b40-bee1-429e-9ab5-7b97bb21fb35",
+      "a_taxon": "Protosticta sanguinostigma",
+      "b": "e281f22a-c19a-4467-95fe-a2508d7e531f",
+      "b_taxon": "Protosticta sanguinostigma",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "0dccf4f0-240f-44f1-8fa2-efbc7d5cb47a",
+      "a_taxon": "Naja siamensis",
+      "b": "23d0cdb8-3a63-4993-a120-766c9c47be15",
+      "b_taxon": "Naja siamensis",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "9b5faacb-e075-4c2e-abd2-11da7cf5613b",
+      "a_taxon": "Myliobatis aquila",
+      "b": "ffef90d9-f4f9-4eb9-8186-19c5536336d4",
+      "b_taxon": "Myliobatis aquila",
+      "cross_taxon": false,
+      "distance": 0
+    },
+    {
+      "a": "6a9308b1-61b3-4acd-a044-1d74090e7e7b",
+      "a_taxon": "Ateles paniscus",
+      "b": "15c43984-a522-4b03-9bba-f0ccabfc731e",
+      "b_taxon": "Ateles paniscus",
+      "cross_taxon": false,
+      "distance": 2
+    },
+    {
+      "a": "1611c0c0-ee1f-4111-b754-88f1cbb366ee",
+      "a_taxon": "Strigops habroptila",
+      "b": "388b8e87-080c-46f6-90f2-e668100225e6",
+      "b_taxon": "Strigops habroptila",
+      "cross_taxon": false,
+      "distance": 0
+    }
+  ],
+  "phash_distance_le_4_cross_taxon_pairs": 299,
+  "phash_distance_le_4_pairs": 648,
+  "phash_unique": 11822,
+  "rows": 11983,
+  "verified": 11983
+}

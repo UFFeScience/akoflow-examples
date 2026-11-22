@@ -1,0 +1,17 @@
+environment: {id: community-bioclip-parallel, name: Community BioCLIP parallel local Docker, status: ready}
+version: {id: community-bioclip-parallel-v1, environmentId: community-bioclip-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-bioclip-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-bioclip-parallel-v1, id: community-bioclip-local, name: BioCLIP CPU with frozen network retrieval, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-bioclip-slot-0, environmentVersionId: community-bioclip-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-bioclip-0, cpuCores: 2, cpuCapacity: 2, memoryBytes: 4294967296, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-bioclip-slot-1, environmentVersionId: community-bioclip-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-bioclip-1, cpuCores: 2, cpuCapacity: 2, memoryBytes: 4294967296, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-bioclip-slot-2, environmentVersionId: community-bioclip-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-bioclip-2, cpuCores: 2, cpuCapacity: 2, memoryBytes: 4294967296, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-bioclip-slot-3, environmentVersionId: community-bioclip-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-bioclip-3, cpuCores: 2, cpuCapacity: 2, memoryBytes: 4294967296, storageBytes: 10737418240, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-bioclip-slot-0, runtimeId: community-bioclip-local, enabled: true}
+  - {resourceId: community-bioclip-slot-1, runtimeId: community-bioclip-local, enabled: true}
+  - {resourceId: community-bioclip-slot-2, runtimeId: community-bioclip-local, enabled: true}
+  - {resourceId: community-bioclip-slot-3, runtimeId: community-bioclip-local, enabled: true}

@@ -1,0 +1,521 @@
+{
+  "activities": [
+    {
+      "activityId": "community-henon-map-v1-prepare-scenario",
+      "finishedAt": 1795389599.2984746,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 0.1671290397644043,
+      "startedAt": 1795389599.1313455,
+      "status": "completed",
+      "transferBytes": 0,
+      "transferSeconds": 0
+    },
+    {
+      "activityId": "community-henon-map-v1-iterate-origin",
+      "finishedAt": 1795389626.1349623,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 25.747063636779785,
+      "startedAt": 1795389600.3878987,
+      "status": "completed",
+      "transferBytes": 611,
+      "transferSeconds": 0.19532394409179688
+    },
+    {
+      "activityId": "community-henon-map-v1-iterate-x-offset",
+      "finishedAt": 1795389650.3060522,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 22.796085596084595,
+      "startedAt": 1795389627.5099666,
+      "status": "completed",
+      "transferBytes": 611,
+      "transferSeconds": 0.2009587287902832
+    },
+    {
+      "activityId": "community-henon-map-v1-iterate-y-offset",
+      "finishedAt": 1795389678.1806278,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 26.322052717208862,
+      "startedAt": 1795389651.858575,
+      "status": "completed",
+      "transferBytes": 611,
+      "transferSeconds": 0.1971898078918457
+    },
+    {
+      "activityId": "community-henon-map-v1-iterate-xy-offset",
+      "finishedAt": 1795389701.9066677,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 22.859224319458008,
+      "startedAt": 1795389679.0474434,
+      "status": "completed",
+      "transferBytes": 611,
+      "transferSeconds": 0.19860243797302246
+    },
+    {
+      "activityId": "community-henon-map-v1-aggregate-spectrum",
+      "finishedAt": 1795389704.4686563,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 0.1879422664642334,
+      "startedAt": 1795389704.280714,
+      "status": "completed",
+      "transferBytes": 4218025,
+      "transferSeconds": 2.3902249336242676
+    },
+    {
+      "activityId": "community-henon-map-v1-render-results",
+      "finishedAt": 1795389722.4844165,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 16.950811624526978,
+      "startedAt": 1795389705.5336049,
+      "status": "completed",
+      "transferBytes": 4221233,
+      "transferSeconds": 0.2420971393585205
+    },
+    {
+      "activityId": "community-henon-map-v1-validate",
+      "finishedAt": 1795389724.5369344,
+      "plannedResourceId": "community-henon-slot-0",
+      "runtimeSeconds": 0.16777586936950684,
+      "startedAt": 1795389724.3691585,
+      "status": "completed",
+      "transferBytes": 4825435,
+      "transferSeconds": 0.2826724052429199
+    }
+  ],
+  "events": [
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.run.started",
+      "id": "6f56465c77e88d8ad0cd20be0b790bfb",
+      "occurredAt": "2026-11-22T23:19:58.635587417Z",
+      "payload": {
+        "mode": "real",
+        "schedulePlanId": "community-henon-map-one-slot-plan-v1"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:edb7a449-b51b-4421-aae4-935ea2906359:community-henon-map-v1-prepare-scenario:1",
+      "occurredAt": "2026-11-22T23:19:58.811918422Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-prepare-scenario",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:19:58.871911018Z",
+        "kind": "image-cache-hit",
+        "operationId": "edb7a449-b51b-4421-aae4-935ea2906359",
+        "startedAt": "2026-11-22T23:19:58.811918422Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-prepare-scenario",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "c6c4fba68e80edbc4191bebdf1b3d090",
+      "occurredAt": "2026-11-22T23:19:59.455148941Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-prepare-scenario",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-prepare-scenario",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "549f37a61aaf640ee67c257fb28ee8cb",
+      "occurredAt": "2026-11-22T23:19:59.64037695Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-prepare-scenario",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0.1671290397644043,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:74137905-9021-41c9-82a0-3fa07db480ee:community-henon-map-v1-iterate-origin:1",
+      "occurredAt": "2026-11-22T23:19:59.898395909Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-origin",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:19:59.944808994Z",
+        "kind": "image-cache-hit",
+        "operationId": "74137905-9021-41c9-82a0-3fa07db480ee",
+        "startedAt": "2026-11-22T23:19:59.898395909Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-origin",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "69cfd046c6a41ebcde6190fe3903da21",
+      "occurredAt": "2026-11-22T23:20:02.055933904Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-origin",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-origin",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "9663602f18b94ceeef42451d68e049e9",
+      "occurredAt": "2026-11-22T23:20:26.956564141Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-origin",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 25.747063636779785,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:f4d8e059-b8df-4a6f-9ac0-b262963584b6:community-henon-map-v1-iterate-x-offset:1",
+      "occurredAt": "2026-11-22T23:20:27.215936673Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-x-offset",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:20:27.272061381Z",
+        "kind": "image-cache-hit",
+        "operationId": "f4d8e059-b8df-4a6f-9ac0-b262963584b6",
+        "startedAt": "2026-11-22T23:20:27.215936673Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-x-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "c954521451e28bd520e53452a1289f4c",
+      "occurredAt": "2026-11-22T23:20:28.714192715Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-x-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-x-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "192f420a9907d3b5f31df7830417a60e",
+      "occurredAt": "2026-11-22T23:20:51.349763282Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-x-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 22.796085596084595,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:9ce84a3a-f524-497c-8c3f-cbed507b857d:community-henon-map-v1-iterate-y-offset:1",
+      "occurredAt": "2026-11-22T23:20:51.595645395Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-y-offset",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:20:51.647544684Z",
+        "kind": "image-cache-hit",
+        "operationId": "9ce84a3a-f524-497c-8c3f-cbed507b857d",
+        "startedAt": "2026-11-22T23:20:51.595645395Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-y-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "df6119cd28b3f4bdb9d65e87987f623f",
+      "occurredAt": "2026-11-22T23:20:53.056168125Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-y-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-y-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "93160c4cadd137f8a9e97c0122704b5e",
+      "occurredAt": "2026-11-22T23:21:18.51380713Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-y-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 26.322052717208862,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:4b7b2495-6dfa-4997-86bd-b5b62a1077c2:community-henon-map-v1-iterate-xy-offset:1",
+      "occurredAt": "2026-11-22T23:21:18.779819025Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-xy-offset",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:21:18.839883373Z",
+        "kind": "image-cache-hit",
+        "operationId": "4b7b2495-6dfa-4997-86bd-b5b62a1077c2",
+        "startedAt": "2026-11-22T23:21:18.779819025Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-xy-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "6a787aed326e2c1bf2e8268d20f0effb",
+      "occurredAt": "2026-11-22T23:21:20.251400022Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-xy-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-iterate-xy-offset",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "3d2a436d09923e27c957b5fb6fc59357",
+      "occurredAt": "2026-11-22T23:21:42.888755058Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-iterate-xy-offset",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 22.859224319458008,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:b873fcf8-9dcd-4d23-a41a-a97ec3771a41:community-henon-map-v1-aggregate-spectrum:1",
+      "occurredAt": "2026-11-22T23:21:43.931695066Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-aggregate-spectrum",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:21:44.000646038Z",
+        "kind": "image-cache-hit",
+        "operationId": "b873fcf8-9dcd-4d23-a41a-a97ec3771a41",
+        "startedAt": "2026-11-22T23:21:43.931695066Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-aggregate-spectrum",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "f9a57a65ddc852a652f3cac2485f329c",
+      "occurredAt": "2026-11-22T23:21:44.641311763Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-aggregate-spectrum",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-aggregate-spectrum",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "b55dcd858917c7e4c5453653061d61cc",
+      "occurredAt": "2026-11-22T23:21:44.853472851Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-aggregate-spectrum",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0.1879422664642334,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:3b3ecef1-9f6a-470e-8030-c20e4a47eeec:community-henon-map-v1-render-results:1",
+      "occurredAt": "2026-11-22T23:21:45.215501919Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-render-results",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:21:45.277396254Z",
+        "kind": "image-cache-hit",
+        "operationId": "3b3ecef1-9f6a-470e-8030-c20e4a47eeec",
+        "startedAt": "2026-11-22T23:21:45.215501919Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-render-results",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "c8d3f9170715422596b9f1fdb5c567fa",
+      "occurredAt": "2026-11-22T23:21:46.735982665Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-render-results",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-render-results",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "ebcb1d6d1507d3b690c0226c2397b2b7",
+      "occurredAt": "2026-11-22T23:22:03.339223497Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-render-results",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 16.950811624526978,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.image-preparation.observed",
+      "id": "image-preparation:community-henon-map-one-slot-run-v1:d328cfd1-134d-45b2-9ddb-96a23c8f8dc6:community-henon-map-v1-validate:1",
+      "occurredAt": "2026-11-22T23:22:03.780166462Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-validate",
+        "attempt": 1,
+        "finishedAt": "2026-11-22T23:22:03.8714414Z",
+        "kind": "image-cache-hit",
+        "operationId": "d328cfd1-134d-45b2-9ddb-96a23c8f8dc6",
+        "startedAt": "2026-11-22T23:22:03.780166462Z",
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-validate",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.started",
+      "id": "a4c2bd6d0bb4ec121d0c62c80aeb923c",
+      "occurredAt": "2026-11-22T23:22:04.794677298Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-validate",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0,
+        "status": "running"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1:community-henon-map-v1-validate",
+      "aggregateType": "activity_execution",
+      "eventType": "activity.completed",
+      "id": "ddee5df85ec92ebf004bfdddad303874",
+      "occurredAt": "2026-11-22T23:22:05.144624129Z",
+      "payload": {
+        "activityId": "community-henon-map-v1-validate",
+        "attempt": 1,
+        "executionRunId": "community-henon-map-one-slot-run-v1",
+        "failureReason": "",
+        "runtimeId": "community-henon-local",
+        "runtimeSeconds": 0.16777586936950684,
+        "status": "completed"
+      }
+    },
+    {
+      "aggregateId": "community-henon-map-one-slot-run-v1",
+      "aggregateType": "execution_run",
+      "eventType": "execution.run.completed",
+      "id": "03818c6e6ca4b6d741e32d949310f5b1",
+      "occurredAt": "2026-11-22T23:22:05.157873877Z",
+      "payload": {
+        "cost": 0,
+        "makespanSeconds": 125.40558886528015
+      }
+    }
+  ],
+  "run": {
+    "activityCount": 8,
+    "breakdown": {
+      "computeSeconds": 115.19808506965637,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0,
+      "queueSeconds": 0,
+      "transferSeconds": 3.7070693969726562
+    },
+    "completedActivityCount": 8,
+    "cost": 0,
+    "environmentNames": [
+      "Community H\u00e9non four-slot local Docker"
+    ],
+    "finishedAt": "2026-11-22T23:22:05Z",
+    "id": "community-henon-map-one-slot-run-v1",
+    "kind": "workflow",
+    "makespanSeconds": 125.40558886528015,
+    "mode": "real",
+    "schedulePlanId": "community-henon-map-one-slot-plan-v1",
+    "seed": 0,
+    "startedAt": "2026-11-22T23:19:58Z",
+    "status": "completed",
+    "title": "community-henon-map-one-slot-run-v1",
+    "transferredBytes": 13267137,
+    "workflowId": "community-henon-map-v1",
+    "workflowName": "community-henon-map-v1",
+    "workflowVersionId": "community-henon-map-v1-v1"
+  }
+}

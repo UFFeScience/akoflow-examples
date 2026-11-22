@@ -1,0 +1,49 @@
+{
+  "a": 1.4,
+  "b": 0.3,
+  "burn_in": 10000,
+  "doi": "10.1007/BF01608556",
+  "grids": [
+    [
+      75,
+      25
+    ],
+    [
+      150,
+      50
+    ],
+    [
+      300,
+      100
+    ],
+    [
+      600,
+      200
+    ],
+    [
+      1200,
+      400
+    ]
+  ],
+  "initial_points": {
+    "origin": [
+      0.0,
+      0.0
+    ],
+    "x-offset": [
+      0.1,
+      0.0
+    ],
+    "xy-offset": [
+      -0.1,
+      0.1
+    ],
+    "y-offset": [
+      0.0,
+      0.1
+    ]
+  },
+  "paper": "Michel Henon, A Two-dimensional Mapping with a Strange Attractor",
+  "precision": "IEEE-754 binary64",
+  "retained": 1000000
+}

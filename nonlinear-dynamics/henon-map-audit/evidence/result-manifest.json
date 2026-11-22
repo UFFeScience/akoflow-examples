@@ -1,0 +1,119 @@
+{
+  "files": [
+    {
+      "bytes": 3208,
+      "path": "outputs/reference-v1/aggregate.json",
+      "sha256": "986a2e95cf33ec1430e2c50cf286d246c51dcd66b52778fe18dad4c5bba2f52b"
+    },
+    {
+      "bytes": 115084,
+      "path": "outputs/reference-v1/henon-attractor.png",
+      "sha256": "bf7ea5c9505bca612d21df981ff20b43088524b4c6e7d4c5e9271cf13da70a76"
+    },
+    {
+      "bytes": 362623,
+      "path": "outputs/reference-v1/lyapunov-convergence.gif",
+      "sha256": "6189322e5993c515b4aa93aa3e1c1ba17caa4f4b2789fba41e56b6173eabe499"
+    },
+    {
+      "bytes": 126495,
+      "path": "outputs/reference-v1/lyapunov-convergence.png",
+      "sha256": "cdaa12235f7510ca493858c10bb96c693a234de31532fcfd3c3ca4728e224cb8"
+    },
+    {
+      "bytes": 3468,
+      "path": "outputs/reference-v1/manifest.json",
+      "sha256": "e0192acc607dd1e0f25d8ae71b73c9f2ce92962756db99badc5e96dae73dc498"
+    },
+    {
+      "bytes": 3642,
+      "path": "outputs/reference-v1/origin/convergence.csv",
+      "sha256": "dbf720ef85a0b1e7d6f74ae7a1c9348d1773b2192660d3c1d91520c26b163922"
+    },
+    {
+      "bytes": 5572,
+      "path": "outputs/reference-v1/origin/occupancy.npz",
+      "sha256": "8042a64024245793ebcdaa5fa936564f06f4ae457bd598c230e21b78378b34a5"
+    },
+    {
+      "bytes": 1044483,
+      "path": "outputs/reference-v1/origin/samples.csv.gz",
+      "sha256": "fea977ec3f7e8f4c245ce6830400d2b0fb2e4d86446d35b07b2ffd803eb92517"
+    },
+    {
+      "bytes": 558,
+      "path": "outputs/reference-v1/origin/summary.json",
+      "sha256": "ae5a179d281dd688a6e9879aa235eb3412818c1450567e714361611bb04a519e"
+    },
+    {
+      "bytes": 611,
+      "path": "outputs/reference-v1/scenario.json",
+      "sha256": "0cd167e217426c0c9ad07937729156f8d1f2bdf1ec56d1b74f8bc074bb9047a4"
+    },
+    {
+      "bytes": 1184,
+      "path": "outputs/reference-v1/validation.json",
+      "sha256": "625b254fa600b7a6ca2863d4ea88162429521577f4a44a51314bc5eaf8d90d13"
+    },
+    {
+      "bytes": 3648,
+      "path": "outputs/reference-v1/x-offset/convergence.csv",
+      "sha256": "5cb9f6d9d9878a7677aead5a7d4fb3cc34b22a6e7fa24ac56e075100d2446265"
+    },
+    {
+      "bytes": 5554,
+      "path": "outputs/reference-v1/x-offset/occupancy.npz",
+      "sha256": "bd0d8de08cea6802bff16938347179d797f38eb03e39bcdd30956f863981e111"
+    },
+    {
+      "bytes": 1044563,
+      "path": "outputs/reference-v1/x-offset/samples.csv.gz",
+      "sha256": "7a4d860f03e0272ca8b345c6238b337f2c1a206f88d417c930d08ec1f452fe46"
+    },
+    {
+      "bytes": 564,
+      "path": "outputs/reference-v1/x-offset/summary.json",
+      "sha256": "3fd7592963bd10aaad89b8f03cef27eea50545555e256dce7359c492ca349e39"
+    },
+    {
+      "bytes": 3641,
+      "path": "outputs/reference-v1/xy-offset/convergence.csv",
+      "sha256": "760badb39d43ec9da48c895c548ac777e10c8e5687a400bb39a3b74c319e5595"
+    },
+    {
+      "bytes": 5569,
+      "path": "outputs/reference-v1/xy-offset/occupancy.npz",
+      "sha256": "9ba8fdca351aa0f2808b7ea7794a6d288f886b903fea3080b784b64a84179593"
+    },
+    {
+      "bytes": 1044923,
+      "path": "outputs/reference-v1/xy-offset/samples.csv.gz",
+      "sha256": "f5b43ff130dbfc870cb237930c1a24e2971fdd35094d0618c005a1d0ac513aa5"
+    },
+    {
+      "bytes": 559,
+      "path": "outputs/reference-v1/xy-offset/summary.json",
+      "sha256": "80e7710e50cab77c085b740b9c6ded15d538213c9b54ae7b35488f6ccf5a3350"
+    },
+    {
+      "bytes": 3636,
+      "path": "outputs/reference-v1/y-offset/convergence.csv",
+      "sha256": "89a6b48688bee887856c3c806dda3c9c1d59c0c651216fe298d2846c5040698a"
+    },
+    {
+      "bytes": 5537,
+      "path": "outputs/reference-v1/y-offset/occupancy.npz",
+      "sha256": "0dc401f179d0bef8eaa854e744636acf6af57139245440f72b80db1eb6a90581"
+    },
+    {
+      "bytes": 1044404,
+      "path": "outputs/reference-v1/y-offset/samples.csv.gz",
+      "sha256": "7b3f18caae7f789649af370d94d886eeeccce625c3443aee77961945f17fb7ff"
+    },
+    {
+      "bytes": 561,
+      "path": "outputs/reference-v1/y-offset/summary.json",
+      "sha256": "df2df76218c59d553cc800fcb9858830011a8ea7f43e1fff90f6072e9083fde9"
+    }
+  ]
+}

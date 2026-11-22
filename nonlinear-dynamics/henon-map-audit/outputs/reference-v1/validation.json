@@ -1,0 +1,40 @@
+{
+  "checks": {
+    "complete": true,
+    "contraction": true,
+    "counts": true,
+    "dimension": true,
+    "domain": true,
+    "finite": true,
+    "gallery": true,
+    "jaccard": true,
+    "lambda_span": true,
+    "multiscale": true,
+    "repeat": {
+      "aggregate.json": true,
+      "henon-attractor.png": true,
+      "lyapunov-convergence.gif": true,
+      "lyapunov-convergence.png": true,
+      "origin/convergence.csv": true,
+      "origin/occupancy.npz": true,
+      "origin/samples.csv.gz": true,
+      "origin/summary.json": true,
+      "scenario.json": true,
+      "x-offset/convergence.csv": true,
+      "x-offset/occupancy.npz": true,
+      "x-offset/samples.csv.gz": true,
+      "x-offset/summary.json": true,
+      "xy-offset/convergence.csv": true,
+      "xy-offset/occupancy.npz": true,
+      "xy-offset/samples.csv.gz": true,
+      "xy-offset/summary.json": true,
+      "y-offset/convergence.csv": true,
+      "y-offset/occupancy.npz": true,
+      "y-offset/samples.csv.gz": true,
+      "y-offset/summary.json": true
+    },
+    "spectrum": true
+  },
+  "passed": true,
+  "scientific_scope": "finite-precision numerical audit, not a proof of a strange attractor"
+}

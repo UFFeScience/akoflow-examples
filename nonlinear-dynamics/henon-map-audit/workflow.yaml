@@ -1,0 +1,13 @@
+name: community-henon-map-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-henon-map:v1
+  activities:
+    - {name: prepare-scenario, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: iterate-origin, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, origin]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-x-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, x-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-y-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, y-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-xy-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, xy-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-spectrum, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [iterate-origin, iterate-x-offset, iterate-y-offset, iterate-xy-offset]}
+    - {name: render-results, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-spectrum]}
+    - {name: validate, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

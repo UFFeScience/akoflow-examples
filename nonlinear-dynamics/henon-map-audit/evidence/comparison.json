@@ -1,0 +1,10 @@
+{
+  "four_way_branch_overlap_seconds": 24.337284326553345,
+  "measured_speedup": 2.702579323429238,
+  "one_slot_makespan_seconds": 125.40558886528015,
+  "one_slot_run_id": "community-henon-map-one-slot-run-v1",
+  "overlap_end": 1795389560.6366587,
+  "overlap_start": 1795389536.2993743,
+  "parallel_makespan_seconds": 46.402186155319214,
+  "parallel_run_id": "community-henon-map-run-v1"
+}

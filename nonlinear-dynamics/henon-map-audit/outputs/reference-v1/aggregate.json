@@ -1,0 +1,131 @@
+{
+  "branches": {
+    "origin": {
+      "bounds": {
+        "xmax": 1.2729734183892636,
+        "xmin": -1.2846634089838558,
+        "ymax": 0.3818920255167791,
+        "ymin": -0.38539902269515675
+      },
+      "branch": "origin",
+      "burn_in": 10000,
+      "finite": true,
+      "initial": [
+        0.0,
+        0.0
+      ],
+      "kaplan_yorke": 1.2582716592548033,
+      "lambda1": 0.4192263350197908,
+      "lambda2": -1.623199139345732,
+      "lambda_sum_error": 5.10702591327572e-15,
+      "occupancy_slope": 1.2249407108540697,
+      "occupied_bins": [
+        261,
+        616,
+        1431,
+        3379,
+        7776
+      ],
+      "retained": 1000000,
+      "sample_rows": 50000
+    },
+    "x-offset": {
+      "bounds": {
+        "xmax": 1.2729735785603749,
+        "xmin": -1.2846636534009805,
+        "ymax": 0.38189207356811244,
+        "ymin": -0.38539909602029415
+      },
+      "branch": "x-offset",
+      "burn_in": 10000,
+      "finite": true,
+      "initial": [
+        0.1,
+        0.0
+      ],
+      "kaplan_yorke": 1.2584146031204768,
+      "lambda1": 0.41953921383416987,
+      "lambda2": -1.6235120181601126,
+      "lambda_sum_error": 6.661338147750939e-15,
+      "occupancy_slope": 1.2243613671540217,
+      "occupied_bins": [
+        261,
+        616,
+        1431,
+        3375,
+        7765
+      ],
+      "retained": 1000000,
+      "sample_rows": 50000
+    },
+    "xy-offset": {
+      "bounds": {
+        "xmax": 1.272973602768515,
+        "xmin": -1.284663605023935,
+        "ymax": 0.3818920808305545,
+        "ymin": -0.3853990815071805
+      },
+      "branch": "xy-offset",
+      "burn_in": 10000,
+      "finite": true,
+      "initial": [
+        -0.1,
+        0.1
+      ],
+      "kaplan_yorke": 1.2582612211680109,
+      "lambda1": 0.419203492620291,
+      "lambda2": -1.6231762969461827,
+      "lambda_sum_error": 4.440892098500626e-14,
+      "occupancy_slope": 1.226234428461736,
+      "occupied_bins": [
+        260,
+        615,
+        1429,
+        3377,
+        7777
+      ],
+      "retained": 1000000,
+      "sample_rows": 50000
+    },
+    "y-offset": {
+      "bounds": {
+        "xmax": 1.2729736123913165,
+        "xmin": -1.2846637907273544,
+        "ymax": 0.3818920837173949,
+        "ymin": -0.3853991372182063
+      },
+      "branch": "y-offset",
+      "burn_in": 10000,
+      "finite": true,
+      "initial": [
+        0.0,
+        0.1
+      ],
+      "kaplan_yorke": 1.2582190265831716,
+      "lambda1": 0.4191111617943292,
+      "lambda2": -1.6230839661202687,
+      "lambda_sum_error": 3.3306690738754696e-15,
+      "occupancy_slope": 1.224818184998346,
+      "occupied_bins": [
+        261,
+        616,
+        1431,
+        3377,
+        7775
+      ],
+      "retained": 1000000,
+      "sample_rows": 50000
+    }
+  },
+  "dimension_span": 0.00019557653730517544,
+  "lambda1_span": 0.0004280520398406429,
+  "occupancy_slope_span": 0.0018730613077142522,
+  "pairwise_jaccard": {
+    "origin:x-offset": 0.997043169722058,
+    "origin:xy-offset": 0.9970440437481525,
+    "origin:y-offset": 0.9964539007092199,
+    "x-offset:xy-offset": 0.9970422951789412,
+    "x-offset:y-offset": 0.9982243267238828,
+    "y-offset:xy-offset": 0.9976338361431529
+  }
+}

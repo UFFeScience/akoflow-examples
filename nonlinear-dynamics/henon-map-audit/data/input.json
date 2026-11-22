@@ -1,0 +1,12 @@
+{
+  "authors": ["UFFeScience contributors"],
+  "citation": "Michel Hénon, A Two-dimensional Mapping with a Strange Attractor, Communications in Mathematical Physics 50, 69–77 (1976), doi:10.1007/BF01608556.",
+  "licenses": {
+    "generatedArtifacts": "MIT",
+    "implementation": "MIT",
+    "references": "Publisher works are cited and linked, not redistributed."
+  },
+  "persistentPublicationKey": "community-explorer-issue-36-henon-map-v1",
+  "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "title": "Hénon Map: Geometry and the Lyapunov Balance"
+}

@@ -48,6 +48,10 @@ Across branches, `λ₁` ranged from 0.419111162 to 0.419539214, `λ₂` from -1
 
 Machine-readable summaries, validation, branch convergence data, samples, occupancy arrays, checksums, run records, and matched comparison are in `outputs/reference-v1/` and `evidence/`.
 
+## Public Community Explorer record
+
+[Open the anonymously verified public workflow, gallery, completed run, and downloads](https://hub.akoflow.com/o/akoflow/community-explorer-issue-36-henon-map-v1). Import version 1 with `akoflow::o/akoflow/community-explorer-issue-36-henon-map-v1:1` or the immutable URI `akoflow://hub/publications/68796b3b-104b-4a2a-876c-9770bfe81492/versions/1`.
+
 ## Licenses and limitations
 
 Original workflow source and generated outputs are MIT licensed. NumPy is BSD-3-Clause, Matplotlib uses a PSF-compatible license, and Pillow is HPND; exact pinned versions and notices are recorded in `requirements.txt` and `THIRD_PARTY_NOTICES.md`. No publisher text, external dataset, checkpoint, or paper figure is redistributed.

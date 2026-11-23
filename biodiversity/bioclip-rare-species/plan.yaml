@@ -1,6 +1,6 @@
 plan:
-  id: community-bioclip-rare-species-plan-v1
-  workflowVersionId: community-bioclip-rare-species-v1-v1
+  id: community-bioclip-rare-species-plan-v2
+  workflowVersionId: community-bioclip-rare-species-v2-v1
   executionScopeId: community-bioclip-parallel-scope
   networkTopologyId: community-bioclip-parallel-topology
   source: imported
@@ -9,15 +9,15 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 2400, cost: 0, feasible: true}
   assignments:
-    - {id: bioclip-prepare, activityId: community-bioclip-rare-species-v1-prepare, resourceId: community-bioclip-slot-0, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-00, activityId: community-bioclip-rare-species-v1-infer-00, resourceId: community-bioclip-slot-0, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-01, activityId: community-bioclip-rare-species-v1-infer-01, resourceId: community-bioclip-slot-1, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-02, activityId: community-bioclip-rare-species-v1-infer-02, resourceId: community-bioclip-slot-2, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-03, activityId: community-bioclip-rare-species-v1-infer-03, resourceId: community-bioclip-slot-3, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-04, activityId: community-bioclip-rare-species-v1-infer-04, resourceId: community-bioclip-slot-0, orderOnResource: 2, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-05, activityId: community-bioclip-rare-species-v1-infer-05, resourceId: community-bioclip-slot-1, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-06, activityId: community-bioclip-rare-species-v1-infer-06, resourceId: community-bioclip-slot-2, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-infer-07, activityId: community-bioclip-rare-species-v1-infer-07, resourceId: community-bioclip-slot-3, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-aggregate, activityId: community-bioclip-rare-species-v1-aggregate, resourceId: community-bioclip-slot-0, orderOnResource: 3, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-render, activityId: community-bioclip-rare-species-v1-render, resourceId: community-bioclip-slot-0, orderOnResource: 4, metadata: {runtimeId: community-bioclip-local}}
-    - {id: bioclip-validate, activityId: community-bioclip-rare-species-v1-validate, resourceId: community-bioclip-slot-0, orderOnResource: 5, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-prepare, activityId: community-bioclip-rare-species-v2-prepare, resourceId: community-bioclip-slot-0, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-00, activityId: community-bioclip-rare-species-v2-infer-00, resourceId: community-bioclip-slot-0, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-01, activityId: community-bioclip-rare-species-v2-infer-01, resourceId: community-bioclip-slot-1, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-02, activityId: community-bioclip-rare-species-v2-infer-02, resourceId: community-bioclip-slot-2, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-03, activityId: community-bioclip-rare-species-v2-infer-03, resourceId: community-bioclip-slot-3, orderOnResource: 0, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-04, activityId: community-bioclip-rare-species-v2-infer-04, resourceId: community-bioclip-slot-0, orderOnResource: 2, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-05, activityId: community-bioclip-rare-species-v2-infer-05, resourceId: community-bioclip-slot-1, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-06, activityId: community-bioclip-rare-species-v2-infer-06, resourceId: community-bioclip-slot-2, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-infer-07, activityId: community-bioclip-rare-species-v2-infer-07, resourceId: community-bioclip-slot-3, orderOnResource: 1, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-aggregate, activityId: community-bioclip-rare-species-v2-aggregate, resourceId: community-bioclip-slot-0, orderOnResource: 3, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-render, activityId: community-bioclip-rare-species-v2-render, resourceId: community-bioclip-slot-0, orderOnResource: 4, metadata: {runtimeId: community-bioclip-local}}
+    - {id: bioclip-portable-v2-validate, activityId: community-bioclip-rare-species-v2-validate, resourceId: community-bioclip-slot-0, orderOnResource: 5, metadata: {runtimeId: community-bioclip-local}}

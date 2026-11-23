@@ -1,0 +1,46 @@
+{
+  "verifiedAt": "2026-11-23T01:25:00Z",
+  "anonymousHttp": {
+    "page": 200,
+    "publication": 200,
+    "yaml": 200,
+    "experimentDownload": 200,
+    "readme": 200,
+    "figure": 200,
+    "animation": 200,
+    "timeline": 200
+  },
+  "publication": {
+    "id": "c7798e7d-6372-4f3d-9dd8-f79ae97f31b7",
+    "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+    "slug": "community-explorer-issue-40-cooley-tukey-fft-v1",
+    "visibility": "public",
+    "authorship": "identified",
+    "owner": "akoflow"
+  },
+  "experiment": {
+    "id": "78493c49-35c5-44b6-a23e-ada9116ee000",
+    "runId": "community-cooley-tukey-fft-run-v1",
+    "status": "completed",
+    "activitiesCompleted": 8,
+    "activitiesTotal": 8
+  },
+  "gallery": {
+    "pngSignatureValid": true,
+    "gifSignatureValid": true,
+    "gifFrames": 4,
+    "timelineSignatureValid": true,
+    "allRawUrlsHttp200": true,
+    "mediaChecksumsMatchDaemon": true
+  },
+  "checks": {
+    "authorsAndCitation": true,
+    "licenses": true,
+    "completedRecordedRun": true,
+    "importYaml": true,
+    "experimentDownload": true,
+    "resultConsistency": true,
+    "analyticHalfBinGate": true,
+    "measuredParallelOverlap": true
+  }
+}

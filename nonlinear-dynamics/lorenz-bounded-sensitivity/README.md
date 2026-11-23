@@ -2,6 +2,16 @@
 
 This workflow reproduces a bounded slice of Edward N. Lorenz's result that nearby states of a deterministic nonperiodic flow can evolve into considerably different states. Four independent branches integrate the classic three-mode convection equations: a reference trajectory and `1e-8` perturbations in each coordinate.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/7a0b07b5-d87e-4049-a835-3c0694387e0f/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-lorenz-portable-run-v2-two-slot` completed all 8 activities and passed
+scientific validation.
+
 ## Scientific reference
 
 Edward N. Lorenz, “Deterministic Nonperiodic Flow,” *Journal of the Atmospheric Sciences* 20(2), 130–141 (1963), https://doi.org/10.1175/1520-0469(1963)020%3C0130:DNF%3E2.0.CO;2.

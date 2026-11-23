@@ -12,6 +12,16 @@ The validated reference execution is `community-wright-fisher-run-v1`, workflow 
 
 This is a neutral haploid finite-population slice. It does not model selection, mutation, migration, recombination, diploid genotype sampling, or a named biological population. Model generations are not laboratory time.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/790e5aef-207d-409b-8a11-79db6f16063a/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-wright-fisher-portable-run-v2-two-slot` completed all 28 activities and passed
+scientific validation.
+
 ## Measured result gallery
 
 ![Neutral fixation probability against Kimura's exact law](outputs/reference/fixation-probability.png)

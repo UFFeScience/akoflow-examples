@@ -4,6 +4,16 @@ This CPU workflow reproduces a bounded mathematical result from W. O. Kermack an
 
 Eight synthetic scenarios use `S(0)=0.999999`, `I(0)=0.000001`, `R(0)=0`, `gamma=1/7 day^-1`, and `R0` values 0.5, 0.8, 1.0, 1.2, 1.5, 2.0, 3.0, and 5.0. Each independent branch runs SciPy DOP853 and Radau and compares them with the nontrivial analytic final-size root. The `R0=1` case is correctly subthreshold because `R0*S(0)<1`.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/34e57b08-7fc5-4343-8173-4af2b6a3f6ee/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-sir-threshold-sweep-portable-run-v3-two-slot` completed all 12 activities and passed
+scientific validation.
+
 ## Reproduce
 
 ```sh

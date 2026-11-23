@@ -4,6 +4,16 @@ This CPU workflow measures how the official MICCAI 2018 StarDist 2D paper model 
 
 The workflow normalizes the official 512 x 512 nuclei image once, runs eight independent transformed inferences, maps every instance-label image back without interpolation, and evaluates each result against the 125-instance target mask and the identity prediction. Aggregation enforces the qualification-time non-degradation, identity-consistency, object-count, completeness, and finite-value gates. Rendering produces an overlay grid, a disagreement map, and an eight-frame animation.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/38a33bff-bfbe-414d-85dc-e88f741a77e2/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-stardist-portable-run-v2` completed all 12 activities and passed
+scientific validation.
+
 ## Scientific source and credit
 
 Uwe Schmidt, Martin Weigert, Coleman Broaddus, and Gene Myers, “Cell Detection with Star-Convex Polygons,” MICCAI 2018, pp. 265–273, DOI [10.1007/978-3-030-00934-2_30](https://doi.org/10.1007/978-3-030-00934-2_30). The implementation and paper model are from the [StarDist repository](https://github.com/stardist/stardist), pinned to revision `e80c6de700693bc228ed3c9ba1dc19c3785667ee` under BSD-3-Clause. The bundled image and mask originate from the 2018 Data Science Bowl / BBBC038 and are CC0/public domain.

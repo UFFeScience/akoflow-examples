@@ -4,6 +4,16 @@ This CPU workflow reproduces the bounded excitation result in A. L. Hodgkin and 
 
 It solves the original space-clamped membrane equations at 6.3 °C after eleven instantaneous initial displacements. Every independent branch uses SciPy DOP853 and Radau. The declared paper acceptance pair is that 6 mV remains subthreshold while 7 mV produces a regenerative action potential; denser branches only bound the numerical transition. Voltage is measured relative to the paper's resting potential, not on the common −65 mV absolute scale.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/1ea20b57-5afd-4a11-8399-e629bad8ff67/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-hodgkin-huxley-portable-run-v3-two-slot` completed all 15 activities and passed
+scientific validation.
+
 ## Reproduce
 
 ```sh

@@ -6,6 +6,16 @@ later Schnakenberg two-species kinetics as a small, deterministic method
 adaptation. It does not reproduce a historical paper plate or model a particular
 organism.
 
+## Import from AkôFlow Hub
+
+```text
+akoflow://hub/publications/561d7297-9747-4dfe-8cf1-c5d84220490c/versions/2
+```
+
+The published workflow includes the Docker build context. Reference run
+`community-turing-portable-run-v2-two-slot` completed all 9 activities and passed
+scientific validation.
+
 ## Scientific references
 
 - Alan Mathison Turing, “The Chemical Basis of Morphogenesis,” *Philosophical

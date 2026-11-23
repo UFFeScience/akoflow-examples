@@ -1,6 +1,6 @@
 #!/bin/sh
 set -eu
-root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd); api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}; token=${AKOFLOW_API_TOKEN:-akoflow-development-token}; run_id=${AKOFLOW_RUN_ID:-community-chsh-singlet-run-v1}; plan_file=${AKOFLOW_PLAN_FILE:-plan.yaml}; plan_id=${AKOFLOW_PLAN_ID:-community-chsh-singlet-plan-v2}
+root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd); api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}; token=${AKOFLOW_API_TOKEN:-akoflow-development-token}; run_id=${AKOFLOW_RUN_ID:-community-chsh-singlet-portable-run-v2}; plan_file=${AKOFLOW_PLAN_FILE:-plan.yaml}; plan_id=${AKOFLOW_PLAN_ID:-community-chsh-singlet-plan-v2}
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 request(){ method=$1; endpoint=$2; shift 2; curl --fail-with-body -sS -X "$method" -H "Authorization: Bearer $token" "$@" "$api/$endpoint/"; }
 create(){ endpoint=$1; file=$2; request POST "$endpoint" -H 'Content-Type: application/yaml' --data-binary "@$root/$file" > "$tmp/r.json" || true; }

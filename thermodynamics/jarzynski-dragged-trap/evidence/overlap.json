@@ -1,0 +1,6 @@
+{
+  "parallel_seconds": 53.345967054367065,
+  "one_slot_seconds": 77.47900199890137,
+  "observed_ratio": 1.4523872426933293,
+  "claim": "host-specific observed makespan comparison; not generalized speedup"
+}

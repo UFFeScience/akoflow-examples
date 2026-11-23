@@ -1,0 +1,17 @@
+environment: {id: community-jarzynski, name: Community Jarzynski local Docker, status: ready}
+version: {id: community-jarzynski-v1, environmentId: community-jarzynski, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-jarzynski-v1}
+runtimes:
+  - {environmentVersionId: community-jarzynski-v1, id: community-jarzynski-local, name: Jarzynski pinned CPU, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-jarzynski-slot-0, environmentVersionId: community-jarzynski-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-jarzynski-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 2147483648, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-jarzynski-slot-1, environmentVersionId: community-jarzynski-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-jarzynski-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 2147483648, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-jarzynski-slot-2, environmentVersionId: community-jarzynski-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-jarzynski-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 2147483648, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-jarzynski-slot-3, environmentVersionId: community-jarzynski-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-jarzynski-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 2147483648, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-jarzynski-slot-0, runtimeId: community-jarzynski-local, enabled: true}
+  - {resourceId: community-jarzynski-slot-1, runtimeId: community-jarzynski-local, enabled: true}
+  - {resourceId: community-jarzynski-slot-2, runtimeId: community-jarzynski-local, enabled: true}
+  - {resourceId: community-jarzynski-slot-3, runtimeId: community-jarzynski-local, enabled: true}

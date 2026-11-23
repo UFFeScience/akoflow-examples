@@ -1,0 +1,34 @@
+plan:
+  id: community-jarzynski-plan-v1
+  workflowVersionId: community-jarzynski-v1-v1
+  executionScopeId: community-jarzynski-scope
+  networkTopologyId: community-jarzynski-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 90, cost: 0, feasible: true}
+  assignments:
+    - {id: jarzynski-0, activityId: community-jarzynski-v1-freeze-inputs, resourceId: community-jarzynski-slot-0, orderOnResource: 0, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-1, activityId: community-jarzynski-v1-sample-v025-s0, resourceId: community-jarzynski-slot-0, orderOnResource: 1, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-2, activityId: community-jarzynski-v1-sample-v025-s1, resourceId: community-jarzynski-slot-1, orderOnResource: 0, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-3, activityId: community-jarzynski-v1-sample-v025-s2, resourceId: community-jarzynski-slot-2, orderOnResource: 0, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-4, activityId: community-jarzynski-v1-sample-v025-s3, resourceId: community-jarzynski-slot-3, orderOnResource: 0, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-5, activityId: community-jarzynski-v1-sample-v050-s0, resourceId: community-jarzynski-slot-0, orderOnResource: 2, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-6, activityId: community-jarzynski-v1-sample-v050-s1, resourceId: community-jarzynski-slot-1, orderOnResource: 1, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-7, activityId: community-jarzynski-v1-sample-v050-s2, resourceId: community-jarzynski-slot-2, orderOnResource: 1, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-8, activityId: community-jarzynski-v1-sample-v050-s3, resourceId: community-jarzynski-slot-3, orderOnResource: 1, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-9, activityId: community-jarzynski-v1-sample-v075-s0, resourceId: community-jarzynski-slot-0, orderOnResource: 3, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-10, activityId: community-jarzynski-v1-sample-v075-s1, resourceId: community-jarzynski-slot-1, orderOnResource: 2, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-11, activityId: community-jarzynski-v1-sample-v075-s2, resourceId: community-jarzynski-slot-2, orderOnResource: 2, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-12, activityId: community-jarzynski-v1-sample-v075-s3, resourceId: community-jarzynski-slot-3, orderOnResource: 2, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-13, activityId: community-jarzynski-v1-sample-v100-s0, resourceId: community-jarzynski-slot-0, orderOnResource: 4, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-14, activityId: community-jarzynski-v1-sample-v100-s1, resourceId: community-jarzynski-slot-1, orderOnResource: 3, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-15, activityId: community-jarzynski-v1-sample-v100-s2, resourceId: community-jarzynski-slot-2, orderOnResource: 3, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-16, activityId: community-jarzynski-v1-sample-v100-s3, resourceId: community-jarzynski-slot-3, orderOnResource: 3, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-17, activityId: community-jarzynski-v1-audit-time-step, resourceId: community-jarzynski-slot-0, orderOnResource: 5, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-18, activityId: community-jarzynski-v1-audit-euler, resourceId: community-jarzynski-slot-1, orderOnResource: 4, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-19, activityId: community-jarzynski-v1-aggregate, resourceId: community-jarzynski-slot-0, orderOnResource: 6, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-20, activityId: community-jarzynski-v1-render-results, resourceId: community-jarzynski-slot-0, orderOnResource: 7, metadata: {runtimeId: community-jarzynski-local}}
+    - {id: jarzynski-21, activityId: community-jarzynski-v1-validate, resourceId: community-jarzynski-slot-0, orderOnResource: 8, metadata: {runtimeId: community-jarzynski-local}}
+

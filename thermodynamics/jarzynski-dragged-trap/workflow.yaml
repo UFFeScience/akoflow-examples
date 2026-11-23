@@ -1,0 +1,27 @@
+name: community-jarzynski-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-jarzynski:v1
+  activities:
+    - {name: freeze-inputs, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: sample-v025-s0, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.25", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v025-s1, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.25", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v025-s2, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.25", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v025-s3, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.25", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v050-s0, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.50", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v050-s1, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.50", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v050-s2, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.50", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v050-s3, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.50", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v075-s0, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.75", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v075-s1, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.75", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v075-s2, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.75", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v075-s3, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "0.75", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v100-s0, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "1.00", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v100-s1, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "1.00", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v100-s2, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "1.00", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-v100-s3, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --speed, "1.00", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: audit-time-step, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit-step, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: audit-euler, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit-euler, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: aggregate, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [sample-v025-s0, sample-v025-s1, sample-v025-s2, sample-v025-s3, sample-v050-s0, sample-v050-s1, sample-v050-s2, sample-v050-s3, sample-v075-s0, sample-v075-s1, sample-v075-s2, sample-v075-s3, sample-v100-s0, sample-v100-s1, sample-v100-s2, sample-v100-s3, audit-time-step, audit-euler]}
+    - {name: render-results, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-jarzynski-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

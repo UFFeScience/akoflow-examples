@@ -2,15 +2,15 @@
 
 This deterministic CPU workflow evaluates Johann Bernoulli's cycloidal quickest-descent result at three fixed endpoints. It numerically integrates the frictionless travel-time functional for the cycloid and three admissible comparison tracks after analytic changes of variable remove the zero-speed start singularity.
 
-![Audited tracks](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/classical-mechanics/brachistochrone-audit/outputs/reference/tracks.png)
+![Audited tracks](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/outputs/reference/tracks.png)
 
 The three panels show the cycloid, straight chord, square-root track, and power-3/2 track joining identical endpoints. Downward distance is positive and plotted downward.
 
-![Descent-time comparison](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/classical-mechanics/brachistochrone-audit/outputs/reference/descent-time-comparison.png)
+![Descent-time comparison](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/outputs/reference/descent-time-comparison.png)
 
 The measured travel times reproduce `T = theta_f sqrt(a/g)` for the cycloid and show a strictly positive margin for every fixed comparison family.
 
-![Time-synchronized bead motion](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/classical-mechanics/brachistochrone-audit/outputs/reference/brachistochrone-descent.gif)
+![Time-synchronized bead motion](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/outputs/reference/brachistochrone-descent.gif)
 
 The animation advances beads at a shared clock time for the `theta_f = pi` endpoint. It is a visualization of the audited elapsed times, not a separate dynamics claim.
 
@@ -35,11 +35,11 @@ The square-root, straight, and power-3/2 comparisons use `x = X s^4`, which yiel
 
 Daemon run `community-brachistochrone-run-v1` completed all seven activities in `17.26788592338562 s`. Its three independent endpoint activities ran on distinct declared resources and overlapped for `3.4908463954925537 s` according to daemon timestamps. The matched one-slot run `community-brachistochrone-run-one-slot-v1` completed in `17.49072813987732 s`. No speedup is claimed: these timings demonstrate real overlap and provide the required control, but the rendering-dominated end-to-end difference is too small to generalize.
 
-![Measured AkôFlow DAG](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/classical-mechanics/brachistochrone-audit/evidence/measured-dag.png)
+![Measured AkôFlow DAG](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/evidence/measured-dag.png)
 
 The DAG separates the three endpoint calculations after frozen inputs and joins them before aggregation, rendering, and validation.
 
-![Measured AkôFlow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/classical-mechanics/brachistochrone-audit/evidence/measured-timeline.png)
+![Measured AkôFlow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/evidence/measured-timeline.png)
 
 The timeline is rendered from the recorded daemon start and finish timestamps. Full daemon responses, image digest, overlap calculation, scientific validation, and result checksums are committed in `evidence/` and `outputs/reference/`.
 

@@ -1,8 +1,8 @@
-name: community-weatherbench2-score-portable
+name: community-weatherbench2-score-compact
 spec:
   namespace: community-explorer
   activities:
-    - {name: verify-inputs, runtime: community-wb2-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-6da2d8420c6c16b3bf9dcaf34f909fe393e25fd8c2d4651f271c9e1008730f88}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, verify, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: verify-inputs, runtime: community-wb2-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-c44e7428b9da0b58ad37fd27030b88f565a165ad3315244e53f713cfce861847}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, verify, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
     - {name: extract-graphcast-z500, runtime: community-wb2-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, graphcast, --variable, z500]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
     - {name: extract-graphcast-t2m, runtime: community-wb2-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, graphcast, --variable, t2m]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}
     - {name: extract-hres-z500, runtime: community-wb2-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, extract, --output, ., --model, hres, --variable, z500]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [verify-inputs]}

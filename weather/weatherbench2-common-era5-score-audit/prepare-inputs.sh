@@ -5,7 +5,8 @@ mkdir -p "$root/data"
 fetch() {
   object=$1 generation=$2 output=$3 expected=$4
   url="https://storage.googleapis.com/download/storage/v1/b/weatherbench2/o/$object?alt=media&generation=$generation"
-  curl --fail --location --retry 4 --retry-all-errors --silent --show-error "$url" -o "$output.tmp"
+  curl --fail --location --retry 4 --retry-all-errors --silent --show-error \
+    --connect-timeout 15 --max-time 120 "$url" -o "$output.tmp"
   actual=$(sha256sum "$output.tmp" | cut -d' ' -f1)
   test "$actual" = "$expected"
   mv "$output.tmp" "$output"

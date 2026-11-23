@@ -1,6 +1,6 @@
 plan:
-  id: community-weatherbench2-score-portable-plan-v2
-  workflowVersionId: community-weatherbench2-score-portable-v1
+  id: community-weatherbench2-score-compact-plan-v3
+  workflowVersionId: community-weatherbench2-score-compact-v1
   executionScopeId: community-wb2-parallel-scope
   networkTopologyId: community-wb2-parallel-topology
   source: imported
@@ -9,13 +9,13 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 30, cost: 0, feasible: true}
   assignments:
-    - {id: wb2-portable-v2-verify, activityId: community-weatherbench2-score-portable-verify-inputs, resourceId: community-wb2-slot-0, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-gc-z, activityId: community-weatherbench2-score-portable-extract-graphcast-z500, resourceId: community-wb2-slot-0, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-gc-t, activityId: community-weatherbench2-score-portable-extract-graphcast-t2m, resourceId: community-wb2-slot-1, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-hr-z, activityId: community-weatherbench2-score-portable-extract-hres-z500, resourceId: community-wb2-slot-0, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-hr-t, activityId: community-weatherbench2-score-portable-extract-hres-t2m, resourceId: community-wb2-slot-1, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-cmp-z, activityId: community-weatherbench2-score-portable-compare-z500, resourceId: community-wb2-slot-0, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-cmp-t, activityId: community-weatherbench2-score-portable-compare-t2m, resourceId: community-wb2-slot-1, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-aggregate, activityId: community-weatherbench2-score-portable-aggregate, resourceId: community-wb2-slot-0, orderOnResource: 4, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-animate, activityId: community-weatherbench2-score-portable-animate-leads, resourceId: community-wb2-slot-1, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
-    - {id: wb2-portable-v2-validate, activityId: community-weatherbench2-score-portable-validate, resourceId: community-wb2-slot-0, orderOnResource: 5, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-verify, activityId: community-weatherbench2-score-compact-verify-inputs, resourceId: community-wb2-slot-0, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-gc-z, activityId: community-weatherbench2-score-compact-extract-graphcast-z500, resourceId: community-wb2-slot-0, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-gc-t, activityId: community-weatherbench2-score-compact-extract-graphcast-t2m, resourceId: community-wb2-slot-1, orderOnResource: 0, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-hr-z, activityId: community-weatherbench2-score-compact-extract-hres-z500, resourceId: community-wb2-slot-0, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-hr-t, activityId: community-weatherbench2-score-compact-extract-hres-t2m, resourceId: community-wb2-slot-1, orderOnResource: 1, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-cmp-z, activityId: community-weatherbench2-score-compact-compare-z500, resourceId: community-wb2-slot-0, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-cmp-t, activityId: community-weatherbench2-score-compact-compare-t2m, resourceId: community-wb2-slot-1, orderOnResource: 2, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-aggregate, activityId: community-weatherbench2-score-compact-aggregate, resourceId: community-wb2-slot-0, orderOnResource: 4, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-animate, activityId: community-weatherbench2-score-compact-animate-leads, resourceId: community-wb2-slot-1, orderOnResource: 3, metadata: {runtimeId: community-wb2-local}}
+    - {id: wb2-compact-v3-validate, activityId: community-weatherbench2-score-compact-validate, resourceId: community-wb2-slot-0, orderOnResource: 5, metadata: {runtimeId: community-wb2-local}}

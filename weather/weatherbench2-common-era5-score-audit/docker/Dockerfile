@@ -1,7 +1,9 @@
 FROM python:3.11-slim-bookworm@sha256:a83ba18aef0f865b1a4a611c2cf460fe446f2795673bbb9fe43be570439e3b39
 WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates curl \
+    && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY scripts/workflow.py input-manifest.json ./
-COPY data/ ./data/
+COPY scripts/workflow.py input-manifest.json prepare-inputs.sh ./
+RUN sh ./prepare-inputs.sh
 ENV MPLCONFIGDIR=/tmp/matplotlib

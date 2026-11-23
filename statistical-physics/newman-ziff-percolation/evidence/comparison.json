@@ -1,0 +1,9 @@
+{
+  "four_l256_branch_common_overlap_seconds": 4.19141960144043,
+  "makespan_ratio_one_slot_over_parallel": 2.140811571908212,
+  "one_slot_makespan_seconds": 91.00967335700989,
+  "one_slot_run_id": "community-percolation-one-slot-run-v2",
+  "parallel_makespan_seconds": 42.511762619018555,
+  "parallel_run_id": "community-percolation-run-v2",
+  "speedup_claim": false
+}

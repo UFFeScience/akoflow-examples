@@ -1,0 +1,25 @@
+name: community-newman-ziff-percolation-v2
+spec:
+  namespace: community-explorer
+  image: akoflow/community-percolation:v1
+  activities:
+    - {name: freeze-inputs, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: sample-l032-s0, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "32", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l032-s1, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "32", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l032-s2, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "32", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l032-s3, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "32", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l064-s0, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "64", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l064-s1, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "64", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l064-s2, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "64", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l064-s3, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "64", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l128-s0, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "128", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l128-s1, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "128", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l128-s2, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "128", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l128-s3, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "128", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l256-s0, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "256", --shard, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l256-s1, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "256", --shard, "1"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l256-s2, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "256", --shard, "2"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: sample-l256-s3, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, shard, --output, ., --size, "256", --shard, "3"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: merge-and-fit, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [sample-l032-s0, sample-l032-s1, sample-l032-s2, sample-l032-s3, sample-l064-s0, sample-l064-s1, sample-l064-s2, sample-l064-s3, sample-l128-s0, sample-l128-s1, sample-l128-s2, sample-l128-s3, sample-l256-s0, sample-l256-s1, sample-l256-s2, sample-l256-s3]}
+    - {name: render-results, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [merge-and-fit]}
+    - {name: validate, runtime: community-percolation-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

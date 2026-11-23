@@ -1,0 +1,11 @@
+{
+  "L": 64,
+  "count": 1024,
+  "maximum": 2640,
+  "minimum": 2118,
+  "shard": 1,
+  "spawn_key": [
+    1,
+    1
+  ]
+}

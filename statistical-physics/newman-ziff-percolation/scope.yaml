@@ -1,0 +1,3 @@
+id: community-percolation-parallel-scope
+name: Community percolation four-slot scope
+environmentVersionIds: [community-percolation-parallel-v1]

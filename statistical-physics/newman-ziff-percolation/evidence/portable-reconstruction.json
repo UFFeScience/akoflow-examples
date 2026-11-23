@@ -1,0 +1,43 @@
+{
+  "artifact_build_id": "recipe-build-b4b7270e8350cf19ca20c5881b1615224f93d53a31a7d2b464dbabff5a3db3e5",
+  "context_digest": "sha256:43186cea38e018500a603352042f1f852e9ac5c845e642acd6d9f0f0369999ec",
+  "recipe_digest": "sha256:01e58e769b96e78ab5e2b0ed5599fb6a35f4f0e228c9a610efb725f0240a2cd8",
+  "recipe_path": "docker/Dockerfile",
+  "platform": "linux/amd64",
+  "preflight": {
+    "ready": true,
+    "image_status": "build_required",
+    "message": "Build required: the Dockerfile context and local builder are available."
+  },
+  "materialized_image": "akoflow-reproduced:b4b7270e8350cf19ca20c5881b1615224f93d53a31a7d2b464dbabff5a3db3e5",
+  "materialized_image_digest": "sha256:b1e6dda756a6a0c95f2094dbb3bf6b6b0812d9167a6badd44ef86055eb3c2184",
+  "run": {
+    "id": "community-percolation-run-v3",
+    "workflow_version_id": "community-newman-ziff-percolation-v3-v1",
+    "status": "completed",
+    "activity_count": 20,
+    "completed_activity_count": 20,
+    "makespan_seconds": 54.854958057403564,
+    "started_at": "2026-11-23T02:29:28Z",
+    "finished_at": "2026-11-23T02:32:46Z"
+  },
+  "hub": {
+    "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+    "publication_id": "9920b3e6-e614-405e-8cb9-34943a2c2141",
+    "version": 2,
+    "result_count": 1,
+    "experiment_id": "e2ecc048-fa76-4597-a4b8-65f70ff0a6aa",
+    "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1/results/2/executions/e2ecc048-fa76-4597-a4b8-65f70ff0a6aa/runs/community-percolation-run-v3/workflow"
+  },
+  "anonymous_verification": {
+    "page_status": 200,
+    "yaml_status": 200,
+    "yaml_bytes": 395995,
+    "workflow_name": "community-newman-ziff-percolation-v3",
+    "activity_count": 20,
+    "portable_context_count": 20,
+    "png_statuses": [200, 200, 200, 200],
+    "gif_status": 200,
+    "gif_frames": 61
+  }
+}

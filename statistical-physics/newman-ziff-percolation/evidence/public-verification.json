@@ -18,13 +18,14 @@
     "timeline_http_status": 200
   },
   "import_yaml": {
-    "bytes": 251555,
+    "bytes": 395995,
     "http_status": 200,
     "media_type": "application/yaml",
-    "workflow_name": "community-newman-ziff-percolation-v2"
+    "workflow_name": "community-newman-ziff-percolation-v3",
+    "portable_context_count": 20
   },
   "page": {
-    "bytes": 580402,
+    "bytes": 465399,
     "http_status": 200,
     "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1"
   },
@@ -35,7 +36,7 @@
     "mismatches": 0,
     "passed": true
   },
-  "verified_at": "2026-11-23T02:23:15Z",
-  "version": 1,
+  "verified_at": "2026-11-23T02:35:51Z",
+  "version": 2,
   "visibility": "public"
 }

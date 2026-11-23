@@ -1,13 +1,13 @@
 {
   "contributionStatus": "maintainer",
-  "experimentId": "4861e307-01d9-4eca-9d19-518e4f494588",
+  "experimentId": "e2ecc048-fa76-4597-a4b8-65f70ff0a6aa",
   "hubOrigin": "https://hub.akoflow.com",
   "persistentPublicationKey": "community-explorer-issue-50-newman-ziff-percolation-v1",
   "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
   "publicationId": "9920b3e6-e614-405e-8cb9-34943a2c2141",
   "resultCount": 1,
-  "runId": "community-percolation-run-v2",
-  "uri": "akoflow://hub/publications/9920b3e6-e614-405e-8cb9-34943a2c2141/versions/1",
-  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1",
-  "version": 1
+  "runId": "community-percolation-run-v3",
+  "uri": "akoflow://hub/publications/9920b3e6-e614-405e-8cb9-34943a2c2141/versions/2",
+  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1/results/2/executions/e2ecc048-fa76-4597-a4b8-65f70ff0a6aa/runs/community-percolation-run-v3/workflow",
+  "version": 2
 }

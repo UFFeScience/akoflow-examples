@@ -4,8 +4,8 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-rrlyrae-run-v1}
-plan_id=${AKOFLOW_PLAN_ID:-community-rrlyrae-plan-v2}
+run_id=${AKOFLOW_RUN_ID:-community-rrlyrae-portable-run-v2}
+plan_id=${AKOFLOW_PLAN_ID:-community-rrlyrae-portable-plan-v2}
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 
@@ -35,7 +35,7 @@ create_yaml schedule-plans/import plan.yaml
 request GET environments/community-rrlyrae-parallel > "$temporary/environment.json"
 request GET execution-scopes/community-rrlyrae-parallel-scope > "$temporary/scope.json"
 request GET network-topologies/community-rrlyrae-parallel-topology > "$temporary/topology.json"
-request GET workflow-definitions/community-rrlyrae-period-recovery > "$temporary/workflow.json"
+request GET workflow-definitions/community-rrlyrae-portable > "$temporary/workflow.json"
 request GET "schedule-plans/$plan_id" > "$temporary/plan.json"
 
 jq -n --arg run_id "$run_id" \

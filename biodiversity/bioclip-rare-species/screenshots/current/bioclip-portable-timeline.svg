@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="540" viewBox="0 0 1200 540" role="img" aria-labelledby="title desc">
+  <title id="title">Measured BioCLIP portable two-slot execution timeline</title>
+  <desc id="desc">Eight inference activities executed in four overlapping waves on two local AkôFlow slots.</desc>
+  <rect width="1200" height="540" fill="#fff"/>
+  <text x="70" y="50" font-family="sans-serif" font-size="28" font-weight="700">BioCLIP portable reference — measured two-slot timeline</text>
+  <text x="70" y="80" font-family="sans-serif" font-size="16">Run community-bioclip-portable-run-v2-two-slot · daemon timestamps · no speedup claim</text>
+  <line x1="190" y1="445" x2="1130" y2="445" stroke="#111" stroke-width="2"/>
+  <g font-family="sans-serif" font-size="14" fill="#111" text-anchor="middle">
+    <text x="190" y="472">0</text><text x="425" y="472">1,250</text><text x="660" y="472">2,500</text><text x="895" y="472">3,750</text><text x="1130" y="472">5,000 s</text>
+  </g>
+  <g stroke="#bbb" stroke-width="1"><line x1="190" y1="95" x2="190" y2="445"/><line x1="425" y1="95" x2="425" y2="445"/><line x1="660" y1="95" x2="660" y2="445"/><line x1="895" y1="95" x2="895" y2="445"/><line x1="1130" y1="95" x2="1130" y2="445"/></g>
+  <g font-family="sans-serif" font-size="16" fill="#111"><text x="70" y="180">slot 0</text><text x="70" y="300">slot 1</text></g>
+  <g fill="#111"><rect x="192" y="135" width="229" height="58" rx="5"/><rect x="421" y="135" width="234" height="58" rx="5"/><rect x="656" y="135" width="216" height="58" rx="5"/><rect x="873" y="135" width="241" height="58" rx="5"/></g>
+  <g fill="#555"><rect x="192" y="255" width="231" height="58" rx="5"/><rect x="423" y="255" width="239" height="58" rx="5"/><rect x="663" y="255" width="225" height="58" rx="5"/><rect x="888" y="255" width="229" height="58" rx="5"/></g>
+  <g font-family="sans-serif" font-size="15" fill="#fff" text-anchor="middle"><text x="306" y="170">infer-00</text><text x="538" y="170">infer-02</text><text x="764" y="170">infer-04</text><text x="993" y="170">infer-06</text><text x="307" y="290">infer-01</text><text x="542" y="290">infer-03</text><text x="775" y="290">infer-05</text><text x="1002" y="290">infer-07</text></g>
+  <g font-family="sans-serif" font-size="14" fill="#111"><text x="190" y="360">prepare</text><line x1="190" y1="370" x2="191" y2="370" stroke="#111" stroke-width="8"/><text x="1085" y="360">aggregate · render · validate</text><line x1="1118" y1="370" x2="1123" y2="370" stroke="#111" stroke-width="8"/></g>
+  <text x="70" y="515" font-family="sans-serif" font-size="14">Principal wave overlaps: 1,216.270 s · 1,236.892 s · 1,113.982 s · 1,203.078 s</text>
+</svg>

@@ -40,9 +40,16 @@ All 11,983 images passed their frozen MD5 and decoded successfully. There were n
 
 Qualification artifacts are under `evidence/`. The evaluation JSON is `dab54553…cb2c`; the image audit is `2cb4da3a…525d`.
 
-The recorded AkôFlow run `community-bioclip-rare-species-run-v4` completed all 12 activities in 1,572.567 seconds with 6,111.101 compute-seconds, 12.291 transfer-seconds, 9,279,133 transferred bytes, and zero configured cost. Four inference activities ran concurrently in each of two waves. Final validation passed all frozen-asset, cardinality, shard-partition, top-k, publication-policy, output, and scientific-reference gates. Its SHA-256 is `f40e2859…ebdc`; the retained figure is `7d19307a…b39c`.
+The portable reference run `community-bioclip-portable-run-v2-two-slot` completed all 12 activities through the AkôFlow daemon in 4,955.142 seconds with 9,820.150 compute-seconds, 11.256 transfer-seconds, 9,279,173 transferred bytes, and zero configured cost. Two independent inference activities overlapped in each of four principal waves; the measured overlaps were 1,216.270, 1,236.892, 1,113.982, and 1,203.078 seconds. These measurements prove scientific activity overlap, not parallel speedup: no matching one-slot run was used. Final validation passed every frozen-asset, benchmark-completeness, eight-shard, top-k, publication-policy, output, and scientific-reference gate. The portable image digest is `sha256:85a5cd9a696fecc79884e83e8066fab9bbde774719df6cd65851320f45a5b087`; the validator SHA-256 is `1baa4383…639d`, and the retained figure remains byte-identical at `7d19307a…b39c`.
 
 ![BioCLIP Rare Species reproduction and hierarchy](screenshots/current/bioclip-rare-species.png)
+
+![Measured AkôFlow two-slot BioCLIP timeline](screenshots/current/bioclip-portable-timeline.svg)
+
+The timeline uses daemon start and finish timestamps from the portable reference
+run. The eight scientific inference branches alternate between the two measured
+local slots; aggregation, rendering, and validation follow only after all
+inference outputs are complete.
 
 ## Build and run
 
@@ -55,7 +62,7 @@ docker build -t akoflow/community-bioclip-rare-species:v1 -f docker/Dockerfile .
 
 For a rate-limited or air-gapped reference site, `--build-arg BIOCLIP_DATA_MIRROR=http://host/path` may point to a local byte mirror laid out by taxonomic directory. Mirror objects are never trusted by location: every file must still match the paper-era per-image MD5 and decode successfully, otherwise the activity fails or retries the official immutable URL.
 
-Submit `environment.yaml`, `scope.yaml`, `topology.yaml`, `workflow.yaml`, and `plan.yaml` to a running AkôFlow daemon with `./run.sh`. Four two-core resources run four shards concurrently in two waves, followed by aggregation, a metrics-only figure, and final validation.
+Submit `environment.yaml`, `scope.yaml`, `topology.yaml`, `workflow.yaml`, and `plan.yaml` to a running AkôFlow daemon with `./run.sh`. The portable reference plan uses two two-core resources for four overlapping inference waves, followed by aggregation, a metrics-only figure, and final validation.
 
 ## Limitations
 

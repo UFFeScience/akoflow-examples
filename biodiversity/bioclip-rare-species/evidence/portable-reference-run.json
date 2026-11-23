@@ -1,0 +1,27 @@
+{
+  "runId": "community-bioclip-portable-run-v2-two-slot",
+  "workflowVersionId": "community-bioclip-rare-species-v2-v1",
+  "status": "completed",
+  "startedAt": "2026-11-23T09:53:58Z",
+  "finishedAt": "2026-11-23T11:28:56Z",
+  "activityCount": 12,
+  "completedActivityCount": 12,
+  "makespanSeconds": 4955.141628742218,
+  "computeSeconds": 9820.150481939316,
+  "transferSeconds": 11.256275415420532,
+  "transferredBytes": 9279173,
+  "cost": 0,
+  "imageDigest": "sha256:85a5cd9a696fecc79884e83e8066fab9bbde774719df6cd65851320f45a5b087",
+  "recipeDigest": "052e4121c40a3bc5ed58d23f0479f4227916a60797b28fe1b6833b0d54b795dc",
+  "validation": {
+    "passed": true,
+    "sha256": "1baa43837e18db7575f71977443100d29a8be7add2a37b6c417305d07fe2639d"
+  },
+  "resultChecksums": {
+    "aggregate.json": "d9f3570db5924a47544595772f2e374bd401c2dcac5d080adcae70be51fbe779",
+    "predictions.csv": "334fd14533462cfbca94bc10659a59ccc33faa48608e28a849a9d99b50d7f018",
+    "bioclip-rare-species.png": "7d19307aa1d4aa85fc3cf3012b18fb9692728df6518ce415374abb066722b39c"
+  },
+  "principalInferenceOverlapsSeconds": [1216.270324, 1236.892467, 1113.981784, 1203.077893],
+  "speedupClaimed": false
+}

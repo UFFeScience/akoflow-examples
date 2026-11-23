@@ -1,14 +1,13 @@
-name: community-turing-schnakenberg-v1
+name: community-turing-schnakenberg-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-turing-schnakenberg:v1
   activities:
-    - {name: prepare-scenario, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: simulate-primary-128, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, primary-128]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: simulate-primary-64, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, primary-64]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: simulate-control-5, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, control-5]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: simulate-control-1, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, control-1]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: simulate-halfstep, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, halfstep]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: aggregate-analysis, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [simulate-primary-128, simulate-primary-64, simulate-control-5, simulate-control-1, simulate-halfstep]}
-    - {name: render-results, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-analysis]}
-    - {name: validate, runtime: community-turing-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}
+    - {name: prepare-scenario, runtime: community-turing-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-102559cc48a7a05c199a4838191cfe11cc862b91f0ef4d4eb8665119bb837c62}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: simulate-primary-128, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, primary-128]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: simulate-primary-64, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, primary-64]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: simulate-control-5, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, control-5]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: simulate-control-1, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, control-1]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: simulate-halfstep, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, halfstep]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-analysis, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [simulate-primary-128, simulate-primary-64, simulate-control-5, simulate-control-1, simulate-halfstep]}
+    - {name: render-results, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-analysis]}
+    - {name: validate, runtime: community-turing-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

@@ -4,8 +4,8 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-bioclip-portable-run-v2-two-slot}
-plan_id=community-bioclip-rare-species-plan-v2-two-slot
+run_id=${AKOFLOW_RUN_ID:-community-bioclip-portable-run-v3-two-slot}
+plan_id=community-bioclip-rare-species-plan-v3-two-slot
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 
@@ -29,7 +29,7 @@ create_yaml schedule-plans/import plan.yaml
 request GET environments/community-bioclip-parallel > "$temporary/environment.json"
 request GET execution-scopes/community-bioclip-parallel-scope > "$temporary/scope.json"
 request GET network-topologies/community-bioclip-parallel-topology > "$temporary/topology.json"
-request GET workflow-definitions/community-bioclip-rare-species-v2 > "$temporary/workflow.json"
+request GET workflow-definitions/community-bioclip-rare-species-v3 > "$temporary/workflow.json"
 request GET "schedule-plans/$plan_id" > "$temporary/plan.json"
 
 jq -n --arg run_id "$run_id" --slurpfile environment "$temporary/environment.json" --slurpfile scope "$temporary/scope.json" \

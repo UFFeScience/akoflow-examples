@@ -46,8 +46,10 @@ RUN curl -fsSL --retry 12 --retry-delay 3 \
     && echo "96c458bd580caf5df4743c639eb38490e62eddef44b92be519d6771bdc2bf8fa  /opt/bioclip/assets/rarespecies-catalog.csv" | sha256sum -c - \
     && echo "8cd23a637cc8c6c9175b652b9cfdd695060b27d077d1677fd154c992eb09c754  /opt/bioclip/assets/licenses.csv" | sha256sum -c -
 
-COPY assets/classifier.pt /opt/bioclip/assets/classifier.pt
-RUN echo "7ca30fa6c485f8f4a4ba9113db4fb272ad839927bd7f5e649d412f33a1bd2f42  /opt/bioclip/assets/classifier.pt" | sha256sum -c -
+RUN curl -fsSL --retry 12 --retry-delay 3 \
+      "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/71bed4f/biodiversity/bioclip-rare-species/assets/classifier.pt" \
+      -o /opt/bioclip/assets/classifier.pt \
+    && echo "7ca30fa6c485f8f4a4ba9113db4fb272ad839927bd7f5e649d412f33a1bd2f42  /opt/bioclip/assets/classifier.pt" | sha256sum -c -
 
 COPY scripts/workflow.py /app/workflow.py
 WORKDIR /work

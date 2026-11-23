@@ -1,8 +1,8 @@
-name: community-bioclip-rare-species-v2
+name: community-bioclip-rare-species-v3
 spec:
   namespace: community-explorer
   activities:
-    - {name: prepare, runtime: community-bioclip-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-052e4121c40a3bc5ed58d23f0479f4227916a60797b28fe1b6833b0d54b795dc}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: prepare, runtime: community-bioclip-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-8cd271a88477bc9d43e76d6a06309780fb126634ab9ccfa0e65d64c9a12f3fed}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
     - {name: infer-00, runtime: community-bioclip-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "0"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
     - {name: infer-01, runtime: community-bioclip-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "1"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}
     - {name: infer-02, runtime: community-bioclip-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", infer, --output, ., --shard, "2"]}, cpuLimit: "2", memoryLimit: 4Gi, dependsOn: [prepare]}

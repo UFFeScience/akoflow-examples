@@ -1,6 +1,6 @@
 plan:
-  id: community-airy-diffraction-plan-v1
-  workflowVersionId: community-airy-diffraction-v1-v1
+  id: community-airy-diffraction-plan-v2
+  workflowVersionId: community-airy-diffraction-v2-v1
   executionScopeId: community-airy-parallel-scope
   networkTopologyId: community-airy-parallel-topology
   source: imported
@@ -9,10 +9,10 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 20, cost: 0, feasible: true}
   assignments:
-    - {id: airy-prepare, activityId: community-airy-diffraction-v1-prepare-manifest, resourceId: community-airy-slot-0, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-450, activityId: community-airy-diffraction-v1-evaluate-450nm, resourceId: community-airy-slot-0, orderOnResource: 1, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-550, activityId: community-airy-diffraction-v1-evaluate-550nm, resourceId: community-airy-slot-1, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-650, activityId: community-airy-diffraction-v1-evaluate-650nm, resourceId: community-airy-slot-2, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-aggregate, activityId: community-airy-diffraction-v1-aggregate-scaling, resourceId: community-airy-slot-0, orderOnResource: 2, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-render, activityId: community-airy-diffraction-v1-render-results, resourceId: community-airy-slot-0, orderOnResource: 3, metadata: {runtimeId: community-airy-local}}
-    - {id: airy-validate, activityId: community-airy-diffraction-v1-validate, resourceId: community-airy-slot-0, orderOnResource: 4, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-prepare, activityId: community-airy-diffraction-v2-prepare-manifest, resourceId: community-airy-slot-0, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-450, activityId: community-airy-diffraction-v2-evaluate-450nm, resourceId: community-airy-slot-0, orderOnResource: 1, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-550, activityId: community-airy-diffraction-v2-evaluate-550nm, resourceId: community-airy-slot-1, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-650, activityId: community-airy-diffraction-v2-evaluate-650nm, resourceId: community-airy-slot-2, orderOnResource: 0, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-aggregate, activityId: community-airy-diffraction-v2-aggregate-scaling, resourceId: community-airy-slot-0, orderOnResource: 2, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-render, activityId: community-airy-diffraction-v2-render-results, resourceId: community-airy-slot-0, orderOnResource: 3, metadata: {runtimeId: community-airy-local}}
+    - {id: airy2-validate, activityId: community-airy-diffraction-v2-validate, resourceId: community-airy-slot-0, orderOnResource: 4, metadata: {runtimeId: community-airy-local}}

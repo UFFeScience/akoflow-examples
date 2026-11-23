@@ -1,51 +1,51 @@
 {
   "activities": [
     {
-      "activity_id": "community-airy-diffraction-v1-prepare-manifest",
-      "started_at": 1795390812.7498605,
-      "finished_at": 1795390812.9259343,
+      "activity_id": "community-airy-diffraction-v2-prepare-manifest",
+      "started_at": 1795404342.3538246,
+      "finished_at": 1795404342.5333989,
       "resource": "community-airy-slot-0",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-evaluate-550nm",
-      "started_at": 1795390814.21577,
-      "finished_at": 1795390825.3058429,
+      "activity_id": "community-airy-diffraction-v2-evaluate-550nm",
+      "started_at": 1795404344.1106868,
+      "finished_at": 1795404355.3659236,
       "resource": "community-airy-slot-1",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-evaluate-650nm",
-      "started_at": 1795390814.2488906,
-      "finished_at": 1795390825.6527493,
+      "activity_id": "community-airy-diffraction-v2-evaluate-650nm",
+      "started_at": 1795404344.2792523,
+      "finished_at": 1795404354.8329527,
       "resource": "community-airy-slot-2",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-evaluate-450nm",
-      "started_at": 1795390814.2992325,
-      "finished_at": 1795390825.633961,
+      "activity_id": "community-airy-diffraction-v2-evaluate-450nm",
+      "started_at": 1795404344.5022013,
+      "finished_at": 1795404355.2008643,
       "resource": "community-airy-slot-0",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-aggregate-scaling",
-      "started_at": 1795390829.2497134,
-      "finished_at": 1795390829.6457655,
+      "activity_id": "community-airy-diffraction-v2-aggregate-scaling",
+      "started_at": 1795404359.5047245,
+      "finished_at": 1795404359.9291291,
       "resource": "community-airy-slot-0",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-render-results",
-      "started_at": 1795390831.330996,
-      "finished_at": 1795390901.5829427,
+      "activity_id": "community-airy-diffraction-v2-render-results",
+      "started_at": 1795404363.3916287,
+      "finished_at": 1795404435.9203956,
       "resource": "community-airy-slot-0",
       "status": "completed"
     },
     {
-      "activity_id": "community-airy-diffraction-v1-validate",
-      "started_at": 1795390902.8664148,
-      "finished_at": 1795390903.3960686,
+      "activity_id": "community-airy-diffraction-v2-validate",
+      "started_at": 1795404437.3924181,
+      "finished_at": 1795404437.9710085,
       "resource": "community-airy-slot-0",
       "status": "completed"
     }

@@ -1,0 +1,16 @@
+{
+  "activity_count": 7,
+  "base_image_pinned_by_digest": true,
+  "completed_activity_count": 7,
+  "context_digest": "sha256:ca3624f437e80ff8c0556a5d4cb3d2fba9d90bbd33079eb65e25c8ba3c2f7a48",
+  "copy_sources_inside_context": true,
+  "image_rebuilt_by_akoflow": true,
+  "one_slot_makespan_seconds": 118.40568375587463,
+  "one_slot_run_id": "community-airy-diffraction-one-slot-v2",
+  "parallel_makespan_seconds": 95.61718392372131,
+  "parallel_run_id": "community-airy-diffraction-run-v2",
+  "preflight_message": "Build required: the Dockerfile context and local builder are available.",
+  "recipe_digest": "sha256:3bb32dd151f398c29f75e2d5fab9c11a8484aa1bddda251b45fdbabb2b026863",
+  "recipe_path": "docker/Dockerfile",
+  "workflow_name": "community-airy-diffraction-v2"
+}

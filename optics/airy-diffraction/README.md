@@ -20,7 +20,13 @@ All three daemon branches recovered `j(1,1)=3.831705970207512`, with `|J1(root)|
 
 ## Measured AkôFlow execution
 
-Daemon run `community-airy-diffraction-run-v1` completed all seven activities in `90.6462 s`. The three independent wavelength evaluations overlapped for `11.0066 s` on three distinct declared resources. The matched one-slot run `community-airy-diffraction-one-slot-v1` completed in `111.1543 s`; the observed whole-workflow ratio was `1.2262×`. This is a measured result for this host and scenario, not a general scaling claim.
+Portable daemon run `community-airy-diffraction-run-v2` rebuilt the missing
+image and completed all seven activities in `95.6172 s`. The three independent
+wavelength evaluations overlapped for `10.3308 s` on three distinct declared
+resources. The matched one-slot run
+`community-airy-diffraction-one-slot-v2` completed in `118.4057 s`; the
+observed whole-workflow ratio was `1.2383×`. This is a measured result for this
+host and scenario, not a general scaling claim.
 
 ![Measured AkôFlow DAG](evidence/measured-dag.png)
 
@@ -40,6 +46,22 @@ AKOFLOW_SUBMIT=1 ./run.sh
 ```
 
 The image is pinned to Python 3.11.14 and uses only its standard library. Scientific execution is offline and receives neither Hub credentials nor the host Docker socket. A helper run is only preflight; the recorded daemon runs above are execution evidence.
+
+The imported workflow resolves all seven activities from one immutable AkôFlow
+build recipe. Its archived context contains `docker/Dockerfile`,
+`requirements.txt`, `LICENSE`, and `scripts/workflow.py`; every `COPY` source is
+contained and the base image is pinned by digest. From an unmaterialized state,
+preflight reported `Build required`, and AkôFlow reconstructed and verified the
+OCI image before running the DAG. The context digest is
+`sha256:ca3624f437e80ff8c0556a5d4cb3d2fba9d90bbd33079eb65e25c8ba3c2f7a48`;
+the recipe digest is
+`sha256:3bb32dd151f398c29f75e2d5fab9c11a8484aa1bddda251b45fdbabb2b026863`.
+
+## Public Community Explorer record
+
+[Open the public workflow and measured results](https://hub.akoflow.com/o/akoflow/community-explorer-issue-37-airy-diffraction-v1).
+Import portable version 2 with
+`akoflow://hub/publications/57999cfa-0c42-46ad-98c8-2e2547c41839/versions/2`.
 
 ## Interpretation and limitations
 

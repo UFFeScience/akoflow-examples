@@ -1,0 +1,22 @@
+{
+  "anonymous": true,
+  "import_yaml": {
+    "build_origin_count": 8,
+    "bytes": 158675,
+    "context_archive_count": 8,
+    "context_digest": "sha256:18fa519264d600b762a7ca0ba67bf3fdbcb75225a94657eec4a5da40185ce02a",
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-henon-map-v2"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "68796b3b-104b-4a2a-876c-9770bfe81492",
+  "recorded_result": {
+    "activity_count": 8,
+    "completed_activity_count": 8,
+    "run_id": "community-henon-map-run-v2",
+    "status": "completed"
+  },
+  "version": 2,
+  "visibility": "public"
+}

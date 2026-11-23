@@ -65,3 +65,9 @@ independent numerical audits, and their fixed aggregation path.
 
 The timeline is rendered directly from daemon activity start and finish
 timestamps; colors identify the four declared resources.
+
+## Public Community Explorer version
+
+[Open the public workflow, recorded run, gallery, and downloads](https://hub.akoflow.com/o/akoflow/community-explorer-issue-51-jarzynski-dragged-trap-v1).
+Import immutable version 1 with
+`akoflow://hub/publications/7178176c-e846-4692-97a4-461a38e01b02/versions/1`.

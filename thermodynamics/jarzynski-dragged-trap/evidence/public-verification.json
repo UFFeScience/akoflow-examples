@@ -1,0 +1,42 @@
+{
+  "anonymous": true,
+  "authorship_identified": true,
+  "citation_present": true,
+  "completed_attempts": 22,
+  "gallery": {
+    "animation_frames": 41,
+    "animation_http_status": 200,
+    "animation_signature": "GIF89a",
+    "figure_http_statuses": [200, 200, 200],
+    "measured_dag_http_status": 200,
+    "measured_timeline_http_status": 200
+  },
+  "import_yaml": {
+    "bytes": 275752,
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-jarzynski-v1"
+  },
+  "page": {
+    "bytes": 619699,
+    "http_status": 200,
+    "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-51-jarzynski-dragged-trap-v1"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "7178176c-e846-4692-97a4-461a38e01b02",
+  "recorded_result": {
+    "activity_count": 22,
+    "completed_activity_count": 22,
+    "http_status": 200,
+    "run_id": "community-jarzynski-run-v1",
+    "status": "completed"
+  },
+  "result_consistency": {
+    "daemon_work_summary_sha256": "7ebc8fbe57276d2ac769621cb73fbcb6bf6d41fe5945d935d752c222859b674b",
+    "reference_work_summary_sha256": "7ebc8fbe57276d2ac769621cb73fbcb6bf6d41fe5945d935d752c222859b674b",
+    "passed": true
+  },
+  "verified_at": "2026-11-23T02:59:35Z",
+  "version": 1,
+  "visibility": "public"
+}

@@ -1,0 +1,14 @@
+{
+  "registry": "ghcr.io",
+  "image": "ghcr.io/uffescience/akoflow-examples/trp@sha256:81ff98bb9842441458a89685dfe66399346d5f8d3774a89f2f765085c8cce62d",
+  "sourceCommit": "3483db5c64a81abf8f215115b31ab8c54114c8d8",
+  "ciRun": "https://github.com/UFFeScience/akoflow-examples/actions/runs/44136959209",
+  "ciStatus": "success",
+  "checks": [
+    "Fresh GitHub-hosted image build",
+    "All source/input hashes and Python/R imports",
+    "Original metadata notebooks select 488 cases and 1084 files"
+  ],
+  "anonymousPullVerified": false,
+  "pending": "GHCR package visibility must be public"
+}

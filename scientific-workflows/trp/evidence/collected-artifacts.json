@@ -1,0 +1,23 @@
+{
+  "sourceRunId": "trp-tcga-brca-continuation-local-cad9f593d3-run-20261117t152803.266969797",
+  "sourceActivityId": "trp-tcga-brca-continuation-local-cad9f593d3-network-construction",
+  "sourceWorkspace": "/akoflow/workspace/runs/trp-tcga-brca-continuation-local-cad9f593d3-run-20261117t152803.266969797/trp-tcga-brca-continuation-local-cad9f593d3-network-construction",
+  "verifiedAgainstDaemonSealedManifest": true,
+  "files": [
+    {
+      "path": "stage-06.tar.gz",
+      "digest": "sha256:197e27c06576a8fce523f0d14e49539597bf87c9e26a8e7fb2b7eb6256666cfa",
+      "sizeBytes": 1272575277
+    },
+    {
+      "path": "scientific-validation.json",
+      "digest": "sha256:3305338d4ed1b41fe1fbc630312582a3629a8a1ade7ffa462710eeae91f86913",
+      "sizeBytes": 1762
+    },
+    {
+      "path": "network-summary.png",
+      "digest": "sha256:f996d8aff71470efd496e0f1b99c741ca126255544e6bf43cb15a064504a8cdf",
+      "sizeBytes": 62314
+    }
+  ]
+}

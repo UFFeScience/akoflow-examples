@@ -1,0 +1,39 @@
+{
+  "repository": "https://github.com/LIS-Unicamp/pan-cancer-analysis",
+  "version": "v0.1.0",
+  "commit": "914e8f0b60a8ec5c7df2cedf73b482c183b9aa2b",
+  "paper": "https://doi.org/10.5753/bsb.2025.15126",
+  "metadataMode": "Frozen raw metadata from the paper source release; stage 1 validates and stages it, rather than querying a newer cohort.",
+  "referenceOutputsUsedAsInputs": false,
+  "seedFiles": [
+    {
+      "path": "data/raw/tcga-brca/project-metadata.csv",
+      "filename": "project-metadata.csv",
+      "bytes": 2106,
+      "sha256": "a62dac74ecd16bb94e29845ac75d5ff1ee6037082708abe75149a7c867376cf7"
+    },
+    {
+      "path": "data/raw/tcga-brca/cases-metadata.csv",
+      "filename": "cases-metadata.csv",
+      "bytes": 86931,
+      "sha256": "fe5b889ce1714a1cd12c441b03b6b472b993195a94b5c71f8c982bd5d069e5c8"
+    },
+    {
+      "path": "data/raw/tcga-brca/files-metadata.csv",
+      "filename": "files-metadata.csv",
+      "bytes": 18771311,
+      "sha256": "1d4ca317b0d06fd2553902f6feda1da3f838138427405f75ce076faa079b8cd1"
+    },
+    {
+      "path": "data/raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls",
+      "filename": "tcga-brca-paper-supplementary-tables-1-to-4.xls",
+      "bytes": 522240,
+      "sha256": "02543f8a5e069044ae7602d60507c8ecfd0692e2d347426b34a54b9ca54746ed"
+    }
+  ],
+  "transportAdaptations": [
+    "GDC acquisition downloads original file UUIDs and validates current GDC MD5/byte metadata.",
+    "miRWalk acquisition uses the same public CSV export selected by the upstream browser; each file is recorded with its SHA-256.",
+    "Notebook scientific functions and thresholds are unchanged; download functions fail closed and use bounded concurrency."
+  ]
+}

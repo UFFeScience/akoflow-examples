@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "scientificStageCount": 6,
+  "originalCompletedStages": 4,
+  "continuationCompletedStages": 2,
+  "continuationRunId": "trp-tcga-brca-continuation-local-cad9f593d3-run-20261117t152803.266969797",
+  "independentScientificChecks": [
+    "Frozen raw input hashes",
+    "Full selected GDC UUID coverage with vendor MD5 and length",
+    "Expressed-miRNA coverage for miRWalk downloads",
+    "Finite Spearman/FDR values and mathematical bounds",
+    "Unrounded correlation/FDR thresholds agree with network edges",
+    "Interaction node closure",
+    "Every Jaccard association independently recomputed",
+    "Association threshold membership"
+  ],
+  "collectedArtifactsMatchSealedDaemonManifest": true,
+  "retainedMiRWalkSnapshotHashesVerified": true,
+  "networkTablesCompared": 30,
+  "networkTablesMatch": 30,
+  "expressionTablesCompared": 22,
+  "expressionTablesMatch": 22,
+  "comparisonReferencesUsedAsExecutionInputs": false,
+  "desktopStatus": "completed",
+  "desktopPageErrors": [],
+  "validatorImageId": "sha256:06497fb6a770c1fec9415197cce191b2af9c2012572bd6ea395c25f3d0015868"
+}

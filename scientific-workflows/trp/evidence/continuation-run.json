@@ -1,0 +1,10 @@
+{
+  "activityCount": 2,
+  "image": "akoflow-local/trp:local-239653ac71c2ad58",
+  "imageId": "sha256:239653ac71c2ad584b71ea1bdde5d9d2409b9bc31863ebff60add5d3ffe8a66a",
+  "observedAt": "2026-11-17T15:28:03Z",
+  "planId": "trp-tcga-brca-continuation-local-cad9f593d3-manual-plan-20261117t152803.223255985",
+  "runId": "trp-tcga-brca-continuation-local-cad9f593d3-run-20261117t152803.266969797",
+  "status": "submitted",
+  "workflowId": "trp-tcga-brca-continuation-local-cad9f593d3"
+}

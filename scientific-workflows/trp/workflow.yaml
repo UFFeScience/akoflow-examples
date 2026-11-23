@@ -1,0 +1,109 @@
+name: trp-tcga-brca
+spec:
+  namespace: akoflow-examples
+  image: ghcr.io/uffescience/akoflow-examples/trp@sha256:81ff98bb9842441458a89685dfe66399346d5f8d3774a89f2f765085c8cce62d
+  activities:
+  - name: metadata-access
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn: []
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - metadata-access
+      - --output
+      - .
+  - name: metadata-filtering
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn:
+    - metadata-access
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - metadata-filtering
+      - --output
+      - .
+  - name: expression-aggregation
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn:
+    - metadata-filtering
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - expression-aggregation
+      - --output
+      - .
+  - name: expression-filtering
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn:
+    - expression-aggregation
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - expression-filtering
+      - --output
+      - .
+  - name: interaction-inference
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn:
+    - expression-filtering
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - interaction-inference
+      - --output
+      - .
+  - name: network-construction
+    runtime: trp-local
+    cpuLimit: '2'
+    memoryLimit: 12Gi
+    dependsOn:
+    - interaction-inference
+    command:
+      entrypoint: python
+      arguments:
+      - /app/scripts/run_stage.py
+      - --stage
+      - network-construction
+      - --output
+      - .
+  dataDependencies:
+  - producerActivity: metadata-access
+    consumerActivity: metadata-filtering
+    logicalName: stage-01.tar.gz
+    sizeBytes: 1500000000
+  - producerActivity: metadata-filtering
+    consumerActivity: expression-aggregation
+    logicalName: stage-02.tar.gz
+    sizeBytes: 1500000000
+  - producerActivity: expression-aggregation
+    consumerActivity: expression-filtering
+    logicalName: stage-03.tar.gz
+    sizeBytes: 1500000000
+  - producerActivity: expression-filtering
+    consumerActivity: interaction-inference
+    logicalName: stage-04.tar.gz
+    sizeBytes: 1500000000
+  - producerActivity: interaction-inference
+    consumerActivity: network-construction
+    logicalName: stage-05.tar.gz
+    sizeBytes: 1500000000

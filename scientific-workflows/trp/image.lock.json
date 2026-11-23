@@ -1,0 +1,7 @@
+{
+  "image": "ghcr.io/uffescience/akoflow-examples/trp:v1",
+  "digest": "ghcr.io/uffescience/akoflow-examples/trp@sha256:81ff98bb9842441458a89685dfe66399346d5f8d3774a89f2f765085c8cce62d",
+  "platform": "linux/amd64",
+  "buildCommit": "3483db5c64a81abf8f215115b31ab8c54114c8d8",
+  "buildWorkflow": "https://github.com/UFFeScience/akoflow-examples/actions/runs/44136959209"
+}

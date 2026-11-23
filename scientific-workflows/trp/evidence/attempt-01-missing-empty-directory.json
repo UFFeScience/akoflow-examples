@@ -1,0 +1,1079 @@
+{
+  "activityCount": 6,
+  "completedActivityCount": 1,
+  "image": "akoflow-local/trp:local-62228cdc4e76f331",
+  "imageId": "sha256:62228cdc4e76f331ddde454a6db25c96e16c911b20804e3a19e41d1a0c0a9fdf",
+  "observedAt": "2026-11-17T14:50:07Z",
+  "planId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354",
+  "projection": {
+    "activities": [
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "allocatedResourceId": "trp-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "finishedAt": 1794926980.1418579,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "trp-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354-trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "plannedResourceId": "trp-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794926979.061703,
+        "readyAt": 1794926979.061703,
+        "runtimeId": "trp-local",
+        "runtimeSeconds": 0.8100399971008301,
+        "startedAt": 1794926979.3318179,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "allocatedResourceId": "trp-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "failureReason": "local Docker container exited with code 1",
+        "finishedAt": 1794926982.2635212,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.3007500171661377,
+          "preparationFinishedAt": 1794926981.263627,
+          "preparationStartedAt": 1794926981.0745595,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011150360107421875,
+          "runtimeId": "trp-local",
+          "transferElapsedSeconds": 0.18906760215759277,
+          "transferWorkSeconds": 0.18906760215759277
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354-trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "plannedResourceId": "trp-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794926981.0415525,
+        "readyAt": 1794926981.0415525,
+        "runtimeId": "trp-local",
+        "runtimeSeconds": 0.6991441249847412,
+        "startedAt": 1794926981.564377,
+        "status": "failed",
+        "transferBytes": 3468014,
+        "transferSeconds": 0.18906760215759277
+      }
+    ],
+    "activityAttempts": [
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "allocatedResourceId": "trp-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "finishedAt": 1794926980.1418579,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "pricePerSecond": 0,
+          "runtimeId": "trp-local"
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354-trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "plannedResourceId": "trp-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794926979.061703,
+        "readyAt": 1794926979.061703,
+        "runtimeId": "trp-local",
+        "runtimeSeconds": 0.8100399971008301,
+        "startedAt": 1794926979.3318179,
+        "status": "completed",
+        "transferBytes": 0,
+        "transferSeconds": 0
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "allocatedResourceId": "trp-local-docker",
+        "attempt": 1,
+        "cost": 0,
+        "dataReadyAt": 0,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "failureReason": "local Docker container exited with code 1",
+        "finishedAt": 1794926982.2635212,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "interferenceSeconds": 0,
+        "metadata": {
+          "launchWaitSeconds": 0.3007500171661377,
+          "preparationFinishedAt": 1794926981.263627,
+          "preparationStartedAt": 1794926981.0745595,
+          "pricePerSecond": 0,
+          "readyWaitSeconds": 0.011150360107421875,
+          "runtimeId": "trp-local",
+          "transferElapsedSeconds": 0.18906760215759277,
+          "transferWorkSeconds": 0.18906760215759277
+        },
+        "overheadSeconds": 0,
+        "planAssignmentId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354-trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "plannedResourceId": "trp-local-docker",
+        "queueSeconds": 0,
+        "queuedAt": 1794926981.0415525,
+        "readyAt": 1794926981.0415525,
+        "runtimeId": "trp-local",
+        "runtimeSeconds": 0.6991441249847412,
+        "startedAt": 1794926981.564377,
+        "status": "failed",
+        "transferBytes": 3468014,
+        "transferSeconds": 0.18906760215759277
+      }
+    ],
+    "artifactMaterializations": null,
+    "artifactTransferRuns": [
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "durationSeconds": 0.18906760215759277,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "filesTransferred": 2,
+        "finishedAt": 1794926981.263627,
+        "id": "transfer-workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering-0",
+        "logicalBytes": 3468014,
+        "planId": "transfer-workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering-0",
+        "route": {
+          "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "filesTransferred": 2,
+          "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "reason": "incremental rsync of predecessor workspace through verified staging",
+          "rsyncExecutionSeconds": 0.094679353,
+          "sourceEnvironmentId": "trp-v1",
+          "sourceResourceId": "trp-local-docker",
+          "sshChannelWaitSeconds": 8.860000000000001e-7,
+          "strategy": "gateway",
+          "targetEnvironmentId": "trp-v1",
+          "targetResourceId": "trp-local-docker"
+        },
+        "startedAt": 1794926981.0745595,
+        "status": "completed",
+        "strategy": "gateway",
+        "transferredBytes": 3468014
+      }
+    ],
+    "cloudBilling": {
+      "asOf": "2026-11-17T14:50:07.138657736Z",
+      "costBasis": "VM compute and boot-disk lifecycle at on-demand marginal rates; not a provider invoice",
+      "estimatedCost": 0,
+      "excludedCosts": [
+        "network-egress",
+        "public-ipv4",
+        "image-storage",
+        "discounts-and-tax"
+      ],
+      "instances": [],
+      "knownCost": 0,
+      "status": "estimated"
+    },
+    "dataLocations": [
+      {
+        "dataObjectInstanceId": "9c6dfba200e12ac7bf3f7c4a11dc355f",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "5a1c63ae74f30f0de259194af5da41b8",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "89d58a215b4e09987332155f1ff8dd02",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access/stage-01.tar.gz"
+      },
+      {
+        "dataObjectInstanceId": "d081c5c853d14f6780348a63d1bbf164",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "9f0af967e7abf594c0da70061a7f4e50",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "89d58a215b4e09987332155f1ff8dd02",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access/stage-metadata-access.json"
+      },
+      {
+        "dataObjectInstanceId": "d7cee15abf1e2092550fe4c39a58f1ad",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "ca69ccd9d630af46197562e7f4ba1561",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/config.py"
+      },
+      {
+        "dataObjectInstanceId": "49087b03644420ca815def626154a4ea",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "d99f9d7cc9c945c150fcc9e5709f2f40",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/data/raw/tcga-brca/cases-metadata.csv"
+      },
+      {
+        "dataObjectInstanceId": "000282bd7085f1e588a6f4f475e21718",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "1c8cc6a2876fec3c8f3c72f65dfea92f",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/data/raw/tcga-brca/files-metadata.csv"
+      },
+      {
+        "dataObjectInstanceId": "6b44e51255f19ff141908e4e11f0d827",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "e0096588526ec009dab8633a39320954",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/data/raw/tcga-brca/project-metadata.csv"
+      },
+      {
+        "dataObjectInstanceId": "10fcdee2795643be1912e28fdf5bbcce",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "0ef28c04b62e20b4f64c31ed59c8258a",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/data/raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls"
+      },
+      {
+        "dataObjectInstanceId": "3607274d7564e179f5d14c45a69dc34c",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "c211b8d9ea0d3fa10fbaf53045bc3562",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/provenance.json"
+      },
+      {
+        "dataObjectInstanceId": "c6094962f7ebd97dd3f7eb7bbbc1a9a5",
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "7bef7842fcbac6cdcfefd42c04cf5c17",
+        "metadata": {
+          "lifetime": "pod"
+        },
+        "resourceId": "trp-local-docker",
+        "status": "ephemeral",
+        "storageResourceId": "b6dd8381f258773523a12f229c62df5e",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/stage-records/metadata-access.json"
+      }
+    ],
+    "dataObjects": [
+      {
+        "attempt": 1,
+        "checksum": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+        "dataObjectId": "30eb4ced4592a6ca39f13eb980b25d5f",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "9c6dfba200e12ac7bf3f7c4a11dc355f",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "relativePath": "stage-01.tar.gz",
+        "sizeBytes": 3467783
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+        "dataObjectId": "bbb0084a5d00568c7e781c12ae67d8b2",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "d081c5c853d14f6780348a63d1bbf164",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "relativePath": "stage-metadata-access.json",
+        "sizeBytes": 231
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:bcf600876ad285c313a228ea903508f047d3003da65b48e80a8c12803d1d3348",
+        "dataObjectId": "47faf9e2ad05e2b35c05c9095540f5f6",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "d7cee15abf1e2092550fe4c39a58f1ad",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/config.py",
+        "sizeBytes": 9450
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:fe5b889ce1714a1cd12c441b03b6b472b993195a94b5c71f8c982bd5d069e5c8",
+        "dataObjectId": "5086e2a8cf3319a180b732ca04d69ea9",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "49087b03644420ca815def626154a4ea",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/data/raw/tcga-brca/cases-metadata.csv",
+        "sizeBytes": 86931
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:1d4ca317b0d06fd2553902f6feda1da3f838138427405f75ce076faa079b8cd1",
+        "dataObjectId": "106acc46f3140fdcb2f6ea67f87154d6",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "000282bd7085f1e588a6f4f475e21718",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/data/raw/tcga-brca/files-metadata.csv",
+        "sizeBytes": 18771311
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:a62dac74ecd16bb94e29845ac75d5ff1ee6037082708abe75149a7c867376cf7",
+        "dataObjectId": "efd23f0d316adbb103e49a3f84979248",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "6b44e51255f19ff141908e4e11f0d827",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/data/raw/tcga-brca/project-metadata.csv",
+        "sizeBytes": 2106
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:02543f8a5e069044ae7602d60507c8ecfd0692e2d347426b34a54b9ca54746ed",
+        "dataObjectId": "a57639fa864e31f708c831b021c5d794",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "10fcdee2795643be1912e28fdf5bbcce",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/data/raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls",
+        "sizeBytes": 522240
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:3ab24346c12244c2a39f7852148131dd66b5fc3195528f93aec64306993b537a",
+        "dataObjectId": "5261c57ed5e97d75002abce125b147c4",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "3607274d7564e179f5d14c45a69dc34c",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/provenance.json",
+        "sizeBytes": 1716
+      },
+      {
+        "attempt": 1,
+        "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+        "dataObjectId": "06950fb23ba8ae50af11d2acbf97e656",
+        "discovered": true,
+        "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "id": "c6094962f7ebd97dd3f7eb7bbbc1a9a5",
+        "metadata": {
+          "change": "created"
+        },
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "relativePath": "project/stage-records/metadata-access.json",
+        "sizeBytes": 231
+      }
+    ],
+    "dataTransfers": [],
+    "events": [
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.started",
+        "id": "f2cf1beb770390ce6a572749193555a0",
+        "occurredAt": "2026-11-17T14:49:38.924377894Z",
+        "payload": {
+          "mode": "real",
+          "schedulePlanId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354"
+        }
+      },
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "8821a567c11cbe9d44cff61e2756de2f",
+        "occurredAt": "2026-11-17T14:49:40.872181609Z",
+        "payload": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "attempt": 1,
+          "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "failureReason": "",
+          "runtimeId": "trp-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.completed",
+        "id": "7eb1e224b152a6aa96692e376e7077e6",
+        "occurredAt": "2026-11-17T14:49:41.029852754Z",
+        "payload": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "attempt": 1,
+          "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "failureReason": "",
+          "runtimeId": "trp-local",
+          "runtimeSeconds": 0.8100399971008301,
+          "status": "completed"
+        }
+      },
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.started",
+        "id": "f86dd17d3c66ea798f6c9b2b8871347d",
+        "occurredAt": "2026-11-17T14:49:43.105562577Z",
+        "payload": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "attempt": 1,
+          "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "failureReason": "",
+          "runtimeId": "trp-local",
+          "runtimeSeconds": 0,
+          "status": "running"
+        }
+      },
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "aggregateType": "activity_execution",
+        "eventType": "activity.failed",
+        "id": "0184b67d1422efb333c489d1f377b945",
+        "occurredAt": "2026-11-17T14:49:43.277387311Z",
+        "payload": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "attempt": 1,
+          "executionRunId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "failureReason": "local Docker container exited with code 1",
+          "runtimeId": "trp-local",
+          "runtimeSeconds": 0.6991441249847412,
+          "status": "failed"
+        }
+      },
+      {
+        "aggregateId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "aggregateType": "execution_run",
+        "eventType": "execution.run.failed",
+        "id": "fa43d5e427c3fe0e010e048e594527a1",
+        "occurredAt": "2026-11-17T14:49:43.293356153Z",
+        "payload": {
+          "reason": "activity \"trp-tcga-brca-local-4e7e91d442-metadata-filtering\" failed: local Docker container exited with code 1"
+        }
+      }
+    ],
+    "handles": [
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "artifacts": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "attempt": 1,
+          "exitCode": 0,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "modifiedUnixNano": 1794926980082489600,
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926980086489900,
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "modifiedUnixNano": 1794926980082489600,
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926980086489900,
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "finishedAt": 1794926980.1418579,
+          "phases": [
+            {
+              "durationSeconds": 0.8100399971008301,
+              "finishedAt": 1794926980.1418579,
+              "phase": "execution",
+              "startedAt": 1794926979.3318179,
+              "status": "completed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "runtime": "trp-local",
+          "schemaVersion": 1,
+          "startedAt": 1794926979.3318179,
+          "summary": {
+            "createdFiles": 2,
+            "deletedFiles": 0,
+            "finalFiles": 2,
+            "initialFiles": 0,
+            "modifiedFiles": 0,
+            "outputBytes": 3468014
+          }
+        },
+        "exitCode": 0,
+        "externalId": "fd7bb089fc8c1909b1ef5b13380be1a53d8c43e22e5a4ab6beda2fd5ef6bc662",
+        "finishedAt": 1794926980.1418579,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "log": "Staged the four frozen raw metadata/supplementary inputs from upstream v0.1.0.\nCompleted stage metadata-access in 0.115 seconds\n[AKOFLOW INFO] Activity started on runtime trp-local.\n[AKOFLOW SUCCESS] Activity completed successfully.\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794926979.3318255,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "submittedAt": 1794926979.3318179
+        },
+        "resourceId": "trp-local-docker",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "startedAt": 1794926979.3318179,
+        "status": "completed"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "artifacts": {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "attempt": 1,
+          "exitCode": 1,
+          "files": [
+            {
+              "change": "created",
+              "checksum": "sha256:bcf600876ad285c313a228ea903508f047d3003da65b48e80a8c12803d1d3348",
+              "modifiedUnixNano": 1794926982175724500,
+              "path": "project/config.py",
+              "sizeBytes": 9450
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:fe5b889ce1714a1cd12c441b03b6b472b993195a94b5c71f8c982bd5d069e5c8",
+              "modifiedUnixNano": 1794926982175724500,
+              "path": "project/data/raw/tcga-brca/cases-metadata.csv",
+              "sizeBytes": 86931
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:1d4ca317b0d06fd2553902f6feda1da3f838138427405f75ce076faa079b8cd1",
+              "modifiedUnixNano": 1794926982211728600,
+              "path": "project/data/raw/tcga-brca/files-metadata.csv",
+              "sizeBytes": 18771311
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:a62dac74ecd16bb94e29845ac75d5ff1ee6037082708abe75149a7c867376cf7",
+              "modifiedUnixNano": 1794926982211728600,
+              "path": "project/data/raw/tcga-brca/project-metadata.csv",
+              "sizeBytes": 2106
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:02543f8a5e069044ae7602d60507c8ecfd0692e2d347426b34a54b9ca54746ed",
+              "modifiedUnixNano": 1794926982212728600,
+              "path": "project/data/raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls",
+              "sizeBytes": 522240
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:3ab24346c12244c2a39f7852148131dd66b5fc3195528f93aec64306993b537a",
+              "modifiedUnixNano": 1794926982213728800,
+              "path": "project/provenance.json",
+              "sizeBytes": 1716
+            },
+            {
+              "change": "created",
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926982213728800,
+              "path": "project/stage-records/metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "finalSnapshot": [
+            {
+              "checksum": "sha256:bcf600876ad285c313a228ea903508f047d3003da65b48e80a8c12803d1d3348",
+              "modifiedUnixNano": 1794926982175724500,
+              "path": "project/config.py",
+              "sizeBytes": 9450
+            },
+            {
+              "checksum": "sha256:fe5b889ce1714a1cd12c441b03b6b472b993195a94b5c71f8c982bd5d069e5c8",
+              "modifiedUnixNano": 1794926982175724500,
+              "path": "project/data/raw/tcga-brca/cases-metadata.csv",
+              "sizeBytes": 86931
+            },
+            {
+              "checksum": "sha256:1d4ca317b0d06fd2553902f6feda1da3f838138427405f75ce076faa079b8cd1",
+              "modifiedUnixNano": 1794926982211728600,
+              "path": "project/data/raw/tcga-brca/files-metadata.csv",
+              "sizeBytes": 18771311
+            },
+            {
+              "checksum": "sha256:a62dac74ecd16bb94e29845ac75d5ff1ee6037082708abe75149a7c867376cf7",
+              "modifiedUnixNano": 1794926982211728600,
+              "path": "project/data/raw/tcga-brca/project-metadata.csv",
+              "sizeBytes": 2106
+            },
+            {
+              "checksum": "sha256:02543f8a5e069044ae7602d60507c8ecfd0692e2d347426b34a54b9ca54746ed",
+              "modifiedUnixNano": 1794926982212728600,
+              "path": "project/data/raw/tcga-brca/tcga-brca-paper-supplementary-tables-1-to-4.xls",
+              "sizeBytes": 522240
+            },
+            {
+              "checksum": "sha256:3ab24346c12244c2a39f7852148131dd66b5fc3195528f93aec64306993b537a",
+              "modifiedUnixNano": 1794926982213728800,
+              "path": "project/provenance.json",
+              "sizeBytes": 1716
+            },
+            {
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926982213728800,
+              "path": "project/stage-records/metadata-access.json",
+              "sizeBytes": 231
+            },
+            {
+              "checksum": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "modifiedUnixNano": 1794926981220617500,
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926981220617500,
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "finishedAt": 1794926982.2635212,
+          "initialSnapshot": [
+            {
+              "checksum": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "modifiedUnixNano": 1794926981220617500,
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "checksum": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "modifiedUnixNano": 1794926981220617500,
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "phases": [
+            {
+              "durationSeconds": 0.6991441249847412,
+              "finishedAt": 1794926982.2635212,
+              "phase": "execution",
+              "startedAt": 1794926981.564377,
+              "status": "failed"
+            }
+          ],
+          "root": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+          "runtime": "trp-local",
+          "schemaVersion": 1,
+          "startedAt": 1794926981.564377,
+          "summary": {
+            "createdFiles": 7,
+            "deletedFiles": 0,
+            "finalFiles": 9,
+            "initialFiles": 2,
+            "modifiedFiles": 0,
+            "outputBytes": 19393985
+          }
+        },
+        "exitCode": 1,
+        "externalId": "dea050f857ae69fa1184a8ea4eadb01f4b53377fb3cff0099e728ff8b2145cd6",
+        "failure": "local Docker container exited with code 1",
+        "finishedAt": 1794926982.2635212,
+        "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "log": "Traceback (most recent call last):\n  File \"/app/scripts/run_stage.py\", line 81, in \u003cmodule\u003e\n    execute_notebook()\n  File \"/app/scripts/run_stage.py\", line 42, in execute_notebook\n    os.chdir(project / 'notebooks')\nFileNotFoundError: [Errno 2] No such file or directory: '/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering/project/notebooks'\n[AKOFLOW INFO] Activity started on runtime trp-local.\n[AKOFLOW ERROR] local Docker container exited with code 1\n",
+        "metadata": {
+          "artifactObservationDriver": "filesystem-diff",
+          "artifactObservationRoot": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "dockerMetricCPUSeconds": 0,
+          "dockerMetricObservedAt": 1794926981.5643828,
+          "executionTarget": "local-docker",
+          "localContainerName": "akoflow-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "submittedAt": 1794926981.564377
+        },
+        "resourceId": "trp-local-docker",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "startedAt": 1794926981.564377,
+        "status": "failed"
+      }
+    ],
+    "infrastructureRuns": [],
+    "operationEvents": [],
+    "run": {
+      "activityCount": 2,
+      "breakdown": {
+        "computeSeconds": 1.5091841220855713,
+        "interferenceSeconds": 0,
+        "overheadSeconds": 0,
+        "queueSeconds": 0,
+        "transferSeconds": 0
+      },
+      "completedActivityCount": 1,
+      "cost": 0,
+      "environmentNames": [
+        "trp local Docker"
+      ],
+      "failureReason": "activity \"trp-tcga-brca-local-4e7e91d442-metadata-filtering\" failed: local Docker container exited with code 1",
+      "finishedAt": "2026-11-17T14:49:43Z",
+      "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+      "kind": "workflow",
+      "makespanSeconds": 0,
+      "mode": "real",
+      "schedulePlanId": "trp-tcga-brca-local-4e7e91d442-manual-plan-20261117t144938.368264354",
+      "seed": 0,
+      "startedAt": "2026-11-17T14:49:38Z",
+      "status": "failed",
+      "title": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+      "transferredBytes": 0,
+      "workflowId": "trp-tcga-brca-local-4e7e91d442",
+      "workflowName": "trp-tcga-brca-local-4e7e91d442",
+      "workflowVersionId": "trp-tcga-brca-local-4e7e91d442-v1"
+    },
+    "timeline": {
+      "computeMakespanSeconds": 0,
+      "coveredWallSeconds": 2.302123546600342,
+      "finishedAt": 1794926983,
+      "phases": [
+        {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "category": "resource-queue",
+          "durationSeconds": 0.2701148986816406,
+          "finishedAt": 1794926979.3318179,
+          "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794926979.061703,
+          "status": "completed"
+        },
+        {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+          "category": "runtime",
+          "durationSeconds": 0.8100399971008301,
+          "finishedAt": 1794926980.1418579,
+          "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-access:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794926979.3318179,
+          "status": "completed"
+        },
+        {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "category": "resource-queue",
+          "durationSeconds": 0.2220745086669922,
+          "finishedAt": 1794926981.263627,
+          "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering:queue:0",
+          "source": "derived-residual",
+          "startedAt": 1794926981.0415525,
+          "status": "completed"
+        },
+        {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "category": "launch",
+          "durationSeconds": 0.3007500171661377,
+          "finishedAt": 1794926981.564377,
+          "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering:launch",
+          "source": "task-metadata",
+          "startedAt": 1794926981.263627,
+          "status": "completed"
+        },
+        {
+          "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+          "category": "runtime",
+          "durationSeconds": 0.6991441249847412,
+          "finishedAt": 1794926982.2635212,
+          "id": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175:trp-tcga-brca-local-4e7e91d442-metadata-filtering:runtime",
+          "source": "activity-handle",
+          "startedAt": 1794926981.564377,
+          "status": "failed"
+        }
+      ],
+      "startedAt": 1794926978,
+      "totals": {
+        "destroySeconds": 0,
+        "executablePreparationSeconds": 0,
+        "launchSeconds": 0.3007500171661377,
+        "provisionSeconds": 0,
+        "resourceQueueSeconds": 0.4921894073486328,
+        "runtimeSeconds": 1.5091841220855713,
+        "startSeconds": 0,
+        "stopSeconds": 0,
+        "validationSeconds": 0,
+        "workspaceTransferSeconds": 0
+      },
+      "unclassifiedWallSeconds": 2.697876453399658,
+      "wallSeconds": 5
+    },
+    "workspaceLeases": [
+      {
+        "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "id": "workspace-lease-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-aggregation-trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "released": false,
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "workspaceId": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-aggregation"
+      },
+      {
+        "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "id": "workspace-lease-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-filtering-trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "released": false,
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "workspaceId": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-filtering"
+      },
+      {
+        "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-network-construction",
+        "id": "workspace-lease-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-interaction-inference-trp-tcga-brca-local-4e7e91d442-network-construction",
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "released": false,
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "workspaceId": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-interaction-inference"
+      },
+      {
+        "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "id": "workspace-lease-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-access-trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "releaseReason": "consumer workspace materialized",
+        "released": true,
+        "releasedAt": "2026-11-17T14:49:41.278625636Z",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "workspaceId": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-access"
+      },
+      {
+        "consumerActivityId": "trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "id": "workspace-lease-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering-trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "producerActivityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "released": false,
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "workspaceId": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering"
+      }
+    ],
+    "workspaces": [
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "fileCount": 0,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-aggregation",
+        "outputBytes": 0,
+        "pinned": false,
+        "reclaimedBytes": 0,
+        "resourceId": "trp-local-docker",
+        "retention": "intermediate",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-aggregation"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "fileCount": 0,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-filtering",
+        "outputBytes": 0,
+        "pinned": false,
+        "reclaimedBytes": 0,
+        "resourceId": "trp-local-docker",
+        "retention": "intermediate",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-expression-filtering"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "fileCount": 0,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-interaction-inference",
+        "outputBytes": 0,
+        "pinned": false,
+        "reclaimedBytes": 0,
+        "resourceId": "trp-local-docker",
+        "retention": "intermediate",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-interaction-inference"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "fileCount": 2,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {
+          "final": [
+            {
+              "digest": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "digest": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ],
+          "outputs": [
+            {
+              "digest": "sha256:0bb2d48605e37a1a093824910a0ea747ae58d05c2f11ea57d0fc41849df2010a",
+              "path": "stage-01.tar.gz",
+              "sizeBytes": 3467783
+            },
+            {
+              "digest": "sha256:50d4b99b0d0c34baef891092b2a28ce26cbe691e61f8b6234896b18978d0541e",
+              "path": "stage-metadata-access.json",
+              "sizeBytes": 231
+            }
+          ]
+        },
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access",
+        "outputBytes": 3468014,
+        "pinned": false,
+        "reclaimedBytes": 3468014,
+        "releaseReason": "all downstream consumer workspaces were materialized",
+        "releasedAt": "2026-11-17T14:49:41.312590849Z",
+        "resourceId": "trp-local-docker",
+        "retention": "intermediate",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sealedAt": "2026-11-17T14:49:41.014807566Z",
+        "sizeBytes": 3468014,
+        "state": "released",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-access"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "fileCount": 0,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "inputBytes": 0,
+        "isFinal": false,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering",
+        "outputBytes": 0,
+        "pinned": false,
+        "reclaimedBytes": 0,
+        "resourceId": "trp-local-docker",
+        "retention": "intermediate",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sizeBytes": 0,
+        "state": "active",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-metadata-filtering"
+      },
+      {
+        "activityId": "trp-tcga-brca-local-4e7e91d442-network-construction",
+        "createdAt": "2026-11-17T14:49:38.936018931Z",
+        "driver": "local",
+        "environmentId": "trp-v1",
+        "executionPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-network-construction",
+        "fileCount": 0,
+        "id": "workspace-trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175-trp-tcga-brca-local-4e7e91d442-network-construction",
+        "inputBytes": 0,
+        "isFinal": true,
+        "manifest": {},
+        "observationPath": "/akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-network-construction",
+        "outputBytes": 0,
+        "pinned": false,
+        "reclaimedBytes": 0,
+        "resourceId": "trp-local-docker",
+        "retention": "final",
+        "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+        "runtimeId": "trp-local",
+        "sizeBytes": 0,
+        "state": "planned",
+        "uri": "file:///akoflow/workspace/runs/trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175/trp-tcga-brca-local-4e7e91d442-network-construction"
+      }
+    ]
+  },
+  "runId": "trp-tcga-brca-local-4e7e91d442-run-20261117t144938.413096175",
+  "status": "failed",
+  "workflowId": "trp-tcga-brca-local-4e7e91d442"
+}

@@ -1,0 +1,61 @@
+{
+  "purpose": "Comparison baseline only, never used as execution input",
+  "sourceCommit": "914e8f0b60a8ec5c7df2cedf73b482c183b9aa2b",
+  "groups": [
+    {
+      "group": "basal-like",
+      "counts": {
+        "interaction-network-nodes.csv": 291,
+        "inferred-associations.csv": 1653,
+        "association-network-edges.csv": 13,
+        "inferred-interactions.csv": 41169,
+        "association-network-nodes.csv": 19,
+        "interaction-network-edges.csv": 296
+      }
+    },
+    {
+      "group": "her2-enriched",
+      "counts": {
+        "interaction-network-nodes.csv": 22,
+        "inferred-associations.csv": 36,
+        "association-network-edges.csv": 0,
+        "inferred-interactions.csv": 41169,
+        "association-network-nodes.csv": 0,
+        "interaction-network-edges.csv": 13
+      }
+    },
+    {
+      "group": "luminal-a",
+      "counts": {
+        "interaction-network-nodes.csv": 251,
+        "inferred-associations.csv": 946,
+        "association-network-edges.csv": 11,
+        "inferred-interactions.csv": 41169,
+        "association-network-nodes.csv": 17,
+        "interaction-network-edges.csv": 259
+      }
+    },
+    {
+      "group": "luminal-b",
+      "counts": {
+        "interaction-network-nodes.csv": 559,
+        "inferred-associations.csv": 5460,
+        "association-network-edges.csv": 32,
+        "inferred-interactions.csv": 41169,
+        "association-network-nodes.csv": 35,
+        "interaction-network-edges.csv": 584
+      }
+    },
+    {
+      "group": "normal",
+      "counts": {
+        "interaction-network-nodes.csv": 2915,
+        "inferred-associations.csv": 13695,
+        "association-network-edges.csv": 48,
+        "inferred-interactions.csv": 41169,
+        "association-network-nodes.csv": 61,
+        "interaction-network-edges.csv": 5072
+      }
+    }
+  ]
+}

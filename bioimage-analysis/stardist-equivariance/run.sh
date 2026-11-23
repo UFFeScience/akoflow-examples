@@ -4,8 +4,8 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-stardist-equivariance-run-v1}
-plan_id=community-stardist-equivariance-plan-v1
+run_id=${AKOFLOW_RUN_ID:-community-stardist-portable-run-v2}
+plan_id=community-stardist-equivariance-plan-v2
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 
@@ -34,7 +34,7 @@ create_yaml schedule-plans/import plan.yaml
 request GET environments/community-stardist-parallel > "$temporary/environment.json"
 request GET execution-scopes/community-stardist-parallel-scope > "$temporary/scope.json"
 request GET network-topologies/community-stardist-parallel-topology > "$temporary/topology.json"
-request GET workflow-definitions/community-stardist-equivariance-v1 > "$temporary/workflow.json"
+request GET workflow-definitions/community-stardist-equivariance-v2 > "$temporary/workflow.json"
 request GET "schedule-plans/$plan_id" > "$temporary/plan.json"
 
 jq -n --arg run_id "$run_id" \
@@ -56,6 +56,7 @@ jq -n --arg run_id "$run_id" \
 request POST execution-preflights -H 'Content-Type: application/json' \
   --data-binary "@$temporary/execution.json" > "$temporary/preflight.json"
 jq . "$temporary/preflight.json"
+jq -e '.ready == true' "$temporary/preflight.json" >/dev/null
 request POST execution-runs -H 'Content-Type: application/json' \
   -H "Idempotency-Key: $run_id" --data-binary "@$temporary/execution.json"
 printf '\nRun: %s/execution-runs/%s/\n' "$api" "$run_id"

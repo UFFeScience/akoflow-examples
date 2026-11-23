@@ -1,6 +1,6 @@
 plan:
-  id: community-stardist-equivariance-plan-v1
-  workflowVersionId: community-stardist-equivariance-v1-v1
+  id: community-stardist-equivariance-plan-v2
+  workflowVersionId: community-stardist-equivariance-v2-v1
   executionScopeId: community-stardist-parallel-scope
   networkTopologyId: community-stardist-parallel-topology
   source: imported
@@ -9,15 +9,15 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 60, cost: 0, feasible: true}
   assignments:
-    - {id: stardist-prepare, activityId: community-stardist-equivariance-v1-prepare, resourceId: community-stardist-slot-0, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-identity, activityId: community-stardist-equivariance-v1-predict-identity, resourceId: community-stardist-slot-0, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-r90, activityId: community-stardist-equivariance-v1-predict-r90, resourceId: community-stardist-slot-1, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-r180, activityId: community-stardist-equivariance-v1-predict-r180, resourceId: community-stardist-slot-2, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-r270, activityId: community-stardist-equivariance-v1-predict-r270, resourceId: community-stardist-slot-3, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-reflect, activityId: community-stardist-equivariance-v1-predict-reflect, resourceId: community-stardist-slot-0, orderOnResource: 2, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-reflect-r90, activityId: community-stardist-equivariance-v1-predict-reflect-r90, resourceId: community-stardist-slot-1, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-reflect-r180, activityId: community-stardist-equivariance-v1-predict-reflect-r180, resourceId: community-stardist-slot-2, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-reflect-r270, activityId: community-stardist-equivariance-v1-predict-reflect-r270, resourceId: community-stardist-slot-3, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-aggregate, activityId: community-stardist-equivariance-v1-aggregate, resourceId: community-stardist-slot-0, orderOnResource: 3, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-render, activityId: community-stardist-equivariance-v1-render, resourceId: community-stardist-slot-1, orderOnResource: 2, metadata: {runtimeId: community-stardist-local}}
-    - {id: stardist-validate, activityId: community-stardist-equivariance-v1-validate, resourceId: community-stardist-slot-0, orderOnResource: 4, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-prepare, activityId: community-stardist-equivariance-v2-prepare, resourceId: community-stardist-slot-0, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-identity, activityId: community-stardist-equivariance-v2-predict-identity, resourceId: community-stardist-slot-0, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-r90, activityId: community-stardist-equivariance-v2-predict-r90, resourceId: community-stardist-slot-1, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-r180, activityId: community-stardist-equivariance-v2-predict-r180, resourceId: community-stardist-slot-2, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-r270, activityId: community-stardist-equivariance-v2-predict-r270, resourceId: community-stardist-slot-3, orderOnResource: 0, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-reflect, activityId: community-stardist-equivariance-v2-predict-reflect, resourceId: community-stardist-slot-0, orderOnResource: 2, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-reflect-r90, activityId: community-stardist-equivariance-v2-predict-reflect-r90, resourceId: community-stardist-slot-1, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-reflect-r180, activityId: community-stardist-equivariance-v2-predict-reflect-r180, resourceId: community-stardist-slot-2, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-reflect-r270, activityId: community-stardist-equivariance-v2-predict-reflect-r270, resourceId: community-stardist-slot-3, orderOnResource: 1, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-aggregate, activityId: community-stardist-equivariance-v2-aggregate, resourceId: community-stardist-slot-0, orderOnResource: 3, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-render, activityId: community-stardist-equivariance-v2-render, resourceId: community-stardist-slot-1, orderOnResource: 2, metadata: {runtimeId: community-stardist-local}}
+    - {id: stardist-portable-v2-validate, activityId: community-stardist-equivariance-v2-validate, resourceId: community-stardist-slot-0, orderOnResource: 4, metadata: {runtimeId: community-stardist-local}}

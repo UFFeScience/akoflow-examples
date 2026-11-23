@@ -1,0 +1,37 @@
+{
+  "acceptance": {
+    "analytic_probability_max_abs": 2e-09,
+    "bloch_norm_error_max": 3e-10,
+    "frequency_relative_error_max": 0.0002,
+    "maximum_probability_error_max": 2e-06,
+    "norm_error_max": 2e-10,
+    "refinement_probability_max_abs": 2e-10
+  },
+  "atol": 1e-13,
+  "cases_delta_rad_s": {
+    "half-detuned": 3.141592653589793,
+    "one-detuned": 6.283185307179586,
+    "resonant": 0.0,
+    "two-detuned": 12.566370614359172
+  },
+  "citation": {
+    "author": "Isidor Isaac Rabi",
+    "doi": "10.1103/PhysRev.51.652",
+    "title": "Space Quantization in a Gyrating Magnetic Field"
+  },
+  "duration_s": 4.0,
+  "hamiltonian": "0.5*[[Delta,Omega],[Omega,-Delta]]; hbar=1",
+  "initial_state": [
+    "1+0i",
+    "0+0i"
+  ],
+  "license": "MIT",
+  "max_steps_s": [
+    0.002,
+    0.001
+  ],
+  "omega_rad_s": 6.283185307179586,
+  "rtol": 1e-11,
+  "sample_count": 4001,
+  "solver": "SciPy DOP853"
+}

@@ -1,0 +1,17 @@
+{
+  "analytic_maximum_probability": 0.20000000000000004,
+  "analytic_probability_max_abs_error": 8.743006318923108e-16,
+  "bloch_norm_error_max": 2.55351295663786e-15,
+  "case": "two-detuned",
+  "delta_rad_s": 12.566370614359172,
+  "finite": true,
+  "frequency_cycles_s": 2.236067980994308,
+  "frequency_peak_count": 9,
+  "frequency_relative_error": 1.5627958926955898e-09,
+  "generalized_frequency_cycles_s": 2.23606797749979,
+  "maximum_probability": 0.1999999885982864,
+  "maximum_probability_error": 1.1401713628789167e-08,
+  "norm_error_max": 2.6645352591003757e-15,
+  "refinement_probability_max_abs": 1.2490009027033011e-15,
+  "sample_count": 4001
+}

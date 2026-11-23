@@ -1,0 +1,95 @@
+{
+  "checks": {
+    "aggregate": true,
+    "deterministic:bloch-trajectories.png": true,
+    "deterministic:branches/half-detuned.csv": true,
+    "deterministic:branches/half-detuned.json": true,
+    "deterministic:branches/one-detuned.csv": true,
+    "deterministic:branches/one-detuned.json": true,
+    "deterministic:branches/resonant.csv": true,
+    "deterministic:branches/resonant.json": true,
+    "deterministic:branches/two-detuned.csv": true,
+    "deterministic:branches/two-detuned.json": true,
+    "deterministic:inputs.json": true,
+    "deterministic:rabi-oscillations.gif": true,
+    "deterministic:rabi-populations.png": true,
+    "deterministic:rabi-scorecard.csv": true,
+    "deterministic:rabi-scorecard.json": true,
+    "exists:bloch-trajectories.png": true,
+    "exists:branches/half-detuned.csv": true,
+    "exists:branches/half-detuned.json": true,
+    "exists:branches/one-detuned.csv": true,
+    "exists:branches/one-detuned.json": true,
+    "exists:branches/resonant.csv": true,
+    "exists:branches/resonant.json": true,
+    "exists:branches/two-detuned.csv": true,
+    "exists:branches/two-detuned.json": true,
+    "exists:inputs.json": true,
+    "exists:rabi-oscillations.gif": true,
+    "exists:rabi-populations.png": true,
+    "exists:rabi-scorecard.csv": true,
+    "exists:rabi-scorecard.json": true,
+    "gif-frames": true,
+    "gif-signature": true,
+    "png-signatures": true
+  },
+  "manifest": {
+    "bloch-trajectories.png": {
+      "bytes": 530916,
+      "sha256": "36eb3223e8bd1af44f45b750605d91db1381a767faf3c2a546ec2079534c4e8a"
+    },
+    "branches/half-detuned.csv": {
+      "bytes": 642304,
+      "sha256": "3fb5800042080018f5da77a6a19fa90498edd47d4f66b53c7f7823953fc0a576"
+    },
+    "branches/half-detuned.json": {
+      "bytes": 658,
+      "sha256": "1adb5c783ab5e1c44d394cfd1cce20b8300273c00ca2cc2c463de273987d0b28"
+    },
+    "branches/one-detuned.csv": {
+      "bytes": 641420,
+      "sha256": "2b717401af5191d92fb3d0aafe0abbc7b7d8c0215b22d8b545681aa7673b3c18"
+    },
+    "branches/one-detuned.json": {
+      "bytes": 657,
+      "sha256": "77fc50fef5bf7e3315595ebd9c0a379f2969c299639460291963bf75397d8e20"
+    },
+    "branches/resonant.csv": {
+      "bytes": 495640,
+      "sha256": "f571a04bae8718f12f034fe4cf29b265139a69071c014a7035bd6c89f91130de"
+    },
+    "branches/resonant.json": {
+      "bytes": 578,
+      "sha256": "5a5438ac4beafb3186d315d8ea89bc83d8fd4c67f76ace328d9f5c09b2dfd91e"
+    },
+    "branches/two-detuned.csv": {
+      "bytes": 641837,
+      "sha256": "386cde895bdf74c1c9ebdb4dd71dc99fb3d3e218846bcf5c5bbefdf5ce9827f4"
+    },
+    "branches/two-detuned.json": {
+      "bytes": 657,
+      "sha256": "8daa7a0f7a0ad823ebe6662c42fa4bc16c94e2facd8da0afefba996738923965"
+    },
+    "inputs.json": {
+      "bytes": 907,
+      "sha256": "5953049944499e344ed9eb08d5a5e70a7294424fab74f2931c81ce76bfdada50"
+    },
+    "rabi-oscillations.gif": {
+      "bytes": 1628003,
+      "sha256": "b5240efe5e58596004583abc25bb5e2ff46eaa6a0b58f2a5cf3213181d2b025b"
+    },
+    "rabi-populations.png": {
+      "bytes": 226799,
+      "sha256": "66028ac851cd0b7663ce0b240c8f3334f991912c6b7b565e37ca3c585d072c16"
+    },
+    "rabi-scorecard.csv": {
+      "bytes": 845,
+      "sha256": "a1bb3428e7bfa98307cfb3f15f2c5cba886839d50cf175d7079143491e8db5b0"
+    },
+    "rabi-scorecard.json": {
+      "bytes": 3890,
+      "sha256": "32d35cfb0aec2d630cb233549570e04e8ab17dc23f6b8b3b9efe6a328f0b329c"
+    }
+  },
+  "passed": true
+}

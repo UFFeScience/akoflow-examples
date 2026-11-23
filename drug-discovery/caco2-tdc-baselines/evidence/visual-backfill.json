@@ -1,0 +1,27 @@
+{
+  "artifact": "caco2-baseline-comparison.gif",
+  "artifact_sha256": "d5835db2d6e29177c9a3a5d733394499d1157bc7af9af37a73dcf93bcccee869",
+  "dimensions": [
+    960,
+    540
+  ],
+  "evolving_dimension": "Sequential comparison of the three measured five-seed baseline results.",
+  "frame_duration_ms": 1200,
+  "frames": 3,
+  "models": {
+    "cnn": {
+      "meanMae": 0.4390035220121815,
+      "populationStd": 0.04264164885661428
+    },
+    "morgan": {
+      "meanMae": 0.9680523643086827,
+      "populationStd": 0.06029282121571547
+    },
+    "rdkit2d": {
+      "meanMae": 0.4112036012660301,
+      "populationStd": 0.029662925208352734
+    }
+  },
+  "source": "evidence/daemon-run.json",
+  "source_sha256": "8bc7a71b6fcb6731324f4bc78b6f9dd69528dd01f617f20de555f65e5566ebf7"
+}

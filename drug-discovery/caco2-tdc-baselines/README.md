@@ -53,5 +53,10 @@ Validation requires all 15 branches, exactly 182 finite predictions per branch, 
 
 ## Measured result gallery
 
-This benchmark is a static model-comparison result; it has no scientifically
-meaningful temporal evolution, so no decorative animation is added.
+![Caco2 measured baseline comparison](screenshots/current/caco2-baseline-comparison.gif)
+
+The animation reveals the three audited baselines in sequence. Circles and error
+bars are the reproduced five-seed mean MAE and population standard deviation;
+gray crosses are the published means. The split, fixed 182-row test set, seeds,
+and metrics do not change between frames. Provenance and checksums are recorded
+in [`evidence/visual-backfill.json`](evidence/visual-backfill.json).

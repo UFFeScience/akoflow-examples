@@ -21,11 +21,25 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 The image is pinned to `python:3.11.14-slim-bookworm` and uses only the Python standard library. Scientific containers execute offline without Hub credentials or a Docker socket. The local preflight runs twice and requires byte-identical JSON, CSV, PNG, and GIF artifacts.
 
+The imported workflow resolves all eight activities from one immutable AkôFlow
+build recipe. Its archived context contains `docker/Dockerfile`,
+`requirements.txt`, `LICENSE`, and `scripts/workflow.py`; every `COPY` source is
+contained and the base image is digest-pinned. From an unmaterialized state,
+preflight reported `Build required`, and AkôFlow reconstructed and verified the
+OCI image before running the DAG.
+
 ## Measured AkôFlow execution
 
-The authoritative daemon run `community-cooley-tukey-fft-run-v1` completed all eight activities in 7.917382 s. All four scientific audit branches ran on distinct slots and overlapped simultaneously for 0.054430 s. The matched serialized run `community-cooley-tukey-fft-one-slot-v1` completed in 12.070075 s. These timings demonstrate overlap; no parallel-speedup claim is made from this short workload.
+The portable daemon run `community-cooley-tukey-fft-run-v2` rebuilt the missing
+image and completed all eight activities in 8.850220 s. The matched serialized
+run `community-cooley-tukey-fft-one-slot-v2` completed in 13.959134 s. The four
+short scientific audits used four declared slots; adjacent branches overlapped,
+but this rerun did not record a simultaneous four-way interval. No generalized
+speedup claim is made from this short workload.
 
-Image: `akoflow/community-cooley-tukey-fft:v1@sha256:13f55ae3e41d9ba8cc1fdc34edd5cd3360b7e52d2be41e4e4702a561cbdce6a4`.
+Reconstructed image: `sha256:14c092c6a5dd3fb77004fd3b846eff2341489006a1f7e7438ff099a95557c581`.
+Portable context: `sha256:94934f9db95e774beb464ad4dd92563bec39804c7e4daf56c82212a8bf5246c6`.
+Recipe: `sha256:3bb32dd151f398c29f75e2d5fab9c11a8484aa1bddda251b45fdbabb2b026863`.
 
 ![Measured daemon activity timeline](evidence/measured-timeline.png)
 
@@ -42,3 +56,9 @@ The four-frame animation accumulates the measured rectangular spectra for `δ = 
 The transform follows James W. Cooley and John W. Tukey, “An Algorithm for the Machine Calculation of Complex Fourier Series,” *Mathematics of Computation* 19(90), 297–301 (1965), [DOI 10.1090/S0025-5718-1965-0178586-1](https://doi.org/10.1090/S0025-5718-1965-0178586-1). The periodic Hann formula is linked from the [SciPy documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.signal.windows.hann.html); SciPy code is not used or redistributed.
 
 This is a numerical audit of finite sampled records, not a proof of Fourier theory or a measurement of an analog signal. Results are specific to the frozen sample count, tone, phase, offsets, and leakage definitions. Workflow code and generated artifacts are MIT-licensed.
+
+## Public Community Explorer record
+
+[Open the public workflow and measured results](https://hub.akoflow.com/o/akoflow/community-explorer-issue-40-cooley-tukey-fft-v1).
+Import portable version 2 with
+`akoflow://hub/publications/c7798e7d-6372-4f3d-9dd8-f79ae97f31b7/versions/2`.

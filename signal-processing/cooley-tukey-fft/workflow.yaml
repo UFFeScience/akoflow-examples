@@ -1,13 +1,12 @@
-name: community-cooley-tukey-fft-v1
+name: community-cooley-tukey-fft-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-cooley-tukey-fft:v1
   activities:
-    - {name: prepare-scenario, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
-    - {name: audit-offset-000, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "000"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: audit-offset-0125, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0125"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: audit-offset-0250, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0250"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: audit-offset-0500, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0500"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: aggregate-spectra, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [audit-offset-000, audit-offset-0125, audit-offset-0250, audit-offset-0500]}
-    - {name: render-spectra, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-spectra]}
-    - {name: validate, runtime: community-fft-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-spectra]}
+    - {name: prepare-scenario, runtime: community-fft-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-5bee137f154e15c61b124c1b81917064407efc4b35577c8c6ea54673770a8c85}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: audit-offset-000, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "000"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: audit-offset-0125, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0125"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: audit-offset-0250, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0250"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: audit-offset-0500, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, audit, --output, ., --branch, "0500"]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-spectra, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [audit-offset-000, audit-offset-0125, audit-offset-0250, audit-offset-0500]}
+    - {name: render-spectra, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-spectra]}
+    - {name: validate, runtime: community-fft-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-spectra]}

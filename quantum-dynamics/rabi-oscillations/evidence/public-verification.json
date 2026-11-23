@@ -17,10 +17,13 @@
     "timeline_http_status": 200
   },
   "import_yaml": {
-    "bytes": 100317,
+    "build_origin_count": 8,
+    "bytes": 162373,
+    "context_archive_count": 8,
+    "context_digest": "sha256:1bd74e7eb68a452f8790e2ec698fef0242d0a650f287d668c499d943b6eef4aa",
     "http_status": 200,
     "media_type": "application/yaml",
-    "workflow_name": "community-rabi-oscillations-v1"
+    "workflow_name": "community-rabi-oscillations-v2"
   },
   "page": {
     "bytes": 280671,
@@ -34,7 +37,7 @@
     "mismatches": 0,
     "passed": true
   },
-  "verified_at": "2026-11-23T01:50:00Z",
-  "version": 1,
+  "verified_at": "2026-11-23T03:58:00Z",
+  "version": 2,
   "visibility": "public"
 }

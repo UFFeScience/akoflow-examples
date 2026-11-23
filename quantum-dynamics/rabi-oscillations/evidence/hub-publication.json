@@ -1,13 +1,13 @@
 {
   "contributionStatus": "maintainer",
-  "experimentId": "d9fbfe23-dc83-4cce-93c5-32fda378d66b",
+  "experimentId": "92f6f675-f8e4-4a05-ace7-3e17d9497c63",
   "hubOrigin": "https://hub.akoflow.com",
   "persistentPublicationKey": "community-explorer-issue-49-rabi-oscillations-v1",
   "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
   "publicationId": "b69279b7-1735-470d-9630-b1ea64734e2d",
   "resultCount": 1,
-  "runId": "community-rabi-run-v1",
-  "uri": "akoflow://hub/publications/b69279b7-1735-470d-9630-b1ea64734e2d/versions/1",
-  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-49-rabi-oscillations-v1",
-  "version": 1
+  "runId": "community-rabi-run-v2",
+  "uri": "akoflow://hub/publications/b69279b7-1735-470d-9630-b1ea64734e2d/versions/2",
+  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-49-rabi-oscillations-v1/results/2/executions/92f6f675-f8e4-4a05-ace7-3e17d9497c63/runs/community-rabi-run-v2/workflow",
+  "version": 2
 }

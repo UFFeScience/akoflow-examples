@@ -1,0 +1,19 @@
+plan:
+  id: community-kepler-one-slot-plan-v1
+  workflowVersionId: community-kepler-equal-area-v1-v1
+  executionScopeId: community-kepler-parallel-scope
+  networkTopologyId: community-kepler-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 60, cost: 0, feasible: true}
+  assignments:
+    - {id: kepler1-prepare, activityId: community-kepler-equal-area-v1-validate-input, resourceId: community-kepler-slot-0, orderOnResource: 0, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-e00, activityId: community-kepler-equal-area-v1-orbit-e00, resourceId: community-kepler-slot-0, orderOnResource: 1, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-e03, activityId: community-kepler-equal-area-v1-orbit-e03, resourceId: community-kepler-slot-0, orderOnResource: 2, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-e07, activityId: community-kepler-equal-area-v1-orbit-e07, resourceId: community-kepler-slot-0, orderOnResource: 3, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-e09, activityId: community-kepler-equal-area-v1-orbit-e09, resourceId: community-kepler-slot-0, orderOnResource: 4, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-aggregate, activityId: community-kepler-equal-area-v1-aggregate-laws, resourceId: community-kepler-slot-0, orderOnResource: 5, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-render, activityId: community-kepler-equal-area-v1-render-results, resourceId: community-kepler-slot-0, orderOnResource: 6, metadata: {runtimeId: community-kepler-local}}
+    - {id: kepler1-validate, activityId: community-kepler-equal-area-v1-validate, resourceId: community-kepler-slot-0, orderOnResource: 7, metadata: {runtimeId: community-kepler-local}}

@@ -1,0 +1,721 @@
+{
+  "base_image": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
+  "clean_state_preflight": "Build required for every activity; embedded context accepted",
+  "context_digest": "sha256:eb6d2b3f5e839f9ceadfe86d82d455d5d344955b7d78f2840940dc104f190dda",
+  "image_digest": "sha256:c8390844f004795528fdabd440a788c81b68165ecd7dafdbd30dddaf457c256e",
+  "issue": 54,
+  "measured_overlap_seconds": {
+    "orbit-e07__orbit-e09": 0.09164309501647949
+  },
+  "one_slot_activities": [
+    {
+      "activityId": "community-kepler-equal-area-v1-validate-input",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428451.87454,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-validate-input",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "pricePerSecond": 0,
+        "runtimeId": "community-kepler-local"
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-prepare",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428450.9622536,
+      "readyAt": 1795428450.9622536,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2683250904083252,
+      "startedAt": 1795428451.606215,
+      "status": "completed",
+      "transferBytes": 0,
+      "transferSeconds": 0
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e00",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428453.7256525,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-orbit-e00",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.44011497497558594,
+        "preparationFinishedAt": 1795428453.0052896,
+        "preparationStartedAt": 1795428452.7988777,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.40117883682250977,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.20641183853149414,
+        "transferWorkSeconds": 0.20641183853149414
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-e00",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428452.3776355,
+      "readyAt": 1795428452.3776355,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.28024792671203613,
+      "startedAt": 1795428453.4454045,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.20641183853149414
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e03",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428455.5587564,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-orbit-e03",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.4842805862426758,
+        "preparationFinishedAt": 1795428454.8115933,
+        "preparationStartedAt": 1795428454.6125526,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.18824481964111328,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.19904065132141113,
+        "transferWorkSeconds": 0.19904065132141113
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-e03",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428454.408169,
+      "readyAt": 1795428454.408169,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2628824710845947,
+      "startedAt": 1795428455.2958739,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.19904065132141113
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e07",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428458.0017571,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-orbit-e07",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.6374495029449463,
+        "preparationFinishedAt": 1795428456.9022133,
+        "preparationStartedAt": 1795428456.6897051,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.3200347423553467,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.2125082015991211,
+        "transferWorkSeconds": 0.2125082015991211
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-e07",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428456.3529685,
+      "readyAt": 1795428456.3529685,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.4620943069458008,
+      "startedAt": 1795428457.5396628,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.2125082015991211
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e09",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428460.5793765,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-orbit-e09",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.6030087471008301,
+        "preparationFinishedAt": 1795428459.6436508,
+        "preparationStartedAt": 1795428459.3416584,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.24657797813415527,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.30199241638183594,
+        "transferWorkSeconds": 0.30199241638183594
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-e09",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428459.069635,
+      "readyAt": 1795428459.069635,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.3327169418334961,
+      "startedAt": 1795428460.2466595,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.30199241638183594
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-aggregate-laws",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428463.571896,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-aggregate-laws",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.659799337387085,
+        "preparationFinishedAt": 1795428462.6374903,
+        "preparationStartedAt": 1795428461.7083259,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.3522193431854248,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.9291644096374512,
+        "transferWorkSeconds": 2.659172296524048
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-aggregate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428461.3254247,
+      "readyAt": 1795428461.3254247,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.27460646629333496,
+      "startedAt": 1795428463.2972896,
+      "status": "completed",
+      "transferBytes": 1958457,
+      "transferSeconds": 2.659172296524048
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-render-results",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428466.7971761,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-render-results",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.7164144515991211,
+        "preparationFinishedAt": 1795428464.7905624,
+        "preparationStartedAt": 1795428464.5538545,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.30197715759277344,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.2367079257965088,
+        "transferWorkSeconds": 0.2367079257965088
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-render",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428464.2297208,
+      "readyAt": 1795428464.2297208,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 1.2901992797851562,
+      "startedAt": 1795428465.5069768,
+      "status": "completed",
+      "transferBytes": 1960448,
+      "transferSeconds": 0.2367079257965088
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-validate",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-one-slot-run-v1",
+      "finishedAt": 1795428468.6055,
+      "id": "community-kepler-one-slot-run-v1:community-kepler-equal-area-v1-validate",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 0.5522987842559814,
+        "preparationFinishedAt": 1795428467.7253997,
+        "preparationStartedAt": 1795428467.4753063,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.2651488780975342,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.2500934600830078,
+        "transferWorkSeconds": 0.2500934600830078
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler1-validate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428467.1945055,
+      "readyAt": 1795428467.1945055,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.3278014659881592,
+      "startedAt": 1795428468.2776985,
+      "status": "completed",
+      "transferBytes": 5444546,
+      "transferSeconds": 0.2500934600830078
+    }
+  ],
+  "one_slot_run": {
+    "activityCount": 8,
+    "breakdown": {
+      "computeSeconds": 3.4988739490509033,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0,
+      "queueSeconds": 0,
+      "transferSeconds": 4.065926790237427
+    },
+    "completedActivityCount": 8,
+    "cost": 0,
+    "environmentNames": [
+      "Community Kepler four-slot local Docker"
+    ],
+    "finishedAt": "2026-11-23T10:07:49Z",
+    "id": "community-kepler-one-slot-run-v1",
+    "kind": "workflow",
+    "makespanSeconds": 16.999284982681274,
+    "mode": "real",
+    "schedulePlanId": "community-kepler-one-slot-plan-v1",
+    "seed": 0,
+    "startedAt": "2026-11-23T10:07:30Z",
+    "status": "completed",
+    "title": "community-kepler-one-slot-run-v1",
+    "transferredBytes": 9364839,
+    "workflowId": "community-kepler-equal-area-v1",
+    "workflowName": "community-kepler-equal-area-v1",
+    "workflowVersionId": "community-kepler-equal-area-v1-v1"
+  },
+  "output_checksums": {
+    "equal-area-law.png": "814f2979ce14826dedefd6821fde2b3380af2aae2c8ec2c9643f91a376927fa8",
+    "kepler-orbits.gif": "c78491f2817acc576deeb842bc7b248fb686393199711d8d2eaa080efc496aa4",
+    "kepler-orbits.png": "c7f54eec96d55c0b719a2fd6db0d484ad5bf106142db06ca7eb0796eae313f01",
+    "manifest.json": "c3edb6ab513d1e1e4a6901508fe7dcb66773e21e404dc32f853a95f4a0950412",
+    "metrics-e00.json": "4ef65dc4c905cc81bc1cd3b2673cb0d3c81d89ffb37d7d245f90664976cc9a5d",
+    "metrics-e03.json": "6a228936144290aa9f95fb6694ec7e0d828f5d9e88fead5dfafa8479cbbfb7eb",
+    "metrics-e07.json": "797466942377655ce0407a4b064d8ee3d2332ee7fecda74d254f7ab255ef7c2e",
+    "metrics-e09.json": "33b9511c4cb390500cebae187f692033e442f84d971ca942cc3340ec42a4ada1",
+    "metrics.json": "734ca6f40b2b697e6e731640b78e2fbe28872a246f94260937d384af7f58e7ad",
+    "orbit-e00.csv": "9273a79a09418b655ed59c32dc8118cd9bce482ddebf92315c1e3224e1893b59",
+    "orbit-e03.csv": "234e22af4cc39a53c75d720b32e14c5df47c297b895cc8e43edb6e7e712191d7",
+    "orbit-e07.csv": "ea67e8ab0ae396edd89c273056642d0010838da5cbd99458e5be1d3285b4e63d",
+    "orbit-e09.csv": "a8b72ec26181a40656216d6a4ddf9c2eb3c02938af3a3de552299e159fe17f96"
+  },
+  "outputs_identical_between_runs": true,
+  "parallel_activities": [
+    {
+      "activityId": "community-kepler-equal-area-v1-validate-input",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428382.6037002,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-validate-input",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "pricePerSecond": 0,
+        "runtimeId": "community-kepler-local"
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-prepare",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795427923.4737506,
+      "readyAt": 1795427923.4737506,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.22040438652038574,
+      "startedAt": 1795428382.3832958,
+      "status": "completed",
+      "transferBytes": 0,
+      "transferSeconds": 0
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e03",
+      "allocatedResourceId": "community-kepler-slot-1",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428388.3606129,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-orbit-e03",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.2321109771728516,
+        "preparationFinishedAt": 1795428386.8418999,
+        "preparationStartedAt": 1795428386.4590826,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.6490130424499512,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.38281726837158203,
+        "transferWorkSeconds": 0.38281726837158203
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e03",
+      "plannedResourceId": "community-kepler-slot-1",
+      "queueSeconds": 0,
+      "queuedAt": 1795428385.7299683,
+      "readyAt": 1795428385.7299683,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2866020202636719,
+      "startedAt": 1795428388.0740108,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.38281726837158203
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e07",
+      "allocatedResourceId": "community-kepler-slot-2",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428389.13744,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-orbit-e07",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.500236988067627,
+        "preparationFinishedAt": 1795428387.305305,
+        "preparationStartedAt": 1795428387.0514507,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 1.217787742614746,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.25385427474975586,
+        "transferWorkSeconds": 0.25385427474975586
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e07",
+      "plannedResourceId": "community-kepler-slot-2",
+      "queueSeconds": 0,
+      "queuedAt": 1795428385.7475286,
+      "readyAt": 1795428385.7475286,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.3318979740142822,
+      "startedAt": 1795428388.805542,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.25385427474975586
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e09",
+      "allocatedResourceId": "community-kepler-slot-3",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428389.237383,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-orbit-e09",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.025625467300415,
+        "preparationFinishedAt": 1795428388.0201714,
+        "preparationStartedAt": 1795428387.6216404,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 1.7493841648101807,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.3985309600830078,
+        "transferWorkSeconds": 0.3985309600830078
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e09",
+      "plannedResourceId": "community-kepler-slot-3",
+      "queueSeconds": 0,
+      "queuedAt": 1795428385.7680144,
+      "readyAt": 1795428385.7680144,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.19158601760864258,
+      "startedAt": 1795428389.0457969,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.3985309600830078
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-orbit-e00",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428390.5429294,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-orbit-e00",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.6001403331756592,
+        "preparationFinishedAt": 1795428388.6189296,
+        "preparationStartedAt": 1795428388.2940621,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 2.4050545692443848,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.32486748695373535,
+        "transferWorkSeconds": 0.32486748695373535
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e00",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428385.7095034,
+      "readyAt": 1795428385.7095034,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.32385945320129395,
+      "startedAt": 1795428390.21907,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.32486748695373535
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-aggregate-laws",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428398.793489,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-aggregate-laws",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 2.0439231395721436,
+        "preparationFinishedAt": 1795428396.4269698,
+        "preparationStartedAt": 1795428394.6520507,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.9278228282928467,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 1.774919033050537,
+        "transferWorkSeconds": 5.047525882720947
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-aggregate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428393.4868011,
+      "readyAt": 1795428393.4868011,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.32259607315063477,
+      "startedAt": 1795428398.470893,
+      "status": "completed",
+      "transferBytes": 1958457,
+      "transferSeconds": 5.047525882720947
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-render-results",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428404.8886821,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-render-results",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.7592999935150146,
+        "preparationFinishedAt": 1795428401.9136226,
+        "preparationStartedAt": 1795428401.438939,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.4243326187133789,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.4746835231781006,
+        "transferWorkSeconds": 0.4746835231781006
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-render",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428400.9781814,
+      "readyAt": 1795428400.9781814,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 1.215759515762329,
+      "startedAt": 1795428403.6729226,
+      "status": "completed",
+      "transferBytes": 1960448,
+      "transferSeconds": 0.4746835231781006
+    },
+    {
+      "activityId": "community-kepler-equal-area-v1-validate",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-run-v1",
+      "finishedAt": 1795428408.5129936,
+      "id": "community-kepler-run-v1:community-kepler-equal-area-v1-validate",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.10036039352417,
+        "preparationFinishedAt": 1795428407.1725218,
+        "preparationStartedAt": 1795428406.7009404,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.7847750186920166,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.47158145904541016,
+        "transferWorkSeconds": 0.47158145904541016
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-validate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795428405.904026,
+      "readyAt": 1795428405.904026,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2401113510131836,
+      "startedAt": 1795428408.2728822,
+      "status": "completed",
+      "transferBytes": 5444546,
+      "transferSeconds": 0.47158145904541016
+    }
+  ],
+  "parallel_run": {
+    "activityCount": 8,
+    "breakdown": {
+      "computeSeconds": 3.132816791534424,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0,
+      "queueSeconds": 0,
+      "transferSeconds": 7.353860855102539
+    },
+    "completedActivityCount": 8,
+    "cost": 0,
+    "environmentNames": [
+      "Community Kepler four-slot local Docker"
+    ],
+    "finishedAt": "2026-11-23T10:06:49Z",
+    "id": "community-kepler-run-v1",
+    "kind": "workflow",
+    "makespanSeconds": 26.129697799682617,
+    "mode": "real",
+    "schedulePlanId": "community-kepler-plan-v1",
+    "seed": 0,
+    "startedAt": "2026-11-23T09:58:36Z",
+    "status": "completed",
+    "title": "community-kepler-run-v1",
+    "transferredBytes": 9364839,
+    "workflowId": "community-kepler-equal-area-v1",
+    "workflowName": "community-kepler-equal-area-v1",
+    "workflowVersionId": "community-kepler-equal-area-v1-v1"
+  },
+  "portable_build_ref": "recipe-build-5b2ee5f0f83fd7a7b711aa302afa76551a71ff05305893e02aaa5680500ce2f2",
+  "recipe_digest": "sha256:7219c30ff8bbac2ae3ead8687e6967ffc819311ca964687515e8bf65eac4be67",
+  "speedup_claimed": false,
+  "timeline_sha256": "70c8b6ded0def3a5d00afba846123f08c687e3f5968bf5bdaf2c9597a760687a",
+  "workflow_version": "community-kepler-equal-area-v1-v1"
+}

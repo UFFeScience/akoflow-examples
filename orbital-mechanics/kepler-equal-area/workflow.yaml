@@ -1,0 +1,12 @@
+name: community-kepler-equal-area-v1
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: validate-input, runtime: community-kepler-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-5b2ee5f0f83fd7a7b711aa302afa76551a71ff05305893e02aaa5680500ce2f2}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: orbit-e00, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, orbit, --output, ., --eccentricity, "0.0"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [validate-input]}
+    - {name: orbit-e03, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, orbit, --output, ., --eccentricity, "0.3"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [validate-input]}
+    - {name: orbit-e07, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, orbit, --output, ., --eccentricity, "0.7"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [validate-input]}
+    - {name: orbit-e09, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, orbit, --output, ., --eccentricity, "0.9"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [validate-input]}
+    - {name: aggregate-laws, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [orbit-e00, orbit-e03, orbit-e07, orbit-e09]}
+    - {name: render-results, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [aggregate-laws]}
+    - {name: validate, runtime: community-kepler-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [render-results]}

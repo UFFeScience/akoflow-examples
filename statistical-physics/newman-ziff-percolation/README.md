@@ -38,21 +38,30 @@ The L256/L32 slope ratio is `4.6715`, exceeding the fixed factor-of-two sharpeni
 ./preflight.sh
 ./run.sh
 AKOFLOW_SUBMIT=1 ./run.sh
-AKOFLOW_PLAN_FILE=plan-one-slot.yaml AKOFLOW_RUN_ID=community-percolation-one-slot-run-v2 AKOFLOW_SUBMIT=1 ./run.sh
+AKOFLOW_PLAN_FILE=plan-one-slot.yaml AKOFLOW_RUN_ID=community-percolation-one-slot-run-v3 AKOFLOW_SUBMIT=1 ./run.sh
 ```
 
 Scientific execution is offline, CPU-only, and receives neither Hub credentials nor the host Docker socket. Image preparation is separate. A local helper run is deterministic preflight, not Akoflow execution evidence.
 
+### Portable image reconstruction
+
+The workflow does not depend on the local `akoflow/community-percolation:v1` tag. Every activity selects the immutable portable build `recipe-build-b4b7270e8350cf19ca20c5881b1615224f93d53a31a7d2b464dbabff5a3db3e5`. Its publication carries a sanitized build context containing only `docker/Dockerfile`, `requirements.txt`, and `scripts/workflow.py`, with context digest `sha256:43186cea38e018500a603352042f1f852e9ac5c845e642acd6d9f0f0369999ec` and recipe digest `sha256:01e58e769b96e78ab5e2b0ed5599fb6a35f4f0e228c9a610efb725f0240a2cd8`.
+
+On a local Akoflow installation where that image is absent, import restores the recipe and context. Preflight reports **Build required** without executing uploaded content; run preparation builds and verifies the OCI image with BuildKit before the first activity starts. The portability audit started without a materialized image for this recipe, produced `akoflow-reproduced:b4b7270e8350cf19ca20c5881b1615224f93d53a31a7d2b464dbabff5a3db3e5`, and completed all 20 activities. Kubernetes still requires an image reachable by its nodes, and Slurm requires a prepared SIF; automatic source reconstruction here is the local-runtime path.
+
 ## Measured Akoflow execution
 
 Daemon run `community-percolation-run-v2` completed all 20 activities in `42.511762619018555 s`. The four scientifically independent L256 shards had `4.19141960144043 s` of common measured overlap. The matching one-slot run `community-percolation-one-slot-run-v2` completed in `91.00967335700989 s`, a same-host measured ratio of `2.140811571908212`. This is not a generalized performance claim.
+
+Portable reconstruction run `community-percolation-run-v3` completed 20/20 activities without failures. Its recorded run interval was `2026-11-23T02:29:28Z`–`02:32:46Z`; the workflow makespan after preparation was `54.854958057403564 s`. This run exists to verify image reconstruction and scientific execution, not to replace the controlled v2 timing comparison.
 
 ![Measured Akoflow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/evidence/measured-timeline.png)
 
 *Persisted daemon start and finish timestamps show four-way overlap in each realization-shard quartet before deterministic merge, rendering, and validation.*
 
 - Image: `akoflow/community-percolation:v1@sha256:c9d1717d594b991cc6d04ea04abacef3cf502f0d65333888dc59275fb1c5ceb8`
-- Workflow version: `community-newman-ziff-percolation-v2-v1`
+- Portable workflow version: `community-newman-ziff-percolation-v3-v1`
+- Portable reconstruction run: `community-percolation-run-v3`
 - Reference run: `community-percolation-run-v2`
 - One-slot control: `community-percolation-one-slot-run-v2`
 - The daemon's final workspace agrees with 41 common deterministic reference files, with zero digest mismatches.

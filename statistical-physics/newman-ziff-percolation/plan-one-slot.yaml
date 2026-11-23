@@ -1,6 +1,6 @@
 plan:
-  id: community-percolation-one-slot-plan-v2
-  workflowVersionId: community-newman-ziff-percolation-v2-v1
+  id: community-percolation-one-slot-plan-v3
+  workflowVersionId: community-newman-ziff-percolation-v3-v1
   executionScopeId: community-percolation-parallel-scope
   networkTopologyId: community-percolation-parallel-topology
   source: imported
@@ -9,23 +9,23 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 300, cost: 0, feasible: true}
   assignments:
-    - {id: pc2-one-0, activityId: community-newman-ziff-percolation-v2-freeze-inputs, resourceId: community-percolation-slot-0, orderOnResource: 0, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-1, activityId: community-newman-ziff-percolation-v2-sample-l032-s0, resourceId: community-percolation-slot-0, orderOnResource: 1, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-2, activityId: community-newman-ziff-percolation-v2-sample-l032-s1, resourceId: community-percolation-slot-0, orderOnResource: 2, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-3, activityId: community-newman-ziff-percolation-v2-sample-l032-s2, resourceId: community-percolation-slot-0, orderOnResource: 3, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-4, activityId: community-newman-ziff-percolation-v2-sample-l032-s3, resourceId: community-percolation-slot-0, orderOnResource: 4, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-5, activityId: community-newman-ziff-percolation-v2-sample-l064-s0, resourceId: community-percolation-slot-0, orderOnResource: 5, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-6, activityId: community-newman-ziff-percolation-v2-sample-l064-s1, resourceId: community-percolation-slot-0, orderOnResource: 6, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-7, activityId: community-newman-ziff-percolation-v2-sample-l064-s2, resourceId: community-percolation-slot-0, orderOnResource: 7, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-8, activityId: community-newman-ziff-percolation-v2-sample-l064-s3, resourceId: community-percolation-slot-0, orderOnResource: 8, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-9, activityId: community-newman-ziff-percolation-v2-sample-l128-s0, resourceId: community-percolation-slot-0, orderOnResource: 9, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-10, activityId: community-newman-ziff-percolation-v2-sample-l128-s1, resourceId: community-percolation-slot-0, orderOnResource: 10, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-11, activityId: community-newman-ziff-percolation-v2-sample-l128-s2, resourceId: community-percolation-slot-0, orderOnResource: 11, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-12, activityId: community-newman-ziff-percolation-v2-sample-l128-s3, resourceId: community-percolation-slot-0, orderOnResource: 12, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-13, activityId: community-newman-ziff-percolation-v2-sample-l256-s0, resourceId: community-percolation-slot-0, orderOnResource: 13, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-14, activityId: community-newman-ziff-percolation-v2-sample-l256-s1, resourceId: community-percolation-slot-0, orderOnResource: 14, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-15, activityId: community-newman-ziff-percolation-v2-sample-l256-s2, resourceId: community-percolation-slot-0, orderOnResource: 15, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-16, activityId: community-newman-ziff-percolation-v2-sample-l256-s3, resourceId: community-percolation-slot-0, orderOnResource: 16, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-17, activityId: community-newman-ziff-percolation-v2-merge-and-fit, resourceId: community-percolation-slot-0, orderOnResource: 17, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-18, activityId: community-newman-ziff-percolation-v2-render-results, resourceId: community-percolation-slot-0, orderOnResource: 18, metadata: {runtimeId: community-percolation-local}}
-    - {id: pc2-one-19, activityId: community-newman-ziff-percolation-v2-validate, resourceId: community-percolation-slot-0, orderOnResource: 19, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-0, activityId: community-newman-ziff-percolation-v3-freeze-inputs, resourceId: community-percolation-slot-0, orderOnResource: 0, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-1, activityId: community-newman-ziff-percolation-v3-sample-l032-s0, resourceId: community-percolation-slot-0, orderOnResource: 1, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-2, activityId: community-newman-ziff-percolation-v3-sample-l032-s1, resourceId: community-percolation-slot-0, orderOnResource: 2, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-3, activityId: community-newman-ziff-percolation-v3-sample-l032-s2, resourceId: community-percolation-slot-0, orderOnResource: 3, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-4, activityId: community-newman-ziff-percolation-v3-sample-l032-s3, resourceId: community-percolation-slot-0, orderOnResource: 4, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-5, activityId: community-newman-ziff-percolation-v3-sample-l064-s0, resourceId: community-percolation-slot-0, orderOnResource: 5, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-6, activityId: community-newman-ziff-percolation-v3-sample-l064-s1, resourceId: community-percolation-slot-0, orderOnResource: 6, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-7, activityId: community-newman-ziff-percolation-v3-sample-l064-s2, resourceId: community-percolation-slot-0, orderOnResource: 7, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-8, activityId: community-newman-ziff-percolation-v3-sample-l064-s3, resourceId: community-percolation-slot-0, orderOnResource: 8, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-9, activityId: community-newman-ziff-percolation-v3-sample-l128-s0, resourceId: community-percolation-slot-0, orderOnResource: 9, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-10, activityId: community-newman-ziff-percolation-v3-sample-l128-s1, resourceId: community-percolation-slot-0, orderOnResource: 10, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-11, activityId: community-newman-ziff-percolation-v3-sample-l128-s2, resourceId: community-percolation-slot-0, orderOnResource: 11, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-12, activityId: community-newman-ziff-percolation-v3-sample-l128-s3, resourceId: community-percolation-slot-0, orderOnResource: 12, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-13, activityId: community-newman-ziff-percolation-v3-sample-l256-s0, resourceId: community-percolation-slot-0, orderOnResource: 13, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-14, activityId: community-newman-ziff-percolation-v3-sample-l256-s1, resourceId: community-percolation-slot-0, orderOnResource: 14, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-15, activityId: community-newman-ziff-percolation-v3-sample-l256-s2, resourceId: community-percolation-slot-0, orderOnResource: 15, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-16, activityId: community-newman-ziff-percolation-v3-sample-l256-s3, resourceId: community-percolation-slot-0, orderOnResource: 16, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-17, activityId: community-newman-ziff-percolation-v3-merge-and-fit, resourceId: community-percolation-slot-0, orderOnResource: 17, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-18, activityId: community-newman-ziff-percolation-v3-render-results, resourceId: community-percolation-slot-0, orderOnResource: 18, metadata: {runtimeId: community-percolation-local}}
+    - {id: pc3-one-19, activityId: community-newman-ziff-percolation-v3-validate, resourceId: community-percolation-slot-0, orderOnResource: 19, metadata: {runtimeId: community-percolation-local}}

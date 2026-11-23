@@ -1,40 +1,182 @@
 plan:
-  id: community-wright-fisher-portable-plan-v2
+  id: community-wright-fisher-portable-plan-v2-two-slot
   workflowVersionId: community-wright-fisher-portable-v1
   executionScopeId: community-wf-parallel-scope
   networkTopologyId: community-wf-parallel-topology
   source: imported
   algorithm: manual
-  algorithmVersion: "1"
+  algorithmVersion: '1'
   objective: custom
-  predicted: {makespanSeconds: 300, cost: 0, feasible: true}
+  predicted:
+    makespanSeconds: 300
+    cost: 0
+    feasible: true
   assignments:
-    - {id: wf-portable-v2-prepare, activityId: community-wright-fisher-portable-prepare, resourceId: community-wf-slot-0, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-005-0, activityId: community-wright-fisher-portable-sim-p005-s0, resourceId: community-wf-slot-0, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-005-1, activityId: community-wright-fisher-portable-sim-p005-s1, resourceId: community-wf-slot-1, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-005-2, activityId: community-wright-fisher-portable-sim-p005-s2, resourceId: community-wf-slot-2, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-005-3, activityId: community-wright-fisher-portable-sim-p005-s3, resourceId: community-wf-slot-3, orderOnResource: 0, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-010-0, activityId: community-wright-fisher-portable-sim-p010-s0, resourceId: community-wf-slot-0, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-010-1, activityId: community-wright-fisher-portable-sim-p010-s1, resourceId: community-wf-slot-1, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-010-2, activityId: community-wright-fisher-portable-sim-p010-s2, resourceId: community-wf-slot-2, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-010-3, activityId: community-wright-fisher-portable-sim-p010-s3, resourceId: community-wf-slot-3, orderOnResource: 1, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-025-0, activityId: community-wright-fisher-portable-sim-p025-s0, resourceId: community-wf-slot-0, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-025-1, activityId: community-wright-fisher-portable-sim-p025-s1, resourceId: community-wf-slot-1, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-025-2, activityId: community-wright-fisher-portable-sim-p025-s2, resourceId: community-wf-slot-2, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-025-3, activityId: community-wright-fisher-portable-sim-p025-s3, resourceId: community-wf-slot-3, orderOnResource: 2, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-050-0, activityId: community-wright-fisher-portable-sim-p050-s0, resourceId: community-wf-slot-0, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-050-1, activityId: community-wright-fisher-portable-sim-p050-s1, resourceId: community-wf-slot-1, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-050-2, activityId: community-wright-fisher-portable-sim-p050-s2, resourceId: community-wf-slot-2, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-050-3, activityId: community-wright-fisher-portable-sim-p050-s3, resourceId: community-wf-slot-3, orderOnResource: 3, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-075-0, activityId: community-wright-fisher-portable-sim-p075-s0, resourceId: community-wf-slot-0, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-075-1, activityId: community-wright-fisher-portable-sim-p075-s1, resourceId: community-wf-slot-1, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-075-2, activityId: community-wright-fisher-portable-sim-p075-s2, resourceId: community-wf-slot-2, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-075-3, activityId: community-wright-fisher-portable-sim-p075-s3, resourceId: community-wf-slot-3, orderOnResource: 4, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-agg-005, activityId: community-wright-fisher-portable-aggregate-p005, resourceId: community-wf-slot-0, orderOnResource: 6, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-agg-010, activityId: community-wright-fisher-portable-aggregate-p010, resourceId: community-wf-slot-1, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-agg-025, activityId: community-wright-fisher-portable-aggregate-p025, resourceId: community-wf-slot-2, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-agg-050, activityId: community-wright-fisher-portable-aggregate-p050, resourceId: community-wf-slot-3, orderOnResource: 5, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-agg-075, activityId: community-wright-fisher-portable-aggregate-p075, resourceId: community-wf-slot-0, orderOnResource: 7, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-render, activityId: community-wright-fisher-portable-render, resourceId: community-wf-slot-0, orderOnResource: 8, metadata: {runtimeId: community-wf-local}}
-    - {id: wf-portable-v2-validate, activityId: community-wright-fisher-portable-validate, resourceId: community-wf-slot-0, orderOnResource: 9, metadata: {runtimeId: community-wf-local}}
-
+  - id: wf-portable-v2-prepare-two-slot
+    activityId: community-wright-fisher-portable-prepare
+    resourceId: community-wf-slot-0
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-005-0-two-slot
+    activityId: community-wright-fisher-portable-sim-p005-s0
+    resourceId: community-wf-slot-0
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-005-1-two-slot
+    activityId: community-wright-fisher-portable-sim-p005-s1
+    resourceId: community-wf-slot-1
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-005-2-two-slot
+    activityId: community-wright-fisher-portable-sim-p005-s2
+    resourceId: community-wf-slot-0
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-005-3-two-slot
+    activityId: community-wright-fisher-portable-sim-p005-s3
+    resourceId: community-wf-slot-1
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-010-0-two-slot
+    activityId: community-wright-fisher-portable-sim-p010-s0
+    resourceId: community-wf-slot-0
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-010-1-two-slot
+    activityId: community-wright-fisher-portable-sim-p010-s1
+    resourceId: community-wf-slot-1
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-010-2-two-slot
+    activityId: community-wright-fisher-portable-sim-p010-s2
+    resourceId: community-wf-slot-0
+    orderOnResource: 4
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-010-3-two-slot
+    activityId: community-wright-fisher-portable-sim-p010-s3
+    resourceId: community-wf-slot-1
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-025-0-two-slot
+    activityId: community-wright-fisher-portable-sim-p025-s0
+    resourceId: community-wf-slot-0
+    orderOnResource: 5
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-025-1-two-slot
+    activityId: community-wright-fisher-portable-sim-p025-s1
+    resourceId: community-wf-slot-1
+    orderOnResource: 4
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-025-2-two-slot
+    activityId: community-wright-fisher-portable-sim-p025-s2
+    resourceId: community-wf-slot-0
+    orderOnResource: 6
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-025-3-two-slot
+    activityId: community-wright-fisher-portable-sim-p025-s3
+    resourceId: community-wf-slot-1
+    orderOnResource: 5
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-050-0-two-slot
+    activityId: community-wright-fisher-portable-sim-p050-s0
+    resourceId: community-wf-slot-0
+    orderOnResource: 7
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-050-1-two-slot
+    activityId: community-wright-fisher-portable-sim-p050-s1
+    resourceId: community-wf-slot-1
+    orderOnResource: 6
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-050-2-two-slot
+    activityId: community-wright-fisher-portable-sim-p050-s2
+    resourceId: community-wf-slot-0
+    orderOnResource: 8
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-050-3-two-slot
+    activityId: community-wright-fisher-portable-sim-p050-s3
+    resourceId: community-wf-slot-1
+    orderOnResource: 7
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-075-0-two-slot
+    activityId: community-wright-fisher-portable-sim-p075-s0
+    resourceId: community-wf-slot-0
+    orderOnResource: 9
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-075-1-two-slot
+    activityId: community-wright-fisher-portable-sim-p075-s1
+    resourceId: community-wf-slot-1
+    orderOnResource: 8
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-075-2-two-slot
+    activityId: community-wright-fisher-portable-sim-p075-s2
+    resourceId: community-wf-slot-0
+    orderOnResource: 10
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-075-3-two-slot
+    activityId: community-wright-fisher-portable-sim-p075-s3
+    resourceId: community-wf-slot-1
+    orderOnResource: 9
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-agg-005-two-slot
+    activityId: community-wright-fisher-portable-aggregate-p005
+    resourceId: community-wf-slot-0
+    orderOnResource: 11
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-agg-010-two-slot
+    activityId: community-wright-fisher-portable-aggregate-p010
+    resourceId: community-wf-slot-1
+    orderOnResource: 10
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-agg-025-two-slot
+    activityId: community-wright-fisher-portable-aggregate-p025
+    resourceId: community-wf-slot-0
+    orderOnResource: 12
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-agg-050-two-slot
+    activityId: community-wright-fisher-portable-aggregate-p050
+    resourceId: community-wf-slot-1
+    orderOnResource: 11
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-agg-075-two-slot
+    activityId: community-wright-fisher-portable-aggregate-p075
+    resourceId: community-wf-slot-0
+    orderOnResource: 13
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-render-two-slot
+    activityId: community-wright-fisher-portable-render
+    resourceId: community-wf-slot-0
+    orderOnResource: 14
+    metadata:
+      runtimeId: community-wf-local
+  - id: wf-portable-v2-validate-two-slot
+    activityId: community-wright-fisher-portable-validate
+    resourceId: community-wf-slot-0
+    orderOnResource: 15
+    metadata:
+      runtimeId: community-wf-local

@@ -28,6 +28,16 @@ Build and run two deterministic offline preflights:
 ./preflight.sh
 ```
 
+Import the portable Hub revision with this URI.
+
+```text
+akoflow://hub/publications/a6bbce30-c8ea-4169-bd51-3f82e1e959b5/versions/2
+```
+
+The imported workflow includes its Docker build context. The portable
+reference run `community-chsh-singlet-portable-run-v2` completed all nine
+activities and passed scientific validation.
+
 Check the daemon payload, then submit the idempotent recorded run:
 
 ```sh

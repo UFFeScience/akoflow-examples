@@ -1,14 +1,13 @@
-name: community-chsh-singlet-v1
+name: community-chsh-singlet-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-chsh-singlet:v1
   activities:
-    - {name: prepare-scenario, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
-    - {name: sample-a-b, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-b]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: sample-a-b-prime, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-b-prime]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: sample-a-prime-b, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-prime-b]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: sample-a-prime-b-prime, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-prime-b-prime]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: enumerate-local-strategies, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, enumerate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
-    - {name: aggregate-chsh, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [sample-a-b, sample-a-b-prime, sample-a-prime-b, sample-a-prime-b-prime, enumerate-local-strategies]}
-    - {name: render-results, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-chsh]}
-    - {name: validate, runtime: community-chsh-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-results]}
+    - {name: prepare-scenario, runtime: community-chsh-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-443184c7c9fd2a696d7367a13bb3ab3701a3f2b28e516c91e143b6040c6d29b0}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: sample-a-b, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-b]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: sample-a-b-prime, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-b-prime]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: sample-a-prime-b, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-prime-b]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: sample-a-prime-b-prime, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, sample, --output, ., --branch, a-prime-b-prime]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: enumerate-local-strategies, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, enumerate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-chsh, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [sample-a-b, sample-a-b-prime, sample-a-prime-b, sample-a-prime-b-prime, enumerate-local-strategies]}
+    - {name: render-results, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate-chsh]}
+    - {name: validate, runtime: community-chsh-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render-results]}

@@ -6,6 +6,18 @@ The scientific implementation is OceanBench 0.6.0 at commit `61aea40e13689b3dbb0
 
 ## Reproduce
 
+Import the published v3 workflow into AkôFlow:
+
+```text
+akoflow://hub/publications/0f2c1803-b55c-41ea-9d86-9e40331763f6/versions/3
+```
+
+The Docker recipe restores the pinned public snapshot, verifies its checksums,
+and retries transient download failures. Reference run
+`community-oceanbench-glonet-run-v4` completed all 13 activities and passed
+scientific validation after resuming from a local container startup timeout.
+
+
 The preparation step is the only networked scientific-input step. It anonymously mirrors the exact public Zarr stores, records S3 size, ETag, Last-Modified, and downloaded SHA-256 for every object, and downloads the pinned reference notebook.
 
 ```sh

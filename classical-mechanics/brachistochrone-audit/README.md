@@ -52,3 +52,11 @@ The workflow audits three comparison families; it does not offer a standalone nu
 Scientific source: Johann Bernoulli, “Curvatura radii in diaphanis non uniformibus, Solutioque Problematis … de invenienda Linea Brachystochrona,” *Acta Eruditorum*, May 1697, pp. 206–211. Method cross-check: C. E. Mungan, “Review of the Brachistochrone Problem” (2012).
 
 The original workflow code and generated artifacts are maintained by UFFeScience for AkôFlow Community Explorer and licensed under the MIT License. The 1697 article is public domain by age; the modern review is cited but not redistributed. Python, NumPy, SciPy, Matplotlib, and Pillow retain their upstream licenses.
+
+## Public Community Explorer version
+
+[Open the publication and measured results](https://hub.akoflow.com/o/akoflow/community-explorer-issue-43-brachistochrone-v1). Import the immutable workflow version with:
+
+```text
+akoflow://hub/publications/412e389d-5df6-4a9f-96a7-e4326a57d7ba/versions/1
+```

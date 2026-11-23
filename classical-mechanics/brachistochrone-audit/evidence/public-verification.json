@@ -1,0 +1,35 @@
+{
+  "verifiedAt": "2026-11-23T00:24:00Z",
+  "anonymousHttp": {
+    "page": 200,
+    "publication": 200,
+    "yaml": 200,
+    "experiment": 200,
+    "embed": 200
+  },
+  "publication": {
+    "id": "412e389d-5df6-4a9f-96a7-e4326a57d7ba",
+    "slug": "community-explorer-issue-43-brachistochrone-v1",
+    "visibility": "public",
+    "authorship": "identified",
+    "owner": "akoflow"
+  },
+  "experiment": {
+    "format": "akoflow.experiment",
+    "schemaVersion": "1.0",
+    "workflowId": "community-brachistochrone-v1",
+    "workflowVersionId": "community-brachistochrone-v1-v1"
+  },
+  "gallery": {
+    "pngCount": 4,
+    "gifFrames": 32,
+    "allRawUrlsHttp200": true
+  },
+  "checks": {
+    "citation": true,
+    "licenses": true,
+    "completedRecordedRun": true,
+    "importYaml": true,
+    "resultConsistency": true
+  }
+}

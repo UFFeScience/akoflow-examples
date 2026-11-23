@@ -1,9 +1,9 @@
 {
-  "four_branch_common_overlap_seconds": 2.1060028076171875,
-  "makespan_ratio_one_slot_over_parallel": 1.3777614035634782,
-  "one_slot_makespan_seconds": 40.4934504032135,
-  "one_slot_run_id": "community-rabi-one-slot-run-v1",
-  "parallel_makespan_seconds": 29.390756845474243,
-  "parallel_run_id": "community-rabi-run-v1",
+  "four_branch_common_overlap_seconds": 1.872366189956665,
+  "makespan_ratio_one_slot_over_parallel": 1.1724299932945967,
+  "one_slot_makespan_seconds": 41.34280514717102,
+  "one_slot_run_id": "community-rabi-one-slot-run-v2",
+  "parallel_makespan_seconds": 35.26249361038208,
+  "parallel_run_id": "community-rabi-run-v2",
   "speedup_claim": false
 }

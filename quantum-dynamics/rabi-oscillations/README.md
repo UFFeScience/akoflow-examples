@@ -38,18 +38,31 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 The image pins Python 3.11.14 and every Python dependency listed in `requirements.txt`. Scientific activities run with networking disabled, no Hub credential, and no host Docker socket. A local run is only deterministic qualification; the recorded daemon run below is execution evidence.
 
+The imported workflow resolves all eight activities from one immutable AkôFlow
+build recipe. Its archived context contains the Dockerfile, pinned requirements,
+license, and workflow source; every `COPY` source is contained. This backfill
+also pins the Python base image by digest. From an unmaterialized state,
+preflight reported `Build required`, and AkôFlow reconstructed and verified the
+OCI image before running the DAG.
+
 ## Measured Akoflow execution
 
-Daemon run `community-rabi-run-v1` completed all eight activities in `29.390756845474243 s`. The four independent detuning solves overlapped simultaneously for `2.1060028076171875 s`. The matching one-slot run `community-rabi-one-slot-run-v1` completed in `40.4934504032135 s`, a measured ratio of `1.3777614035634782` on this host. No generalized speedup claim is made.
+Portable daemon run `community-rabi-run-v2` rebuilt the missing image and
+completed all eight activities in `35.262494 s`. The four independent detuning
+solves overlapped simultaneously for `1.872366 s`. The matching one-slot run
+`community-rabi-one-slot-run-v2` completed in `41.342805 s`, a measured ratio
+of `1.172430` on this host. No generalized speedup claim is made.
 
 ![Measured Akoflow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/af45f2919c859a6b7603d3d3e36397296166669f/quantum-dynamics/rabi-oscillations/evidence/measured-timeline.png)
 
 *Daemon start/finish timestamps show genuine overlap among the four ODE integrations before aggregation, rendering, and validation.*
 
-- Image: `akoflow/community-rabi:v1@sha256:dc6aa74d7b3ce39bb11f2d94e7717bf3297a3ff7a91a0223e5ea701f1c5c079f`
-- Workflow version: `community-rabi-oscillations-v1-v1`
-- Reference run: `community-rabi-run-v1`
-- One-slot control: `community-rabi-one-slot-run-v1`
+- Image: `sha256:36650b350a379d9b61eca19fd6570ad462aeea84e317554b05aecb9a08a4ff0a`
+- Context: `sha256:1bd74e7eb68a452f8790e2ec698fef0242d0a650f287d668c499d943b6eef4aa`
+- Recipe: `sha256:de047035725831283c04765288b43073a9acb90674acddc48847f1479d1000bc`
+- Workflow version: `community-rabi-oscillations-v2-v1`
+- Reference run: `community-rabi-run-v2`
+- One-slot control: `community-rabi-one-slot-run-v2`
 - Machine-readable metrics, full daemon captures, checksums, validation, and agreement evidence are committed under `outputs/reference/` and `evidence/`.
 
 ## Scientific model and limitations
@@ -74,3 +87,9 @@ This is an ideal rotating-wave, coherent, constant-drive two-level model. It exc
 Scientific source: Isidor Isaac Rabi, “Space Quantization in a Gyrating Magnetic Field,” *Physical Review* 51, 652–654 (1937), [DOI 10.1103/PhysRev.51.652](https://doi.org/10.1103/PhysRev.51.652).
 
 The workflow implementation and generated artifacts are maintained by UFFeScience for Akoflow Community Explorer and licensed under the MIT License. The article is cited and not redistributed. Python, NumPy, SciPy, Matplotlib, Pillow, and transitive dependencies retain their upstream licenses; see `THIRD_PARTY_NOTICES.md`.
+
+## Public Community Explorer record
+
+[Open the public workflow and measured results](https://hub.akoflow.com/o/akoflow/community-explorer-issue-49-rabi-oscillations-v1).
+Import portable version 2 with
+`akoflow://hub/publications/b69279b7-1735-470d-9630-b1ea64734e2d/versions/2`.

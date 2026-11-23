@@ -1,13 +1,12 @@
-name: community-rabi-oscillations-v1
+name: community-rabi-oscillations-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-rabi:v1
   activities:
-    - {name: freeze-inputs, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: solve-resonant, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, resonant]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: solve-half-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, half-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: solve-one-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, one-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: solve-two-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, two-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: aggregate-rabi-audit, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [solve-resonant, solve-half-detuned, solve-one-detuned, solve-two-detuned]}
-    - {name: render-results, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-rabi-audit]}
-    - {name: validate, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}
+    - {name: freeze-inputs, runtime: community-rabi-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-385135c92971869063cfc00c8effa0f6a6ff34be8c25ae7ea8efd957099c7bd3}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: solve-resonant, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, resonant]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-half-detuned, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, half-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-one-detuned, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, one-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-two-detuned, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, two-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: aggregate-rabi-audit, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [solve-resonant, solve-half-detuned, solve-one-detuned, solve-two-detuned]}
+    - {name: render-results, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-rabi-audit]}
+    - {name: validate, runtime: community-rabi-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

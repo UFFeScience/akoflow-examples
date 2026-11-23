@@ -1,0 +1,67 @@
+{
+  "anonymous": true,
+  "experiment_download": {
+    "bytes": 696,
+    "http_status": 200,
+    "media_type": "application/json"
+  },
+  "gallery": {
+    "animation": {
+      "bytes": 44442,
+      "frames": 5,
+      "http_status": 200,
+      "media_type": "image/gif",
+      "signature_ok": true
+    },
+    "price_figure": {
+      "bytes": 65041,
+      "http_status": 200,
+      "media_type": "image/png",
+      "signature_ok": true
+    },
+    "scaling_figure": {
+      "bytes": 78007,
+      "http_status": 200,
+      "media_type": "image/png",
+      "signature_ok": true
+    },
+    "timeline": {
+      "bytes": 1601,
+      "http_status": 200,
+      "media_type": "image/svg+xml",
+      "signature_ok": true
+    }
+  },
+  "import_yaml": {
+    "bytes": 158418,
+    "context_archive_count": 8,
+    "context_digest_present": true,
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "portable_build_count": 8,
+    "recipe_digest_present": true,
+    "workflow_name": true
+  },
+  "page": {
+    "authorship_identified": true,
+    "bytes": 397892,
+    "citation_present": true,
+    "embedded_readme_images": 4,
+    "http_status": 200
+  },
+  "passed": true,
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "e5285dc8-6a79-4f61-8540-6f68206f2c05",
+  "recorded_run": {
+    "completed": true,
+    "http_status": 200,
+    "result_files": true
+  },
+  "result_consistency": {
+    "checked_common_files": 16,
+    "mismatches": {},
+    "passed": true
+  },
+  "verified_at": "2026-11-23T04:21:55.185780Z",
+  "version": 1
+}

@@ -8,7 +8,12 @@ It integrates one sidereal day independently at `−60°`, `−30°`, `0°`, `+3
 
 ## Validated result
 
-The five-slot AkôFlow daemon run `community-foucault-run-v1` completed in 76.73 s. Its five latitude activities overlapped for 58.96 s. The matching one-slot run `community-foucault-one-slot-run-v1` completed in 266.38 s, a measured makespan ratio of 3.47. This comparison concerns this host and workflow only; it is not a general scaling claim.
+The portable five-slot AkôFlow run `community-foucault-run-v2` rebuilt the
+missing image and completed in 82.08 s. Its five latitude activities overlapped
+for 56.25 s. The matching one-slot run
+`community-foucault-one-slot-run-v2` completed in 273.21 s, a measured
+makespan ratio of 3.33. This comparison concerns this host and workflow only;
+it is not a general scaling claim.
 
 All fixed checks passed. Maximum coordinate disagreement with the exact modal solution was `2.18e-8 m`. The fitted rates were `+6.3151575803e-5`, `+3.64605792895e-5`, `0`, `−3.64605792895e-5`, and `−6.3151575803e-5 rad/s`, in latitude order. Step-refinement rate changes were below `1e-16 rad/s` and final-orientation changes below `9e-12 rad`.
 
@@ -49,12 +54,21 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 Run the matching serial plan with `AKOFLOW_PLAN_FILE=plan-one-slot.yaml` and a distinct `AKOFLOW_RUN_ID`.
 
+The imported workflow resolves all nine activities from one immutable AkôFlow
+build recipe. Its archived context contains the Dockerfile, pinned requirements,
+licenses, notices, and workflow source; every `COPY` source is contained and
+the base image is digest-pinned. From an unmaterialized state, preflight
+reported `Build required`, and AkôFlow reconstructed and verified the OCI image
+before running the DAG.
+
 ## Provenance
 
-- Image digest: `sha256:8386ab8b1681b533f280433bfe583a308d3797e92c17f5fe0c8389876063d0ea`
-- Workflow version: `community-foucault-precession-v1-v1`
-- Parallel run: `community-foucault-run-v1`
-- One-slot run: `community-foucault-one-slot-run-v1`
+- Image digest: `sha256:73067e54f3391ba33deb7bd2f2b870cf3d5dd89d70cb5510cb005debb254f799`
+- Context digest: `sha256:671dc67ae6211a72eeb9dcca8803cf121d0da4e5cfd9dc1fa2b96979b98ecafc`
+- Recipe digest: `sha256:d149ec01e49435a1a64488a974c189dc2c736dfbd20233f0802dc1a032603fff`
+- Workflow version: `community-foucault-precession-v2-v1`
+- Parallel run: `community-foucault-run-v2`
+- One-slot run: `community-foucault-one-slot-run-v2`
 - Frozen constants: `g = 9.80665 m/s²`, `L = 67 m`, `x0 = 3 m`, sidereal day `86164.0905 s`
 - Runtime: Python 3.11.14, NumPy 1.26.4, SciPy 1.14.1, Matplotlib 3.9.2, Pillow 10.4.0
 - Source method: A. A. de Souza and C. A. M. de Melo, *Revista Brasileira de Ensino de Física* 42 (2020), e20190274, [doi:10.1590/1806-9126-RBEF-2019-0274](https://doi.org/10.1590/1806-9126-RBEF-2019-0274)
@@ -69,4 +83,4 @@ This is an ideal linear planar small-angle model (`x0/L = 0.0448`). It omits dam
 
 ## Public Community Explorer record
 
-The anonymously verified publication is [Foucault pendulum latitude-precession audit](https://hub.akoflow.com/o/akoflow/community-explorer-issue-44-foucault-precession-v1). Import version 1 with `akoflow://hub/publications/f67f3cd3-de44-48cc-a8ab-f171f9a4132b/versions/1`.
+The anonymously verified publication is [Foucault pendulum latitude-precession audit](https://hub.akoflow.com/o/akoflow/community-explorer-issue-44-foucault-precession-v1). Import portable version 2 with `akoflow://hub/publications/f67f3cd3-de44-48cc-a8ab-f171f9a4132b/versions/2`.

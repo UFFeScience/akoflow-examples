@@ -1,6 +1,6 @@
 plan:
-  id: community-foucault-plan-v1
-  workflowVersionId: community-foucault-precession-v1-v1
+  id: community-foucault-plan-v2
+  workflowVersionId: community-foucault-precession-v2-v1
   executionScopeId: community-foucault-parallel-scope
   networkTopologyId: community-foucault-parallel-topology
   source: imported
@@ -9,12 +9,12 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 240, cost: 0, feasible: true}
   assignments:
-    - {id: f-prepare, activityId: community-foucault-precession-v1-freeze-inputs, resourceId: community-foucault-slot-0, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-m60, activityId: community-foucault-precession-v1-latitude-minus-60, resourceId: community-foucault-slot-0, orderOnResource: 1, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-m30, activityId: community-foucault-precession-v1-latitude-minus-30, resourceId: community-foucault-slot-1, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-zero, activityId: community-foucault-precession-v1-latitude-zero, resourceId: community-foucault-slot-2, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-p30, activityId: community-foucault-precession-v1-latitude-plus-30, resourceId: community-foucault-slot-3, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-p60, activityId: community-foucault-precession-v1-latitude-plus-60, resourceId: community-foucault-slot-4, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-aggregate, activityId: community-foucault-precession-v1-aggregate, resourceId: community-foucault-slot-0, orderOnResource: 2, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-render, activityId: community-foucault-precession-v1-render, resourceId: community-foucault-slot-0, orderOnResource: 3, metadata: {runtimeId: community-foucault-local}}
-    - {id: f-validate, activityId: community-foucault-precession-v1-validate, resourceId: community-foucault-slot-0, orderOnResource: 4, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-prepare, activityId: community-foucault-precession-v2-freeze-inputs, resourceId: community-foucault-slot-0, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-m60, activityId: community-foucault-precession-v2-latitude-minus-60, resourceId: community-foucault-slot-0, orderOnResource: 1, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-m30, activityId: community-foucault-precession-v2-latitude-minus-30, resourceId: community-foucault-slot-1, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-zero, activityId: community-foucault-precession-v2-latitude-zero, resourceId: community-foucault-slot-2, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-p30, activityId: community-foucault-precession-v2-latitude-plus-30, resourceId: community-foucault-slot-3, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-p60, activityId: community-foucault-precession-v2-latitude-plus-60, resourceId: community-foucault-slot-4, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-aggregate, activityId: community-foucault-precession-v2-aggregate, resourceId: community-foucault-slot-0, orderOnResource: 2, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-render, activityId: community-foucault-precession-v2-render, resourceId: community-foucault-slot-0, orderOnResource: 3, metadata: {runtimeId: community-foucault-local}}
+    - {id: f2-validate, activityId: community-foucault-precession-v2-validate, resourceId: community-foucault-slot-0, orderOnResource: 4, metadata: {runtimeId: community-foucault-local}}

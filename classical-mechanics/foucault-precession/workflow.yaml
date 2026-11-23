@@ -1,14 +1,13 @@
-name: community-foucault-precession-v1
+name: community-foucault-precession-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-foucault:v1
   activities:
-    - {name: freeze-inputs, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: latitude-minus-60, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "-60"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: latitude-minus-30, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "-30"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: latitude-zero, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: latitude-plus-30, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "30"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: latitude-plus-60, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "60"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
-    - {name: aggregate, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [latitude-minus-60, latitude-minus-30, latitude-zero, latitude-plus-30, latitude-plus-60]}
-    - {name: render, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
-    - {name: validate, runtime: community-foucault-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}
+    - {name: freeze-inputs, runtime: community-foucault-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-c61143159e0bcd610bb2184fc1fa201b7785ed9423932f6f48828bb9c79303f3}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: latitude-minus-60, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "-60"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: latitude-minus-30, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "-30"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: latitude-zero, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "0"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: latitude-plus-30, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "30"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: latitude-plus-60, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --latitude, "60"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: aggregate, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [latitude-minus-60, latitude-minus-30, latitude-zero, latitude-plus-30, latitude-plus-60]}
+    - {name: render, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-foucault-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render]}

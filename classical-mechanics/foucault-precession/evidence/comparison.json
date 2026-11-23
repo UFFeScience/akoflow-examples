@@ -1,9 +1,9 @@
 {
-  "all_five_branch_overlap_seconds": 58.96114444732666,
-  "image": "sha256:8386ab8b1681b533f280433bfe583a308d3797e92c17f5fe0c8389876063d0ea",
-  "makespan_ratio": 3.471500602440684,
-  "one_slot_makespan_seconds": 266.37669014930725,
-  "one_slot_run_id": "community-foucault-one-slot-run-v1",
-  "parallel_makespan_seconds": 76.73243379592896,
-  "parallel_run_id": "community-foucault-run-v1"
+  "all_five_branch_overlap_seconds": 56.24990653991699,
+  "image": "sha256:73067e54f3391ba33deb7bd2f2b870cf3d5dd89d70cb5510cb005debb254f799",
+  "makespan_ratio": 3.328658894417884,
+  "one_slot_makespan_seconds": 273.2104458808899,
+  "one_slot_run_id": "community-foucault-one-slot-run-v2",
+  "parallel_makespan_seconds": 82.07823467254639,
+  "parallel_run_id": "community-foucault-run-v2"
 }

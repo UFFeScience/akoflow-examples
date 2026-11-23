@@ -1,6 +1,6 @@
 plan:
-  id: community-hodgkin-huxley-boundary-plan-v2
-  workflowVersionId: community-hodgkin-huxley-boundary-v2-v1
+  id: community-hodgkin-huxley-boundary-plan-v3
+  workflowVersionId: community-hodgkin-huxley-boundary-v3-v1
   executionScopeId: community-hh-parallel-scope
   networkTopologyId: community-hh-parallel-topology
   source: imported
@@ -9,18 +9,18 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 120, cost: 0, feasible: true}
   assignments:
-    - {id: hh2-prepare, activityId: community-hodgkin-huxley-boundary-v2-prepare, resourceId: community-hh-slot-0, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v00, activityId: community-hodgkin-huxley-boundary-v2-v00, resourceId: community-hh-slot-0, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v02, activityId: community-hodgkin-huxley-boundary-v2-v02, resourceId: community-hh-slot-1, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v04, activityId: community-hodgkin-huxley-boundary-v2-v04, resourceId: community-hh-slot-2, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v05, activityId: community-hodgkin-huxley-boundary-v2-v05, resourceId: community-hh-slot-3, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v06, activityId: community-hodgkin-huxley-boundary-v2-v06, resourceId: community-hh-slot-0, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v0625, activityId: community-hodgkin-huxley-boundary-v2-v0625, resourceId: community-hh-slot-1, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v0650, activityId: community-hodgkin-huxley-boundary-v2-v0650, resourceId: community-hh-slot-2, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v0675, activityId: community-hodgkin-huxley-boundary-v2-v0675, resourceId: community-hh-slot-3, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v07, activityId: community-hodgkin-huxley-boundary-v2-v07, resourceId: community-hh-slot-0, orderOnResource: 3, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v08, activityId: community-hodgkin-huxley-boundary-v2-v08, resourceId: community-hh-slot-1, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-v10, activityId: community-hodgkin-huxley-boundary-v2-v10, resourceId: community-hh-slot-2, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-aggregate, activityId: community-hodgkin-huxley-boundary-v2-aggregate, resourceId: community-hh-slot-0, orderOnResource: 4, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-render, activityId: community-hodgkin-huxley-boundary-v2-render, resourceId: community-hh-slot-0, orderOnResource: 5, metadata: {runtimeId: community-hh-local}}
-    - {id: hh2-validate, activityId: community-hodgkin-huxley-boundary-v2-validate, resourceId: community-hh-slot-0, orderOnResource: 6, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-prepare, activityId: community-hodgkin-huxley-boundary-v3-prepare, resourceId: community-hh-slot-0, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v00, activityId: community-hodgkin-huxley-boundary-v3-v00, resourceId: community-hh-slot-0, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v02, activityId: community-hodgkin-huxley-boundary-v3-v02, resourceId: community-hh-slot-1, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v04, activityId: community-hodgkin-huxley-boundary-v3-v04, resourceId: community-hh-slot-2, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v05, activityId: community-hodgkin-huxley-boundary-v3-v05, resourceId: community-hh-slot-3, orderOnResource: 0, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v06, activityId: community-hodgkin-huxley-boundary-v3-v06, resourceId: community-hh-slot-0, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v0625, activityId: community-hodgkin-huxley-boundary-v3-v0625, resourceId: community-hh-slot-1, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v0650, activityId: community-hodgkin-huxley-boundary-v3-v0650, resourceId: community-hh-slot-2, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v0675, activityId: community-hodgkin-huxley-boundary-v3-v0675, resourceId: community-hh-slot-3, orderOnResource: 1, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v07, activityId: community-hodgkin-huxley-boundary-v3-v07, resourceId: community-hh-slot-0, orderOnResource: 3, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v08, activityId: community-hodgkin-huxley-boundary-v3-v08, resourceId: community-hh-slot-1, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-v10, activityId: community-hodgkin-huxley-boundary-v3-v10, resourceId: community-hh-slot-2, orderOnResource: 2, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-aggregate, activityId: community-hodgkin-huxley-boundary-v3-aggregate, resourceId: community-hh-slot-0, orderOnResource: 4, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-render, activityId: community-hodgkin-huxley-boundary-v3-render, resourceId: community-hh-slot-0, orderOnResource: 5, metadata: {runtimeId: community-hh-local}}
+    - {id: hh3-portable-validate, activityId: community-hodgkin-huxley-boundary-v3-validate, resourceId: community-hh-slot-0, orderOnResource: 6, metadata: {runtimeId: community-hh-local}}

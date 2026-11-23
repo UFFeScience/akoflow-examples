@@ -4,6 +4,8 @@ import hashlib
 import json
 import shutil
 import sys
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -101,8 +103,11 @@ def restore_frozen(inputs):
         "/oceanography/oceanbench-glonet/inputs/input-manifest.json"
     )
     expected = "036437dec25f0562b16cedfc0b402fdbeaaa1da12e81bc65c8f625d3129c800d"
-    with urllib.request.urlopen(url, timeout=120) as response:
-        manifest_bytes = response.read(6 * 1024 * 1024)
+    def read_manifest():
+        with urllib.request.urlopen(url, timeout=120) as response:
+            return response.read(6 * 1024 * 1024)
+
+    manifest_bytes = retry_download(read_manifest, "input manifest")
     if hashlib.sha256(manifest_bytes).hexdigest() != expected:
         raise RuntimeError("frozen input manifest digest mismatch")
     manifest = json.loads(manifest_bytes)
@@ -111,21 +116,29 @@ def restore_frozen(inputs):
         target = inputs / "snapshot" / item["key"]
         target.parent.mkdir(parents=True, exist_ok=True)
         url = f"{BASE}/{BUCKET}/{urllib.parse.quote(item['key'])}"
-        for attempt in range(3):
-            try:
-                with urllib.request.urlopen(url, timeout=120) as response, target.open("wb") as output:
-                    shutil.copyfileobj(response, output)
-                if target.stat().st_size != item["size"] or sha256(target) != item["sha256"]:
-                    raise RuntimeError(f"frozen object mismatch: {item['key']}")
-                return
-            except OSError:
-                if attempt == 2:
-                    raise
+        def download():
+            with urllib.request.urlopen(url, timeout=120) as response, target.open("wb") as output:
+                shutil.copyfileobj(response, output)
+
+        retry_download(download, item["key"])
+        if target.stat().st_size != item["size"] or sha256(target) != item["sha256"]:
+            raise RuntimeError(f"frozen object mismatch: {item['key']}")
 
     with ThreadPoolExecutor(max_workers=16) as pool:
         for _ in pool.map(fetch, manifest["objects"]):
             pass
     (inputs / "input-manifest.json").write_bytes(manifest_bytes)
+
+
+def retry_download(download, label):
+    for delay in (1, 2, 4, 8, 16, 32, None):
+        try:
+            return download()
+        except OSError as error:
+            if (isinstance(error, urllib.error.HTTPError)
+                    and error.code != 429 and error.code < 500) or delay is None:
+                raise RuntimeError(f"could not download {label}: {error}") from error
+            time.sleep(delay)
 
 
 if __name__ == "__main__":

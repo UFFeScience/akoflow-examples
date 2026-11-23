@@ -1,20 +1,68 @@
 plan:
-  id: community-turing-schnakenberg-plan-v2
+  id: community-turing-schnakenberg-plan-v2-two-slot
   workflowVersionId: community-turing-schnakenberg-v2-v1
   executionScopeId: community-turing-parallel-scope
   networkTopologyId: community-turing-parallel-topology
   source: imported
   algorithm: manual
-  algorithmVersion: "1"
+  algorithmVersion: '1'
   objective: custom
-  predicted: {makespanSeconds: 40, cost: 0, feasible: true}
+  predicted:
+    makespanSeconds: 40
+    cost: 0
+    feasible: true
   assignments:
-    - {id: turing-portable-v2-prepare, activityId: community-turing-schnakenberg-v2-prepare-scenario, resourceId: community-turing-slot-0, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-primary-128, activityId: community-turing-schnakenberg-v2-simulate-primary-128, resourceId: community-turing-slot-0, orderOnResource: 1, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-primary-64, activityId: community-turing-schnakenberg-v2-simulate-primary-64, resourceId: community-turing-slot-1, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-control-5, activityId: community-turing-schnakenberg-v2-simulate-control-5, resourceId: community-turing-slot-2, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-control-1, activityId: community-turing-schnakenberg-v2-simulate-control-1, resourceId: community-turing-slot-3, orderOnResource: 0, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-halfstep, activityId: community-turing-schnakenberg-v2-simulate-halfstep, resourceId: community-turing-slot-1, orderOnResource: 1, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-aggregate, activityId: community-turing-schnakenberg-v2-aggregate-analysis, resourceId: community-turing-slot-0, orderOnResource: 2, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-render, activityId: community-turing-schnakenberg-v2-render-results, resourceId: community-turing-slot-0, orderOnResource: 3, metadata: {runtimeId: community-turing-local}}
-    - {id: turing-portable-v2-validate, activityId: community-turing-schnakenberg-v2-validate, resourceId: community-turing-slot-0, orderOnResource: 4, metadata: {runtimeId: community-turing-local}}
+  - id: turing-portable-v2-prepare-two-slot
+    activityId: community-turing-schnakenberg-v2-prepare-scenario
+    resourceId: community-turing-slot-0
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-primary-128-two-slot
+    activityId: community-turing-schnakenberg-v2-simulate-primary-128
+    resourceId: community-turing-slot-0
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-primary-64-two-slot
+    activityId: community-turing-schnakenberg-v2-simulate-primary-64
+    resourceId: community-turing-slot-1
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-control-5-two-slot
+    activityId: community-turing-schnakenberg-v2-simulate-control-5
+    resourceId: community-turing-slot-0
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-control-1-two-slot
+    activityId: community-turing-schnakenberg-v2-simulate-control-1
+    resourceId: community-turing-slot-1
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-halfstep-two-slot
+    activityId: community-turing-schnakenberg-v2-simulate-halfstep
+    resourceId: community-turing-slot-1
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-aggregate-two-slot
+    activityId: community-turing-schnakenberg-v2-aggregate-analysis
+    resourceId: community-turing-slot-0
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-render-two-slot
+    activityId: community-turing-schnakenberg-v2-render-results
+    resourceId: community-turing-slot-0
+    orderOnResource: 4
+    metadata:
+      runtimeId: community-turing-local
+  - id: turing-portable-v2-validate-two-slot
+    activityId: community-turing-schnakenberg-v2-validate
+    resourceId: community-turing-slot-0
+    orderOnResource: 5
+    metadata:
+      runtimeId: community-turing-local

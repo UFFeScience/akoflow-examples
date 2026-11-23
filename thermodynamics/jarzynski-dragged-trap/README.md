@@ -29,6 +29,14 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 The pinned container executes offline without Hub credentials or the host Docker socket. Local execution is a preflight; recorded daemon runs are execution evidence.
 
+The imported workflow does not depend on a pre-existing local image. Each
+activity resolves the same immutable AkôFlow build recipe. Its archived context
+contains only `docker/Dockerfile`, `requirements.txt`, `LICENSE`,
+`THIRD_PARTY_NOTICES.md`, and `scripts/workflow.py`; every `COPY` source is
+therefore inside the portable context. The base image is pinned by digest.
+AkôFlow preflight on an unmaterialized host reported `Build required`, rebuilt
+the OCI image from this context, verified it, and then ran the complete DAG.
+
 ## Scientific definition and limits
 
 In dimensionless units k=γ=kBT=β=1, the trap is U=(x-λ)²/2 with λ=vt and τ=1. Work is W=-v∫(x-λ)dt. The continuous process predicts μ=v²(τ-1+exp(-τ)), variance 2μ, and E[exp(-W)]=1. This is a one-dimensional overdamped Markovian model, not a molecular or laboratory free-energy measurement. Translation forces ΔF=0, and the bounded speeds do not establish general rare-event efficiency.
@@ -41,10 +49,11 @@ Original workflow code and generated artifacts are maintained by UFFeScience and
 
 ## Measured execution
 
-AkôFlow daemon run `community-jarzynski-run-v1` completed all 22 activities in
-53.346 seconds on four declared slots. The matched one-slot run
-`community-jarzynski-run-one-slot-v1` completed in 77.479 seconds, an observed
-host-specific makespan ratio of 1.452; this is not a generalized speedup claim.
+AkôFlow daemon run `community-jarzynski-run-v2` rebuilt the missing image and
+completed all 22 activities in 54.793 seconds on four declared slots. The
+matched one-slot run `community-jarzynski-run-one-slot-v2` completed in 75.350
+seconds, an observed host-specific makespan ratio of 1.375; this is not a
+generalized speedup claim.
 The measured timestamps show simultaneous independent shards—for example, all
 four `v=0.25` shards overlapped from 02:54:06.987 to 02:54:07.085 UTC.
 
@@ -53,8 +62,10 @@ the corresponding estimated free energies were `0.000517`, `0.001976`,
 `-0.001981`, and `0.002518`. Every prospective completeness, moment, scaling,
 bootstrap, Jarzynski, refinement, Euler, determinism, and media gate passed.
 The daemon `work-summary.csv` SHA-256 exactly matches the committed reference
-artifact. The executed image is
-`sha256:618acd24dcfd65b0e6d6867277119f4db61b13e34437d91b7c26f360139d94a0`.
+artifact. The portable context digest is
+`sha256:a701eb58651a3a5f6bfebd59cd733cc0fca224e13ee04987c201dc06b385c629`;
+the recipe digest is
+`sha256:0bcee2123f63c2cfec64fd18d29e73456424c9ca4ed3a40ad82b8a4da31a194e`.
 
 ![Measured AkôFlow DAG](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/thermodynamics/jarzynski-dragged-trap/evidence/measured-dag.png)
 

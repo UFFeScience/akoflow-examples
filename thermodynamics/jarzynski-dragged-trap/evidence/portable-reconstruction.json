@@ -1,0 +1,23 @@
+{
+  "activity_count": 22,
+  "base_image_pinned_by_digest": true,
+  "completed_activity_count": 22,
+  "context_digest": "sha256:a701eb58651a3a5f6bfebd59cd733cc0fca224e13ee04987c201dc06b385c629",
+  "context_files": [
+    "docker/Dockerfile",
+    "requirements.txt",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "scripts/workflow.py"
+  ],
+  "copy_sources_inside_context": true,
+  "image_rebuilt_by_akoflow": true,
+  "one_slot_makespan_seconds": 75.34990286827087,
+  "one_slot_run_id": "community-jarzynski-run-one-slot-v2",
+  "parallel_makespan_seconds": 54.793365240097046,
+  "parallel_run_id": "community-jarzynski-run-v2",
+  "preflight_message": "Build required: the Dockerfile context and local builder are available.",
+  "recipe_digest": "sha256:0bcee2123f63c2cfec64fd18d29e73456424c9ca4ed3a40ad82b8a4da31a194e",
+  "recipe_path": "docker/Dockerfile",
+  "workflow_name": "community-jarzynski-v2"
+}

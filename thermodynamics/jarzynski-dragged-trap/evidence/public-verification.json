@@ -12,10 +12,13 @@
     "measured_timeline_http_status": 200
   },
   "import_yaml": {
-    "bytes": 275752,
+    "build_origin_count": 22,
+    "bytes": 454480,
+    "context_archive_count": 22,
+    "context_digest": "sha256:a701eb58651a3a5f6bfebd59cd733cc0fca224e13ee04987c201dc06b385c629",
     "http_status": 200,
     "media_type": "application/yaml",
-    "workflow_name": "community-jarzynski-v1"
+    "workflow_name": "community-jarzynski-v2"
   },
   "page": {
     "bytes": 619699,
@@ -28,7 +31,7 @@
     "activity_count": 22,
     "completed_activity_count": 22,
     "http_status": 200,
-    "run_id": "community-jarzynski-run-v1",
+    "run_id": "community-jarzynski-run-v2",
     "status": "completed"
   },
   "result_consistency": {
@@ -36,7 +39,7 @@
     "reference_work_summary_sha256": "7ebc8fbe57276d2ac769621cb73fbcb6bf6d41fe5945d935d752c222859b674b",
     "passed": true
   },
-  "verified_at": "2026-11-23T02:59:35Z",
-  "version": 1,
+  "verified_at": "2026-11-23T03:10:00Z",
+  "version": 2,
   "visibility": "public"
 }

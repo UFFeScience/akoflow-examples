@@ -3,7 +3,7 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-pdebench-advection-run-v2}
+run_id=${AKOFLOW_RUN_ID:-community-pdebench-advection-portable-run-v8}
 tmp=$(mktemp -d)
 trap 'rm -rf "$tmp"' EXIT
 request() {
@@ -27,8 +27,8 @@ create schedule-plans/import plan.yaml
 request GET environments/community-pdebench-parallel > "$tmp/environment.json"
 request GET execution-scopes/community-pdebench-parallel-scope > "$tmp/scope.json"
 request GET network-topologies/community-pdebench-parallel-topology > "$tmp/topology.json"
-request GET workflow-definitions/community-pdebench-advection-v1 > "$tmp/workflow.json"
-request GET schedule-plans/community-pdebench-advection-plan-v1 > "$tmp/plan.json"
+request GET workflow-definitions/community-pdebench-advection-v8 > "$tmp/workflow.json"
+request GET schedule-plans/community-pdebench-advection-plan-v8 > "$tmp/plan.json"
 jq -n --arg run_id "$run_id" \
   --slurpfile environment "$tmp/environment.json" \
   --slurpfile scope "$tmp/scope.json" \

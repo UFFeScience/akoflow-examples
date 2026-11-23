@@ -1,12 +1,11 @@
-name: community-pdebench-advection-v1
+name: community-pdebench-advection-v8
 spec:
   namespace: community-explorer
-  image: akoflow/community-pdebench-advection:v1
   activities:
-    - {name: prepare, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: infer-fno, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, infer, --model, fno, --output, .]}, cpuLimit: "1", memoryLimit: 3Gi, dependsOn: [prepare]}
-    - {name: infer-unet, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, infer, --model, unet, --output, .]}, cpuLimit: "1", memoryLimit: 3Gi, dependsOn: [prepare]}
-    - {name: metrics-fno, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metrics, --model, fno, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [infer-fno]}
-    - {name: metrics-unet, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, metrics, --model, unet, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [infer-unet]}
-    - {name: compare, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, compare, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [metrics-fno, metrics-unet]}
-    - {name: validate, runtime: community-pdebench-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [compare]}
+    - {name: prepare, runtime: community-pdebench-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-4030392b0d3b00eaf0bc94af94266a29515c4a61456c5ce11961cd2c18c51d63}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: infer-fno, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, infer, --model, fno, --output, .]}, cpuLimit: "1", memoryLimit: 3Gi, dependsOn: [prepare]}
+    - {name: infer-unet, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, infer, --model, unet, --output, .]}, cpuLimit: "1", memoryLimit: 3Gi, dependsOn: [prepare]}
+    - {name: metrics-fno, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, metrics, --model, fno, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [infer-fno]}
+    - {name: metrics-unet, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, metrics, --model, unet, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [infer-unet]}
+    - {name: compare, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, compare, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [metrics-fno, metrics-unet]}
+    - {name: validate, runtime: community-pdebench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [compare]}

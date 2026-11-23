@@ -1,0 +1,32 @@
+{
+  "branches": [
+    {
+      "activity_id": "community-cooley-tukey-fft-v1-audit-offset-0250",
+      "resource_id": "community-fft-slot-2",
+      "started_at": 1795397064.4721575,
+      "finished_at": 1795397064.7380257
+    },
+    {
+      "activity_id": "community-cooley-tukey-fft-v1-audit-offset-000",
+      "resource_id": "community-fft-slot-0",
+      "started_at": 1795397064.5138729,
+      "finished_at": 1795397064.7110164
+    },
+    {
+      "activity_id": "community-cooley-tukey-fft-v1-audit-offset-0500",
+      "resource_id": "community-fft-slot-3",
+      "started_at": 1795397064.615117,
+      "finished_at": 1795397064.8234193
+    },
+    {
+      "activity_id": "community-cooley-tukey-fft-v1-audit-offset-0125",
+      "resource_id": "community-fft-slot-1",
+      "started_at": 1795397064.6565862,
+      "finished_at": 1795397064.8120968
+    }
+  ],
+  "overlap_start": 1795397064.6565862,
+  "overlap_end": 1795397064.7110164,
+  "overlap_seconds": 0.054430246353149414,
+  "all_four_overlap": true
+}

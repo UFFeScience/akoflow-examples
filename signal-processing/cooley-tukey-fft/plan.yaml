@@ -1,0 +1,19 @@
+plan:
+  id: community-cooley-tukey-fft-plan-v1
+  workflowVersionId: community-cooley-tukey-fft-v1-v1
+  executionScopeId: community-fft-parallel-scope
+  networkTopologyId: community-fft-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: issue40-fft-prepare, activityId: community-cooley-tukey-fft-v1-prepare-scenario, resourceId: community-fft-slot-0, orderOnResource: 0, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-001, activityId: community-cooley-tukey-fft-v1-audit-offset-000, resourceId: community-fft-slot-0, orderOnResource: 1, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-005, activityId: community-cooley-tukey-fft-v1-audit-offset-0125, resourceId: community-fft-slot-1, orderOnResource: 0, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-010, activityId: community-cooley-tukey-fft-v1-audit-offset-0250, resourceId: community-fft-slot-2, orderOnResource: 0, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-020, activityId: community-cooley-tukey-fft-v1-audit-offset-0500, resourceId: community-fft-slot-3, orderOnResource: 0, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-aggregate, activityId: community-cooley-tukey-fft-v1-aggregate-spectra, resourceId: community-fft-slot-0, orderOnResource: 2, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-render, activityId: community-cooley-tukey-fft-v1-render-spectra, resourceId: community-fft-slot-0, orderOnResource: 3, metadata: {runtimeId: community-fft-local}}
+    - {id: issue40-fft-validate, activityId: community-cooley-tukey-fft-v1-validate, resourceId: community-fft-slot-0, orderOnResource: 4, metadata: {runtimeId: community-fft-local}}

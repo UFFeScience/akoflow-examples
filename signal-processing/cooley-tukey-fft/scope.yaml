@@ -1,0 +1,3 @@
+id: community-fft-parallel-scope
+name: FFT local execution scope
+environmentVersionIds: [community-fft-parallel-v1]

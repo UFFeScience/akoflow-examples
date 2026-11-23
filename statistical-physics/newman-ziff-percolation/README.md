@@ -2,19 +2,19 @@
 
 This deterministic CPU workflow uses incremental Newman–Ziff site occupation and union–find cluster growth to recover the square-lattice percolation transition. It evaluates 4,096 independent realizations at each of `L = 32, 64, 128, 256`, converts first-spanning counts to canonical spanning probabilities by binomial convolution, and fits the fixed finite-size form `p50(L) = pc + a L^(-3/4)`.
 
-![Spanning probability curves](outputs/reference/spanning-probability.png)
+![Spanning probability curves](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/outputs/reference/spanning-probability.png)
 
 *Canonical either-axis spanning probability for four open square lattices. Larger lattices sharpen around the published threshold.*
 
-![Finite-size threshold extrapolation](outputs/reference/threshold-extrapolation.png)
+![Finite-size threshold extrapolation](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/outputs/reference/threshold-extrapolation.png)
 
 *The fixed `L^(-3/4)` extrapolation gives `pc = 0.5930064082`; the dashed line is Newman and Ziff's published `0.59274621` reference.*
 
-![Representative cluster near the transition](outputs/reference/cluster-growth.png)
+![Representative cluster near the transition](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/outputs/reference/cluster-growth.png)
 
 *An actual state from the predeclared `L=128`, shard-0, realization-0 sequence. A boundary-spanning component is highlighted in red when present.*
 
-![Incremental cluster-growth animation](outputs/reference/cluster-growth.gif)
+![Incremental cluster-growth animation](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/outputs/reference/cluster-growth.gif)
 
 *The 61-frame result-bearing animation follows the same frozen realization from `p=0.45` to `0.75`; occupied sites and the first spanning component are computed from the retained incremental states.*
 
@@ -47,7 +47,7 @@ Scientific execution is offline, CPU-only, and receives neither Hub credentials 
 
 Daemon run `community-percolation-run-v2` completed all 20 activities in `42.511762619018555 s`. The four scientifically independent L256 shards had `4.19141960144043 s` of common measured overlap. The matching one-slot run `community-percolation-one-slot-run-v2` completed in `91.00967335700989 s`, a same-host measured ratio of `2.140811571908212`. This is not a generalized performance claim.
 
-![Measured Akoflow timeline](evidence/measured-timeline.png)
+![Measured Akoflow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/bd33b2cb029404c0acf45276ab81f2ba1e33aa2e/statistical-physics/newman-ziff-percolation/evidence/measured-timeline.png)
 
 *Persisted daemon start and finish timestamps show four-way overlap in each realization-shard quartet before deterministic merge, rendering, and validation.*
 

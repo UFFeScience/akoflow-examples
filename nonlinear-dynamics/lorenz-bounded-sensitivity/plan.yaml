@@ -1,19 +1,62 @@
 plan:
-  id: community-lorenz-sensitivity-plan-v1
-  workflowVersionId: community-lorenz-sensitivity-v1-v1
+  id: community-lorenz-sensitivity-plan-v2-two-slot
+  workflowVersionId: community-lorenz-sensitivity-v2-v1
   executionScopeId: community-lorenz-parallel-scope
   networkTopologyId: community-lorenz-parallel-topology
   source: imported
   algorithm: manual
-  algorithmVersion: "1"
+  algorithmVersion: '1'
   objective: custom
-  predicted: {makespanSeconds: 40, cost: 0, feasible: true}
+  predicted:
+    makespanSeconds: 40
+    cost: 0
+    feasible: true
   assignments:
-    - {id: lorenz-prepare, activityId: community-lorenz-sensitivity-v1-prepare-scenario, resourceId: community-lorenz-slot-0, orderOnResource: 0, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-reference, activityId: community-lorenz-sensitivity-v1-integrate-reference, resourceId: community-lorenz-slot-0, orderOnResource: 1, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-perturb-x, activityId: community-lorenz-sensitivity-v1-integrate-perturb-x, resourceId: community-lorenz-slot-1, orderOnResource: 0, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-perturb-y, activityId: community-lorenz-sensitivity-v1-integrate-perturb-y, resourceId: community-lorenz-slot-2, orderOnResource: 0, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-perturb-z, activityId: community-lorenz-sensitivity-v1-integrate-perturb-z, resourceId: community-lorenz-slot-3, orderOnResource: 0, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-aggregate, activityId: community-lorenz-sensitivity-v1-aggregate-analysis, resourceId: community-lorenz-slot-0, orderOnResource: 2, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-render, activityId: community-lorenz-sensitivity-v1-render-results, resourceId: community-lorenz-slot-0, orderOnResource: 3, metadata: {runtimeId: community-lorenz-local}}
-    - {id: lorenz-validate, activityId: community-lorenz-sensitivity-v1-validate, resourceId: community-lorenz-slot-0, orderOnResource: 4, metadata: {runtimeId: community-lorenz-local}}
+  - id: lorenz-portable-v2-prepare-two-slot
+    activityId: community-lorenz-sensitivity-v2-prepare-scenario
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-reference-two-slot
+    activityId: community-lorenz-sensitivity-v2-integrate-reference
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-perturb-x-two-slot
+    activityId: community-lorenz-sensitivity-v2-integrate-perturb-x
+    resourceId: community-lorenz-slot-1
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-perturb-y-two-slot
+    activityId: community-lorenz-sensitivity-v2-integrate-perturb-y
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-perturb-z-two-slot
+    activityId: community-lorenz-sensitivity-v2-integrate-perturb-z
+    resourceId: community-lorenz-slot-1
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-aggregate-two-slot
+    activityId: community-lorenz-sensitivity-v2-aggregate-analysis
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-render-two-slot
+    activityId: community-lorenz-sensitivity-v2-render-results
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 4
+    metadata:
+      runtimeId: community-lorenz-local
+  - id: lorenz-portable-v2-validate-two-slot
+    activityId: community-lorenz-sensitivity-v2-validate
+    resourceId: community-lorenz-slot-0
+    orderOnResource: 5
+    metadata:
+      runtimeId: community-lorenz-local

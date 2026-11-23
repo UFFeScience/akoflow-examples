@@ -1,13 +1,12 @@
-name: community-lorenz-sensitivity-v1
+name: community-lorenz-sensitivity-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-lorenz-sensitivity:v1
   activities:
-    - {name: prepare-scenario, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: integrate-reference, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, reference]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: integrate-perturb-x, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-x]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: integrate-perturb-y, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-y]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: integrate-perturb-z, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-z]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: aggregate-analysis, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [integrate-reference, integrate-perturb-x, integrate-perturb-y, integrate-perturb-z]}
-    - {name: render-results, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-analysis]}
-    - {name: validate, runtime: community-lorenz-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}
+    - {name: prepare-scenario, runtime: community-lorenz-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-10cffde990df1c00dfd6ff3a177bb495f9e6f14d0e10b499ec54ed161140cde2}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: integrate-reference, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, reference]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: integrate-perturb-x, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-x]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: integrate-perturb-y, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-y]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: integrate-perturb-z, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, simulate, --output, ., --branch, perturb-z]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-analysis, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [integrate-reference, integrate-perturb-x, integrate-perturb-y, integrate-perturb-z]}
+    - {name: render-results, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-analysis]}
+    - {name: validate, runtime: community-lorenz-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

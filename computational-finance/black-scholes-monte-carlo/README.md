@@ -26,22 +26,22 @@ sample variance is `451.2914196931` versus `451.0288078158`. The variance error
 `0.2626118773` is below the pre-registered four-sigma tolerance
 `2.9525643984`. All fixed scientific checks passed.
 
-![Call and put estimates converge to their analytic values. Error bars are 95% normal intervals computed from the measured sample variance.](outputs/reference/price-convergence.png)
+![Call and put estimates converge to their analytic values. Error bars are 95% normal intervals computed from the measured sample variance.](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/817c37a/computational-finance/black-scholes-monte-carlo/outputs/reference/price-convergence.png)
 
 *Figure 1. Actual cumulative call and put estimates at the five fixed sample
 counts; dashed lines are the analytic Black–Scholes values.*
 
-![Measured call and put standard errors follow the inverse-square-root reference.](outputs/reference/standard-error-scaling.png)
+![Measured call and put standard errors follow the inverse-square-root reference.](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/817c37a/computational-finance/black-scholes-monte-carlo/outputs/reference/standard-error-scaling.png)
 
 *Figure 2. Log–log standard-error scaling from the retained numeric results,
 including the measured slopes and the `N^-1/2` reference.*
 
-![Animated cumulative call and put estimates and confidence intervals as the sample count grows.](outputs/reference/option-convergence.gif)
+![Animated cumulative call and put estimates and confidence intervals as the sample count grows.](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/817c37a/computational-finance/black-scholes-monte-carlo/outputs/reference/option-convergence.gif)
 
 *Animation 1. Five result-bearing frames show the real cumulative estimates
 and uncertainty intervals from 4,096 through 1,000,000 aggregate draws.*
 
-![Measured activity intervals from the four-slot daemon run.](evidence/measured-timeline.svg)
+![Measured activity intervals from the four-slot daemon run.](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/817c37a/computational-finance/black-scholes-monte-carlo/evidence/measured-timeline.svg)
 
 *Figure 3. AkôFlow daemon timestamps for all activities. Estimator branches
 `20261126` and `20261123` overlapped for `0.0571579933 s` on distinct declared

@@ -1,0 +1,22 @@
+{
+  "anonymous": true,
+  "import_yaml": {
+    "build_origin_count": 7,
+    "bytes": 122621,
+    "context_archive_count": 7,
+    "context_digest": "sha256:01edc9ddf7177de0ac2f093328eb893555d2583b347cbb9ab5903cc0f299424b",
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-debye-heat-v2"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "9130e861-9ee0-4597-aa27-7eac2b28a648",
+  "recorded_result": {
+    "activity_count": 7,
+    "completed_activity_count": 7,
+    "run_id": "community-debye-heat-run-v2",
+    "status": "completed"
+  },
+  "version": 2,
+  "visibility": "public"
+}

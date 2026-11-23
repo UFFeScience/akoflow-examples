@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-11-23T00:24:00Z",
+  "verifiedAt": "2026-11-23T03:41:00Z",
   "anonymousHttp": {
     "page": 200,
     "publication": 200,
@@ -17,8 +17,8 @@
   "experiment": {
     "format": "akoflow.experiment",
     "schemaVersion": "1.0",
-    "workflowId": "community-brachistochrone-v1",
-    "workflowVersionId": "community-brachistochrone-v1-v1"
+    "workflowId": "community-brachistochrone-v2",
+    "workflowVersionId": "community-brachistochrone-v2-v1"
   },
   "gallery": {
     "pngCount": 4,
@@ -30,6 +30,11 @@
     "licenses": true,
     "completedRecordedRun": true,
     "importYaml": true,
-    "resultConsistency": true
+    "resultConsistency": true,
+    "portableBuildOriginCount": 7,
+    "portableContextArchiveCount": 7,
+    "portableContextDigest": "sha256:d9bc0a4141fadf4225b5c2c9ee49fb2ed3275abe269d66a961f78df5a8946cb1",
+    "portableYamlBytes": 126526,
+    "portableYamlVersion": 2
   }
 }

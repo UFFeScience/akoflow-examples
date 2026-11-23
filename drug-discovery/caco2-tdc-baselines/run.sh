@@ -40,5 +40,6 @@ jq -n --arg run_id "$run_id" --slurpfile environment "$temporary/environment.jso
    networkTopology: $topology[0], activityProfiles: ($environment[0].activityResourceProfiles // [])}' > "$temporary/execution.json"
 request POST execution-preflights -H 'Content-Type: application/json' --data-binary "@$temporary/execution.json" > "$temporary/preflight.json"
 jq . "$temporary/preflight.json"
+jq -e '.ready == true' "$temporary/preflight.json" >/dev/null
 request POST execution-runs -H 'Content-Type: application/json' -H "Idempotency-Key: $run_id" --data-binary "@$temporary/execution.json"
 printf '\nRun: %s/execution-runs/%s/\n' "$api" "$run_id"

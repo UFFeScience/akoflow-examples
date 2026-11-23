@@ -1,52 +1,52 @@
 {
   "activities": [
     {
-      "activity": "community-brachistochrone-v1-freeze-inputs",
+      "activity_id": "community-brachistochrone-v2-freeze-inputs",
+      "started_at": 1795405183.528654,
+      "finished_at": 1795405184.233695,
       "resource": "community-brachistochrone-slot-0",
-      "started_at": 1795393143.2292986,
-      "finished_at": 1795393144.0932693,
       "status": "completed"
     },
     {
-      "activity": "community-brachistochrone-v1-endpoint-three-pi-over-2",
-      "resource": "community-brachistochrone-slot-2",
-      "started_at": 1795393145.6825864,
-      "finished_at": 1795393149.2697308,
-      "status": "completed"
-    },
-    {
-      "activity": "community-brachistochrone-v1-endpoint-pi",
+      "activity_id": "community-brachistochrone-v2-endpoint-pi",
+      "started_at": 1795405185.7334328,
+      "finished_at": 1795405188.8060856,
       "resource": "community-brachistochrone-slot-1",
-      "started_at": 1795393145.7249777,
-      "finished_at": 1795393149.4961665,
       "status": "completed"
     },
     {
-      "activity": "community-brachistochrone-v1-endpoint-pi-over-2",
-      "resource": "community-brachistochrone-slot-0",
-      "started_at": 1795393145.7788844,
-      "finished_at": 1795393149.4420488,
+      "activity_id": "community-brachistochrone-v2-endpoint-three-pi-over-2",
+      "started_at": 1795405185.9503171,
+      "finished_at": 1795405189.2629702,
+      "resource": "community-brachistochrone-slot-2",
       "status": "completed"
     },
     {
-      "activity": "community-brachistochrone-v1-aggregate",
+      "activity_id": "community-brachistochrone-v2-endpoint-pi-over-2",
+      "started_at": 1795405186.1932275,
+      "finished_at": 1795405189.4141476,
       "resource": "community-brachistochrone-slot-0",
-      "started_at": 1795393151.2689102,
-      "finished_at": 1795393152.0109622,
       "status": "completed"
     },
     {
-      "activity": "community-brachistochrone-v1-render",
+      "activity_id": "community-brachistochrone-v2-aggregate",
+      "started_at": 1795405190.9942515,
+      "finished_at": 1795405191.7450562,
       "resource": "community-brachistochrone-slot-0",
-      "started_at": 1795393153.2931428,
-      "finished_at": 1795393158.855346,
       "status": "completed"
     },
     {
-      "activity": "community-brachistochrone-v1-validate",
+      "activity_id": "community-brachistochrone-v2-render",
+      "started_at": 1795405193.0041344,
+      "finished_at": 1795405198.4121156,
       "resource": "community-brachistochrone-slot-0",
-      "started_at": 1795393159.6750748,
-      "finished_at": 1795393160.4971845,
+      "status": "completed"
+    },
+    {
+      "activity_id": "community-brachistochrone-v2-validate",
+      "started_at": 1795405199.5060415,
+      "finished_at": 1795405200.3359365,
+      "resource": "community-brachistochrone-slot-0",
       "status": "completed"
     }
   ]

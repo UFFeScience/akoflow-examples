@@ -25,6 +25,13 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 The image pins Python 3.11.14, NumPy 2.2.6, SciPy 1.15.3, Matplotlib 3.10.3, and Pillow 11.2.1. Image preparation may use the network to obtain pinned wheels; all scientific activities execute with no network, Hub credential, or host Docker socket. A local run is only a deterministic preflight. The recorded daemon run is the execution evidence.
 
+The imported workflow resolves all seven activities from one immutable AkôFlow
+build recipe. Its archived context contains the Dockerfile, pinned requirements,
+license, and workflow source; every `COPY` source is contained and the base
+image is digest-pinned. From an unmaterialized state, preflight reported
+`Build required`, and AkôFlow reconstructed and verified the OCI image before
+running the DAG.
+
 ## Scientific result
 
 With `g = 9.80665 m/s²`, `a = 1 m`, and endpoint angles `pi/2`, `pi`, and `3pi/2`, all numerical cycloid times agree with the analytic law to displayed binary64 precision. The smallest measured advantage over a comparison track is `0.001246155486470224 s`; the largest 128-to-256-node quadrature change is `5.995204332975845e-15 s`. Validation also checks endpoints, finite geometry, nondecreasing `x`, nonnegative `y`, media signatures, checksums, and byte-identical repeated aggregation.
@@ -33,7 +40,15 @@ The square-root, straight, and power-3/2 comparisons use `x = X s^4`, which yiel
 
 ## Measured AkôFlow execution
 
-Daemon run `community-brachistochrone-run-v1` completed all seven activities in `17.26788592338562 s`. Its three independent endpoint activities ran on distinct declared resources and overlapped for `3.4908463954925537 s` according to daemon timestamps. The matched one-slot run `community-brachistochrone-run-one-slot-v1` completed in `17.49072813987732 s`. No speedup is claimed: these timings demonstrate real overlap and provide the required control, but the rendering-dominated end-to-end difference is too small to generalize.
+Portable daemon run `community-brachistochrone-run-v2` rebuilt the missing
+image and completed all seven activities in `16.807282 s`. Its three independent
+endpoint activities ran on distinct declared resources and overlapped for
+`2.612858 s`. The matched one-slot run
+`community-brachistochrone-one-slot-v2` completed in `21.152427 s`. No
+generalized speedup is claimed. The portable context digest is
+`sha256:d9bc0a4141fadf4225b5c2c9ee49fb2ed3275abe269d66a961f78df5a8946cb1`;
+the recipe digest is
+`sha256:58a6577dce3ef50024d2e8fd37896235d4a515ba5afbee4fc03116641137fa20`.
 
 ![Measured AkôFlow DAG](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/cbea3d6/classical-mechanics/brachistochrone-audit/evidence/measured-dag.png)
 
@@ -58,5 +73,5 @@ The original workflow code and generated artifacts are maintained by UFFeScience
 [Open the publication and measured results](https://hub.akoflow.com/o/akoflow/community-explorer-issue-43-brachistochrone-v1). Import the immutable workflow version with:
 
 ```text
-akoflow://hub/publications/412e389d-5df6-4a9f-96a7-e4326a57d7ba/versions/1
+akoflow://hub/publications/412e389d-5df6-4a9f-96a7-e4326a57d7ba/versions/2
 ```

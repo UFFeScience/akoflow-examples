@@ -1,6 +1,6 @@
 plan:
-  id: community-brachistochrone-one-slot-plan-v1
-  workflowVersionId: community-brachistochrone-v1-v1
+  id: community-brachistochrone-one-slot-plan-v2
+  workflowVersionId: community-brachistochrone-v2-v1
   executionScopeId: community-brachistochrone-parallel-scope
   networkTopologyId: community-brachistochrone-parallel-topology
   source: imported
@@ -9,10 +9,10 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 45, cost: 0, feasible: true}
   assignments:
-    - {id: brach-one-prepare, activityId: community-brachistochrone-v1-freeze-inputs, resourceId: community-brachistochrone-slot-0, orderOnResource: 0, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-pi2, activityId: community-brachistochrone-v1-endpoint-pi-over-2, resourceId: community-brachistochrone-slot-0, orderOnResource: 1, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-pi, activityId: community-brachistochrone-v1-endpoint-pi, resourceId: community-brachistochrone-slot-0, orderOnResource: 2, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-3pi2, activityId: community-brachistochrone-v1-endpoint-three-pi-over-2, resourceId: community-brachistochrone-slot-0, orderOnResource: 3, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-aggregate, activityId: community-brachistochrone-v1-aggregate, resourceId: community-brachistochrone-slot-0, orderOnResource: 4, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-render, activityId: community-brachistochrone-v1-render, resourceId: community-brachistochrone-slot-0, orderOnResource: 5, metadata: {runtimeId: community-brachistochrone-local}}
-    - {id: brach-one-validate, activityId: community-brachistochrone-v1-validate, resourceId: community-brachistochrone-slot-0, orderOnResource: 6, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-prepare, activityId: community-brachistochrone-v2-freeze-inputs, resourceId: community-brachistochrone-slot-0, orderOnResource: 0, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-pi2, activityId: community-brachistochrone-v2-endpoint-pi-over-2, resourceId: community-brachistochrone-slot-0, orderOnResource: 1, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-pi, activityId: community-brachistochrone-v2-endpoint-pi, resourceId: community-brachistochrone-slot-0, orderOnResource: 2, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-3pi2, activityId: community-brachistochrone-v2-endpoint-three-pi-over-2, resourceId: community-brachistochrone-slot-0, orderOnResource: 3, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-aggregate, activityId: community-brachistochrone-v2-aggregate, resourceId: community-brachistochrone-slot-0, orderOnResource: 4, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-render, activityId: community-brachistochrone-v2-render, resourceId: community-brachistochrone-slot-0, orderOnResource: 5, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach2-one-validate, activityId: community-brachistochrone-v2-validate, resourceId: community-brachistochrone-slot-0, orderOnResource: 6, metadata: {runtimeId: community-brachistochrone-local}}

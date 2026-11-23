@@ -1,26 +1,26 @@
 {
-  "parallel_makespan_seconds": 17.26788592338562,
-  "one_slot_makespan_seconds": 17.49072813987732,
+  "parallel_makespan_seconds": 16.80728244781494,
+  "one_slot_makespan_seconds": 21.152427434921265,
   "speedup_claimed": false,
-  "endpoint_overlap_seconds": 3.4908463954925537,
+  "endpoint_overlap_seconds": 2.6128580570220947,
   "endpoint_activities": [
     {
-      "activityId": "community-brachistochrone-v1-endpoint-three-pi-over-2",
-      "allocatedResourceId": "community-brachistochrone-slot-2",
-      "startedAt": 1795393145.6825864,
-      "finishedAt": 1795393149.2697308
-    },
-    {
-      "activityId": "community-brachistochrone-v1-endpoint-pi",
+      "activityId": "community-brachistochrone-v2-endpoint-pi",
       "allocatedResourceId": "community-brachistochrone-slot-1",
-      "startedAt": 1795393145.7249777,
-      "finishedAt": 1795393149.4961665
+      "startedAt": 1795405185.7334328,
+      "finishedAt": 1795405188.8060856
     },
     {
-      "activityId": "community-brachistochrone-v1-endpoint-pi-over-2",
+      "activityId": "community-brachistochrone-v2-endpoint-three-pi-over-2",
+      "allocatedResourceId": "community-brachistochrone-slot-2",
+      "startedAt": 1795405185.9503171,
+      "finishedAt": 1795405189.2629702
+    },
+    {
+      "activityId": "community-brachistochrone-v2-endpoint-pi-over-2",
       "allocatedResourceId": "community-brachistochrone-slot-0",
-      "startedAt": 1795393145.7788844,
-      "finishedAt": 1795393149.4420488
+      "startedAt": 1795405186.1932275,
+      "finishedAt": 1795405189.4141476
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "activity_count": 7,
+  "base_image_pinned_by_digest": true,
+  "completed_activity_count": 7,
+  "context_digest": "sha256:d9bc0a4141fadf4225b5c2c9ee49fb2ed3275abe269d66a961f78df5a8946cb1",
+  "copy_sources_inside_context": true,
+  "image_rebuilt_by_akoflow": true,
+  "one_slot_makespan_seconds": 21.152427434921265,
+  "one_slot_run_id": "community-brachistochrone-one-slot-v2",
+  "parallel_makespan_seconds": 16.80728244781494,
+  "parallel_run_id": "community-brachistochrone-run-v2",
+  "preflight_message": "Build required: the Dockerfile context and local builder are available.",
+  "recipe_digest": "sha256:58a6577dce3ef50024d2e8fd37896235d4a515ba5afbee4fc03116641137fa20",
+  "recipe_path": "docker/Dockerfile",
+  "workflow_name": "community-brachistochrone-v2"
+}

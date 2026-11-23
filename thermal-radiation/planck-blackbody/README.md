@@ -30,6 +30,12 @@ The completed reference run is `community-planck-run-v4d`; the matched control i
 
 Clean-machine verification imported the portable YAML into a fresh isolated AkôFlow daemon with separate BuildKit and Docker-in-Docker state. Preflight reported `Build required` for every activity, the daemon reconstructed the image without Hub credentials or the host Docker socket, and `community-planck-fresh-clean-run-v4` completed all eight activities in 19.999 s. Every recorded output checksum is identical to the reference run; the independent reconstruction receipt and image digest are in `evidence/daemon-runs.json`.
 
+## Result data and evidence
+
+- [Validation report](outputs/reference/validation.json) and [aggregate metrics](outputs/reference/metrics.json)
+- Spectral tables at [300 K](outputs/reference/spectrum-300.csv), [1000 K](outputs/reference/spectrum-1000.csv), [3000 K](outputs/reference/spectrum-3000.csv), and [5778 K](outputs/reference/spectrum-5778.csv)
+- [Daemon runs, timestamps, build provenance, and clean-machine receipt](evidence/daemon-runs.json)
+
 ## Provenance and limitations
 
 Primary citation: Max Planck, “Ueber das Gesetz der Energieverteilung im Normalspectrum,” *Annalen der Physik* 309(3), 553–563 (1901), DOI [10.1002/andp.19013090310](https://doi.org/10.1002/andp.19013090310). Constants use NIST 2022 CODATA exact SI definitions. Original code is Apache-2.0; the authored input is CC0-1.0.

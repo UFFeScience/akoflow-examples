@@ -40,3 +40,11 @@ The two independent numerical formulations agree within `3.553e-15` in `C_V/R`. 
 ![Measured AkôFlow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/thermodynamics/debye-heat-capacity/evidence/measured-timeline.png)
 
 The DAG shows the three independent scientific calculations joining at aggregation; the timeline is rendered from recorded daemon start and finish timestamps.
+
+## Public Community Explorer version
+
+[Open the publication and measured results](https://hub.akoflow.com/o/akoflow/debye-lattice-heat-capacity-audit). Import the immutable workflow version with:
+
+```text
+akoflow://hub/publications/9130e861-9ee0-4597-aa27-7eac2b28a648/versions/1
+```

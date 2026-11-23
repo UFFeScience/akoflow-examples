@@ -1,0 +1,12 @@
+{
+  "contributionStatus": "maintainer",
+  "url": "https://hub.akoflow.com/o/akoflow/debye-lattice-heat-capacity-audit",
+  "experimentId": "3c451fe4-4261-4b40-af5c-e8c6c6b676a0",
+  "version": 1,
+  "resultCount": 1,
+  "publicationId": "9130e861-9ee0-4597-aa27-7eac2b28a648",
+  "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "persistentKey": "community-explorer-issue-42-debye-heat-v1",
+  "runId": "community-debye-heat-run-v1",
+  "uri": "akoflow://hub/publications/9130e861-9ee0-4597-aa27-7eac2b28a648/versions/1"
+}

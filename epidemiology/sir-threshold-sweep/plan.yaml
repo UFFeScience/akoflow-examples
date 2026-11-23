@@ -1,23 +1,86 @@
 plan:
-  id: community-sir-threshold-sweep-plan-v3
+  id: community-sir-threshold-sweep-plan-v3-two-slot
   workflowVersionId: community-sir-threshold-sweep-v3-v1
   executionScopeId: community-sir-parallel-scope
   networkTopologyId: community-sir-parallel-topology
   source: imported
   algorithm: manual
-  algorithmVersion: "1"
+  algorithmVersion: '1'
   objective: custom
-  predicted: {makespanSeconds: 120, cost: 0, feasible: true}
+  predicted:
+    makespanSeconds: 120
+    cost: 0
+    feasible: true
   assignments:
-    - {id: sir3-portable-prepare, activityId: community-sir-threshold-sweep-v3-prepare, resourceId: community-sir-slot-0, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-05, activityId: community-sir-threshold-sweep-v3-r0-05, resourceId: community-sir-slot-0, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-08, activityId: community-sir-threshold-sweep-v3-r0-08, resourceId: community-sir-slot-1, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-10, activityId: community-sir-threshold-sweep-v3-r0-10, resourceId: community-sir-slot-2, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-12, activityId: community-sir-threshold-sweep-v3-r0-12, resourceId: community-sir-slot-3, orderOnResource: 0, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-15, activityId: community-sir-threshold-sweep-v3-r0-15, resourceId: community-sir-slot-0, orderOnResource: 2, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-20, activityId: community-sir-threshold-sweep-v3-r0-20, resourceId: community-sir-slot-1, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-30, activityId: community-sir-threshold-sweep-v3-r0-30, resourceId: community-sir-slot-2, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-50, activityId: community-sir-threshold-sweep-v3-r0-50, resourceId: community-sir-slot-3, orderOnResource: 1, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-aggregate, activityId: community-sir-threshold-sweep-v3-aggregate, resourceId: community-sir-slot-0, orderOnResource: 3, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-render, activityId: community-sir-threshold-sweep-v3-render, resourceId: community-sir-slot-0, orderOnResource: 4, metadata: {runtimeId: community-sir-local}}
-    - {id: sir3-portable-validate, activityId: community-sir-threshold-sweep-v3-validate, resourceId: community-sir-slot-0, orderOnResource: 5, metadata: {runtimeId: community-sir-local}}
+  - id: sir3-portable-prepare-two-slot
+    activityId: community-sir-threshold-sweep-v3-prepare
+    resourceId: community-sir-slot-0
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-05-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-05
+    resourceId: community-sir-slot-0
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-08-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-08
+    resourceId: community-sir-slot-1
+    orderOnResource: 0
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-10-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-10
+    resourceId: community-sir-slot-0
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-12-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-12
+    resourceId: community-sir-slot-1
+    orderOnResource: 1
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-15-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-15
+    resourceId: community-sir-slot-0
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-20-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-20
+    resourceId: community-sir-slot-1
+    orderOnResource: 2
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-30-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-30
+    resourceId: community-sir-slot-0
+    orderOnResource: 4
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-50-two-slot
+    activityId: community-sir-threshold-sweep-v3-r0-50
+    resourceId: community-sir-slot-1
+    orderOnResource: 3
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-aggregate-two-slot
+    activityId: community-sir-threshold-sweep-v3-aggregate
+    resourceId: community-sir-slot-0
+    orderOnResource: 5
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-render-two-slot
+    activityId: community-sir-threshold-sweep-v3-render
+    resourceId: community-sir-slot-0
+    orderOnResource: 6
+    metadata:
+      runtimeId: community-sir-local
+  - id: sir3-portable-validate-two-slot
+    activityId: community-sir-threshold-sweep-v3-validate
+    resourceId: community-sir-slot-0
+    orderOnResource: 7
+    metadata:
+      runtimeId: community-sir-local

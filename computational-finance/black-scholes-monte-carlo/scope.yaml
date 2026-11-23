@@ -1,0 +1,3 @@
+id: community-black-scholes-parallel-scope
+name: Community Black-Scholes four-slot scope
+environmentVersionIds: [community-black-scholes-parallel-v1]

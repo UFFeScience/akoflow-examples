@@ -1,0 +1,13 @@
+{
+  "adaptation": "Independent risk-neutral Monte Carlo audit; no paper content redistributed",
+  "code_license": "Apache-2.0",
+  "input_license": "CC0-1.0",
+  "paper": {
+    "authors": [
+      "Fischer Black",
+      "Myron Scholes"
+    ],
+    "doi": "10.1086/260062",
+    "title": "The Pricing of Options and Corporate Liabilities"
+  }
+}

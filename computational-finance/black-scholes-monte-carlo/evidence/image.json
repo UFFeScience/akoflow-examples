@@ -1,0 +1,7 @@
+{
+  "context_digest": "sha256:b78ece52089c87d6027d8b11222438b5e78ef80f8a054e539e84eae4e2a0bdb8",
+  "id": "sha256:2cd38df1cf969ada9c10c0296cce29f445935f71e41f09518efd01c8810c45f1",
+  "portable_build_ref": "recipe-build-3813bf5e8fd053915fcd685ce4948e67662a022484d30fd0ceb6b244a5879302",
+  "recipe_digest": "sha256:3b7670abfba77615adecada50b936ec53be36988ba48dcde7c52acd438b88dbb",
+  "reference": "akoflow/community-black-scholes:v1"
+}

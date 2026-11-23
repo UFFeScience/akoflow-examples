@@ -1,0 +1,5 @@
+id: community-black-scholes-parallel-topology
+name: Community Black-Scholes local topology
+version: 1
+executionScopeId: community-black-scholes-parallel-scope
+links: []

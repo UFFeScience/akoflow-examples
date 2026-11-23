@@ -1,0 +1,12 @@
+name: community-black-scholes-monte-carlo-v1
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: validate-input, runtime: community-black-scholes-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-3813bf5e8fd053915fcd685ce4948e67662a022484d30fd0ceb6b244a5879302}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: estimate-seed-20261123, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, estimate, --output, ., --seed, "20261123"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [validate-input]}
+    - {name: estimate-seed-20261124, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, estimate, --output, ., --seed, "20261124"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [validate-input]}
+    - {name: estimate-seed-20261125, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, estimate, --output, ., --seed, "20261125"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [validate-input]}
+    - {name: estimate-seed-20261126, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, estimate, --output, ., --seed, "20261126"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [validate-input]}
+    - {name: aggregate-estimates, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [estimate-seed-20261123, estimate-seed-20261124, estimate-seed-20261125, estimate-seed-20261126]}
+    - {name: render-results, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-estimates]}
+    - {name: validate, runtime: community-black-scholes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

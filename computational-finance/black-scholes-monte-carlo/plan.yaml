@@ -1,0 +1,19 @@
+plan:
+  id: community-black-scholes-plan-v1
+  workflowVersionId: community-black-scholes-monte-carlo-v1-v1
+  executionScopeId: community-black-scholes-parallel-scope
+  networkTopologyId: community-black-scholes-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 120, cost: 0, feasible: true}
+  assignments:
+    - {id: bs-0, activityId: community-black-scholes-monte-carlo-v1-validate-input, resourceId: community-black-scholes-slot-0, orderOnResource: 0, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-1, activityId: community-black-scholes-monte-carlo-v1-estimate-seed-20261123, resourceId: community-black-scholes-slot-0, orderOnResource: 1, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-2, activityId: community-black-scholes-monte-carlo-v1-estimate-seed-20261124, resourceId: community-black-scholes-slot-1, orderOnResource: 0, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-3, activityId: community-black-scholes-monte-carlo-v1-estimate-seed-20261125, resourceId: community-black-scholes-slot-2, orderOnResource: 0, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-4, activityId: community-black-scholes-monte-carlo-v1-estimate-seed-20261126, resourceId: community-black-scholes-slot-3, orderOnResource: 0, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-5, activityId: community-black-scholes-monte-carlo-v1-aggregate-estimates, resourceId: community-black-scholes-slot-0, orderOnResource: 2, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-6, activityId: community-black-scholes-monte-carlo-v1-render-results, resourceId: community-black-scholes-slot-0, orderOnResource: 3, metadata: {runtimeId: community-black-scholes-local}}
+    - {id: bs-7, activityId: community-black-scholes-monte-carlo-v1-validate, resourceId: community-black-scholes-slot-0, orderOnResource: 4, metadata: {runtimeId: community-black-scholes-local}}

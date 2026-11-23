@@ -1,0 +1,19 @@
+{
+  "assumptions": [
+    "continuous trading",
+    "constant risk-free rate",
+    "constant volatility",
+    "lognormal terminal price",
+    "no dividends",
+    "frictionless market",
+    "European exercise",
+    "no empirical market validation"
+  ],
+  "finite": true,
+  "gif_frames": 5,
+  "gif_multiframe": true,
+  "missing": [],
+  "passed": true,
+  "reference_match": true,
+  "scientific_pass": true
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430">
+<rect width="1100" height="430" fill="white"/>
+<text x="550" y="28" text-anchor="middle" font-size="18">Measured AkôFlow daemon timeline — community-black-scholes-run-v1</text>
+<rect x="100.00" y="55" width="14.38" height="24" fill="#777777"/><text x="104.00" y="72" font-size="12" fill="black">validate-input</text>
+<rect x="236.01" y="97" width="18.31" height="24" fill="#111111"/><text x="240.01" y="114" font-size="12" fill="black">estimate-seed-20261124</text>
+<rect x="260.39" y="139" width="18.99" height="24" fill="#111111"/><text x="264.39" y="156" font-size="12" fill="black">estimate-seed-20261125</text>
+<rect x="295.60" y="181" width="18.79" height="24" fill="#111111"/><text x="299.60" y="198" font-size="12" fill="black">estimate-seed-20261126</text>
+<rect x="308.57" y="223" width="16.54" height="24" fill="#111111"/><text x="312.57" y="240" font-size="12" fill="black">estimate-seed-20261123</text>
+<rect x="537.16" y="265" width="14.09" height="24" fill="#777777"/><text x="541.16" y="282" font-size="12" fill="black">aggregate-estimates</text>
+<rect x="658.07" y="307" width="206.34" height="24" fill="#777777"/><text x="662.07" y="324" font-size="12" fill="black">render-results</text>
+<rect x="983.71" y="349" width="16.29" height="24" fill="#777777"/><text x="987.71" y="366" font-size="12" fill="black">validate</text>
+<line x1="100" y1="400" x2="1000" y2="400" stroke="black"/>
+<text x="550" y="422" text-anchor="middle" font-size="13">seconds from first activity start</text>
+</svg>

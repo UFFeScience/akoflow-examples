@@ -1,0 +1,15 @@
+{
+  "makespan_ratio_one_slot_over_parallel": 1.5617728327819094,
+  "measured_estimator_pair_overlaps": [
+    {
+      "a": "community-black-scholes-monte-carlo-v1-estimate-seed-20261126",
+      "b": "community-black-scholes-monte-carlo-v1-estimate-seed-20261123",
+      "seconds": 0.05715799331665039
+    }
+  ],
+  "one_slot_makespan_seconds": 13.82103705406189,
+  "one_slot_run_id": "community-black-scholes-one-slot-run-v1",
+  "parallel_makespan_seconds": 8.849582195281982,
+  "parallel_run_id": "community-black-scholes-run-v1",
+  "speedup_claim": false
+}

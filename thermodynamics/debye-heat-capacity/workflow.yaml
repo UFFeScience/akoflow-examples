@@ -1,12 +1,11 @@
-name: community-debye-heat-v1
+name: community-debye-heat-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-debye-heat:v1
   activities:
-    - {name: prepare-manifest, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi}
-    - {name: calculate-direct, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, direct]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
-    - {name: calculate-energy, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, energy]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
-    - {name: calculate-asymptotic, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, asymptotic]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
-    - {name: aggregate-audit, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [calculate-direct, calculate-energy, calculate-asymptotic]}
-    - {name: render-results, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [aggregate-audit]}
-    - {name: validate, runtime: community-debye-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [render-results]}
+    - {name: prepare-manifest, runtime: community-debye-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-c8840b699f416d669aa7ba2ed3e3fbe3d3c91b03758a54867e28e97bb71f06f9}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi}
+    - {name: calculate-direct, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, direct]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: calculate-energy, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, energy]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: calculate-asymptotic, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, asymptotic]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [prepare-manifest]}
+    - {name: aggregate-audit, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [calculate-direct, calculate-energy, calculate-asymptotic]}
+    - {name: render-results, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [aggregate-audit]}
+    - {name: validate, runtime: community-debye-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 128Mi, dependsOn: [render-results]}

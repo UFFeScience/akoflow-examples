@@ -1,6 +1,6 @@
 plan:
-  id: community-debye-heat-plan-v1
-  workflowVersionId: community-debye-heat-v1-v1
+  id: community-debye-heat-plan-v2
+  workflowVersionId: community-debye-heat-v2-v1
   executionScopeId: community-debye-parallel-scope
   networkTopologyId: community-debye-parallel-topology
   source: imported
@@ -9,10 +9,10 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 20, cost: 0, feasible: true}
   assignments:
-    - {id: debye-prepare, activityId: community-debye-heat-v1-prepare-manifest, resourceId: community-debye-slot-0, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-direct, activityId: community-debye-heat-v1-calculate-direct, resourceId: community-debye-slot-0, orderOnResource: 1, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-energy, activityId: community-debye-heat-v1-calculate-energy, resourceId: community-debye-slot-1, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-asymptotic, activityId: community-debye-heat-v1-calculate-asymptotic, resourceId: community-debye-slot-2, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-aggregate, activityId: community-debye-heat-v1-aggregate-audit, resourceId: community-debye-slot-0, orderOnResource: 2, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-render, activityId: community-debye-heat-v1-render-results, resourceId: community-debye-slot-0, orderOnResource: 3, metadata: {runtimeId: community-debye-local}}
-    - {id: debye-validate, activityId: community-debye-heat-v1-validate, resourceId: community-debye-slot-0, orderOnResource: 4, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-prepare, activityId: community-debye-heat-v2-prepare-manifest, resourceId: community-debye-slot-0, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-direct, activityId: community-debye-heat-v2-calculate-direct, resourceId: community-debye-slot-0, orderOnResource: 1, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-energy, activityId: community-debye-heat-v2-calculate-energy, resourceId: community-debye-slot-1, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-asymptotic, activityId: community-debye-heat-v2-calculate-asymptotic, resourceId: community-debye-slot-2, orderOnResource: 0, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-aggregate, activityId: community-debye-heat-v2-aggregate-audit, resourceId: community-debye-slot-0, orderOnResource: 2, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-render, activityId: community-debye-heat-v2-render-results, resourceId: community-debye-slot-0, orderOnResource: 3, metadata: {runtimeId: community-debye-local}}
+    - {id: debye2-validate, activityId: community-debye-heat-v2-validate, resourceId: community-debye-slot-0, orderOnResource: 4, metadata: {runtimeId: community-debye-local}}

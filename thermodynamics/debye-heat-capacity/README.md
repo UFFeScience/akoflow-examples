@@ -19,6 +19,14 @@ AKOFLOW_SUBMIT=1 ./run.sh
 
 The pinned Python 3.11.14 image uses only the standard library. Scientific execution is offline and contains no Hub credentials or host Docker socket. Local execution is a preflight; the recorded AkôFlow daemon run is execution evidence.
 
+The imported workflow resolves its executable from an immutable AkôFlow build
+recipe instead of assuming a host-local image. The archived context contains
+only `docker/Dockerfile`, `requirements.txt`, `LICENSE`, and
+`scripts/workflow.py`; every Dockerfile `COPY` source is inside that context and
+the Python base image is pinned by digest. Starting without a materialized
+image, preflight reported `Build required`, AkôFlow reconstructed and verified
+the OCI image, and the complete workflow then ran through the daemon.
+
 ## Interpretation and limitations
 
 The result is universal in reduced temperature and does not fit a material-specific Debye temperature or experimental calorimetry. The approximation models acoustic modes with a continuum density and sharp cutoff; it omits optical phonons, electronic heat capacity, defects, and anharmonicity.
@@ -31,9 +39,12 @@ The original workflow code and generated artifacts are maintained by UFFeScience
 
 ## Measured execution
 
-Daemon run `community-debye-heat-run-v1` completed all seven activities in 7.633 seconds. The direct-integral, energy-derivative, and asymptotic branches overlapped for 0.143 seconds on three distinct declared resources. The matched one-slot run `community-debye-heat-run-one-slot-v1` completed in 10.765 seconds. This is an observed result for this host and image, not a generalized speedup claim.
+Portable daemon run `community-debye-heat-run-v2` rebuilt the missing image and
+completed all seven activities in 10.065 seconds. The matched one-slot run
+`community-debye-heat-run-one-slot-v2` completed in 11.956 seconds. This is an
+observed result for this host and image, not a generalized speedup claim.
 
-The two independent numerical formulations agree within `3.553e-15` in `C_V/R`. The last frozen grid point within 1% of the low-temperature cubic law is `T/Θ_D = 0.0865964`; the first within 1% of `3R` is `2.23872`. The image digest and complete artifact checksums are in `evidence/`.
+The two independent numerical formulations agree within `3.553e-15` in `C_V/R`. The last frozen grid point within 1% of the low-temperature cubic law is `T/Θ_D = 0.0865964`; the first within 1% of `3R` is `2.23872`. The portable context digest is `sha256:01edc9ddf7177de0ac2f093328eb893555d2583b347cbb9ab5903cc0f299424b` and the recipe digest is `sha256:3bb32dd151f398c29f75e2d5fab9c11a8484aa1bddda251b45fdbabb2b026863`.
 
 ![Measured AkôFlow DAG](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/main/thermodynamics/debye-heat-capacity/evidence/measured-dag.png)
 
@@ -46,5 +57,5 @@ The DAG shows the three independent scientific calculations joining at aggregati
 [Open the publication and measured results](https://hub.akoflow.com/o/akoflow/debye-lattice-heat-capacity-audit). Import the immutable workflow version with:
 
 ```text
-akoflow://hub/publications/9130e861-9ee0-4597-aa27-7eac2b28a648/versions/1
+akoflow://hub/publications/9130e861-9ee0-4597-aa27-7eac2b28a648/versions/2
 ```

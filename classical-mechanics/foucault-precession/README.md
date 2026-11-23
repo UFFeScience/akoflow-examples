@@ -24,6 +24,10 @@ All fixed checks passed. Maximum coordinate disagreement with the exact modal so
 
 *Daemon timestamps show the independent latitude integrations overlapping on five local Docker resources.*
 
+![Measured AkôFlow activity DAG](evidence/measured-dag.png)
+
+*The recorded activity graph fans out into five independent latitude integrations; every node is annotated with its measured daemon duration.*
+
 ![Foucault plane animation](evidence/foucault-precession.gif)
 
 *Time-synchronized oscillation-plane rotation over one sidereal day; the line orientation is shown modulo π.*

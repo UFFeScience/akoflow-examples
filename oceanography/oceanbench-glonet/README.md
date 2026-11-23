@@ -38,18 +38,18 @@ This audit contains two initializations and ten lead days from a tutorial sample
 
 ## Measured result gallery
 
-![Observation coverage used by the audit](evidence/gallery/observation-coverage.png)
+![Observation coverage used by the audit](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/26d7d69/oceanography/oceanbench-glonet/evidence/gallery/observation-coverage.png)
 
-![GLONET metrics across forecast leads](evidence/gallery/metric-leads.png)
+![GLONET metrics across forecast leads](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/26d7d69/oceanography/oceanbench-glonet/evidence/gallery/metric-leads.png)
 
-![Audited GLONET metrics revealed across forecast lead days](evidence/gallery/forecast-lead-metrics.gif)
+![Audited GLONET metrics revealed across forecast lead days](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/26d7d69/oceanography/oceanbench-glonet/evidence/gallery/forecast-lead-metrics.gif)
 
 The animation reveals the audited metric rows through lead days 1–10. Each
 panel keeps one fixed vertical scale across all frames; the red dashed line is
 the current lead day. This is a visualization of the committed result tables,
 not a new execution or a physical-field forecast.
 
-![Measured AkôFlow timeline](evidence/gallery/timeline.png)
+![Measured AkôFlow timeline](https://raw.githubusercontent.com/UFFeScience/akoflow-examples/26d7d69/oceanography/oceanbench-glonet/evidence/gallery/timeline.png)
 
 Animation provenance, fixed axis bounds, source checksum, artifact checksum,
 dimensions, and frame count are recorded in

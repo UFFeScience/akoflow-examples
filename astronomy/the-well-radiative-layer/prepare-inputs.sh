@@ -3,7 +3,7 @@ set -eu
 
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 source_dir=${WELL_INPUT_SOURCE:-/home/ovvesley/Workspace/.cache/the-well-radiative/test}
-destination=$root/inputs
+destination=${WELL_INPUT_DESTINATION:-$root/inputs}
 mkdir -p "$destination"
 
 verify_copy() {
@@ -11,10 +11,19 @@ verify_copy() {
   expected=$2
   name=turbulent_radiative_layer_tcool_${value}.hdf5
   source=$source_dir/$name
-  test -f "$source" || { echo "Missing pinned input: $source" >&2; exit 2; }
+  if [ "${WELL_DOWNLOAD_PUBLIC:-0}" = 1 ]; then
+    revision=2ee7756575ff6f90981d0308cbcb6a2ab5995bdc
+    source=$destination/$name
+    curl --fail --location --retry 4 --connect-timeout 30 --output "$source" \
+      "https://huggingface.co/datasets/polymathic-ai/turbulent_radiative_layer_2D/resolve/$revision/data/test/$name"
+  else
+    test -f "$source" || { echo "Missing pinned input: $source" >&2; exit 2; }
+  fi
   actual=$(sha256sum "$source" | cut -d ' ' -f 1)
   test "$actual" = "$expected" || { echo "Checksum mismatch: $name" >&2; exit 3; }
-  cp "$source" "$destination/$name"
+  if [ "$source" != "$destination/$name" ]; then
+    cp "$source" "$destination/$name"
+  fi
 }
 
 verify_copy 0.03 7cfc3b5be027792100b20cc4c1ab2f2835f983b00f6f86c3833bb52484c5a68e

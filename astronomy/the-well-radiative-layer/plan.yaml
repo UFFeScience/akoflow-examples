@@ -1,6 +1,6 @@
 plan:
-  id: community-well-radiative-layer-plan-v1
-  workflowVersionId: community-well-radiative-layer-v1-v1
+  id: community-well-radiative-layer-plan-v2
+  workflowVersionId: community-well-radiative-layer-v2-v1
   executionScopeId: community-well-parallel-scope
   networkTopologyId: community-well-parallel-topology
   source: imported
@@ -9,17 +9,17 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 300, cost: 0, feasible: true}
   assignments:
-    - {id: well-prepare, activityId: community-well-radiative-layer-v1-prepare, resourceId: community-well-slot-0, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
-    - {id: well-003, activityId: community-well-radiative-layer-v1-analyze-003, resourceId: community-well-slot-0, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
-    - {id: well-006, activityId: community-well-radiative-layer-v1-analyze-006, resourceId: community-well-slot-1, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
-    - {id: well-010, activityId: community-well-radiative-layer-v1-analyze-010, resourceId: community-well-slot-2, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
-    - {id: well-018, activityId: community-well-radiative-layer-v1-analyze-018, resourceId: community-well-slot-3, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
-    - {id: well-032, activityId: community-well-radiative-layer-v1-analyze-032, resourceId: community-well-slot-0, orderOnResource: 2, metadata: {runtimeId: community-well-local}}
-    - {id: well-056, activityId: community-well-radiative-layer-v1-analyze-056, resourceId: community-well-slot-1, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
-    - {id: well-100, activityId: community-well-radiative-layer-v1-analyze-100, resourceId: community-well-slot-2, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
-    - {id: well-178, activityId: community-well-radiative-layer-v1-analyze-178, resourceId: community-well-slot-3, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
-    - {id: well-316, activityId: community-well-radiative-layer-v1-analyze-316, resourceId: community-well-slot-0, orderOnResource: 3, metadata: {runtimeId: community-well-local}}
-    - {id: well-aggregate, activityId: community-well-radiative-layer-v1-aggregate, resourceId: community-well-slot-0, orderOnResource: 4, metadata: {runtimeId: community-well-local}}
-    - {id: well-render, activityId: community-well-radiative-layer-v1-render, resourceId: community-well-slot-0, orderOnResource: 5, metadata: {runtimeId: community-well-local}}
-    - {id: well-validate, activityId: community-well-radiative-layer-v1-validate, resourceId: community-well-slot-0, orderOnResource: 6, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-prepare, activityId: community-well-radiative-layer-v2-prepare, resourceId: community-well-slot-0, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-003, activityId: community-well-radiative-layer-v2-analyze-003, resourceId: community-well-slot-0, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-006, activityId: community-well-radiative-layer-v2-analyze-006, resourceId: community-well-slot-1, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-010, activityId: community-well-radiative-layer-v2-analyze-010, resourceId: community-well-slot-2, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-018, activityId: community-well-radiative-layer-v2-analyze-018, resourceId: community-well-slot-3, orderOnResource: 0, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-032, activityId: community-well-radiative-layer-v2-analyze-032, resourceId: community-well-slot-0, orderOnResource: 2, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-056, activityId: community-well-radiative-layer-v2-analyze-056, resourceId: community-well-slot-1, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-100, activityId: community-well-radiative-layer-v2-analyze-100, resourceId: community-well-slot-2, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-178, activityId: community-well-radiative-layer-v2-analyze-178, resourceId: community-well-slot-3, orderOnResource: 1, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-316, activityId: community-well-radiative-layer-v2-analyze-316, resourceId: community-well-slot-0, orderOnResource: 3, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-aggregate, activityId: community-well-radiative-layer-v2-aggregate, resourceId: community-well-slot-0, orderOnResource: 4, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-render, activityId: community-well-radiative-layer-v2-render, resourceId: community-well-slot-0, orderOnResource: 5, metadata: {runtimeId: community-well-local}}
+    - {id: well-v2-validate, activityId: community-well-radiative-layer-v2-validate, resourceId: community-well-slot-0, orderOnResource: 6, metadata: {runtimeId: community-well-local}}
 

@@ -5,6 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends git ca-certific
 RUN pip install --no-cache-dir "git+https://github.com/mercator-ocean/oceanbench.git@61aea40e13689b3dbb0592a74dbf716f15882f5b"
 COPY requirements.txt /tmp/community-requirements.txt
 RUN pip install --no-cache-dir -r /tmp/community-requirements.txt
-COPY inputs/ /inputs/
+COPY inputs/glonet_1_degree_sample.global.report.ipynb /inputs/
+COPY prepare-inputs.py /tmp/prepare-inputs.py
+RUN python /tmp/prepare-inputs.py --frozen /inputs
 COPY scripts/workflow.py /app/workflow.py
 WORKDIR /work

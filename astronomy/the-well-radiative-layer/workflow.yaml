@@ -1,18 +1,17 @@
-name: community-well-radiative-layer-v1
+name: community-well-radiative-layer-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-well-radiative-layer:v1
   activities:
-    - {name: prepare, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
-    - {name: analyze-003, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.03"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-006, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.06"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-010, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.10"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-018, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.18"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-032, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.32"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-056, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.56"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-100, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "1.00"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-178, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "1.78"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: analyze-316, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "3.16"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
-    - {name: aggregate, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [analyze-003, analyze-006, analyze-010, analyze-018, analyze-032, analyze-056, analyze-100, analyze-178, analyze-316]}
-    - {name: render, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
-    - {name: validate, runtime: community-well-local, command: {entrypoint: python, arguments: ["/app/workflow.py", validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}
+    - {name: prepare, runtime: community-well-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-fa849f17d86f9c9a0512d74c25dc05662942c71b3cc458bc11f791cbce2d11cc}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: ["/app/workflow.py", prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: analyze-003, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.03"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-006, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.06"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-010, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.10"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-018, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.18"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-032, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.32"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-056, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "0.56"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-100, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "1.00"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-178, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "1.78"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: analyze-316, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", analyze, --output, ., --tcool, "3.16"]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare]}
+    - {name: aggregate, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [analyze-003, analyze-006, analyze-010, analyze-018, analyze-032, analyze-056, analyze-100, analyze-178, analyze-316]}
+    - {name: render, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-well-local, command: {executable: *portable_image, entrypoint: python, arguments: ["/app/workflow.py", validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}

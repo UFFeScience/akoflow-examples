@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && rm -rf /var/lib/apt/lists/*
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir --timeout 120 --retries 12 -r /tmp/requirements.txt
-COPY inputs/ /inputs/
+COPY prepare-inputs.sh /tmp/prepare-inputs.sh
+RUN WELL_DOWNLOAD_PUBLIC=1 WELL_INPUT_DESTINATION=/inputs sh /tmp/prepare-inputs.sh
 COPY scripts/workflow.py /app/workflow.py
 WORKDIR /work

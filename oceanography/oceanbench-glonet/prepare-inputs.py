@@ -2,6 +2,8 @@
 """Networked preparation step for the frozen OceanBench two-week slice."""
 import hashlib
 import json
+import shutil
+import sys
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -92,5 +94,42 @@ def main():
         raise RuntimeError("reference notebook digest mismatch")
 
 
+def restore_frozen(inputs):
+    revision = "ffb1efe9e574cf3c5bef7cc9a3eb9c7c0787f62b"
+    url = (
+        f"https://raw.githubusercontent.com/UFFeScience/akoflow-examples/{revision}"
+        "/oceanography/oceanbench-glonet/inputs/input-manifest.json"
+    )
+    expected = "036437dec25f0562b16cedfc0b402fdbeaaa1da12e81bc65c8f625d3129c800d"
+    with urllib.request.urlopen(url, timeout=120) as response:
+        manifest_bytes = response.read(6 * 1024 * 1024)
+    if hashlib.sha256(manifest_bytes).hexdigest() != expected:
+        raise RuntimeError("frozen input manifest digest mismatch")
+    manifest = json.loads(manifest_bytes)
+
+    def fetch(item):
+        target = inputs / "snapshot" / item["key"]
+        target.parent.mkdir(parents=True, exist_ok=True)
+        url = f"{BASE}/{BUCKET}/{urllib.parse.quote(item['key'])}"
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(url, timeout=120) as response, target.open("wb") as output:
+                    shutil.copyfileobj(response, output)
+                if target.stat().st_size != item["size"] or sha256(target) != item["sha256"]:
+                    raise RuntimeError(f"frozen object mismatch: {item['key']}")
+                return
+            except OSError:
+                if attempt == 2:
+                    raise
+
+    with ThreadPoolExecutor(max_workers=16) as pool:
+        for _ in pool.map(fetch, manifest["objects"]):
+            pass
+    (inputs / "input-manifest.json").write_bytes(manifest_bytes)
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) == 3 and sys.argv[1] == "--frozen":
+        restore_frozen(Path(sys.argv[2]))
+    else:
+        main()

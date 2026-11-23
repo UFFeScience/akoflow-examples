@@ -42,7 +42,15 @@ This audit contains two initializations and ten lead days from a tutorial sample
 
 ![GLONET metrics across forecast leads](evidence/gallery/metric-leads.png)
 
+![Audited GLONET metrics revealed across forecast lead days](evidence/gallery/forecast-lead-metrics.gif)
+
+The animation reveals the audited metric rows through lead days 1–10. Each
+panel keeps one fixed vertical scale across all frames; the red dashed line is
+the current lead day. This is a visualization of the committed result tables,
+not a new execution or a physical-field forecast.
+
 ![Measured AkôFlow timeline](evidence/gallery/timeline.png)
 
-The bounded source exposes score tables rather than evolving physical fields,
-so the gallery intentionally remains static instead of inventing an animation.
+Animation provenance, fixed axis bounds, source checksum, artifact checksum,
+dimensions, and frame count are recorded in
+`evidence/animation-provenance.json`.

@@ -1,0 +1,64 @@
+{
+  "artifact": "evidence/gallery/forecast-lead-metrics.gif",
+  "artifact_sha256": "6e47563b6aa05f2b92844459db2a3279195f8892ef0f69b593c335c2c68bdb8c",
+  "dimensions": [
+    1200,
+    880
+  ],
+  "encoding": "Each panel reveals up to five published metric rows; the red dashed line marks the current forecast lead.",
+  "format": "GIF",
+  "frame_duration_ms": 650,
+  "frames": 10,
+  "lead_days": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "source": "evidence/results/results.json",
+  "source_sha256": "28b34a84aa5aa8c4fb6660b929132c2848f8bc6d586ec79b82b740a139b3a4cd",
+  "stable_axes": {
+    "glo12-geostrophic": [
+      0.014853341837027021,
+      0.06680245317846235
+    ],
+    "glo12-lagrangian": [
+      0.9856824493408203,
+      55.723135986328124
+    ],
+    "glo12-mld": [
+      39.8717516185155,
+      49.492509588449906
+    ],
+    "glo12-state": [
+      -0.03725711394899435,
+      0.8862057646516395
+    ],
+    "glorys-geostrophic": [
+      0.04110119470250145,
+      0.07182425454094866
+    ],
+    "glorys-lagrangian": [
+      5.81591007232666,
+      76.01017311096192
+    ],
+    "glorys-mld": [
+      43.28891019527349,
+      51.78339263103315
+    ],
+    "glorys-state": [
+      0.009112136568558485,
+      0.958964247301704
+    ],
+    "observations": [
+      0.4400441558586513,
+      1.3282505424162194
+    ]
+  }
+}

@@ -10,7 +10,7 @@
       "httpStatus": 200,
       "sha256": "c1a338538fbad240e2216cc482e389a61eab3d75279124eb6c7cb267e249e157",
       "signature": "GIF89a",
-      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/660d6af89b0599e7ff6bc5a37b421c98dd1215f9/biodiversity/bioclip-rare-species/screenshots/current/bioclip-taxonomic-rank-traversal.gif"
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/660d6af4c0cde74692286ae5c7a802ea093ea6c4/biodiversity/bioclip-rare-species/screenshots/current/bioclip-taxonomic-rank-traversal.gif"
     },
     "experiment": {
       "activitiesCompleted": 12,
@@ -37,7 +37,7 @@
       "url": "https://hub.akoflow.com/api/v1/publications/8e98e0af-1904-46bf-8365-b438d4334852/versions/1/yaml"
     }
   },
-  "commit": "660d6af89b0599e7ff6bc5a37b421c98dd1215f9",
+  "commit": "660d6af4c0cde74692286ae5c7a802ea093ea6c4",
   "experimentId": "53ad1348-569c-4dc5-95ef-3ab30810bc81",
   "persistentPublicationKey": "community-explorer-issue-14",
   "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",

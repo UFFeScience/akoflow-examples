@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-11-23T01:25:00Z",
+  "verifiedAt": "2026-11-23T03:35:00Z",
   "anonymousHttp": {
     "page": 200,
     "publication": 200,
@@ -19,8 +19,8 @@
     "owner": "akoflow"
   },
   "experiment": {
-    "id": "78493c49-35c5-44b6-a23e-ada9116ee000",
-    "runId": "community-cooley-tukey-fft-run-v1",
+    "id": "4ba762c1-2b24-4708-bd45-abea20b3cc88",
+    "runId": "community-cooley-tukey-fft-run-v2",
     "status": "completed",
     "activitiesCompleted": 8,
     "activitiesTotal": 8
@@ -41,6 +41,11 @@
     "experimentDownload": true,
     "resultConsistency": true,
     "analyticHalfBinGate": true,
-    "measuredParallelOverlap": true
+    "measuredParallelOverlap": true,
+    "portableBuildOriginCount": 8,
+    "portableContextArchiveCount": 8,
+    "portableContextDigest": "sha256:94934f9db95e774beb464ad4dd92563bec39804c7e4daf56c82212a8bf5246c6",
+    "portableYamlBytes": 144536,
+    "portableYamlVersion": 2
   }
 }

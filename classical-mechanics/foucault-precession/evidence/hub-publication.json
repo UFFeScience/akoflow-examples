@@ -1,13 +1,13 @@
 {
   "contributionStatus": "maintainer",
-  "experimentId": "e047ff8e-bed2-4ee3-a760-8cbdd4d05592",
+  "experimentId": "a004359f-76ee-4f8a-89c7-3f793d53945b",
   "hubOrigin": "https://hub.akoflow.com",
   "persistentPublicationKey": "community-explorer-issue-44-foucault-precession-v1",
   "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
   "publicationId": "f67f3cd3-de44-48cc-a8ab-f171f9a4132b",
   "resultCount": 1,
-  "runId": "community-foucault-run-v1",
-  "uri": "akoflow://hub/publications/f67f3cd3-de44-48cc-a8ab-f171f9a4132b/versions/1",
-  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-44-foucault-precession-v1",
-  "version": 1
+  "runId": "community-foucault-run-v2",
+  "uri": "akoflow://hub/publications/f67f3cd3-de44-48cc-a8ab-f171f9a4132b/versions/2",
+  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-44-foucault-precession-v1/results/2/executions/a004359f-76ee-4f8a-89c7-3f793d53945b/runs/community-foucault-run-v2/workflow",
+  "version": 2
 }

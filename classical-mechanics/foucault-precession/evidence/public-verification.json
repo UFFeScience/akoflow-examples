@@ -1,5 +1,5 @@
 {
-  "verifiedAt": "2026-11-23T00:55:00Z",
+  "verifiedAt": "2026-11-23T03:54:00Z",
   "anonymousHttp": {
     "page": 200,
     "publication": 200,
@@ -16,14 +16,14 @@
     "owner": "akoflow"
   },
   "experiment": {
-    "id": "e047ff8e-bed2-4ee3-a760-8cbdd4d05592",
-    "runId": "community-foucault-run-v1",
+    "id": "a004359f-76ee-4f8a-89c7-3f793d53945b",
+    "runId": "community-foucault-run-v2",
     "status": "completed",
     "completedActivities": 9,
     "activityCount": 9,
-    "makespanSeconds": 76.73243379592896,
-    "workflowId": "community-foucault-precession-v1",
-    "workflowVersionId": "community-foucault-precession-v1-v1"
+    "makespanSeconds": 82.07823467254639,
+    "workflowId": "community-foucault-precession-v2",
+    "workflowVersionId": "community-foucault-precession-v2-v1"
   },
   "gallery": {
     "pngCount": 3,
@@ -37,6 +37,11 @@
     "completedRecordedRun": true,
     "importYaml": true,
     "resultsDownload": true,
-    "resultConsistency": true
+    "resultConsistency": true,
+    "portableBuildOriginCount": 9,
+    "portableContextArchiveCount": 9,
+    "portableContextDigest": "sha256:671dc67ae6211a72eeb9dcca8803cf121d0da4e5cfd9dc1fa2b96979b98ecafc",
+    "portableYamlBytes": 173086,
+    "portableYamlVersion": 2
   }
 }

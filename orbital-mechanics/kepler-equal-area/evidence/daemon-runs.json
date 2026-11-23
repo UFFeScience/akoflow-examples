@@ -1,6 +1,352 @@
 {
   "base_image": "python:3.11.14-slim-bookworm@sha256:65a93d69fa75478d554f4ad27c85c1e69fa184956261b4301ebaf6dbb0a3543d",
-  "clean_state_preflight": "Build required for every activity; embedded context accepted",
+  "clean_import_activities": [
+    {
+      "activityId": "kepler-clean-import-validate-input",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429230.7855442,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-validate-input",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "pricePerSecond": 0,
+        "runtimeId": "community-kepler-local"
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-prepare",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795429225.8613296,
+      "readyAt": 1795429225.8613296,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.15659022331237793,
+      "startedAt": 1795429230.628954,
+      "status": "completed",
+      "transferBytes": 0,
+      "transferSeconds": 0
+    },
+    {
+      "activityId": "kepler-clean-import-orbit-e03",
+      "allocatedResourceId": "community-kepler-slot-1",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429235.2147584,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-orbit-e03",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 2.262413501739502,
+        "preparationFinishedAt": 1795429232.6816993,
+        "preparationStartedAt": 1795429232.4707162,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.12054014205932617,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.2109830379486084,
+        "transferWorkSeconds": 0.2109830379486084
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e03",
+      "plannedResourceId": "community-kepler-slot-1",
+      "queueSeconds": 0,
+      "queuedAt": 1795429232.3341503,
+      "readyAt": 1795429232.3341503,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2706456184387207,
+      "startedAt": 1795429234.9441128,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.2109830379486084
+    },
+    {
+      "activityId": "kepler-clean-import-orbit-e07",
+      "allocatedResourceId": "community-kepler-slot-2",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429235.4767447,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-orbit-e07",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 2.409639596939087,
+        "preparationFinishedAt": 1795429232.8390405,
+        "preparationStartedAt": 1795429232.6251676,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.272197961807251,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.21387290954589844,
+        "transferWorkSeconds": 0.21387290954589844
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e07",
+      "plannedResourceId": "community-kepler-slot-2",
+      "queueSeconds": 0,
+      "queuedAt": 1795429232.3396847,
+      "readyAt": 1795429232.3396847,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.22806453704833984,
+      "startedAt": 1795429235.24868,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.21387290954589844
+    },
+    {
+      "activityId": "kepler-clean-import-orbit-e09",
+      "allocatedResourceId": "community-kepler-slot-3",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429235.5689425,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-orbit-e09",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 2.5890979766845703,
+        "preparationFinishedAt": 1795429232.7508502,
+        "preparationStartedAt": 1795429232.5439093,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.18604660034179688,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.2069408893585205,
+        "transferWorkSeconds": 0.2069408893585205
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e09",
+      "plannedResourceId": "community-kepler-slot-3",
+      "queueSeconds": 0,
+      "queuedAt": 1795429232.3428795,
+      "readyAt": 1795429232.3428795,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.22899436950683594,
+      "startedAt": 1795429235.3399482,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.2069408893585205
+    },
+    {
+      "activityId": "kepler-clean-import-orbit-e00",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429235.685917,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-orbit-e00",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 2.527107000350952,
+        "preparationFinishedAt": 1795429232.932981,
+        "preparationStartedAt": 1795429232.7191784,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.35317277908325195,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.21380257606506348,
+        "transferWorkSeconds": 0.21380257606506348
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-e00",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795429232.330031,
+      "readyAt": 1795429232.330031,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.2258288860321045,
+      "startedAt": 1795429235.460088,
+      "status": "completed",
+      "transferBytes": 347,
+      "transferSeconds": 0.21380257606506348
+    },
+    {
+      "activityId": "kepler-clean-import-aggregate-laws",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429240.6147141,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-aggregate-laws",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.722829818725586,
+        "preparationFinishedAt": 1795429238.7446945,
+        "preparationStartedAt": 1795429237.9131439,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.12700963020324707,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.8315505981445312,
+        "transferWorkSeconds": 2.437150239944458
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-aggregate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795429237.7745538,
+      "readyAt": 1795429237.7745538,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.14718985557556152,
+      "startedAt": 1795429240.4675243,
+      "status": "completed",
+      "transferBytes": 1958457,
+      "transferSeconds": 2.437150239944458
+    },
+    {
+      "activityId": "kepler-clean-import-render-results",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429245.2139392,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-render-results",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.6719439029693604,
+        "preparationFinishedAt": 1795429242.4478543,
+        "preparationStartedAt": 1795429242.2457576,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.09183645248413086,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.20209670066833496,
+        "transferWorkSeconds": 0.20209670066833496
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-render",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795429242.1471012,
+      "readyAt": 1795429242.1471012,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 1.0941410064697266,
+      "startedAt": 1795429244.1197982,
+      "status": "completed",
+      "transferBytes": 1960448,
+      "transferSeconds": 0.20209670066833496
+    },
+    {
+      "activityId": "kepler-clean-import-validate",
+      "allocatedResourceId": "community-kepler-slot-0",
+      "attempt": 1,
+      "cost": 0,
+      "dataReadyAt": 0,
+      "executionRunId": "community-kepler-clean-run-v2",
+      "finishedAt": 1795429247.9051273,
+      "id": "community-kepler-clean-run-v2:kepler-clean-import-validate",
+      "interferenceSeconds": 0,
+      "metadata": {
+        "computePrice": {
+          "rate": null
+        },
+        "diskGiB": 1,
+        "diskPrice": {
+          "rate": null
+        },
+        "launchWaitSeconds": 1.5322015285491943,
+        "preparationFinishedAt": 1795429246.1836925,
+        "preparationStartedAt": 1795429245.9240746,
+        "pricePerSecond": 0,
+        "readyWaitSeconds": 0.08650493621826172,
+        "runtimeId": "community-kepler-local",
+        "transferElapsedSeconds": 0.25961780548095703,
+        "transferWorkSeconds": 0.25961780548095703
+      },
+      "overheadSeconds": 0,
+      "planAssignmentId": "kepler-validate",
+      "plannedResourceId": "community-kepler-slot-0",
+      "queueSeconds": 0,
+      "queuedAt": 1795429245.8307714,
+      "readyAt": 1795429245.8307714,
+      "runtimeId": "community-kepler-local",
+      "runtimeSeconds": 0.18923330307006836,
+      "startedAt": 1795429247.715894,
+      "status": "completed",
+      "transferBytes": 5444546,
+      "transferSeconds": 0.25961780548095703
+    }
+  ],
+  "clean_import_outputs_identical": true,
+  "clean_import_run": {
+    "activityCount": 8,
+    "breakdown": {
+      "computeSeconds": 2.5406877994537354,
+      "interferenceSeconds": 0,
+      "overheadSeconds": 0,
+      "queueSeconds": 0,
+      "transferSeconds": 3.744464159011841
+    },
+    "completedActivityCount": 8,
+    "cost": 0,
+    "environmentNames": [
+      "Community Kepler four-slot local Docker"
+    ],
+    "finishedAt": "2026-11-23T10:20:49Z",
+    "id": "community-kepler-clean-run-v2",
+    "kind": "workflow",
+    "makespanSeconds": 17.27617335319519,
+    "mode": "real",
+    "schedulePlanId": "community-kepler-clean-plan-v1",
+    "seed": 0,
+    "startedAt": "2026-11-23T10:20:25Z",
+    "status": "completed",
+    "title": "community-kepler-clean-run-v2",
+    "transferredBytes": 9364839,
+    "workflowId": "kepler-clean-import",
+    "workflowName": "Kepler clean import",
+    "workflowVersionId": "kepler-clean-import-v1"
+  },
+  "clean_state_preflight": "Anonymous public YAML import; Build required for every activity; embedded context accepted",
   "context_digest": "sha256:eb6d2b3f5e839f9ceadfe86d82d455d5d344955b7d78f2840940dc104f190dda",
   "image_digest": "sha256:c8390844f004795528fdabd440a788c81b68165ecd7dafdbd30dddaf457c256e",
   "issue": 54,

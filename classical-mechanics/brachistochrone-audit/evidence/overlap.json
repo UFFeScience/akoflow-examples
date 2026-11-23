@@ -1,0 +1,26 @@
+{
+  "parallel_makespan_seconds": 17.26788592338562,
+  "one_slot_makespan_seconds": 17.49072813987732,
+  "speedup_claimed": false,
+  "endpoint_overlap_seconds": 3.4908463954925537,
+  "endpoint_activities": [
+    {
+      "activityId": "community-brachistochrone-v1-endpoint-three-pi-over-2",
+      "allocatedResourceId": "community-brachistochrone-slot-2",
+      "startedAt": 1795393145.6825864,
+      "finishedAt": 1795393149.2697308
+    },
+    {
+      "activityId": "community-brachistochrone-v1-endpoint-pi",
+      "allocatedResourceId": "community-brachistochrone-slot-1",
+      "startedAt": 1795393145.7249777,
+      "finishedAt": 1795393149.4961665
+    },
+    {
+      "activityId": "community-brachistochrone-v1-endpoint-pi-over-2",
+      "allocatedResourceId": "community-brachistochrone-slot-0",
+      "startedAt": 1795393145.7788844,
+      "finishedAt": 1795393149.4420488
+    }
+  ]
+}

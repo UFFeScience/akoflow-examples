@@ -1,0 +1,53 @@
+{
+  "activities": [
+    {
+      "activity": "community-brachistochrone-v1-freeze-inputs",
+      "resource": "community-brachistochrone-slot-0",
+      "started_at": 1795393143.2292986,
+      "finished_at": 1795393144.0932693,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-endpoint-three-pi-over-2",
+      "resource": "community-brachistochrone-slot-2",
+      "started_at": 1795393145.6825864,
+      "finished_at": 1795393149.2697308,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-endpoint-pi",
+      "resource": "community-brachistochrone-slot-1",
+      "started_at": 1795393145.7249777,
+      "finished_at": 1795393149.4961665,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-endpoint-pi-over-2",
+      "resource": "community-brachistochrone-slot-0",
+      "started_at": 1795393145.7788844,
+      "finished_at": 1795393149.4420488,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-aggregate",
+      "resource": "community-brachistochrone-slot-0",
+      "started_at": 1795393151.2689102,
+      "finished_at": 1795393152.0109622,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-render",
+      "resource": "community-brachistochrone-slot-0",
+      "started_at": 1795393153.2931428,
+      "finished_at": 1795393158.855346,
+      "status": "completed"
+    },
+    {
+      "activity": "community-brachistochrone-v1-validate",
+      "resource": "community-brachistochrone-slot-0",
+      "started_at": 1795393159.6750748,
+      "finished_at": 1795393160.4971845,
+      "status": "completed"
+    }
+  ]
+}

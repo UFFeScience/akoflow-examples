@@ -1,0 +1,5 @@
+id: community-brachistochrone-parallel-topology
+name: Brachistochrone local topology
+version: 1
+executionScopeId: community-brachistochrone-parallel-scope
+links: []

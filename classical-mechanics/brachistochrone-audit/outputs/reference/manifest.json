@@ -1,0 +1,1 @@
+{"input_sha256":"fcba251647349adfa2e4d221c748f82ecf4f013ed04f58075d03400769c20a9b","issue":43,"license":"MIT","runtime":{"matplotlib":"3.10.3","numpy":"2.2.6","python":"3.11.14","scipy":"1.15.3"},"source":"Johann Bernoulli, Acta Eruditorum (1697), pp. 206-211","workflow_version":"community-brachistochrone-v1"}

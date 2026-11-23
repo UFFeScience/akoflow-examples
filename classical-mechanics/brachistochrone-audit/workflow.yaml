@@ -1,0 +1,12 @@
+name: community-brachistochrone-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-brachistochrone:v1
+  activities:
+    - {name: freeze-inputs, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: endpoint-pi-over-2, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, pi-over-2]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [freeze-inputs]}
+    - {name: endpoint-pi, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, pi]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [freeze-inputs]}
+    - {name: endpoint-three-pi-over-2, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --branch, three-pi-over-2]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [freeze-inputs]}
+    - {name: aggregate, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [endpoint-pi-over-2, endpoint-pi, endpoint-three-pi-over-2]}
+    - {name: render, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [aggregate]}
+    - {name: validate, runtime: community-brachistochrone-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [render]}

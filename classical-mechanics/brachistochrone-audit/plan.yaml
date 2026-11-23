@@ -1,0 +1,18 @@
+plan:
+  id: community-brachistochrone-plan-v1
+  workflowVersionId: community-brachistochrone-v1-v1
+  executionScopeId: community-brachistochrone-parallel-scope
+  networkTopologyId: community-brachistochrone-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: brach-prepare, activityId: community-brachistochrone-v1-freeze-inputs, resourceId: community-brachistochrone-slot-0, orderOnResource: 0, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-pi2, activityId: community-brachistochrone-v1-endpoint-pi-over-2, resourceId: community-brachistochrone-slot-0, orderOnResource: 1, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-pi, activityId: community-brachistochrone-v1-endpoint-pi, resourceId: community-brachistochrone-slot-1, orderOnResource: 0, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-3pi2, activityId: community-brachistochrone-v1-endpoint-three-pi-over-2, resourceId: community-brachistochrone-slot-2, orderOnResource: 0, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-aggregate, activityId: community-brachistochrone-v1-aggregate, resourceId: community-brachistochrone-slot-0, orderOnResource: 2, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-render, activityId: community-brachistochrone-v1-render, resourceId: community-brachistochrone-slot-0, orderOnResource: 3, metadata: {runtimeId: community-brachistochrone-local}}
+    - {id: brach-validate, activityId: community-brachistochrone-v1-validate, resourceId: community-brachistochrone-slot-0, orderOnResource: 4, metadata: {runtimeId: community-brachistochrone-local}}

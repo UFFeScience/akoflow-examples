@@ -1,0 +1,59 @@
+[
+    {
+        "Id": "sha256:cf5b414506aff8637ec03f6a73b04a92e8e04c3f67fc404e44c8e4c58b7d6e56",
+        "RepoTags": [
+            "akoflow/community-brachistochrone:v1"
+        ],
+        "RepoDigests": [
+            "akoflow/community-brachistochrone@sha256:cf5b414506aff8637ec03f6a73b04a92e8e04c3f67fc404e44c8e4c58b7d6e56"
+        ],
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2026-11-23T00:18:17.689724843Z",
+        "Config": {
+            "Env": [
+                "PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "LANG=C.UTF-8",
+                "GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D",
+                "PYTHON_VERSION=3.11.14",
+                "PYTHON_SHA256=8d3ed8ec5c88c1c95f5e558612a725450d2452813ddad5e58fdb1a53b1209b78",
+                "PYTHONHASHSEED=0"
+            ],
+            "Cmd": [
+                "python3"
+            ],
+            "WorkingDir": "/app"
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 631829823,
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:9eb9a78eeb101ab215acf43ffb2a709d5fca9ca2a22178564c7ee5cc30774c60",
+                "sha256:f3098f2e4408e57b4f0787f1e18511cd06ddecfad252a0f51f478088fe0052df",
+                "sha256:da331f07f3e9fb1214ced70513485eefe47e1d0a647b4af8fa5afb176b40b2a7",
+                "sha256:f108605b29eebcf199a536318658e173a8b1eb01172bdef33740acc5e50ee9ef",
+                "sha256:bf2eaa3d141fd669451f652b458c45d41fabef22ef056bf6c04a613de7fe1f0e",
+                "sha256:ecdb92908326cc6a1022fd34350edfb11b8703580b450f25e429099f7897c5a5",
+                "sha256:59b326f3e1866480d36f79d05cb00b34fea657546710bfd2c633da547c9ac97f",
+                "sha256:afe350a6d3b1b201e2f9a4a619d222ecb29db0d0cf26f7dfffedc3ba9fe8fefa"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "2026-11-23T00:18:17.841703823Z"
+        },
+        "Descriptor": {
+            "mediaType": "application/vnd.oci.image.index.v1+json",
+            "digest": "sha256:cf5b414506aff8637ec03f6a73b04a92e8e04c3f67fc404e44c8e4c58b7d6e56",
+            "size": 856
+        },
+        "Identity": {
+            "Build": [
+                {
+                    "Ref": "p00lrbv3oy8y69yz8h5dr8y0e",
+                    "CreatedAt": "2026-11-23T00:18:17.869124237Z"
+                }
+            ]
+        }
+    }
+]

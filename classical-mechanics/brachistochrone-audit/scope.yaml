@@ -1,0 +1,3 @@
+id: community-brachistochrone-parallel-scope
+name: Brachistochrone local execution scope
+environmentVersionIds: [community-brachistochrone-parallel-v1]

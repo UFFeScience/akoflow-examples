@@ -1,0 +1,1 @@
+{"a_m":1.0,"comparison_tracks":{"sqrt":"y=Y(x/X)^(1/2)","straight":"y=Yx/X","three-halves":"y=Y(x/X)^(3/2)"},"g_m_s2":9.80665,"theta_f_rad":{"pi":3.141592653589793,"pi-over-2":1.5707963267948966,"three-pi-over-2":4.71238898038469},"workflow_version":"community-brachistochrone-v1"}

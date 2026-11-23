@@ -1,0 +1,40 @@
+{
+  "anonymous": true,
+  "authorship_identified": true,
+  "citation_present": true,
+  "completed_attempts": 8,
+  "experiment_download": {
+    "bytes": 419685,
+    "http_status": 200,
+    "media_type": "application/json"
+  },
+  "gallery": {
+    "animation_frames": 41,
+    "animation_http_status": 200,
+    "animation_signature": "GIF89a",
+    "bloch_figure_http_status": 200,
+    "population_figure_http_status": 200,
+    "timeline_http_status": 200
+  },
+  "import_yaml": {
+    "bytes": 100317,
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-rabi-oscillations-v1"
+  },
+  "page": {
+    "bytes": 280671,
+    "http_status": 200,
+    "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-49-rabi-oscillations-v1"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "b69279b7-1735-470d-9630-b1ea64734e2d",
+  "result_consistency": {
+    "daemon_reference_common_files": 14,
+    "mismatches": 0,
+    "passed": true
+  },
+  "verified_at": "2026-11-23T01:50:00Z",
+  "version": 1,
+  "visibility": "public"
+}

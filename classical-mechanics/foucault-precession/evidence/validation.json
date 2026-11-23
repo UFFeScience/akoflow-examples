@@ -1,0 +1,14 @@
+{
+  "byte_identical_branch_json": true,
+  "checks": {
+    "equator": true,
+    "finite_exact": true,
+    "rates": true,
+    "ratio": true,
+    "refinement": true,
+    "small_angle": true,
+    "symmetry": true
+  },
+  "gallery": true,
+  "passed": true
+}

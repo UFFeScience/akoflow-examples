@@ -1,0 +1,20 @@
+plan:
+  id: community-foucault-plan-one-slot-v1
+  workflowVersionId: community-foucault-precession-v1-v1
+  executionScopeId: community-foucault-parallel-scope
+  networkTopologyId: community-foucault-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 720, cost: 0, feasible: true}
+  assignments:
+    - {id: f1-prepare, activityId: community-foucault-precession-v1-freeze-inputs, resourceId: community-foucault-slot-0, orderOnResource: 0, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-m60, activityId: community-foucault-precession-v1-latitude-minus-60, resourceId: community-foucault-slot-0, orderOnResource: 1, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-m30, activityId: community-foucault-precession-v1-latitude-minus-30, resourceId: community-foucault-slot-0, orderOnResource: 2, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-zero, activityId: community-foucault-precession-v1-latitude-zero, resourceId: community-foucault-slot-0, orderOnResource: 3, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-p30, activityId: community-foucault-precession-v1-latitude-plus-30, resourceId: community-foucault-slot-0, orderOnResource: 4, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-p60, activityId: community-foucault-precession-v1-latitude-plus-60, resourceId: community-foucault-slot-0, orderOnResource: 5, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-aggregate, activityId: community-foucault-precession-v1-aggregate, resourceId: community-foucault-slot-0, orderOnResource: 6, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-render, activityId: community-foucault-precession-v1-render, resourceId: community-foucault-slot-0, orderOnResource: 7, metadata: {runtimeId: community-foucault-local}}
+    - {id: f1-validate, activityId: community-foucault-precession-v1-validate, resourceId: community-foucault-slot-0, orderOnResource: 8, metadata: {runtimeId: community-foucault-local}}

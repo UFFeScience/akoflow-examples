@@ -1,0 +1,20 @@
+{
+  "canonical_sha256": "f65afe4bfd16c52ebb53ca064e67cf0269c3204d9adfc789e6db47bf72deee17",
+  "g_m_s2": 9.80665,
+  "initial_velocity_m_s": [
+    0,
+    0
+  ],
+  "latitudes_deg": [
+    -60,
+    -30,
+    0,
+    30,
+    60
+  ],
+  "length_m": 67.0,
+  "model": "linear planar small-angle Foucault pendulum",
+  "sidereal_day_s": 86164.0905,
+  "source_doi": "10.1590/1806-9126-RBEF-2019-0274",
+  "x0_m": 3.0
+}

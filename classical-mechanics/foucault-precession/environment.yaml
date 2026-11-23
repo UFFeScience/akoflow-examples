@@ -1,0 +1,19 @@
+environment: {id: community-foucault-parallel, name: Community Foucault five-slot local Docker, status: ready}
+version: {id: community-foucault-parallel-v1, environmentId: community-foucault-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-foucault-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-foucault-parallel-v1, id: community-foucault-local, name: Foucault CPU audit, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-foucault-slot-0, environmentVersionId: community-foucault-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-foucault-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-foucault-slot-1, environmentVersionId: community-foucault-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-foucault-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-foucault-slot-2, environmentVersionId: community-foucault-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-foucault-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-foucault-slot-3, environmentVersionId: community-foucault-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-foucault-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-foucault-slot-4, environmentVersionId: community-foucault-parallel-v1, type: machine, name: Local Docker slot 4, providerId: local-docker-foucault-4, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-foucault-slot-0, runtimeId: community-foucault-local, enabled: true}
+  - {resourceId: community-foucault-slot-1, runtimeId: community-foucault-local, enabled: true}
+  - {resourceId: community-foucault-slot-2, runtimeId: community-foucault-local, enabled: true}
+  - {resourceId: community-foucault-slot-3, runtimeId: community-foucault-local, enabled: true}
+  - {resourceId: community-foucault-slot-4, runtimeId: community-foucault-local, enabled: true}

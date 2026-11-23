@@ -1,0 +1,84 @@
+{
+  "files": [
+    {
+      "bytes": 437231,
+      "path": "foucault-precession.gif",
+      "sha256": "adcecdda1246d44a819f5881cb616ed024e687ed2baaced757bd8618428df716"
+    },
+    {
+      "bytes": 493643,
+      "path": "foucault-trajectories.png",
+      "sha256": "0d0e507d5c4f14337eecaa450609cdb516ad038b6201dd40dbf81bea57df3246"
+    },
+    {
+      "bytes": 403,
+      "path": "inputs.json",
+      "sha256": "569ddd846ce7b62e875c142b4bd95bb9bc7a8ad11b640bfb6f3341e4584d0826"
+    },
+    {
+      "bytes": 372,
+      "path": "latitude-+00.json",
+      "sha256": "ecce35db52f159200d7ce4acab9ee4f5320d455141440a099fcbf79c750d8c9f"
+    },
+    {
+      "bytes": 756914,
+      "path": "latitude-+00.npz",
+      "sha256": "6ad0a341c1fe2f198d8272121422da78647524b43ea5e0de3303dd82402ba8a1"
+    },
+    {
+      "bytes": 516,
+      "path": "latitude-+30.json",
+      "sha256": "2c4b4135567b8177028a15a4e7093e4a4833aa80250ca6464badd560636a8f18"
+    },
+    {
+      "bytes": 1350369,
+      "path": "latitude-+30.npz",
+      "sha256": "fd3bfef0e643242162fceb46cbc6a3f838353380732047d07b066f2a9f261cc5"
+    },
+    {
+      "bytes": 514,
+      "path": "latitude-+60.json",
+      "sha256": "7d7da2adfb06992244c6a74abc26d44310e076fd07bff2a3063866c44596592e"
+    },
+    {
+      "bytes": 1351033,
+      "path": "latitude-+60.npz",
+      "sha256": "05eb9772bf9e55eccdf1364b320c083db092e3b1304d20e675db8507217c3fed"
+    },
+    {
+      "bytes": 512,
+      "path": "latitude--30.json",
+      "sha256": "083e1ac0065dc32081ca45a608d355741908af77697cd1df7bba05d4044753df"
+    },
+    {
+      "bytes": 1350346,
+      "path": "latitude--30.npz",
+      "sha256": "3aaa2269a7c32b14d685c4b94a3f99346ca02fe1efd8821ecb214245d445fa4d"
+    },
+    {
+      "bytes": 509,
+      "path": "latitude--60.json",
+      "sha256": "46242c32b8458e45132f4c99be78a68aa55545270fac1b341a29114896476d87"
+    },
+    {
+      "bytes": 1351033,
+      "path": "latitude--60.npz",
+      "sha256": "391e91abddc7bbb4dfb0773225ddc57f15bd674ede2cf63064242e2ebf8e0473"
+    },
+    {
+      "bytes": 2923,
+      "path": "metrics.json",
+      "sha256": "bb931212b7e963641b71928dcf358939383480fa551ba632e4c5eea5be3ccad4"
+    },
+    {
+      "bytes": 51871,
+      "path": "precession-vs-latitude.png",
+      "sha256": "e5598eedeef550d1f60b695c2653c1c8b9de61167422f47a5a7dab91c7138960"
+    },
+    {
+      "bytes": 252,
+      "path": "validation.json",
+      "sha256": "5b94dd89103cbd0d04653da0826474752f8e3a88d8c94d4af8f4b1e5f8dd2a7d"
+    }
+  ]
+}

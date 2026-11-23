@@ -1,0 +1,84 @@
+{
+  "branches": [
+    {
+      "expected_rate_rad_s": 6.315157580294605e-05,
+      "final_orientation_delta_rad": 8.30358004577647e-12,
+      "final_orientation_rad": 5.441398092694116,
+      "finite": true,
+      "fitted_rate_rad_s": 6.315157580284729e-05,
+      "latitude_deg": -60,
+      "max_exact_error_m": 1.505174412885779e-08,
+      "omega_rad_s": -6.315157580294605e-05,
+      "rate_refinement_delta_rad_s": 9.44069041691753e-17,
+      "refined_final_orientation_rad": 5.4413980927024195,
+      "refined_rate_rad_s": 6.31515758029417e-05,
+      "turning_points": 10493
+    },
+    {
+      "expected_rate_rad_s": 3.646057928957995e-05,
+      "final_orientation_delta_rad": 5.086153720412767e-12,
+      "final_orientation_rad": 3.14159265358421,
+      "finite": true,
+      "fitted_rate_rad_s": 3.6460579289515906e-05,
+      "latitude_deg": -30,
+      "max_exact_error_m": 1.6896700594237757e-08,
+      "omega_rad_s": -3.646057928957995e-05,
+      "rate_refinement_delta_rad_s": 5.813356523595714e-17,
+      "refined_final_orientation_rad": 3.141592653589296,
+      "refined_rate_rad_s": 3.646057928957404e-05,
+      "turning_points": 10493
+    },
+    {
+      "expected_rate_rad_s": -0.0,
+      "final_orientation_delta_rad": 0.0,
+      "final_orientation_rad": 0.0,
+      "finite": true,
+      "fitted_rate_rad_s": 0.0,
+      "latitude_deg": 0,
+      "max_exact_error_m": 2.18263342399716e-08,
+      "omega_rad_s": 0.0,
+      "rate_refinement_delta_rad_s": 0.0,
+      "refined_final_orientation_rad": 0.0,
+      "refined_rate_rad_s": 0.0,
+      "turning_points": 10493
+    },
+    {
+      "expected_rate_rad_s": -3.646057928957995e-05,
+      "final_orientation_delta_rad": 5.0670578843892145e-12,
+      "final_orientation_rad": -3.141592653584232,
+      "finite": true,
+      "fitted_rate_rad_s": -3.646057928951592e-05,
+      "latitude_deg": 30,
+      "max_exact_error_m": 1.6896700594237757e-08,
+      "omega_rad_s": 3.646057928957995e-05,
+      "rate_refinement_delta_rad_s": 5.80658026001768e-17,
+      "refined_final_orientation_rad": -3.141592653589299,
+      "refined_rate_rad_s": -3.6460579289573985e-05,
+      "turning_points": 10493
+    },
+    {
+      "expected_rate_rad_s": -6.315157580294605e-05,
+      "final_orientation_delta_rad": 8.262723838470265e-12,
+      "final_orientation_rad": -5.441398092694168,
+      "finite": true,
+      "fitted_rate_rad_s": -6.315157580284779e-05,
+      "latitude_deg": 60,
+      "max_exact_error_m": 1.505174412885779e-08,
+      "omega_rad_s": 6.315157580294605e-05,
+      "rate_refinement_delta_rad_s": 9.402743340880537e-17,
+      "refined_final_orientation_rad": -5.441398092702431,
+      "refined_rate_rad_s": -6.315157580294182e-05,
+      "turning_points": 10493
+    }
+  ],
+  "checks": {
+    "equator": true,
+    "finite_exact": true,
+    "rates": true,
+    "ratio": true,
+    "refinement": true,
+    "small_angle": true,
+    "symmetry": true
+  },
+  "passed": true
+}

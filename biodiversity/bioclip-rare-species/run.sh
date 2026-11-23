@@ -4,8 +4,8 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-bioclip-portable-run-v2}
-plan_id=community-bioclip-rare-species-plan-v2
+run_id=${AKOFLOW_RUN_ID:-community-bioclip-portable-run-v2-two-slot}
+plan_id=community-bioclip-rare-species-plan-v2-two-slot
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 

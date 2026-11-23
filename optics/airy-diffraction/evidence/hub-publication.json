@@ -1,13 +1,13 @@
 {
   "contributionStatus": "maintainer",
-  "experimentId": "8a4702e1-7026-48b9-b763-7d243f443153",
+  "experimentId": "d4748411-4e71-4dbd-bb39-b85f556f0d31",
   "hubOrigin": "https://hub.akoflow.com",
   "persistentPublicationKey": "community-explorer-issue-37-airy-diffraction-v1",
   "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
   "publicationId": "57999cfa-0c42-46ad-98c8-2e2547c41839",
   "resultCount": 1,
-  "runId": "community-airy-diffraction-run-v1",
-  "uri": "akoflow://hub/publications/57999cfa-0c42-46ad-98c8-2e2547c41839/versions/1",
-  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-37-airy-diffraction-v1",
-  "version": 1
+  "runId": "community-airy-diffraction-run-v2",
+  "uri": "akoflow://hub/publications/57999cfa-0c42-46ad-98c8-2e2547c41839/versions/2",
+  "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-37-airy-diffraction-v1/results/2/executions/d4748411-4e71-4dbd-bb39-b85f556f0d31/runs/community-airy-diffraction-run-v2/workflow",
+  "version": 2
 }

@@ -1,0 +1,22 @@
+{
+  "anonymous": true,
+  "import_yaml": {
+    "build_origin_count": 7,
+    "bytes": 127471,
+    "context_archive_count": 7,
+    "context_digest": "sha256:ca3624f437e80ff8c0556a5d4cb3d2fba9d90bbd33079eb65e25c8ba3c2f7a48",
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-airy-diffraction-v2"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "57999cfa-0c42-46ad-98c8-2e2547c41839",
+  "recorded_result": {
+    "activity_count": 7,
+    "completed_activity_count": 7,
+    "run_id": "community-airy-diffraction-run-v2",
+    "status": "completed"
+  },
+  "version": 2,
+  "visibility": "public"
+}

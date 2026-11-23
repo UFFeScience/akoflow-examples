@@ -1,0 +1,98 @@
+{
+  "clean_machine_verification": {
+    "activity_count": 8,
+    "makespan_seconds": 19.999057292938232,
+    "outputs_byte_identical": true,
+    "preflight_observation": "Build required for every activity from an unmaterialized portable-YAML import.",
+    "reconstructed_image_digest": "sha256:a81fb55d7b9fbde99660b8547e85148166225509db67a386824b73474063d7cc",
+    "run_id": "community-planck-fresh-clean-run-v4",
+    "runtime": "fresh isolated Ak\u00f4Flow daemon, BuildKit, and Docker-in-Docker; no Hub credentials or host Docker socket",
+    "status": "completed"
+  },
+  "context_digest": "sha256:05e48f00d0f48e73d797a6bb8a99e306dd45dddf656efde42d2c6c5ed61bcef5",
+  "image_digest": "sha256:83b5238f59243701062da3c375e945816249d7fe30088f626be6370ff59ab139",
+  "measured_overlaps": [
+    {
+      "left": "1000-k",
+      "right": "3000-k",
+      "seconds": 3.1741302013397217
+    },
+    {
+      "left": "5778-k",
+      "right": "300-k",
+      "seconds": 2.3470370769500732
+    }
+  ],
+  "one_slot_branches": [
+    {
+      "activity": "300-k",
+      "finished_at": 1795425604.497038,
+      "resource": "community-planck-slot-0",
+      "runtime_seconds": 4.886537551879883,
+      "started_at": 1795425599.6105003
+    },
+    {
+      "activity": "1000-k",
+      "finished_at": 1795425627.6400547,
+      "resource": "community-planck-slot-0",
+      "runtime_seconds": 3.8020732402801514,
+      "started_at": 1795425623.8379815
+    },
+    {
+      "activity": "3000-k",
+      "finished_at": 1795425654.9692292,
+      "resource": "community-planck-slot-0",
+      "runtime_seconds": 3.2292330265045166,
+      "started_at": 1795425651.7399962
+    },
+    {
+      "activity": "5778-k",
+      "finished_at": 1795425691.0129073,
+      "resource": "community-planck-slot-0",
+      "runtime_seconds": 3.5783278942108154,
+      "started_at": 1795425687.4345794
+    }
+  ],
+  "one_slot_makespan_seconds": 218.20978951454163,
+  "one_slot_run_id": "community-planck-one-slot-run-v4",
+  "one_slot_status": "completed",
+  "outputs_byte_identical": true,
+  "parallel_branches": [
+    {
+      "activity": "1000-k",
+      "finished_at": 1795425270.9004774,
+      "resource": "community-planck-slot-1",
+      "runtime_seconds": 3.4192416667938232,
+      "started_at": 1795425267.4812357
+    },
+    {
+      "activity": "3000-k",
+      "finished_at": 1795425271.0443816,
+      "resource": "community-planck-slot-2",
+      "runtime_seconds": 3.3180344104766846,
+      "started_at": 1795425267.7263472
+    },
+    {
+      "activity": "5778-k",
+      "finished_at": 1795425284.3688679,
+      "resource": "community-planck-slot-3",
+      "runtime_seconds": 3.1310861110687256,
+      "started_at": 1795425281.2377818
+    },
+    {
+      "activity": "300-k",
+      "finished_at": 1795425285.1135037,
+      "resource": "community-planck-slot-0",
+      "runtime_seconds": 3.091672897338867,
+      "started_at": 1795425282.0218308
+    }
+  ],
+  "parallel_makespan_seconds": 240.03236985206604,
+  "parallel_run_id": "community-planck-run-v4d",
+  "parallel_status": "completed",
+  "performance_claim": "No end-to-end speedup claim: the shared host was contended and the parallel run makespan exceeded the one-slot run. Only measured branch overlap is claimed.",
+  "portable_build_ref": "recipe-build-1a91e496195bfe2098db527452c50c9984c119a79003d2963629ff43d2e4363c",
+  "recipe_digest": "sha256:7219c30ff8bbac2ae3ead8687e6967ffc819311ca964687515e8bf65eac4be67",
+  "timeline_sha256": "sha256:15e63466753d064fe8f24848f369d08d8193268dbcfeef072313c0eb1140a924",
+  "workflow_version": "community-planck-blackbody-v4"
+}

@@ -1,0 +1,12 @@
+name: community-planck-blackbody-v4
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: prepare, runtime: community-planck-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-1a91e496195bfe2098db527452c50c9984c119a79003d2963629ff43d2e4363c}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: spectrum-300-k, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --temperature, "300"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
+    - {name: spectrum-1000-k, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --temperature, "1000"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
+    - {name: spectrum-3000-k, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --temperature, "3000"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
+    - {name: spectrum-5778-k, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, solve, --output, ., --temperature, "5778"]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [prepare]}
+    - {name: aggregate-laws, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [spectrum-300-k, spectrum-1000-k, spectrum-3000-k, spectrum-5778-k]}
+    - {name: render-results, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [aggregate-laws]}
+    - {name: validate, runtime: community-planck-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [render-results]}

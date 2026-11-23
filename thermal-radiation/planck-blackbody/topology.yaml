@@ -1,0 +1,5 @@
+id: community-planck-parallel-topology
+name: Community Planck local topology
+version: 1
+executionScopeId: community-planck-parallel-scope
+links: []

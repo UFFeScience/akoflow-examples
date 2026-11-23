@@ -1,0 +1,7 @@
+outputs
+evidence
+*.yaml
+*.sh
+README.md
+.gitignore
+.gitattributes

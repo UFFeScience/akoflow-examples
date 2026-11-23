@@ -1,0 +1,19 @@
+plan:
+  id: community-planck-one-slot-plan-v4
+  workflowVersionId: community-planck-blackbody-v4-v1
+  executionScopeId: community-planck-parallel-scope
+  networkTopologyId: community-planck-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 60, cost: 0, feasible: true}
+  assignments:
+    - {id: p1v4-prepare, activityId: community-planck-blackbody-v4-prepare, resourceId: community-planck-slot-0, orderOnResource: 0, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-300, activityId: community-planck-blackbody-v4-spectrum-300-k, resourceId: community-planck-slot-0, orderOnResource: 1, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-1000, activityId: community-planck-blackbody-v4-spectrum-1000-k, resourceId: community-planck-slot-0, orderOnResource: 2, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-3000, activityId: community-planck-blackbody-v4-spectrum-3000-k, resourceId: community-planck-slot-0, orderOnResource: 3, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-5778, activityId: community-planck-blackbody-v4-spectrum-5778-k, resourceId: community-planck-slot-0, orderOnResource: 4, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-aggregate, activityId: community-planck-blackbody-v4-aggregate-laws, resourceId: community-planck-slot-0, orderOnResource: 5, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-render, activityId: community-planck-blackbody-v4-render-results, resourceId: community-planck-slot-0, orderOnResource: 6, metadata: {runtimeId: community-planck-local}}
+    - {id: p1v4-validate, activityId: community-planck-blackbody-v4-validate, resourceId: community-planck-slot-0, orderOnResource: 7, metadata: {runtimeId: community-planck-local}}

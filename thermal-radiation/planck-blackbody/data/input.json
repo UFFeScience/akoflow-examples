@@ -1,0 +1,1 @@
+{"constants":{"c_m_s":299792458.0,"h_j_s":6.62607015e-34,"k_b_j_k":1.380649e-23},"temperatures_k":[300,1000,3000,5778],"quadrature":{"dimensionless_x_max":50.0,"oracle_panels":200000,"branch_panels":20000000},"source":{"author":"Max Planck","doi":"10.1002/andp.19013090310"},"license":"CC0-1.0"}

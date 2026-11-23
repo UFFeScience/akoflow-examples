@@ -1,0 +1,19 @@
+plan:
+  id: community-rabi-plan-v1
+  workflowVersionId: community-rabi-oscillations-v1-v1
+  executionScopeId: community-rabi-parallel-scope
+  networkTopologyId: community-rabi-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 90, cost: 0, feasible: true}
+  assignments:
+    - {id: r-prepare, activityId: community-rabi-oscillations-v1-freeze-inputs, resourceId: community-rabi-slot-0, orderOnResource: 0, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-zero, activityId: community-rabi-oscillations-v1-solve-resonant, resourceId: community-rabi-slot-0, orderOnResource: 1, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-half, activityId: community-rabi-oscillations-v1-solve-half-detuned, resourceId: community-rabi-slot-1, orderOnResource: 0, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-one, activityId: community-rabi-oscillations-v1-solve-one-detuned, resourceId: community-rabi-slot-2, orderOnResource: 0, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-two, activityId: community-rabi-oscillations-v1-solve-two-detuned, resourceId: community-rabi-slot-3, orderOnResource: 0, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-aggregate, activityId: community-rabi-oscillations-v1-aggregate-rabi-audit, resourceId: community-rabi-slot-0, orderOnResource: 2, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-render, activityId: community-rabi-oscillations-v1-render-results, resourceId: community-rabi-slot-0, orderOnResource: 3, metadata: {runtimeId: community-rabi-local}}
+    - {id: r-validate, activityId: community-rabi-oscillations-v1-validate, resourceId: community-rabi-slot-0, orderOnResource: 4, metadata: {runtimeId: community-rabi-local}}

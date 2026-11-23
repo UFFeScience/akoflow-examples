@@ -1,0 +1,5 @@
+id: community-rabi-parallel-topology
+name: Community Rabi local topology
+version: 1
+executionScopeId: community-rabi-parallel-scope
+links: []

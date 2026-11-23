@@ -1,0 +1,17 @@
+environment: {id: community-rabi-parallel, name: Community Rabi four-slot local Docker, status: ready}
+version: {id: community-rabi-parallel-v1, environmentId: community-rabi-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-rabi-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-rabi-parallel-v1, id: community-rabi-local, name: Rabi CPU audit, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-rabi-slot-0, environmentVersionId: community-rabi-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-rabi-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rabi-slot-1, environmentVersionId: community-rabi-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-rabi-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rabi-slot-2, environmentVersionId: community-rabi-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-rabi-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-rabi-slot-3, environmentVersionId: community-rabi-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-rabi-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-rabi-slot-0, runtimeId: community-rabi-local, enabled: true}
+  - {resourceId: community-rabi-slot-1, runtimeId: community-rabi-local, enabled: true}
+  - {resourceId: community-rabi-slot-2, runtimeId: community-rabi-local, enabled: true}
+  - {resourceId: community-rabi-slot-3, runtimeId: community-rabi-local, enabled: true}

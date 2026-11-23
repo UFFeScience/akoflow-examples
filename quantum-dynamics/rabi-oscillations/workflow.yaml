@@ -1,0 +1,13 @@
+name: community-rabi-oscillations-v1
+spec:
+  namespace: community-explorer
+  image: akoflow/community-rabi:v1
+  activities:
+    - {name: freeze-inputs, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: solve-resonant, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, resonant]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-half-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, half-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-one-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, one-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: solve-two-detuned, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, branch, --output, ., --case, two-detuned]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [freeze-inputs]}
+    - {name: aggregate-rabi-audit, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [solve-resonant, solve-half-detuned, solve-one-detuned, solve-two-detuned]}
+    - {name: render-results, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-rabi-audit]}
+    - {name: validate, runtime: community-rabi-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

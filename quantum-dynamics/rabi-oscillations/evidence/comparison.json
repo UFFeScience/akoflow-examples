@@ -1,0 +1,9 @@
+{
+  "four_branch_common_overlap_seconds": 2.1060028076171875,
+  "makespan_ratio_one_slot_over_parallel": 1.3777614035634782,
+  "one_slot_makespan_seconds": 40.4934504032135,
+  "one_slot_run_id": "community-rabi-one-slot-run-v1",
+  "parallel_makespan_seconds": 29.390756845474243,
+  "parallel_run_id": "community-rabi-run-v1",
+  "speedup_claim": false
+}

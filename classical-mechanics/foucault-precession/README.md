@@ -62,3 +62,7 @@ Machine-readable metrics, validation, checksums, daemon records, and the measure
 ## Limitations
 
 This is an ideal linear planar small-angle model (`x0/L = 0.0448`). It omits damping, drive, suspension anisotropy, finite-amplitude Airy precession, vertical motion, local gravity variation, and apparatus measurement error. The measured timing applies only to the recorded host/container configuration.
+
+## Public Community Explorer record
+
+The anonymously verified publication is [Foucault pendulum latitude-precession audit](https://hub.akoflow.com/o/akoflow/community-explorer-issue-44-foucault-precession-v1). Import version 1 with `akoflow://hub/publications/f67f3cd3-de44-48cc-a8ab-f171f9a4132b/versions/1`.

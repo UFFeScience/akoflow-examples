@@ -1,0 +1,42 @@
+{
+  "verifiedAt": "2026-11-23T00:55:00Z",
+  "anonymousHttp": {
+    "page": 200,
+    "publication": 200,
+    "yaml": 200,
+    "results": 200,
+    "recordedRunPage": 200
+  },
+  "publication": {
+    "id": "f67f3cd3-de44-48cc-a8ab-f171f9a4132b",
+    "projectId": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+    "slug": "community-explorer-issue-44-foucault-precession-v1",
+    "visibility": "public",
+    "authorship": "identified",
+    "owner": "akoflow"
+  },
+  "experiment": {
+    "id": "e047ff8e-bed2-4ee3-a760-8cbdd4d05592",
+    "runId": "community-foucault-run-v1",
+    "status": "completed",
+    "completedActivities": 9,
+    "activityCount": 9,
+    "makespanSeconds": 76.73243379592896,
+    "workflowId": "community-foucault-precession-v1",
+    "workflowVersionId": "community-foucault-precession-v1-v1"
+  },
+  "gallery": {
+    "pngCount": 3,
+    "gifFrames": 48,
+    "allRawUrlsHttp200": true,
+    "mediaChecksumsMatchDaemon": true
+  },
+  "checks": {
+    "authorsAndCitation": true,
+    "licenses": true,
+    "completedRecordedRun": true,
+    "importYaml": true,
+    "resultsDownload": true,
+    "resultConsistency": true
+  }
+}

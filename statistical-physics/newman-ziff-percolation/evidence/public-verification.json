@@ -1,0 +1,41 @@
+{
+  "anonymous": true,
+  "authorship_identified": true,
+  "citation_present": true,
+  "completed_attempts": 20,
+  "experiment_download": {
+    "bytes": 695,
+    "http_status": 200,
+    "media_type": "application/json"
+  },
+  "gallery": {
+    "animation_frames": 61,
+    "animation_http_status": 200,
+    "animation_signature": "GIF89a",
+    "cluster_figure_http_status": 200,
+    "spanning_figure_http_status": 200,
+    "threshold_figure_http_status": 200,
+    "timeline_http_status": 200
+  },
+  "import_yaml": {
+    "bytes": 251555,
+    "http_status": 200,
+    "media_type": "application/yaml",
+    "workflow_name": "community-newman-ziff-percolation-v2"
+  },
+  "page": {
+    "bytes": 580402,
+    "http_status": 200,
+    "url": "https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1"
+  },
+  "project_id": "44e9e6b5-454b-43b9-bf73-240be5e31aab",
+  "publication_id": "9920b3e6-e614-405e-8cb9-34943a2c2141",
+  "result_consistency": {
+    "daemon_reference_common_files": 41,
+    "mismatches": 0,
+    "passed": true
+  },
+  "verified_at": "2026-11-23T02:23:15Z",
+  "version": 1,
+  "visibility": "public"
+}

@@ -56,6 +56,7 @@ Daemon run `community-percolation-run-v2` completed all 20 activities in `42.511
 - Reference run: `community-percolation-run-v2`
 - One-slot control: `community-percolation-one-slot-run-v2`
 - The daemon's final workspace agrees with 41 common deterministic reference files, with zero digest mismatches.
+- Public record: [Akoflow Community Explorer](https://hub.akoflow.com/o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1), import URI `akoflow::o/akoflow/community-explorer-issue-50-newman-ziff-percolation-v1:latest`.
 
 ## Scientific scope and limitations
 

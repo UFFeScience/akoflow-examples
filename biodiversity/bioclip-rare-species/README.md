@@ -63,5 +63,12 @@ The benchmark includes only 400 animal species selected partly by image availabi
 
 ## Measured result gallery
 
-This evaluation is a static score decomposition; no animation is claimed
-because the experiment has no temporal or iterative scientific dimension.
+![BioCLIP measured taxonomic-rank traversal](screenshots/current/bioclip-taxonomic-rank-traversal.gif)
+
+The animation traverses the frozen top-1 agreement result from kingdom through
+species. Each frame highlights one successively finer taxonomic rank; the bars
+are the committed 11,983-image CPU/FP32 measurements, not interpolated values.
+The dashed line is the paper's 38.09% species top-1 reference. The GIF contains
+no benchmark photographs. Its seven-frame provenance, dimensions, source hash,
+and artifact SHA-256 are recorded in
+[`evidence/visual-backfill.json`](evidence/visual-backfill.json).

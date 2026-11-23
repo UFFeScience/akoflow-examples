@@ -1,0 +1,23 @@
+{
+  "artifact": "bioclip-taxonomic-rank-traversal.gif",
+  "artifact_sha256": "c1a338538fbad240e2216cc482e389a61eab3d75279124eb6c7cb267e249e157",
+  "contains_source_photographs": false,
+  "dimensions": [
+    960,
+    540
+  ],
+  "evolving_dimension": "Measured top-1 agreement while traversing taxonomic ranks from kingdom to species.",
+  "frame_duration_ms": 900,
+  "frames": 7,
+  "metrics": {
+    "class": 0.882667111741634,
+    "family": 0.6124509722106317,
+    "genus": 0.501043144454644,
+    "kingdom": 1.0,
+    "order": 0.771843444880247,
+    "phylum": 0.9707085037135943,
+    "species": 0.38112325794876073
+  },
+  "source": "evidence/qualification-evaluation.json",
+  "source_sha256": "dab545531b15e2bd2cef3cd01faf7943175a5de2a66ecb8ba76579b78cf9cb2c"
+}

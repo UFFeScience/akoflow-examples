@@ -4,8 +4,8 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-caco2-tdc-baselines-run-v1}
-plan_id=community-caco2-tdc-baselines-plan-v1
+run_id=${AKOFLOW_RUN_ID:-community-caco2-portable-run-v2}
+plan_id=community-caco2-tdc-baselines-plan-v2
 temporary=$(mktemp -d)
 trap 'rm -rf "$temporary"' EXIT
 
@@ -29,7 +29,7 @@ create_yaml schedule-plans/import plan.yaml
 request GET environments/community-caco2-parallel > "$temporary/environment.json"
 request GET execution-scopes/community-caco2-parallel-scope > "$temporary/scope.json"
 request GET network-topologies/community-caco2-parallel-topology > "$temporary/topology.json"
-request GET workflow-definitions/community-caco2-tdc-baselines-v1 > "$temporary/workflow.json"
+request GET workflow-definitions/community-caco2-tdc-baselines-v2 > "$temporary/workflow.json"
 request GET "schedule-plans/$plan_id" > "$temporary/plan.json"
 
 jq -n --arg run_id "$run_id" --slurpfile environment "$temporary/environment.json" --slurpfile scope "$temporary/scope.json" \

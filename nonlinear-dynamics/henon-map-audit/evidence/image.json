@@ -1,4 +1,4 @@
 {
-  "digest": "sha256:71504fbb1140c7d011d7e991be03cda1c1517be40dbe29f785c0ac8012b49b74",
-  "image": "akoflow/community-henon-map:v1"
+  "digest": "sha256:940062b7bc7d649974dc648457aa1f20fef03076bd53caec576dc9a80c2d9566",
+  "image": "akoflow-reproduced:a94ca2ce90dc9e88343f652b09e879aba74b27a89fb8cc9970fe4fcd1be80d76"
 }

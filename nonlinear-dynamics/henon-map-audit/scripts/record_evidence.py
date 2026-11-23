@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 root=Path(__file__).resolve().parents[1]; evidence=root/"evidence"; evidence.mkdir(exist_ok=True)
 api=os.environ.get("AKOFLOW_API_URL","http://127.0.0.1:8080/akoflow-api")
 token=os.environ.get("AKOFLOW_API_TOKEN","akoflow-development-token")
-ids=("community-henon-map-run-v1","community-henon-map-one-slot-run-v1")
+ids=("community-henon-map-run-v2","community-henon-map-one-slot-run-v2")
 def fetch(run_id):
  req=urllib.request.Request(f"{api}/execution-runs/{run_id}/",headers={"Authorization":f"Bearer {token}"})
  with urllib.request.urlopen(req) as response:return json.load(response)
@@ -22,11 +22,11 @@ comparison={"parallel_run_id":ids[0],"one_slot_run_id":ids[1],"parallel_makespan
 items=sorted(p["activities"],key=lambda x:x["startedAt"]); origin=min(x["startedAt"] for x in items); colors={f"community-henon-slot-{i}":c for i,c in enumerate(("#111111","#555555","#888888","#bbbbbb"))}
 fig,axis=plt.subplots(figsize=(11,5.8))
 for row,item in enumerate(items):
- name=item["activityId"].replace("community-henon-map-v1-",""); start=item["startedAt"]-origin; duration=item["finishedAt"]-item["startedAt"]; color=colors[item["plannedResourceId"]]
+ name=item["activityId"].replace("community-henon-map-v2-",""); start=item["startedAt"]-origin; duration=item["finishedAt"]-item["startedAt"]; color=colors[item["plannedResourceId"]]
  axis.barh(row,duration,left=start,height=.62,color=color,edgecolor="black"); axis.text(start+duration/2,row,f"{duration:.2f}s",ha="center",va="center",fontsize=7,color="white",weight="bold")
-axis.set_yticks(range(len(items)),[x["activityId"].replace("community-henon-map-v1-","") for x in items]);axis.invert_yaxis();axis.set_xlabel("seconds since first activity start");axis.set_title("AkôFlow measured timeline — Hénon map audit v1");axis.grid(axis="x",alpha=.25);fig.tight_layout();fig.savefig(evidence/"measured-timeline.png",dpi=180);plt.close(fig)
+axis.set_yticks(range(len(items)),[x["activityId"].replace("community-henon-map-v2-","") for x in items]);axis.invert_yaxis();axis.set_xlabel("seconds since first activity start");axis.set_title("AkôFlow measured timeline — Hénon map audit v2");axis.grid(axis="x",alpha=.25);fig.tight_layout();fig.savefig(evidence/"measured-timeline.png",dpi=180);plt.close(fig)
 image=os.environ["AKOFLOW_IMAGE_DIGEST"]
-(evidence/"image.json").write_text(json.dumps({"image":"akoflow/community-henon-map:v1","digest":image},indent=2,sort_keys=True)+"\n")
+(evidence/"image.json").write_text(json.dumps({"image":"akoflow-reproduced:a94ca2ce90dc9e88343f652b09e879aba74b27a89fb8cc9970fe4fcd1be80d76","digest":image},indent=2,sort_keys=True)+"\n")
 checks=[]
 for path in sorted((root/"outputs/reference-v1").rglob("*")):
  if path.is_file():checks.append({"path":str(path.relative_to(root)),"bytes":path.stat().st_size,"sha256":hashlib.sha256(path.read_bytes()).hexdigest()})

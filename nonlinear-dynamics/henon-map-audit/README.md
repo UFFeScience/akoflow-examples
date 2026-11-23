@@ -17,14 +17,29 @@ The recurrence is `x[n+1]=1+y[n]-1.4*x[n]^2`, `y[n+1]=0.3*x[n]`, with Jacobian `
 ./preflight.sh
 ./run.sh
 AKOFLOW_SUBMIT=1 ./run.sh
-AKOFLOW_PLAN_FILE=plan-one-slot.yaml AKOFLOW_RUN_ID=community-henon-map-one-slot-run-v1 AKOFLOW_SUBMIT=1 ./run.sh
+AKOFLOW_PLAN_FILE=plan-one-slot.yaml AKOFLOW_RUN_ID=community-henon-map-one-slot-run-v2 AKOFLOW_SUBMIT=1 ./run.sh
 ```
 
 The preflight performs two clean offline one-CPU executions and requires byte-identical results. Scientific containers receive neither network access, Hub credentials, nor the host Docker socket. The daemon plans are importable YAML; `plan.yaml` uses four slots and `plan-one-slot.yaml` is its matched serial control.
 
+The imported workflow resolves all eight activities from one immutable AkôFlow
+build recipe. Its archived context contains `docker/Dockerfile`, the pinned
+requirements, licenses, notices, and `scripts/workflow.py`; every `COPY` source
+is contained in the archive and the base image is digest-pinned. From an
+unmaterialized state, preflight reported `Build required`, AkôFlow reconstructed
+and verified the OCI image, and then executed the full DAG.
+
 ## Recorded results
 
-AkôFlow run `community-henon-map-run-v1` completed 8/8 activities with workflow version `community-henon-map-v1-v1`, plan `community-henon-map-plan-v1`, and image `sha256:71504fbb1140c7d011d7e991be03cda1c1517be40dbe29f785c0ac8012b49b74`. Its measured makespan was 46.402186 s, versus 125.405589 s for completed matched run `community-henon-map-one-slot-run-v1`: a measured 2.702579× speedup. The four independent recurrence/tangent activities overlapped for 24.337284 s. Both runs used the same image, workflow, parameters, and scientific activity commands.
+AkôFlow run `community-henon-map-run-v2` rebuilt the missing image and completed
+8/8 activities with workflow `community-henon-map-v2`. Its measured makespan
+was 50.180554 s, versus 129.737941 s for completed matched run
+`community-henon-map-one-slot-run-v2`: a measured 2.585423× speedup. The four
+independent recurrence/tangent activities overlapped for 24.178946 s. The
+portable context digest is
+`sha256:18fa519264d600b762a7ca0ba67bf3fdbcb75225a94657eec4a5da40185ce02a`
+and the recipe digest is
+`sha256:d149ec01e49435a1a64488a974c189dc2c736dfbd20233f0802dc1a032603fff`.
 
 Across branches, `λ₁` ranged from 0.419111162 to 0.419539214, `λ₂` from -1.623512018 to -1.623083966, and Kaplan–Yorke dimension from 1.258219027 to 1.258414603. The worst absolute exponent-sum residual was `4.45e-14`. Occupancy slopes ranged from 1.224361367 to 1.226234428, and the minimum pairwise 600×200 occupancy Jaccard similarity was 0.996454. Daemon validation and the clean repeat gate passed every predeclared criterion.
 
@@ -50,7 +65,7 @@ Machine-readable summaries, validation, branch convergence data, samples, occupa
 
 ## Public Community Explorer record
 
-[Open the anonymously verified public workflow, gallery, completed run, and downloads](https://hub.akoflow.com/o/akoflow/community-explorer-issue-36-henon-map-v1). Import version 1 with `akoflow::o/akoflow/community-explorer-issue-36-henon-map-v1:1` or the immutable URI `akoflow://hub/publications/68796b3b-104b-4a2a-876c-9770bfe81492/versions/1`.
+[Open the anonymously verified public workflow, gallery, completed run, and downloads](https://hub.akoflow.com/o/akoflow/community-explorer-issue-36-henon-map-v1). Import portable version 2 with `akoflow::o/akoflow/community-explorer-issue-36-henon-map-v1:2` or the immutable URI `akoflow://hub/publications/68796b3b-104b-4a2a-876c-9770bfe81492/versions/2`.
 
 ## Licenses and limitations
 

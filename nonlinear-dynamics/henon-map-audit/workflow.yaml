@@ -1,13 +1,12 @@
-name: community-henon-map-v1
+name: community-henon-map-v2
 spec:
   namespace: community-explorer
-  image: akoflow/community-henon-map:v1
   activities:
-    - {name: prepare-scenario, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
-    - {name: iterate-origin, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, origin]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: iterate-x-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, x-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: iterate-y-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, y-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: iterate-xy-offset, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, xy-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
-    - {name: aggregate-spectrum, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [iterate-origin, iterate-x-offset, iterate-y-offset, iterate-xy-offset]}
-    - {name: render-results, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-spectrum]}
-    - {name: validate, runtime: community-henon-local, command: {entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}
+    - {name: prepare-scenario, runtime: community-henon-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-a94ca2ce90dc9e88343f652b09e879aba74b27a89fb8cc9970fe4fcd1be80d76}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi}
+    - {name: iterate-origin, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, origin]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-x-offset, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, x-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-y-offset, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, y-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: iterate-xy-offset, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, iterate, --output, ., --branch, xy-offset]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [prepare-scenario]}
+    - {name: aggregate-spectrum, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, aggregate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [iterate-origin, iterate-x-offset, iterate-y-offset, iterate-xy-offset]}
+    - {name: render-results, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, render, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [aggregate-spectrum]}
+    - {name: validate, runtime: community-henon-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, validate, --output, .]}, cpuLimit: "1", memoryLimit: 1Gi, dependsOn: [render-results]}

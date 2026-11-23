@@ -1,6 +1,6 @@
 plan:
-  id: community-henon-map-plan-v1
-  workflowVersionId: community-henon-map-v1-v1
+  id: community-henon-map-plan-v2
+  workflowVersionId: community-henon-map-v2-v1
   executionScopeId: community-henon-parallel-scope
   networkTopologyId: community-henon-parallel-topology
   source: imported
@@ -9,11 +9,11 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 180, cost: 0, feasible: true}
   assignments:
-    - {id: henon-prepare, activityId: community-henon-map-v1-prepare-scenario, resourceId: community-henon-slot-0, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-origin, activityId: community-henon-map-v1-iterate-origin, resourceId: community-henon-slot-0, orderOnResource: 1, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-x-offset, activityId: community-henon-map-v1-iterate-x-offset, resourceId: community-henon-slot-1, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-y-offset, activityId: community-henon-map-v1-iterate-y-offset, resourceId: community-henon-slot-2, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-xy-offset, activityId: community-henon-map-v1-iterate-xy-offset, resourceId: community-henon-slot-3, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-aggregate, activityId: community-henon-map-v1-aggregate-spectrum, resourceId: community-henon-slot-0, orderOnResource: 2, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-render, activityId: community-henon-map-v1-render-results, resourceId: community-henon-slot-0, orderOnResource: 3, metadata: {runtimeId: community-henon-local}}
-    - {id: henon-validate, activityId: community-henon-map-v1-validate, resourceId: community-henon-slot-0, orderOnResource: 4, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-prepare, activityId: community-henon-map-v2-prepare-scenario, resourceId: community-henon-slot-0, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-origin, activityId: community-henon-map-v2-iterate-origin, resourceId: community-henon-slot-0, orderOnResource: 1, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-x-offset, activityId: community-henon-map-v2-iterate-x-offset, resourceId: community-henon-slot-1, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-y-offset, activityId: community-henon-map-v2-iterate-y-offset, resourceId: community-henon-slot-2, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-xy-offset, activityId: community-henon-map-v2-iterate-xy-offset, resourceId: community-henon-slot-3, orderOnResource: 0, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-aggregate, activityId: community-henon-map-v2-aggregate-spectrum, resourceId: community-henon-slot-0, orderOnResource: 2, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-render, activityId: community-henon-map-v2-render-results, resourceId: community-henon-slot-0, orderOnResource: 3, metadata: {runtimeId: community-henon-local}}
+    - {id: henon2-validate, activityId: community-henon-map-v2-validate, resourceId: community-henon-slot-0, orderOnResource: 4, metadata: {runtimeId: community-henon-local}}

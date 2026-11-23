@@ -4,7 +4,7 @@ root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
 plan_file=${AKOFLOW_PLAN_FILE:-plan.yaml}
-run_id=${AKOFLOW_RUN_ID:-community-henon-map-run-v1}
+run_id=${AKOFLOW_RUN_ID:-community-henon-map-run-v2}
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 request(){ method=$1; endpoint=$2; shift 2; curl --fail-with-body -sS -X "$method" -H "Authorization: Bearer $token" "$@" "$api/$endpoint/"; }
 create(){ endpoint=$1; file=$2; request POST "$endpoint" -H 'Content-Type: application/yaml' --data-binary "@$root/$file" > "$tmp/r.json" || true; }
@@ -17,7 +17,7 @@ plan_id=$(sed -n 's/^  id: //p' "$root/$plan_file")
 request GET environments/community-henon-parallel > "$tmp/env.json"
 request GET execution-scopes/community-henon-parallel-scope > "$tmp/scope.json"
 request GET network-topologies/community-henon-parallel-topology > "$tmp/topology.json"
-request GET workflow-definitions/community-henon-map-v1 > "$tmp/workflow.json"
+request GET workflow-definitions/community-henon-map-v2 > "$tmp/workflow.json"
 request GET "schedule-plans/$plan_id" > "$tmp/plan.json"
 jq -n --arg run_id "$run_id" --slurpfile environment "$tmp/env.json" --slurpfile scope "$tmp/scope.json" --slurpfile topology "$tmp/topology.json" --slurpfile workflow "$tmp/workflow.json" --slurpfile plan "$tmp/plan.json" '{run:{id:$run_id,schedulePlanId:$plan[0].id,mode:"real",status:"created"},plan:$plan[0],workflow:$workflow[0].version,resources:$environment[0].resources,executionScope:$scope[0],runtimes:$environment[0].runtimes,runtimeBindings:$environment[0].resourceRuntimeBindings,networkTopology:$topology[0],activityProfiles:($environment[0].activityResourceProfiles//[])}' > "$tmp/execution.json"
 request POST execution-preflights -H 'Content-Type: application/json' --data-binary "@$tmp/execution.json" > "$tmp/preflight.json"

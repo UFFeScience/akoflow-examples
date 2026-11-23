@@ -1,6 +1,6 @@
 plan:
-  id: community-oceanbench-glonet-plan-v3
-  workflowVersionId: community-oceanbench-glonet-v3-v1
+  id: community-oceanbench-glonet-plan-v4
+  workflowVersionId: community-oceanbench-glonet-v4-v1
   executionScopeId: community-oceanbench-parallel-scope
   networkTopologyId: community-oceanbench-parallel-topology
   source: imported
@@ -9,16 +9,16 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 1800, cost: 0, feasible: true}
   assignments:
-    - {id: ocean-v3-prepare, activityId: community-oceanbench-glonet-v3-prepare, resourceId: community-oceanbench-slot-0, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-gs, activityId: community-oceanbench-glonet-v3-glorys-state, resourceId: community-oceanbench-slot-0, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-gm, activityId: community-oceanbench-glonet-v3-glorys-mld, resourceId: community-oceanbench-slot-1, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-gg, activityId: community-oceanbench-glonet-v3-glorys-geostrophic, resourceId: community-oceanbench-slot-2, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-o, activityId: community-oceanbench-glonet-v3-observations, resourceId: community-oceanbench-slot-3, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-gl, activityId: community-oceanbench-glonet-v3-glorys-lagrangian, resourceId: community-oceanbench-slot-0, orderOnResource: 2, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-as, activityId: community-oceanbench-glonet-v3-glo12-state, resourceId: community-oceanbench-slot-1, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-am, activityId: community-oceanbench-glonet-v3-glo12-mld, resourceId: community-oceanbench-slot-2, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-ag, activityId: community-oceanbench-glonet-v3-glo12-geostrophic, resourceId: community-oceanbench-slot-3, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-al, activityId: community-oceanbench-glonet-v3-glo12-lagrangian, resourceId: community-oceanbench-slot-0, orderOnResource: 3, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-aggregate, activityId: community-oceanbench-glonet-v3-aggregate, resourceId: community-oceanbench-slot-0, orderOnResource: 4, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-render, activityId: community-oceanbench-glonet-v3-render, resourceId: community-oceanbench-slot-0, orderOnResource: 5, metadata: {runtimeId: community-oceanbench-local}}
-    - {id: ocean-v3-validate, activityId: community-oceanbench-glonet-v3-validate, resourceId: community-oceanbench-slot-0, orderOnResource: 6, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-prepare, activityId: community-oceanbench-glonet-v4-prepare, resourceId: community-oceanbench-slot-0, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-gs, activityId: community-oceanbench-glonet-v4-glorys-state, resourceId: community-oceanbench-slot-0, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-gm, activityId: community-oceanbench-glonet-v4-glorys-mld, resourceId: community-oceanbench-slot-1, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-gg, activityId: community-oceanbench-glonet-v4-glorys-geostrophic, resourceId: community-oceanbench-slot-2, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-o, activityId: community-oceanbench-glonet-v4-observations, resourceId: community-oceanbench-slot-3, orderOnResource: 0, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-gl, activityId: community-oceanbench-glonet-v4-glorys-lagrangian, resourceId: community-oceanbench-slot-0, orderOnResource: 2, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-as, activityId: community-oceanbench-glonet-v4-glo12-state, resourceId: community-oceanbench-slot-1, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-am, activityId: community-oceanbench-glonet-v4-glo12-mld, resourceId: community-oceanbench-slot-2, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-ag, activityId: community-oceanbench-glonet-v4-glo12-geostrophic, resourceId: community-oceanbench-slot-3, orderOnResource: 1, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-al, activityId: community-oceanbench-glonet-v4-glo12-lagrangian, resourceId: community-oceanbench-slot-0, orderOnResource: 3, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-aggregate, activityId: community-oceanbench-glonet-v4-aggregate, resourceId: community-oceanbench-slot-0, orderOnResource: 4, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-render, activityId: community-oceanbench-glonet-v4-render, resourceId: community-oceanbench-slot-0, orderOnResource: 5, metadata: {runtimeId: community-oceanbench-local}}
+    - {id: ocean-v4-validate, activityId: community-oceanbench-glonet-v4-validate, resourceId: community-oceanbench-slot-0, orderOnResource: 6, metadata: {runtimeId: community-oceanbench-local}}

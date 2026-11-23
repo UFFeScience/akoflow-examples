@@ -1,8 +1,8 @@
-name: community-oceanbench-glonet-v3
+name: community-oceanbench-glonet-v4
 spec:
   namespace: community-explorer
   activities:
-    - {name: prepare, runtime: community-oceanbench-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-26e1901136f283f8ed7b9ad1d7b6666a08f575c0e563a012f678af721c3f0d4b}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi}
+    - {name: prepare, runtime: community-oceanbench-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-67edfd9f9b952b0806ecfb0181ef7ad49f91c409c05250b6ea0c80873b0ceab6}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/workflow.py, prepare, --output, .]}, cpuLimit: "1", memoryLimit: 2Gi}
     - {name: glorys-state, runtime: community-oceanbench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-state]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
     - {name: glorys-mld, runtime: community-oceanbench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-mld]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}
     - {name: glorys-geostrophic, runtime: community-oceanbench-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/workflow.py, metric, --output, ., --branch, glorys-geostrophic]}, cpuLimit: "1", memoryLimit: 2Gi, dependsOn: [prepare]}

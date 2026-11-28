@@ -1,0 +1,14 @@
+{
+  "run": "community-marker-fusion-ensemble-v1-run-4",
+  "completed_activities": 257,
+  "scenarios": 256,
+  "summary_rows": 256,
+  "animation_frames": 24,
+  "peak_overlap_lower_bound": 4,
+  "unusable_case_intervals": 0,
+  "aggregate_checksums": {
+    "scenario-summary.csv": "sha256:81dba1baa1039a846f6df4eb464317e6caeda7210b2bda1ea5a36c22f0559cb5",
+    "trajectory-errors.png": "sha256:360af6db287e62537c6c333a0cadfc132eaa13b929dad07e75d2088c55c91bd4",
+    "trajectory-errors.gif": "sha256:84c19ee5d1ba8a2149cb7146e163fe7d7727c25dbe80fc5f77c042be6b71c597"
+  }
+}

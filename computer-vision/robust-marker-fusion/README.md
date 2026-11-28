@@ -10,6 +10,21 @@ Each comparison uses the same visibility mask, noise and known orientation.
 Transforming the known marker offsets into the observation frame yields
 candidate centers. Frames with no visible markers have no estimate.
 
+## Measured AkôFlow reference
+
+The four-slot reference completed all 257 activities. The 256 synthetic
+scenarios emitted 24,576 frame records and were checked for visibility,
+estimate availability and error against the known trajectory.
+
+![Measured trajectories and per-frame errors](evidence/reference/trajectory-errors.png)
+
+![Twenty-four frames of the measured comparisons](evidence/reference/trajectory-errors.gif)
+
+![Observed worker occupancy](evidence/reference/timeline.png)
+
+[Scenario summary](evidence/reference/scenario-summary.csv) ·
+[Reference evidence](evidence/reference/reference-run.json).
+
 ## Run in AkôFlow
 
 Register the build recipe and generate the workflow and plans.

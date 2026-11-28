@@ -1,0 +1,44 @@
+{
+  "verifiedAt": "2026-11-28T07:22:48.510862+00:00",
+  "referenceRun": "community-synthetic-idw-run-4-v1",
+  "assets": [
+    {
+      "name": "grids.json.gz",
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/88cf421889e0a756f0593c0d02d1fdbab0f43040/geospatial/synthetic-idw-audit/evidence/reference/grids.json.gz",
+      "status": 200,
+      "bytes": 588322,
+      "sha256": "f36672a8509d486888da4bf1045039436b9cd94bc9e7d8c5b7b59eee06f24c39"
+    },
+    {
+      "name": "idw-comparison.png",
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/88cf421889e0a756f0593c0d02d1fdbab0f43040/geospatial/synthetic-idw-audit/evidence/reference/idw-comparison.png",
+      "status": 200,
+      "bytes": 86502,
+      "sha256": "b08736bac0e36546b573546dab2864397a95e645f6201e6d8c3c9eaa9aa50042",
+      "frames": 1
+    },
+    {
+      "name": "idw-surfaces.gif",
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/88cf421889e0a756f0593c0d02d1fdbab0f43040/geospatial/synthetic-idw-audit/evidence/reference/idw-surfaces.gif",
+      "status": 200,
+      "bytes": 552883,
+      "sha256": "046670c84dd59f5d4e78d05b5214061062441971b74ffc777b4db50d49ab2a08",
+      "frames": 8
+    },
+    {
+      "name": "metrics.csv",
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/88cf421889e0a756f0593c0d02d1fdbab0f43040/geospatial/synthetic-idw-audit/evidence/reference/metrics.csv",
+      "status": 200,
+      "bytes": 1908,
+      "sha256": "f2b9ffbf590ed488e8ca60a2cbf268deadc40d4a9a512980fe6b6bd43ed5cdc0"
+    },
+    {
+      "name": "timeline.png",
+      "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/88cf421889e0a756f0593c0d02d1fdbab0f43040/geospatial/synthetic-idw-audit/evidence/reference/timeline.png",
+      "status": 200,
+      "bytes": 47097,
+      "sha256": "dc042e456dba24bf98573501a023cb250a815f187110f114ff88f942d5caed0c",
+      "frames": 1
+    }
+  ]
+}

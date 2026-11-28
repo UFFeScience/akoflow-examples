@@ -91,7 +91,7 @@ concurrent with the IDW one-slot run. The [second scheduling repetition](evidenc
 also includes the validated eight-slot run. It completed in 499 seconds,
 peaked at six overlapping batches, and shared the host with IDW for 492
 seconds. All five second-repetition runs completed with the same checksums.
-The third repetition is in progress.
+The third repetition is included in the complete sweep below.
 
 The original workflow code and synthetic inputs use the [MIT license](LICENSE).
 The scientific model is attributed to Mein and Larson above.
@@ -112,3 +112,15 @@ All [three serial controls](evidence/reference/serial-scheduling-controls.json)
 completed 514 activities with matching result checksums. Their elapsed
 times were 1,395, 1,471 and 1,439 seconds. These observations span different
 shared host load, including the IDW benchmark and its clean import run.
+
+
+## Completed scheduling sweep
+
+All three repetitions at each of 1, 4, 8, 16, and 32 slots completed
+514 activities per profile. The CSV, PNG and GIF matched the reference
+in every run. The [per-run timings](evidence/reference/profile-runs.csv)
+and [scheduling summary](evidence/reference/profile-summary.csv) report
+end-to-end durations, throughput, and concurrency. The comparisons
+include shared-host load from the IDW and LBM campaigns. The
+[verification record](evidence/reference/completed-scheduling-sweep.json)
+identifies the 15 completed executions and their identical outputs.

@@ -14,3 +14,19 @@ argmax for 64 × 128 × 128, 61 × 123 × 115 and 1 × 17 × 9 volumes.
 Shuffled and reversed tile order gave exact results, including repeated
 maxima and negative background values. Missing and duplicated tile inputs
 were rejected.
+
+## Run in AkôFlow
+
+Register the recipe and generate the reference workflow and slot plans.
+
+```sh
+recipe=$(./register-recipe.sh)
+python3 generate.py "$recipe"
+./run.sh
+```
+
+After preflight, run `python3 profile.py /path/to/evidence` with
+`AKOFLOW_API_URL` and `AKOFLOW_API_TOKEN` set for the target daemon.
+It starts or resumes the four-slot reference, then runs the one-, sixteen-
+and thirty-two-slot plans and compares all 259 output checksums. Slot
+overlap is a lower bound when the daemon records unusable intervals.

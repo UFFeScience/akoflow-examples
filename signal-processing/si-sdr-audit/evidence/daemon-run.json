@@ -1,0 +1,28 @@
+{
+  "run": {
+    "id": "community-sisdr-run-v1",
+    "status": "completed",
+    "startedAt": "2026-11-28T02:12:11Z",
+    "finishedAt": "2026-11-28T02:12:47Z"
+  },
+  "activities": [
+    {
+      "activityId": "community-sisdr-audit-v1-gain",
+      "status": "completed",
+      "startedAt": 1795831959.8434775,
+      "finishedAt": 1795831960.0943017
+    },
+    {
+      "activityId": "community-sisdr-audit-v1-spectral",
+      "status": "completed",
+      "startedAt": 1795831959.8629577,
+      "finishedAt": 1795831960.1039212
+    },
+    {
+      "activityId": "community-sisdr-audit-v1-render",
+      "status": "completed",
+      "startedAt": 1795831962.8872538,
+      "finishedAt": 1795831966.4266987
+    }
+  ]
+}

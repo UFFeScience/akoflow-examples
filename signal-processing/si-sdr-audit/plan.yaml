@@ -1,0 +1,14 @@
+plan:
+  id: community-sisdr-plan-v1
+  workflowVersionId: community-sisdr-audit-v1-v1
+  executionScopeId: community-sisdr-parallel-scope
+  networkTopologyId: community-sisdr-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: sisdr-gain, activityId: community-sisdr-audit-v1-gain, resourceId: community-sisdr-slot-0, orderOnResource: 0, metadata: {runtimeId: community-sisdr-local}}
+    - {id: sisdr-spectral, activityId: community-sisdr-audit-v1-spectral, resourceId: community-sisdr-slot-1, orderOnResource: 0, metadata: {runtimeId: community-sisdr-local}}
+    - {id: sisdr-render, activityId: community-sisdr-audit-v1-render, resourceId: community-sisdr-slot-0, orderOnResource: 1, metadata: {runtimeId: community-sisdr-local}}

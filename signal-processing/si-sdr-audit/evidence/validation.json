@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "gain_cases": 5,
+  "spectral_cases": 8,
+  "gif_frames": 7,
+  "endpoints": {
+    "silent_target": {
+      "snr": "undefined",
+      "si_sdr": "undefined",
+      "sd_sdr": "undefined"
+    },
+    "zero_estimate": {
+      "snr": 0.0,
+      "si_sdr": "undefined",
+      "sd_sdr": "-inf"
+    },
+    "exact_match": {
+      "snr": "+inf",
+      "si_sdr": "+inf",
+      "sd_sdr": "+inf"
+    }
+  },
+  "sha256": {
+    "si-sdr-scores.csv": "f694cab5ecb82f81fb6564d4d595f67f416c4cce05a733cbd1499325dcafd9f3",
+    "si-sdr-scores.png": "a244056976c5c199c5e86e7fec5337fb3430e1557b7762643288168aecf27b1c",
+    "si-sdr-scores.gif": "5cb54300a582996d1521b248efffb129ff1cce40c7ec36b9634bb898b390d90f"
+  }
+}

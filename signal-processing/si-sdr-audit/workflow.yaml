@@ -1,0 +1,7 @@
+name: community-sisdr-audit-v1
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: gain, runtime: community-sisdr-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-d4dc98e3d27d9341068f30417ec02d58fe72fc2f1e55f64ad8844c15a627752a}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/scripts/metrics.py, gain]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: spectral, runtime: community-sisdr-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/metrics.py, spectral]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: render, runtime: community-sisdr-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/render.py]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [gain, spectral]}

@@ -1,0 +1,5 @@
+id: community-sisdr-parallel-topology
+name: Community SI-SDR local topology
+version: 1
+executionScopeId: community-sisdr-parallel-scope
+links: []

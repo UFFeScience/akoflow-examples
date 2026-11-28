@@ -1,0 +1,3 @@
+id: community-sisdr-parallel-scope
+name: Community SI-SDR two-slot scope
+environmentVersionIds: [community-sisdr-parallel-v1]

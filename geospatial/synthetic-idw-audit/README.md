@@ -37,7 +37,12 @@ uses four slots. Set `AKOFLOW_SUBMIT=1` to execute after preflight.
 
 ![Analytic surface, estimates and errors for synthetic surface 3](evidence/idw-comparison.png)
 
-[Eight-surface animation](evidence/idw-surfaces.gif) · [Held-out metrics](evidence/metrics.csv) ·
+![Eight synthetic surfaces comparing raw and filtered IDW predictions](evidence/idw-surfaces.gif)
+
+The animation shows the spatial estimates and errors across all eight surfaces.
+The outlined strip is excluded from sample training in every frame.
+
+[Held-out metrics](evidence/metrics.csv) ·
 [Local pilot validation](evidence/validation.json)
 
 Run the measured campaign on one daemon after registering the recipe and

@@ -127,13 +127,15 @@ def write_json(path, value):
     path.write_text(json.dumps(value, separators=(",", ":"), allow_nan=False) + "\n")
 
 
-def prepare(manifest, output):
+def prepare(manifest, output, selected=None):
     payload = manifest.read_bytes()
     expected = manifest.with_suffix(".sha256").read_text().split()[0]
     if hashlib.sha256(payload).hexdigest() != expected:
         raise ValueError("Frozen sample manifest checksum mismatch")
     scenarios = json.loads(payload)
     for scenario in scenarios:
+        if selected is not None and scenario["id"] != selected:
+            continue
         result = fit(scenario["points"])
         result["injected_ids"] = scenario["injected_ids"]
         write_json(output / f"sites-{scenario['id']}.json", result)
@@ -145,7 +147,7 @@ def predict(scenario, condition, exponent, block, source, output):
     write_json(output / (block_name(scenario, condition, exponent, block) + ".json"), values)
 
 
-def assemble(source, output):
+def assemble(source, output, with_render=False):
     output.mkdir(parents=True, exist_ok=True)
     table, grids = [], {}
     for scenario, condition, exponent in cases():
@@ -182,10 +184,15 @@ def assemble(source, output):
         writer = csv.DictWriter(stream, fieldnames=table[0], lineterminator="\n")
         writer.writeheader()
         writer.writerows(table)
+    artifacts = ["grids.json", "metrics.csv"]
+    if with_render:
+        from render import render
+        render(output)
+        artifacts.extend(("idw-comparison.png", "idw-surfaces.gif"))
     write_json(output / "validation.json", {
         "passed": True, "blocks": len(table) * BLOCKS, "grids": len(table),
         "sha256": {name: hashlib.sha256((output / name).read_bytes()).hexdigest()
-                   for name in ("grids.json", "metrics.csv")},
+                   for name in artifacts},
     })
 
 
@@ -196,6 +203,7 @@ def main():
     preparation = commands.add_parser("prepare")
     preparation.add_argument("manifest", type=Path)
     preparation.add_argument("output", type=Path)
+    preparation.add_argument("--scenario", type=int, choices=range(8))
     prediction = commands.add_parser("predict")
     prediction.add_argument("scenario", type=int, choices=range(8))
     prediction.add_argument("condition", choices=CONDITIONS)
@@ -206,15 +214,16 @@ def main():
     assembly = commands.add_parser("assemble")
     assembly.add_argument("source", type=Path)
     assembly.add_argument("output", type=Path)
+    assembly.add_argument("--render", action="store_true")
     args = parser.parse_args()
     if args.action == "freeze":
         write_json(args.output, [scenario_input(index) for index in range(8)])
     elif args.action == "prepare":
-        prepare(args.manifest, args.output)
+        prepare(args.manifest, args.output, args.scenario)
     elif args.action == "predict":
         predict(args.scenario, args.condition, args.exponent, args.block, args.source, args.output)
     else:
-        assemble(args.source, args.output)
+        assemble(args.source, args.output, args.render)
 
 
 if __name__ == "__main__":

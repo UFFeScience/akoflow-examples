@@ -69,3 +69,7 @@ requires matching result checksums across the five slot configurations.
 Run `python3 summarize-profiles.py /path/to/benchmark-profiles /path/to/report`
 to export observed concurrency, case-window and aggregation durations,
 and end-to-end speedup relative to the one-slot control.
+
+Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
+to render observed worker occupancy and scientific-case concurrency. The
+figure validates the captured peak and marks the aggregation window.

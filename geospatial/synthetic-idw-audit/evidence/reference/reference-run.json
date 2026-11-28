@@ -1,0 +1,15 @@
+{
+  "run": "community-synthetic-idw-run-4-v1",
+  "status": "completed",
+  "activities": 1033,
+  "blocks": 1024,
+  "grids": 32,
+  "animationFrames": 8,
+  "peakOverlappingBlocks": 3,
+  "sha256": {
+    "grids.json": "68315c69f90744e91c47df97c2e4476db14e9867157b5c8439ed12f5842d377a",
+    "metrics.csv": "f2b9ffbf590ed488e8ca60a2cbf268deadc40d4a9a512980fe6b6bd43ed5cdc0",
+    "idw-comparison.png": "b08736bac0e36546b573546dab2864397a95e645f6201e6d8c3c9eaa9aa50042",
+    "idw-surfaces.gif": "046670c84dd59f5d4e78d05b5214061062441971b74ffc777b4db50d49ab2a08"
+  }
+}

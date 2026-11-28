@@ -25,7 +25,7 @@ manifest and scripts from the immutable `e95a6b1` revision during the image buil
 Each fetch has an enforced SHA-256. Activities need no external data access.
 All 1,033 executable checks
 passed preflight on an isolated daemon supporting shared recipe probes.
-Measured scheduling profiles and the Hub run are pending.
+The four-slot reference is complete. The remaining scheduling profiles and the Hub run are pending.
 
 To register the recipe, regenerate the plans and perform a preflight:
 
@@ -38,14 +38,15 @@ python3 generate.py "$recipe"
 The generated plans cover 1, 4, 8, 16 and 32 logical slots. The default plan
 uses four slots. Set `AKOFLOW_SUBMIT=1` to execute after preflight.
 
-![Analytic surface, estimates and errors for synthetic surface 3](evidence/idw-comparison.png)
+![Analytic surface, estimates and errors for synthetic surface 3](evidence/reference/idw-comparison.png)
 
-![Eight synthetic surfaces comparing raw and filtered IDW predictions](evidence/idw-surfaces.gif)
+![Eight synthetic surfaces comparing raw and filtered IDW predictions](evidence/reference/idw-surfaces.gif)
 
-The animation shows the spatial estimates and errors across all eight surfaces.
+The reference run produced eight frames showing the spatial estimates and errors.
 The outlined strip is excluded from sample training in every frame.
 
-[Held-out metrics](evidence/metrics.csv) ·
+[Held-out metrics](evidence/reference/metrics.csv) ·
+[Numeric grids (JSON gzip)](evidence/reference/grids.json.gz) ·
 [Local pilot validation](evidence/validation.json)
 
 Run the measured campaign on one daemon after registering the recipe and
@@ -77,3 +78,15 @@ python3 render-timeline.py profile-evidence/community-synthetic-idw-run-4-v1.jso
 
 Each bar is a prediction block, colored by raw or filtered training condition.
 The lower panel shows active blocks and checks its peak against the capture.
+
+
+The [four-slot daemon reference](evidence/reference/reference-run.json)
+completed all 1,033 activities, validated 32 assembled grids and reproduced
+the local grid and metrics hashes. All 1,024 individual block results also
+matched the local pilot byte for byte. The run reached three active prediction
+blocks and shared the host with the rainfall infiltration campaign.
+
+![Measured timeline of all 1,024 prediction blocks](evidence/reference/timeline.png)
+
+The timeline separates raw and filtered prediction tasks by color. Its lower
+panel counts active blocks from the actual start and finish timestamps.

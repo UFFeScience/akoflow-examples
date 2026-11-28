@@ -1,0 +1,13 @@
+{
+  "scene_pairs_per_method": 768,
+  "reference": "resampled",
+  "interpretation": "Edge RMSE measures errors in band gradients; it does not measure sharpness directly.",
+  "paired_comparisons": {
+    "detail": {},
+    "pca": {
+      "lower_edge_rmse": 281,
+      "lower_edge_rmse_and_lower_fixed_iou": 281,
+      "lower_edge_rmse_and_lower_centroid_iou": 281
+    }
+  }
+}

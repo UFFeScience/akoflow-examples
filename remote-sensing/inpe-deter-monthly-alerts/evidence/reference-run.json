@@ -1,0 +1,684 @@
+{
+  "slots": 4,
+  "run": {
+    "id": "community-inpe-deter-run-4-v1",
+    "status": "completed",
+    "startedAt": "2026-11-28T05:00:50Z",
+    "finishedAt": "2026-11-28T05:04:24Z"
+  },
+  "digests": {
+    "deter-month-state-class.csv": "sha256:9d2936e60a41f5740b4077baf7e5c2c3a9144b01f84afa64bde6fc6954e11059",
+    "deter-monthly-alerts.gif": "sha256:928edc222e95175ec4e43cc771dcdf1b862074c49a9469de3551e670a2ccfb9a",
+    "deter-monthly-diagnostics.csv": "sha256:99daf368e9bc6c4f91d5544a5e99c98dd18a7d6c7e083e74cb4dbec6d4ecf8be",
+    "deter-reference-map.png": "sha256:aa381f3727f2029d62544e3aa4f5310a0cffd812ca52c22a3dce0152061574ac"
+  },
+  "max_overlapping_months": 3,
+  "activities": [
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-prepare",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842059.0998745,
+      "startedAt": 1795842102.9782946,
+      "finishedAt": 1795842103.1245797,
+      "transferBytes": 0
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842105.049362,
+      "startedAt": 1795842108.2562683,
+      "finishedAt": 1795842108.670394,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842105.4026587,
+      "startedAt": 1795842110.0136037,
+      "finishedAt": 1795842110.523394,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842104.830914,
+      "startedAt": 1795842110.13309,
+      "finishedAt": 1795842110.3626533,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842106.0735545,
+      "startedAt": 1795842110.3124928,
+      "finishedAt": 1795842110.8018315,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842111.0511591,
+      "startedAt": 1795842113.7230158,
+      "finishedAt": 1795842114.6464756,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842111.9390397,
+      "startedAt": 1795842114.7854626,
+      "finishedAt": 1795842115.3579404,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842113.3305652,
+      "startedAt": 1795842117.1980429,
+      "finishedAt": 1795842119.128353,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842113.974307,
+      "startedAt": 1795842117.5607183,
+      "finishedAt": 1795842121.0149527,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842116.73914,
+      "startedAt": 1795842119.1696625,
+      "finishedAt": 1795842120.5151434,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842118.170266,
+      "startedAt": 1795842121.7848532,
+      "finishedAt": 1795842124.9639034,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842120.7284768,
+      "startedAt": 1795842124.5487854,
+      "finishedAt": 1795842125.2816756,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2019-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842122.8964765,
+      "startedAt": 1795842126.070267,
+      "finishedAt": 1795842126.5224407,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842122.916147,
+      "startedAt": 1795842126.4933047,
+      "finishedAt": 1795842126.8520474,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842125.9010956,
+      "startedAt": 1795842128.436424,
+      "finishedAt": 1795842128.9600825,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842127.5949054,
+      "startedAt": 1795842129.9618816,
+      "finishedAt": 1795842130.343198,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842126.8980541,
+      "startedAt": 1795842129.997611,
+      "finishedAt": 1795842130.3880525,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842128.501286,
+      "startedAt": 1795842131.0435147,
+      "finishedAt": 1795842131.8591733,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842130.6137538,
+      "startedAt": 1795842134.1468031,
+      "finishedAt": 1795842134.6384969,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842132.079504,
+      "startedAt": 1795842135.0619578,
+      "finishedAt": 1795842136.5656219,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842132.1253865,
+      "startedAt": 1795842135.9974973,
+      "finishedAt": 1795842137.6319373,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842134.3469627,
+      "startedAt": 1795842136.6201446,
+      "finishedAt": 1795842138.371745,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842136.3244195,
+      "startedAt": 1795842139.4190643,
+      "finishedAt": 1795842142.0173454,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842137.415206,
+      "startedAt": 1795842140.9045434,
+      "finishedAt": 1795842141.3923273,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2020-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842139.058792,
+      "startedAt": 1795842142.0757265,
+      "finishedAt": 1795842142.41488,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842140.1104403,
+      "startedAt": 1795842142.8707955,
+      "finishedAt": 1795842143.0551884,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842142.9753795,
+      "startedAt": 1795842145.879982,
+      "finishedAt": 1795842146.0807385,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842144.2316449,
+      "startedAt": 1795842146.2672307,
+      "finishedAt": 1795842146.5124247,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842145.7882307,
+      "startedAt": 1795842147.8224962,
+      "finishedAt": 1795842148.1752663,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842145.8326142,
+      "startedAt": 1795842148.5313013,
+      "finishedAt": 1795842149.2916472,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842147.4715505,
+      "startedAt": 1795842149.9993997,
+      "finishedAt": 1795842150.703612,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842148.353701,
+      "startedAt": 1795842150.813341,
+      "finishedAt": 1795842151.909201,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842150.395797,
+      "startedAt": 1795842152.3229547,
+      "finishedAt": 1795842153.3418694,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842151.3869143,
+      "startedAt": 1795842153.3479319,
+      "finishedAt": 1795842154.206075,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842152.971593,
+      "startedAt": 1795842156.3230858,
+      "finishedAt": 1795842157.2825294,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842153.7817063,
+      "startedAt": 1795842156.4270172,
+      "finishedAt": 1795842156.6977377,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2021-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842155.9689221,
+      "startedAt": 1795842158.82046,
+      "finishedAt": 1795842159.0124137,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842157.165465,
+      "startedAt": 1795842159.844536,
+      "finishedAt": 1795842160.0560198,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842158.5125697,
+      "startedAt": 1795842161.0974994,
+      "finishedAt": 1795842161.4527216,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842159.3723562,
+      "startedAt": 1795842161.8361447,
+      "finishedAt": 1795842162.1129243,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842160.8099785,
+      "startedAt": 1795842162.5634727,
+      "finishedAt": 1795842163.1457021,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842161.8282237,
+      "startedAt": 1795842163.4427948,
+      "finishedAt": 1795842164.0737765,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842162.8449767,
+      "startedAt": 1795842164.7569623,
+      "finishedAt": 1795842165.2671988,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842163.7928696,
+      "startedAt": 1795842166.5394847,
+      "finishedAt": 1795842167.6192799,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842165.0560968,
+      "startedAt": 1795842166.9594686,
+      "finishedAt": 1795842168.3340657,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842166.0841079,
+      "startedAt": 1795842168.2169442,
+      "finishedAt": 1795842169.254864,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842167.3184297,
+      "startedAt": 1795842169.0237315,
+      "finishedAt": 1795842170.7672484,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842169.4384637,
+      "startedAt": 1795842172.208881,
+      "finishedAt": 1795842172.4757276,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2022-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842170.1118665,
+      "startedAt": 1795842172.252704,
+      "finishedAt": 1795842172.850215,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842171.8905747,
+      "startedAt": 1795842173.9450634,
+      "finishedAt": 1795842174.2158382,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842172.5652492,
+      "startedAt": 1795842174.8083239,
+      "finishedAt": 1795842175.0333178,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842173.6998544,
+      "startedAt": 1795842175.6666515,
+      "finishedAt": 1795842175.9491105,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842174.5615098,
+      "startedAt": 1795842176.5270622,
+      "finishedAt": 1795842176.7667208,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842176.1714184,
+      "startedAt": 1795842178.166571,
+      "finishedAt": 1795842178.5859456,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842176.8836637,
+      "startedAt": 1795842178.749131,
+      "finishedAt": 1795842179.2409596,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842178.4501092,
+      "startedAt": 1795842180.2750456,
+      "finishedAt": 1795842181.1623201,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842179.1661725,
+      "startedAt": 1795842181.4725928,
+      "finishedAt": 1795842182.1461139,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842181.055775,
+      "startedAt": 1795842183.4023058,
+      "finishedAt": 1795842184.608931,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842182.0895386,
+      "startedAt": 1795842184.3540003,
+      "finishedAt": 1795842185.7711,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842183.069268,
+      "startedAt": 1795842185.4857223,
+      "finishedAt": 1795842186.3036325,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2023-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842184.1999972,
+      "startedAt": 1795842186.4148483,
+      "finishedAt": 1795842187.351017,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-01",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842186.387603,
+      "startedAt": 1795842188.5512893,
+      "finishedAt": 1795842188.983677,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-02",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842187.9011185,
+      "startedAt": 1795842190.0858636,
+      "finishedAt": 1795842191.3622727,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-04",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842188.858113,
+      "startedAt": 1795842190.9187794,
+      "finishedAt": 1795842191.7480462,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-03",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842189.651757,
+      "startedAt": 1795842191.9739425,
+      "finishedAt": 1795842193.0640078,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-06",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842192.1921718,
+      "startedAt": 1795842194.7646086,
+      "finishedAt": 1795842195.4513981,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-05",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842191.5292625,
+      "startedAt": 1795842194.848552,
+      "finishedAt": 1795842195.5780156,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-08",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842194.2963006,
+      "startedAt": 1795842196.2297475,
+      "finishedAt": 1795842199.3075945,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-07",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842195.2442317,
+      "startedAt": 1795842197.6414561,
+      "finishedAt": 1795842198.8096967,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-10",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-01",
+      "readyAt": 1795842196.8656838,
+      "startedAt": 1795842200.159931,
+      "finishedAt": 1795842205.6777937,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-09",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842198.6424136,
+      "startedAt": 1795842200.4911852,
+      "finishedAt": 1795842207.698748,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-12",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-03",
+      "readyAt": 1795842199.9665573,
+      "startedAt": 1795842201.780596,
+      "finishedAt": 1795842202.270064,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-month-2024-11",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-02",
+      "readyAt": 1795842200.535388,
+      "startedAt": 1795842202.6011944,
+      "finishedAt": 1795842204.2021117,
+      "transferBytes": 21262
+    },
+    {
+      "activityId": "community-inpe-deter-ensemble-v1-aggregate",
+      "status": "completed",
+      "allocatedResourceId": "community-inpe-deter-slot-00",
+      "readyAt": 1795842208.3914542,
+      "startedAt": 1795842237.5457683,
+      "finishedAt": 1795842263.5245833,
+      "transferBytes": 1317158
+    }
+  ]
+}

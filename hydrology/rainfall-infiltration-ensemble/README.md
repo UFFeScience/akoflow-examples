@@ -87,10 +87,11 @@ the same host. The first one-slot run took 1,395 seconds and finished before
 the IDW campaign began. The second four-slot run also completed all 514
 activities, peaking at four overlapping batches and matching all three
 checksums. Its 603-second run window (06:47:49–06:57:52 UTC) was also
-concurrent with the IDW one-slot run. The [partial second repetition record](evidence/reference/second-scheduling-repetition-partial.json)
+concurrent with the IDW one-slot run. The [second scheduling repetition](evidence/reference/second-scheduling-repetition.json)
 also includes the validated eight-slot run. It completed in 499 seconds,
 peaked at six overlapping batches, and shared the host with IDW for 492
-seconds. The remaining profiles are in progress.
+seconds. All five second-repetition runs completed with the same checksums.
+The third repetition is in progress.
 
 The original workflow code and synthetic inputs use the [MIT license](LICENSE).
 The scientific model is attributed to Mein and Larson above.

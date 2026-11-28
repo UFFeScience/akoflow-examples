@@ -1,0 +1,7 @@
+{
+  "snapshot_base_url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/dad81539de6c71cac69894637a8cb1d390679afe/remote-sensing/inpe-deter-monthly-alerts/snapshot",
+  "boundary": {
+    "name": "ibge-amazon-states.geojson.gz",
+    "sha256": "5fc3a609886e4081f9bfc659ba88b4b3ad063c648a0de80a2875dece9476ddaa"
+  }
+}

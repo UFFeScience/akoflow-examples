@@ -1,0 +1,7 @@
+{
+  "id": "community-inpe-deter-scope",
+  "name": "INPE DETER execution scope",
+  "environmentVersionIds": [
+    "community-inpe-deter-cpu-v1"
+  ]
+}

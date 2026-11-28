@@ -1,0 +1,12 @@
+{
+  "ready": true,
+  "recipe_id": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a",
+  "context_digest": "sha256:eb2b6d0531916c361208099878a59f0c9a288d604021598c8f96861faa7845db",
+  "executable_checks": [
+    {
+      "status": "warning",
+      "count": 74
+    }
+  ],
+  "verified_downloads": 73
+}

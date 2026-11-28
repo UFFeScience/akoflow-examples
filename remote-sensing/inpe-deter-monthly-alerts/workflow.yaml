@@ -1,0 +1,2146 @@
+{
+  "name": "community-inpe-deter-ensemble-v1",
+  "spec": {
+    "namespace": "community-explorer",
+    "activities": [
+      {
+        "name": "prepare",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/prepare.py"
+          ]
+        }
+      },
+      {
+        "name": "month-2019-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2019-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2019-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2020-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2020-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2021-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2021-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2022-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2022-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2023-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2023-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-01",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-01",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-02",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-02",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-03",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-03",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-04",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-04",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-05",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-05",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-06",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-06",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-07",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-07",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-08",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-08",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-09",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-09",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-10",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-10",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-11",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-11",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "month-2024-12",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/audit_month.py",
+            "2024-12",
+            "/app/snapshot",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "aggregate",
+        "runtime": "community-inpe-deter-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python3",
+          "arguments": [
+            "/app/scripts/aggregate.py",
+            ".",
+            "/app/snapshot",
+            "/app/reference.csv",
+            "."
+          ]
+        },
+        "dependsOn": [
+          "month-2019-01",
+          "month-2019-02",
+          "month-2019-03",
+          "month-2019-04",
+          "month-2019-05",
+          "month-2019-06",
+          "month-2019-07",
+          "month-2019-08",
+          "month-2019-09",
+          "month-2019-10",
+          "month-2019-11",
+          "month-2019-12",
+          "month-2020-01",
+          "month-2020-02",
+          "month-2020-03",
+          "month-2020-04",
+          "month-2020-05",
+          "month-2020-06",
+          "month-2020-07",
+          "month-2020-08",
+          "month-2020-09",
+          "month-2020-10",
+          "month-2020-11",
+          "month-2020-12",
+          "month-2021-01",
+          "month-2021-02",
+          "month-2021-03",
+          "month-2021-04",
+          "month-2021-05",
+          "month-2021-06",
+          "month-2021-07",
+          "month-2021-08",
+          "month-2021-09",
+          "month-2021-10",
+          "month-2021-11",
+          "month-2021-12",
+          "month-2022-01",
+          "month-2022-02",
+          "month-2022-03",
+          "month-2022-04",
+          "month-2022-05",
+          "month-2022-06",
+          "month-2022-07",
+          "month-2022-08",
+          "month-2022-09",
+          "month-2022-10",
+          "month-2022-11",
+          "month-2022-12",
+          "month-2023-01",
+          "month-2023-02",
+          "month-2023-03",
+          "month-2023-04",
+          "month-2023-05",
+          "month-2023-06",
+          "month-2023-07",
+          "month-2023-08",
+          "month-2023-09",
+          "month-2023-10",
+          "month-2023-11",
+          "month-2023-12",
+          "month-2024-01",
+          "month-2024-02",
+          "month-2024-03",
+          "month-2024-04",
+          "month-2024-05",
+          "month-2024-06",
+          "month-2024-07",
+          "month-2024-08",
+          "month-2024-09",
+          "month-2024-10",
+          "month-2024-11",
+          "month-2024-12"
+        ]
+      }
+    ]
+  }
+}

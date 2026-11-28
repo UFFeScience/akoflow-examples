@@ -34,3 +34,19 @@ python3 tools/qualify.py snapshot qualification
 Capture resumes from each archive whose bytes match its recorded SHA-256.
 Qualification checks the partitions and independently aggregates the records
 by observation month, state, and class with SQLite.
+
+## Run in AkôFlow
+
+The portable image recipe fetches the 72 monthly archives and the IBGE state
+outlines from the pinned snapshot commit during image preparation. It verifies
+each archive before allowing any audit activity to start. The benchmark uses
+the same 72 month activities in each 1-, 4-, and 8-slot plan.
+
+```sh
+./run.sh
+AKOFLOW_SUBMIT=1 ./run.sh
+```
+
+The aggregate activity checks the output inventory, compares counts and source
+areas against the SQLite reference, and emits a CSV, a diagnostics CSV, a
+reference map, and a monthly animation.

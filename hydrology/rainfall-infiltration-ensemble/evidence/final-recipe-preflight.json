@@ -1,0 +1,11 @@
+{
+  "ready": true,
+  "recipe_id": "recipe-build-7670826ae0cc2db21bacedc589c919685448ebdef7c8425f8b340783c3ac2882",
+  "context_digest": "sha256:4224d2ceb4db8e9d9b6a6516b754756b4695b36d1f4175a00c2840dcbb85d2a8",
+  "executable_checks": [
+    {
+      "status": "warning",
+      "count": 514
+    }
+  ]
+}

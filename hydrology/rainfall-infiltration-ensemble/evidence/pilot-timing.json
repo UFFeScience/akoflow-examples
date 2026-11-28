@@ -1,0 +1,38 @@
+[
+  {
+    "batch": "batch-048",
+    "columns": 128,
+    "ponded": 0,
+    "median_seconds": 6.469956133514643e-06
+  },
+  {
+    "batch": "batch-256",
+    "columns": 128,
+    "ponded": 128,
+    "median_seconds": 0.6286762640229426
+  },
+  {
+    "batch": "batch-511",
+    "columns": 128,
+    "ponded": 128,
+    "median_seconds": 0.610286409035325
+  },
+  {
+    "batch": "batch-048",
+    "columns": 256,
+    "ponded": 0,
+    "median_seconds": 6.149988621473312e-06
+  },
+  {
+    "batch": "batch-256",
+    "columns": 256,
+    "ponded": 256,
+    "median_seconds": 1.2622984829940833
+  },
+  {
+    "batch": "batch-511",
+    "columns": 256,
+    "ponded": 256,
+    "median_seconds": 1.208950369968079
+  }
+]

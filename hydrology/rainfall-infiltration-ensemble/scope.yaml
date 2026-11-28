@@ -1,0 +1,7 @@
+{
+  "id": "community-rainfall-infiltration-scope",
+  "name": "Rainfall infiltration execution scope",
+  "environmentVersionIds": [
+    "community-rainfall-infiltration-cpu-v1"
+  ]
+}

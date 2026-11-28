@@ -1,0 +1,13 @@
+{
+  "columns_per_batch": 256,
+  "columns": {
+    "no_ponding": 43010,
+    "ponding_after_storm": 10333,
+    "ponding_during_storm": 77729
+  },
+  "batches": {
+    "none": 192,
+    "all": 283,
+    "mixed": 37
+  }
+}

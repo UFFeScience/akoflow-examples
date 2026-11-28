@@ -1,0 +1,26 @@
+{
+  "recipe_id": "recipe-build-d2eb743cdc77e8de0e7a674cfd2d01a7658d24e37b6dc9ab838f0974c1e57c33",
+  "context_digest": "sha256:bc530b50c498f09a4cf7dd7d41df077baad147dde2ae55f9f623769b4b70b8dd",
+  "original": {
+    "ready": false,
+    "executable_checks": [
+      {
+        "status": "blocked",
+        "count": 78
+      },
+      {
+        "status": "warning",
+        "count": 436
+      }
+    ]
+  },
+  "patched": {
+    "ready": true,
+    "executable_checks": [
+      {
+        "status": "warning",
+        "count": 514
+      }
+    ]
+  }
+}

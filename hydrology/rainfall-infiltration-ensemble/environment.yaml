@@ -1,0 +1,646 @@
+{
+  "environment": {
+    "id": "community-rainfall-infiltration-cpu",
+    "name": "Rainfall infiltration CPU profiles",
+    "status": "ready"
+  },
+  "version": {
+    "id": "community-rainfall-infiltration-cpu-v1",
+    "environmentId": "community-rainfall-infiltration-cpu",
+    "version": 1,
+    "status": "published",
+    "networkModel": "local",
+    "interferenceModel": "observed",
+    "costModel": "free",
+    "configurationHash": "community-rainfall-infiltration-cpu-v1"
+  },
+  "runtimes": [
+    {
+      "id": "community-rainfall-infiltration-local",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "name": "Local Docker",
+      "driver": "local",
+      "mode": "execution",
+      "role": "compute",
+      "capabilities": {
+        "batch": true,
+        "container": true
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "community-rainfall-infiltration-slot-00",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 0",
+      "providerId": "local-docker-rainfall-infiltration-0",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-01",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 1",
+      "providerId": "local-docker-rainfall-infiltration-1",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-02",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 2",
+      "providerId": "local-docker-rainfall-infiltration-2",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-03",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 3",
+      "providerId": "local-docker-rainfall-infiltration-3",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-04",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 4",
+      "providerId": "local-docker-rainfall-infiltration-4",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-05",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 5",
+      "providerId": "local-docker-rainfall-infiltration-5",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-06",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 6",
+      "providerId": "local-docker-rainfall-infiltration-6",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-07",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 7",
+      "providerId": "local-docker-rainfall-infiltration-7",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-08",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 8",
+      "providerId": "local-docker-rainfall-infiltration-8",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-09",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 9",
+      "providerId": "local-docker-rainfall-infiltration-9",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-10",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 10",
+      "providerId": "local-docker-rainfall-infiltration-10",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-11",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 11",
+      "providerId": "local-docker-rainfall-infiltration-11",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-12",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 12",
+      "providerId": "local-docker-rainfall-infiltration-12",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-13",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 13",
+      "providerId": "local-docker-rainfall-infiltration-13",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-14",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 14",
+      "providerId": "local-docker-rainfall-infiltration-14",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-15",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 15",
+      "providerId": "local-docker-rainfall-infiltration-15",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-16",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 16",
+      "providerId": "local-docker-rainfall-infiltration-16",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-17",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 17",
+      "providerId": "local-docker-rainfall-infiltration-17",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-18",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 18",
+      "providerId": "local-docker-rainfall-infiltration-18",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-19",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 19",
+      "providerId": "local-docker-rainfall-infiltration-19",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-20",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 20",
+      "providerId": "local-docker-rainfall-infiltration-20",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-21",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 21",
+      "providerId": "local-docker-rainfall-infiltration-21",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-22",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 22",
+      "providerId": "local-docker-rainfall-infiltration-22",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-23",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 23",
+      "providerId": "local-docker-rainfall-infiltration-23",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-24",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 24",
+      "providerId": "local-docker-rainfall-infiltration-24",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-25",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 25",
+      "providerId": "local-docker-rainfall-infiltration-25",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-26",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 26",
+      "providerId": "local-docker-rainfall-infiltration-26",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-27",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 27",
+      "providerId": "local-docker-rainfall-infiltration-27",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-28",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 28",
+      "providerId": "local-docker-rainfall-infiltration-28",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-29",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 29",
+      "providerId": "local-docker-rainfall-infiltration-29",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-30",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 30",
+      "providerId": "local-docker-rainfall-infiltration-30",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-rainfall-infiltration-slot-31",
+      "environmentVersionId": "community-rainfall-infiltration-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 31",
+      "providerId": "local-docker-rainfall-infiltration-31",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    }
+  ],
+  "storages": [],
+  "connections": [],
+  "activityResourceProfiles": [],
+  "resourceRuntimeBindings": [
+    {
+      "resourceId": "community-rainfall-infiltration-slot-00",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-01",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-02",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-03",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-04",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-05",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-06",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-07",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-08",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-09",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-10",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-11",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-12",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-13",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-14",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-15",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-16",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-17",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-18",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-19",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-20",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-21",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-22",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-23",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-24",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-25",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-26",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-27",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-28",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-29",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-30",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-rainfall-infiltration-slot-31",
+      "runtimeId": "community-rainfall-infiltration-local",
+      "enabled": true
+    }
+  ]
+}

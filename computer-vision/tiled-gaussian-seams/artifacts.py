@@ -8,6 +8,7 @@ from pathlib import Path
 import numpy as np
 
 from gaussian import FILTERS, GRID, SHAPES, cases, convolve, core, filter_tile, image, kernel, seam_distances
+from render import render
 
 COLUMNS = ("image", "filter", "tile", "radius", "halo", "seam_distance", "pixels",
            "absolute_error_sum", "max_absolute_error", "input_pixels")
@@ -111,3 +112,4 @@ if __name__ == "__main__":
             writer.writerows(tile_rows(args.image, args.filter, args.tile))
     else:
         aggregate(args.source, args.out)
+        render(args.out)

@@ -50,3 +50,18 @@ AKOFLOW_SUBMIT=1 ./run.sh
 The aggregate activity checks the output inventory, compares counts and source
 areas against the SQLite reference, and emits a CSV, a diagnostics CSV, a
 reference map, and a monthly animation.
+
+## Local pilot
+
+The local pilot processed all 334,054 records, matched the SQLite reference
+across 2,491 groups, and generated 72 animation frames. The map counts alert
+records in 0.25° cells using the center of each valid geometry's bounding box.
+Geometry anomalies remain in the tabular alert counts.
+
+![DETER alert records by map cell](outputs/deter-reference-map.png)
+
+![Monthly DETER alert records, 2019–2024](outputs/deter-monthly-alerts.gif)
+
+[Monthly table](outputs/deter-month-state-class.csv) ·
+[Diagnostics](outputs/deter-monthly-diagnostics.csv) ·
+[Local pilot validation](evidence/local-pilot-validation.json)

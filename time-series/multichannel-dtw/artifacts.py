@@ -6,6 +6,7 @@ import math
 from pathlib import Path
 
 from alignment import CASES, STRATEGIES, channel_losses, signals, solve
+from render import render
 
 FIELDS = ("case", "seed", "shift", "strategy", "channel", "step", "source_index",
           "target_index", "local_cost", "source_event", "target_event")
@@ -59,8 +60,7 @@ def case_metrics(source, case, length):
     cost=math.fsum(local[channel][i,j] for channel,path in enumerate(channels) for i,j in path)
     mapped=[tuple(j for i,j in channels[channel] if i==anchors[channel]) for channel in (0,1)]
     error=[min(abs(j-shifted[channel]) for j in positions) for channel,positions in enumerate(mapped)]
-    frame_disagreement=math.fsum(abs(len(set(i for i,j in channels[0] if j==frame) ^
-                                        set(i for i,j in channels[1] if j==frame))) for frame in range(length))
+    frame_disagreement = len(set(channels[0]) ^ set(channels[1]))
     cells=length**2*(1 if strategy=="common" else 2)
     return (case, seed, shift, strategy, cost, cells, *error, int(frame_disagreement))
 
@@ -98,4 +98,6 @@ if __name__=="__main__":
     if args.command=="case":
         write_case(args.case,args.length,args.output)
     else:
-        aggregate(args.source,args.length,args.output)
+        args.output.mkdir(parents=True,exist_ok=True)
+        aggregate(args.source,args.length,args.output/"alignment-summary.csv")
+        render(args.length,args.output)

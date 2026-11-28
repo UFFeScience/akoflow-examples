@@ -1,6 +1,6 @@
 plan:
-  id: community-monash-plan-v2
-  workflowVersionId: community-monash-tourism-v2-v1
+  id: community-monash-plan-v3
+  workflowVersionId: community-monash-tourism-v3-v1
   executionScopeId: community-monash-parallel-scope
   networkTopologyId: community-monash-parallel-topology
   source: imported
@@ -9,10 +9,10 @@ plan:
   objective: custom
   predicted: {makespanSeconds: 30, cost: 0, feasible: true}
   assignments:
-    - {id: monash-v2-monthly-ets, activityId: community-monash-tourism-v2-monthly-ets, resourceId: community-monash-slot-0, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-monthly-theta, activityId: community-monash-tourism-v2-monthly-theta, resourceId: community-monash-slot-1, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-quarterly-ets, activityId: community-monash-tourism-v2-quarterly-ets, resourceId: community-monash-slot-2, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-quarterly-theta, activityId: community-monash-tourism-v2-quarterly-theta, resourceId: community-monash-slot-3, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-yearly-ets, activityId: community-monash-tourism-v2-yearly-ets, resourceId: community-monash-slot-1, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-yearly-theta, activityId: community-monash-tourism-v2-yearly-theta, resourceId: community-monash-slot-3, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}
-    - {id: monash-v2-aggregate, activityId: community-monash-tourism-v2-aggregate, resourceId: community-monash-slot-0, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-monthly-ets, activityId: community-monash-tourism-v3-monthly-ets, resourceId: community-monash-slot-0, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-monthly-theta, activityId: community-monash-tourism-v3-monthly-theta, resourceId: community-monash-slot-1, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-quarterly-ets, activityId: community-monash-tourism-v3-quarterly-ets, resourceId: community-monash-slot-2, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-quarterly-theta, activityId: community-monash-tourism-v3-quarterly-theta, resourceId: community-monash-slot-3, orderOnResource: 0, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-yearly-ets, activityId: community-monash-tourism-v3-yearly-ets, resourceId: community-monash-slot-1, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-yearly-theta, activityId: community-monash-tourism-v3-yearly-theta, resourceId: community-monash-slot-3, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}
+    - {id: monash-v3-aggregate, activityId: community-monash-tourism-v3-aggregate, resourceId: community-monash-slot-0, orderOnResource: 1, metadata: {runtimeId: community-monash-local}}

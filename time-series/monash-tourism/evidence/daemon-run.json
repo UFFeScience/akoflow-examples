@@ -1,52 +1,52 @@
 {
   "run": {
-    "id": "community-monash-run-v2",
+    "id": "community-monash-run-v3",
     "status": "completed",
-    "startedAt": "2026-11-28T02:07:40Z",
-    "finishedAt": "2026-11-28T02:12:43Z"
+    "startedAt": "2026-11-28T02:14:40Z",
+    "finishedAt": "2026-11-28T02:20:30Z"
   },
   "activities": [
     {
-      "activityId": "community-monash-tourism-v2-monthly-ets",
+      "activityId": "community-monash-tourism-v3-monthly-ets",
       "status": "completed",
-      "startedAt": 1795831664.953505,
-      "finishedAt": 1795831954.0191813
+      "startedAt": 1795832141.6707404,
+      "finishedAt": 1795832425.468398
     },
     {
-      "activityId": "community-monash-tourism-v2-monthly-theta",
+      "activityId": "community-monash-tourism-v3-monthly-theta",
       "status": "completed",
-      "startedAt": 1795831665.246292,
-      "finishedAt": 1795831670.4383438
+      "startedAt": 1795832141.6984632,
+      "finishedAt": 1795832146.7613502
     },
     {
-      "activityId": "community-monash-tourism-v2-quarterly-ets",
+      "activityId": "community-monash-tourism-v3-quarterly-ets",
       "status": "completed",
-      "startedAt": 1795831665.9906385,
-      "finishedAt": 1795831724.9046454
+      "startedAt": 1795832141.9503038,
+      "finishedAt": 1795832203.2205274
     },
     {
-      "activityId": "community-monash-tourism-v2-quarterly-theta",
+      "activityId": "community-monash-tourism-v3-quarterly-theta",
       "status": "completed",
-      "startedAt": 1795831666.419097,
-      "finishedAt": 1795831671.8317568
+      "startedAt": 1795832142.1837819,
+      "finishedAt": 1795832147.5514731
     },
     {
-      "activityId": "community-monash-tourism-v2-yearly-ets",
+      "activityId": "community-monash-tourism-v3-yearly-ets",
       "status": "completed",
-      "startedAt": 1795831672.4579372,
-      "finishedAt": 1795831680.2638922
+      "startedAt": 1795832149.1947565,
+      "finishedAt": 1795832156.2961957
     },
     {
-      "activityId": "community-monash-tourism-v2-yearly-theta",
+      "activityId": "community-monash-tourism-v3-yearly-theta",
       "status": "completed",
-      "startedAt": 1795831674.240034,
-      "finishedAt": 1795831678.48907
+      "startedAt": 1795832149.4583127,
+      "finishedAt": 1795832153.2450223
     },
     {
-      "activityId": "community-monash-tourism-v2-aggregate",
+      "activityId": "community-monash-tourism-v3-aggregate",
       "status": "completed",
-      "startedAt": 1795831962.2920012,
-      "finishedAt": 1795831963.476533
+      "startedAt": 1795832428.7519445,
+      "finishedAt": 1795832429.852329
     }
   ],
   "outputs": [

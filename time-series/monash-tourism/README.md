@@ -41,8 +41,9 @@ forecast 8.20, with a seasonal naïve fallback on model errors.
 
 ## Run
 
-The portable workflow embeds the pinned Debian base recipe, scripts, and
-checksum-verified archives. Build locally with
+The portable workflow embeds the pinned Debian base recipe and scripts.
+The image build downloads the archives from an immutable repository revision
+and verifies their published checksums before the model runs. Build locally with
 `docker build -f docker/Dockerfile -t community-monash-tourism:v1 .`.
 Run `./run.sh` to preflight, then use `AKOFLOW_SUBMIT=1 ./run.sh` to execute.
 
@@ -51,11 +52,11 @@ and error CSVs, and validation report.
 
 ## Recorded execution and gallery
 
-The seven activities in run `community-monash-run-v2` completed and the
+The seven activities in run `community-monash-run-v3` completed and the
 validator passed. All six scores agreed with the published benchmark within
 0.005 MASE. ETS scored lower at monthly and quarterly frequencies, and Theta
 scored lower at yearly frequency. All 1,311 series were scored for each model.
-The monthly and quarterly ETS activities overlapped for 58.914 seconds.
+The monthly and quarterly ETS activities overlapped for 61.270 seconds.
 
 ![Observed MASE by model and frequency](outputs/tourism-mase.png)
 

@@ -62,3 +62,10 @@ Regenerate the full workflow before using its plans again.
 The [compact build evidence](evidence/compact-build-preflight.json) records
 the 682-byte build context, offline validation against the local pilot,
 and daemon preflights for both the full workflow and all short schedules.
+
+Run `python3 profile.py "$recipe" /path/to/evidence` to execute or resume
+the full four-slot reference and the short profiles. The collector checks
+calibration dependencies, exact artifact inventory, and matching
+calibration, scene, and aggregate checksums across the short runs. Its
+timing summary separates calibration, scene processing, aggregation
+preparation, and aggregation execution.

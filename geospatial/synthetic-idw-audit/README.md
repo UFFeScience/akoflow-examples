@@ -20,7 +20,10 @@ Holdout RMSE improved in six of sixteen paired surface/exponent comparisons.
 The 1,033-activity AkôFlow DAG uses eight sample-preparation tasks, 1,024
 prediction tasks and one aggregation. Each prediction receives the prepared
 sites for its own surface. The [portable build recipe](evidence/portable-recipe.json)
-records the build context and recipe digests. All 1,033 executable checks
+records the build context and recipe digests. The 732-byte context fetches the
+manifest and scripts from the immutable `e95a6b1` revision during the image build.
+Each fetch has an enforced SHA-256. Activities need no external data access.
+All 1,033 executable checks
 passed preflight on an isolated daemon supporting shared recipe probes.
 Measured scheduling profiles and the Hub run are pending.
 

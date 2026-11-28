@@ -1,0 +1,29 @@
+{
+  "source": "Pinned OCI image, offline kernel control",
+  "units": "Euclidean position error",
+  "pairing": "All bias levels preserve the same truth, orientation, noise and visibility for each seed and occlusion level.",
+  "workloads": [
+    {
+      "frames_per_scenario": 96,
+      "scenarios": 256,
+      "fully_occluded_scenarios": 64,
+      "four_hidden_bias_ten": {
+        "paired_trajectories": 16,
+        "median_lower_rmse_count": 16,
+        "median_across_trajectories_mean_method_rmse": 2.5106639332996474,
+        "median_across_trajectories_median_method_rmse": 0.23208137458346917
+      }
+    },
+    {
+      "frames_per_scenario": 384,
+      "scenarios": 256,
+      "fully_occluded_scenarios": 64,
+      "four_hidden_bias_ten": {
+        "paired_trajectories": 16,
+        "median_lower_rmse_count": 16,
+        "median_across_trajectories_mean_method_rmse": 2.5084099572185625,
+        "median_across_trajectories_median_method_rmse": 0.2343947293438452
+      }
+    }
+  ]
+}

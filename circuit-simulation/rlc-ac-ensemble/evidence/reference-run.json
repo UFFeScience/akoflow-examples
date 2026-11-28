@@ -1,4 +1,5 @@
 {
+  "slots": 4,
   "run": {
     "id": "community-ngspice-rlc-run-4-v1",
     "status": "completed",
@@ -9,6 +10,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-prepare",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836470.7338817,
       "startedAt": 1795836471.3982856,
       "finishedAt": 1795836471.5251608
@@ -16,6 +18,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-001",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836471.9590418,
       "startedAt": 1795836472.9770908,
       "finishedAt": 1795836473.953003
@@ -23,6 +26,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-002",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836471.9662993,
       "startedAt": 1795836473.3208714,
       "finishedAt": 1795836474.2156425
@@ -30,6 +34,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-003",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836471.9747932,
       "startedAt": 1795836473.631382,
       "finishedAt": 1795836474.4969254
@@ -37,6 +42,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-000",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836471.9510322,
       "startedAt": 1795836473.908384,
       "finishedAt": 1795836474.6889346
@@ -44,6 +50,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-005",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836474.759153,
       "startedAt": 1795836475.4862552,
       "finishedAt": 1795836476.2504156
@@ -51,6 +58,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-004",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836475.7778888,
       "startedAt": 1795836476.747356,
       "finishedAt": 1795836477.568688
@@ -58,6 +66,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-006",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836476.1791794,
       "startedAt": 1795836477.145747,
       "finishedAt": 1795836478.053626
@@ -65,6 +74,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-007",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836476.186029,
       "startedAt": 1795836477.3447134,
       "finishedAt": 1795836478.2181199
@@ -72,6 +82,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-009",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836477.9531407,
       "startedAt": 1795836478.9067364,
       "finishedAt": 1795836479.7111204
@@ -79,6 +90,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-010",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836479.2457712,
       "startedAt": 1795836480.8122234,
       "finishedAt": 1795836482.215308
@@ -86,6 +98,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-008",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836478.9264977,
       "startedAt": 1795836480.8761249,
       "finishedAt": 1795836482.2243567
@@ -93,6 +106,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-011",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836480.1974409,
       "startedAt": 1795836483.2005303,
       "finishedAt": 1795836484.1987786
@@ -100,6 +114,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-013",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836481.7174728,
       "startedAt": 1795836484.6611404,
       "finishedAt": 1795836485.5628526
@@ -107,6 +122,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-014",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836483.3979344,
       "startedAt": 1795836485.1843288,
       "finishedAt": 1795836486.077861
@@ -114,6 +130,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-012",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836484.3014224,
       "startedAt": 1795836485.8545783,
       "finishedAt": 1795836486.8180153
@@ -121,6 +138,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-015",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836485.1466906,
       "startedAt": 1795836486.5109646,
       "finishedAt": 1795836487.3534186
@@ -128,6 +146,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-017",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836487.115887,
       "startedAt": 1795836488.2471054,
       "finishedAt": 1795836489.1089969
@@ -135,6 +154,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-018",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836487.4121888,
       "startedAt": 1795836488.8259873,
       "finishedAt": 1795836489.6604674
@@ -142,6 +162,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-019",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836488.6284266,
       "startedAt": 1795836489.895072,
       "finishedAt": 1795836490.682161
@@ -149,6 +170,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-016",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836488.6155622,
       "startedAt": 1795836490.1259491,
       "finishedAt": 1795836490.9348526
@@ -156,6 +178,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-021",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836490.2137456,
       "startedAt": 1795836491.5053682,
       "finishedAt": 1795836492.4251828
@@ -163,6 +186,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-022",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836491.2406693,
       "startedAt": 1795836492.6992478,
       "finishedAt": 1795836493.53359
@@ -170,6 +194,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-023",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836492.665583,
       "startedAt": 1795836493.892431,
       "finishedAt": 1795836494.7038648
@@ -177,6 +202,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-020",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836492.647184,
       "startedAt": 1795836494.2514067,
       "finishedAt": 1795836495.1208315
@@ -184,6 +210,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-025",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836493.309306,
       "startedAt": 1795836494.6721494,
       "finishedAt": 1795836495.5124297
@@ -191,6 +218,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-026",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836494.3736444,
       "startedAt": 1795836495.6175923,
       "finishedAt": 1795836496.4056196
@@ -198,6 +226,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-027",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836496.2772052,
       "startedAt": 1795836497.2883856,
       "finishedAt": 1795836498.097701
@@ -205,6 +234,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-024",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836496.6042416,
       "startedAt": 1795836497.7984679,
       "finishedAt": 1795836498.6080134
@@ -212,6 +242,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-029",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836497.402729,
       "startedAt": 1795836498.522007,
       "finishedAt": 1795836499.3086226
@@ -219,6 +250,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-030",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836497.413103,
       "startedAt": 1795836498.7500112,
       "finishedAt": 1795836499.5503664
@@ -226,6 +258,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-031",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836499.3316176,
       "startedAt": 1795836500.3122172,
       "finishedAt": 1795836501.09605
@@ -233,6 +266,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-033",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836500.3925614,
       "startedAt": 1795836501.4228003,
       "finishedAt": 1795836502.1734514
@@ -240,6 +274,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-034",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836500.8354917,
       "startedAt": 1795836501.7261934,
       "finishedAt": 1795836502.4801009
@@ -247,6 +282,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-028",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836500.8255181,
       "startedAt": 1795836502.0950875,
       "finishedAt": 1795836502.837866
@@ -254,6 +290,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-035",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836502.3992832,
       "startedAt": 1795836503.3390856,
       "finishedAt": 1795836504.1088917
@@ -261,6 +298,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-037",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836503.489895,
       "startedAt": 1795836504.690311,
       "finishedAt": 1795836505.4767675
@@ -268,6 +306,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-038",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836503.5046046,
       "startedAt": 1795836504.8731601,
       "finishedAt": 1795836505.7042096
@@ -275,6 +314,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-032",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836504.4193356,
       "startedAt": 1795836505.6935358,
       "finishedAt": 1795836506.5804098
@@ -282,6 +322,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-039",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836505.3937955,
       "startedAt": 1795836506.5302835,
       "finishedAt": 1795836507.426083
@@ -289,6 +330,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-041",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836506.3713787,
       "startedAt": 1795836507.6859226,
       "finishedAt": 1795836508.5172317
@@ -296,6 +338,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-042",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836507.3997157,
       "startedAt": 1795836508.7779589,
       "finishedAt": 1795836509.5630875
@@ -303,6 +346,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-036",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836507.7299166,
       "startedAt": 1795836508.9377754,
       "finishedAt": 1795836509.76933
@@ -310,6 +354,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-043",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836508.5034952,
       "startedAt": 1795836509.904291,
       "finishedAt": 1795836510.7613633
@@ -317,6 +362,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-045",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836509.5720015,
       "startedAt": 1795836510.8349323,
       "finishedAt": 1795836511.6577005
@@ -324,6 +370,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-046",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836510.4092762,
       "startedAt": 1795836511.5001414,
       "finishedAt": 1795836512.354421
@@ -331,6 +378,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-040",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836511.439302,
       "startedAt": 1795836512.5856857,
       "finishedAt": 1795836513.3519402
@@ -338,6 +386,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-047",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836512.4123807,
       "startedAt": 1795836513.475751,
       "finishedAt": 1795836514.3287742
@@ -345,6 +394,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-050",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836513.6940079,
       "startedAt": 1795836514.712248,
       "finishedAt": 1795836515.497361
@@ -352,6 +402,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-049",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836513.6819847,
       "startedAt": 1795836515.0048435,
       "finishedAt": 1795836515.7700248
@@ -359,6 +410,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-044",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836514.411092,
       "startedAt": 1795836515.4908023,
       "finishedAt": 1795836516.2746527
@@ -366,6 +418,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-051",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836515.5508907,
       "startedAt": 1795836516.652515,
       "finishedAt": 1795836517.4807706
@@ -373,6 +426,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-054",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836516.4407566,
       "startedAt": 1795836517.4559793,
       "finishedAt": 1795836518.2807035
@@ -380,6 +434,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-048",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836517.4644725,
       "startedAt": 1795836518.9850624,
       "finishedAt": 1795836520.1020553
@@ -387,6 +442,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-053",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836517.8585095,
       "startedAt": 1795836519.8383324,
       "finishedAt": 1795836520.8443968
@@ -394,6 +450,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-055",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836518.7026565,
       "startedAt": 1795836520.8024943,
       "finishedAt": 1795836521.7787576
@@ -401,6 +458,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-058",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836519.8823857,
       "startedAt": 1795836521.7074895,
       "finishedAt": 1795836522.5520234
@@ -408,6 +466,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-052",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836521.8042734,
       "startedAt": 1795836523.2769494,
       "finishedAt": 1795836524.0644405
@@ -415,6 +474,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-057",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836522.7715094,
       "startedAt": 1795836524.2482824,
       "finishedAt": 1795836525.0751314
@@ -422,6 +482,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-059",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836523.1714478,
       "startedAt": 1795836524.5420365,
       "finishedAt": 1795836525.3854158
@@ -429,6 +490,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-062",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836523.7895715,
       "startedAt": 1795836525.0303802,
       "finishedAt": 1795836525.8924034
@@ -436,6 +498,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-056",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836525.771534,
       "startedAt": 1795836526.8447568,
       "finishedAt": 1795836527.6389174
@@ -443,6 +506,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-061",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836527.2373924,
       "startedAt": 1795836528.4832497,
       "finishedAt": 1795836529.3046093
@@ -450,6 +514,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-066",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836527.279033,
       "startedAt": 1795836528.8346229,
       "finishedAt": 1795836529.6876805
@@ -457,6 +522,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-063",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836527.2485044,
       "startedAt": 1795836529.2239668,
       "finishedAt": 1795836530.0995655
@@ -464,6 +530,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-060",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836528.9203272,
       "startedAt": 1795836530.205652,
       "finishedAt": 1795836530.9903243
@@ -471,6 +538,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-070",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836530.811624,
       "startedAt": 1795836532.1433249,
       "finishedAt": 1795836533.0481832
@@ -478,6 +546,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-065",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836531.236312,
       "startedAt": 1795836532.711196,
       "finishedAt": 1795836533.646587
@@ -485,6 +554,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-067",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836532.3406324,
       "startedAt": 1795836533.9576533,
       "finishedAt": 1795836534.8369095
@@ -492,6 +562,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-064",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836532.3149936,
       "startedAt": 1795836534.3828983,
       "finishedAt": 1795836535.2204068
@@ -499,6 +570,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-074",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836534.0152462,
       "startedAt": 1795836535.3390808,
       "finishedAt": 1795836536.1255648
@@ -506,6 +578,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-069",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836534.896409,
       "startedAt": 1795836536.1194484,
       "finishedAt": 1795836536.9267387
@@ -513,6 +586,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-071",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836535.8982668,
       "startedAt": 1795836536.8763015,
       "finishedAt": 1795836537.639597
@@ -520,6 +594,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-068",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836536.8998969,
       "startedAt": 1795836537.8900647,
       "finishedAt": 1795836538.6214623
@@ -527,6 +602,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-073",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836537.9311888,
       "startedAt": 1795836538.9156337,
       "finishedAt": 1795836539.655631
@@ -534,6 +610,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-078",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836537.9386663,
       "startedAt": 1795836539.1785233,
       "finishedAt": 1795836539.9114356
@@ -541,6 +618,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-075",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836538.9412751,
       "startedAt": 1795836540.0103176,
       "finishedAt": 1795836541.4103725
@@ -548,6 +626,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-072",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836539.9105194,
       "startedAt": 1795836542.9916499,
       "finishedAt": 1795836543.8735137
@@ -555,6 +634,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-082",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836542.6639378,
       "startedAt": 1795836544.3461392,
       "finishedAt": 1795836545.214903
@@ -562,6 +642,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-077",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836543.4336069,
       "startedAt": 1795836544.7781298,
       "finishedAt": 1795836545.589902
@@ -569,6 +650,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-079",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836543.456286,
       "startedAt": 1795836545.4089513,
       "finishedAt": 1795836546.3638337
@@ -576,6 +658,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-076",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836544.6463933,
       "startedAt": 1795836546.105578,
       "finishedAt": 1795836547.029491
@@ -583,6 +666,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-086",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836547.0596707,
       "startedAt": 1795836549.1337624,
       "finishedAt": 1795836550.020481
@@ -590,6 +674,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-081",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836547.779161,
       "startedAt": 1795836549.8409262,
       "finishedAt": 1795836550.8810618
@@ -597,6 +682,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-083",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836548.8725,
       "startedAt": 1795836550.4344196,
       "finishedAt": 1795836551.2767925
@@ -604,6 +690,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-080",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836548.8531053,
       "startedAt": 1795836550.7761045,
       "finishedAt": 1795836551.5263736
@@ -611,6 +698,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-090",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836550.915413,
       "startedAt": 1795836552.0421379,
       "finishedAt": 1795836552.8245676
@@ -618,6 +706,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-085",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836551.7965915,
       "startedAt": 1795836552.9710026,
       "finishedAt": 1795836553.7304244
@@ -625,6 +714,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-084",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836553.0056558,
       "startedAt": 1795836554.1538339,
       "finishedAt": 1795836554.935422
@@ -632,6 +722,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-087",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836553.0167894,
       "startedAt": 1795836554.2607694,
       "finishedAt": 1795836555.0804336
@@ -639,6 +730,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-094",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836553.9059227,
       "startedAt": 1795836555.1961224,
       "finishedAt": 1795836556.0726817
@@ -646,6 +738,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-089",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836554.8772244,
       "startedAt": 1795836556.1088898,
       "finishedAt": 1795836556.8898845
@@ -653,6 +746,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-088",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836555.8741193,
       "startedAt": 1795836557.205162,
       "finishedAt": 1795836557.9930515
@@ -660,6 +754,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-091",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836556.832389,
       "startedAt": 1795836557.850354,
       "finishedAt": 1795836558.7993433
@@ -667,6 +762,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-098",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836557.176663,
       "startedAt": 1795836558.262408,
       "finishedAt": 1795836559.1863964
@@ -674,6 +770,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-093",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836557.866148,
       "startedAt": 1795836559.1146398,
       "finishedAt": 1795836559.9680514
@@ -681,6 +778,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-092",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836558.8676858,
       "startedAt": 1795836560.0378878,
       "finishedAt": 1795836560.8904748
@@ -688,6 +786,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-095",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836559.980451,
       "startedAt": 1795836561.1838965,
       "finishedAt": 1795836561.9384675
@@ -695,6 +794,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-102",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836559.9994843,
       "startedAt": 1795836561.3042803,
       "finishedAt": 1795836562.0877402
@@ -702,6 +802,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-097",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836561.0001364,
       "startedAt": 1795836562.1502197,
       "finishedAt": 1795836562.9589212
@@ -709,6 +810,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-096",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836561.8729637,
       "startedAt": 1795836562.9314406,
       "finishedAt": 1795836563.6860585
@@ -716,6 +818,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-106",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836562.9896908,
       "startedAt": 1795836563.9133172,
       "finishedAt": 1795836564.6880488
@@ -723,6 +826,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-099",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836562.9788203,
       "startedAt": 1795836564.1199212,
       "finishedAt": 1795836564.8889694
@@ -730,6 +834,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-101",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836563.8513694,
       "startedAt": 1795836564.8762157,
       "finishedAt": 1795836565.6267328
@@ -737,6 +842,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-100",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836564.826115,
       "startedAt": 1795836565.8769426,
       "finishedAt": 1795836566.637679
@@ -744,6 +850,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-103",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836565.8806312,
       "startedAt": 1795836566.8933125,
       "finishedAt": 1795836567.6490214
@@ -751,6 +858,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-110",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836566.2145686,
       "startedAt": 1795836567.1382358,
       "finishedAt": 1795836567.886262
@@ -758,6 +866,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-105",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836566.9237103,
       "startedAt": 1795836567.8565824,
       "finishedAt": 1795836568.586434
@@ -765,6 +874,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-104",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836567.8407931,
       "startedAt": 1795836568.7511313,
       "finishedAt": 1795836569.4813297
@@ -772,6 +882,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-107",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836568.954227,
       "startedAt": 1795836569.7849717,
       "finishedAt": 1795836570.4952126
@@ -779,6 +890,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-114",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836568.9636235,
       "startedAt": 1795836569.9512007,
       "finishedAt": 1795836570.661184
@@ -786,6 +898,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-109",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836570.0347583,
       "startedAt": 1795836570.845605,
       "finishedAt": 1795836571.558761
@@ -793,6 +906,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-108",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836571.0351806,
       "startedAt": 1795836571.846005,
       "finishedAt": 1795836572.5687563
@@ -800,6 +914,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-111",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836572.1443849,
       "startedAt": 1795836573.008314,
       "finishedAt": 1795836573.7448425
@@ -807,6 +922,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-118",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836572.1506464,
       "startedAt": 1795836573.233176,
       "finishedAt": 1795836573.9633389
@@ -814,6 +930,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-113",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836573.0674715,
       "startedAt": 1795836573.9268508,
       "finishedAt": 1795836574.6528506
@@ -821,6 +938,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-112",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836574.0530448,
       "startedAt": 1795836574.9769611,
       "finishedAt": 1795836575.765347
@@ -828,6 +946,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-122",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836575.2236893,
       "startedAt": 1795836576.1889026,
       "finishedAt": 1795836576.9605992
@@ -835,6 +954,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-115",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836575.4989371,
       "startedAt": 1795836576.5325704,
       "finishedAt": 1795836577.328324
@@ -842,6 +962,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-117",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836576.3240955,
       "startedAt": 1795836577.355868,
       "finishedAt": 1795836578.188856
@@ -849,6 +970,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-116",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836577.261177,
       "startedAt": 1795836578.418437,
       "finishedAt": 1795836579.21146
@@ -856,6 +978,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-119",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836578.5869207,
       "startedAt": 1795836579.7382188,
       "finishedAt": 1795836580.5674367
@@ -863,6 +986,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-126",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-02",
       "readyAt": 1795836578.6085079,
       "startedAt": 1795836580.085183,
       "finishedAt": 1795836580.8688357
@@ -870,6 +994,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-121",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836579.5114512,
       "startedAt": 1795836580.735729,
       "finishedAt": 1795836581.4855058
@@ -877,6 +1002,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-120",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836580.4709556,
       "startedAt": 1795836581.4279015,
       "finishedAt": 1795836582.1563056
@@ -884,6 +1010,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-123",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836582.6612782,
       "startedAt": 1795836583.5935478,
       "finishedAt": 1795836584.3154194
@@ -891,6 +1018,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-125",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-01",
       "readyAt": 1795836582.6702373,
       "startedAt": 1795836583.8419569,
       "finishedAt": 1795836584.5709887
@@ -898,6 +1026,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-124",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836583.4276917,
       "startedAt": 1795836584.2532716,
       "finishedAt": 1795836584.9688928
@@ -905,6 +1034,7 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-batch-127",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-03",
       "readyAt": 1795836585.4352248,
       "startedAt": 1795836586.2376719,
       "finishedAt": 1795836586.978509
@@ -912,10 +1042,10 @@
     {
       "activityId": "community-ngspice-rlc-ensemble-v1-aggregate",
       "status": "completed",
+      "allocatedResourceId": "community-ngspice-rlc-slot-00",
       "readyAt": 1795836588.3824632,
       "startedAt": 1795836632.6094122,
       "finishedAt": 1795836645.246054
     }
-  ],
-  "slots": 4
+  ]
 }

@@ -24,11 +24,21 @@ for instant, delta in sorted(events):
     times.append(instant)
     counts.append(active)
 
-figure, axis = plt.subplots(figsize=(10, 4.2), layout="constrained")
+figure, (workers, axis) = plt.subplots(
+    2, 1, figsize=(10, 5.4), sharex=True, height_ratios=(2, 1), layout="constrained"
+)
+resources = sorted({item["allocatedResourceId"] for item in batches})
+for level, resource in enumerate(resources):
+    intervals = [
+        (item["startedAt"] - start, item["finishedAt"] - item["startedAt"])
+        for item in batches if item["allocatedResourceId"] == resource
+    ]
+    workers.broken_barh(intervals, (level - 0.35, 0.7), facecolors="#196b58")
+workers.set(title=f"ngspice RLC ensemble · {len(batches)} batches · {capture['slots']} slots",
+            ylabel="Worker slot", yticks=range(len(resources)), yticklabels=range(1, len(resources) + 1))
 axis.step(times, counts, where="post", color="#196b58", linewidth=1)
 axis.fill_between(times, counts, step="post", color="#196b58", alpha=0.2)
-axis.set(title=f"ngspice RLC ensemble · {len(batches)} replicas · {capture['slots']} slots",
-         xlabel="Seconds since the first replica started", ylabel="Simultaneous replicas",
+axis.set(xlabel="Seconds since the first batch started", ylabel="Active batches",
          ylim=(0, max(counts) + 0.5), yticks=range(max(counts) + 1))
 axis.grid(axis="y", alpha=0.2)
 figure.savefig(args.output, dpi=115)

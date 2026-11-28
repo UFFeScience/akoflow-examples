@@ -69,3 +69,8 @@ calibration dependencies, exact artifact inventory, and matching
 calibration, scene, and aggregate checksums across the short runs. Its
 timing summary separates calibration, scene processing, aggregation
 preparation, and aggregation execution.
+
+Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
+with Matplotlib to visualize the measured scene concurrency by
+interference level. The figure marks calibration and aggregation and
+validates dependency ordering and captured peak concurrency.

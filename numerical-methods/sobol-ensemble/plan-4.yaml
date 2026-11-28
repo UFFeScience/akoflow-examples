@@ -1,0 +1,1189 @@
+{
+  "plan": {
+    "id": "community-sobol-plan-4-v1",
+    "workflowVersionId": "community-sobol-ensemble-v1-v1",
+    "executionScopeId": "community-sobol-scope",
+    "networkTopologyId": "community-sobol-topology",
+    "source": "imported",
+    "algorithm": "manual",
+    "algorithmVersion": "1",
+    "objective": "custom",
+    "predicted": {
+      "makespanSeconds": 300,
+      "cost": 0,
+      "feasible": true
+    },
+    "assignments": [
+      {
+        "id": "sobol-4-prepare",
+        "activityId": "community-sobol-ensemble-v1-prepare",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-000",
+        "activityId": "community-sobol-ensemble-v1-replicate-000",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-001",
+        "activityId": "community-sobol-ensemble-v1-replicate-001",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-002",
+        "activityId": "community-sobol-ensemble-v1-replicate-002",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-003",
+        "activityId": "community-sobol-ensemble-v1-replicate-003",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-004",
+        "activityId": "community-sobol-ensemble-v1-replicate-004",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-005",
+        "activityId": "community-sobol-ensemble-v1-replicate-005",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-006",
+        "activityId": "community-sobol-ensemble-v1-replicate-006",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-007",
+        "activityId": "community-sobol-ensemble-v1-replicate-007",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-008",
+        "activityId": "community-sobol-ensemble-v1-replicate-008",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-009",
+        "activityId": "community-sobol-ensemble-v1-replicate-009",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-010",
+        "activityId": "community-sobol-ensemble-v1-replicate-010",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-011",
+        "activityId": "community-sobol-ensemble-v1-replicate-011",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-012",
+        "activityId": "community-sobol-ensemble-v1-replicate-012",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-013",
+        "activityId": "community-sobol-ensemble-v1-replicate-013",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-014",
+        "activityId": "community-sobol-ensemble-v1-replicate-014",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-015",
+        "activityId": "community-sobol-ensemble-v1-replicate-015",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-016",
+        "activityId": "community-sobol-ensemble-v1-replicate-016",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-017",
+        "activityId": "community-sobol-ensemble-v1-replicate-017",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-018",
+        "activityId": "community-sobol-ensemble-v1-replicate-018",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-019",
+        "activityId": "community-sobol-ensemble-v1-replicate-019",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-020",
+        "activityId": "community-sobol-ensemble-v1-replicate-020",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-021",
+        "activityId": "community-sobol-ensemble-v1-replicate-021",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-022",
+        "activityId": "community-sobol-ensemble-v1-replicate-022",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-023",
+        "activityId": "community-sobol-ensemble-v1-replicate-023",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-024",
+        "activityId": "community-sobol-ensemble-v1-replicate-024",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-025",
+        "activityId": "community-sobol-ensemble-v1-replicate-025",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-026",
+        "activityId": "community-sobol-ensemble-v1-replicate-026",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-027",
+        "activityId": "community-sobol-ensemble-v1-replicate-027",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-028",
+        "activityId": "community-sobol-ensemble-v1-replicate-028",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 8,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-029",
+        "activityId": "community-sobol-ensemble-v1-replicate-029",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-030",
+        "activityId": "community-sobol-ensemble-v1-replicate-030",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-031",
+        "activityId": "community-sobol-ensemble-v1-replicate-031",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-032",
+        "activityId": "community-sobol-ensemble-v1-replicate-032",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 9,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-033",
+        "activityId": "community-sobol-ensemble-v1-replicate-033",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 8,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-034",
+        "activityId": "community-sobol-ensemble-v1-replicate-034",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 8,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-035",
+        "activityId": "community-sobol-ensemble-v1-replicate-035",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 8,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-036",
+        "activityId": "community-sobol-ensemble-v1-replicate-036",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 10,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-037",
+        "activityId": "community-sobol-ensemble-v1-replicate-037",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 9,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-038",
+        "activityId": "community-sobol-ensemble-v1-replicate-038",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 9,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-039",
+        "activityId": "community-sobol-ensemble-v1-replicate-039",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 9,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-040",
+        "activityId": "community-sobol-ensemble-v1-replicate-040",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 11,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-041",
+        "activityId": "community-sobol-ensemble-v1-replicate-041",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 10,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-042",
+        "activityId": "community-sobol-ensemble-v1-replicate-042",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 10,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-043",
+        "activityId": "community-sobol-ensemble-v1-replicate-043",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 10,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-044",
+        "activityId": "community-sobol-ensemble-v1-replicate-044",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 12,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-045",
+        "activityId": "community-sobol-ensemble-v1-replicate-045",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 11,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-046",
+        "activityId": "community-sobol-ensemble-v1-replicate-046",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 11,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-047",
+        "activityId": "community-sobol-ensemble-v1-replicate-047",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 11,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-048",
+        "activityId": "community-sobol-ensemble-v1-replicate-048",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 13,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-049",
+        "activityId": "community-sobol-ensemble-v1-replicate-049",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 12,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-050",
+        "activityId": "community-sobol-ensemble-v1-replicate-050",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 12,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-051",
+        "activityId": "community-sobol-ensemble-v1-replicate-051",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 12,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-052",
+        "activityId": "community-sobol-ensemble-v1-replicate-052",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 14,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-053",
+        "activityId": "community-sobol-ensemble-v1-replicate-053",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 13,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-054",
+        "activityId": "community-sobol-ensemble-v1-replicate-054",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 13,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-055",
+        "activityId": "community-sobol-ensemble-v1-replicate-055",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 13,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-056",
+        "activityId": "community-sobol-ensemble-v1-replicate-056",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 15,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-057",
+        "activityId": "community-sobol-ensemble-v1-replicate-057",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 14,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-058",
+        "activityId": "community-sobol-ensemble-v1-replicate-058",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 14,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-059",
+        "activityId": "community-sobol-ensemble-v1-replicate-059",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 14,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-060",
+        "activityId": "community-sobol-ensemble-v1-replicate-060",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 16,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-061",
+        "activityId": "community-sobol-ensemble-v1-replicate-061",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 15,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-062",
+        "activityId": "community-sobol-ensemble-v1-replicate-062",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 15,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-063",
+        "activityId": "community-sobol-ensemble-v1-replicate-063",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 15,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-064",
+        "activityId": "community-sobol-ensemble-v1-replicate-064",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 17,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-065",
+        "activityId": "community-sobol-ensemble-v1-replicate-065",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 16,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-066",
+        "activityId": "community-sobol-ensemble-v1-replicate-066",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 16,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-067",
+        "activityId": "community-sobol-ensemble-v1-replicate-067",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 16,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-068",
+        "activityId": "community-sobol-ensemble-v1-replicate-068",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 18,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-069",
+        "activityId": "community-sobol-ensemble-v1-replicate-069",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 17,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-070",
+        "activityId": "community-sobol-ensemble-v1-replicate-070",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 17,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-071",
+        "activityId": "community-sobol-ensemble-v1-replicate-071",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 17,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-072",
+        "activityId": "community-sobol-ensemble-v1-replicate-072",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 19,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-073",
+        "activityId": "community-sobol-ensemble-v1-replicate-073",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 18,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-074",
+        "activityId": "community-sobol-ensemble-v1-replicate-074",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 18,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-075",
+        "activityId": "community-sobol-ensemble-v1-replicate-075",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 18,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-076",
+        "activityId": "community-sobol-ensemble-v1-replicate-076",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 20,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-077",
+        "activityId": "community-sobol-ensemble-v1-replicate-077",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 19,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-078",
+        "activityId": "community-sobol-ensemble-v1-replicate-078",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 19,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-079",
+        "activityId": "community-sobol-ensemble-v1-replicate-079",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 19,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-080",
+        "activityId": "community-sobol-ensemble-v1-replicate-080",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 21,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-081",
+        "activityId": "community-sobol-ensemble-v1-replicate-081",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 20,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-082",
+        "activityId": "community-sobol-ensemble-v1-replicate-082",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 20,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-083",
+        "activityId": "community-sobol-ensemble-v1-replicate-083",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 20,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-084",
+        "activityId": "community-sobol-ensemble-v1-replicate-084",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 22,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-085",
+        "activityId": "community-sobol-ensemble-v1-replicate-085",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 21,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-086",
+        "activityId": "community-sobol-ensemble-v1-replicate-086",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 21,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-087",
+        "activityId": "community-sobol-ensemble-v1-replicate-087",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 21,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-088",
+        "activityId": "community-sobol-ensemble-v1-replicate-088",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 23,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-089",
+        "activityId": "community-sobol-ensemble-v1-replicate-089",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 22,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-090",
+        "activityId": "community-sobol-ensemble-v1-replicate-090",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 22,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-091",
+        "activityId": "community-sobol-ensemble-v1-replicate-091",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 22,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-092",
+        "activityId": "community-sobol-ensemble-v1-replicate-092",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 24,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-093",
+        "activityId": "community-sobol-ensemble-v1-replicate-093",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 23,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-094",
+        "activityId": "community-sobol-ensemble-v1-replicate-094",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 23,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-095",
+        "activityId": "community-sobol-ensemble-v1-replicate-095",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 23,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-096",
+        "activityId": "community-sobol-ensemble-v1-replicate-096",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 25,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-097",
+        "activityId": "community-sobol-ensemble-v1-replicate-097",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 24,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-098",
+        "activityId": "community-sobol-ensemble-v1-replicate-098",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 24,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-099",
+        "activityId": "community-sobol-ensemble-v1-replicate-099",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 24,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-100",
+        "activityId": "community-sobol-ensemble-v1-replicate-100",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 26,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-101",
+        "activityId": "community-sobol-ensemble-v1-replicate-101",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 25,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-102",
+        "activityId": "community-sobol-ensemble-v1-replicate-102",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 25,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-103",
+        "activityId": "community-sobol-ensemble-v1-replicate-103",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 25,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-104",
+        "activityId": "community-sobol-ensemble-v1-replicate-104",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 27,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-105",
+        "activityId": "community-sobol-ensemble-v1-replicate-105",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 26,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-106",
+        "activityId": "community-sobol-ensemble-v1-replicate-106",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 26,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-107",
+        "activityId": "community-sobol-ensemble-v1-replicate-107",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 26,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-108",
+        "activityId": "community-sobol-ensemble-v1-replicate-108",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 28,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-109",
+        "activityId": "community-sobol-ensemble-v1-replicate-109",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 27,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-110",
+        "activityId": "community-sobol-ensemble-v1-replicate-110",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 27,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-111",
+        "activityId": "community-sobol-ensemble-v1-replicate-111",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 27,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-112",
+        "activityId": "community-sobol-ensemble-v1-replicate-112",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 29,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-113",
+        "activityId": "community-sobol-ensemble-v1-replicate-113",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 28,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-114",
+        "activityId": "community-sobol-ensemble-v1-replicate-114",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 28,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-115",
+        "activityId": "community-sobol-ensemble-v1-replicate-115",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 28,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-116",
+        "activityId": "community-sobol-ensemble-v1-replicate-116",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 30,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-117",
+        "activityId": "community-sobol-ensemble-v1-replicate-117",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 29,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-118",
+        "activityId": "community-sobol-ensemble-v1-replicate-118",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 29,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-119",
+        "activityId": "community-sobol-ensemble-v1-replicate-119",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 29,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-120",
+        "activityId": "community-sobol-ensemble-v1-replicate-120",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 31,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-121",
+        "activityId": "community-sobol-ensemble-v1-replicate-121",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 30,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-122",
+        "activityId": "community-sobol-ensemble-v1-replicate-122",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 30,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-123",
+        "activityId": "community-sobol-ensemble-v1-replicate-123",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 30,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-124",
+        "activityId": "community-sobol-ensemble-v1-replicate-124",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 32,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-125",
+        "activityId": "community-sobol-ensemble-v1-replicate-125",
+        "resourceId": "community-sobol-slot-01",
+        "orderOnResource": 31,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-126",
+        "activityId": "community-sobol-ensemble-v1-replicate-126",
+        "resourceId": "community-sobol-slot-02",
+        "orderOnResource": 31,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-replicate-127",
+        "activityId": "community-sobol-ensemble-v1-replicate-127",
+        "resourceId": "community-sobol-slot-03",
+        "orderOnResource": 31,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      },
+      {
+        "id": "sobol-4-aggregate",
+        "activityId": "community-sobol-ensemble-v1-aggregate",
+        "resourceId": "community-sobol-slot-00",
+        "orderOnResource": 33,
+        "metadata": {
+          "runtimeId": "community-sobol-local"
+        }
+      }
+    ]
+  }
+}

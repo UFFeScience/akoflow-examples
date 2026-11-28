@@ -1,0 +1,1188 @@
+{
+  "run": {
+    "id": "community-sobol-run-4-v1",
+    "status": "completed",
+    "startedAt": "2026-11-28T02:34:07Z",
+    "finishedAt": "2026-11-28T02:37:56Z"
+  },
+  "slots": 4,
+  "max_overlapping_replicates": 4,
+  "digests": {
+    "convergence.csv": "sha256:fcbafd17855ba50e8c2afeee228473b8dace227cb11fb3c05e94879033ba6565",
+    "convergence.gif": "sha256:e5a0fa5aafc7feaa8df265222d87c9053e21941c9f2fff50833b81dc192f00a2",
+    "convergence.png": "sha256:fd24280d8e8679606c3d0fdf3200659768191a764e97911b7c4fffcbe4aef779",
+    "replicates.csv": "sha256:7d79a4292bb6da883852ccca6ca1fcad4382c2bc6ada42041a28eab892bdc53f"
+  },
+  "activities": [
+    {
+      "activityId": "community-sobol-ensemble-v1-prepare",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833253.3256981,
+      "readyAt": 1795833253.3256981,
+      "startedAt": 1795833288.244969,
+      "finishedAt": 1795833289.5643778
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-001",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833289.9682562,
+      "readyAt": 1795833289.9682562,
+      "startedAt": 1795833290.8820224,
+      "finishedAt": 1795833292.5492716
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-002",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833289.9782531,
+      "readyAt": 1795833289.9782531,
+      "startedAt": 1795833291.0808792,
+      "finishedAt": 1795833292.6712167
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-003",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833289.9874754,
+      "readyAt": 1795833289.9874754,
+      "startedAt": 1795833291.5375476,
+      "finishedAt": 1795833292.9782722
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-000",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833289.9582095,
+      "readyAt": 1795833289.9582095,
+      "startedAt": 1795833291.7027254,
+      "finishedAt": 1795833293.1243906
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-005",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833293.683248,
+      "readyAt": 1795833293.683248,
+      "startedAt": 1795833294.785654,
+      "finishedAt": 1795833296.234703
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-006",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833293.693649,
+      "readyAt": 1795833293.693649,
+      "startedAt": 1795833295.2721481,
+      "finishedAt": 1795833296.5814955
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-004",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833294.1831741,
+      "readyAt": 1795833294.1831741,
+      "startedAt": 1795833295.5949523,
+      "finishedAt": 1795833296.82925
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-007",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833294.1912866,
+      "readyAt": 1795833294.1912866,
+      "startedAt": 1795833295.8727024,
+      "finishedAt": 1795833297.025405
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-009",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833297.5221207,
+      "readyAt": 1795833297.5221207,
+      "startedAt": 1795833298.8370771,
+      "finishedAt": 1795833300.4431074
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-010",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833298.128996,
+      "readyAt": 1795833298.128996,
+      "startedAt": 1795833299.6203904,
+      "finishedAt": 1795833301.5104485
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-008",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833298.1212518,
+      "readyAt": 1795833298.1212518,
+      "startedAt": 1795833299.9271793,
+      "finishedAt": 1795833302.956606
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-011",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833298.917465,
+      "readyAt": 1795833298.917465,
+      "startedAt": 1795833300.866856,
+      "finishedAt": 1795833303.0442724
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-013",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833302.3411262,
+      "readyAt": 1795833302.3411262,
+      "startedAt": 1795833305.497587,
+      "finishedAt": 1795833307.1346965
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-014",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833304.3583753,
+      "readyAt": 1795833304.3583753,
+      "startedAt": 1795833306.2368436,
+      "finishedAt": 1795833307.8046918
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-012",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833304.3368456,
+      "readyAt": 1795833304.3368456,
+      "startedAt": 1795833306.9004977,
+      "finishedAt": 1795833308.396789
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-015",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833305.1650946,
+      "readyAt": 1795833305.1650946,
+      "startedAt": 1795833307.1336384,
+      "finishedAt": 1795833308.828276
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-017",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833307.9023237,
+      "readyAt": 1795833307.9023237,
+      "startedAt": 1795833309.5750825,
+      "finishedAt": 1795833311.0208292
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-018",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833308.7742422,
+      "readyAt": 1795833308.7742422,
+      "startedAt": 1795833310.6390965,
+      "finishedAt": 1795833311.9972854
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-019",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833309.6990411,
+      "readyAt": 1795833309.6990411,
+      "startedAt": 1795833311.490091,
+      "finishedAt": 1795833313.060387
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-016",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833310.2675571,
+      "readyAt": 1795833310.2675571,
+      "startedAt": 1795833312.1769464,
+      "finishedAt": 1795833313.4409447
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-021",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833311.9225702,
+      "readyAt": 1795833311.9225702,
+      "startedAt": 1795833313.6009333,
+      "finishedAt": 1795833314.8314018
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-022",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833312.8822036,
+      "readyAt": 1795833312.8822036,
+      "startedAt": 1795833314.3656447,
+      "finishedAt": 1795833315.551514
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-023",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833313.9592254,
+      "readyAt": 1795833313.9592254,
+      "startedAt": 1795833315.289946,
+      "finishedAt": 1795833316.4000912
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-020",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833315.0419657,
+      "readyAt": 1795833315.0419657,
+      "startedAt": 1795833316.17696,
+      "finishedAt": 1795833317.4441762
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-025",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833315.8088672,
+      "readyAt": 1795833315.8088672,
+      "startedAt": 1795833317.2719166,
+      "finishedAt": 1795833318.528048
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-026",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833316.9183393,
+      "readyAt": 1795833316.9183393,
+      "startedAt": 1795833318.1851642,
+      "finishedAt": 1795833319.4657488
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-027",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833318.0090213,
+      "readyAt": 1795833318.0090213,
+      "startedAt": 1795833319.3473346,
+      "finishedAt": 1795833320.5663269
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-024",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833318.6142628,
+      "readyAt": 1795833318.6142628,
+      "startedAt": 1795833319.8089387,
+      "finishedAt": 1795833321.0219798
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-029",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833319.148518,
+      "readyAt": 1795833319.148518,
+      "startedAt": 1795833320.5950773,
+      "finishedAt": 1795833321.9598308
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-030",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833320.2658508,
+      "readyAt": 1795833320.2658508,
+      "startedAt": 1795833321.7392786,
+      "finishedAt": 1795833322.9364855
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-031",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833321.1507528,
+      "readyAt": 1795833321.1507528,
+      "startedAt": 1795833322.4493976,
+      "finishedAt": 1795833323.7807386
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-028",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833322.3272507,
+      "readyAt": 1795833322.3272507,
+      "startedAt": 1795833323.8019438,
+      "finishedAt": 1795833325.1497993
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-033",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833323.1949105,
+      "readyAt": 1795833323.1949105,
+      "startedAt": 1795833324.3626287,
+      "finishedAt": 1795833325.5253456
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-034",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833324.1913865,
+      "readyAt": 1795833324.1913865,
+      "startedAt": 1795833325.5375314,
+      "finishedAt": 1795833326.7792575
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-035",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833324.5004141,
+      "readyAt": 1795833324.5004141,
+      "startedAt": 1795833325.8220024,
+      "finishedAt": 1795833327.0040236
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-037",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833326.4502487,
+      "readyAt": 1795833326.4502487,
+      "startedAt": 1795833327.8579528,
+      "finishedAt": 1795833329.2026312
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-032",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833326.925141,
+      "readyAt": 1795833326.925141,
+      "startedAt": 1795833328.33099,
+      "finishedAt": 1795833329.5835342
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-038",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833327.626184,
+      "readyAt": 1795833327.626184,
+      "startedAt": 1795833329.054951,
+      "finishedAt": 1795833330.311305
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-039",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833328.7013543,
+      "readyAt": 1795833328.7013543,
+      "startedAt": 1795833330.023088,
+      "finishedAt": 1795833331.2851975
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-036",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833330.8016908,
+      "readyAt": 1795833330.8016908,
+      "startedAt": 1795833331.9399304,
+      "finishedAt": 1795833333.1591434
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-041",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833331.1992087,
+      "readyAt": 1795833331.1992087,
+      "startedAt": 1795833332.4166796,
+      "finishedAt": 1795833333.880785
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-042",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833331.928199,
+      "readyAt": 1795833331.928199,
+      "startedAt": 1795833333.4027174,
+      "finishedAt": 1795833334.6433408
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-043",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833332.3660557,
+      "readyAt": 1795833332.3660557,
+      "startedAt": 1795833333.8809915,
+      "finishedAt": 1795833335.0777721
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-040",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833334.2070327,
+      "readyAt": 1795833334.2070327,
+      "startedAt": 1795833335.3475697,
+      "finishedAt": 1795833336.599769
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-045",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833334.9434617,
+      "readyAt": 1795833334.9434617,
+      "startedAt": 1795833336.0348969,
+      "finishedAt": 1795833337.213193
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-046",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833336.251286,
+      "readyAt": 1795833336.251286,
+      "startedAt": 1795833337.5360742,
+      "finishedAt": 1795833338.8778675
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-047",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833336.2650435,
+      "readyAt": 1795833336.2650435,
+      "startedAt": 1795833337.805913,
+      "finishedAt": 1795833339.060874
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-044",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833338.1653616,
+      "readyAt": 1795833338.1653616,
+      "startedAt": 1795833339.5469224,
+      "finishedAt": 1795833340.6772194
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-049",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833338.647114,
+      "readyAt": 1795833338.647114,
+      "startedAt": 1795833339.8079572,
+      "finishedAt": 1795833341.1579497
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-051",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833340.160004,
+      "readyAt": 1795833340.160004,
+      "startedAt": 1795833341.3848963,
+      "finishedAt": 1795833342.5412374
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-050",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833340.5662534,
+      "readyAt": 1795833340.5662534,
+      "startedAt": 1795833341.8348796,
+      "finishedAt": 1795833343.0290341
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-048",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833341.99317,
+      "readyAt": 1795833341.99317,
+      "startedAt": 1795833343.3009083,
+      "finishedAt": 1795833344.5681543
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-053",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833342.5570168,
+      "readyAt": 1795833342.5570168,
+      "startedAt": 1795833343.753215,
+      "finishedAt": 1795833344.9988968
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-055",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833344.1443,
+      "readyAt": 1795833344.1443,
+      "startedAt": 1795833345.7557137,
+      "finishedAt": 1795833347.069706
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-054",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833344.6495461,
+      "readyAt": 1795833344.6495461,
+      "startedAt": 1795833346.1036534,
+      "finishedAt": 1795833347.439512
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-052",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833345.3140924,
+      "readyAt": 1795833345.3140924,
+      "startedAt": 1795833346.6644504,
+      "finishedAt": 1795833347.96533
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-057",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833346.4353,
+      "readyAt": 1795833346.4353,
+      "startedAt": 1795833348.2325227,
+      "finishedAt": 1795833349.646793
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-058",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833349.2530382,
+      "readyAt": 1795833349.2530382,
+      "startedAt": 1795833351.0352688,
+      "finishedAt": 1795833352.4082181
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-059",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833348.7571623,
+      "readyAt": 1795833348.7571623,
+      "startedAt": 1795833351.0797052,
+      "finishedAt": 1795833352.3935933
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-056",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833349.848297,
+      "readyAt": 1795833349.848297,
+      "startedAt": 1795833351.4708982,
+      "finishedAt": 1795833352.7175283
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-061",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833350.6236546,
+      "readyAt": 1795833350.6236546,
+      "startedAt": 1795833352.2879295,
+      "finishedAt": 1795833353.7507176
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-062",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833353.375143,
+      "readyAt": 1795833353.375143,
+      "startedAt": 1795833354.5841224,
+      "finishedAt": 1795833355.824149
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-060",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833354.121292,
+      "readyAt": 1795833354.121292,
+      "startedAt": 1795833355.3775191,
+      "finishedAt": 1795833356.438093
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-063",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833354.5186784,
+      "readyAt": 1795833354.5186784,
+      "startedAt": 1795833355.8988843,
+      "finishedAt": 1795833357.056032
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-065",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833355.1453168,
+      "readyAt": 1795833355.1453168,
+      "startedAt": 1795833356.4705262,
+      "finishedAt": 1795833357.7292356
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-066",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833357.2499678,
+      "readyAt": 1795833357.2499678,
+      "startedAt": 1795833358.2753053,
+      "finishedAt": 1795833359.7701805
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-064",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833357.2432745,
+      "readyAt": 1795833357.2432745,
+      "startedAt": 1795833359.0686877,
+      "finishedAt": 1795833360.4875517
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-067",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833358.705212,
+      "readyAt": 1795833358.705212,
+      "startedAt": 1795833360.699001,
+      "finishedAt": 1795833362.689454
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-069",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833358.7169187,
+      "readyAt": 1795833358.7169187,
+      "startedAt": 1795833361.4239974,
+      "finishedAt": 1795833363.7286007
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-070",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833361.1133053,
+      "readyAt": 1795833361.1133053,
+      "startedAt": 1795833365.0192153,
+      "finishedAt": 1795833366.6214783
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-068",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833362.9793825,
+      "readyAt": 1795833362.9793825,
+      "startedAt": 1795833366.0392258,
+      "finishedAt": 1795833367.7422147
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-071",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833364.4945843,
+      "readyAt": 1795833364.4945843,
+      "startedAt": 1795833366.8593972,
+      "finishedAt": 1795833368.329671
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-073",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833365.5095413,
+      "readyAt": 1795833365.5095413,
+      "startedAt": 1795833367.7453012,
+      "finishedAt": 1795833369.7200344
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-074",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833367.3514633,
+      "readyAt": 1795833367.3514633,
+      "startedAt": 1795833369.8142197,
+      "finishedAt": 1795833371.249966
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-072",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833369.2622974,
+      "readyAt": 1795833369.2622974,
+      "startedAt": 1795833371.1088994,
+      "finishedAt": 1795833372.8419569
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-075",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833370.0646772,
+      "readyAt": 1795833370.0646772,
+      "startedAt": 1795833371.7569475,
+      "finishedAt": 1795833372.9830618
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-077",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833370.7683442,
+      "readyAt": 1795833370.7683442,
+      "startedAt": 1795833372.3773184,
+      "finishedAt": 1795833374.0052912
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-078",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833372.3825574,
+      "readyAt": 1795833372.3825574,
+      "startedAt": 1795833374.258017,
+      "finishedAt": 1795833375.570939
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-076",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833373.3883505,
+      "readyAt": 1795833373.3883505,
+      "startedAt": 1795833375.1211197,
+      "finishedAt": 1795833376.543278
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-079",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833374.3311596,
+      "readyAt": 1795833374.3311596,
+      "startedAt": 1795833375.7419436,
+      "finishedAt": 1795833377.101468
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-081",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833375.20166,
+      "readyAt": 1795833375.20166,
+      "startedAt": 1795833376.7850602,
+      "finishedAt": 1795833378.140507
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-082",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833376.2143295,
+      "readyAt": 1795833376.2143295,
+      "startedAt": 1795833377.8080778,
+      "finishedAt": 1795833379.1400404
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-080",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833377.5241299,
+      "readyAt": 1795833377.5241299,
+      "startedAt": 1795833378.9050875,
+      "finishedAt": 1795833380.1973534
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-083",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833378.272797,
+      "readyAt": 1795833378.272797,
+      "startedAt": 1795833379.8579814,
+      "finishedAt": 1795833381.2776191
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-085",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833379.64869,
+      "readyAt": 1795833379.64869,
+      "startedAt": 1795833380.965321,
+      "finishedAt": 1795833382.3781986
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-086",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833380.2344909,
+      "readyAt": 1795833380.2344909,
+      "startedAt": 1795833381.5940626,
+      "finishedAt": 1795833382.8845847
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-084",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833381.2321246,
+      "readyAt": 1795833381.2321246,
+      "startedAt": 1795833382.725694,
+      "finishedAt": 1795833384.0728812
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-087",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833382.3620605,
+      "readyAt": 1795833382.3620605,
+      "startedAt": 1795833383.809908,
+      "finishedAt": 1795833385.2011626
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-089",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833383.479506,
+      "readyAt": 1795833383.479506,
+      "startedAt": 1795833384.895138,
+      "finishedAt": 1795833386.3906896
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-090",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833384.401617,
+      "readyAt": 1795833384.401617,
+      "startedAt": 1795833385.8460956,
+      "finishedAt": 1795833387.078787
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-088",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833385.4911783,
+      "readyAt": 1795833385.4911783,
+      "startedAt": 1795833386.844084,
+      "finishedAt": 1795833388.1753287
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-091",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833386.5276034,
+      "readyAt": 1795833386.5276034,
+      "startedAt": 1795833387.874775,
+      "finishedAt": 1795833389.3656502
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-093",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833387.3735154,
+      "readyAt": 1795833387.3735154,
+      "startedAt": 1795833389.1530836,
+      "finishedAt": 1795833390.582704
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-094",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833388.8258197,
+      "readyAt": 1795833388.8258197,
+      "startedAt": 1795833390.5489693,
+      "finishedAt": 1795833391.9075615
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-092",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833389.667116,
+      "readyAt": 1795833389.667116,
+      "startedAt": 1795833391.4132273,
+      "finishedAt": 1795833392.9169366
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-095",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833390.688954,
+      "readyAt": 1795833390.688954,
+      "startedAt": 1795833392.2301838,
+      "finishedAt": 1795833393.5309622
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-097",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833391.653243,
+      "readyAt": 1795833391.653243,
+      "startedAt": 1795833393.290684,
+      "finishedAt": 1795833394.5193293
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-098",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833392.5563474,
+      "readyAt": 1795833392.5563474,
+      "startedAt": 1795833394.3860836,
+      "finishedAt": 1795833395.7942843
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-096",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833394.0288534,
+      "readyAt": 1795833394.0288534,
+      "startedAt": 1795833395.8990417,
+      "finishedAt": 1795833397.127468
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-099",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833394.9046378,
+      "readyAt": 1795833394.9046378,
+      "startedAt": 1795833396.479157,
+      "finishedAt": 1795833397.8369615
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-101",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833395.8587964,
+      "readyAt": 1795833395.8587964,
+      "startedAt": 1795833397.5423913,
+      "finishedAt": 1795833398.9506896
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-102",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833396.911254,
+      "readyAt": 1795833396.911254,
+      "startedAt": 1795833398.7392893,
+      "finishedAt": 1795833400.0753813
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-100",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833397.98725,
+      "readyAt": 1795833397.98725,
+      "startedAt": 1795833399.8247948,
+      "finishedAt": 1795833401.3051767
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-103",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833399.0246632,
+      "readyAt": 1795833399.0246632,
+      "startedAt": 1795833400.8282955,
+      "finishedAt": 1795833402.3569856
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-105",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833400.115146,
+      "readyAt": 1795833400.115146,
+      "startedAt": 1795833402.00914,
+      "finishedAt": 1795833403.4768646
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-106",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833401.2153628,
+      "readyAt": 1795833401.2153628,
+      "startedAt": 1795833403.2379568,
+      "finishedAt": 1795833404.4925244
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-104",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833402.2347825,
+      "readyAt": 1795833402.2347825,
+      "startedAt": 1795833403.9336965,
+      "finishedAt": 1795833405.122523
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-107",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833403.1412776,
+      "readyAt": 1795833403.1412776,
+      "startedAt": 1795833404.779886,
+      "finishedAt": 1795833406.0730133
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-109",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833404.0541465,
+      "readyAt": 1795833404.0541465,
+      "startedAt": 1795833405.7297466,
+      "finishedAt": 1795833407.1344693
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-110",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833405.3743262,
+      "readyAt": 1795833405.3743262,
+      "startedAt": 1795833406.8565435,
+      "finishedAt": 1795833408.0832841
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-108",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833406.3356473,
+      "readyAt": 1795833406.3356473,
+      "startedAt": 1795833407.7826054,
+      "finishedAt": 1795833409.2884135
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-111",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833407.4329038,
+      "readyAt": 1795833407.4329038,
+      "startedAt": 1795833409.1209638,
+      "finishedAt": 1795833410.4686632
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-113",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833408.307965,
+      "readyAt": 1795833408.307965,
+      "startedAt": 1795833409.9790344,
+      "finishedAt": 1795833411.261029
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-114",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833409.6441746,
+      "readyAt": 1795833409.6441746,
+      "startedAt": 1795833411.0973876,
+      "finishedAt": 1795833412.409038
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-112",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833410.6883342,
+      "readyAt": 1795833410.6883342,
+      "startedAt": 1795833412.0338337,
+      "finishedAt": 1795833413.4684582
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-115",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833411.349271,
+      "readyAt": 1795833411.349271,
+      "startedAt": 1795833412.8413074,
+      "finishedAt": 1795833414.1486619
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-117",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833412.4804244,
+      "readyAt": 1795833412.4804244,
+      "startedAt": 1795833413.9455738,
+      "finishedAt": 1795833415.239198
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-118",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833413.4114432,
+      "readyAt": 1795833413.4114432,
+      "startedAt": 1795833414.850689,
+      "finishedAt": 1795833416.2356203
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-116",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833414.5712185,
+      "readyAt": 1795833414.5712185,
+      "startedAt": 1795833416.2200792,
+      "finishedAt": 1795833417.506024
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-119",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833415.4262385,
+      "readyAt": 1795833415.4262385,
+      "startedAt": 1795833416.9076767,
+      "finishedAt": 1795833418.2617872
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-121",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833416.5242448,
+      "readyAt": 1795833416.5242448,
+      "startedAt": 1795833418.0595386,
+      "finishedAt": 1795833419.2238276
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-122",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833417.5034478,
+      "readyAt": 1795833417.5034478,
+      "startedAt": 1795833418.8631444,
+      "finishedAt": 1795833420.3097072
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-120",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833418.6333017,
+      "readyAt": 1795833418.6333017,
+      "startedAt": 1795833419.8342624,
+      "finishedAt": 1795833421.4565396
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-123",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833419.4223685,
+      "readyAt": 1795833419.4223685,
+      "startedAt": 1795833421.6468472,
+      "finishedAt": 1795833423.5813599
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-125",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-01",
+      "queuedAt": 1795833420.993323,
+      "readyAt": 1795833420.993323,
+      "startedAt": 1795833423.572964,
+      "finishedAt": 1795833424.8794072
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-126",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-02",
+      "queuedAt": 1795833421.9078197,
+      "readyAt": 1795833421.9078197,
+      "startedAt": 1795833424.204944,
+      "finishedAt": 1795833425.5939662
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-124",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833423.2125368,
+      "readyAt": 1795833423.2125368,
+      "startedAt": 1795833425.2269094,
+      "finishedAt": 1795833426.6030977
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-replicate-127",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-03",
+      "queuedAt": 1795833424.740463,
+      "readyAt": 1795833424.740463,
+      "startedAt": 1795833427.0553057,
+      "finishedAt": 1795833428.555713
+    },
+    {
+      "activityId": "community-sobol-ensemble-v1-aggregate",
+      "status": "completed",
+      "allocatedResourceId": "community-sobol-slot-00",
+      "queuedAt": 1795833429.601571,
+      "readyAt": 1795833429.601571,
+      "startedAt": 1795833466.4531407,
+      "finishedAt": 1795833476.4740138
+    }
+  ]
+}

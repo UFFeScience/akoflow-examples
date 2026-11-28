@@ -1,0 +1,7 @@
+{
+  "id": "community-sobol-scope",
+  "name": "Sobol execution scope",
+  "environmentVersionIds": [
+    "community-sobol-cpu-v1"
+  ]
+}

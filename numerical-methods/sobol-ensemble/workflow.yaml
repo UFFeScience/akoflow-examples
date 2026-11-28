@@ -1,0 +1,3639 @@
+{
+  "name": "community-sobol-ensemble-v1",
+  "spec": {
+    "namespace": "community-explorer",
+    "activities": [
+      {
+        "name": "prepare",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "prepare"
+          ]
+        }
+      },
+      {
+        "name": "replicate-000",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "0"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-001",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "1"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-002",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "2"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-003",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "3"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-004",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "4"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-005",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "5"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-006",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "6"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-007",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "7"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-008",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "8"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-009",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "9"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-010",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "10"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-011",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "11"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-012",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "12"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-013",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "13"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-014",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "14"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-015",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "15"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-016",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "16"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-017",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "17"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-018",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "18"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-019",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "19"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-020",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "20"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-021",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "21"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-022",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "22"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-023",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "23"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-024",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "24"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-025",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "25"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-026",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "26"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-027",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "27"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-028",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "28"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-029",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "29"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-030",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "30"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-031",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "31"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-032",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "32"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-033",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "33"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-034",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "34"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-035",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "35"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-036",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "36"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-037",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "37"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-038",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "38"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-039",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "39"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-040",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "40"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-041",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "41"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-042",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "42"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-043",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "43"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-044",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "44"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-045",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "45"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-046",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "46"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-047",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "47"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-048",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "48"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-049",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "49"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-050",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "50"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-051",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "51"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-052",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "52"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-053",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "53"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-054",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "54"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-055",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "55"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-056",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "56"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-057",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "57"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-058",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "58"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-059",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "59"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-060",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "60"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-061",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "61"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-062",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "62"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-063",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "63"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-064",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "64"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-065",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "65"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-066",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "66"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-067",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "67"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-068",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "68"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-069",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "69"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-070",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "70"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-071",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "71"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-072",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "72"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-073",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "73"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-074",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "74"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-075",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "75"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-076",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "76"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-077",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "77"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-078",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "78"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-079",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "79"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-080",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "80"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-081",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "81"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-082",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "82"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-083",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "83"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-084",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "84"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-085",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "85"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-086",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "86"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-087",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "87"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-088",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "88"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-089",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "89"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-090",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "90"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-091",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "91"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-092",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "92"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-093",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "93"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-094",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "94"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-095",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "95"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-096",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "96"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-097",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "97"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-098",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "98"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-099",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "99"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-100",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "100"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-101",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "101"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-102",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "102"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-103",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "103"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-104",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "104"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-105",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "105"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-106",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "106"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-107",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "107"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-108",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "108"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-109",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "109"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-110",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "110"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-111",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "111"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-112",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "112"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-113",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "113"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-114",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "114"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-115",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "115"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-116",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "116"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-117",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "117"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-118",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "118"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-119",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "119"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-120",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "120"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-121",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "121"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-122",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "122"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-123",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "123"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-124",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "124"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-125",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "125"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-126",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "126"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "replicate-127",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/workflow.py",
+            "replicate",
+            "127"
+          ]
+        },
+        "dependsOn": [
+          "prepare"
+        ]
+      },
+      {
+        "name": "aggregate",
+        "runtime": "community-sobol-local",
+        "cpuLimit": "1",
+        "memoryLimit": "768Mi",
+        "command": {
+          "executable": {
+            "source": {
+              "type": "build",
+              "artifactBuildRef": "recipe-build-2ffd171ebfc4cef2b60debbf4d287f307328e9bdaad79e240c64c6062f916055"
+            },
+            "delivery": {
+              "strategy": "auto",
+              "targetFormat": "oci"
+            }
+          },
+          "entrypoint": "python",
+          "arguments": [
+            "/app/scripts/aggregate.py"
+          ]
+        },
+        "dependsOn": [
+          "replicate-000",
+          "replicate-001",
+          "replicate-002",
+          "replicate-003",
+          "replicate-004",
+          "replicate-005",
+          "replicate-006",
+          "replicate-007",
+          "replicate-008",
+          "replicate-009",
+          "replicate-010",
+          "replicate-011",
+          "replicate-012",
+          "replicate-013",
+          "replicate-014",
+          "replicate-015",
+          "replicate-016",
+          "replicate-017",
+          "replicate-018",
+          "replicate-019",
+          "replicate-020",
+          "replicate-021",
+          "replicate-022",
+          "replicate-023",
+          "replicate-024",
+          "replicate-025",
+          "replicate-026",
+          "replicate-027",
+          "replicate-028",
+          "replicate-029",
+          "replicate-030",
+          "replicate-031",
+          "replicate-032",
+          "replicate-033",
+          "replicate-034",
+          "replicate-035",
+          "replicate-036",
+          "replicate-037",
+          "replicate-038",
+          "replicate-039",
+          "replicate-040",
+          "replicate-041",
+          "replicate-042",
+          "replicate-043",
+          "replicate-044",
+          "replicate-045",
+          "replicate-046",
+          "replicate-047",
+          "replicate-048",
+          "replicate-049",
+          "replicate-050",
+          "replicate-051",
+          "replicate-052",
+          "replicate-053",
+          "replicate-054",
+          "replicate-055",
+          "replicate-056",
+          "replicate-057",
+          "replicate-058",
+          "replicate-059",
+          "replicate-060",
+          "replicate-061",
+          "replicate-062",
+          "replicate-063",
+          "replicate-064",
+          "replicate-065",
+          "replicate-066",
+          "replicate-067",
+          "replicate-068",
+          "replicate-069",
+          "replicate-070",
+          "replicate-071",
+          "replicate-072",
+          "replicate-073",
+          "replicate-074",
+          "replicate-075",
+          "replicate-076",
+          "replicate-077",
+          "replicate-078",
+          "replicate-079",
+          "replicate-080",
+          "replicate-081",
+          "replicate-082",
+          "replicate-083",
+          "replicate-084",
+          "replicate-085",
+          "replicate-086",
+          "replicate-087",
+          "replicate-088",
+          "replicate-089",
+          "replicate-090",
+          "replicate-091",
+          "replicate-092",
+          "replicate-093",
+          "replicate-094",
+          "replicate-095",
+          "replicate-096",
+          "replicate-097",
+          "replicate-098",
+          "replicate-099",
+          "replicate-100",
+          "replicate-101",
+          "replicate-102",
+          "replicate-103",
+          "replicate-104",
+          "replicate-105",
+          "replicate-106",
+          "replicate-107",
+          "replicate-108",
+          "replicate-109",
+          "replicate-110",
+          "replicate-111",
+          "replicate-112",
+          "replicate-113",
+          "replicate-114",
+          "replicate-115",
+          "replicate-116",
+          "replicate-117",
+          "replicate-118",
+          "replicate-119",
+          "replicate-120",
+          "replicate-121",
+          "replicate-122",
+          "replicate-123",
+          "replicate-124",
+          "replicate-125",
+          "replicate-126",
+          "replicate-127"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "id": "community-sobol-topology",
+  "name": "Sobol local topology",
+  "version": 1,
+  "executionScopeId": "community-sobol-scope",
+  "links": []
+}

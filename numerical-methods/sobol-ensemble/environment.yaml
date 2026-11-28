@@ -1,0 +1,342 @@
+{
+  "environment": {
+    "id": "community-sobol-cpu",
+    "name": "Sobol CPU profiles",
+    "status": "ready"
+  },
+  "version": {
+    "id": "community-sobol-cpu-v1",
+    "environmentId": "community-sobol-cpu",
+    "version": 1,
+    "status": "published",
+    "networkModel": "local",
+    "interferenceModel": "observed",
+    "costModel": "free",
+    "configurationHash": "community-sobol-cpu-v1"
+  },
+  "runtimes": [
+    {
+      "id": "community-sobol-local",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "name": "Local Docker",
+      "driver": "local",
+      "mode": "execution",
+      "role": "compute",
+      "capabilities": {
+        "batch": true,
+        "container": true
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "community-sobol-slot-00",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 0",
+      "providerId": "local-docker-sobol-0",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-01",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 1",
+      "providerId": "local-docker-sobol-1",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-02",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 2",
+      "providerId": "local-docker-sobol-2",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-03",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 3",
+      "providerId": "local-docker-sobol-3",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-04",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 4",
+      "providerId": "local-docker-sobol-4",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-05",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 5",
+      "providerId": "local-docker-sobol-5",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-06",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 6",
+      "providerId": "local-docker-sobol-6",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-07",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 7",
+      "providerId": "local-docker-sobol-7",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-08",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 8",
+      "providerId": "local-docker-sobol-8",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-09",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 9",
+      "providerId": "local-docker-sobol-9",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-10",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 10",
+      "providerId": "local-docker-sobol-10",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-11",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 11",
+      "providerId": "local-docker-sobol-11",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-12",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 12",
+      "providerId": "local-docker-sobol-12",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-13",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 13",
+      "providerId": "local-docker-sobol-13",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-14",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 14",
+      "providerId": "local-docker-sobol-14",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-sobol-slot-15",
+      "environmentVersionId": "community-sobol-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 15",
+      "providerId": "local-docker-sobol-15",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    }
+  ],
+  "storages": [],
+  "connections": [],
+  "activityResourceProfiles": [],
+  "resourceRuntimeBindings": [
+    {
+      "resourceId": "community-sobol-slot-00",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-01",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-02",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-03",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-04",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-05",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-06",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-07",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-08",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-09",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-10",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-11",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-12",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-13",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-14",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-sobol-slot-15",
+      "runtimeId": "community-sobol-local",
+      "enabled": true
+    }
+  ]
+}

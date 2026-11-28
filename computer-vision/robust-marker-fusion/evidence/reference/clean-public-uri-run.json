@@ -1,0 +1,15 @@
+{
+  "uri": "akoflow://hub/publications/3d095c37-2643-408e-999c-3093db15f24f/versions/1",
+  "run": "community-marker-fusion-ensemble-v1-run-4",
+  "status": "completed",
+  "completed_activities": 257,
+  "matching_checksums": 259,
+  "peak_overlap_lower_bound": 3,
+  "unusable_case_intervals": 0,
+  "elapsed_seconds": 240.0,
+  "aggregate_checksums": {
+    "scenario-summary.csv": "sha256:81dba1baa1039a846f6df4eb464317e6caeda7210b2bda1ea5a36c22f0559cb5",
+    "trajectory-errors.gif": "sha256:84c19ee5d1ba8a2149cb7146e163fe7d7727c25dbe80fc5f77c042be6b71c597",
+    "trajectory-errors.png": "sha256:360af6db287e62537c6c333a0cadfc132eaa13b929dad07e75d2088c55c91bd4"
+  }
+}

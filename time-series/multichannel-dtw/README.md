@@ -27,3 +27,7 @@ preparation time. Use `render-timeline.py` to draw a measured capture.
 
 A 192-sample workflow was generated with `--length 192` and passed the
 same 257 cold preflight checks as the 96-sample reference.
+
+The original workflow code is released under the [MIT license](LICENSE).
+The figures and data are generated from synthetic inputs. The cited paper
+is the scientific reference and retains its own terms.

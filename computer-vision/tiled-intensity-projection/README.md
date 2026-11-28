@@ -50,3 +50,7 @@ For a published reference, run
 `python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
 on a daemon with empty workflow and image stores. It stages its own
 schedule configuration, requires a cold build, and checks all 259 outputs.
+
+The original workflow code is released under the [MIT license](LICENSE).
+The figures and data are generated from synthetic inputs. The cited paper
+is the scientific reference and retains its own terms.

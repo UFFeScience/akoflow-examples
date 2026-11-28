@@ -49,3 +49,7 @@ when running `./run.sh`.
 The 384-frame configuration passed all 257 AkôFlow preflight checks.
 Local validation covered all 98,304 frame records and the complete
 256-scenario summary.
+
+The original workflow code is released under the [MIT license](LICENSE).
+The figures and data are generated from synthetic inputs. The cited paper
+is the scientific reference and retains its own terms.

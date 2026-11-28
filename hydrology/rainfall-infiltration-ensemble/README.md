@@ -72,3 +72,15 @@ batches, and reproduced all three scientific artifact hashes. The run shared
 the host with the IDW audit for 271 seconds of overall runtime. The windows
 between first and last scientific tasks intersected for 85.8 seconds, including
 any gaps between tasks. The shared load is part of this measurement.
+
+## Measured scheduling profiles
+
+The [first scheduling repetition](evidence/reference/first-scheduling-repetition.csv)
+completed all 514 activities at each of 1, 4, 8, 16, and 32 configured slots.
+Every run reproduced the same CSV, PNG and GIF checksums. The 8-, 16-, and
+32-slot runs overlap the synthetic IDW campaign on the same host. Their
+measurements include that concurrent load. Two further repetitions are in
+progress, and these values describe the first measurement at each slot count.
+
+The original workflow code and synthetic inputs use the [MIT license](LICENSE).
+The scientific model is attributed to Mein and Larson above.

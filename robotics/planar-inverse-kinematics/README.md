@@ -10,6 +10,22 @@ The 256-frame reference includes two reach-boundary controls with one
 pose and two unreachable controls. Dynamic programming minimizes the
 sum of squared circular changes across contiguous reachable frames.
 
+## Measured AkôFlow reference
+
+The four-slot run completed 257 activities, including
+256 frame-wise inverse kinematics cases and one reducer. The reducer
+validated reconstruction, preserved unreachable frames and compared
+independent selection against minimum angular-change selection.
+
+![Measured trajectory and joint angles](evidence/reference/trajectory-angles.png)
+
+![Simulated two-link arm poses](evidence/reference/arm-poses.gif)
+
+![Observed worker occupancy](evidence/reference/timeline.png)
+
+[Trajectory CSV](evidence/reference/trajectory.csv) ·
+[Reference evidence](evidence/reference/reference-run.json).
+
 ## Run in AkôFlow
 
 Register the pinned recipe, generate the default 256-frame workflow,

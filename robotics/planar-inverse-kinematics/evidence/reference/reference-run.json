@@ -1,0 +1,14 @@
+{
+  "run": "community-planar-kinematics-ensemble-v1-run-4",
+  "completed_activities": 257,
+  "trajectory_frames": 256,
+  "summary_rows": 256,
+  "animation_frames": 25,
+  "peak_overlap_lower_bound": 4,
+  "unusable_case_intervals": 0,
+  "aggregate_checksums": {
+    "trajectory.csv": "sha256:72f085b1f67504a75be3556ddced17eaa5baca174cd9b6736119d4225f57dede",
+    "trajectory-angles.png": "sha256:64a9bba5258236642226cf5491171fe31579ab14724a63da5445e24c39a40770",
+    "arm-poses.gif": "sha256:6cf3cbc5ffc70fde716f3185759d113ca70d7c1a0b49f603f8d6bec3864e9aad"
+  }
+}

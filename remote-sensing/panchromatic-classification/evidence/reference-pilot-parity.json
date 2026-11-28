@@ -1,0 +1,9 @@
+{
+  "reference_scene_inventory": 768,
+  "compared_pilot_scenes": 48,
+  "compared_treatment_metrics": 864,
+  "max_absolute_metric_difference": 5.551115123125783e-17,
+  "compared_calibration_values": 216,
+  "max_absolute_calibration_difference": 1.1102230246251565e-16,
+  "note": "The offline pilot and pinned OCI run differ in CSV line endings and last-bit floating point values. The OCI outputs are the clean-run checksum baseline."
+}

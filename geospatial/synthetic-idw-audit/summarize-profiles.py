@@ -16,6 +16,24 @@ def seconds(value):
     return datetime.fromisoformat(value.replace("Z", "+00:00")).timestamp()
 
 
+def shared_host_seconds(run, neighbors):
+    """Union of completed neighboring run windows intersecting this run."""
+    start, end = seconds(run["startedAt"]), seconds(run["finishedAt"])
+    overlaps = []
+    for other in neighbors:
+        if other["id"] == run["id"]:
+            continue
+        first = max(start, seconds(other["startedAt"]))
+        last = min(end, seconds(other["finishedAt"]))
+        if first < last:
+            overlaps.append((first, last))
+    seconds_shared, covered_until = 0.0, start
+    for first, last in sorted(overlaps):
+        seconds_shared += max(0.0, last - max(first, covered_until))
+        covered_until = max(covered_until, last)
+    return seconds_shared
+
+
 def measure(capture):
     run = capture["run"]
     if run["status"] != "completed":
@@ -61,6 +79,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("captures", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--shared-host-captures", type=Path, action="append", default=[],
+                        help="Directory of completed neighboring benchmark captures; repeat as needed")
     parser.add_argument("--repetitions", type=int, choices=range(1, 11), default=1)
     args = parser.parse_args()
     captures = [json.loads(path.read_text()) for path in sorted(args.captures.glob("community-synthetic-idw-run-*.json"))]
@@ -70,6 +90,16 @@ def main():
     if any(item["digests"] != reference for item in captures):
         raise ValueError("Profile outputs differ")
     runs = [measure(item) for item in captures]
+    if args.shared_host_captures:
+        neighbors = []
+        for directory in args.shared_host_captures:
+            for path in sorted(directory.glob("*.json")):
+                neighbor = json.loads(path.read_text())["run"]
+                if neighbor["status"] != "completed":
+                    raise ValueError(f"Expected a completed neighboring capture at {path}")
+                neighbors.append(neighbor)
+        for row, capture in zip(runs, captures):
+            row["shared_host_seconds"] = shared_host_seconds(capture["run"], neighbors)
     if {(row["slots"], row["repetition"]) for row in runs} != {
         (slots, repetition) for slots in CAPACITIES for repetition in range(1, args.repetitions + 1)
     }:

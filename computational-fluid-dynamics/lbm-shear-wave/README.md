@@ -65,3 +65,7 @@ profiles with `python3 profile.py /path/to/benchmark-profiles`. The collector
 resumes from the daemon's existing run IDs, captures observed concurrency
 among the 1,024 scientific cases, checks the control and aggregation, and
 requires matching result checksums across the five slot configurations.
+
+Run `python3 summarize-profiles.py /path/to/benchmark-profiles /path/to/report`
+to export observed concurrency, case-window and aggregation durations,
+and end-to-end speedup relative to the one-slot control.

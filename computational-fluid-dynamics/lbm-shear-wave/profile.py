@@ -19,6 +19,12 @@ TOKEN = os.environ.get("AKOFLOW_API_TOKEN", "akoflow-development-token")
 DETERMINISTIC = ("amplitudes.csv.gz", "case-metrics.csv", "shear-space-time.png", "shear-decay.gif", "validation.json")
 
 
+def seconds(value):
+    if isinstance(value, (int, float)):
+        return float(value)
+    return datetime.fromisoformat(value).timestamp()
+
+
 def projection(run_id):
     request = urllib.request.Request(
         f"{API}/execution-runs/{run_id}/", headers={"Authorization": f"Bearer {TOKEN}"}
@@ -68,11 +74,11 @@ def save(path, result, slots, repetition, baseline=None):
     aggregate = next(item for item in flow if item["activityId"] == f"{WORKFLOW}-aggregate")
     if any(not item.get("startedAt") or not item.get("finishedAt") for item in flow):
         raise ValueError("Missing activity timestamps")
-    start_times = [datetime.fromisoformat(item["startedAt"]) for item in scientific]
-    end_times = [datetime.fromisoformat(item["finishedAt"]) for item in scientific]
-    aggregate_start = datetime.fromisoformat(aggregate["startedAt"])
+    start_times = [seconds(item["startedAt"]) for item in scientific]
+    end_times = [seconds(item["finishedAt"]) for item in scientific]
+    aggregate_start = seconds(aggregate["startedAt"])
     if any(end < start for start, end in zip(start_times, end_times)) or any(
-        datetime.fromisoformat(item["finishedAt"]) > aggregate_start
+        seconds(item["finishedAt"]) > aggregate_start
         for item in flow if item is not aggregate
     ):
         raise ValueError("Invalid activity ordering")

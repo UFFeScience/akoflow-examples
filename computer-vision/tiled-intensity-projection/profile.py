@@ -47,12 +47,14 @@ def capture(result, slots):
     if not all(digests.values()):
         raise ValueError("Missing result checksum")
     events = Counter()
+    intervals = []
     unusable = 0
     for task in tiles:
         start, end = task["startedAt"], task["finishedAt"]
         if not 0 < start < end <= reducer["startedAt"]:
             unusable += 1
             continue
+        intervals.append({"worker": task["allocatedResourceId"], "start": start, "end": end})
         events[start] += 1
         events[end] -= 1
     active = peak = 0
@@ -66,7 +68,8 @@ def capture(result, slots):
                datetime.fromisoformat(run["startedAt"])).total_seconds()
     return {"run": run["id"], "slots": slots, "completed_activities": len(activities),
             "elapsed_seconds": elapsed, "peak_overlap_lower_bound": peak,
-            "unusable_tile_intervals": unusable,
+            "unusable_tile_intervals": unusable, "tile_intervals": intervals,
+            "aggregation_interval": [reducer["startedAt"], reducer["finishedAt"]],
             "aggregate_prepare_seconds": reducer["startedAt"] - reducer["queuedAt"],
             "aggregate_seconds": reducer["finishedAt"] - reducer["startedAt"], "digests": digests}
 

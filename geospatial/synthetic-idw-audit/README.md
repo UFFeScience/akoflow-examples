@@ -90,3 +90,10 @@ blocks and shared the host with the rainfall infiltration campaign.
 
 The timeline separates raw and filtered prediction tasks by color. Its lower
 panel counts active blocks from the actual start and finish timestamps.
+
+Use a daemon with empty workflow and image stores for the public
+portability check. With its API configured, run
+`python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`.
+This imports the URI through the daemon, checks that preflight requests
+the build, and compares the complete clean run with the reference
+prediction-block and aggregate checksums.

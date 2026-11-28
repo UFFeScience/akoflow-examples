@@ -1,0 +1,45 @@
+{
+  "source": "Pinned OCI images run with network disabled",
+  "standard": {
+    "context_sha256": "701938be2c44ed964c93efb425153c33faaa84544776b94dc508bf73223a66a1",
+    "frame_csvs": 256,
+    "checksums": {
+      "arm-poses.gif": "sha256:6cf3cbc5ffc70fde716f3185759d113ca70d7c1a0b49f603f8d6bec3864e9aad",
+      "trajectory-angles.png": "sha256:64a9bba5258236642226cf5491171fe31579ab14724a63da5445e24c39a40770",
+      "trajectory.csv": "sha256:72f085b1f67504a75be3556ddced17eaa5baca174cd9b6736119d4225f57dede"
+    }
+  },
+  "batch": {
+    "frames": 1024,
+    "trajectories": [
+      {
+        "trajectory": 0,
+        "frames": 256,
+        "unreachable_frames": 2,
+        "independent_cost": 11.038646227637194,
+        "continuous_cost": 11.007212144790786
+      },
+      {
+        "trajectory": 1,
+        "frames": 256,
+        "unreachable_frames": 2,
+        "independent_cost": 31.06331648551476,
+        "continuous_cost": 12.239186679915424
+      },
+      {
+        "trajectory": 2,
+        "frames": 256,
+        "unreachable_frames": 2,
+        "independent_cost": 31.885478674569725,
+        "continuous_cost": 13.488320388313852
+      },
+      {
+        "trajectory": 3,
+        "frames": 256,
+        "unreachable_frames": 2,
+        "independent_cost": 31.773668811716096,
+        "continuous_cost": 14.747085103832472
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "referenceRun": "community-synthetic-idw-run-4-v1",
+  "serialRun": "community-synthetic-idw-run-1-v1",
+  "serialStatusAtObservation": "running",
+  "predictionBlocks": 1024,
+  "manifestEncoding": "UTF-8 compact JSON array of [relativePath, checksum] pairs sorted by path",
+  "referenceManifestSHA256": "7414dd6b5a1fd6bb74971b077cf4034cd23e9c3d0e9361bc45346083bc1205d0",
+  "serialManifestSHA256": "7414dd6b5a1fd6bb74971b077cf4034cd23e9c3d0e9361bc45346083bc1205d0"
+}

@@ -68,3 +68,12 @@ The current recipe also checks the SHA-256 of every Python wheel against
 [requirements.lock](requirements.lock). A second
 [offline smoke test](evidence/locked-build-smoke.json) reproduced the block
 checksum with that wheel lock in place.
+
+Once the four-slot run is complete, render its measured worker timeline:
+
+```sh
+python3 render-timeline.py profile-evidence/community-synthetic-idw-run-4-v1.json timeline.png
+```
+
+Each bar is a prediction block, colored by raw or filtered training condition.
+The lower panel shows active blocks and checks its peak against the capture.

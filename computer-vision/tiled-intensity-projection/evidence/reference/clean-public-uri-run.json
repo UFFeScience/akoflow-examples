@@ -1,0 +1,15 @@
+{
+  "uri": "akoflow://hub/publications/88088095-1f5e-48bf-942c-17295542d09d/versions/1",
+  "run": "community-mip-projection-ensemble-v1-run-4",
+  "status": "completed",
+  "completed_activities": 257,
+  "matching_checksums": 259,
+  "peak_overlap_lower_bound": 4,
+  "unusable_tile_intervals": 0,
+  "elapsed_seconds": 280.0,
+  "aggregate_checksums": {
+    "depth-scan.gif": "sha256:9369915524fe7bf6ab14353252d31288891cd205618ee4084d1837e1410a6099",
+    "projection.csv": "sha256:7fd8ac639348b5a2aa54ed59bc5acdab5160552452e49123f23ce8627437a4fd",
+    "projection.png": "sha256:d33fc13cf35746105b37af2c03de10ebd1a2896997e68eb3b3caec0a3f476f24"
+  }
+}

@@ -8,6 +8,8 @@ import numpy as np
 BLOCK = 16
 REFERENCE = (64, 128, 128)
 PARTIAL = (61, 123, 115)
+LARGE = (96, 160, 160)
+SHAPES = {"standard": REFERENCE, "partial": PARTIAL, "large": LARGE}
 
 
 @dataclass(frozen=True)

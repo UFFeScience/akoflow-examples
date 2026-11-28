@@ -7,9 +7,8 @@ from pathlib import Path
 import numpy as np
 from PIL import Image, ImageDraw
 
-from projection import PARTIAL, REFERENCE, Tile, combine, project, tiles, voxels
+from projection import SHAPES, Tile, combine, project, tiles, voxels
 
-SHAPES = {"standard": REFERENCE, "partial": PARTIAL}
 FIELDS = ("y", "x", "maximum", "depth")
 
 

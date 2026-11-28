@@ -5,7 +5,7 @@ import json
 from functools import partial
 from pathlib import Path
 
-from projection import PARTIAL, REFERENCE, tiles
+from projection import REFERENCE, SHAPES, tiles
 
 
 ROOT = Path(__file__).resolve().parent
@@ -92,11 +92,11 @@ def configuration(batches, directory=ROOT):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build_reference", help="Registered portable recipe ID")
-    parser.add_argument("--dataset", choices=("standard", "partial"), default="standard")
+    parser.add_argument("--dataset", choices=SHAPES, default="standard")
     args = parser.parse_args()
-    if args.dataset == "partial":
-        WORKFLOW = f"{PREFIX}-partial-v1"
-    partition = tiles(REFERENCE if args.dataset == "standard" else PARTIAL)
+    if args.dataset != "standard":
+        WORKFLOW = f"{PREFIX}-{args.dataset}-v1"
+    partition = tiles(SHAPES[args.dataset])
     batches = [f"tile-{z:03d}-{y:03d}-{x:03d}" for z, y, x in (tile.start for tile in partition)]
     workflow(args.build_reference, args.dataset, partition, batches)
     configuration(batches)

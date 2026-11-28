@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from walks import BATCHES, PARTICLES, SCENARIOS, batch, estimate_checks, sufficient_statistics, validate
+from render import render
 
 FIELDS = ("x","y","count")
 
@@ -44,11 +45,13 @@ def reduce(source, output, steps):
         raise ValueError("Missing or unexpected batch files")
     output.mkdir(parents=True,exist_ok=True)
     report=[]
+    batch_inventory={}
     with (output/"batch-moments.csv").open("w",newline="") as stream:
         writer=csv.writer(stream,lineterminator="\n")
         writer.writerow(("scenario","batch","count","sum_x","sum_y","sum_xx","sum_yy","sum_xy"))
         for scenario in SCENARIOS:
             batches=[load_histogram(source/name(scenario,index),steps) for index in range(BATCHES)]
+            batch_inventory[scenario]=batches
             merged=Counter()
             for index,histogram in enumerate(batches):
                 writer.writerow((scenario,index,*sufficient_statistics(histogram)))
@@ -64,6 +67,7 @@ def reduce(source, output, steps):
                            "observed_mean":observed.tolist(),"expected_mean":expected_mean.tolist(),
                            "observed_covariance":covariance.tolist(),"expected_covariance":expected_cov.tolist()})
     (output/"moment-validation.json").write_text(json.dumps(report,indent=2)+"\n")
+    render(batch_inventory,output,steps)
 
 
 if __name__=="__main__":

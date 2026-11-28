@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from functools import partial
 from pathlib import Path
 
 
@@ -17,8 +18,8 @@ CAPACITIES = (1, 4, 8)
 SLOTS = 8
 
 
-def write(name, document):
-    (ROOT / name).write_text(json.dumps(document, indent=2) + "\n")
+def write(name, document, directory=ROOT):
+    (directory / name).write_text(json.dumps(document, indent=2) + "\n")
 
 
 def workflow(build_reference, batches):
@@ -44,7 +45,8 @@ def workflow(build_reference, batches):
                                                       "activities": activities}})
 
 
-def configuration(batches):
+def configuration(batches, directory=ROOT):
+    save = partial(write, directory=directory)
     activities = ["calibrate", *batches, "aggregate"]
     slots = [f"{PREFIX}-slot-{index:02d}" for index in range(SLOTS)]
     resources = [
@@ -55,7 +57,7 @@ def configuration(batches):
          "schedulable": True}
         for index, slot in enumerate(slots)
     ]
-    write("environment.yaml", {
+    save("environment.yaml", {
         "environment": {"id": ENVIRONMENT, "name": "Panchromatic classification CPU profiles", "status": "ready"},
         "version": {"id": ENV_VERSION, "environmentId": ENVIRONMENT, "version": 1,
                     "status": "published", "networkModel": "local", "interferenceModel": "observed",
@@ -67,8 +69,8 @@ def configuration(batches):
         "resourceRuntimeBindings": [{"resourceId": slot, "runtimeId": RUNTIME, "enabled": True}
                                     for slot in slots],
     })
-    write("scope.yaml", {"id": SCOPE, "name": "Panchromatic classification execution scope", "environmentVersionIds": [ENV_VERSION]})
-    write("topology.yaml", {"id": TOPOLOGY, "name": "Panchromatic classification local topology", "version": 1,
+    save("scope.yaml", {"id": SCOPE, "name": "Panchromatic classification execution scope", "environmentVersionIds": [ENV_VERSION]})
+    save("topology.yaml", {"id": TOPOLOGY, "name": "Panchromatic classification local topology", "version": 1,
                             "executionScopeId": SCOPE, "links": []})
     for capacity in CAPACITIES:
         counters = [0] * capacity
@@ -78,7 +80,7 @@ def configuration(batches):
                                 "activityId": f"{WORKFLOW}-{name}", "resourceId": slots[index],
                                 "orderOnResource": counters[index], "metadata": {"runtimeId": RUNTIME}})
             counters[index] += 1
-        write(f"plan-{capacity}.yaml", {"plan": {
+        save(f"plan-{capacity}.yaml", {"plan": {
             "id": f"{WORKFLOW}-plan-{capacity}", "workflowVersionId": f"{WORKFLOW}-v1",
             "executionScopeId": SCOPE, "networkTopologyId": TOPOLOGY, "source": "imported",
             "algorithm": "manual", "algorithmVersion": "1", "objective": "custom",

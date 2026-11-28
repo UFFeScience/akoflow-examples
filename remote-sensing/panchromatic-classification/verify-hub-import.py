@@ -39,7 +39,10 @@ def verify(uri, reference_path, evidence):
     temporary = receipt.with_suffix(".tmp")
     temporary.write_text(json.dumps(result, indent=2) + "\n")
     temporary.replace(receipt)
-    configuration([f"case-{index:03d}" for index in range(CASES)])
+    config_dir = evidence.resolve() / "configuration"
+    config_dir.mkdir(exist_ok=True)
+    configuration([f"case-{index:03d}" for index in range(CASES)], directory=config_dir)
+    os.environ["AKOFLOW_CONFIG_DIR"] = str(config_dir)
     os.environ["AKOFLOW_USE_IMPORTED_WORKFLOW"] = "1"
     run(evidence, WORKFLOW, CASES, 4, reference["digests"], require_build=True)
 

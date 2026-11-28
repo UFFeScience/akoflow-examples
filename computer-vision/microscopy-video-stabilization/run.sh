@@ -3,9 +3,9 @@ set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
-run_id=${AKOFLOW_RUN_ID:-community-microscopy-stabilization-run-4-v1}
-plan_file=${AKOFLOW_PLAN_FILE:-plan-4.yaml}
 workflow=${AKOFLOW_WORKFLOW_ID:-community-microscopy-stabilization-ensemble-v1}
+run_id=${AKOFLOW_RUN_ID:-$workflow-run-4}
+plan_file=${AKOFLOW_PLAN_FILE:-plan-4.yaml}
 plan_id=${AKOFLOW_PLAN_ID:-$workflow-plan-4}
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 request(){ method=$1; endpoint=$2; shift 2; curl --fail-with-body -sS -X "$method" -H "Authorization: Bearer $token" "$@" "$api/$endpoint/"; }

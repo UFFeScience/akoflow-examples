@@ -68,7 +68,7 @@ def configuration(batches):
         counters = [0] * capacity
         assignments = []
         for name, index in zip(activities, (*(i % capacity for i in range(len(batches))), 0)):
-            assignments.append({"id": f"{PREFIX}-{capacity}-{name}",
+            assignments.append({"id": f"{WORKFLOW}-{capacity}-{name}",
                                 "activityId": f"{WORKFLOW}-{name}", "resourceId": slots[index],
                                 "orderOnResource": counters[index], "metadata": {"runtimeId": RUNTIME}})
             counters[index] += 1

@@ -9,7 +9,6 @@ import urllib.error
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
-from collections import Counter
 
 from generate import ACTIVITIES, BATCHES, CAPACITIES, PREFIX, WORKFLOW
 
@@ -44,19 +43,21 @@ def check_manifest(result):
     if any(item["status"] != "completed" for item in flow):
         raise ValueError("An activity did not complete")
     paths = {f"{name}.json" for name in BATCHES}
-    observed = Counter(item["relativePath"] for item in result["dataObjects"]
-                       if item["relativePath"] in paths)
-    if observed != Counter(paths):
+    blocks = [item for item in result["dataObjects"] if item["relativePath"] in paths]
+    block_digests = {item["relativePath"]: item["checksum"] for item in blocks}
+    if len(blocks) != len(paths) or set(block_digests) != paths or not all(block_digests.values()):
         raise ValueError("Missing or repeated prediction artifact")
     artifacts = [item for item in result["dataObjects"] if item["relativePath"] in DETERMINISTIC]
     digests = {item["relativePath"]: item["checksum"] for item in artifacts}
-    if len(artifacts) != len(DETERMINISTIC) or set(digests) != set(DETERMINISTIC):
+    if len(artifacts) != len(DETERMINISTIC) or set(digests) != set(DETERMINISTIC) or not all(digests.values()):
         raise ValueError("Missing or repeated aggregate output")
-    return digests
+    return digests, block_digests
 
 
-def save(path, result, slots, repetition):
-    digests = check_manifest(result)
+def save(path, result, slots, repetition, baseline=None):
+    digests, block_digests = check_manifest(result)
+    if baseline is not None and (digests, block_digests) != baseline:
+        raise ValueError(f"Scientific outputs diverged for {path.stem}")
     flow = result["activities"]
     scientific = [item for item in flow if "-block-" in item["activityId"]]
     changes = []
@@ -73,11 +74,12 @@ def save(path, result, slots, repetition):
         "collected_at": datetime.now(timezone.utc).isoformat(),
         "run": run, "activities": flow, "max_overlapping_batches": peak,
         "digests": digests,
+        "block_digests": block_digests,
         "artifacts": result["dataObjects"],
         "artifact_locations": result["dataLocations"],
     }, indent=2) + "\n")
     temporary.replace(path)
-    return digests
+    return digests, block_digests
 
 
 def wait_for(identifier):
@@ -122,9 +124,7 @@ def main():
                 continue
             if projection(identifier) is None:
                 submit(identifier, slots, args.evidence)
-            digests = save(args.evidence / f"{identifier}.json", wait_for(identifier), slots, repetition)
-            if digests != baseline:
-                raise ValueError(f"Scientific outputs diverged for {identifier}")
+            save(args.evidence / f"{identifier}.json", wait_for(identifier), slots, repetition, baseline)
             print(f"Verified {identifier}", flush=True)
 
 

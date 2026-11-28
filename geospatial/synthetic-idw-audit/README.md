@@ -97,3 +97,9 @@ portability check. With its API configured, run
 This imports the URI through the daemon, checks that preflight requests
 the build, and compares the complete clean run with the reference
 prediction-block and aggregate checksums.
+
+The [official v1.0.37 daemon test](evidence/reference/stock-release-preflight.json)
+imported all 1,033 activities from the public URI into empty storage.
+Its preflight reached the 30-second deadline while repeating availability
+checks for the shared build recipe. The isolated cold run uses the
+[shared-recipe probe fix](https://github.com/UFFeScience/akoflow/pull/519).

@@ -1,0 +1,12 @@
+{
+  "release": "v1.0.37",
+  "daemonImageTarSHA256": "19c814830134785e5718f014e075cd47fa8437b26a4437bd49fe7092a2b7302d",
+  "uri": "akoflow://hub/publications/7e05a7d2-c41e-45db-88d0-c5492099ba77/versions/1",
+  "initialImages": 0,
+  "initialWorkflows": 0,
+  "importedActivities": 1033,
+  "ready": false,
+  "buildsIdentified": 470,
+  "timedOut": 563,
+  "sharedRecipeProbeFix": "https://github.com/UFFeScience/akoflow/pull/519"
+}

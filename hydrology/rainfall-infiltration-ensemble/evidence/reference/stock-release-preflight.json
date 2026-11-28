@@ -1,0 +1,13 @@
+{
+  "release": "v1.0.37",
+  "workflowURI": "akoflow://hub/publications/a8d814ff-23eb-4a60-9b72-1646baadfb36/versions/1",
+  "ready": true,
+  "cleanImageAbsent": true,
+  "executableChecks": [
+    {
+      "status": "warning",
+      "count": 514,
+      "message": "Build required: the Dockerfile context and local builder are available."
+    }
+  ]
+}

@@ -23,6 +23,9 @@ python3 stabilize.py 0 sequence.csv
 ```
 
 The CSV contains one row per frame and method, retaining explicit
-ambiguity and unavailable states. This entry point checks the numerical
+ambiguity and unavailable states. Each frame records mean absolute intensity
+error and pixel count for the intersection of valid bilinear footprints
+across available methods, including the unregistered control. This entry
+point checks the numerical
 kernel locally. The AkôFlow execution, aggregate figures and publication
 evidence are pending.

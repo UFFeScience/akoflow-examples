@@ -112,18 +112,53 @@ def evaluate(frames, truth):
                 yield i, name, status, *total, ratio, np.linalg.norm(total + truth[i])
 
 
+def common_region_metrics(frames, rows):
+    """Score available methods over their shared valid bilinear footprint."""
+    yy, xx = np.indices(frames[0].shape)
+    estimates = {index: {} for index in range(len(frames))}
+    for frame, method, status, dy, dx, *_ in rows:
+        if status == "ok":
+            estimates[frame][method] = (dy, dx)
+
+    for frame, shifts in estimates.items():
+        height, width = frames[frame].shape
+        valid = np.ones((height, width), dtype=bool)
+        for dy, dx in shifts.values():
+            y, x = yy - dy, xx - dx
+            valid &= (y >= 0) & (x >= 0) & (y <= height - 1) & (x <= width - 1)
+
+        count = int(valid.sum())
+        reference = frames[0][valid]
+        for method, (dy, dx) in shifts.items():
+            if count == 0:
+                yield (frame, method), (np.nan, count)
+                continue
+            y, x = yy[valid] - dy, xx[valid] - dx
+            y0, x0 = np.floor(y).astype(int), np.floor(x).astype(int)
+            y1, x1 = np.minimum(y0 + 1, height - 1), np.minimum(x0 + 1, width - 1)
+            fy, fx = y - y0, x - x0
+            moving = frames[frame]
+            top = (1 - fx) * moving[y0, x0] + fx * moving[y0, x1]
+            bottom = (1 - fx) * moving[y1, x0] + fx * moving[y1, x1]
+            aligned = (1 - fy) * top + fy * bottom
+            yield (frame, method), (float(np.mean(np.abs(reference - aligned))), count)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("case", type=int, choices=range(len(CASES)), metavar="CASE")
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
     frames, truth = generate(*CASES[args.case])
+    rows = list(evaluate(frames, truth))
+    metrics = dict(common_region_metrics(frames, rows))
     with args.output.open("w", newline="") as stream:
         writer = csv.writer(stream, lineterminator="\n")
         writer.writerow(("frame", "method", "status", "alignment_y", "alignment_x",
-                         "peak_ratio", "trajectory_error_px", "truth_y", "truth_x"))
-        for row in evaluate(frames, truth):
-            writer.writerow((*row, *truth[row[0]]))
+                         "peak_ratio", "trajectory_error_px", "truth_y", "truth_x",
+                         "common_mae", "common_pixels"))
+        for row in rows:
+            writer.writerow((*row, *truth[row[0]], *metrics.get(row[:2], (np.nan, 0))))
 
 
 if __name__ == "__main__":

@@ -1,0 +1,20 @@
+{
+  "uri": "akoflow://hub/publications/300e1ec3-e2c5-4ad8-b4aa-ea5659523a81/versions/1",
+  "run": "community-particle-walk-ensemble-v1-run-4",
+  "status": "completed",
+  "completed_activities": 257,
+  "matching_checksums": 264,
+  "peak_overlap_lower_bound": 4,
+  "unusable_case_intervals": 0,
+  "elapsed_seconds": 252.0,
+  "aggregate_checksums": {
+    "anisotropic-endpoints.csv": "sha256:d21334c394566856cca90d63f889f9793e93b2e784e75c52a4c7a256eac6d2e3",
+    "batch-moments.csv": "sha256:a3b017f5a6b5bb86ff272dad6d1d11675e0faedba6d51fa2afa3780df0047150",
+    "endpoint-accumulation.gif": "sha256:b6877c56f6023bca7d8265f079d112829c7166ff4c71dd45ac01133d43f0baac",
+    "endpoint-dispersion.png": "sha256:f1823c146e5478060b639f0de5457416d730da7bbbbfeccab2dafed7d6dd6d98",
+    "high-drift-endpoints.csv": "sha256:3babd42024b1a87af8acc00ac5054e55866b2bef7216c1231335f5e9628a9a47",
+    "isotropic-endpoints.csv": "sha256:ddb38b032332dbe3f4a683c6961e9c557d1ad3a1dd774c381e8df657b57acfab",
+    "low-drift-endpoints.csv": "sha256:dd006b42fd789e0aa844a10de6cee43e4369ae38d092fbdbc81b6ecff47549c0",
+    "moment-validation.json": "sha256:7c4dd644bf62993e501be3bb8c8806455a8b834ced17380a0dd8377e91f6fb79"
+  }
+}

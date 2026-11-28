@@ -1,0 +1,11 @@
+{
+  "features": 3825,
+  "invalid_coordinates_or_area": 6,
+  "median_geometry_to_reported_municipal_area": 1.0042860416509232,
+  "ratio_range": [
+    0.7210100335512055,
+    3.3309197181781673
+  ],
+  "beyond_one_percent": 1408,
+  "identical_geometry_groups": 0
+}

@@ -1,0 +1,23 @@
+{
+  "months": 72,
+  "features": 334054,
+  "distinct_provider_ids": 108729,
+  "missing_reported_areas": 0,
+  "classes": {
+    "CICATRIZ_DE_QUEIMADA": 90226,
+    "CS_DESORDENADO": 5054,
+    "CS_GEOMETRICO": 3455,
+    "DEGRADACAO": 21667,
+    "DESMATAMENTO_CR": 200894,
+    "DESMATAMENTO_VEG": 6820,
+    "MINERACAO": 5938
+  },
+  "features_by_year": {
+    "2019": 52908,
+    "2020": 58459,
+    "2021": 48184,
+    "2022": 53088,
+    "2023": 40186,
+    "2024": 81229
+  }
+}

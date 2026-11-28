@@ -1,0 +1,22 @@
+[
+  {
+    "month": "2019-01",
+    "features": 586,
+    "flagged_features": {
+      "degenerate_ring": 4
+    },
+    "flagged_rings": {
+      "degenerate_ring": 4
+    }
+  },
+  {
+    "month": "2019-06",
+    "features": 3245,
+    "flagged_features": {
+      "degenerate_ring": 12
+    },
+    "flagged_rings": {
+      "degenerate_ring": 13
+    }
+  }
+]

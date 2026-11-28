@@ -1,0 +1,655 @@
+{
+  "source": "https://terrabrasilis.dpi.inpe.br/geoserver/ows",
+  "layer": "deter-amz:deter_amz",
+  "license": "CC BY-SA 4.0",
+  "months": [
+    {
+      "start": "2019-01-01",
+      "end": "2019-02-01",
+      "features": 586,
+      "retrieved_at": "2026-11-28T04:05:12.304398+00:00",
+      "sha256": "637d65b0e6f52392b60fe67dddcea96f3d013a8514c2a821dd36641e3f76802a",
+      "bytes": 94321,
+      "name": "2019-01.geojson.gz"
+    },
+    {
+      "start": "2019-02-01",
+      "end": "2019-03-01",
+      "features": 672,
+      "retrieved_at": "2026-11-28T04:05:14.672697+00:00",
+      "sha256": "35ee2e5617df807ca24fc79b113302c2d93cc2e3cfde0ef5bdd658dd1a68ad86",
+      "bytes": 100593,
+      "name": "2019-02.geojson.gz"
+    },
+    {
+      "start": "2019-03-01",
+      "end": "2019-04-01",
+      "features": 1494,
+      "retrieved_at": "2026-11-28T04:05:17.710886+00:00",
+      "sha256": "39a27def37095f7cbb902ab5482c144f44cb39631fa0a683f3abe8acb778e4a2",
+      "bytes": 309570,
+      "name": "2019-03.geojson.gz"
+    },
+    {
+      "start": "2019-04-01",
+      "end": "2019-05-01",
+      "features": 1605,
+      "retrieved_at": "2026-11-28T04:05:20.880554+00:00",
+      "sha256": "daf0a732b7df9eeac7a6bfd4fd303d1a900d0349fa2ad5bd62ac7e906d777e34",
+      "bytes": 360976,
+      "name": "2019-04.geojson.gz"
+    },
+    {
+      "start": "2019-05-01",
+      "end": "2019-06-01",
+      "features": 2398,
+      "retrieved_at": "2026-11-28T04:05:30.061725+00:00",
+      "sha256": "b67ec104d2d0c5a33606e206a3a149afb6cdaa2a6a01f3a2a3301eeeccfb0cf9",
+      "bytes": 417261,
+      "name": "2019-05.geojson.gz"
+    },
+    {
+      "start": "2019-06-01",
+      "end": "2019-07-01",
+      "features": 3245,
+      "retrieved_at": "2026-11-28T04:05:38.971293+00:00",
+      "sha256": "0aaaf045e4ebed7d6b9422050d35e35e0ee990c5d6fc4a076ba610273da43ff0",
+      "bytes": 691849,
+      "name": "2019-06.geojson.gz"
+    },
+    {
+      "start": "2019-07-01",
+      "end": "2019-08-01",
+      "features": 10357,
+      "retrieved_at": "2026-11-28T04:05:59.676925+00:00",
+      "sha256": "e2fbe0be53fe1f8129aa0d83a1161e4e99dc0a48237358837777d5c4c2c8627e",
+      "bytes": 1863429,
+      "name": "2019-07.geojson.gz"
+    },
+    {
+      "start": "2019-08-01",
+      "end": "2019-09-01",
+      "features": 13078,
+      "retrieved_at": "2026-11-28T04:07:18.168948+00:00",
+      "sha256": "a350bd2055c7d0c03316c9fd48831443155a65bdc5f6ec8456782ad09feaba90",
+      "bytes": 2754452,
+      "name": "2019-08.geojson.gz"
+    },
+    {
+      "start": "2019-09-01",
+      "end": "2019-10-01",
+      "features": 10992,
+      "retrieved_at": "2026-11-28T04:07:43.037538+00:00",
+      "sha256": "197f9d1d61f7a91e152472d4080ed2f6dad68420016b99814424590934c69a46",
+      "bytes": 2750189,
+      "name": "2019-09.geojson.gz"
+    },
+    {
+      "start": "2019-10-01",
+      "end": "2019-11-01",
+      "features": 3767,
+      "retrieved_at": "2026-11-28T04:07:51.518316+00:00",
+      "sha256": "2aa02c3c6c10771023e71883a79f532550eb5e6d3fc067756c2d354af1529ef4",
+      "bytes": 854318,
+      "name": "2019-10.geojson.gz"
+    },
+    {
+      "start": "2019-11-01",
+      "end": "2019-12-01",
+      "features": 3668,
+      "retrieved_at": "2026-11-28T04:07:58.816744+00:00",
+      "sha256": "b74c8fc7594b79d20df5ac325311723efc72bf11e6e15892c5645624a4058346",
+      "bytes": 619977,
+      "name": "2019-11.geojson.gz"
+    },
+    {
+      "start": "2019-12-01",
+      "end": "2020-01-01",
+      "features": 1046,
+      "retrieved_at": "2026-11-28T04:08:01.804462+00:00",
+      "sha256": "9ec7c6e2eeb9e38d82616b59fe6d5e64e8d2cf266f9be785495bba748946c5f0",
+      "bytes": 150667,
+      "name": "2019-12.geojson.gz"
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2020-02-01",
+      "features": 1505,
+      "retrieved_at": "2026-11-28T04:08:05.186465+00:00",
+      "sha256": "a675b26628d71fb45ef3fd81c5de912d2f89e416d85f704ac2999aa848d269c7",
+      "bytes": 243806,
+      "name": "2020-01.geojson.gz"
+    },
+    {
+      "start": "2020-02-01",
+      "end": "2020-03-01",
+      "features": 641,
+      "retrieved_at": "2026-11-28T04:08:07.805835+00:00",
+      "sha256": "5d76bec9fe05eb40d988e814e903388275f9985588502daab3dc749727037d02",
+      "bytes": 120433,
+      "name": "2020-02.geojson.gz"
+    },
+    {
+      "start": "2020-03-01",
+      "end": "2020-04-01",
+      "features": 1003,
+      "retrieved_at": "2026-11-28T04:08:10.595836+00:00",
+      "sha256": "ecbb47fe5609ac269e858a47673785fbc514442011f466a17033cfd521f297a6",
+      "bytes": 162994,
+      "name": "2020-03.geojson.gz"
+    },
+    {
+      "start": "2020-04-01",
+      "end": "2020-05-01",
+      "features": 1385,
+      "retrieved_at": "2026-11-28T04:08:13.683424+00:00",
+      "sha256": "6ba47b019a2d097632eb12e4b44c9956ac42866e93faed46311f34c8ada28289",
+      "bytes": 226861,
+      "name": "2020-04.geojson.gz"
+    },
+    {
+      "start": "2020-05-01",
+      "end": "2020-06-01",
+      "features": 2455,
+      "retrieved_at": "2026-11-28T04:08:22.630708+00:00",
+      "sha256": "ca7d03d840653929ab4afafdfc07f2a5078b5c916b477a7cb7fcfcc1b02723b8",
+      "bytes": 414649,
+      "name": "2020-05.geojson.gz"
+    },
+    {
+      "start": "2020-06-01",
+      "end": "2020-07-01",
+      "features": 5711,
+      "retrieved_at": "2026-11-28T04:08:33.011033+00:00",
+      "sha256": "688bf306fc11634b6bad349fc4e361bd704b8763056130474dd810d102d31581",
+      "bytes": 846635,
+      "name": "2020-06.geojson.gz"
+    },
+    {
+      "start": "2020-07-01",
+      "end": "2020-08-01",
+      "features": 10341,
+      "retrieved_at": "2026-11-28T04:08:56.757061+00:00",
+      "sha256": "9a1bcd98b51b873a42260a6a6e899242ddaf52723653c395466c67958e1fb424",
+      "bytes": 1478208,
+      "name": "2020-07.geojson.gz"
+    },
+    {
+      "start": "2020-08-01",
+      "end": "2020-09-01",
+      "features": 10993,
+      "retrieved_at": "2026-11-28T04:09:21.636160+00:00",
+      "sha256": "3f8cc9eab284f1c6f58d3d73d39d51bf67a3d1dd95e1a3516facd2581c920d43",
+      "bytes": 1561654,
+      "name": "2020-08.geojson.gz"
+    },
+    {
+      "start": "2020-09-01",
+      "end": "2020-10-01",
+      "features": 11770,
+      "retrieved_at": "2026-11-28T04:09:46.249970+00:00",
+      "sha256": "a5db6b8d9028d60b7822d8f76eba626b0d5110a2efb158975aee6552ded0a038",
+      "bytes": 2802839,
+      "name": "2020-09.geojson.gz"
+    },
+    {
+      "start": "2020-10-01",
+      "end": "2020-11-01",
+      "features": 8727,
+      "retrieved_at": "2026-11-28T04:10:04.926385+00:00",
+      "sha256": "3414470aed5ab4080b3221c5b7c8c332b5157a2c719c409d7bc417495766eec7",
+      "bytes": 1673257,
+      "name": "2020-10.geojson.gz"
+    },
+    {
+      "start": "2020-11-01",
+      "end": "2020-12-01",
+      "features": 2488,
+      "retrieved_at": "2026-11-28T04:10:12.467035+00:00",
+      "sha256": "0b2aa68ea409ee3ac4f8a404307c9dcc7eb881cb367bc0337b9b300f9a433671",
+      "bytes": 448577,
+      "name": "2020-11.geojson.gz"
+    },
+    {
+      "start": "2020-12-01",
+      "end": "2021-01-01",
+      "features": 1440,
+      "retrieved_at": "2026-11-28T04:10:15.874700+00:00",
+      "sha256": "54f5b36d143b5a46bd9f6be72e7b629a021dfd0e344543f75a8bbc97aed17213",
+      "bytes": 207948,
+      "name": "2020-12.geojson.gz"
+    },
+    {
+      "start": "2021-01-01",
+      "end": "2021-02-01",
+      "features": 335,
+      "retrieved_at": "2026-11-28T04:10:18.108760+00:00",
+      "sha256": "608967fe17cb129d75bebe67baf25edd9109ecec99a5a73d279501e381cc43c6",
+      "bytes": 52826,
+      "name": "2021-01.geojson.gz"
+    },
+    {
+      "start": "2021-02-01",
+      "end": "2021-03-01",
+      "features": 554,
+      "retrieved_at": "2026-11-28T04:10:21.266239+00:00",
+      "sha256": "11ee837aa5725fd404ccb48584f8fcb6a253b446693fa8c1991f7a032042f44e",
+      "bytes": 74844,
+      "name": "2021-02.geojson.gz"
+    },
+    {
+      "start": "2021-03-01",
+      "end": "2021-04-01",
+      "features": 1006,
+      "retrieved_at": "2026-11-28T04:10:25.638295+00:00",
+      "sha256": "500d414091e3c7cdc8403a212d1550abd3368b87735b00337fa6bfd11e79ab5f",
+      "bytes": 151805,
+      "name": "2021-03.geojson.gz"
+    },
+    {
+      "start": "2021-04-01",
+      "end": "2021-05-01",
+      "features": 1745,
+      "retrieved_at": "2026-11-28T04:10:31.992583+00:00",
+      "sha256": "8014d7a7b6d29d9cc38dd82ad7a1bb6690d9fb63e05fc304c3998104cbcf1a6d",
+      "bytes": 272962,
+      "name": "2021-04.geojson.gz"
+    },
+    {
+      "start": "2021-05-01",
+      "end": "2021-06-01",
+      "features": 5640,
+      "retrieved_at": "2026-11-28T04:10:47.649783+00:00",
+      "sha256": "22ef0391bb2ebd3ce8d17060d45f07be6b3697ed1c2672f5423a8ebc1b939da7",
+      "bytes": 794359,
+      "name": "2021-05.geojson.gz"
+    },
+    {
+      "start": "2021-06-01",
+      "end": "2021-07-01",
+      "features": 6088,
+      "retrieved_at": "2026-11-28T04:11:04.574886+00:00",
+      "sha256": "f38c67ecb1b8c238cad6fbff53dd95087f5f028a45216a54ec4e8238bceedeb5",
+      "bytes": 802917,
+      "name": "2021-06.geojson.gz"
+    },
+    {
+      "start": "2021-07-01",
+      "end": "2021-08-01",
+      "features": 10235,
+      "retrieved_at": "2026-11-28T04:11:26.237051+00:00",
+      "sha256": "6faf60da46b0bd7c7c4a23863ab429d649e6528b9fb18c246f2bd87eed3fa640",
+      "bytes": 1254938,
+      "name": "2021-07.geojson.gz"
+    },
+    {
+      "start": "2021-08-01",
+      "end": "2021-09-01",
+      "features": 7294,
+      "retrieved_at": "2026-11-28T04:11:39.531710+00:00",
+      "sha256": "cb56b31952ad34c0c999e6c7be54b97b08c4d875302bab207b2dd72b196bd89a",
+      "bytes": 1072933,
+      "name": "2021-08.geojson.gz"
+    },
+    {
+      "start": "2021-09-01",
+      "end": "2021-10-01",
+      "features": 7542,
+      "retrieved_at": "2026-11-28T04:12:00.752228+00:00",
+      "sha256": "a62a05ea18fbf050e804ecda8c4f9af01c511c204bc0063f511e24001cfda28a",
+      "bytes": 1143540,
+      "name": "2021-09.geojson.gz"
+    },
+    {
+      "start": "2021-10-01",
+      "end": "2021-11-01",
+      "features": 5852,
+      "retrieved_at": "2026-11-28T04:12:16.539617+00:00",
+      "sha256": "ad648b9f9f795d8c586d6f643602994d0789fd80180090302ddcb077042d5519",
+      "bytes": 869246,
+      "name": "2021-10.geojson.gz"
+    },
+    {
+      "start": "2021-11-01",
+      "end": "2021-12-01",
+      "features": 1421,
+      "retrieved_at": "2026-11-28T04:12:19.259280+00:00",
+      "sha256": "0bd39a28a07ff9336ae3ae714e276ad3bdbb8915530d9e272e36717ec8353101",
+      "bytes": 196383,
+      "name": "2021-11.geojson.gz"
+    },
+    {
+      "start": "2021-12-01",
+      "end": "2022-01-01",
+      "features": 472,
+      "retrieved_at": "2026-11-28T04:12:21.563712+00:00",
+      "sha256": "346a13be8cfac6e0792b0d581848cf9f286778f29f0b9b1e1f6b6d509b5f9e2d",
+      "bytes": 68082,
+      "name": "2021-12.geojson.gz"
+    },
+    {
+      "start": "2022-01-01",
+      "end": "2022-02-01",
+      "features": 1764,
+      "retrieved_at": "2026-11-28T04:12:29.059353+00:00",
+      "sha256": "3d670142bcc633bdd57e5515ad48889dc1455c2ff3116b60c23228a32b4988dd",
+      "bytes": 263742,
+      "name": "2022-01.geojson.gz"
+    },
+    {
+      "start": "2022-02-01",
+      "end": "2022-03-01",
+      "features": 660,
+      "retrieved_at": "2026-11-28T04:12:31.482991+00:00",
+      "sha256": "642597f5f422a1a49d89e005ac65e380dea44346327bcf3ba208532769825f34",
+      "bytes": 105654,
+      "name": "2022-02.geojson.gz"
+    },
+    {
+      "start": "2022-03-01",
+      "end": "2022-04-01",
+      "features": 954,
+      "retrieved_at": "2026-11-28T04:12:34.267468+00:00",
+      "sha256": "f0be182d6335102c4807be07bdb1644a377adbcdee96758ea5c042a165310ecb",
+      "bytes": 148616,
+      "name": "2022-03.geojson.gz"
+    },
+    {
+      "start": "2022-04-01",
+      "end": "2022-05-01",
+      "features": 3037,
+      "retrieved_at": "2026-11-28T04:12:42.364922+00:00",
+      "sha256": "7a7424055ea8a121d0e97c19966a348214bf5cca0e8b3db0c1c8b85c1e139c9a",
+      "bytes": 487261,
+      "name": "2022-04.geojson.gz"
+    },
+    {
+      "start": "2022-05-01",
+      "end": "2022-06-01",
+      "features": 3509,
+      "retrieved_at": "2026-11-28T04:12:49.606500+00:00",
+      "sha256": "95cd932c9d51df5e76b36f6b5a496c0709caac97f22bd4837043de2c1f4d4ecc",
+      "bytes": 515878,
+      "name": "2022-05.geojson.gz"
+    },
+    {
+      "start": "2022-06-01",
+      "end": "2022-07-01",
+      "features": 4532,
+      "retrieved_at": "2026-11-28T04:13:03.592867+00:00",
+      "sha256": "c1f45acaf713aab5fc337a377f5c9f95683cdf06e1c8d194ba79631291b394af",
+      "bytes": 639072,
+      "name": "2022-06.geojson.gz"
+    },
+    {
+      "start": "2022-07-01",
+      "end": "2022-08-01",
+      "features": 7493,
+      "retrieved_at": "2026-11-28T04:13:17.440621+00:00",
+      "sha256": "0abd2c11520ce238fc3630e08933f905702ff079dee6748f7094ab33e75de755",
+      "bytes": 1149321,
+      "name": "2022-07.geojson.gz"
+    },
+    {
+      "start": "2022-08-01",
+      "end": "2022-09-01",
+      "features": 9152,
+      "retrieved_at": "2026-11-28T04:13:40.245006+00:00",
+      "sha256": "a0f7b2967c937c91270135218ef7a13290b2cc5efebf49cea5b044245fdebdbf",
+      "bytes": 1472535,
+      "name": "2022-08.geojson.gz"
+    },
+    {
+      "start": "2022-09-01",
+      "end": "2022-10-01",
+      "features": 9994,
+      "retrieved_at": "2026-11-28T04:13:58.142020+00:00",
+      "sha256": "756764989bcc130aa63d1afd8151b9e39f00db46558eebee67c38e985bc384aa",
+      "bytes": 1776239,
+      "name": "2022-09.geojson.gz"
+    },
+    {
+      "start": "2022-10-01",
+      "end": "2022-11-01",
+      "features": 6567,
+      "retrieved_at": "2026-11-28T04:14:14.198680+00:00",
+      "sha256": "996e6421882c33e61a0ced23170bb7e003a77d4c392fa1fe22221c9f6bd052bb",
+      "bytes": 1064875,
+      "name": "2022-10.geojson.gz"
+    },
+    {
+      "start": "2022-11-01",
+      "end": "2022-12-01",
+      "features": 4129,
+      "retrieved_at": "2026-11-28T04:14:24.643401+00:00",
+      "sha256": "b754bf08ee18fbd4f49bd7220fb65f7c375a6f796cedf2d113d7b42c94f94c0d",
+      "bytes": 585003,
+      "name": "2022-11.geojson.gz"
+    },
+    {
+      "start": "2022-12-01",
+      "end": "2023-01-01",
+      "features": 1297,
+      "retrieved_at": "2026-11-28T04:14:27.264873+00:00",
+      "sha256": "ca0ca698b20cd404d114cf1a71daf65c5bc0609f7940cd339073eb504d3fab8e",
+      "bytes": 174127,
+      "name": "2022-12.geojson.gz"
+    },
+    {
+      "start": "2023-01-01",
+      "end": "2023-02-01",
+      "features": 611,
+      "retrieved_at": "2026-11-28T04:14:30.065880+00:00",
+      "sha256": "11eca606fb43e2e1873f01df217f896cb3b863b05a8910f3fe2830ac633669b6",
+      "bytes": 86848,
+      "name": "2023-01.geojson.gz"
+    },
+    {
+      "start": "2023-02-01",
+      "end": "2023-03-01",
+      "features": 1205,
+      "retrieved_at": "2026-11-28T04:14:32.719618+00:00",
+      "sha256": "4bfe236ba1d0a588e285d2942d57e846679193673b9c7cb0e10cb62bc1b840a5",
+      "bytes": 175466,
+      "name": "2023-02.geojson.gz"
+    },
+    {
+      "start": "2023-03-01",
+      "end": "2023-04-01",
+      "features": 1368,
+      "retrieved_at": "2026-11-28T04:14:35.382690+00:00",
+      "sha256": "4a0e2d8eeef59aefa127f08f9a39772784b805e457e51629d2aaa260a8dbbcfc",
+      "bytes": 185537,
+      "name": "2023-03.geojson.gz"
+    },
+    {
+      "start": "2023-04-01",
+      "end": "2023-05-01",
+      "features": 1340,
+      "retrieved_at": "2026-11-28T04:14:38.278919+00:00",
+      "sha256": "5dd275bba262de0bbb10c990e03577e7222002323b45c8b56b55062af63cac2b",
+      "bytes": 205176,
+      "name": "2023-04.geojson.gz"
+    },
+    {
+      "start": "2023-05-01",
+      "end": "2023-06-01",
+      "features": 2925,
+      "retrieved_at": "2026-11-28T04:14:44.859706+00:00",
+      "sha256": "c5e92a2ce7974045fb67e6555d53cf3904294aa31364b8df909d79bae4916d0a",
+      "bytes": 461079,
+      "name": "2023-05.geojson.gz"
+    },
+    {
+      "start": "2023-06-01",
+      "end": "2023-07-01",
+      "features": 3492,
+      "retrieved_at": "2026-11-28T04:14:51.757920+00:00",
+      "sha256": "1961cab31a29719b281bc4a4fc45edbc1fec2e1a31566cf5d4b8b6f2c03ea6b5",
+      "bytes": 500137,
+      "name": "2023-06.geojson.gz"
+    },
+    {
+      "start": "2023-07-01",
+      "end": "2023-08-01",
+      "features": 3707,
+      "retrieved_at": "2026-11-28T04:14:58.171838+00:00",
+      "sha256": "a4955b31266ea3b0ccfbac07b9b9dbc1e1e0f8e300e0a7d806713b34a0e90b49",
+      "bytes": 497794,
+      "name": "2023-07.geojson.gz"
+    },
+    {
+      "start": "2023-08-01",
+      "end": "2023-09-01",
+      "features": 4505,
+      "retrieved_at": "2026-11-28T04:15:19.080133+00:00",
+      "sha256": "6c5cdf3cb186502dfc7406d86d5ddf852dd5d0e5676de3f50610111f6f879e7b",
+      "bytes": 735626,
+      "name": "2023-08.geojson.gz"
+    },
+    {
+      "start": "2023-09-01",
+      "end": "2023-10-01",
+      "features": 6848,
+      "retrieved_at": "2026-11-28T04:15:33.384350+00:00",
+      "sha256": "d4d2eed6d837775f86cb618624807dc95e0c6ace2fa826a03851c5e3a010abdb",
+      "bytes": 1108010,
+      "name": "2023-09.geojson.gz"
+    },
+    {
+      "start": "2023-10-01",
+      "end": "2023-11-01",
+      "features": 6860,
+      "retrieved_at": "2026-11-28T04:15:48.313723+00:00",
+      "sha256": "e44d88dcd74393b099b9c979f4853878754138d007d3ccfc0a6cddeef653d399",
+      "bytes": 1432186,
+      "name": "2023-10.geojson.gz"
+    },
+    {
+      "start": "2023-11-01",
+      "end": "2023-12-01",
+      "features": 4436,
+      "retrieved_at": "2026-11-28T04:15:59.666171+00:00",
+      "sha256": "b0c7a816255a8b6d680238b73a0df695f352daa8d7bd9aa259b4c6bd02533ec0",
+      "bytes": 958077,
+      "name": "2023-11.geojson.gz"
+    },
+    {
+      "start": "2023-12-01",
+      "end": "2024-01-01",
+      "features": 2889,
+      "retrieved_at": "2026-11-28T04:16:11.983438+00:00",
+      "sha256": "06ad33b00fdcf0e8c4bff9dca6412a372b07ce64dec0cfad768be9eed6ed3eb8",
+      "bytes": 707387,
+      "name": "2023-12.geojson.gz"
+    },
+    {
+      "start": "2024-01-01",
+      "end": "2024-02-01",
+      "features": 1295,
+      "retrieved_at": "2026-11-28T04:16:15.263838+00:00",
+      "sha256": "9bb46af06aededdb661fbfb797f611ef52358e161c3786e9c00ef22fa15fcf8e",
+      "bytes": 271613,
+      "name": "2024-01.geojson.gz"
+    },
+    {
+      "start": "2024-02-01",
+      "end": "2024-03-01",
+      "features": 4206,
+      "retrieved_at": "2026-11-28T04:16:28.032535+00:00",
+      "sha256": "d0d45d5657bed7422a84ec13f2752f56ac0d49533610991d998ac3ba8b9c818e",
+      "bytes": 1237814,
+      "name": "2024-02.geojson.gz"
+    },
+    {
+      "start": "2024-03-01",
+      "end": "2024-04-01",
+      "features": 3114,
+      "retrieved_at": "2026-11-28T04:16:42.475662+00:00",
+      "sha256": "b79e827a919056e11a9afb556e63b73b2c925d94551f3f4eccf9d66839ecf008",
+      "bytes": 1056813,
+      "name": "2024-03.geojson.gz"
+    },
+    {
+      "start": "2024-04-01",
+      "end": "2024-05-01",
+      "features": 2707,
+      "retrieved_at": "2026-11-28T04:16:55.307763+00:00",
+      "sha256": "e086d459ca47304474d8d76eec1bf58c60c8ee69a765b73d593ddc0b31a3b78b",
+      "bytes": 739003,
+      "name": "2024-04.geojson.gz"
+    },
+    {
+      "start": "2024-05-01",
+      "end": "2024-06-01",
+      "features": 3467,
+      "retrieved_at": "2026-11-28T04:17:02.790532+00:00",
+      "sha256": "b87fbef53741c4004cae6d83e660b2cd6ca5e24996523d36e1a8cabf73d385a6",
+      "bytes": 735248,
+      "name": "2024-05.geojson.gz"
+    },
+    {
+      "start": "2024-06-01",
+      "end": "2024-07-01",
+      "features": 3758,
+      "retrieved_at": "2026-11-28T04:17:25.734293+00:00",
+      "sha256": "d5dee1a3f98954333c81e9445e0bdc2574688ca25a0f026267ca73d21c25f5fa",
+      "bytes": 673276,
+      "name": "2024-06.geojson.gz"
+    },
+    {
+      "start": "2024-07-01",
+      "end": "2024-08-01",
+      "features": 7317,
+      "retrieved_at": "2026-11-28T04:18:02.739060+00:00",
+      "sha256": "3fbeea90130ab15e5d53aef8c7aa9135fb35b6214290f18bfac38709235e09c2",
+      "bytes": 1306645,
+      "name": "2024-07.geojson.gz"
+    },
+    {
+      "start": "2024-08-01",
+      "end": "2024-09-01",
+      "features": 10096,
+      "retrieved_at": "2026-11-28T04:19:01.343300+00:00",
+      "sha256": "cc9eb38115edd802960cabad4a7dcc4815c60b8fc99facb6bd068b8048e6bcc7",
+      "bytes": 2369527,
+      "name": "2024-08.geojson.gz"
+    },
+    {
+      "start": "2024-09-01",
+      "end": "2024-10-01",
+      "features": 21186,
+      "retrieved_at": "2026-11-28T04:20:08.022363+00:00",
+      "sha256": "dfae00a9b82752f80d337334caaaba039b17a0d2b13782ff0af2fe0dce9d0537",
+      "bytes": 6586919,
+      "name": "2024-09.geojson.gz"
+    },
+    {
+      "start": "2024-10-01",
+      "end": "2024-11-01",
+      "features": 17671,
+      "retrieved_at": "2026-11-28T04:20:56.417539+00:00",
+      "sha256": "607bce4e35592a2f1146660a00401a8b22566383e8617ce83b2d8c46d3c7cc5b",
+      "bytes": 5107061,
+      "name": "2024-10.geojson.gz"
+    },
+    {
+      "start": "2024-11-01",
+      "end": "2024-12-01",
+      "features": 4912,
+      "retrieved_at": "2026-11-28T04:21:18.032135+00:00",
+      "sha256": "71e5a74f36001bc29b056934caceb0f6be3de52379fed5ca2b6a8a243e823e24",
+      "bytes": 1336352,
+      "name": "2024-11.geojson.gz"
+    },
+    {
+      "start": "2024-12-01",
+      "end": "2025-01-01",
+      "features": 1500,
+      "retrieved_at": "2026-11-28T04:21:21.976633+00:00",
+      "sha256": "4fe243662ba09a74fba5737a2da8f2f1727f28b4a06e294b633e8d9a380fb84e",
+      "bytes": 384619,
+      "name": "2024-12.geojson.gz"
+    }
+  ]
+}

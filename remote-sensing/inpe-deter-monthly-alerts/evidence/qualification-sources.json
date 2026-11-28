@@ -1,0 +1,20 @@
+{
+  "provider": "Instituto Nacional de Pesquisas Espaciais (INPE)",
+  "service": "https://terrabrasilis.dpi.inpe.br/geoserver/ows",
+  "layer": "deter-amz:deter_amz",
+  "metadata": "https://terrabrasilis.dpi.inpe.br/geonetwork/srv/por/csw?service=CSW&version=2.0.2&request=GetRecordById&elementSetName=full&outputSchema=csw:IsoRecord&id=f2153c4a-915b-48a6-8658-963bdce7366c",
+  "license": "CC BY-SA 4.0",
+  "ibge_municipal_codes": "https://www.ibge.gov.br/explica/codigos-dos-municipios.php",
+  "provider_id_reuse_example": [
+    {
+      "gid": "10017_hist",
+      "view_date": "2019-08-12",
+      "mun_geocod": "1503606"
+    },
+    {
+      "gid": "10017_hist",
+      "view_date": "2019-08-14",
+      "mun_geocod": "1100403"
+    }
+  ]
+}

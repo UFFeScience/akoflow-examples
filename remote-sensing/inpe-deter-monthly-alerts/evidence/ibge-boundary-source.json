@@ -1,0 +1,7 @@
+{
+  "source": "https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2024/Brasil/BR_UF_2024.zip",
+  "sha256": "be61a1e11bf86b265098b5a0b02eb836237421ad73354b1f0892fb6be4598866",
+  "size_bytes": 14674008,
+  "feature_count": 27,
+  "projection": "GEOGCS[\"GCS_SIRGAS_2000\",DATUM[\"D_SIRGAS_2000\",SPHEROID[\"GRS_1980\",6378137.0,298.257222101]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]]"
+}

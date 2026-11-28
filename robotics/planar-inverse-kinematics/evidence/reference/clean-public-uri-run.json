@@ -1,0 +1,15 @@
+{
+  "uri": "akoflow://hub/publications/90a031b9-5949-434e-815b-0db5276d24cf/versions/1",
+  "run": "community-planar-kinematics-ensemble-v1-run-4",
+  "status": "completed",
+  "completed_activities": 257,
+  "matching_checksums": 259,
+  "peak_overlap_lower_bound": 3,
+  "unusable_case_intervals": 0,
+  "elapsed_seconds": 312.0,
+  "aggregate_checksums": {
+    "arm-poses.gif": "sha256:6cf3cbc5ffc70fde716f3185759d113ca70d7c1a0b49f603f8d6bec3864e9aad",
+    "trajectory-angles.png": "sha256:64a9bba5258236642226cf5491171fe31579ab14724a63da5445e24c39a40770",
+    "trajectory.csv": "sha256:72f085b1f67504a75be3556ddced17eaa5baca174cd9b6736119d4225f57dede"
+  }
+}

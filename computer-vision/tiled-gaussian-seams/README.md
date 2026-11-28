@@ -10,3 +10,26 @@ each pixel to one core, including images whose dimensions are unevenly
 divisible by four. Each of the 512 independent cases compares zero input
 margin, one-third-radius margin and full-radius margin against the complete
 image filtered with edge replication.
+
+## Run from source
+
+The launcher expects an AkôFlow daemon with local Docker. Set
+`AKOFLOW_API_URL` and `AKOFLOW_API_TOKEN` for that daemon. Install the
+hash-pinned requirements in a Python 3.11 environment before generating
+the workflow. The registered recipe builds the activity image independently
+on the daemon.
+
+```sh
+python3 -m pip install --require-hashes --only-binary=:all: -r requirements.lock
+configuration="$(mktemp -d)"
+recipe="$(./register-recipe.sh)"
+python3 generate.py "$recipe" --output "$configuration"
+AKOFLOW_CONFIG_DIR="$configuration" ./run.sh
+AKOFLOW_CONFIG_DIR="$configuration" AKOFLOW_SUBMIT=1 ./run.sh
+```
+
+The first invocation checks readiness and the second submits the four-slot
+reference. The generator also emits plans for one, 16 and 32 slots.
+The halo I/O report counts numerical source pixels required by each
+filter patch. It measures duplicate input coverage in a tiled reader.
+The benchmark generates each synthetic image locally inside its tile activity.

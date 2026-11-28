@@ -79,7 +79,12 @@ The [first scheduling repetition](evidence/reference/first-scheduling-repetition
 completed all 514 activities at each of 1, 4, 8, 16, and 32 configured slots.
 Every run reproduced the same CSV, PNG and GIF checksums. The 8-, 16-, and
 32-slot runs overlap the synthetic IDW campaign on the same host. Their
-measurements include that concurrent load. Two further repetitions are in
+measurements include that concurrent load.
+The second one-slot run also completed all 514 activities with identical
+CSV, PNG, and GIF checksums. Its 1,471-second run window
+(06:23:13–06:47:44 UTC) was fully concurrent with the IDW one-slot run on
+the same host. The first one-slot run took 1,395 seconds and finished before
+the IDW campaign began. Two further repetitions are in
 progress, and these values describe the first measurement at each slot count.
 
 The original workflow code and synthetic inputs use the [MIT license](LICENSE).

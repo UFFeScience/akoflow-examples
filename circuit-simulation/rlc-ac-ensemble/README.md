@@ -98,3 +98,26 @@ the analytic response was 1.48 × 10⁻⁶.
 [Process timings](outputs/rlc-timing.csv) ·
 [Validation](evidence/validation.json) ·
 [Activity trace](evidence/reference-run.json)
+
+## Scheduling comparison
+
+All twelve executions processed the same 4,096 circuit cases and completed
+all 130 activities. The batch CSV, representative CSV, figure, and animation
+had identical SHA-256 digests across runs.
+
+| Slots | Median end-to-end (s) | Median circuits/s | Median after preparation (s) | Speedup after preparation | Peak concurrent batches | Median artifacts (MB) |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1 | 803.0 | 5.10 | 772.1 | 1.00× | 1 | 47.83 |
+| 4 | 279.0 | 14.68 | 258.7 | 2.98× | 4 | 47.82 |
+| 8 | 302.0 | 13.56 | 277.4 | 2.78× | 8 | 47.82 |
+| 16 | 289.0 | 14.17 | 263.9 | 2.93× | 8 | 47.82 |
+
+These measurements use a shared eight-CPU host. The hourly validation
+daemon also ran during part of the campaign. Elapsed times and overlap
+describe the observed workflow on this host. Configuring 16 slots can
+oversubscribe its CPUs.
+
+![Measured throughput and batch concurrency](outputs/profile.png)
+
+[Per-run results](outputs/profile-runs.csv) ·
+[Summary by slot count](outputs/profile-summary.csv)

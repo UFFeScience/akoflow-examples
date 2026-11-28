@@ -1,0 +1,13 @@
+{
+  "recipe_digest": "sha256:be529b3fb56fdadec5c513d0a1a27b8022da4a010da8f3394bd9dfbe65250093",
+  "primary_context": "sha256:e40b0c90574fea219ae57e028bb292ec56df24ac7df2904fb79611a6337fca55",
+  "hourly_context": "sha256:1102dccbd586c3e52b52fcc3cbd8651dc617dd4afdcc71dedf01d68591cb21fb",
+  "shared_files": {
+    "docker/Dockerfile": "be529b3fb56fdadec5c513d0a1a27b8022da4a010da8f3394bd9dfbe65250093",
+    "scripts/aggregate.py": "20d68d2782fb3976cc19bc561d40f2ec7698a8ae11273182935a86ceaefdb28a",
+    "scripts/rlc.py": "2978318748761a5a2a2424bda95ad0587fe1b4b359eab909444891044605be86"
+  },
+  "hourly_only_files": [
+    "NGSPICE-COPYRIGHT"
+  ]
+}

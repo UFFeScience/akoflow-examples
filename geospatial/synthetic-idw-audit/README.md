@@ -39,3 +39,12 @@ uses four slots. Set `AKOFLOW_SUBMIT=1` to execute after preflight.
 
 [Eight-surface animation](evidence/idw-surfaces.gif) · [Held-out metrics](evidence/metrics.csv) ·
 [Local pilot validation](evidence/validation.json)
+
+Run the measured campaign on one daemon after registering the recipe and
+generating the plans. The runner resumes existing runs by ID and validates the
+1,024 block outputs and all four aggregate hashes before using a measurement.
+
+```sh
+python3 profile.py profile-evidence
+python3 summarize-profiles.py profile-evidence profile-summary
+```

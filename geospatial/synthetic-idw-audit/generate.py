@@ -19,6 +19,7 @@ BLOCK_TASKS = [(scenario, condition, exponent, block)
                for scenario, condition, exponent in cases() for block in range(BLOCKS)]
 BATCHES = [block_name(*task) for task in BLOCK_TASKS]
 ACTIVITIES = [*PREPARATIONS, *BATCHES, "aggregate"]
+CAPACITIES = (1, 4, 8, 16, 32)
 
 
 def write(name, document):
@@ -75,7 +76,7 @@ def configuration():
     write("scope.yaml", {"id": SCOPE, "name": "Synthetic IDW execution scope", "environmentVersionIds": [ENV_VERSION]})
     write("topology.yaml", {"id": TOPOLOGY, "name": "Synthetic IDW local topology", "version": 1,
                             "executionScopeId": SCOPE, "links": []})
-    for capacity in (1, 4, 8, 16, 32):
+    for capacity in CAPACITIES:
         counters = [0] * capacity
         assignments = []
         for name, index in zip(ACTIVITIES, (*(i % capacity for i in range(len(PREPARATIONS))), *(i % capacity for i in range(len(BATCHES))), 0)):

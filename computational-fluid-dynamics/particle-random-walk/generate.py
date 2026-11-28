@@ -5,9 +5,6 @@ import json
 from functools import partial
 from pathlib import Path
 
-from walks import BATCHES, SCENARIOS
-
-
 ROOT = Path(__file__).resolve().parent
 PREFIX = "community-particle-walk"
 WORKFLOW = f"{PREFIX}-ensemble-v1"
@@ -25,6 +22,8 @@ def write(name, document, directory=ROOT):
 
 
 def workflow(build_reference, steps, batches):
+    from walks import BATCHES, SCENARIOS
+
     image = {"source": {"type": "build", "artifactBuildRef": build_reference},
              "delivery": {"strategy": "auto", "targetFormat": "oci"}}
     def activity(name, entrypoint, arguments, dependencies):
@@ -88,6 +87,8 @@ def configuration(batches, directory=ROOT):
 
 
 if __name__ == "__main__":
+    from walks import BATCHES, SCENARIOS
+
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build_reference", help="Registered portable recipe ID")
     parser.add_argument("--steps", choices=(80, 320), type=int, default=80)

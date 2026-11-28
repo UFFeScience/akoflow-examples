@@ -18,11 +18,23 @@ OUTPUTS = ("sequence-metrics.csv.gz", "condition-summary.csv",
            "stabilization-residuals.png", "stabilization.gif")
 
 
+API = os.getenv("AKOFLOW_API_URL", "http://127.0.0.1:8080/akoflow-api").rstrip("/")
+TOKEN = os.getenv("AKOFLOW_API_TOKEN", "akoflow-development-token")
+
+
+def import_workflow(uri):
+    request = urllib.request.Request(
+        f"{API}/hub/workflows/import/",
+        data=json.dumps({"uri": uri}).encode(),
+        headers={"Authorization": f"Bearer {TOKEN}", "Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(request, timeout=60) as response:
+        return json.load(response)
+
+
 def projection(run_id):
-    api = os.getenv("AKOFLOW_API_URL", "http://127.0.0.1:8080/akoflow-api").rstrip("/")
-    token = os.getenv("AKOFLOW_API_TOKEN", "akoflow-development-token")
-    request = urllib.request.Request(f"{api}/execution-runs/{run_id}/",
-                                     headers={"Authorization": f"Bearer {token}"})
+    request = urllib.request.Request(f"{API}/execution-runs/{run_id}/",
+                                     headers={"Authorization": f"Bearer {TOKEN}"})
     try:
         with urllib.request.urlopen(request, timeout=20) as response:
             return json.load(response)
@@ -68,14 +80,17 @@ def capture(result, workflow, count, slots):
             "artifacts": registered, "artifact_locations": result["dataLocations"]}
 
 
-def run(directory, workflow, count, slots, baseline=None):
+def run(directory, workflow, count, slots, baseline=None, require_build=False):
     identifier = f"{workflow}-run-{slots}"
+    log_path = directory / f"{identifier}.log"
     if projection(identifier) is None:
         env = dict(os.environ, AKOFLOW_SUBMIT="1", AKOFLOW_WORKFLOW_ID=workflow,
                    AKOFLOW_RUN_ID=identifier, AKOFLOW_PLAN_FILE=f"plan-{slots}.yaml",
                    AKOFLOW_PLAN_ID=f"{workflow}-plan-{slots}")
-        with (directory / f"{identifier}.log").open("a") as log:
+        with log_path.open("a") as log:
             subprocess.run([ROOT / "run.sh"], env=env, stdout=log, stderr=log, check=True)
+    if require_build and "Build required" not in log_path.read_text():
+        raise ValueError("Preflight did not request image reconstruction")
     while True:
         try:
             result = projection(identifier)

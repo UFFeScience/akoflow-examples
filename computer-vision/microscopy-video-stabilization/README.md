@@ -93,3 +93,9 @@ Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
 with Matplotlib to render the measured worker occupancy. The timeline
 distinguishes the three interference regimes and the aggregation window
 and checks the observed peak against the profile capture.
+
+Once the reference is published, use
+`python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
+with a daemon that has empty workflow and image stores. The verifier
+requires preflight to request image reconstruction and compares all
+per-sequence and aggregate checksums with the reference.

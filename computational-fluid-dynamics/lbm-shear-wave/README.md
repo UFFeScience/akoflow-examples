@@ -80,3 +80,23 @@ on a daemon with empty workflow and Docker image stores. The verifier
 imports the URI through the daemon, requires an image reconstruction
 request during preflight, and compares the clean execution's aggregate
 checksums with the four-slot reference.
+
+## Executed AkôFlow reference
+
+The [four-slot run](evidence/reference/reference-run.json) completed all
+1,026 activities. The aggregate verified 1,024 simulations and the rest
+control and reproduced the registered checksums. The daemon recorded
+reversed start and finish timestamps for 194 scientific cases and the
+rest control. The measured timeline uses the 830 valid scientific
+intervals and confirms at least two simultaneous simulations. The run
+shared the host with rainfall and the IDW clean verification.
+
+![Measured space–time shear decay](evidence/reference/shear-space-time.png)
+
+![Measured twelve-frame shear decay](evidence/reference/shear-decay.gif)
+
+![Measured worker occupancy from valid intervals](evidence/reference/timeline.png)
+
+[Amplitude traces](evidence/reference/amplitudes.csv.gz) ·
+[Per-case metrics](evidence/reference/case-metrics.csv) ·
+[Validation manifest](evidence/reference/validation.json).

@@ -17,6 +17,10 @@ def measure(capture):
         raise ValueError(f"Run {run['id']} is incomplete")
     by_id = {item["activityId"]: item for item in flow}
     cases = [by_id[f"{WORKFLOW}-{name}"] for name in BATCHES[:-1]]
+    valid = [item for item in cases if 0 < seconds(item["startedAt"]) < seconds(item["finishedAt"])]
+    missing = len(cases) - len(valid)
+    if not valid or missing != capture.get("unusable_case_intervals", 0):
+        raise ValueError(f"Unexpected number of unusable case intervals in {run['id']}")
     reducer = by_id[f"{WORKFLOW}-aggregate"]
     elapsed = seconds(run["finishedAt"]) - seconds(run["startedAt"])
     if elapsed <= 0:
@@ -27,8 +31,9 @@ def measure(capture):
         "repetition": capture["repetition"],
         "end_to_end_seconds": elapsed,
         "cases_per_second": len(cases) / elapsed,
-        "case_window_seconds": max(seconds(item["finishedAt"]) for item in cases)
-        - min(seconds(item["startedAt"]) for item in cases),
+        "case_window_seconds": max(seconds(item["finishedAt"]) for item in valid)
+        - min(seconds(item["startedAt"]) for item in valid),
+        "unusable_case_intervals": missing,
         "aggregate_seconds": seconds(reducer["finishedAt"]) - seconds(reducer["startedAt"]),
         "peak_overlapping_cases": capture["max_overlapping_batches"],
     }
@@ -79,6 +84,7 @@ def main():
             "median_case_window_seconds": statistics.median(row["case_window_seconds"] for row in group),
             "median_aggregate_seconds": statistics.median(row["aggregate_seconds"] for row in group),
             "peak_overlapping_cases": max(row["peak_overlapping_cases"] for row in group),
+            "unusable_case_intervals": sum(row["unusable_case_intervals"] for row in group),
         })
     args.output.mkdir(parents=True, exist_ok=True)
     write_csv(args.output / "profile-runs.csv", runs)

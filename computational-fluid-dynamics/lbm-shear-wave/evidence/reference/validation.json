@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": 1024,
+  "restControls": 1,
+  "animationFrames": 12,
+  "caseManifestSHA256": "8e275fcf87dba7b497bf2f2adf5a328101436d08c27c542b7bd44e4046f1549b",
+  "sha256": {
+    "amplitudes.csv.gz": "ae788add103e38f466bdf20a08e97ae73ede9bd10a3b9a12084685f462696195",
+    "case-metrics.csv": "2c99ba18568f0a8e75e510c52a6fc4baab850aecd9530356eca5ed7b336b1c32",
+    "shear-space-time.png": "5a838f938b350f59f35bc14b5c769da49614d929c62d1b9c0603f44f01bc0f12",
+    "shear-decay.gif": "279f1b5cf002b7ef14c1b5c34e0efd260bd7d1b751b13e143bd2e5cb3b61aad5"
+  }
+}

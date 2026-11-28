@@ -21,9 +21,13 @@ def render(capture, output):
     activities = [task for task in capture["activities"] if task["activityId"] in expected]
     if (capture["run"]["status"] != "completed" or len(activities) != len(expected)
             or {task["activityId"] for task in activities} != expected
-            or any(task["status"] != "completed" or not 0 < seconds(task["startedAt"]) < seconds(task["finishedAt"])
-                   for task in activities)):
+            or any(task["status"] != "completed" for task in activities)):
         raise ValueError("Expected a completed timing trace for all 1,024 scientific cases")
+    valid = [task for task in activities if 0 < seconds(task["startedAt"]) < seconds(task["finishedAt"])]
+    missing = len(activities) - len(valid)
+    if not valid or missing != capture.get("unusable_case_intervals", 0):
+        raise ValueError("Unexpected number of unusable case intervals")
+    activities = valid
 
     with (ROOT / "evidence/scenarios.csv").open(newline="") as stream:
         sizes = {row["id"]: int(row["size"]) for row in csv.DictReader(stream)}
@@ -50,7 +54,7 @@ def render(capture, output):
         workers.broken_barh(segments, (slot - 0.35, 0.7), facecolors=colors[condition], linewidth=0)
     workers.set(title=f"LBM shear-wave decay · {capture['slots']} configured slots",
                 ylabel="Observed worker slot",
-                xlabel="Shaded region marks the aggregation activity")
+                xlabel=f"Aggregation shaded | {missing} unusable case intervals omitted")
     if len(resources) <= 16:
         workers.set_yticks(range(len(resources)), [str(i + 1) for i in range(len(resources))])
     workers.legend(handles=[Patch(color=color, label=condition)
@@ -70,7 +74,7 @@ def render(capture, output):
         axis.axvspan(reduce_start, reduce_end, color="#b1b1bb", alpha=0.45)
     concurrency.step([*times, reduce_end], [*counts, 0], where="post", color="#245b48")
     concurrency.set(xlabel="Seconds since the first scientific case started",
-                    ylabel="Active cases", ylim=(0, max(counts) + 0.5))
+                    ylabel="Observed active cases", ylim=(0, max(counts) + 0.5))
     output.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(output, dpi=120)
     plt.close(figure)

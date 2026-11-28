@@ -74,16 +74,13 @@ def save(path, result, slots, repetition, baseline=None):
     aggregate = next(item for item in flow if item["activityId"] == f"{WORKFLOW}-aggregate")
     if any(not item.get("startedAt") or not item.get("finishedAt") for item in flow):
         raise ValueError("Missing activity timestamps")
-    start_times = [seconds(item["startedAt"]) for item in scientific]
-    end_times = [seconds(item["finishedAt"]) for item in scientific]
+    intervals = [(seconds(item["startedAt"]), seconds(item["finishedAt"])) for item in scientific]
     aggregate_start = seconds(aggregate["startedAt"])
-    if any(end < start for start, end in zip(start_times, end_times)) or any(
-        seconds(item["finishedAt"]) > aggregate_start
-        for item in flow if item is not aggregate
-    ):
-        raise ValueError("Invalid activity ordering")
-    changes = Counter(start_times)
-    changes.subtract(end_times)
+    if any(seconds(item["finishedAt"]) > aggregate_start for item in flow if item is not aggregate):
+        raise ValueError("Aggregation began before a predecessor finished")
+    valid = [(started, finished) for started, finished in intervals if 0 < started < finished]
+    changes = Counter(started for started, _ in valid)
+    changes.subtract(finished for _, finished in valid)
     active = peak = 0
     for timestamp in sorted(changes):
         active += changes[timestamp]
@@ -96,6 +93,7 @@ def save(path, result, slots, repetition, baseline=None):
         "slots": slots, "repetition": repetition,
         "collected_at": datetime.now(timezone.utc).isoformat(),
         "run": run, "activities": flow, "max_overlapping_batches": peak,
+        "unusable_case_intervals": len(intervals) - len(valid),
         "digests": digests,
         "artifacts": result["dataObjects"],
         "artifact_locations": result["dataLocations"],

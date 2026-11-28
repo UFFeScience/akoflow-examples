@@ -107,3 +107,8 @@ recorded reference SHA-256 values. The
 rebuilt image and preflight patch. The unmodified
 [AkôFlow v1.0.37 preflight](evidence/reference/stock-release-preflight.json)
 also accepted the public URI and requested image reconstruction.
+
+All [three serial controls](evidence/reference/serial-scheduling-controls.json)
+completed 514 activities with matching result checksums. Their elapsed
+times were 1,395, 1,471 and 1,439 seconds. These observations span different
+shared host load, including the IDW benchmark and its clean import run.

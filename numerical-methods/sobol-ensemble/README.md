@@ -44,20 +44,35 @@ docker build -f docker/Dockerfile -t community-sobol-ensemble:v1 .
 AKOFLOW_SUBMIT=1 ./run.sh
 ```
 
+When validating a Hub import on an isolated daemon, use
+`AKOFLOW_USE_IMPORTED_WORKFLOW=1` with `run.sh`. The script fetches the
+imported definition before registering the test environment and schedule.
+
 To run three repetitions of each 1-, 4-, 8-, and 16-slot profile sequentially
 and verify identical output digests:
 
 ```sh
 python3 profile.py profile-evidence
-python3 summarize-profiles.py profile-evidence profile-results
 ```
 
 The profiling driver resumes existing execution IDs and waits for each run
-before starting the next. The summary reports both end-to-end time and
-time after preparation. The latter comparison excludes the initial image
-build. With eight host CPUs, 16 logical slots can compete for the same
-cores. Replicate process timings and peak RSS are exported separately
-from daemon activity timings.
+before starting the next. Save each completed run’s `replicate-timing.csv`
+from the aggregate activity as `profile-evidence/<run-id>-process.csv`.
+After all 12 runs complete, summarize the captures and render the comparison
+with Matplotlib from the workflow's pinned environment.
+
+```sh
+python3 summarize-profiles.py profile-evidence profile-results
+python3 render-profiles.py profile-results/profile-summary.csv profile-results/profile.png
+```
+
+The summary reports the largest observed RSS of a single replicate process
+and two elapsed times. End-to-end time starts when the run starts. The
+post-preparation window starts when the prepare activity finishes, excluding
+its initial image build. With eight host CPUs, 16 logical slots can compete
+for the same cores. The process CSV records the timing and peak RSS of each
+replicate. The daemon activity trace supplies queue latency and concurrent
+activity counts.
 
 ## Outputs and limitations
 
@@ -65,6 +80,23 @@ The workflow emits per-replicate estimates, convergence summaries, replicate
 timings, a convergence figure, an animation, and validation checksums.
 The empirical comparison concerns these functions and seeds. The experiment
 measures convergence and scheduling on these fixed test cases.
+
+## Measured scheduling profile
+
+Three matched runs at each capacity produced byte-identical scientific
+outputs. The median post-preparation durations were 356.58 seconds with one
+slot, 151.72 seconds with four slots, 127.49 seconds with eight slots, and
+141.51 seconds with sixteen slots. Relative to the matching one-slot control,
+the measured speedups were 2.35×, 2.80×, and 2.52×. Peak replica overlap was
+one, four, six, and five respectively. The sixteen-slot profile therefore
+shows host saturation rather than continued scaling: this machine has eight
+host CPUs, and logical slots do not create additional compute capacity. The
+largest per-replica peak RSS observed across the profiles was 238,492 KiB.
+
+![Median duration and measured overlap across matched slot profiles](outputs/profile.png)
+
+[Per-run profile measurements](outputs/profile-runs.csv) ·
+[Profile summary](outputs/profile-summary.csv)
 
 ## Four-slot reference run
 
@@ -85,3 +117,18 @@ the observed RMSEs were 0.000177 and 0.000600 respectively.
 [Process timing and peak RSS](outputs/replicate-timing.csv) ·
 [Validator](evidence/validation.json) ·
 [Recorded activities](evidence/reference-run.json)
+
+## Scheduling comparison
+
+All 12 runs completed 130 activities each. The estimates, convergence CSV,
+figure, and animation were byte-identical across runs. On this eight-CPU
+host, eight configured slots gave the lowest median post-preparation time,
+127.5 seconds versus 356.6 seconds with one slot (2.80× speedup). Sixteen
+configured slots took 141.5 seconds and had a higher median ready-to-start
+delay. The daemon observed at most six simultaneous replicas in the
+eight-slot runs. These are shared-host measurements.
+
+![Measured duration and activity overlap by slot count](outputs/profile.png)
+
+[Individual measurements](outputs/profile-runs.csv) ·
+[Summary by slot count](outputs/profile-summary.csv)

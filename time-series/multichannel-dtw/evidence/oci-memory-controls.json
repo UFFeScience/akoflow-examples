@@ -1,0 +1,40 @@
+{
+  "context": "One fresh Python process per treatment inside the pinned OCI image, with networking disabled.",
+  "memory_scope": "Process peak RSS includes NumPy and interpreter overhead, not distributed worker memory.",
+  "seed": 0,
+  "opposing_lag_samples": 12,
+  "runs": [
+    {
+      "length": 96,
+      "strategy": "common",
+      "evaluated_cells": 9216,
+      "peak_process_rss_kib": 34120,
+      "cost": 8.680155926924867,
+      "total_path_steps": 240
+    },
+    {
+      "length": 96,
+      "strategy": "independent",
+      "evaluated_cells": 18432,
+      "peak_process_rss_kib": 34756,
+      "cost": 2.5747837276355068e-36,
+      "total_path_steps": 216
+    },
+    {
+      "length": 192,
+      "strategy": "common",
+      "evaluated_cells": 36864,
+      "peak_process_rss_kib": 36084,
+      "cost": 4.687127819753381e-12,
+      "total_path_steps": 432
+    },
+    {
+      "length": 192,
+      "strategy": "independent",
+      "evaluated_cells": 73728,
+      "peak_process_rss_kib": 34840,
+      "cost": 5.381534099684062e-134,
+      "total_path_steps": 408
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "runId": "community-lbm-shear-wave-run-4-v1",
+  "control": 1024,
+  "steps": 64,
+  "maximumAmplitude": 0.0,
+  "maximumMassError": 2.220446049250313e-16,
+  "maximumMomentumError": 0.0,
+  "checksums": {
+    "case-1024-metrics.csv": "sha256:d90e1b9f29d7b736ba62fc9a6bd30551db39f25dff9d6f38bb8a0a1981ab9ddc",
+    "case-1024-trace.csv": "sha256:43c51f44e61fa11be614a3e06169a67e0f8a22ab34633d70088ddadf7a4bb99c"
+  }
+}

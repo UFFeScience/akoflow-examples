@@ -45,5 +45,23 @@
       "community-synthetic-idw-run-1-v1",
       "community-synthetic-idw-run-8-v1"
     ]
+  },
+  {
+    "slots": 16,
+    "repetition": 2,
+    "runId": "community-rainfall-infiltration-run-16-v1-r2",
+    "startedAt": "2026-11-28T07:06:24Z",
+    "finishedAt": "2026-11-28T07:13:49Z",
+    "completedActivities": 514,
+    "peakOverlappingBatches": 7,
+    "outputDigests": {
+      "infiltration-batches.csv": "sha256:702092590ff02571ba2a1afc597a6cfbcb3554664f9be87339fe45748be1e260",
+      "rainfall-runoff.gif": "sha256:a428633ad13d43749c37aafdf5664877437ffae1eba955f09f9698d1324cc59b",
+      "rainfall-runoff.png": "sha256:30d2e0564bdab71d5f22e4a29424cbd6fa21791070c350c8cd19b5cd2cdd16f2"
+    },
+    "sharedHostSeconds": 445,
+    "sharedHostRunIds": [
+      "community-synthetic-idw-run-8-v1"
+    ]
   }
 ]

@@ -45,3 +45,31 @@ report error on the shared valid pixels.
 ![Forty observed and stabilized frames with their residuals](evidence/stabilization.gif)
 
 [Download case 11's per-frame pilot measurements](evidence/pilot-sequence.csv).
+
+## Run in AkôFlow
+
+The registered Linux amd64 build includes the Python scripts and pinned
+wheel dependencies. Register the build recipe on the target daemon and
+generate the workflow and schedule plans before running preflight.
+
+```sh
+recipe=$(./register-recipe.sh)
+python3 generate.py "$recipe"
+./run.sh
+```
+
+Set `AKOFLOW_SUBMIT=1` to submit after preflight. The full workflow has
+768 independent sequences and one aggregation activity. Aggregation checks
+the inventory and trajectory errors, then exports per-frame metrics,
+condition summaries, and the representative PNG and GIF.
+
+For the short benchmark, use `python3 generate.py "$recipe" --cases 48`.
+The first four seeds cover all twelve conditions, with the same 48 cases
+at all slot counts. Set
+`AKOFLOW_WORKFLOW_ID=community-microscopy-stabilization-profile-v1` and
+select `AKOFLOW_PLAN_FILE=plan-1.yaml`, `plan-4.yaml` or `plan-8.yaml`.
+For one or eight slots set `AKOFLOW_PLAN_ID` to
+`community-microscopy-stabilization-profile-v1-plan-1` or
+`community-microscopy-stabilization-profile-v1-plan-8`, respectively.
+Set a distinct `AKOFLOW_RUN_ID` for each run. Regenerate the full workflow
+before returning to the production plan.

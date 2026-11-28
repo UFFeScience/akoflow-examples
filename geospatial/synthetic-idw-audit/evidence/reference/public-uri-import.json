@@ -1,0 +1,15 @@
+{
+  "uri": "akoflow://hub/publications/7e05a7d2-c41e-45db-88d0-c5492099ba77/versions/1",
+  "version": 1,
+  "yamlSHA256": "03082350b355c365251c455f7ca3321b5c14554da4132a3203969dd917494e9f",
+  "activityBuilds": 1033,
+  "contextBytes": 785,
+  "contextSHA256": "21616d56acd73ce952486926e783130931f68d792fcb8f88a7389be0907bdf76",
+  "recipeSHA256": "1aa4cec2c9e69ec242815d180874d8d0ae8f59a6c97355fb85834ea696a72543",
+  "contextMembers": [
+    "docker/Dockerfile"
+  ],
+  "initialImages": 0,
+  "cleanRunId": "community-synthetic-idw-hub-clean",
+  "cleanRunStatusAtObservation": "running"
+}

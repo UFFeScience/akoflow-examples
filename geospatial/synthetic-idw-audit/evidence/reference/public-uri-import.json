@@ -11,5 +11,14 @@
   ],
   "initialImages": 0,
   "cleanRunId": "community-synthetic-idw-hub-clean",
-  "cleanRunStatusAtObservation": "running"
+  "cleanRunStatusAtObservation": "running",
+  "retry": {
+    "runId": "community-synthetic-idw-hub-clean",
+    "startedAt": "2026-11-28T07:42:07Z",
+    "initialImages": 0,
+    "rebuiltImageId": "sha256:76aa3b5b2f5e4c060fc1f67a993f9b1b7874cb976c917d472398a2e6a23b48cc",
+    "completedAtObservation": 2,
+    "statusAtObservation": "running",
+    "fixtureCorrection": "Nested Docker and AkôFlow use the same isolated workspace volume"
+  }
 }

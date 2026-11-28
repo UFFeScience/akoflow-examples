@@ -1,0 +1,17 @@
+{
+  "rainfallRun": "community-rainfall-infiltration-run-8-v1",
+  "rainfallStatus": "completed",
+  "completedActivities": 514,
+  "peakOverlappingBatches": 7,
+  "endToEndSeconds": 478.0,
+  "digestsMatchOneAndFourSlots": true,
+  "concurrentRun": "community-synthetic-idw-run-4-v1",
+  "sharedPhysicalHost": true,
+  "wholeRunOverlapSeconds": 271.0,
+  "scientificWindowsOverlapSeconds": 85.77597308158875,
+  "sha256": {
+    "infiltration-batches.csv": "sha256:702092590ff02571ba2a1afc597a6cfbcb3554664f9be87339fe45748be1e260",
+    "rainfall-runoff.gif": "sha256:a428633ad13d43749c37aafdf5664877437ffae1eba955f09f9698d1324cc59b",
+    "rainfall-runoff.png": "sha256:30d2e0564bdab71d5f22e4a29424cbd6fa21791070c350c8cd19b5cd2cdd16f2"
+  }
+}

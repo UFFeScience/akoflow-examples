@@ -65,3 +65,10 @@ with 273.2 s for the zero-ponding group. The fixed scenario order groups related
 rainfall conditions, so both the per-batch compute cost and scheduling order
 affect the observed completion tail. These measurements are from the first
 repetition at each slot count.
+
+The first [eight-slot measurement](evidence/reference/eight-slot-observation.json)
+completed in 478 seconds, peaked at seven simultaneously active scientific
+batches, and reproduced all three scientific artifact hashes. The run shared
+the host with the IDW audit for 271 seconds of overall runtime. The windows
+between first and last scientific tasks intersected for 85.8 seconds, including
+any gaps between tasks. The shared load is part of this measurement.

@@ -24,7 +24,7 @@ def write(name, document, directory=ROOT):
     (directory / name).write_text(json.dumps(document, indent=2) + "\n")
 
 
-def workflow(build_reference, trajectory, batches):
+def workflow(build_reference, trajectory, batches, trajectories=None):
     image = {"source": {"type": "build", "artifactBuildRef": build_reference},
              "delivery": {"strategy": "auto", "targetFormat": "oci"}}
     def activity(name, arguments, dependencies):
@@ -32,7 +32,8 @@ def workflow(build_reference, trajectory, batches):
                 "dependsOn": dependencies,
                 "command": {"executable": image, "entrypoint": "python3", "arguments": arguments}}
 
-    command = ["/app/artifacts.py", "--trajectory", str(trajectory)]
+    command = (["/app/batch.py", "--trajectories", str(trajectories)] if trajectories else
+               ["/app/artifacts.py", "--trajectory", str(trajectory)])
     activities = [activity(name, [*command, "frame", str(index), "."], [])
                   for index, name in enumerate(batches)]
     activities.append(activity("aggregate", [*command, "aggregate", ".", "."], batches))
@@ -88,9 +89,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build_reference", help="Registered portable recipe ID")
     parser.add_argument("--trajectory", type=int, choices=range(4), default=0)
+    parser.add_argument("--trajectories", type=int, choices=(2, 4))
     args = parser.parse_args()
-    if args.trajectory:
+    if args.trajectories:
+        if args.trajectory:
+            parser.error("a batch starts at trajectory zero")
+        WORKFLOW = f"{PREFIX}-batch-{args.trajectories}-v1"
+    elif args.trajectory:
         WORKFLOW = f"{PREFIX}-trajectory-{args.trajectory}-v1"
     batches = [f"frame-{index:03d}" for index in range(FRAMES)]
-    workflow(args.build_reference, args.trajectory, batches)
+    workflow(args.build_reference, args.trajectory, batches, args.trajectories)
     configuration(batches)

@@ -1,0 +1,34 @@
+{
+  "run": {
+    "id": "community-prodes-run-v1",
+    "status": "completed",
+    "startedAt": "2026-11-28T01:51:23Z",
+    "finishedAt": "2026-11-28T01:52:17Z"
+  },
+  "activities": [
+    {
+      "activityId": "community-prodes-annual-audit-v1-amazon",
+      "status": "completed",
+      "startedAt": 1795830729.943759,
+      "finishedAt": 1795830730.2234483
+    },
+    {
+      "activityId": "community-prodes-annual-audit-v1-cerrado",
+      "status": "completed",
+      "startedAt": 1795830729.9952114,
+      "finishedAt": 1795830730.2966084
+    },
+    {
+      "activityId": "community-prodes-annual-audit-v1-render",
+      "status": "completed",
+      "startedAt": 1795830732.6358647,
+      "finishedAt": 1795830735.198676
+    },
+    {
+      "activityId": "community-prodes-annual-audit-v1-validate",
+      "status": "completed",
+      "startedAt": 1795830737.142544,
+      "finishedAt": 1795830737.2903633
+    }
+  ]
+}

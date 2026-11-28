@@ -1,0 +1,5 @@
+id: community-prodes-parallel-topology
+name: Community PRODES local topology
+version: 1
+executionScopeId: community-prodes-parallel-scope
+links: []

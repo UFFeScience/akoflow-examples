@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "rows": 12,
+  "frames": 6,
+  "sha256": {
+    "prodes-annual.csv": "040aa779cd7cf9d0d97f76c2b78b3eeff8f98c4dc0ddac03e25353cba83dcd1d",
+    "prodes-annual.png": "fff7c6ab3383c08e2d022bef8860abbdd1751b654d92f77d0719daacdc595cba",
+    "prodes-annual.gif": "34e711ef5d168aaf6c218dd50636b555cf26eaded6b5e5a9a8fd71d88af25284"
+  }
+}

@@ -1,0 +1,15 @@
+plan:
+  id: community-prodes-plan-v1
+  workflowVersionId: community-prodes-annual-audit-v1-v1
+  executionScopeId: community-prodes-parallel-scope
+  networkTopologyId: community-prodes-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: prodes-amazon, activityId: community-prodes-annual-audit-v1-amazon, resourceId: community-prodes-slot-0, orderOnResource: 0, metadata: {runtimeId: community-prodes-local}}
+    - {id: prodes-cerrado, activityId: community-prodes-annual-audit-v1-cerrado, resourceId: community-prodes-slot-1, orderOnResource: 0, metadata: {runtimeId: community-prodes-local}}
+    - {id: prodes-render, activityId: community-prodes-annual-audit-v1-render, resourceId: community-prodes-slot-0, orderOnResource: 1, metadata: {runtimeId: community-prodes-local}}
+    - {id: prodes-validate, activityId: community-prodes-annual-audit-v1-validate, resourceId: community-prodes-slot-0, orderOnResource: 2, metadata: {runtimeId: community-prodes-local}}

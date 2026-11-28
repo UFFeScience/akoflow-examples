@@ -1,0 +1,8 @@
+name: community-prodes-annual-audit-v1
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: amazon, runtime: community-prodes-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-1f29721900666e1acb3ddd59f0889f98751456ca6021caf9ef5b9993a0d50e08}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/scripts/reduce.py, amazon, /app/data/amazon.json.gz, amazon.json]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: cerrado, runtime: community-prodes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/reduce.py, cerrado, /app/data/cerrado.json.gz, cerrado.json]}, cpuLimit: "1", memoryLimit: 256Mi}
+    - {name: render, runtime: community-prodes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/render.py, ., .]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [amazon, cerrado]}
+    - {name: validate, runtime: community-prodes-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/validate.py]}, cpuLimit: "1", memoryLimit: 256Mi, dependsOn: [render]}

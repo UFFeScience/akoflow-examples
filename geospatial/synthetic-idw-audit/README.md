@@ -20,7 +20,7 @@ Holdout RMSE improved in six of sixteen paired surface/exponent comparisons.
 The 1,033-activity AkôFlow DAG uses eight sample-preparation tasks, 1,024
 prediction tasks and one aggregation. Each prediction receives the prepared
 sites for its own surface. The [portable build recipe](evidence/portable-recipe.json)
-records the build context and recipe digests. The 732-byte context fetches the
+records the build context and recipe digests. The 785-byte context fetches the
 manifest and scripts from the immutable `e95a6b1` revision during the image build.
 Each fetch has an enforced SHA-256. Activities need no external data access.
 All 1,033 executable checks
@@ -63,3 +63,8 @@ prediction block with network access disabled. Its result matched the local
 pilot byte for byte. The
 [installed dependency list](evidence/portable-build-dependencies.txt) records
 the environment used in the smoke test.
+
+The current recipe also checks the SHA-256 of every Python wheel against
+[requirements.lock](requirements.lock). A second
+[offline smoke test](evidence/locked-build-smoke.json) reproduced the block
+checksum with that wheel lock in place.

@@ -1,0 +1,14 @@
+{
+  "build": {
+    "id": "recipe-build-726cc7ae719afcbecbee52ce7e2fff3ed87a36fe10ef975bbbc7d76afd72ee93",
+    "contextDigest": "sha256:21616d56acd73ce952486926e783130931f68d792fcb8f88a7389be0907bdf76",
+    "recipeDigest": "sha256:1aa4cec2c9e69ec242815d180874d8d0ae8f59a6c97355fb85834ea696a72543"
+  },
+  "imageId": "sha256:9019a4883a7febdb0ecc722a9e7a540d1569cbbf47887330b6c3492457fe5201",
+  "lockedWheels": 11,
+  "contextBytes": 785,
+  "verifiedBlock": "s3-filtered-p4-block-15",
+  "networkDisabledDuringExecution": true,
+  "matchedLocalPilot": true,
+  "sha256": "4f188a5f0c8915c83e6d820ec6f5e95dae71ae857943cf09d873ebe6d3f21c76"
+}

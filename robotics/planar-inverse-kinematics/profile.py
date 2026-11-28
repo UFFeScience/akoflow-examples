@@ -29,7 +29,7 @@ def projection(run_id):
         return None
 
 
-def capture(result, slots, workflow=WORKFLOW):
+def capture(result, slots, workflow=WORKFLOW, batch_size=None):
     activities = result["activities"]
     cases = [task for task in activities if task["activityId"].startswith(f"{workflow}-frame-")]
     aggregate = [task for task in activities if task["activityId"] == f"{workflow}-aggregate"]
@@ -38,10 +38,17 @@ def capture(result, slots, workflow=WORKFLOW):
     if any(task["status"] != "completed" for task in activities):
         raise ValueError("An activity did not complete")
     reducer, = aggregate
-    expected = {task["activityId"].removeprefix(f"{workflow}-") + ".csv"
-                for task in cases} | OUTPUTS
+    frame_names = {task["activityId"].removeprefix(f"{workflow}-") + ".csv" for task in cases}
+    if batch_size:
+        expected = {f"trajectory-{trajectory:02d}-{name}" for trajectory in range(batch_size)
+                    for name in frame_names}
+        expected |= {f"trajectory-{trajectory:02d}.csv" for trajectory in range(batch_size)}
+        expected.add("batch-summary.json")
+    else:
+        expected = frame_names | OUTPUTS
     artifacts = [item for item in result["dataObjects"] if item["relativePath"] in expected]
-    if len(expected) != 259 or Counter(item["relativePath"] for item in artifacts) != Counter(expected):
+    expected_count = 256 * batch_size + batch_size + 1 if batch_size else 259
+    if len(expected) != expected_count or Counter(item["relativePath"] for item in artifacts) != Counter(expected):
         raise ValueError("Missing or repeated result artifacts")
     digests = {item["relativePath"]: item["checksum"] for item in artifacts}
     if not all(digests.values()):
@@ -74,7 +81,7 @@ def capture(result, slots, workflow=WORKFLOW):
             "aggregate_seconds": reducer["finishedAt"] - reducer["startedAt"], "digests": digests}
 
 
-def profile(directory, slots, require_build=False, workflow=WORKFLOW):
+def profile(directory, slots, require_build=False, workflow=WORKFLOW, batch_size=None):
     identifier = f"{workflow}-run-{slots}"
     log_path = directory / f"{identifier}.log"
     if projection(identifier) is None:
@@ -95,7 +102,7 @@ def profile(directory, slots, require_build=False, workflow=WORKFLOW):
         if result is not None:
             status = result["run"]["status"]
             if status == "completed":
-                return capture(result, slots, workflow)
+                return capture(result, slots, workflow, batch_size)
             if status not in {"created", "pending", "queued", "running"}:
                 raise RuntimeError(f"{identifier} ended with {status}")
         time.sleep(10)
@@ -105,12 +112,17 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)
     parser.add_argument("--trajectory", choices=range(4), type=int, default=0)
+    parser.add_argument("--trajectories", choices=(2, 4), type=int)
     args = parser.parse_args()
     workflow = WORKFLOW if args.trajectory == 0 else f"{PREFIX}-trajectory-{args.trajectory}-v1"
+    if args.trajectories:
+        if args.trajectory:
+            parser.error("a batch starts at trajectory zero")
+        workflow = f"{PREFIX}-batch-{args.trajectories}-v1"
     args.directory.mkdir(parents=True, exist_ok=True)
     baseline = None
     for slots in (4, *(capacity for capacity in CAPACITIES if capacity != 4)):
-        result = profile(args.directory, slots, workflow=workflow)
+        result = profile(args.directory, slots, workflow=workflow, batch_size=args.trajectories)
         if baseline is not None and result["digests"] != baseline:
             raise ValueError(f"Scientific checksums differ for {slots} slots")
         baseline = result["digests"]

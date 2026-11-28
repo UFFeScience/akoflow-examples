@@ -1,0 +1,18 @@
+{
+  "run_id": "community-inpe-deter-portable-run-4-v1",
+  "status": "completed",
+  "activity_count": 74,
+  "completed_activity_count": 74,
+  "started_at": "2026-11-28T05:12:47Z",
+  "finished_at": "2026-11-28T05:15:42Z",
+  "makespan_seconds": 153.84089064598083,
+  "transferred_bytes": 2848022,
+  "recipe_id": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff",
+  "context_digest": "sha256:478fc6930a97aac997b4fab184ab8f6db9e151a8ad4a68cf99281d7b61e149e9",
+  "sha256": {
+    "deter-month-state-class.csv": "9d2936e60a41f5740b4077baf7e5c2c3a9144b01f84afa64bde6fc6954e11059",
+    "deter-monthly-diagnostics.csv": "99daf368e9bc6c4f91d5544a5e99c98dd18a7d6c7e083e74cb4dbec6d4ecf8be",
+    "deter-reference-map.png": "aa381f3727f2029d62544e3aa4f5310a0cffd812ca52c22a3dce0152061574ac",
+    "deter-monthly-alerts.gif": "928edc222e95175ec4e43cc771dcdf1b862074c49a9469de3551e670a2ccfb9a"
+  }
+}

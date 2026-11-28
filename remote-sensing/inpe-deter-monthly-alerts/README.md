@@ -90,3 +90,11 @@ shared host.
 The comparison used the original recipe with the manifest and verification
 table included in the build context. The compact recipe fetches those same
 files by immutable URL and checks their SHA-256 before execution.
+
+The compact portable reference `community-inpe-deter-portable-run-4-v1`
+subsequently completed all 74 activities in 153.84 seconds. Its four result
+artifacts are byte-identical to the pilot and scheduling runs. This is the
+reference to use for publication; the earlier timing runs remain the evidence
+for the matched one-, four-, and eight-slot comparison.
+
+[Compact portable reference](evidence/portable-reference.json)

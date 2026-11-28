@@ -1,0 +1,24 @@
+{
+  "uri": "akoflow://hub/publications/5c1296ca-9f5d-4ccb-aecd-b163b03e0d25/versions/1",
+  "run_id": "community-inpe-deter-hub-v1-clean",
+  "status": "completed",
+  "completed_activity_count": 74,
+  "validation": {
+    "passed": true,
+    "months": 72,
+    "features": 334054,
+    "reference_groups": 2491,
+    "flags": {
+      "invalid_geometry": 1004,
+      "repeated_exact_geometries": 13,
+      "reused_provider_ids": 2141
+    },
+    "animation_frames": 72,
+    "sha256": {
+      "deter-month-state-class.csv": "9d2936e60a41f5740b4077baf7e5c2c3a9144b01f84afa64bde6fc6954e11059",
+      "deter-monthly-diagnostics.csv": "99daf368e9bc6c4f91d5544a5e99c98dd18a7d6c7e083e74cb4dbec6d4ecf8be",
+      "deter-reference-map.png": "aa381f3727f2029d62544e3aa4f5310a0cffd812ca52c22a3dce0152061574ac",
+      "deter-monthly-alerts.gif": "928edc222e95175ec4e43cc771dcdf1b862074c49a9469de3551e670a2ccfb9a"
+    }
+  }
+}

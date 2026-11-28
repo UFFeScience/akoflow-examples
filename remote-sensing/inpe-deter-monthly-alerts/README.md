@@ -98,3 +98,10 @@ reference to use for publication; the earlier timing runs remain the evidence
 for the matched one-, four-, and eight-slot comparison.
 
 [Compact portable reference](evidence/portable-reference.json)
+
+The public Hub v1 completed all 74 activities after importing its URI into an
+isolated AkôFlow installation and rebuilding the activity image. The run
+validated 334,054 alerts across 72 months and reproduced all four reference
+artifact hashes, including the map and the 72-frame animation.
+
+[Open the workflow on AkôFlow Hub](https://hub.akoflow.com/o/akoflow/community-explorer-issue-326-inpe-deter-monthly-alerts?version=1) · [Clean import evidence](evidence/clean-hub-run.json)

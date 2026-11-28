@@ -1,0 +1,20 @@
+{
+  "source": "Offline pinned OCI control",
+  "case_outputs": 256,
+  "opposite_shift_samples": 12,
+  "opposite_shift_results": {
+    "common": {
+      "pairs": 16,
+      "median_cost": 10.812266786914694,
+      "median_joint_path_disagreement": 0.0,
+      "median_event_error_sum": 6.5
+    },
+    "independent": {
+      "pairs": 16,
+      "median_cost": 5.192644014263799e-14,
+      "median_joint_path_disagreement": 212.0,
+      "median_event_error_sum": 0.0
+    }
+  },
+  "common_shift_max_cost_difference": 2.168404344971009e-19
+}

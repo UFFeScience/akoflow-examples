@@ -20,7 +20,7 @@ python3 fusion.py case 0 centroids.json case-000.csv
 ```
 
 The local numerical check reproduced the expected reversal in all 256
-zero-interference cases. The AkôFlow DAG, visual artifacts, scheduling
+zero-interference cases. The AkôFlow scheduling
 measurements, and Hub publication remain pending.
 
 ## Local pilot artifacts
@@ -38,3 +38,23 @@ registered levels.
 ![Three levels of PAN interference on the same scene](evidence/pan-interference-sweep.gif)
 
 [Download pilot metrics for all three treatments and 768 scenes](evidence/pilot-metrics.csv).
+
+## AkôFlow workflow
+
+Register the portable build and generate the full 770-activity DAG,
+which runs calibration once, fans out to 768 scenes, then aggregates.
+
+```sh
+recipe=$(./register-recipe.sh)
+python3 generate.py "$recipe"
+./run.sh
+```
+
+Set `AKOFLOW_SUBMIT=1` after preflight to execute. The short workflow
+uses the first four test seeds and all 12 conditions at each of 1, 4
+and 8 slots. Generate it with `python3 generate.py "$recipe" --cases 48`.
+On submission set `AKOFLOW_WORKFLOW_ID=community-panchromatic-classification-profile-v1`,
+`AKOFLOW_PLAN_FILE=plan-N.yaml` and
+`AKOFLOW_PLAN_ID=community-panchromatic-classification-profile-v1-plan-N`,
+where N is the number of slots. Use distinct run IDs for the profiles.
+Regenerate the full workflow before using its plans again.

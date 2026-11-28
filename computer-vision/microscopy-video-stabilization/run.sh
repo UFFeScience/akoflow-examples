@@ -1,6 +1,7 @@
 #!/bin/sh
 set -eu
 root=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)
+configuration=${AKOFLOW_CONFIG_DIR:-$root}
 api=${AKOFLOW_API_URL:-http://127.0.0.1:8080/akoflow-api}
 token=${AKOFLOW_API_TOKEN:-akoflow-development-token}
 workflow=${AKOFLOW_WORKFLOW_ID:-community-microscopy-stabilization-ensemble-v1}
@@ -9,7 +10,7 @@ plan_file=${AKOFLOW_PLAN_FILE:-plan-4.yaml}
 plan_id=${AKOFLOW_PLAN_ID:-$workflow-plan-4}
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 request(){ method=$1; endpoint=$2; shift 2; curl --fail-with-body -sS -X "$method" -H "Authorization: Bearer $token" "$@" "$api/$endpoint/"; }
-create(){ endpoint=$1; file=$2; request POST "$endpoint" -H 'Content-Type: application/yaml' --data-binary "@$root/$file" > "$tmp/r.json" || true; }
+create(){ endpoint=$1; file=$2; request POST "$endpoint" -H 'Content-Type: application/yaml' --data-binary "@$configuration/$file" > "$tmp/r.json" || true; }
 if [ "${AKOFLOW_USE_IMPORTED_WORKFLOW:-0}" = 1 ]; then
     request GET workflow-definitions/"$workflow" > "$tmp/workflow.json"
 fi

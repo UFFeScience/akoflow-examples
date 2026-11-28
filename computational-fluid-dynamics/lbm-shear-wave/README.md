@@ -73,3 +73,10 @@ and end-to-end speedup relative to the one-slot control.
 Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
 to render observed worker occupancy and scientific-case concurrency. The
 figure validates the captured peak and marks the aggregation window.
+
+Once the reference is published, use
+`python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
+on a daemon with empty workflow and Docker image stores. The verifier
+imports the URI through the daemon, requires an image reconstruction
+request during preflight, and compares the clean execution's aggregate
+checksums with the four-slot reference.

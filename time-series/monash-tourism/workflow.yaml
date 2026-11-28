@@ -1,0 +1,11 @@
+name: community-monash-tourism-v2
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: monthly-ets, runtime: community-monash-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-8d1c3e7d4dac91f27878c1f1bc5efb11dd7f280f84940c6580d6295edc935567}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, monthly, ets]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: monthly-theta, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, monthly, theta]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: quarterly-ets, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, quarterly, ets]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: quarterly-theta, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, quarterly, theta]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: yearly-ets, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, yearly, ets]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: yearly-theta, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/forecast.R, yearly, theta]}, cpuLimit: "1", memoryLimit: 512Mi}
+    - {name: aggregate, runtime: community-monash-local, command: {executable: *portable_image, entrypoint: Rscript, arguments: [/app/scripts/aggregate.R]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [monthly-ets, monthly-theta, quarterly-ets, quarterly-theta, yearly-ets, yearly-theta]}

@@ -1,0 +1,134 @@
+{
+  "run": {
+    "id": "community-monash-run-v2",
+    "status": "completed",
+    "startedAt": "2026-11-28T02:07:40Z",
+    "finishedAt": "2026-11-28T02:12:43Z"
+  },
+  "activities": [
+    {
+      "activityId": "community-monash-tourism-v2-monthly-ets",
+      "status": "completed",
+      "startedAt": 1795831664.953505,
+      "finishedAt": 1795831954.0191813
+    },
+    {
+      "activityId": "community-monash-tourism-v2-monthly-theta",
+      "status": "completed",
+      "startedAt": 1795831665.246292,
+      "finishedAt": 1795831670.4383438
+    },
+    {
+      "activityId": "community-monash-tourism-v2-quarterly-ets",
+      "status": "completed",
+      "startedAt": 1795831665.9906385,
+      "finishedAt": 1795831724.9046454
+    },
+    {
+      "activityId": "community-monash-tourism-v2-quarterly-theta",
+      "status": "completed",
+      "startedAt": 1795831666.419097,
+      "finishedAt": 1795831671.8317568
+    },
+    {
+      "activityId": "community-monash-tourism-v2-yearly-ets",
+      "status": "completed",
+      "startedAt": 1795831672.4579372,
+      "finishedAt": 1795831680.2638922
+    },
+    {
+      "activityId": "community-monash-tourism-v2-yearly-theta",
+      "status": "completed",
+      "startedAt": 1795831674.240034,
+      "finishedAt": 1795831678.48907
+    },
+    {
+      "activityId": "community-monash-tourism-v2-aggregate",
+      "status": "completed",
+      "startedAt": 1795831962.2920012,
+      "finishedAt": 1795831963.476533
+    }
+  ],
+  "outputs": [
+    {
+      "relativePath": "tourism-mase.csv",
+      "checksum": "sha256:a975c7820940864689e70005f61c65786a345b79a82b2f7053a20ca2e68574ec",
+      "sizeBytes": 399
+    },
+    {
+      "relativePath": "tourism-mase.gif",
+      "checksum": "sha256:006fe100578c78ed3cb0518953cad8b29bfe9bee1900e841a3090bff489d0e88",
+      "sizeBytes": 39351
+    },
+    {
+      "relativePath": "tourism-mase.png",
+      "checksum": "sha256:411abee3e8a4cb11139ea7937f2d96e5847e76ef2cd76d9bfc2d10010ad6238b",
+      "sizeBytes": 21402
+    },
+    {
+      "relativePath": "validation.json",
+      "checksum": "sha256:8cf1c5346ea9f30dde7bedc886454c5ba5d86794cb7fc8359e048740e424ed58",
+      "sizeBytes": 53
+    },
+    {
+      "relativePath": "monthly-ets-forecasts.csv",
+      "checksum": "sha256:948f72e86278d5beb1ea518e4676a1ea4654e8fef5705b3d1fd642bbf200396c",
+      "sizeBytes": 274914
+    },
+    {
+      "relativePath": "monthly-ets-scores.csv",
+      "checksum": "sha256:a60f46b7f4b4cce8d4297b606cf60767fe1f52c2503387d70402895583146627",
+      "sizeBytes": 8751
+    },
+    {
+      "relativePath": "monthly-theta-forecasts.csv",
+      "checksum": "sha256:e3c67bc054c98ed8418c9df21c4050d99e81ba459f1a642717143fb7523d8cd7",
+      "sizeBytes": 274867
+    },
+    {
+      "relativePath": "monthly-theta-scores.csv",
+      "checksum": "sha256:794d9906e758cfea728b831082f62d9f54e5a8446ea806639b220630b6beddd9",
+      "sizeBytes": 8737
+    },
+    {
+      "relativePath": "quarterly-ets-forecasts.csv",
+      "checksum": "sha256:9d7b833c00c736e4679ef6d404acf77c1468ddbbc98c5ef1674acc7880d42a48",
+      "sizeBytes": 106400
+    },
+    {
+      "relativePath": "quarterly-ets-scores.csv",
+      "checksum": "sha256:f34ad44fbfeed97771d0b49859c1d9c6b575a927a617fd19fc4a7c0e9a514e26",
+      "sizeBytes": 10251
+    },
+    {
+      "relativePath": "quarterly-theta-forecasts.csv",
+      "checksum": "sha256:3db2bc707e1be285c16bc3d92d17fd4d199b0a0d4295d5f9b2eacbe8b421d46f",
+      "sizeBytes": 106360
+    },
+    {
+      "relativePath": "quarterly-theta-scores.csv",
+      "checksum": "sha256:2c04888d11387d25aa6872968fb623f5a1fdfe12cfce26b650c0157c46c93f13",
+      "sizeBytes": 10236
+    },
+    {
+      "relativePath": "yearly-ets-forecasts.csv",
+      "checksum": "sha256:2ceab763927284d6e4d832d7e1b4874be2bad01ece6483cccb52df582aac06fe",
+      "sizeBytes": 66238
+    },
+    {
+      "relativePath": "yearly-ets-scores.csv",
+      "checksum": "sha256:571aca658e44de7cf3a6dafc8a68a257e458a491dd0df0919b7737c39af8a140",
+      "sizeBytes": 12366
+    },
+    {
+      "relativePath": "yearly-theta-forecasts.csv",
+      "checksum": "sha256:f0b444281a0dc93b34eb4179d5d1c9fe8a29689860e6aa856128c62cdb310eef",
+      "sizeBytes": 66213
+    },
+    {
+      "relativePath": "yearly-theta-scores.csv",
+      "checksum": "sha256:9e6bfa6c9634bb5abca632b173bcfb63d45e58b35921e51ec5224c65cdfd43c0",
+      "sizeBytes": 12390
+    }
+  ]
+}

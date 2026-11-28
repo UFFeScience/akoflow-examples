@@ -1,0 +1,17 @@
+environment: {id: community-monash-parallel, name: Community Monash Tourism four-slot local Docker, status: ready}
+version: {id: community-monash-parallel-v1, environmentId: community-monash-parallel, version: 1, status: published, networkModel: local, interferenceModel: observed, costModel: free, configurationHash: community-monash-parallel-v1}
+runtimes:
+  - {environmentVersionId: community-monash-parallel-v1, id: community-monash-local, name: Monash Tourism CPU audit, driver: local, mode: execution, role: compute, capabilities: {batch: true, container: true}}
+resources:
+  - {id: community-monash-slot-0, environmentVersionId: community-monash-parallel-v1, type: machine, name: Local Docker slot 0, providerId: local-docker-monash-0, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-monash-slot-1, environmentVersionId: community-monash-parallel-v1, type: machine, name: Local Docker slot 1, providerId: local-docker-monash-1, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-monash-slot-2, environmentVersionId: community-monash-parallel-v1, type: machine, name: Local Docker slot 2, providerId: local-docker-monash-2, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+  - {id: community-monash-slot-3, environmentVersionId: community-monash-parallel-v1, type: machine, name: Local Docker slot 3, providerId: local-docker-monash-3, cpuCores: 1, cpuCapacity: 1, memoryBytes: 1073741824, storageBytes: 1073741824, computeSpeedup: 1, pricePerSecond: 0, bootOverheadSeconds: 0, containerOverheadSeconds: 0, schedulable: true}
+storages: []
+connections: []
+activityResourceProfiles: []
+resourceRuntimeBindings:
+  - {resourceId: community-monash-slot-0, runtimeId: community-monash-local, enabled: true}
+  - {resourceId: community-monash-slot-1, runtimeId: community-monash-local, enabled: true}
+  - {resourceId: community-monash-slot-2, runtimeId: community-monash-local, enabled: true}
+  - {resourceId: community-monash-slot-3, runtimeId: community-monash-local, enabled: true}

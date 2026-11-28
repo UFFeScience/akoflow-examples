@@ -1,0 +1,7 @@
+"frequency","model","published","count","horizon","observed","eligible","excluded"
+"monthly","ets",1.526,366,24,1.52623779894527,366,0
+"monthly","theta",1.649,366,24,1.64877840090091,366,0
+"quarterly","ets",1.592,427,8,1.59229332291445,427,0
+"quarterly","theta",1.661,427,8,1.66130978384998,427,0
+"yearly","ets",3.395,518,4,3.39501820568521,518,0
+"yearly","theta",3.015,518,4,3.01452835991898,518,0

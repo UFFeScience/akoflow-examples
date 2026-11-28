@@ -73,3 +73,8 @@ For one or eight slots set `AKOFLOW_PLAN_ID` to
 `community-microscopy-stabilization-profile-v1-plan-8`, respectively.
 Set a distinct `AKOFLOW_RUN_ID` for each run. Regenerate the full workflow
 before returning to the production plan.
+
+Run `python3 profile.py "$recipe" /path/to/evidence` to execute or resume
+the four-slot reference and the three short profiles. It records the
+daemon timings and observed peak concurrency, and requires identical
+per-case and aggregate hashes across the short profiles.

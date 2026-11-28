@@ -30,3 +30,7 @@ The optional `--frames 384` argument to `generate.py` creates a separate
 long workflow with the same 256 scenarios. To submit it set
 `AKOFLOW_WORKFLOW_ID=community-marker-fusion-long-v1` and `AKOFLOW_SUBMIT=1`
 when running `./run.sh`.
+
+The 384-frame configuration passed all 257 AkôFlow preflight checks.
+Local validation covered all 98,304 frame records and the complete
+256-scenario summary.

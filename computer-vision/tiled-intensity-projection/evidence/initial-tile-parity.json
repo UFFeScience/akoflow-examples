@@ -1,0 +1,7 @@
+{
+  "run": "community-mip-projection-ensemble-v1-run-4",
+  "status_at_observation": "running",
+  "matched_tile_csvs": 136,
+  "portable_context_bytes": 3384,
+  "portable_context_checksum": "sha256:27b6707b21bce0215d60c64563b467ca04cd41e55124b3c78b302e52c3121edf"
+}

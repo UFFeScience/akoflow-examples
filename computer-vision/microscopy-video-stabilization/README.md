@@ -78,3 +78,8 @@ Run `python3 profile.py "$recipe" /path/to/evidence` to execute or resume
 the four-slot reference and the three short profiles. It records the
 daemon timings and observed peak concurrency, and requires identical
 per-case and aggregate hashes across the short profiles.
+
+The [compact recipe evidence](evidence/compact-build-preflight.json) records
+the 684-byte archived context, the offline case checksum, and daemon
+preflights for the full workflow and all three short profiles. The daemon
+reported that the recipe could rebuild the image for every activity.

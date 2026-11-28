@@ -54,3 +54,14 @@ scientific batches.
 
 [Batch results CSV](evidence/reference/infiltration-batches.csv) ·
 [Validation and artifact hashes](evidence/reference/reference-evidence.json)
+
+The first [serial and four-slot phase measurements](evidence/reference/initial-phase-comparison.csv)
+associate ponding with longer scientific tasks. In the four-slot run the median
+batch wall time was 0.120 s for the 192 batches with zero ponded columns, 0.289 s
+for the 37 partially ponded batches, and 1.555 s for the 283 fully ponded batches.
+The fully ponded group spent a median of 1.398 s in post-ponding integration.
+Its last batch finished 440.5 s after the first scientific task began, compared
+with 273.2 s for the zero-ponding group. The fixed scenario order groups related
+rainfall conditions, so both the per-batch compute cost and scheduling order
+affect the observed completion tail. These measurements are from the first
+repetition at each slot count.

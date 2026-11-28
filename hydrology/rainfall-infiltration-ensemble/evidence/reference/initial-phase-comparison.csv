@@ -1,0 +1,7 @@
+run,slots,ponding,batches,median_post_ponding_seconds,median_batch_wall_seconds,last_batch_finish_offset_seconds
+community-rainfall-infiltration-run-1-v1,1,none,192,0.0,0.15358495712280273,701.4754679203033
+community-rainfall-infiltration-run-1-v1,1,partial,37,0.11725130799459293,0.2701096534729004,877.9288959503174
+community-rainfall-infiltration-run-1-v1,1,all,283,1.3627760283416137,1.5238640308380127,1265.4726157188416
+community-rainfall-infiltration-run-4-v1,4,none,192,0.0,0.12021172046661377,273.1965820789337
+community-rainfall-infiltration-run-4-v1,4,partial,37,0.12179225985892117,0.28861260414123535,334.9976966381073
+community-rainfall-infiltration-run-4-v1,4,all,283,1.3976467375759967,1.5546205043792725,440.49381399154663

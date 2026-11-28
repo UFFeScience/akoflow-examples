@@ -15,6 +15,21 @@ Shuffled and reversed tile order gave exact results, including repeated
 maxima and negative background values. Missing and duplicated tile inputs
 were rejected.
 
+## Measured AkôFlow reference
+
+The four-slot reference completed all 257 activities. The reducer
+validated 256 tiles and exactly matched the whole-volume maximum and
+earliest-depth rasters at all 16,384 projection columns.
+
+![Maximum-intensity and earliest depth](evidence/reference/projection.png)
+
+![Sixteen frames of the depth scan](evidence/reference/depth-scan.gif)
+
+![Observed worker occupancy](evidence/reference/timeline.png)
+
+[Projection CSV](evidence/reference/projection.csv) ·
+[Reference evidence](evidence/reference/reference-run.json).
+
 ## Run in AkôFlow
 
 Register the recipe and generate the reference workflow and slot plans.

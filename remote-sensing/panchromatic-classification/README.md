@@ -58,3 +58,7 @@ On submission set `AKOFLOW_WORKFLOW_ID=community-panchromatic-classification-pro
 `AKOFLOW_PLAN_ID=community-panchromatic-classification-profile-v1-plan-N`,
 where N is the number of slots. Use distinct run IDs for the profiles.
 Regenerate the full workflow before using its plans again.
+
+The [compact build evidence](evidence/compact-build-preflight.json) records
+the 682-byte build context, offline validation against the local pilot,
+and daemon preflights for both the full workflow and all short schedules.

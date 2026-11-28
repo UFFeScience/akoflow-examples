@@ -1,0 +1,30 @@
+{
+  "contextBytes": 682,
+  "contextSHA256": "0cafd7c160320523b8fdfb797a5f49bbc1e1b831c313c72f1203e6ef9764356b",
+  "recipeSHA256": "a44c9a1b6af2287c7e39505336317aecc72f1e2fe611b4a3fb07e10bf484d59d",
+  "preflights": [
+    {
+      "plan": "full",
+      "ready": true,
+      "activitiesRequiringBuild": 770
+    },
+    {
+      "plan": "1-slot short",
+      "ready": true,
+      "activitiesRequiringBuild": 50
+    },
+    {
+      "plan": "4-slot short",
+      "ready": true,
+      "activitiesRequiringBuild": 50
+    },
+    {
+      "plan": "8-slot short",
+      "ready": true,
+      "activitiesRequiringBuild": 50
+    }
+  ],
+  "offlineCase": 0,
+  "offlineCSV_SHA256": "85049181a15221d53e6d6b56110de6394186d183db3dbc10a0ddad2b9ab8b698",
+  "matchesPilotTolerance": 1e-12
+}

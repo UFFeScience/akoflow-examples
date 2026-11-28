@@ -59,3 +59,9 @@ downloads original source files by pinned revision and verifies their SHA-256
 during the build. The runtime image copies the compiled binary from the
 compiler stage. Its offline smoke cases reproduced the earlier image's
 metrics exactly, and all 1,026 activities passed preflight again.
+
+After registering the recipe and generating the plans, run the scheduling
+profiles with `python3 profile.py /path/to/benchmark-profiles`. The collector
+resumes from the daemon's existing run IDs, captures observed concurrency
+among the 1,024 scientific cases, checks the control and aggregation, and
+requires matching result checksums across the five slot configurations.

@@ -1,0 +1,9 @@
+steps,slots,run,elapsed_seconds,observed_overlap_lower_bound,unusable_intervals,aggregate_prepare_seconds,aggregate_seconds,matching_checksums
+80,1,community-particle-walk-ensemble-v1-run-1,668.0,1,0,64.67784595489502,2.708684206008911,264
+80,4,community-particle-walk-ensemble-v1-run-4,310.0,4,0,70.39498138427734,1.5648112297058105,264
+80,16,community-particle-walk-ensemble-v1-run-16,197.0,6,0,59.265182971954346,1.4289469718933105,264
+80,32,community-particle-walk-ensemble-v1-run-32,158.0,5,0,59.76435708999634,1.4662659168243408,264
+320,1,community-particle-walk-long-v1-run-1,613.0,1,0,59.919185400009155,2.218287467956543,264
+320,4,community-particle-walk-long-v1-run-4,231.0,4,0,61.56806492805481,2.0383377075195312,264
+320,16,community-particle-walk-long-v1-run-16,156.0,5,0,62.34181880950928,1.9881534576416016,264
+320,32,community-particle-walk-long-v1-run-32,150.0,6,0,60.16746163368225,2.0874226093292236,264

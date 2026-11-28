@@ -40,3 +40,20 @@ Endpoint histograms
 [Anisotropic](evidence/reference/anisotropic-endpoints.csv) ·
 [Low drift](evidence/reference/low-drift-endpoints.csv) ·
 [High drift](evidence/reference/high-drift-endpoints.csv)
+
+### Scheduling measurements
+
+Both workloads ran four scheduling profiles and matched all 264 offline artifacts.
+
+| Steps | Slots | Elapsed seconds | Observed overlap | Matching checksums |
+| --- | --- | --- | --- | --- |
+| 80 | 1 | 668 | 1 | 264 |
+| 80 | 4 | 310 | 4 | 264 |
+| 80 | 16 | 197 | 6 | 264 |
+| 80 | 32 | 158 | 5 | 264 |
+| 320 | 1 | 613 | 1 | 264 |
+| 320 | 4 | 231 | 4 | 264 |
+| 320 | 16 | 156 | 5 | 264 |
+| 320 | 32 | 150 | 6 | 264 |
+
+[Scheduling CSV](evidence/reference/scheduling-profiles.csv).

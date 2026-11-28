@@ -1,0 +1,18 @@
+{
+  "uri": "akoflow://hub/publications/3d095c37-2643-408e-999c-3093db15f24f/versions/1",
+  "anonymous_yaml_checksum": "sha256:f0393006425b875723691b3d40518dff4eb83f1031e401221aab736249a8fa85",
+  "portable_build_activities": 257,
+  "context_bytes": 4026,
+  "context_checksum": "sha256:ba8f70e5366c1c78b314b3268cf1e81ecede3280eb9894b1985febc3ea57ca9c",
+  "recipe_checksum": "sha256:91cd4787250d4be947162963e36335692e09bb640db0c039c185fd0a010e304f",
+  "context_files": [
+    "artifacts.py",
+    "docker/Dockerfile",
+    "fusion.py",
+    "render.py",
+    "requirements.lock"
+  ],
+  "initial_workflows": 0,
+  "initial_images": 0,
+  "build_required_checks": 257
+}

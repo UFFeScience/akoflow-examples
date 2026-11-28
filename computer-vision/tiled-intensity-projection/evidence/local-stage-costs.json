@@ -1,0 +1,39 @@
+{
+  "scope": "Serial kernel measurements on the shared host with temporary local files; excludes Ak\u00f4Flow scheduling, transport and image rendering.",
+  "workloads": [
+    {
+      "shape_zyx": [
+        64,
+        128,
+        128
+      ],
+      "tiles": 256,
+      "repetitions": 3,
+      "median_seconds": {
+        "generate_voxels": 0.026497229002416134,
+        "project_blocks": 0.0038277360145002604,
+        "write_tiles": 0.07261051196837798,
+        "read_tiles": 0.1577749620191753,
+        "reduce_tiles": 0.004019069019705057,
+        "write_projection_csv": 0.01160512794740498
+      }
+    },
+    {
+      "shape_zyx": [
+        96,
+        160,
+        160
+      ],
+      "tiles": 600,
+      "repetitions": 3,
+      "median_seconds": {
+        "generate_voxels": 0.051226730982307345,
+        "project_blocks": 0.007878253993112594,
+        "write_tiles": 0.16436990397050977,
+        "read_tiles": 0.35870302998228,
+        "reduce_tiles": 0.010336228006053716,
+        "write_projection_csv": 0.02263375197071582
+      }
+    }
+  ]
+}

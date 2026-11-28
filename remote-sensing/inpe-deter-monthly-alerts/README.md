@@ -65,3 +65,14 @@ Geometry anomalies remain in the tabular alert counts.
 [Monthly table](outputs/deter-month-state-class.csv) ·
 [Diagnostics](outputs/deter-monthly-diagnostics.csv) ·
 [Local pilot validation](evidence/local-pilot-validation.json)
+
+## Daemon reference
+
+The four-slot reference run completed all 74 activities and reproduced the
+four scientific output hashes from the pilot. The timeline shows the actual
+worker assignments and simultaneous monthly audits.
+
+![Measured DETER monthly activity overlap](outputs/timeline.png)
+
+[Daemon activity trace](evidence/reference-run.json) ·
+[Daemon validation](evidence/reference-validation.json)

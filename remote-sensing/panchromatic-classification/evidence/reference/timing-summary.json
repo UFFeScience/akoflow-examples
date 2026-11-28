@@ -1,0 +1,65 @@
+{
+  "reference": {
+    "run": "community-panchromatic-classification-ensemble-v1-run-4",
+    "slots": 4,
+    "cases": 768,
+    "started_at": "2026-11-28T08:37:10Z",
+    "finished_at": "2026-11-28T08:49:46Z",
+    "end_to_end_seconds": 756.0,
+    "cases_per_second": 1.0158730158730158,
+    "case_window_seconds": 556.1740965843201,
+    "calibration_seconds": 0.7454195022583008,
+    "aggregate_prepare_seconds": 178.00342559814453,
+    "aggregate_seconds": 0.7346515655517578,
+    "peak_overlapping_cases": 4
+  },
+  "short_profiles": [
+    {
+      "run": "community-panchromatic-classification-profile-v1-run-1",
+      "slots": 1,
+      "cases": 48,
+      "started_at": "2026-11-28T08:49:51Z",
+      "finished_at": "2026-11-28T08:51:45Z",
+      "end_to_end_seconds": 114.0,
+      "cases_per_second": 0.42105263157894735,
+      "case_window_seconds": 97.53816676139832,
+      "calibration_seconds": 0.6434979438781738,
+      "aggregate_prepare_seconds": 11.527754545211792,
+      "aggregate_seconds": 0.8278200626373291,
+      "peak_overlapping_cases": 1,
+      "speedup_over_one_slot": 1.0
+    },
+    {
+      "run": "community-panchromatic-classification-profile-v1-run-4",
+      "slots": 4,
+      "cases": 48,
+      "started_at": "2026-11-28T08:51:52Z",
+      "finished_at": "2026-11-28T08:52:44Z",
+      "end_to_end_seconds": 52.0,
+      "cases_per_second": 0.9230769230769231,
+      "case_window_seconds": 34.868773221969604,
+      "calibration_seconds": 0.7316656112670898,
+      "aggregate_prepare_seconds": 11.1469144821167,
+      "aggregate_seconds": 0.7672643661499023,
+      "peak_overlapping_cases": 4,
+      "speedup_over_one_slot": 2.1923076923076925
+    },
+    {
+      "run": "community-panchromatic-classification-profile-v1-run-8",
+      "slots": 8,
+      "cases": 48,
+      "started_at": "2026-11-28T08:52:53Z",
+      "finished_at": "2026-11-28T08:53:30Z",
+      "end_to_end_seconds": 37.0,
+      "cases_per_second": 1.2972972972972974,
+      "case_window_seconds": 21.07046937942505,
+      "calibration_seconds": 0.8013861179351807,
+      "aggregate_prepare_seconds": 11.131206274032593,
+      "aggregate_seconds": 0.8429698944091797,
+      "peak_overlapping_cases": 5,
+      "speedup_over_one_slot": 3.081081081081081
+    }
+  ],
+  "matching_checksums_per_short_profile": 53,
+  "measurement_context": "Single runs on a shared host. The PAN clean verification overlapped all three short profiles."
+}

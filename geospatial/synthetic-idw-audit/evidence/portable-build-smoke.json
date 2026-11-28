@@ -1,0 +1,12 @@
+{
+  "imageId": "sha256:6a580a1ef8e9cde5a390af6548b4b40ac2b0263915e34037c218330abedefc98",
+  "build": {
+    "id": "recipe-build-33c8715e8836e98e8d527f1a07dd85cd80498ede2e362492ec26e39bec09b28e",
+    "contextDigest": "sha256:4d4052718035d7197770877f34a52670fba49f6ab28f8dc5a722b06327ae242c",
+    "recipeDigest": "sha256:eec7819fcdd07f733e76efd7c201a819130e07d429b17066a0e428133b2f6d61"
+  },
+  "networkDisabledDuringExecution": true,
+  "verifiedBlock": "s3-filtered-p4-block-15",
+  "matchedLocalPilot": true,
+  "sha256": "4f188a5f0c8915c83e6d820ec6f5e95dae71ae857943cf09d873ebe6d3f21c76"
+}

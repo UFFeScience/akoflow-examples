@@ -56,3 +56,10 @@ generating the plans. The runner resumes existing runs by ID and validates the
 python3 profile.py profile-evidence
 python3 summarize-profiles.py profile-evidence profile-summary
 ```
+
+The [compact recipe smoke test](evidence/portable-build-smoke.json) rebuilt the
+image from its archived Dockerfile, verified the sample manifest, and ran a
+prediction block with network access disabled. Its result matched the local
+pilot byte for byte. The
+[installed dependency list](evidence/portable-build-dependencies.txt) records
+the environment used in the smoke test.

@@ -1,0 +1,1189 @@
+{
+  "plan": {
+    "id": "community-ngspice-rlc-plan-16-v1",
+    "workflowVersionId": "community-ngspice-rlc-ensemble-v1-v1",
+    "executionScopeId": "community-ngspice-rlc-scope",
+    "networkTopologyId": "community-ngspice-rlc-topology",
+    "source": "imported",
+    "algorithm": "manual",
+    "algorithmVersion": "1",
+    "objective": "custom",
+    "predicted": {
+      "makespanSeconds": 300,
+      "cost": 0,
+      "feasible": true
+    },
+    "assignments": [
+      {
+        "id": "community-ngspice-rlc-16-prepare",
+        "activityId": "community-ngspice-rlc-ensemble-v1-prepare",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-000",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-000",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-001",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-001",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-002",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-002",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-003",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-003",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-004",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-004",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-005",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-005",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-006",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-006",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-007",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-007",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-008",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-008",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-009",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-009",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-010",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-010",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-011",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-011",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-012",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-012",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-013",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-013",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-014",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-014",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-015",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-015",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 0,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-016",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-016",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-017",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-017",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-018",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-018",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-019",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-019",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-020",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-020",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-021",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-021",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-022",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-022",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-023",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-023",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-024",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-024",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-025",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-025",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-026",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-026",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-027",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-027",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-028",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-028",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-029",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-029",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-030",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-030",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-031",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-031",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 1,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-032",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-032",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-033",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-033",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-034",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-034",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-035",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-035",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-036",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-036",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-037",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-037",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-038",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-038",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-039",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-039",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-040",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-040",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-041",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-041",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-042",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-042",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-043",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-043",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-044",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-044",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-045",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-045",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-046",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-046",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-047",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-047",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 2,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-048",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-048",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-049",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-049",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-050",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-050",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-051",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-051",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-052",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-052",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-053",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-053",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-054",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-054",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-055",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-055",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-056",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-056",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-057",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-057",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-058",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-058",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-059",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-059",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-060",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-060",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-061",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-061",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-062",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-062",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-063",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-063",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 3,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-064",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-064",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-065",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-065",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-066",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-066",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-067",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-067",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-068",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-068",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-069",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-069",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-070",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-070",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-071",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-071",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-072",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-072",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-073",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-073",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-074",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-074",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-075",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-075",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-076",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-076",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-077",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-077",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-078",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-078",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-079",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-079",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 4,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-080",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-080",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-081",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-081",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-082",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-082",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-083",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-083",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-084",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-084",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-085",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-085",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-086",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-086",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-087",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-087",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-088",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-088",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-089",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-089",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-090",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-090",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-091",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-091",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-092",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-092",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-093",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-093",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-094",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-094",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-095",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-095",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 5,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-096",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-096",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-097",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-097",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-098",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-098",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-099",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-099",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-100",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-100",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-101",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-101",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-102",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-102",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-103",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-103",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-104",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-104",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-105",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-105",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-106",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-106",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-107",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-107",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-108",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-108",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-109",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-109",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-110",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-110",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-111",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-111",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 6,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-112",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-112",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 8,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-113",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-113",
+        "resourceId": "community-ngspice-rlc-slot-01",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-114",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-114",
+        "resourceId": "community-ngspice-rlc-slot-02",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-115",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-115",
+        "resourceId": "community-ngspice-rlc-slot-03",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-116",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-116",
+        "resourceId": "community-ngspice-rlc-slot-04",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-117",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-117",
+        "resourceId": "community-ngspice-rlc-slot-05",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-118",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-118",
+        "resourceId": "community-ngspice-rlc-slot-06",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-119",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-119",
+        "resourceId": "community-ngspice-rlc-slot-07",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-120",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-120",
+        "resourceId": "community-ngspice-rlc-slot-08",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-121",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-121",
+        "resourceId": "community-ngspice-rlc-slot-09",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-122",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-122",
+        "resourceId": "community-ngspice-rlc-slot-10",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-123",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-123",
+        "resourceId": "community-ngspice-rlc-slot-11",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-124",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-124",
+        "resourceId": "community-ngspice-rlc-slot-12",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-125",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-125",
+        "resourceId": "community-ngspice-rlc-slot-13",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-126",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-126",
+        "resourceId": "community-ngspice-rlc-slot-14",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-batch-127",
+        "activityId": "community-ngspice-rlc-ensemble-v1-batch-127",
+        "resourceId": "community-ngspice-rlc-slot-15",
+        "orderOnResource": 7,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      },
+      {
+        "id": "community-ngspice-rlc-16-aggregate",
+        "activityId": "community-ngspice-rlc-ensemble-v1-aggregate",
+        "resourceId": "community-ngspice-rlc-slot-00",
+        "orderOnResource": 9,
+        "metadata": {
+          "runtimeId": "community-ngspice-rlc-local"
+        }
+      }
+    ]
+  }
+}

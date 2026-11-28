@@ -1,0 +1,342 @@
+{
+  "environment": {
+    "id": "community-ngspice-rlc-cpu",
+    "name": "RLC CPU profiles",
+    "status": "ready"
+  },
+  "version": {
+    "id": "community-ngspice-rlc-cpu-v1",
+    "environmentId": "community-ngspice-rlc-cpu",
+    "version": 1,
+    "status": "published",
+    "networkModel": "local",
+    "interferenceModel": "observed",
+    "costModel": "free",
+    "configurationHash": "community-ngspice-rlc-cpu-v1"
+  },
+  "runtimes": [
+    {
+      "id": "community-ngspice-rlc-local",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "name": "Local Docker",
+      "driver": "local",
+      "mode": "execution",
+      "role": "compute",
+      "capabilities": {
+        "batch": true,
+        "container": true
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "community-ngspice-rlc-slot-00",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 0",
+      "providerId": "local-docker-ngspice-rlc-0",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-01",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 1",
+      "providerId": "local-docker-ngspice-rlc-1",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-02",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 2",
+      "providerId": "local-docker-ngspice-rlc-2",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-03",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 3",
+      "providerId": "local-docker-ngspice-rlc-3",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-04",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 4",
+      "providerId": "local-docker-ngspice-rlc-4",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-05",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 5",
+      "providerId": "local-docker-ngspice-rlc-5",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-06",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 6",
+      "providerId": "local-docker-ngspice-rlc-6",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-07",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 7",
+      "providerId": "local-docker-ngspice-rlc-7",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-08",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 8",
+      "providerId": "local-docker-ngspice-rlc-8",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-09",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 9",
+      "providerId": "local-docker-ngspice-rlc-9",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-10",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 10",
+      "providerId": "local-docker-ngspice-rlc-10",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-11",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 11",
+      "providerId": "local-docker-ngspice-rlc-11",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-12",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 12",
+      "providerId": "local-docker-ngspice-rlc-12",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-13",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 13",
+      "providerId": "local-docker-ngspice-rlc-13",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-14",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 14",
+      "providerId": "local-docker-ngspice-rlc-14",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    },
+    {
+      "id": "community-ngspice-rlc-slot-15",
+      "environmentVersionId": "community-ngspice-rlc-cpu-v1",
+      "type": "machine",
+      "name": "Local Docker slot 15",
+      "providerId": "local-docker-ngspice-rlc-15",
+      "cpuCores": 1,
+      "cpuCapacity": 1,
+      "memoryBytes": 1073741824,
+      "storageBytes": 1073741824,
+      "computeSpeedup": 1,
+      "pricePerSecond": 0,
+      "schedulable": true
+    }
+  ],
+  "storages": [],
+  "connections": [],
+  "activityResourceProfiles": [],
+  "resourceRuntimeBindings": [
+    {
+      "resourceId": "community-ngspice-rlc-slot-00",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-01",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-02",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-03",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-04",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-05",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-06",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-07",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-08",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-09",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-10",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-11",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-12",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-13",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-14",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    },
+    {
+      "resourceId": "community-ngspice-rlc-slot-15",
+      "runtimeId": "community-ngspice-rlc-local",
+      "enabled": true
+    }
+  ]
+}

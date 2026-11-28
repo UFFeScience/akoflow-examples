@@ -1,0 +1,7 @@
+{
+  "id": "community-ngspice-rlc-scope",
+  "name": "RLC execution scope",
+  "environmentVersionIds": [
+    "community-ngspice-rlc-cpu-v1"
+  ]
+}

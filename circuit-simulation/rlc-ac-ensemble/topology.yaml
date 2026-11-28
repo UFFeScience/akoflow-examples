@@ -1,0 +1,7 @@
+{
+  "id": "community-ngspice-rlc-topology",
+  "name": "RLC local topology",
+  "version": 1,
+  "executionScopeId": "community-ngspice-rlc-scope",
+  "links": []
+}

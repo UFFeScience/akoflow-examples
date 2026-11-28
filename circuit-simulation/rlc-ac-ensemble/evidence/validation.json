@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "batches": 128,
+  "circuits": 4096,
+  "samples": 1056768,
+  "gif_frames": 5,
+  "max_error_fraction": 1.4789999370666162e-06,
+  "sha256": {
+    "rlc-batches.csv": "3b552c80c516cac8c047619879e36283ca0e1fd41dc744ff5793b2c3395689e3",
+    "rlc-representative.csv": "f16eb0d38e64626d433bef577024d22898e6c5c380695723b2939840150c533d",
+    "rlc-bode.png": "7c1fc12b1213e84394c89912b05e74e23b6d3ffd04132d17f508092e88084d0b",
+    "rlc-bode.gif": "4037f2cac2eb5ce7b61529847bea38ddb54e6b11f9417a5165ca48805df706c0"
+  }
+}

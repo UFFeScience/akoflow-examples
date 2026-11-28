@@ -1,0 +1,12 @@
+{
+  "uri": "akoflow://hub/publications/32488dc6-0e85-4957-8914-bdd2e29408ab/versions/1",
+  "anonymous_yaml_checksum": "sha256:9f1d6025ecc61a1a5c612bf2bfafe51609a75736cc8a9414da64228861a3ef8a",
+  "portable_build_activities": 769,
+  "same_recipe_on_all_activities": true,
+  "context_bytes": 684,
+  "context_checksum": "sha256:8ecbc15a8ef10b0bc4a7ebfe6ab3be86295347573ada7c45c6bb24bd278ed932",
+  "recipe_checksum": "sha256:691e1aa723a2156024d76dc51a431d8fe3ba9e400cb8f475762ce01747213eb6",
+  "initial_workflows": 0,
+  "initial_images": 0,
+  "build_required_checks": 769
+}

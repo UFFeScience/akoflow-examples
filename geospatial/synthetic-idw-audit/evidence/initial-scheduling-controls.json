@@ -55,5 +55,24 @@
       "idw-surfaces.gif": "sha256:046670c84dd59f5d4e78d05b5214061062441971b74ffc777b4db50d49ab2a08",
       "metrics.csv": "sha256:f2b9ffbf590ed488e8ca60a2cbf268deadc40d4a9a512980fe6b6bd43ed5cdc0"
     }
+  },
+  {
+    "runId": "community-synthetic-idw-run-16-v1",
+    "slots": 16,
+    "startedAt": "2026-11-28T07:21:16Z",
+    "finishedAt": "2026-11-28T07:38:58Z",
+    "endToEndSeconds": 1062.0,
+    "postPreparationSeconds": 1035.589,
+    "predictionWindowSeconds": 712.427,
+    "aggregateInputPreparationSeconds": 313.56,
+    "aggregateExecutionSeconds": 7.762,
+    "observedPeak": 3,
+    "completedActivities": 1033,
+    "outputDigests": {
+      "grids.json": "sha256:68315c69f90744e91c47df97c2e4476db14e9867157b5c8439ed12f5842d377a",
+      "idw-comparison.png": "sha256:b08736bac0e36546b573546dab2864397a95e645f6201e6d8c3c9eaa9aa50042",
+      "idw-surfaces.gif": "sha256:046670c84dd59f5d4e78d05b5214061062441971b74ffc777b4db50d49ab2a08",
+      "metrics.csv": "sha256:f2b9ffbf590ed488e8ca60a2cbf268deadc40d4a9a512980fe6b6bd43ed5cdc0"
+    }
   }
 ]

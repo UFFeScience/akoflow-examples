@@ -1,0 +1,12 @@
+{
+  "id": "recipe-build-4e2417eae808c179814a0723a0d0bcb66a54b6c93f23a17d010b90a0e430c9f3",
+  "contextDigest": "sha256:e981768e5436fa6719bdea34613375774979065adf4b111ec32985ba75166616",
+  "recipeDigest": "sha256:cfffc966581bb32afcf101b5a9a60db4791a69d11a28a0b64a2b1c6fc7e6f403",
+  "contextBytes": 803,
+  "rebuiltImageId": "sha256:f99ebf0ddc0305a3ad06f7ca33d3688e146d402d4daae24169c44486745f0f70",
+  "matchedOfflineCases": [
+    127,
+    1024
+  ],
+  "passedPreflightActivities": 1026
+}

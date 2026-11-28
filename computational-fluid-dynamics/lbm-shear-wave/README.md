@@ -53,3 +53,9 @@ the image from the archived context and ran the highest-frequency corner
 case and equilibrium control with networking disabled. Its
 [observed rates and conservation errors](evidence/portable-case-smoke.csv)
 passed the Python aggregation checks.
+
+The current [803-byte portable build recipe](evidence/compact-portable-recipe.json)
+downloads original source files by pinned revision and verifies their SHA-256
+during the build. The runtime image copies the compiled binary from the
+compiler stage. Its offline smoke cases reproduced the earlier image's
+metrics exactly, and all 1,026 activities passed preflight again.

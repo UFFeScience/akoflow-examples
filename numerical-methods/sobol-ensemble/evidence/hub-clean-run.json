@@ -1,0 +1,23 @@
+{
+  "uri": "akoflow://hub/publications/831911fd-f820-46a0-8c35-112e9d12ef3e/versions/1",
+  "run": {
+    "id": "community-sobol-hub-v1-clean",
+    "status": "completed",
+    "startedAt": "2026-11-28T03:20:41Z",
+    "finishedAt": "2026-11-28T03:24:07Z"
+  },
+  "completedActivities": 130,
+  "validation": {
+    "passed": true,
+    "replicates": 128,
+    "estimates": 1408,
+    "prefixes": 11,
+    "frames": 11,
+    "sha256": {
+      "replicates.csv": "7d79a4292bb6da883852ccca6ca1fcad4382c2bc6ada42041a28eab892bdc53f",
+      "convergence.csv": "fcbafd17855ba50e8c2afeee228473b8dace227cb11fb3c05e94879033ba6565",
+      "convergence.png": "fd24280d8e8679606c3d0fdf3200659768191a764e97911b7c4fffcbe4aef779",
+      "convergence.gif": "e5a0fa5aafc7feaa8df265222d87c9053e21941c9f2fff50833b81dc192f00a2"
+    }
+  }
+}

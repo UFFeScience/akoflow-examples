@@ -1,0 +1,8 @@
+{
+  "referenceRunId": "community-lbm-shear-wave-run-4-v1",
+  "cleanRunId": "community-lbm-shear-wave-hub-clean",
+  "caseArtifacts": 2051,
+  "manifestSHA256": "fbde0298c1d66c42ab13d3b1739906bc00b9c452f38417b8db1874c1be569d5a",
+  "manifestEncoding": "UTF-8 compact JSON of [relativePath, checksum] pairs sorted by path",
+  "observation": "Before final aggregation"
+}

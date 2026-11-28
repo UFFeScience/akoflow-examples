@@ -1,0 +1,19 @@
+{
+  "runId": "community-rainfall-infiltration-run-4-v1",
+  "status": "completed",
+  "completedActivities": 514,
+  "maxOverlappingBatches": 4,
+  "validation": {
+    "passed": true,
+    "batches": 512,
+    "columns": 131072,
+    "ponded_columns": 77729,
+    "max_reference_error_mm": 4.4330984216855995e-08,
+    "animation_frames": 8,
+    "sha256": {
+      "infiltration-batches.csv": "702092590ff02571ba2a1afc597a6cfbcb3554664f9be87339fe45748be1e260",
+      "rainfall-runoff.png": "30d2e0564bdab71d5f22e4a29424cbd6fa21791070c350c8cd19b5cd2cdd16f2",
+      "rainfall-runoff.gif": "a428633ad13d43749c37aafdf5664877437ffae1eba955f09f9698d1324cc59b"
+    }
+  }
+}

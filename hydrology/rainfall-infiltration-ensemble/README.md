@@ -32,3 +32,16 @@ figure, and animation after each run.
 ```sh
 python3 profile.py profile-evidence
 ```
+
+## Four-slot reference
+
+The AkôFlow run completed 514 activities, with four overlapping scientific
+batches. The aggregate validated 512 batches and 131,072 columns. Of these,
+77,729 columns reached ponding before the storm ended. The largest error against
+bracketed inversion was 4.44 × 10⁻⁸ mm, rounded up.
+
+![Runoff and infiltration in the reference run](evidence/reference/rainfall-runoff.png)
+
+[Eight-frame rainfall–runoff animation](evidence/reference/rainfall-runoff.gif) ·
+[Batch results CSV](evidence/reference/infiltration-batches.csv) ·
+[Validation and artifact hashes](evidence/reference/reference-evidence.json)

@@ -1,0 +1,21 @@
+{
+  "uri": "akoflow://hub/publications/a8d814ff-23eb-4a60-9b72-1646baadfb36/versions/1",
+  "run": {
+    "id": "community-rainfall-infiltration-hub-v1-clean",
+    "status": "completed",
+    "startedAt": "2026-11-28T06:27:35Z",
+    "finishedAt": "2026-11-28T06:38:25Z"
+  },
+  "completedActivities": 514,
+  "initialDockerImageCount": 0,
+  "reconstructedImageId": "sha256:96c2364808aa0468b0b95424f3ca2b163a168499bfad03d567bff9d378376040",
+  "sha256": {
+    "infiltration-batches.csv": "702092590ff02571ba2a1afc597a6cfbcb3554664f9be87339fe45748be1e260",
+    "rainfall-runoff.png": "30d2e0564bdab71d5f22e4a29424cbd6fa21791070c350c8cd19b5cd2cdd16f2",
+    "rainfall-runoff.gif": "a428633ad13d43749c37aafdf5664877437ffae1eba955f09f9698d1324cc59b"
+  },
+  "batches": 512,
+  "columns": 131072,
+  "animationFrames": 8,
+  "sharedRecipePreflightPatch": "UFFeScience/akoflow#519"
+}

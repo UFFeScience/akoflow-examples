@@ -84,3 +84,15 @@ progress, and these values describe the first measurement at each slot count.
 
 The original workflow code and synthetic inputs use the [MIT license](LICENSE).
 The scientific model is attributed to Mein and Larson above.
+
+## Clean Hub import
+
+The [public Hub version](https://hub.akoflow.com/o/akoflow/community-explorer-issue-260-rainfall-infiltration-ensemble?version=1)
+was imported into an isolated installation with an empty workflow database
+and Docker image store. AkôFlow reconstructed the image and completed all 514
+activities. The CSV, PNG and eight-frame animation exactly matched the
+recorded reference SHA-256 values. The
+[clean-run record](evidence/reference/clean-hub-run.json) identifies the run,
+rebuilt image and preflight patch. The unmodified
+[AkôFlow v1.0.37 preflight](evidence/reference/stock-release-preflight.json)
+also accepted the public URI and requested image reconstruction.

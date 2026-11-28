@@ -1,0 +1,19 @@
+{
+  "run": "community-mip-projection-large-v1-run-4",
+  "completed_activities": 601,
+  "tile_checksums_equal_to_local": 600,
+  "volume_shape_zyx": [
+    96,
+    160,
+    160
+  ],
+  "verified_projection_columns": 25600,
+  "animation_frames": 24,
+  "aggregate_checksums": {
+    "projection.csv": "sha256:d19b3e79a29b3a165ebe44a4e875acbcaea4b7c48cc50d81cfc5a58f180e2756",
+    "projection.png": "sha256:40ea531570b697bb696fe9949405219823c7dde7e3ea73d885ea4cd75f144ff2",
+    "depth-scan.gif": "sha256:578fc8ca8ab47ae570727da4842e22e443bc9fcf88da0939ef5326a49cb7af55"
+  },
+  "elapsed_seconds": 492.0,
+  "peak_overlap_lower_bound": 4
+}

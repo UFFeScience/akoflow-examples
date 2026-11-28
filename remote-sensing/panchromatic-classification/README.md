@@ -74,3 +74,9 @@ Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
 with Matplotlib to visualize the measured scene concurrency by
 interference level. The figure marks calibration and aggregation and
 validates dependency ordering and captured peak concurrency.
+
+Run `python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
+against a daemon with empty workflow and image stores. It imports the workflow
+from the URI, requires preflight to request the build, and checks that the
+calibration, all 768 per-scene CSVs, and four aggregate artifacts match the
+reference checksums.

@@ -1,0 +1,17 @@
+{
+  "run": "community-mip-projection-partial-v1-run-4",
+  "completed_activities": 257,
+  "matching_tile_csvs": 256,
+  "matching_partial_edge_tiles": 109,
+  "volume_shape_zyx": [
+    61,
+    123,
+    115
+  ],
+  "validation": "The aggregate completed its independent whole-volume maximum and earliest-depth checks.",
+  "aggregate_checksums": {
+    "depth-scan.gif": "sha256:f5e77ccc00dfb086bfbd0ba65f44f6ee3c5b23a2e56b189d1ea0004ea2ed5542",
+    "projection.csv": "sha256:7ef2ea68d4844706d1b28fec31c3c2b24db3993360618f0251d947aff7197784",
+    "projection.png": "sha256:7fa4f8ce4d0688a74fd5ab6f52eb40af4791eb3d94f9b73e5bbd6e2244b5dc89"
+  }
+}

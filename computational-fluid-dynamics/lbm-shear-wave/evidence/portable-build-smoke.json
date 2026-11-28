@@ -1,0 +1,10 @@
+{
+  "imageId": "sha256:5488000253302d25eacba3d2677b468e13e315c0d14bfa1130d1bb90f15f5714",
+  "buildContextSHA256": "5ead7c37f32039dc30aaaf22c30503747d065fad57c4c7685cc5ed3fb14355e2",
+  "platform": "linux/amd64",
+  "networkDisabledDuringExecution": true,
+  "confirmedCases": [
+    127,
+    1024
+  ]
+}

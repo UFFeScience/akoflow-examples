@@ -47,3 +47,9 @@ after preflight. Benchmark plans are generated for 1, 4, 8, 16 and 32 slots.
 
 The pilot figures show the actual streamwise velocity averaged along each
 transverse row. Both use a fixed velocity scale throughout decay.
+
+The [portable image smoke test](evidence/portable-build-smoke.json) rebuilt
+the image from the archived context and ran the highest-frequency corner
+case and equilibrium control with networking disabled. Its
+[observed rates and conservation errors](evidence/portable-case-smoke.csv)
+passed the Python aggregation checks.

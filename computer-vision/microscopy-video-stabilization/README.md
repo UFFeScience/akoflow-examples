@@ -88,3 +88,8 @@ The collector writes `timing-summary.json` after the validated sweep. It
 reports end-to-end duration, case throughput, observed overlap and
 aggregation preparation and execution time. The one-slot speedup applies
 to the short 48-case profiles.
+
+Use `python3 render-timeline.py <completed-profile.json> <timeline.png>`
+with Matplotlib to render the measured worker occupancy. The timeline
+distinguishes the three interference regimes and the aggregation window
+and checks the observed peak against the profile capture.

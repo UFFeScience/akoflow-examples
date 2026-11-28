@@ -1,0 +1,41 @@
+{
+  "scope": "Sequential selection only on the shared development host; candidates were computed before timing.",
+  "trajectories": [
+    {
+      "trajectory": 0,
+      "frames": 256,
+      "independent_cost": 11.038646227637194,
+      "continuous_cost": 11.007212144790786,
+      "independent_selection_median_ns": 563965,
+      "dynamic_programming_median_ns": 1564215,
+      "repetitions": 15
+    },
+    {
+      "trajectory": 1,
+      "frames": 256,
+      "independent_cost": 31.06331648551476,
+      "continuous_cost": 12.239186679915424,
+      "independent_selection_median_ns": 491285,
+      "dynamic_programming_median_ns": 1272622,
+      "repetitions": 15
+    },
+    {
+      "trajectory": 2,
+      "frames": 256,
+      "independent_cost": 31.885478674569725,
+      "continuous_cost": 13.488320388313852,
+      "independent_selection_median_ns": 584806,
+      "dynamic_programming_median_ns": 1479944,
+      "repetitions": 15
+    },
+    {
+      "trajectory": 3,
+      "frames": 256,
+      "independent_cost": 31.773668811716096,
+      "continuous_cost": 14.747085103832472,
+      "independent_selection_median_ns": 729957,
+      "dynamic_programming_median_ns": 1843136,
+      "repetitions": 15
+    }
+  ]
+}

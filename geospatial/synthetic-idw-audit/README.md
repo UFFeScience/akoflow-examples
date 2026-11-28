@@ -115,3 +115,11 @@ end-to-end and post-preparation durations. The shared-host column covers
 completed rainfall captures available at analysis time. The 32-slot
 run also overlapped the IDW clean-import validation. These are shared-host
 measurements.
+
+## Verified public URI execution
+
+The [clean public URI record](evidence/reference/clean-public-uri-run.json)
+covers all 1,033 activities on the daemon with the shared-recipe fix.
+The isolated Docker and workflow stores started empty, the imported
+recipe rebuilt the image, and all 1,024 prediction blocks and four
+aggregate outputs matched the original reference checksums.

@@ -1,0 +1,27 @@
+{
+  "uri": "akoflow://hub/publications/7e05a7d2-c41e-45db-88d0-c5492099ba77/versions/1",
+  "cleanRunId": "community-synthetic-idw-hub-clean",
+  "startedAt": "2026-11-28T07:42:07Z",
+  "finishedAt": "2026-11-28T08:04:18Z",
+  "status": "completed",
+  "completedActivities": 1033,
+  "matchingPredictionBlocks": 1024,
+  "blockManifestSHA256": "7414dd6b5a1fd6bb74971b077cf4034cd23e9c3d0e9361bc45346083bc1205d0",
+  "aggregateChecksums": {
+    "grids.json": "sha256:68315c69f90744e91c47df97c2e4476db14e9867157b5c8439ed12f5842d377a",
+    "idw-comparison.png": "sha256:b08736bac0e36546b573546dab2864397a95e645f6201e6d8c3c9eaa9aa50042",
+    "idw-surfaces.gif": "sha256:046670c84dd59f5d4e78d05b5214061062441971b74ffc777b4db50d49ab2a08",
+    "metrics.csv": "sha256:f2b9ffbf590ed488e8ca60a2cbf268deadc40d4a9a512980fe6b6bd43ed5cdc0"
+  },
+  "referenceRunId": "community-synthetic-idw-run-4-v1",
+  "initialImageCount": 0,
+  "initialWorkflowCount": 0,
+  "yamlSHA256": "03082350b355c365251c455f7ca3321b5c14554da4132a3203969dd917494e9f",
+  "contextSHA256": "21616d56acd73ce952486926e783130931f68d792fcb8f88a7389be0907bdf76",
+  "recipeSHA256": "1aa4cec2c9e69ec242815d180874d8d0ae8f59a6c97355fb85834ea696a72543",
+  "rebuiltImageId": "sha256:76aa3b5b2f5e4c060fc1f67a993f9b1b7874cb976c917d472398a2e6a23b48cc",
+  "daemonBinarySHA256": "142f48e0c1206d2b26cedbc5c3622312b914997022565f7edf59ecf43e3522f6",
+  "daemonBaseRevision": "32fe52ec0c57021142ee2bed06abf5beb6273af3",
+  "daemonModified": true,
+  "sharedRecipeFix": "https://github.com/UFFeScience/akoflow/pull/519"
+}

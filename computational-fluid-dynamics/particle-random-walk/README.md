@@ -12,3 +12,31 @@ are fixed by scenario and index. Validation checks endpoints, lattice
 parity, total counts, repeatability and reduction order. The mean uses
 a six-standard-error tolerance. Each covariance entry uses 6% of the
 product of the corresponding theoretical marginal standard deviations.
+
+## Measured reference
+
+The run `community-particle-walk-ensemble-v1-run-4` completed 256 independent batches and one
+aggregation in 310 seconds. Up to
+4 batches overlapped. All 264 artifact
+checksums match the pinned offline execution. The aggregate covers 65,536 particles.
+
+![Endpoint dispersion after 80 steps](evidence/reference/endpoint-dispersion.png)
+
+![Accumulation across 64 batches per scenario](evidence/reference/endpoint-accumulation.gif)
+
+| Scenario | Measured mean endpoint | Expected mean endpoint |
+| --- | --- | --- |
+| Isotropic | (-0.13, 0.04) | (0.00, 0.00) |
+| Anisotropic | (-0.03, -0.02) | (0.00, 0.00) |
+| Low Drift | (23.99, -0.04) | (24.00, 0.00) |
+| High Drift | (47.98, -0.00) | (48.00, 0.00) |
+
+[Batch moments](evidence/reference/batch-moments.csv) ·
+[Full moment validation](evidence/reference/moment-validation.json) ·
+[Run and checksum evidence](evidence/reference/reference-run.json)
+
+Endpoint histograms
+[Isotropic](evidence/reference/isotropic-endpoints.csv) ·
+[Anisotropic](evidence/reference/anisotropic-endpoints.csv) ·
+[Low drift](evidence/reference/low-drift-endpoints.csv) ·
+[High drift](evidence/reference/high-drift-endpoints.csv)

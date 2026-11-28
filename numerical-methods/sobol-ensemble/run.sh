@@ -9,13 +9,16 @@ plan_id=${AKOFLOW_PLAN_ID:-community-sobol-plan-4-v1}
 tmp=$(mktemp -d); trap 'rm -rf "$tmp"' EXIT
 request(){ method=$1; endpoint=$2; shift 2; curl --fail-with-body -sS -X "$method" -H "Authorization: Bearer $token" "$@" "$api/$endpoint/"; }
 create(){ endpoint=$1; file=$2; request POST "$endpoint" -H 'Content-Type: application/yaml' --data-binary "@$root/$file" > "$tmp/r.json" || true; }
-if [ "${AKOFLOW_USE_IMPORTED_WORKFLOW:-0}" != 1 ]; then
-    create workflow-definitions workflow.yaml
+if [ "${AKOFLOW_USE_IMPORTED_WORKFLOW:-0}" = 1 ]; then
+    request GET workflow-definitions/community-sobol-ensemble-v1 > "$tmp/workflow.json"
 fi
-request GET workflow-definitions/community-sobol-ensemble-v1 > "$tmp/workflow.json"
 create environments environment.yaml
 create execution-scopes scope.yaml
 create network-topologies topology.yaml
+if [ "${AKOFLOW_USE_IMPORTED_WORKFLOW:-0}" != 1 ]; then
+    create workflow-definitions workflow.yaml
+    request GET workflow-definitions/community-sobol-ensemble-v1 > "$tmp/workflow.json"
+fi
 create schedule-plans/import "$plan_file"
 request GET environments/community-sobol-cpu > "$tmp/env.json"
 request GET execution-scopes/community-sobol-scope > "$tmp/scope.json"

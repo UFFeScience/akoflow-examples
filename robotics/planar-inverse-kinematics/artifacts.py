@@ -7,6 +7,7 @@ from math import dist, fsum
 from pathlib import Path
 
 from kinematics import FRAMES, TOLERANCE, forward, inverse, select_path, step_cost, targets
+from render import render
 
 FIELDS = ("frame", "target_x", "target_y", "candidate", "shoulder", "elbow", "position_error")
 
@@ -96,4 +97,5 @@ if __name__=="__main__":
     if args.command=="frame":
         write_frame(args.index,list(targets(args.trajectory))[args.index],args.output)
     else:
-        aggregate(args.source,args.output,args.trajectory)
+        independent,continuous=aggregate(args.source,args.output,args.trajectory)
+        render(list(targets(args.trajectory)),independent,continuous,args.output)

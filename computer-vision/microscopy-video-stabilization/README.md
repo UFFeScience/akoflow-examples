@@ -29,3 +29,19 @@ across available methods, including the unregistered control. This entry
 point checks the numerical
 kernel locally. The AkôFlow execution, aggregate figures and publication
 evidence are pending.
+
+## Local visual pilot
+
+Case 11 uses seed 532, a 6 px amplitude, and the strongest synthetic
+noise/foreground regime. The final-frame plot and 40-frame animation compare
+the observed image with both phase-correlation trajectories. Their lower
+panels show absolute residuals against the first frame. Image intensities
+use a fixed −3 to +3 range and residuals use a fixed 0 to 3 range. Black
+pixels at the alignment boundary indicate missing values. The panel labels
+report error on the shared valid pixels.
+
+![Final-frame alignment and residuals for case 11](evidence/stabilization-residuals.png)
+
+![Forty observed and stabilized frames with their residuals](evidence/stabilization.gif)
+
+[Download case 11's per-frame pilot measurements](evidence/pilot-sequence.csv).

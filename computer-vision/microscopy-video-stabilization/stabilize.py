@@ -112,6 +112,15 @@ def evaluate(frames, truth):
                 yield i, name, status, *total, ratio, np.linalg.norm(total + truth[i])
 
 
+def bilinear(moving, y, x):
+    y0, x0 = np.floor(y).astype(int), np.floor(x).astype(int)
+    y1, x1 = np.minimum(y0 + 1, moving.shape[0] - 1), np.minimum(x0 + 1, moving.shape[1] - 1)
+    fy, fx = y - y0, x - x0
+    top = (1 - fx) * moving[y0, x0] + fx * moving[y0, x1]
+    bottom = (1 - fx) * moving[y1, x0] + fx * moving[y1, x1]
+    return (1 - fy) * top + fy * bottom
+
+
 def common_region_metrics(frames, rows):
     """Score available methods over their shared valid bilinear footprint."""
     yy, xx = np.indices(frames[0].shape)
@@ -134,13 +143,7 @@ def common_region_metrics(frames, rows):
                 yield (frame, method), (np.nan, count)
                 continue
             y, x = yy[valid] - dy, xx[valid] - dx
-            y0, x0 = np.floor(y).astype(int), np.floor(x).astype(int)
-            y1, x1 = np.minimum(y0 + 1, height - 1), np.minimum(x0 + 1, width - 1)
-            fy, fx = y - y0, x - x0
-            moving = frames[frame]
-            top = (1 - fx) * moving[y0, x0] + fx * moving[y0, x1]
-            bottom = (1 - fx) * moving[y1, x0] + fx * moving[y1, x1]
-            aligned = (1 - fy) * top + fy * bottom
+            aligned = bilinear(frames[frame], y, x)
             yield (frame, method), (float(np.mean(np.abs(reference - aligned))), count)
 
 

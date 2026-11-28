@@ -23,5 +23,27 @@ OMP_NUM_THREADS=1 ./shear-wave 127 results
 The local [thread-equivalence test](evidence/thread-equivalence.csv) verified
 eight corner cases and the equilibrium control. Each trace and summary was
 byte-identical for one and two OpenMP threads. This records equivalence of
-the local kernel; the AkôFlow scheduling benchmark and Hub publication are
-pending.
+the local kernel; the AkôFlow scheduling benchmark and Hub publication are pending.
+
+
+The [frozen manifest](evidence/scenarios.csv) records the 1,024 scientific cases
+and one equilibrium control. The 1,026-activity DAG passed all executable
+checks in an isolated preflight. Case activities write a trace and conservation
+summary. The aggregate validates complete coverage and returns a compressed
+amplitude table, per-case metrics and the measured field of case 127.
+
+```sh
+recipe=$(./register-recipe.sh)
+python3 generate.py "$recipe"
+./run.sh
+```
+
+The default plan uses four logical slots. Set `AKOFLOW_SUBMIT=1` to submit
+after preflight. Benchmark plans are generated for 1, 4, 8, 16 and 32 slots.
+
+![Pilot space–time plot of the streamwise shear velocity](evidence/shear-space-time.png)
+
+![Twelve measured time steps from the representative case](evidence/shear-decay.gif)
+
+The pilot figures show the actual streamwise velocity averaged along each
+transverse row. Both use a fixed velocity scale throughout decay.

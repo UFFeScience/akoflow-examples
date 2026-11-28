@@ -23,6 +23,7 @@ constexpr int case_count = transverse_sizes.size() * relaxation_times.size()
                          * mode_numbers.size() * amplitudes.size();
 constexpr int streamwise_size = 8;
 constexpr int fit_start = 32;
+constexpr int representative_case = 127;
 constexpr std::array cx{0, 1, 0, -1, 0, 1, -1, -1, 1};
 constexpr std::array cy{0, 0, 1, 0, -1, 1, 1, -1, -1};
 constexpr std::array weights{4.0/9, 1.0/9, 1.0/9, 1.0/9, 1.0/9,
@@ -136,15 +137,31 @@ void simulate(int id, const std::filesystem::path& output) {
     std::ofstream trace(output / (label + "-trace.csv"));
     trace.exceptions(std::ios::badbit | std::ios::failbit);
     trace << std::setprecision(17) << "step,mode_amplitude,mean_density,mean_momentum_x,mean_momentum_y\n";
+    std::ofstream field;
+    if (id == representative_case) {
+        field.open(output / (label + "-field.csv"));
+        field.exceptions(std::ios::badbit | std::ios::failbit);
+        field << std::setprecision(17) << "step,y,mean_velocity_x\n";
+    }
     double initial_fit = 0, final_fit = 0, mass_error = 0, momentum_error = 0;
     for (int step = 0; step <= last; ++step) {
         double mode_amplitude = 0, density = 0, momentum_x = 0, momentum_y = 0;
+        double row_velocity = 0;
         for (int index = 0; index < cell_count; ++index) {
             const auto fluid = moments(current[index]);
             density += fluid.density;
             momentum_x += fluid.momentum_x;
             momentum_y += fluid.momentum_y;
-            mode_amplitude += fluid.momentum_x / fluid.density * wave[index / streamwise_size];
+            const double ux = fluid.momentum_x / fluid.density;
+            const int y = index / streamwise_size;
+            mode_amplitude += ux * wave[y];
+            if (id == representative_case) {
+                row_velocity += ux;
+                if ((index + 1) % streamwise_size == 0) {
+                    field << step << ',' << y << ',' << row_velocity / streamwise_size << '\n';
+                    row_velocity = 0;
+                }
+            }
         }
         mode_amplitude *= 2.0 / cell_count;
         density /= cell_count;
@@ -185,6 +202,15 @@ void simulate(int id, const std::filesystem::path& output) {
 }  // namespace
 
 int main(int argc, char** argv) {
+    if (argc == 2 && std::string_view(argv[1]) == "--manifest") {
+        std::cout << "id,size,tau,mode,initial_amplitude\n" << std::setprecision(17);
+        for (int id = 0; id <= case_count; ++id) {
+            const auto input = scenario(id);
+            std::cout << id << ',' << input.size << ',' << input.tau << ','
+                      << input.mode << ',' << input.amplitude << '\n';
+        }
+        return 0;
+    }
     if (argc != 3) {
         std::cerr << "Usage: shear-wave CASE_ID OUTPUT_DIRECTORY\n";
         return 2;

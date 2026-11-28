@@ -74,14 +74,17 @@ def capture(result, slots):
             "aggregate_seconds": reducer["finishedAt"] - reducer["startedAt"], "digests": digests}
 
 
-def profile(directory, slots):
+def profile(directory, slots, require_build=False):
     identifier = f"{WORKFLOW}-run-{slots}"
+    log_path = directory / f"{identifier}.log"
     if projection(identifier) is None:
         env = dict(os.environ, AKOFLOW_SUBMIT="1", AKOFLOW_RUN_ID=identifier,
                    AKOFLOW_PLAN_FILE=f"plan-{slots}.yaml",
                    AKOFLOW_PLAN_ID=f"{WORKFLOW}-plan-{slots}")
-        with (directory / f"{identifier}.log").open("a") as log:
+        with log_path.open("a") as log:
             subprocess.run([ROOT / "run.sh"], env=env, stdout=log, stderr=log, check=True)
+    if require_build and "Build required" not in log_path.read_text():
+        raise ValueError("Preflight did not request image reconstruction")
     while True:
         try:
             result = projection(identifier)

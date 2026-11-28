@@ -30,3 +30,8 @@ After preflight, run `python3 profile.py /path/to/evidence` with
 It starts or resumes the four-slot reference, then runs the one-, sixteen-
 and thirty-two-slot plans and compares all 259 output checksums. Slot
 overlap is a lower bound when the daemon records unusable intervals.
+
+For a published reference, run
+`python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
+on a daemon with empty workflow and image stores. It stages its own
+schedule configuration, requires a cold build, and checks all 259 outputs.

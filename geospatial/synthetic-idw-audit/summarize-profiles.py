@@ -8,6 +8,7 @@ from datetime import datetime
 from pathlib import Path
 
 from generate import BATCHES, CAPACITIES, PREPARATIONS
+from profile import check_manifest
 
 
 def seconds(value):
@@ -32,6 +33,14 @@ def shared_host_seconds(run, neighbors):
         seconds_shared += max(0.0, last - max(first, covered_until))
         covered_until = max(covered_until, last)
     return seconds_shared
+
+
+def scientific_manifest(capture):
+    """Use registered artifacts so captures from the initial collector still validate."""
+    aggregate, blocks = check_manifest(dict(capture, dataObjects=capture["artifacts"]))
+    if aggregate != capture["digests"] or blocks != capture.get("block_digests", blocks):
+        raise ValueError(f"Capture digests disagree with artifacts in {capture['run']['id']}")
+    return aggregate, blocks
 
 
 def measure(capture):
@@ -86,9 +95,10 @@ def main():
     captures = [json.loads(path.read_text()) for path in sorted(args.captures.glob("community-synthetic-idw-run-*.json"))]
     if len(captures) != len(CAPACITIES) * args.repetitions:
         raise ValueError("Expected a complete set of profile captures")
-    reference = captures[0]["digests"]
-    if any(item["digests"] != reference for item in captures):
-        raise ValueError("Profile outputs differ")
+    reference = scientific_manifest(captures[0])
+    for item in captures[1:]:
+        if scientific_manifest(item) != reference:
+            raise ValueError(f"Scientific outputs differ in {item['run']['id']}")
     runs = [measure(item) for item in captures]
     if args.shared_host_captures:
         neighbors = []

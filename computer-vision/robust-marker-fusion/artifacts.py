@@ -6,6 +6,7 @@ import math
 from pathlib import Path
 
 from fusion import CASES, MARKERS, estimate, scenario
+from render import render
 
 FIELDS = ("case", "frame", "visible_mask", "visible_count", "truth_x", "truth_y",
           "mean_x", "mean_y", "mean_error", "median_x", "median_y", "median_error")
@@ -88,4 +89,6 @@ if __name__ == "__main__":
             parser.error("invalid case index")
         write_case(args.case, args.frames, args.output)
     else:
-        summarize(args.source, args.frames, args.output)
+        args.output.mkdir(parents=True, exist_ok=True)
+        summarize(args.source, args.frames, args.output / "scenario-summary.csv")
+        render(scene_rows(args.source, CASES.index((0, 4, 10.0)), args.frames), args.output)

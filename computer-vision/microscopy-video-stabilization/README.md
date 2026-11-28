@@ -83,3 +83,8 @@ The [compact recipe evidence](evidence/compact-build-preflight.json) records
 the 684-byte archived context, the offline case checksum, and daemon
 preflights for the full workflow and all three short profiles. The daemon
 reported that the recipe could rebuild the image for every activity.
+
+The collector writes `timing-summary.json` after the validated sweep. It
+reports end-to-end duration, case throughput, observed overlap and
+aggregation preparation and execution time. The one-slot speedup applies
+to the short 48-case profiles.

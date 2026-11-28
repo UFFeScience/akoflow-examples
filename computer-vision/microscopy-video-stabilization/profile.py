@@ -8,6 +8,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from datetime import datetime
 from collections import Counter
 from pathlib import Path
 
@@ -96,7 +97,32 @@ def run(directory, workflow, count, slots, baseline=None):
     temporary.write_text(json.dumps(evidence, indent=2) + "\n")
     temporary.replace(path)
     print(f"Verified {identifier}", flush=True)
-    return evidence["digests"]
+    return evidence
+
+
+def timing(evidence):
+    run = evidence["run"]
+    started = datetime.fromisoformat(run["startedAt"])
+    ended = datetime.fromisoformat(run["finishedAt"])
+    elapsed = (ended - started).total_seconds()
+    if elapsed <= 0:
+        raise ValueError(f"Invalid elapsed time for {run['id']}")
+    cases = [item for item in evidence["activities"] if "-case-" in item["activityId"]]
+    aggregate = next(item for item in evidence["activities"] if item["activityId"].endswith("-aggregate"))
+    return {
+        "run": run["id"],
+        "slots": evidence["slots"],
+        "cases": evidence["cases"],
+        "started_at": run["startedAt"],
+        "finished_at": run["finishedAt"],
+        "end_to_end_seconds": elapsed,
+        "cases_per_second": len(cases) / elapsed,
+        "case_window_seconds": max(item["finishedAt"] for item in cases)
+        - min(item["startedAt"] for item in cases),
+        "aggregate_prepare_seconds": aggregate["startedAt"] - aggregate["queuedAt"],
+        "aggregate_seconds": aggregate["finishedAt"] - aggregate["startedAt"],
+        "peak_overlapping_cases": evidence["peak_overlapping_cases"],
+    }
 
 
 def main():
@@ -106,11 +132,21 @@ def main():
     args = parser.parse_args()
     args.evidence.mkdir(parents=True, exist_ok=True)
     subprocess.run([sys.executable, ROOT / "generate.py", args.recipe], check=True)
-    run(args.evidence, f"{PREFIX}-ensemble-v1", 768, 4)
+    reference = run(args.evidence, f"{PREFIX}-ensemble-v1", 768, 4)
     subprocess.run([sys.executable, ROOT / "generate.py", args.recipe, "--cases", "48"], check=True)
     baseline = None
+    profiles = []
     for slots in CAPACITIES:
-        baseline = run(args.evidence, f"{PREFIX}-profile-v1", 48, slots, baseline)
+        result = run(args.evidence, f"{PREFIX}-profile-v1", 48, slots, baseline)
+        baseline = result["digests"]
+        profiles.append(timing(result))
+    serial = next(row["end_to_end_seconds"] for row in profiles if row["slots"] == 1)
+    for row in profiles:
+        row["speedup_over_one_slot"] = serial / row["end_to_end_seconds"]
+    summary = {"reference": timing(reference), "short_profiles": profiles}
+    temporary = args.evidence / "timing-summary.tmp"
+    temporary.write_text(json.dumps(summary, indent=2) + "\n")
+    temporary.replace(args.evidence / "timing-summary.json")
 
 
 if __name__ == "__main__":

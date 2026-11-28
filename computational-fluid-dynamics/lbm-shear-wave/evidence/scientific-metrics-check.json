@@ -1,0 +1,10 @@
+{
+  "runId": "community-lbm-shear-wave-run-4-v1",
+  "verifiedMetricArtifacts": 1025,
+  "scientificCases": 1024,
+  "equilibriumControls": 1,
+  "maximumDiscreteRelativeError": 1.2669287396960272e-08,
+  "maximumContinuumRelativeError": 0.04267913254556699,
+  "maximumMassError": 5.4067861299245124e-14,
+  "maximumMomentumError": 2.224782857940255e-16
+}

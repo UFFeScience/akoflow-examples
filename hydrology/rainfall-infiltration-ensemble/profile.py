@@ -46,15 +46,17 @@ def check_manifest(result):
     paths = {f"batch-{index:03d}-results.json" for index in range(512)}
     if set(producers).intersection(paths) != paths or sum(path in paths for path in producers) != 512:
         raise ValueError("Missing or repeated batch artifact")
-    digests = {item["relativePath"]: item["checksum"] for item in result["dataObjects"]
-               if item["relativePath"] in DETERMINISTIC}
-    if set(digests) != set(DETERMINISTIC):
-        raise ValueError("Missing infiltration output digests")
+    artifacts = [item for item in result["dataObjects"] if item["relativePath"] in DETERMINISTIC]
+    digests = {item["relativePath"]: item["checksum"] for item in artifacts}
+    if len(artifacts) != len(DETERMINISTIC) or set(digests) != set(DETERMINISTIC) or not all(digests.values()):
+        raise ValueError("Missing or repeated infiltration output digests")
     return digests
 
 
-def save(path, result, slots, repetition):
+def save(path, result, slots, repetition, baseline=None):
     digests = check_manifest(result)
+    if baseline is not None and digests != baseline:
+        raise ValueError(f"Scientific outputs diverged for {path.stem}")
     flow = result["activities"]
     scientific = [item for item in flow if "-batch-" in item["activityId"]]
     changes = []
@@ -119,9 +121,7 @@ def main():
                 continue
             if projection(identifier) is None:
                 submit(identifier, slots, args.evidence)
-            digests = save(args.evidence / f"{identifier}.json", wait_for(identifier), slots, repetition)
-            if digests != baseline:
-                raise ValueError(f"Scientific outputs diverged for {identifier}")
+            save(args.evidence / f"{identifier}.json", wait_for(identifier), slots, repetition, baseline)
             print(f"Verified {identifier}", flush=True)
 
 

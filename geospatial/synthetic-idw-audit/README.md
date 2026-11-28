@@ -103,3 +103,15 @@ imported all 1,033 activities from the public URI into empty storage.
 Its preflight reached the 30-second deadline while repeating availability
 checks for the shared build recipe. The isolated cold run uses the
 [shared-recipe probe fix](https://github.com/UFFeScience/akoflow/pull/519).
+
+## Completed scheduling sweep
+
+All five profiles at 1, 4, 8, 16 and 32 slots completed 1,033 activities
+with identical checksums for the 1,024 prediction blocks and the aggregate
+outputs. The measured peak was four simultaneous predictions in the
+32-slot profile. The [per-run timings](evidence/reference/profile-runs.csv)
+and [scheduling summary](evidence/reference/profile-summary.csv) report
+end-to-end and post-preparation durations. The shared-host column covers
+completed rainfall captures available at analysis time. The 32-slot
+run also overlapped the IDW clean-import validation. These are shared-host
+measurements.

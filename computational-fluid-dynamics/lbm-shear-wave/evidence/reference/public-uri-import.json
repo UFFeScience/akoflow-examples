@@ -10,5 +10,11 @@
     "docker/Dockerfile"
   ],
   "initialImages": 0,
-  "cleanRunId": "community-lbm-shear-wave-hub-clean"
+  "cleanRunId": "community-lbm-shear-wave-hub-clean",
+  "cleanRebuild": {
+    "imageId": "sha256:d0d06a6ce8976894f291f662daa32da25670a84a1682cc261d49c203e3c3ac13",
+    "statusAtObservation": "running",
+    "completedAtObservation": 39,
+    "matchingCaseArtifactsAtObservation": 78
+  }
 }

@@ -1,0 +1,61 @@
+{
+  "reference": {
+    "run": "community-microscopy-stabilization-ensemble-v1-run-4",
+    "slots": 4,
+    "cases": 768,
+    "started_at": "2026-11-28T08:21:09Z",
+    "finished_at": "2026-11-28T08:32:14Z",
+    "end_to_end_seconds": 665.0,
+    "cases_per_second": 1.1548872180451129,
+    "case_window_seconds": 470.0534756183624,
+    "aggregate_prepare_seconds": 178.27088570594788,
+    "aggregate_seconds": 7.085450172424316,
+    "peak_overlapping_cases": 4
+  },
+  "short_profiles": [
+    {
+      "run": "community-microscopy-stabilization-profile-v1-run-1",
+      "slots": 1,
+      "cases": 48,
+      "started_at": "2026-11-28T08:32:21Z",
+      "finished_at": "2026-11-28T08:34:13Z",
+      "end_to_end_seconds": 112.0,
+      "cases_per_second": 0.42857142857142855,
+      "case_window_seconds": 95.18361330032349,
+      "aggregate_prepare_seconds": 12.347434997558594,
+      "aggregate_seconds": 1.7317676544189453,
+      "peak_overlapping_cases": 1,
+      "speedup_over_one_slot": 1.0
+    },
+    {
+      "run": "community-microscopy-stabilization-profile-v1-run-4",
+      "slots": 4,
+      "cases": 48,
+      "started_at": "2026-11-28T08:35:10Z",
+      "finished_at": "2026-11-28T08:35:59Z",
+      "end_to_end_seconds": 49.0,
+      "cases_per_second": 0.9795918367346939,
+      "case_window_seconds": 32.97615075111389,
+      "aggregate_prepare_seconds": 11.159616708755493,
+      "aggregate_seconds": 1.8615710735321045,
+      "peak_overlapping_cases": 4,
+      "speedup_over_one_slot": 2.2857142857142856
+    },
+    {
+      "run": "community-microscopy-stabilization-profile-v1-run-8",
+      "slots": 8,
+      "cases": 48,
+      "started_at": "2026-11-28T08:36:02Z",
+      "finished_at": "2026-11-28T08:36:43Z",
+      "end_to_end_seconds": 41.0,
+      "cases_per_second": 1.170731707317073,
+      "case_window_seconds": 23.480380535125732,
+      "aggregate_prepare_seconds": 11.81462550163269,
+      "aggregate_seconds": 2.3245294094085693,
+      "peak_overlapping_cases": 6,
+      "speedup_over_one_slot": 2.731707317073171
+    }
+  ],
+  "matching_checksums_per_short_profile": 52,
+  "measurement_context": "One run per slot count on a shared host. The microscopy clean rerun overlapped part of the one-slot profile and all of the four- and eight-slot profiles."
+}

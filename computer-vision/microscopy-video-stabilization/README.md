@@ -109,7 +109,19 @@ with Matplotlib to render the measured worker occupancy. The timeline
 distinguishes the three interference regimes and the aggregation window
 and checks the observed peak against the profile capture.
 
-Once the reference is published, use
+The short profiles completed the same 48 sequences at each slot count.
+All 52 scientific output checksums matched across the three runs.
+
+| Configured slots | Measured peak | Elapsed |
+| ---: | ---: | ---: |
+| 1 | 1 | 112 s |
+| 4 | 4 | 49 s |
+| 8 | 6 | 41 s |
+
+These are single runs on a shared host. The separate clean rerun overlapped
+the short profiles. [Download the timing summary](evidence/reference/timing-summary.json).
+
+To verify the published reference, use
 `python3 verify-hub-import.py "$uri" /path/to/reference.json /path/to/clean-evidence`
 with a daemon that has empty workflow and image stores. The verifier
 requires preflight to request image reconstruction and compares all

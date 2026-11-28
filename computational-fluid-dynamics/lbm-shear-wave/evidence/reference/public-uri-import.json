@@ -1,0 +1,14 @@
+{
+  "uri": "akoflow://hub/publications/c6e8246e-6a4c-48ca-914b-50bceae65549/versions/1",
+  "version": 1,
+  "yamlSHA256": "e834a9a77525f84e91808867f4a447f74043a3f3e2acee2d09b346df47ea88b0",
+  "activityBuilds": 1026,
+  "contextBytes": 803,
+  "contextSHA256": "e981768e5436fa6719bdea34613375774979065adf4b111ec32985ba75166616",
+  "recipeSHA256": "cfffc966581bb32afcf101b5a9a60db4791a69d11a28a0b64a2b1c6fc7e6f403",
+  "contextMembers": [
+    "docker/Dockerfile"
+  ],
+  "initialImages": 0,
+  "cleanRunId": "community-lbm-shear-wave-hub-clean"
+}

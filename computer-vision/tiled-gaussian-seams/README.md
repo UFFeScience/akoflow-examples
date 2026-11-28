@@ -33,3 +33,36 @@ reference. The generator also emits plans for one, 16 and 32 slots.
 The halo I/O report counts numerical source pixels required by each
 filter patch. It measures duplicate input coverage in a tiled reader.
 The benchmark generates each synthetic image locally inside its tile activity.
+
+## Measured reference
+
+Run `community-tiled-gaussian-ensemble-v1-run-4` completed 512 independent tiles and one
+aggregation in 535 seconds, with up to
+4 concurrent tile activities.
+All 516 artifact checksums matched the pinned offline image.
+
+![Three Gaussian tile margins on a common error scale](evidence/reference/gaussian-seam-errors.png)
+
+![One-pixel increments from zero to full-radius input margin](evidence/reference/gaussian-halo-sweep.gif)
+
+![Measured tile and aggregate occupancy](evidence/reference/timeline.png)
+
+| Kernel radius (px) | Input margin (px) | Maximum absolute error | Duplicated input pixels across eight images |
+| --- | --- | --- | --- |
+| 5 | 0 | 0.322129 | 0 |
+| 5 | 1 | 0.181830 | 12,234 |
+| 5 | 5 | 0.000000 | 66,930 |
+| 8 | 0 | 0.461633 | 0 |
+| 8 | 2 | 0.042966 | 25,044 |
+| 8 | 8 | 0.000000 | 114,000 |
+| 12 | 0 | 0.533533 | 0 |
+| 12 | 4 | 0.026841 | 52,392 |
+| 12 | 12 | 0.000000 | 184,824 |
+| 16 | 0 | 0.566999 | 0 |
+| 16 | 5 | 0.038398 | 66,930 |
+| 16 | 16 | 0.000000 | 264,864 |
+
+[Error by seam distance](evidence/reference/seam-errors.csv) ·
+[Input and output pixel counts](evidence/reference/halo-io.csv) ·
+[Measured run and checksums](evidence/reference/reference-run.json) ·
+[Independent direct 2D convolution check](evidence/reference/direct-2d-check.json)

@@ -1,0 +1,8 @@
+{
+  "checked_pixels": 2560,
+  "images": 8,
+  "kernels": 4,
+  "tiles": 512,
+  "maximum_absolute_difference": 4.440892098500626e-16,
+  "absolute_tolerance": 2e-15
+}

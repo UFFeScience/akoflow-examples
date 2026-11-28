@@ -38,9 +38,14 @@ def measure(capture):
         raise ValueError(f"Invalid ready-to-start timestamps in {run['id']}")
     makespan = seconds(run["finishedAt"]) - seconds(run["startedAt"])
     window = seconds(reducer["finishedAt"]) - seconds(prep["finishedAt"])
+    artifact_bytes = sum(item["sizeBytes"] for item in capture["artifacts"])
+    response_bytes = sum(item["sizeBytes"] for item in capture["artifacts"]
+                         if item["relativePath"].endswith(".csv.gz"))
     return {
         "run": run["id"], "slots": capture["slots"], "repetition": capture["repetition"],
-        "end_to_end_seconds": makespan, "circuits_per_second": 4096/makespan, "post_preparation_seconds": window,
+        "end_to_end_seconds": makespan, "circuits_per_second": 4096 / makespan,
+        "post_preparation_seconds": window,
+        "artifact_bytes": artifact_bytes, "compressed_response_bytes": response_bytes,
         "batch_window_seconds": max(item["finishedAt"] for item in batches)
         - min(item["startedAt"] for item in batches),
         "median_ready_to_start_seconds": statistics.median(latencies),
@@ -83,8 +88,11 @@ def main():
         summaries.append({
             "slots": slots, "repetitions": len(group),
             "median_end_to_end_seconds": statistics.median(row["end_to_end_seconds"] for row in group),
+            "median_circuits_per_second": statistics.median(row["circuits_per_second"] for row in group),
             "median_post_preparation_seconds": comparable,
             "post_preparation_speedup": serial/comparable,
+            "median_artifact_bytes": statistics.median(row["artifact_bytes"] for row in group),
+            "median_compressed_response_bytes": statistics.median(row["compressed_response_bytes"] for row in group),
             "median_ready_to_start_seconds": statistics.median(
                 row["median_ready_to_start_seconds"] for row in group),
             "peak_overlapping_batches": max(row["max_overlapping_batches"] for row in group),

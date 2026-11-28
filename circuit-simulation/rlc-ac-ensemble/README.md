@@ -70,10 +70,16 @@ python3 profile.py profile-evidence
 ```
 
 Save the aggregate activity's `rlc-timing.csv` from each run as
-`profile-evidence/<run-id>-process.csv`, then run
-`python3 summarize-profiles.py profile-evidence profile-results`. The
-summary reports elapsed time, queue delay, observed overlap, and the
-maximum parent process RSS of a single batch.
+`profile-evidence/<run-id>-process.csv`, then summarize the results and
+render the comparison using Matplotlib in the workflow image.
+
+```sh
+python3 summarize-profiles.py profile-evidence profile-results
+python3 render-profiles.py profile-results/profile-summary.csv profile-results/profile.png
+```
+
+The summary reports elapsed time, throughput, artifact size, queue delay,
+observed overlap, and the maximum parent process RSS of a single batch.
 
 ## Four-slot reference run
 

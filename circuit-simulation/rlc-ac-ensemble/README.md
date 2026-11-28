@@ -85,6 +85,8 @@ the analytic response was 1.48 × 10⁻⁶.
 
 ![RLC frequency responses across the five resistance settings](outputs/rlc-bode.gif)
 
+![Measured concurrency of the 128 independent batches](outputs/timeline.png)
+
 [Batch summary](outputs/rlc-batches.csv) ·
 [Representative frequency responses](outputs/rlc-representative.csv) ·
 [Process timings](outputs/rlc-timing.csv) ·

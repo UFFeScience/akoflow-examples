@@ -1,0 +1,17 @@
+{
+  "uri": "akoflow://hub/publications/32488dc6-0e85-4957-8914-bdd2e29408ab/versions/1",
+  "run": "community-microscopy-stabilization-ensemble-v1-run-4",
+  "status": "completed",
+  "started_at": "2026-11-28T08:33:07Z",
+  "finished_at": "2026-11-28T08:46:30Z",
+  "completed_activities": 769,
+  "matching_checksums": 772,
+  "matching_sequence_checksums": 768,
+  "peak_overlapping_sequences": 4,
+  "aggregate_checksums": {
+    "condition-summary.csv": "sha256:c2c6a56af084bfcb0749ebd5917eabf0cd019cde01815b0c739b97c8ca0e6121",
+    "sequence-metrics.csv.gz": "sha256:2523688f57047904b2b6eefcba3bb9a350a5b853ff7a0ed564605d7b8a792524",
+    "stabilization-residuals.png": "sha256:74f673dcd11ee4dd45bb7cbe9c5685013588157aa3ad70314a6537cb624e09d8",
+    "stabilization.gif": "sha256:9dc028548b09fa15f9592862e5fd01b6bef950651772d95df5b3ea5c1725812c"
+  }
+}

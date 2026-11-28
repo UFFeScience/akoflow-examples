@@ -39,6 +39,23 @@ registered levels.
 
 [Download pilot metrics for all three treatments and 768 scenes](evidence/pilot-metrics.csv).
 
+## Measured AkôFlow reference
+
+The four-slot reference completed 770 activities, including a separate
+calibration, 768 scene comparisons and the aggregate. The results contain
+2,304 method measurements and 36 condition summaries.
+
+![Measured classification and fusion gallery](evidence/reference/pansharpening-classification.png)
+
+![Fusion and classification through the three PAN interference levels](evidence/reference/pan-interference-sweep.gif)
+
+![Observed worker occupancy](evidence/reference/timeline.png)
+
+[Per-scene metrics](evidence/reference/scene-metrics.csv) ·
+[Condition summaries](evidence/reference/condition-summary.csv) ·
+[Calibration centroids](evidence/reference/centroids.json) ·
+[Reference evidence](evidence/reference/reference-run.json).
+
 ## AkôFlow workflow
 
 Register the portable build and generate the full 770-activity DAG,

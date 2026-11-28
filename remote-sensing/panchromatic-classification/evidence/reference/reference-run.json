@@ -1,0 +1,16 @@
+{
+  "run": "community-panchromatic-classification-ensemble-v1-run-4",
+  "activities": 770,
+  "scenes": 768,
+  "metric_rows": 2304,
+  "condition_method_groups": 36,
+  "animation_frames": 3,
+  "observed_peak": 4,
+  "aggregate_and_calibration_checksums": {
+    "pansharpening-classification.png": "sha256:8e3be472fa6ae7d0a07d02cd38ee5bcdc9efa6b745fded0c48c1effdb6085feb",
+    "pan-interference-sweep.gif": "sha256:d71f3d8fe72aa797942a0cbb36a9735d46f5167a207e8fb9f559127405fac7aa",
+    "scene-metrics.csv": "sha256:c2a476c52ae26417ffe6d46b53b4d6c785491f90c8a2c25487f43f55799d5e10",
+    "condition-summary.csv": "sha256:a127893e8e78ee8379d69cbdb98f6bf895bf37db62c145b5baf080b4fcb05cab",
+    "centroids.json": "sha256:4fd54f42f648e302d5b381a5864200dd424106e54a0417e019786bb632a2c0e1"
+  }
+}

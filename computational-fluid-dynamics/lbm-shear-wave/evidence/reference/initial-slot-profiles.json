@@ -1,0 +1,45 @@
+{
+  "captured_slots": [
+    1,
+    4,
+    8
+  ],
+  "completed_activities_per_capture": 1026,
+  "matching_result_checksums_per_capture": 2056,
+  "context": "Single runs on a shared host. Occupancy is a lower bound when recorded timestamps are unusable.",
+  "runs": [
+    {
+      "run": "community-lbm-shear-wave-run-1-v1",
+      "slots": 1,
+      "repetition": 1,
+      "end_to_end_seconds": 1178.0,
+      "cases_per_second": 0.8692699490662139,
+      "case_window_seconds": 911.0042901039124,
+      "unusable_case_intervals": 15,
+      "aggregate_seconds": 11.05079460144043,
+      "peak_overlapping_cases": 1
+    },
+    {
+      "run": "community-lbm-shear-wave-run-4-v1",
+      "slots": 4,
+      "repetition": 1,
+      "end_to_end_seconds": 945.0,
+      "cases_per_second": 1.0835978835978837,
+      "case_window_seconds": 627.317485332489,
+      "unusable_case_intervals": 194,
+      "aggregate_seconds": 10.358202695846558,
+      "peak_overlapping_cases": 2
+    },
+    {
+      "run": "community-lbm-shear-wave-run-8-v1",
+      "slots": 8,
+      "repetition": 1,
+      "end_to_end_seconds": 809.0,
+      "cases_per_second": 1.2657601977750308,
+      "case_window_seconds": 545.3691403865814,
+      "unusable_case_intervals": 357,
+      "aggregate_seconds": 10.304210186004639,
+      "peak_overlapping_cases": 2
+    }
+  ]
+}

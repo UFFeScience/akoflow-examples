@@ -1,0 +1,15 @@
+{
+  "run": "community-microscopy-stabilization-ensemble-v1-run-4",
+  "activities": 769,
+  "sequences": 768,
+  "metrics_rows": 153600,
+  "condition_method_groups": 60,
+  "animation_frames": 40,
+  "observed_peak": 4,
+  "aggregate_checksums": {
+    "sequence-metrics.csv.gz": "sha256:2523688f57047904b2b6eefcba3bb9a350a5b853ff7a0ed564605d7b8a792524",
+    "condition-summary.csv": "sha256:c2c6a56af084bfcb0749ebd5917eabf0cd019cde01815b0c739b97c8ca0e6121",
+    "stabilization-residuals.png": "sha256:74f673dcd11ee4dd45bb7cbe9c5685013588157aa3ad70314a6537cb624e09d8",
+    "stabilization.gif": "sha256:9dc028548b09fa15f9592862e5fd01b6bef950651772d95df5b3ea5c1725812c"
+  }
+}

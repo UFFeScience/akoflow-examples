@@ -26,9 +26,7 @@ The CSV contains one row per frame and method, retaining explicit
 ambiguity and unavailable states. Each frame records mean absolute intensity
 error and pixel count for the intersection of valid bilinear footprints
 across available methods, including the unregistered control. This entry
-point checks the numerical
-kernel locally. The AkôFlow execution, aggregate figures and publication
-evidence are pending.
+point checks the numerical kernel locally.
 
 ## Local visual pilot
 
@@ -45,6 +43,23 @@ report error on the shared valid pixels.
 ![Forty observed and stabilized frames with their residuals](evidence/stabilization.gif)
 
 [Download case 11's per-frame pilot measurements](evidence/pilot-sequence.csv).
+
+## Measured AkôFlow reference
+
+The four-slot reference completed all 769 activities. The 768 sequence tasks
+produced 153,600 measurements across five methods and 40 frames per case.
+The aggregation validated the inventory and the trajectory error against
+synthetic ground truth.
+
+![Measured alignment and residuals](evidence/reference/stabilization-residuals.png)
+
+![Measured forty-frame alignment and residuals](evidence/reference/stabilization.gif)
+
+![Measured worker occupancy](evidence/reference/timeline.png)
+
+[Per-frame measurements](evidence/reference/sequence-metrics.csv.gz) ·
+[Condition summary](evidence/reference/condition-summary.csv) ·
+[Reference checksums](evidence/reference/reference-run.json).
 
 ## Run in AkôFlow
 

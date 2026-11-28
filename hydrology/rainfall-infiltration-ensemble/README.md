@@ -42,6 +42,15 @@ bracketed inversion was 4.44 × 10⁻⁸ mm, rounded up.
 
 ![Runoff and infiltration in the reference run](evidence/reference/rainfall-runoff.png)
 
-[Eight-frame rainfall–runoff animation](evidence/reference/rainfall-runoff.gif) ·
+![Eight-frame rainfall and runoff comparison](evidence/reference/rainfall-runoff.gif)
+
+Each frame shows a rainfall regime and its resulting infiltration and excess.
+
+![Measured four-slot batch timeline and active activity count](evidence/reference/timeline.png)
+
+The timeline uses daemon activity timestamps. Bar colors reflect the fraction
+of columns reaching ponding in each batch, and the lower panel counts active
+scientific batches.
+
 [Batch results CSV](evidence/reference/infiltration-batches.csv) ·
 [Validation and artifact hashes](evidence/reference/reference-evidence.json)

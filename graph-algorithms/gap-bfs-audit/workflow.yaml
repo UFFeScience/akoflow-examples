@@ -1,0 +1,7 @@
+name: community-gap-bfs-audit-v1
+spec:
+  namespace: community-explorer
+  activities:
+    - {name: kronecker, runtime: community-gap-bfs-local, command: {executable: &portable_image {source: {type: build, artifactBuildRef: recipe-build-c710d8044a11f834e4cf0018f8f0f9ae30eb00081fc2cdacc2c0fc12649c0f0c}, delivery: {strategy: auto, targetFormat: oci}}, entrypoint: python, arguments: [/app/scripts/branch.py, kronecker]}, cpuLimit: "2", memoryLimit: 512Mi}
+    - {name: uniform, runtime: community-gap-bfs-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/branch.py, uniform]}, cpuLimit: "2", memoryLimit: 512Mi}
+    - {name: render, runtime: community-gap-bfs-local, command: {executable: *portable_image, entrypoint: python, arguments: [/app/scripts/render.py]}, cpuLimit: "1", memoryLimit: 512Mi, dependsOn: [kronecker, uniform]}

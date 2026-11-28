@@ -1,0 +1,5 @@
+id: community-gap-bfs-parallel-topology
+name: Community GAP BFS local topology
+version: 1
+executionScopeId: community-gap-bfs-parallel-scope
+links: []

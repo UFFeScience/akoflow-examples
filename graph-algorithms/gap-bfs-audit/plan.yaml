@@ -1,0 +1,14 @@
+plan:
+  id: community-gap-bfs-plan-v1
+  workflowVersionId: community-gap-bfs-audit-v1-v1
+  executionScopeId: community-gap-bfs-parallel-scope
+  networkTopologyId: community-gap-bfs-parallel-topology
+  source: imported
+  algorithm: manual
+  algorithmVersion: "1"
+  objective: custom
+  predicted: {makespanSeconds: 30, cost: 0, feasible: true}
+  assignments:
+    - {id: gap-bfs-kronecker, activityId: community-gap-bfs-audit-v1-kronecker, resourceId: community-gap-bfs-slot-0, orderOnResource: 0, metadata: {runtimeId: community-gap-bfs-local}}
+    - {id: gap-bfs-uniform, activityId: community-gap-bfs-audit-v1-uniform, resourceId: community-gap-bfs-slot-1, orderOnResource: 0, metadata: {runtimeId: community-gap-bfs-local}}
+    - {id: gap-bfs-render, activityId: community-gap-bfs-audit-v1-render, resourceId: community-gap-bfs-slot-0, orderOnResource: 1, metadata: {runtimeId: community-gap-bfs-local}}

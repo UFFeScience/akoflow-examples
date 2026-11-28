@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "traversals_per_variant": 12,
+  "rows": 67,
+  "gif_frames": 6,
+  "sha256": {
+    "bfs-levels.csv": "2cc41f8c01c72a190d2e3aa76d698ac3bbd71c3af6e6ac6d24c1a5dab1429f37",
+    "bfs-levels.png": "d3ece71f86ee0b9ee3b9d5e6401a921f9c30a9eb25ed09022d68efdd42d2e92c",
+    "bfs-levels.gif": "9d87bd1833ec0e3b3ec443bb7bd49ccc295e0058081e56974c5d8ff8d0a19328"
+  }
+}

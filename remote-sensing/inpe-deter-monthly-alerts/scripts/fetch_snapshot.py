@@ -31,6 +31,11 @@ def main():
     parser.add_argument("snapshot", type=Path)
     args = parser.parse_args()
     config = json.loads(args.configuration.read_text())
+    args.snapshot.mkdir(parents=True, exist_ok=True)
+    manifest_source = config["manifest"]
+    fetch(manifest_source["url"], args.snapshot / "manifest.json", manifest_source["sha256"])
+    reference_source = config["reference"]
+    fetch(reference_source["url"], args.snapshot.parent / "reference.csv", reference_source["sha256"])
     manifest = json.loads((args.snapshot / "manifest.json").read_text())
     items = [*manifest["months"], config["boundary"]]
     names = [item["name"] for item in items]

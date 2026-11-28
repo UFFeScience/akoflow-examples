@@ -32,14 +32,14 @@ def projection(run_id):
 
 
 def run_id(slots):
-    return f"community-inpe-deter-run-{slots}-v1"
+    return f"community-inpe-deter-portable-run-{slots}-v1"
 
 
 def check_manifest(result):
     flow = result["activities"]
     months = {f"{year}-{month:02d}" for year in range(2019, 2025) for month in range(1, 13)}
-    expected = {f"community-inpe-deter-ensemble-v1-month-{month}" for month in months}
-    expected |= {"community-inpe-deter-ensemble-v1-prepare", "community-inpe-deter-ensemble-v1-aggregate"}
+    expected = {f"community-inpe-deter-portable-ensemble-v1-month-{month}" for month in months}
+    expected |= {"community-inpe-deter-portable-ensemble-v1-prepare", "community-inpe-deter-portable-ensemble-v1-aggregate"}
     if len(flow) != 74 or {item["activityId"] for item in flow} != expected:
         raise ValueError("Unexpected activity inventory")
     if any(item["status"] != "completed" for item in flow):
@@ -98,7 +98,7 @@ def wait_for(identifier):
 
 def submit(identifier, slots, directory):
     command_env = dict(os.environ, AKOFLOW_RUN_ID=identifier, AKOFLOW_PLAN_FILE=f"plan-{slots}.yaml",
-                       AKOFLOW_PLAN_ID=f"community-inpe-deter-plan-{slots}-v1", AKOFLOW_SUBMIT="1")
+                       AKOFLOW_PLAN_ID=f"community-inpe-deter-portable-plan-{slots}-v1", AKOFLOW_SUBMIT="1")
     with (directory / f"{identifier}.log").open("a") as log:
         subprocess.run([ROOT / "run.sh"], env=command_env, stdout=log, stderr=log, check=True)
 

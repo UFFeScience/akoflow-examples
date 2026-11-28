@@ -76,3 +76,17 @@ worker assignments and simultaneous monthly audits.
 
 [Daemon activity trace](evidence/reference-run.json) ·
 [Daemon validation](evidence/reference-validation.json)
+
+## Scheduling comparison
+
+The 1-, 4-, and 8-slot runs each completed all 74 activities and produced
+identical scientific outputs. Eight slots reached five simultaneous monthly
+audits and ran in 126.6 seconds after preparation, compared with 297.0 seconds
+with one slot. Both the measurements and the observed overlap describe this
+shared host.
+
+[Measured durations and transfers](outputs/profile-summary.csv)
+
+The comparison used the original recipe with the manifest and verification
+table included in the build context. The compact recipe fetches those same
+files by immutable URL and checks their SHA-256 before execution.

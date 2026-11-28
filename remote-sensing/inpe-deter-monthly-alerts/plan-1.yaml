@@ -1,9 +1,9 @@
 {
   "plan": {
-    "id": "community-inpe-deter-plan-1-v1",
-    "workflowVersionId": "community-inpe-deter-ensemble-v1-v1",
-    "executionScopeId": "community-inpe-deter-scope",
-    "networkTopologyId": "community-inpe-deter-topology",
+    "id": "community-inpe-deter-portable-plan-1-v1",
+    "workflowVersionId": "community-inpe-deter-portable-ensemble-v1-v1",
+    "executionScopeId": "community-inpe-deter-portable-scope",
+    "networkTopologyId": "community-inpe-deter-portable-topology",
     "source": "imported",
     "algorithm": "manual",
     "algorithmVersion": "1",
@@ -15,669 +15,669 @@
     },
     "assignments": [
       {
-        "id": "community-inpe-deter-1-prepare",
-        "activityId": "community-inpe-deter-ensemble-v1-prepare",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-prepare",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-prepare",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 0,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 1,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 2,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 3,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 4,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 5,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 6,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 7,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 8,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 9,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 10,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 11,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2019-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2019-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2019-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2019-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 12,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 13,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 14,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 15,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 16,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 17,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 18,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 19,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 20,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 21,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 22,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 23,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2020-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2020-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2020-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2020-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 24,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 25,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 26,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 27,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 28,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 29,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 30,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 31,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 32,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 33,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 34,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 35,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2021-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2021-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2021-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2021-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 36,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 37,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 38,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 39,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 40,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 41,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 42,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 43,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 44,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 45,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 46,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 47,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2022-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2022-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2022-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2022-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 48,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 49,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 50,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 51,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 52,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 53,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 54,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 55,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 56,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 57,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 58,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 59,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2023-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2023-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2023-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2023-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 60,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-01",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-01",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-01",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-01",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 61,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-02",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-02",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-02",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-02",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 62,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-03",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-03",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-03",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-03",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 63,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-04",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-04",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-04",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-04",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 64,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-05",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-05",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-05",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-05",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 65,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-06",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-06",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-06",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-06",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 66,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-07",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-07",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-07",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-07",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 67,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-08",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-08",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-08",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-08",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 68,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-09",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-09",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-09",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-09",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 69,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-10",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-10",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-10",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-10",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 70,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-11",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-11",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-11",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-11",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 71,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-month-2024-12",
-        "activityId": "community-inpe-deter-ensemble-v1-month-2024-12",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-month-2024-12",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-month-2024-12",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 72,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       },
       {
-        "id": "community-inpe-deter-1-aggregate",
-        "activityId": "community-inpe-deter-ensemble-v1-aggregate",
-        "resourceId": "community-inpe-deter-slot-00",
+        "id": "community-inpe-deter-portable-1-aggregate",
+        "activityId": "community-inpe-deter-portable-ensemble-v1-aggregate",
+        "resourceId": "community-inpe-deter-portable-slot-00",
         "orderOnResource": 73,
         "metadata": {
-          "runtimeId": "community-inpe-deter-local"
+          "runtimeId": "community-inpe-deter-portable-local"
         }
       }
     ]

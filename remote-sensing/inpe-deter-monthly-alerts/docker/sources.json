@@ -3,5 +3,13 @@
   "boundary": {
     "name": "ibge-amazon-states.geojson.gz",
     "sha256": "5fc3a609886e4081f9bfc659ba88b4b3ad063c648a0de80a2875dece9476ddaa"
+  },
+  "manifest": {
+    "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/dad81539de6c71cac69894637a8cb1d390679afe/remote-sensing/inpe-deter-monthly-alerts/snapshot/manifest.json",
+    "sha256": "0d4f1bde43257fa7415a10dc3d114e4fbb4854ebaf9a37fd4668b8a48d0de75c"
+  },
+  "reference": {
+    "url": "https://raw.githubusercontent.com/UFFeScience/akoflow-examples/dad81539de6c71cac69894637a8cb1d390679afe/remote-sensing/inpe-deter-monthly-alerts/evidence/reference-by-month-state-class.csv",
+    "sha256": "7acc6300c18fa5dfbd7b8c596b2b88ce4f422e692a072046368059b2f6c9fcbd"
   }
 }

@@ -37,7 +37,7 @@ def main():
     parser.add_argument("captures", type=Path)
     parser.add_argument("output", type=Path)
     args = parser.parse_args()
-    captures = [json.loads(file.read_text()) for file in args.captures.glob("community-inpe-deter-run-*.json")]
+    captures = [json.loads(file.read_text()) for file in args.captures.glob("community-inpe-deter*-run-*.json")]
     captures.sort(key=lambda item: item["slots"])
     if tuple(item["slots"] for item in captures) != CAPACITIES:
         raise ValueError("Expected one complete run for each of the 1-, 4-, and 8-slot plans")

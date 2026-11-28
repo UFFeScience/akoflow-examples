@@ -4,7 +4,5 @@ WORKDIR /app
 COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 COPY scripts /app/scripts
-COPY snapshot/manifest.json /app/snapshot/manifest.json
-COPY evidence/reference-by-month-state-class.csv /app/reference.csv
 COPY docker/sources.json /app/sources.json
 RUN python /app/scripts/fetch_snapshot.py /app/sources.json /app/snapshot

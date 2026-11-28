@@ -1,18 +1,18 @@
 {
-  "name": "community-inpe-deter-ensemble-v1",
+  "name": "community-inpe-deter-portable-ensemble-v1",
   "spec": {
     "namespace": "community-explorer",
     "activities": [
       {
         "name": "prepare",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -27,14 +27,14 @@
       },
       {
         "name": "month-2019-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -55,14 +55,14 @@
       },
       {
         "name": "month-2019-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -83,14 +83,14 @@
       },
       {
         "name": "month-2019-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -111,14 +111,14 @@
       },
       {
         "name": "month-2019-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -139,14 +139,14 @@
       },
       {
         "name": "month-2019-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -167,14 +167,14 @@
       },
       {
         "name": "month-2019-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -195,14 +195,14 @@
       },
       {
         "name": "month-2019-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -223,14 +223,14 @@
       },
       {
         "name": "month-2019-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -251,14 +251,14 @@
       },
       {
         "name": "month-2019-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -279,14 +279,14 @@
       },
       {
         "name": "month-2019-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -307,14 +307,14 @@
       },
       {
         "name": "month-2019-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -335,14 +335,14 @@
       },
       {
         "name": "month-2019-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -363,14 +363,14 @@
       },
       {
         "name": "month-2020-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -391,14 +391,14 @@
       },
       {
         "name": "month-2020-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -419,14 +419,14 @@
       },
       {
         "name": "month-2020-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -447,14 +447,14 @@
       },
       {
         "name": "month-2020-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -475,14 +475,14 @@
       },
       {
         "name": "month-2020-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -503,14 +503,14 @@
       },
       {
         "name": "month-2020-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -531,14 +531,14 @@
       },
       {
         "name": "month-2020-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -559,14 +559,14 @@
       },
       {
         "name": "month-2020-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -587,14 +587,14 @@
       },
       {
         "name": "month-2020-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -615,14 +615,14 @@
       },
       {
         "name": "month-2020-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -643,14 +643,14 @@
       },
       {
         "name": "month-2020-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -671,14 +671,14 @@
       },
       {
         "name": "month-2020-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -699,14 +699,14 @@
       },
       {
         "name": "month-2021-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -727,14 +727,14 @@
       },
       {
         "name": "month-2021-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -755,14 +755,14 @@
       },
       {
         "name": "month-2021-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -783,14 +783,14 @@
       },
       {
         "name": "month-2021-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -811,14 +811,14 @@
       },
       {
         "name": "month-2021-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -839,14 +839,14 @@
       },
       {
         "name": "month-2021-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -867,14 +867,14 @@
       },
       {
         "name": "month-2021-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -895,14 +895,14 @@
       },
       {
         "name": "month-2021-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -923,14 +923,14 @@
       },
       {
         "name": "month-2021-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -951,14 +951,14 @@
       },
       {
         "name": "month-2021-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -979,14 +979,14 @@
       },
       {
         "name": "month-2021-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1007,14 +1007,14 @@
       },
       {
         "name": "month-2021-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1035,14 +1035,14 @@
       },
       {
         "name": "month-2022-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1063,14 +1063,14 @@
       },
       {
         "name": "month-2022-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1091,14 +1091,14 @@
       },
       {
         "name": "month-2022-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1119,14 +1119,14 @@
       },
       {
         "name": "month-2022-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1147,14 +1147,14 @@
       },
       {
         "name": "month-2022-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1175,14 +1175,14 @@
       },
       {
         "name": "month-2022-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1203,14 +1203,14 @@
       },
       {
         "name": "month-2022-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1231,14 +1231,14 @@
       },
       {
         "name": "month-2022-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1259,14 +1259,14 @@
       },
       {
         "name": "month-2022-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1287,14 +1287,14 @@
       },
       {
         "name": "month-2022-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1315,14 +1315,14 @@
       },
       {
         "name": "month-2022-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1343,14 +1343,14 @@
       },
       {
         "name": "month-2022-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1371,14 +1371,14 @@
       },
       {
         "name": "month-2023-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1399,14 +1399,14 @@
       },
       {
         "name": "month-2023-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1427,14 +1427,14 @@
       },
       {
         "name": "month-2023-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1455,14 +1455,14 @@
       },
       {
         "name": "month-2023-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1483,14 +1483,14 @@
       },
       {
         "name": "month-2023-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1511,14 +1511,14 @@
       },
       {
         "name": "month-2023-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1539,14 +1539,14 @@
       },
       {
         "name": "month-2023-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1567,14 +1567,14 @@
       },
       {
         "name": "month-2023-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1595,14 +1595,14 @@
       },
       {
         "name": "month-2023-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1623,14 +1623,14 @@
       },
       {
         "name": "month-2023-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1651,14 +1651,14 @@
       },
       {
         "name": "month-2023-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1679,14 +1679,14 @@
       },
       {
         "name": "month-2023-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1707,14 +1707,14 @@
       },
       {
         "name": "month-2024-01",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1735,14 +1735,14 @@
       },
       {
         "name": "month-2024-02",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1763,14 +1763,14 @@
       },
       {
         "name": "month-2024-03",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1791,14 +1791,14 @@
       },
       {
         "name": "month-2024-04",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1819,14 +1819,14 @@
       },
       {
         "name": "month-2024-05",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1847,14 +1847,14 @@
       },
       {
         "name": "month-2024-06",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1875,14 +1875,14 @@
       },
       {
         "name": "month-2024-07",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1903,14 +1903,14 @@
       },
       {
         "name": "month-2024-08",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1931,14 +1931,14 @@
       },
       {
         "name": "month-2024-09",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1959,14 +1959,14 @@
       },
       {
         "name": "month-2024-10",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -1987,14 +1987,14 @@
       },
       {
         "name": "month-2024-11",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -2015,14 +2015,14 @@
       },
       {
         "name": "month-2024-12",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",
@@ -2043,14 +2043,14 @@
       },
       {
         "name": "aggregate",
-        "runtime": "community-inpe-deter-local",
+        "runtime": "community-inpe-deter-portable-local",
         "cpuLimit": "1",
         "memoryLimit": "768Mi",
         "command": {
           "executable": {
             "source": {
               "type": "build",
-              "artifactBuildRef": "recipe-build-d70002b191e7c0fb2de8f221810e4ae33843b1ae7aab326ebd43ad3a835b7c5a"
+              "artifactBuildRef": "recipe-build-af7eb3c947649ddeb3e8c777b0d844aaaa8c493c9c941482359932babb261dff"
             },
             "delivery": {
               "strategy": "auto",

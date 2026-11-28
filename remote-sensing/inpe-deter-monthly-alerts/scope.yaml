@@ -1,7 +1,7 @@
 {
-  "id": "community-inpe-deter-scope",
+  "id": "community-inpe-deter-portable-scope",
   "name": "INPE DETER execution scope",
   "environmentVersionIds": [
-    "community-inpe-deter-cpu-v1"
+    "community-inpe-deter-portable-cpu-v1"
   ]
 }

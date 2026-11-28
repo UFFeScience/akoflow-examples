@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-PREFIX = "community-inpe-deter"
+PREFIX = "community-inpe-deter-portable"
 WORKFLOW = f"{PREFIX}-ensemble-v1"
 RUNTIME = f"{PREFIX}-local"
 ENVIRONMENT = f"{PREFIX}-cpu"
@@ -46,7 +46,7 @@ def configuration():
     slots = [f"{PREFIX}-slot-{index:02d}" for index in range(8)]
     resources = [
         {"id": slot, "environmentVersionId": ENV_VERSION, "type": "machine",
-         "name": f"Local Docker slot {index}", "providerId": f"local-docker-inpe-deter-{index}",
+         "name": f"Local Docker slot {index}", "providerId": f"local-docker-inpe-deter-portable-{index}",
          "cpuCores": 1, "cpuCapacity": 1, "memoryBytes": 1073741824,
          "storageBytes": 1073741824, "computeSpeedup": 1, "pricePerSecond": 0,
          "schedulable": True}

@@ -1,7 +1,7 @@
 {
-  "id": "community-inpe-deter-topology",
+  "id": "community-inpe-deter-portable-topology",
   "name": "INPE DETER local topology",
   "version": 1,
-  "executionScopeId": "community-inpe-deter-scope",
+  "executionScopeId": "community-inpe-deter-portable-scope",
   "links": []
 }

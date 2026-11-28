@@ -1,0 +1,4 @@
+slots,run,end_to_end_seconds,post_preparation_seconds,max_overlapping_months,transferred_bytes,post_preparation_speedup
+1,community-inpe-deter-run-1-v1,306.0,296.96360659599304,1,2848022,1.0
+4,community-inpe-deter-run-4-v1,214.0,160.40000367164612,3,2848022,1.8513940137052955
+8,community-inpe-deter-run-8-v1,138.0,126.59991216659546,5,2848022,2.3456857237405697

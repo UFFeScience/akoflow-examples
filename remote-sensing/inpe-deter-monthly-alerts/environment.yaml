@@ -1,23 +1,23 @@
 {
   "environment": {
-    "id": "community-inpe-deter-cpu",
+    "id": "community-inpe-deter-portable-cpu",
     "name": "INPE DETER CPU profiles",
     "status": "ready"
   },
   "version": {
-    "id": "community-inpe-deter-cpu-v1",
-    "environmentId": "community-inpe-deter-cpu",
+    "id": "community-inpe-deter-portable-cpu-v1",
+    "environmentId": "community-inpe-deter-portable-cpu",
     "version": 1,
     "status": "published",
     "networkModel": "local",
     "interferenceModel": "observed",
     "costModel": "free",
-    "configurationHash": "community-inpe-deter-cpu-v1"
+    "configurationHash": "community-inpe-deter-portable-cpu-v1"
   },
   "runtimes": [
     {
-      "id": "community-inpe-deter-local",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-local",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "name": "Local Docker",
       "driver": "local",
       "mode": "execution",
@@ -30,11 +30,11 @@
   ],
   "resources": [
     {
-      "id": "community-inpe-deter-slot-00",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-00",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 0",
-      "providerId": "local-docker-inpe-deter-0",
+      "providerId": "local-docker-inpe-deter-portable-0",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -44,11 +44,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-01",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-01",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 1",
-      "providerId": "local-docker-inpe-deter-1",
+      "providerId": "local-docker-inpe-deter-portable-1",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -58,11 +58,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-02",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-02",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 2",
-      "providerId": "local-docker-inpe-deter-2",
+      "providerId": "local-docker-inpe-deter-portable-2",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -72,11 +72,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-03",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-03",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 3",
-      "providerId": "local-docker-inpe-deter-3",
+      "providerId": "local-docker-inpe-deter-portable-3",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -86,11 +86,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-04",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-04",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 4",
-      "providerId": "local-docker-inpe-deter-4",
+      "providerId": "local-docker-inpe-deter-portable-4",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -100,11 +100,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-05",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-05",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 5",
-      "providerId": "local-docker-inpe-deter-5",
+      "providerId": "local-docker-inpe-deter-portable-5",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -114,11 +114,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-06",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-06",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 6",
-      "providerId": "local-docker-inpe-deter-6",
+      "providerId": "local-docker-inpe-deter-portable-6",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -128,11 +128,11 @@
       "schedulable": true
     },
     {
-      "id": "community-inpe-deter-slot-07",
-      "environmentVersionId": "community-inpe-deter-cpu-v1",
+      "id": "community-inpe-deter-portable-slot-07",
+      "environmentVersionId": "community-inpe-deter-portable-cpu-v1",
       "type": "machine",
       "name": "Local Docker slot 7",
-      "providerId": "local-docker-inpe-deter-7",
+      "providerId": "local-docker-inpe-deter-portable-7",
       "cpuCores": 1,
       "cpuCapacity": 1,
       "memoryBytes": 1073741824,
@@ -147,43 +147,43 @@
   "activityResourceProfiles": [],
   "resourceRuntimeBindings": [
     {
-      "resourceId": "community-inpe-deter-slot-00",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-00",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-01",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-01",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-02",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-02",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-03",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-03",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-04",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-04",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-05",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-05",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-06",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-06",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     },
     {
-      "resourceId": "community-inpe-deter-slot-07",
-      "runtimeId": "community-inpe-deter-local",
+      "resourceId": "community-inpe-deter-portable-slot-07",
+      "runtimeId": "community-inpe-deter-portable-local",
       "enabled": true
     }
   ]

@@ -9,6 +9,21 @@ error, endpoints, and allowed steps.
 The 256-case design crosses 16 seeds, eight lag levels and both strategies.
 Controls cover identical sequences and equal shifts of both channels.
 
+## Measured AkôFlow reference
+
+The four-slot reference completed 257 activities. The reducer validated
+256 cases comparing common and independent alignment and checked costs
+and event positions against each paired synthetic input.
+
+![DTW cost matrices and measured paths](evidence/reference/alignment-paths.png)
+
+![Eight levels of opposing channel lag](evidence/reference/lag-sweep.gif)
+
+![Observed worker occupancy](evidence/reference/timeline.png)
+
+[Alignment summary](evidence/reference/alignment-summary.csv) ·
+[Reference evidence](evidence/reference/reference-run.json).
+
 ## Run in AkôFlow
 
 Register the portable recipe and generate the workflow.

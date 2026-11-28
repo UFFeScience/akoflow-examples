@@ -1,0 +1,14 @@
+{
+  "run": "community-multichannel-dtw-ensemble-v1-run-4",
+  "completed_activities": 257,
+  "scenarios": 256,
+  "summary_rows": 256,
+  "animation_frames": 8,
+  "peak_overlap_lower_bound": 4,
+  "unusable_case_intervals": 0,
+  "aggregate_checksums": {
+    "alignment-summary.csv": "sha256:9b4bab5768eb56788c08dd87c4b22a5acbfeebc6c632e06f80e9a5c927085502",
+    "alignment-paths.png": "sha256:cb08677efedb49b565df26215385fd1e6fd6b90a7a491503e2a98fbb376431df",
+    "lag-sweep.gif": "sha256:a6b3ea5e5d8721a3880ef075e0757ef668bfc5e5713f67fed0980c3560fd0be5"
+  }
+}

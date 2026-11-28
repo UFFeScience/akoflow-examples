@@ -11,7 +11,7 @@ import time
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from generate import CAPACITIES, ROOT, WORKFLOW
+from generate import CAPACITIES, PREFIX, ROOT, WORKFLOW
 
 OUTPUTS = {"alignment-summary.csv", "alignment-paths.png", "lag-sweep.gif"}
 
@@ -29,16 +29,16 @@ def projection(run_id):
         return None
 
 
-def capture(result, slots):
+def capture(result, slots, workflow=WORKFLOW):
     activities = result["activities"]
-    cases = [task for task in activities if task["activityId"].startswith(f"{WORKFLOW}-case-")]
-    aggregate = [task for task in activities if task["activityId"] == f"{WORKFLOW}-aggregate"]
+    cases = [task for task in activities if task["activityId"].startswith(f"{workflow}-case-")]
+    aggregate = [task for task in activities if task["activityId"] == f"{workflow}-aggregate"]
     if len(activities) != 257 or len(cases) != 256 or len(aggregate) != 1:
         raise ValueError("Unexpected scenario or aggregation count")
     if any(task["status"] != "completed" for task in activities):
         raise ValueError("An activity did not complete")
     reducer, = aggregate
-    expected = {task["activityId"].removeprefix(f"{WORKFLOW}-") + ".csv"
+    expected = {task["activityId"].removeprefix(f"{workflow}-") + ".csv"
                 for task in cases} | OUTPUTS
     artifacts = [item for item in result["dataObjects"] if item["relativePath"] in expected]
     if len(expected) != 259 or Counter(item["relativePath"] for item in artifacts) != Counter(expected):
@@ -74,13 +74,14 @@ def capture(result, slots):
             "aggregate_seconds": reducer["finishedAt"] - reducer["startedAt"], "digests": digests}
 
 
-def profile(directory, slots, require_build=False):
-    identifier = f"{WORKFLOW}-run-{slots}"
+def profile(directory, slots, require_build=False, workflow=WORKFLOW):
+    identifier = f"{workflow}-run-{slots}"
     log_path = directory / f"{identifier}.log"
     if projection(identifier) is None:
         env = dict(os.environ, AKOFLOW_SUBMIT="1", AKOFLOW_RUN_ID=identifier,
+                   AKOFLOW_WORKFLOW_ID=workflow,
                    AKOFLOW_PLAN_FILE=f"plan-{slots}.yaml",
-                   AKOFLOW_PLAN_ID=f"{WORKFLOW}-plan-{slots}")
+                   AKOFLOW_PLAN_ID=f"{workflow}-plan-{slots}")
         with log_path.open("a") as log:
             subprocess.run([ROOT / "run.sh"], env=env, stdout=log, stderr=log, check=True)
     if require_build and "Build required" not in log_path.read_text():
@@ -94,7 +95,7 @@ def profile(directory, slots, require_build=False):
         if result is not None:
             status = result["run"]["status"]
             if status == "completed":
-                return capture(result, slots)
+                return capture(result, slots, workflow)
             if status not in {"created", "pending", "queued", "running"}:
                 raise RuntimeError(f"{identifier} ended with {status}")
         time.sleep(10)
@@ -103,11 +104,13 @@ def profile(directory, slots, require_build=False):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path)
+    parser.add_argument("--length", choices=(96, 192), type=int, default=96)
     args = parser.parse_args()
+    workflow = WORKFLOW if args.length == 96 else f"{PREFIX}-long-v1"
     args.directory.mkdir(parents=True, exist_ok=True)
     baseline = None
     for slots in (4, *(capacity for capacity in CAPACITIES if capacity != 4)):
-        result = profile(args.directory, slots)
+        result = profile(args.directory, slots, workflow=workflow)
         if baseline is not None and result["digests"] != baseline:
             raise ValueError(f"Scientific checksums differ for {slots} slots")
         baseline = result["digests"]
